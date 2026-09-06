@@ -19,7 +19,7 @@ const ADMIN_BEARER_TTL_SECONDS = 60 * 60;
 const OAUTH_STATE_COOKIE = "github_admin_oauth_state";
 const OAUTH_STATE_TTL_MS = 10 * 60 * 1000;
 const ADMIN_EXCHANGE_CODE_TTL_MS = 2 * 60 * 1000;
-const DEFAULT_ADMIN_FRONTEND_URL = "https://sitar-sitar.github.io/Web/hoyoverse";
+const DEFAULT_ADMIN_FRONTEND_URL = "https://sitar-sitar.github.io/hoyoverse-builder";
 
 type GitHubUser = {
   id: number;
