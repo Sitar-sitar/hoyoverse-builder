@@ -3,7 +3,7 @@ name: Validate HoYoverse external API
 on:
   pull_request:
     branches:
-      - hoyoversebuilder
+      - main
 
 permissions:
   contents: read
@@ -38,4 +38,4 @@ jobs:
       - name: Build Pages frontend
         env:
           VITE_API_BASE_URL: https://api.example.invalid
-        run: pnpm exec vite build --config vite.pages.config.ts --base /Web/hoyoverse/
+        run: pnpm exec vite build --config vite.pages.config.ts

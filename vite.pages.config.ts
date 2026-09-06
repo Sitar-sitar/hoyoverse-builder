@@ -16,7 +16,7 @@ function githubPagesHtmlCompatibility(): Plugin {
 }
 
 export default defineConfig({
-  base: "/Web/",
+  base: "/hoyoverse-builder/",
   plugins: [react(), tailwindcss(), githubPagesHtmlCompatibility()],
   resolve: {
     alias: {

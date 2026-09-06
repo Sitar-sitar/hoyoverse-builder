@@ -38,7 +38,7 @@ GITHUB_APP_CLIENT_SECRET=<GitHub App Client Secret>
 GITHUB_APP_CALLBACK_URL=https://hoyoverse-builder-api-production.up.railway.app/api/auth/github/callback
 ADMIN_GITHUB_IDS=12345678,87654321
 ADMIN_SESSION_SECRET=<32文字以上のランダム値>
-ADMIN_FRONTEND_URL=https://sitar-sitar.github.io/Web/hoyoverse
+ADMIN_FRONTEND_URL=https://sitar-sitar.github.io/hoyoverse-builder
 ```
 
 `ADMIN_GITHUB_IDS` はカンマまたは空白区切りで複数指定できます。Allowlist からIDを削除すると、既存セッションのJWTが期限内でも次回APIアクセス時に拒否されます。

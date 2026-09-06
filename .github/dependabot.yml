@@ -10,31 +10,86 @@ updates:
         patterns:
           - "*"
 
-  # HoYoverse Builder（既定ブランチ）
   - package-ecosystem: npm
     directory: "/"
     schedule:
       interval: weekly
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 10
     groups:
-      minor-and-patch:
+      frontend-ui:
         patterns:
-          - "*"
+          - "react"
+          - "react-dom"
+          - "@radix-ui/*"
+          - "framer-motion"
+          - "react-hook-form"
+          - "@hookform/*"
+          - "recharts"
+          - "wouter"
+          - "next-themes"
+          - "lucide-react"
+          - "sonner"
+          - "vaul"
+          - "cmdk"
+          - "embla-carousel-react"
+          - "react-day-picker"
+          - "react-resizable-panels"
+          - "input-otp"
+          - "tailwind-merge"
+          - "tailwindcss-animate"
+          - "class-variance-authority"
+          - "clsx"
+          - "date-fns"
         update-types:
-          - minor
-          - patch
-
-  # RubberDB（GitHub Pages のサブサイト）
-  - package-ecosystem: npm
-    directory: "/"
-    target-branch: RubberDB
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 5
-    groups:
-      minor-and-patch:
+          - "minor"
+          - "patch"
+      api-backend:
         patterns:
-          - "*"
+          - "@trpc/*"
+          - "zod"
+          - "express"
+          - "jose"
+          - "cookie"
+          - "superjson"
+          - "nanoid"
+          - "axios"
+          - "dotenv"
         update-types:
-          - minor
-          - patch
+          - "minor"
+          - "patch"
+      database:
+        patterns:
+          - "drizzle-orm"
+          - "drizzle-kit"
+          - "mysql2"
+        update-types:
+          - "minor"
+          - "patch"
+      aws:
+        patterns:
+          - "@aws-sdk/*"
+        update-types:
+          - "minor"
+          - "patch"
+      tooling:
+        patterns:
+          - "vite"
+          - "vite-plugin-*"
+          - "@vitejs/*"
+          - "vitest"
+          - "esbuild"
+          - "typescript"
+          - "prettier"
+          - "@types/*"
+          - "@tailwindcss/*"
+          - "tailwindcss"
+          - "postcss"
+          - "autoprefixer"
+          - "@testing-library/*"
+          - "jsdom"
+          - "tsx"
+          - "tw-animate-css"
+          - "pnpm"
+        update-types:
+          - "minor"
+          - "patch"
