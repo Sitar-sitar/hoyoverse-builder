@@ -45,18 +45,21 @@ describe("第15バッチ個別精査", () => {
     expect(constellations?.effects.map((effect) => effect.level)).toEqual([1, 2, 3, 4, 5, 6]);
   });
 
-  it("更新台帳は200/248完了・残48件・第16バッチ20名になる", () => {
+  it("第15バッチの20名は完了のまま、更新台帳は第16バッチ反映後の220/248・残28件になる", () => {
     const ledger = characterUpdateLedger();
     expect(ledger.total).toBe(248);
-    expect(ledger.reviewed).toBe(200);
-    expect(ledger.pending).toBe(48);
+    expect(ledger.reviewed).toBe(220);
+    expect(ledger.pending).toBe(28);
     expect(ledger.byGame).toEqual({
-      hsr: { total: 81, reviewed: 77, pending: 4 },
-      genshin: { total: 109, reviewed: 65, pending: 44 },
+      hsr: { total: 81, reviewed: 81, pending: 0 },
+      genshin: { total: 109, reviewed: 81, pending: 28 },
       zzz: { total: 58, reviewed: 58, pending: 0 },
     });
-    expect(ledger.nextBatch.id).toBe(16);
+    expect(ledger.nextBatch.id).toBe(17);
     expect(ledger.nextBatch.names).toHaveLength(20);
     expect(ledger.nextBatch.names.every((entry) => entry.status === "pending")).toBe(true);
+    expect(ledger.entries.find((entry) => entry.game === "hsr" && entry.name === "三月なのか")).toMatchObject({ status: "reviewed", batch: 15 });
+    expect(ledger.entries.find((entry) => entry.game === "genshin" && entry.name === "ディルック")).toMatchObject({ status: "reviewed", batch: 15 });
+    expect(ledger.entries.find((entry) => entry.game === "zzz" && entry.name === "猫又")).toMatchObject({ status: "reviewed", batch: 15 });
   });
 });

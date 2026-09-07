@@ -364,6 +364,38 @@ Object.entries(BATCH_14_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
+const BATCH_16_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
+  hsr: ["不死途", "乱破", "椒丘", "爻光"],
+  genshin: ["バーバラ", "ファルザン", "フリンズ", "フレミネ", "マーヴィカ", "ミカ", "ムアラニ", "モナ", "ヤフォダ", "ヨォーヨ", "ラウマ", "リオセスリ", "リサ", "リネ", "リネット", "レイラ"],
+  zzz: [],
+};
+
+/** 第16バッチで参照した記事の更新日。実装日（updatedAt）とは別に、キャラクターごとに保持する。 */
+const BATCH_16_DATA_AS_OF: Record<string, string> = {
+  "不死途": "2026-09-07",
+  "乱破": "2026-08-26",
+  "椒丘": "2026-08-21",
+  "爻光": "2026-09-07",
+  "マーヴィカ": "2026-09-07",
+  "リオセスリ": "2026-09-07",
+  "フリンズ": "2026-09-01",
+};
+
+Object.entries(BATCH_16_UPDATED_NAMES).forEach(([game, names]) => {
+  const gameId = game as CatalogGameId;
+  names.forEach((name) => {
+    const record = CHARACTER_GUIDE_METADATA[gameId][name];
+    if (!record) return;
+    record.dataAsOf = BATCH_16_DATA_AS_OF[name] ?? "2026-08-13";
+    record.updatedAt = "2026-09-07";
+    record.sourceLabel = gameId === "hsr"
+      ? name === "乱破" || name === "椒丘"
+        ? "Game8・GameWithの更新日付き個別ビルド・星魂・PTガイドを照合"
+        : "Game8の更新日付き個別ビルド・星魂・PTガイドを照合"
+      : "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合";
+  });
+});
+
 export function guideMetadataFor(game: CatalogGameId, name?: string): CharacterGuideMetadata {
   const record = name ? CHARACTER_GUIDE_METADATA[game][name] : undefined;
   return record ?? {

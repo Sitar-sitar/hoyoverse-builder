@@ -4,9 +4,9 @@ import { batch15ConstellationFor } from "./batch15Constellations";
 import { batch15GuideFor } from "./batch15Guides";
 import { batch15PartyFor } from "./batch15Parties";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS, type CatalogGameId } from "./characterGuideCatalog";
-import { constellationProfileFor } from "./characterConstellations";
+import { constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
 import { characterUpdateLedger } from "./characterUpdateLedger";
-import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
+import { genshinGuide, zzzGuide } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 
@@ -37,10 +37,12 @@ function baseGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   if (game === "hsr") {
     return guideFor(name, HSR_RUNTIME_PATHS[name] ?? "");
   }
+  // UID照会と同じ個別ガイド解決を使う。generated* へ直接フォールバックすると、
+  // provider 経路だけに登録された個別ビルドが図鑑へ届かない。
   if (game === "genshin") {
-    return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
+    return genshinGuide(name);
   }
-  return withGuideMetadata("zzz", generatedZzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack"), name);
+  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
 }
 
 export function characterReferenceCatalog() {
@@ -76,7 +78,8 @@ export function characterReferenceFor(game: CatalogGameId, name: string): Charac
   const guide = batch15GuideFor(game, name, baseGuide) ?? baseGuide;
   const partyRecommendations = batch15PartyFor(game, name) ?? partyRecommendationsFor(game, name);
   const identity = resolveCharacterIdentity(game, name, name);
-  const constellations = batch15ConstellationFor(game, name, 0) ?? constellationProfileFor(identity, 0);
+  // 図鑑はカタログ名しか持たないため、確認済み source ID へ解決してから凸を引く。
+  const constellations = batch15ConstellationFor(game, name, 0) ?? constellationProfileForCatalogName(game, name, 0);
 
   return {
     game,
