@@ -125,12 +125,15 @@ Game8の「凸効果一覧」から34プロフィール（通常27名＋旅人7�
 
 `targets: []` は「達成項目が0件」ではなく「比較可能な固定目標値が未登録」を意味する。UID照会の優先強化欄は、比較対象が0件なら専用文言を表示し、1件以上の比較があって未達0件の場合だけ「すべて目標水準に到達」と表示する。日本語・英語・簡体字中国語を同時更新し、回帰テストで誤表示が戻らないことを固定する。
 
-## 公開前検証
+## 公開・検証結果
 
 - `node node_modules/vitest/vitest.mjs run`: 34ファイル / 181テスト pass
 - `node node_modules/typescript/bin/tsc --noEmit`: pass
 - APIバンドル / Pages本番ビルド: pass
 - 第17対象テスト: 28名のガイド、ID分離、6段階凸、本人を含む4名PT×2、3言語名・役割・具体的シナジー、図鑑経路を検証
 - UI回帰: 比較対象0件で「すべて目標水準に到達」を表示しないことを検証
-- 実UID: 今回新たなUID提供がないため未実施。図鑑（UID不要）とAPI最終応答を本番公開後に確認する
-- 公開状態: 公開前。commit / PR / Pages / Railway APIの証拠は公開後に追記する
+- 実UID: 今回新たなUID提供がないため未実施。図鑑（UID不要）、API最終応答、比較0件の画面単体テストで確認した
+- GitHub: コミット `7b138dd`、PR [#15](https://github.com/Sitar-sitar/hoyoverse-builder/pull/15)、mainマージ `a003a3a`
+- CI / Pages: PR検証 run `34169217730` pass、Pages run `34169275133` success。公開indexと `assets/index-BGv2Tpbc.js` はHTTP 200で、新しい固定目標未登録文言を含む
+- Railway API: Origin付きhealth 200、CORS許可。台帳248/248・pending 0・第18候補0。夢見月瑞希は `batch: 17`、固定目標0、PT 2案、命ノ星座6段、`curated` を返す
+- 公開画面: キャラ図鑑で `REVIEWED 248 / 248` と夢見月瑞希のB17表示、固定目標なし、PT 2案、命ノ星座6段を確認。更新履歴で248/248・再調査待ち0・第17イベントを確認。コンソールエラー0件
