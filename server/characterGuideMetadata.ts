@@ -1,5 +1,6 @@
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { expectedProfileFor } from "./expectedGuideProfiles";
+import { BATCH17_GUIDE_DATA_AS_OF } from "./batch17Guides";
 
 export type CharacterGuideMetadata = {
   profileId: string;
@@ -394,6 +395,17 @@ Object.entries(BATCH_16_UPDATED_NAMES).forEach(([game, names]) => {
         : "Game8の更新日付き個別ビルド・星魂・PTガイドを照合"
       : "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合";
   });
+});
+
+const BATCH_17_UPDATED_NAMES = ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"] as const;
+
+BATCH_17_UPDATED_NAMES.forEach((name) => {
+  const record = CHARACTER_GUIDE_METADATA.genshin[name];
+  if (!record) return;
+  record.profileId = `curated:batch17:genshin:${name}`;
+  record.dataAsOf = BATCH17_GUIDE_DATA_AS_OF[name] ?? "2026-08-13";
+  record.updatedAt = "2026-09-08";
+  record.sourceLabel = "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合";
 });
 
 export function guideMetadataFor(game: CatalogGameId, name?: string): CharacterGuideMetadata {

@@ -69,6 +69,15 @@ const SITE_EVENTS: GuideUpdateEvent[] = [
     rationale: "ロール共通の目標が残るキャラクターを、更新日付きの個別根拠へ置き換えるため。",
     games: ["hsr", "genshin"],
   },
+  {
+    date: "2026-09-08T02:00:00+09:00",
+    scope: "site",
+    title: "第17パッチで残り28名の個別情報を更新",
+    summary: "原神の残り28名についてビルド・全6段階の命ノ星座・実名推奨PTを更新し、全248名の精査を完了しました。",
+    changes: ["原神28名の個別ビルドを更新", "通常27名と旅人7元素を確認済みsource IDで分離", "比較対象0件を達成済みと表示しないよう修正"],
+    rationale: "未精査キャラクターを解消し、固定目標値のないガイドを未育成でも達成済みと誤認させないため。",
+    games: ["genshin"],
+  },
 ];
 
 const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, GuideUpdateEvent[]>>> = {
@@ -369,6 +378,21 @@ function batch16UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
   };
 }
 
+const BATCH_17_UPDATED_NAMES = ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"] as const;
+
+function batch17UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
+  if (game !== "genshin" || !BATCH_17_UPDATED_NAMES.includes(name as typeof BATCH_17_UPDATED_NAMES[number])) return undefined;
+  return {
+    date: "2026-09-08T02:00:00+09:00",
+    scope: "character",
+    title: "第17パッチ：個別ビルド・命ノ星座・推奨PTを再精査",
+    summary: `${name}の更新日付き個別根拠、確認済みsource IDの全6段階命ノ星座、実名メンバーの推奨PTを照合しました。固定の戦闘外到達値は推測せず、比較対象なしとして明示します。`,
+    changes: ["個別の聖遺物・主ステータス方針へ更新", "確認済みsource IDの全6段階命ノ星座を登録", "実名4名編成を2案登録", "固定値根拠がないtargetsは空配列を維持", "UID照会と図鑑で同じ精査内容を返すよう統一"],
+    rationale: "未根拠の数値水準や戦闘中バフを公開プロフィール評価へ混入させず、比較対象0件を達成済みと誤表示しないため。",
+    games: [game],
+  };
+}
+
 export function guideUpdateHistory() {
   const games: CatalogGameId[] = ["hsr", "genshin", "zzz"];
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
@@ -397,6 +421,7 @@ export function guideUpdateHistory() {
         ...(batch13UpdateEvent(game, name) ? [batch13UpdateEvent(game, name)!] : []),
         ...(batch14UpdateEvent(game, name) ? [batch14UpdateEvent(game, name)!] : []),
         ...(batch16UpdateEvent(game, name) ? [batch16UpdateEvent(game, name)!] : []),
+        ...(batch17UpdateEvent(game, name) ? [batch17UpdateEvent(game, name)!] : []),
         {
         date: metadata.updatedAt,
         scope: "character" as const,

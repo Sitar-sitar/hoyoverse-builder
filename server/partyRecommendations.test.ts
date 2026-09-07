@@ -22,16 +22,17 @@ describe("推奨パーティー編成カタログ", () => {
 
   it("HSR・原神・ZZZの代表キャラクターで、最大3案とゲーム別のバージョン情報を返す", () => {
     const coverage = [
-      { game: "hsr" as const, character: "ホタル", version: "4.4", changedKey: "speed" },
-      { game: "genshin" as const, character: "神里綾華", version: "7.0", changedKey: "critRate" },
-      { game: "zzz" as const, character: "星見雅", version: "3.1", changedKey: "critRate" },
+      { game: "hsr" as const, character: "ホタル", version: "4.4", dataAsOf: "2026-08-25", updatedAt: "2026-08-25", changedKey: "speed" },
+      { game: "genshin" as const, character: "神里綾華", version: "7.0", dataAsOf: "2026-08-13", updatedAt: "2026-09-08", changedKey: null },
+      { game: "zzz" as const, character: "星見雅", version: "3.1", dataAsOf: "2026-08-25", updatedAt: "2026-08-25", changedKey: "critRate" },
     ];
-    coverage.forEach(({ game, character, version, changedKey }) => {
+    coverage.forEach(({ game, character, version, dataAsOf, updatedAt, changedKey }) => {
       const teams = partyRecommendationsFor(game, character);
-      expect(teams).toMatchObject({ gameVersion: version, dataAsOf: "2026-08-25", updatedAt: "2026-08-25" });
-      expect(teams.options).toHaveLength(MAX_PARTY_OPTIONS);
-      expect(teams.options.map((option) => option.rank)).toEqual([1, 2, 3]);
-      expect(teams.options.some((option) => option.targetChanges.some((change) => change.key === changedKey))).toBe(true);
+      expect(teams).toMatchObject({ gameVersion: version, dataAsOf, updatedAt });
+      expect(teams.options.length).toBeGreaterThan(0);
+      expect(teams.options.length).toBeLessThanOrEqual(MAX_PARTY_OPTIONS);
+      expect(teams.options.map((option) => option.rank)).toEqual(teams.options.map((_, index) => index + 1));
+      if (changedKey) expect(teams.options.some((option) => option.targetChanges.some((change) => change.key === changedKey))).toBe(true);
     });
   });
 
@@ -45,7 +46,7 @@ describe("推奨パーティー編成カタログ", () => {
       expect(options.length).toBeGreaterThan(0);
       expect(options.length).toBeLessThanOrEqual(MAX_PARTY_OPTIONS);
       expect(options.every((option) => option.members.some((partyMember) => partyMember.name.ja === name))).toBe(true);
-      expect(options.every((option) => option.communitySources.some((source) => /^2026-(08-(25|26|27)|09-07)$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
+      expect(options.every((option) => option.communitySources.some((source) => /^2026-(08-(25|26|27)|09-(07|08))$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
     });
   });
 

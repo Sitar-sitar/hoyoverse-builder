@@ -15,6 +15,7 @@ import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 import { constellationProfileFor } from "./characterConstellations";
+import { batch17GuideFor } from "./batch17Guides";
 
 export type GameId = "hsr" | "genshin" | "zzz";
 
@@ -280,7 +281,7 @@ Object.assign(GI_GUIDE_OVERRIDES, {
 });
 
 export function genshinGuide(name: string): GuideDefinition {
-  const individualGuide = GI_GUIDE_OVERRIDES[name];
+  const individualGuide = batch17GuideFor(name) ?? GI_GUIDE_OVERRIDES[name];
   if (individualGuide) return withGuideMetadata("genshin", { ...individualGuide, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。武器・編成・元素反応・戦闘中バフにより必要値は変動します。` }, name);
   return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
 }

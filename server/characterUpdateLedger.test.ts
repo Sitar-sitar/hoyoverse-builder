@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { characterUpdateLedger } from "./characterUpdateLedger";
 
-const NEXT_BATCH_17 = [
+const BATCH_17_MEMBERS = [
   "レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗",
   "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織",
+  "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈",
 ];
 
 const BATCH_16_MEMBERS = [
@@ -30,19 +31,26 @@ const BATCH_16_MEMBERS = [
 ] as const;
 
 describe("全キャラクター更新台帳", () => {
-  it("全248件を重複なく追跡し、完了220件と正規カタログ順の第17バッチ20名を返す", () => {
+  it("全248件を重複なく追跡し、第17パッチ後は未精査0件を返す", () => {
     const ledger = characterUpdateLedger();
     expect(ledger.total).toBe(248);
-    expect(ledger.reviewed).toBe(220);
-    expect(ledger.pending).toBe(28);
+    expect(ledger.reviewed).toBe(248);
+    expect(ledger.pending).toBe(0);
     expect(ledger.byGame).toEqual({
       hsr: { total: 81, reviewed: 81, pending: 0 },
-      genshin: { total: 109, reviewed: 81, pending: 28 },
+      genshin: { total: 109, reviewed: 109, pending: 0 },
       zzz: { total: 58, reviewed: 58, pending: 0 },
     });
-    expect(ledger.nextBatch.id).toBe(17);
+    expect(ledger.nextBatch.id).toBe(18);
     expect(new Set(ledger.entries.map((entry) => `${entry.game}:${entry.name}`)).size).toBe(ledger.total);
-    expect(ledger.nextBatch.names).toEqual(NEXT_BATCH_17.map((name) => expect.objectContaining({ game: "genshin", name, status: "pending" })));
+    expect(ledger.nextBatch.names).toEqual([]);
+  });
+
+  it("第17パッチの残り28名をすべて完了として記録する", () => {
+    const ledger = characterUpdateLedger();
+    BATCH_17_MEMBERS.forEach((name) => {
+      expect(ledger.entries.find((entry) => entry.game === "genshin" && entry.name === name)).toMatchObject({ status: "reviewed", batch: 17 });
+    });
   });
 
   it("第16バッチの20名を完了として記録し、次バッチ候補へ残さない", () => {
