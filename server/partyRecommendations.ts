@@ -219,6 +219,14 @@ const batch14Options = (game: PartyGameId, name: string, sourceUrl: string, sele
   communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-27" })),
 }));
 
+const batch16Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
+  ...entry,
+  dataAsOf: "2026-09-07",
+  updatedAt: "2026-09-07",
+  targetChanges: [],
+  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-09-07" })),
+}));
+
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
  * 既存の PARTY_CATALOG は代表6名を保持し、この表が同名キーを優先して上書きする。
@@ -1084,6 +1092,121 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["ファイノン", "サンデー", "ケリュドラ", "丹恒・騰荒"], "変身型主力へ行動支援・追加火力・バリアを組み合わせる。", "Combines advance, added damage, and shields for the transforming carry.", "为变身主C组合拉条、追加输出与护盾。"),
     plan(["姫子・旅立ち", "サンデー", "花火", "丹恒・騰荒"], "範囲主力へ行動順支援と耐久を組む。", "Pairs action-order support and sustain with an AoE carry.", "为范围主C搭配行动顺序辅助与生存位。"),
     plan(["アーチャー", "ルアン・メェイ", "記憶主人公", "丹恒・騰荒"], "単体火力に耐性貫通・記憶支援・バリアを添える。", "Adds RES PEN, Remembrance support, and shields to single-target damage.", "为单体输出补充减抗、记忆辅助与护盾。"),
+  ]),
+  // 第16バッチ：HSR 4名・原神 16名の実名推奨PT。
+"genshin:バーバラ": batch16Options("genshin", "バーバラ", "https://game8.jp/genshin/561391", t("回復・水付着", "Healing & Hydro application", "治疗与水元素附着"), [
+    plan(["バーバラ", "ニィロウ", "ナヒーダ", "白朮"], "開花で高い火力を誇る編成。バーバラは熟知振りがおすすめ。", "A Bloom team with high damage output; building Barbara with Elemental Mastery is recommended.", "绽放反应队伍,输出较高;芭芭拉建议堆元素精通。"),
+    plan(["バーバラ", "ナヒーダ", "行秋", "久岐忍"], "超開花反応編成で編成コストが低く、星4のみでも組める。", "A Hyperbloom team that is low-cost and can be built with 4-star characters only.", "超绽放反应队伍,组队成本低,仅用4星角色也能组建。"),
+    plan(["バーバラ", "神里綾華", "楓原万葉", "申鶴"], "凍結編成で氷の火力に特化し、バーバラは凍結のサポート重視で使う。", "A Freeze team specialized in Cryo damage; Barbara is used mainly to support the Freeze setup.", "冻结队伍,专注冰元素输出;芭芭拉主要用于辅助冻结体系。"),
+  ]),
+
+  "genshin:ファルザン": batch16Options("genshin", "ファルザン", "https://game8.jp/genshin/560292", t("支援", "Support", "辅助"), [
+    plan(["ファルザン", "放浪者", "ベネット", "鍾離"], "放浪者パでよく使われる編成。ファルザンやベネットのバフ、鍾離のシールドによる敵の元素耐性デバフなど、放浪者の火力を上げるためのサポート効果が満載。", "A common Wanderer team; Faruzan and Bennett buffs plus Zhongli shield and elemental RES shred are packed with support effects to boost Wanderer damage.", "散兵队常见编成;法尔赞与班尼特的增益加上钟离护盾附带的元素抗性降低,为散兵的输出提供全面辅助。"),
+    plan(["ファルザン", "魈", "アルベド", "鍾離"], "風2岩2で共鳴を発動した編成。魈はHPが減るため回復も捨てているため、シールド耐久が重要。", "A team activating Anemo/Geo resonance (2+2); since Xiao loses HP and healing is skipped, shield durability is important.", "风2岩2共鸣编成;魈会减少生命值且放弃了治疗,因此护盾的耐久度很重要。"),
+    plan(["ファルザン", "鹿野院平蔵", "香菱", "ベネット"], "風2炎2で共鳴を発動した編成。平蔵枠は放浪者などでも代用可能。", "A team activating Anemo/Pyro resonance (2+2); the Heizou slot can also be replaced by characters like Wanderer.", "风2火2共鸣编成;鹿野院平藏的位置也可以用散兵等角色替代。"),
+  ]),
+
+  "genshin:フレミネ": batch16Options("genshin", "フレミネ", "https://game8.jp/genshin/560152", t("主力", "Main DPS", "主C"), [
+    plan(["フレミネ", "フィッシュル", "行秋", "ミカ"], "氷砕き+超電導編成でフレミネの強みを活かす。星4のみで組める。", "A Shatter and Superconduct team that leverages Freminet strengths; can be built with 4-star characters only.", "碎冰+超导编成,发挥菲米尼的优势;仅用4星角色也能组建。"),
+    plan(["フレミネ", "行秋", "ナヒーダ", "久岐忍"], "超電導+超開花編成で物理火力と超開花を組み合わせる。フレミネは超開花を邪魔せず戦える。", "A Superconduct and Hyperbloom team combining Physical damage with Hyperbloom; Freminet can fight without disrupting Hyperbloom.", "超导+超绽放编成,结合物理输出与超绽放;菲米尼可以在不干扰超绽放的情况下作战。"),
+    plan(["フレミネ", "楓原万葉", "申鶴", "珊瑚宮心海"], "物理を捨てた氷元素型編成。圧力ランク0で戦う必要がある。", "A Cryo-focused team that forgoes Physical damage; requires fighting at Pressure Rank 0.", "放弃物理伤害的冰元素专精编成;需要在压力等级0下作战。"),
+  ]),
+
+  "genshin:ミカ": batch16Options("genshin", "ミカ", "https://game8.jp/genshin/560161", t("支援", "Support", "辅助"), [
+    plan(["ミカ", "エウルア", "雷電将軍", "夜蘭"], "氷砕き+超電導編成1で物理火力を大きく伸ばす。雷電で要求チャージが下がるのが良い。", "Shatter and Superconduct team 1 that greatly boosts Physical damage; Raiden Shogun helps lower Energy Recharge requirements.", "碎冰+超导编成1,大幅提升物理伤害;雷电将军能降低对充能的需求,效果不错。"),
+    plan(["ミカ", "フレミネ", "フィッシュル", "行秋"], "氷砕き+超電導編成2で物理火力の強みを活かす。星4のみで組める。", "Shatter and Superconduct team 2 that leverages Physical damage strengths; can be built with 4-star characters only.", "碎冰+超导编成2,发挥物理伤害优势;仅用4星角色也能组建。"),
+    plan(["ミカ", "放浪者", "ファルザン", "ベネット"], "放浪者キャリー編成でミカの攻撃速度バフを活かす。ミカは無凸でも使いやすい。", "A Wanderer carry team that uses Mika attack speed buff; Mika is easy to use even without Constellations.", "散兵核心编成,利用米卡的攻速增益;米卡即使不满命也很好用。"),
+  ]),
+
+  "genshin:モナ": batch16Options("genshin", "モナ", "https://game8.jp/genshin/559926", t("支援", "Support", "辅助"), [
+    plan(["モナ", "スカーク", "フリーナ", "エスコフィエ"], "エスコフィエ入り凍結反応編成。凍結中はモナのバフの時間が伸びる性質を利用し、水共鳴のHP上限UPでフリーナの火力も上昇する。", "A Freeze team featuring Escoffier; takes advantage of Mona buff duration extending during Freeze, and Hydro resonance HP boost also raises Furina damage.", "带埃斯科菲耶的冻结反应编成;利用冻结状态下莫娜增益持续时间延长的特性,水元素共鸣提升的生命值上限也能提高芙宁娜的伤害。"),
+    plan(["モナ", "ドゥリン", "シロネン", "スクロース"], "ドゥリンの火力をサポートする蒸発編成。モナで水元素を付着させる。", "A Vaporize team that supports Dahlia damage; Mona applies Hydro to enable the reaction.", "辅助达利亚输出的蒸发编成;由莫娜附着水元素。"),
+    plan(["モナ", "アイノ", "イネファ", "スクロース"], "月感電反応編成。モナの2凸で熟知を配るが、バフが腐る点には注意。", "A Lunar-Charged team; Mona Constellation 2 distributes Elemental Mastery, but be careful that her buff can go to waste.", "月感电反应编成;莫娜的2命可以分配元素精通,但要注意增益可能会被浪费。"),
+  ]),
+
+  "genshin:ヨォーヨ": batch16Options("genshin", "ヨォーヨ", "https://game8.jp/genshin/560288", t("回復・支援", "Healing & Support", "治疗辅助"), [
+    plan(["ヨォーヨ", "珊瑚宮心海", "ニィロウ", "ラウマ"], "ニィロウ入り豊穣開花反応編成。開花反応の自傷ダメージをヨォーヨのスキル・爆発で回復し、ラウマの固有天賦で月兆初照時に開花反応で会心が発生する。", "A Nilou-based Bountiful Bloom team; Yoyo skill and burst heal the self-inflicted Bloom damage, and Raum passive triggers Crits on Bloom reactions when the Moonsign first lights up.", "带妮露的丰饶绽放编成;用瑶瑶的元素战技和爆发治疗绽放反应造成的自伤,劳玛的固有天赋在月兆初照时使绽放反应触发暴击。"),
+    plan(["ヨォーヨ", "ヌヴィレット", "イネファ", "ナヒーダ"], "水アタッカー採用の感電・超開花反応編成。感電・月感電反応と超開花反応を同時に起こし、イネファが感電を月感電反応に変化させる。", "An Electro-Charged and Hyperbloom team using a Hydro main DPS; triggers Electro-Charged/Lunar-Charged and Hyperbloom simultaneously, with Ineffa converting Electro-Charged into Lunar-Charged.", "采用水系主C的感电+超绽放编成;同时触发感电・月感电反应与超绽放反应,伊涅芙将感电转化为月感电反应。"),
+    plan(["ヨォーヨ", "クロリンデ", "フィッシュル", "スクロース"], "激化反応+雷共鳴編成。雷元素メインアタッカーの激化反応編成で、フィッシュル・スクロースの「魔導秘儀」で与ダメ・熟知がアップする。", "An Aggravate and Electro resonance team; an Aggravate setup led by an Electro main DPS, boosted by Fischl and Sucrose Arcane elemental buffs to damage and Elemental Mastery.", "激化反应+雷元素共鸣编成;以雷元素主C为核心的激化反应队伍,菲谢尔与砂糖的奥秘效果可以提升伤害与元素精通。"),
+  ]),
+
+  "genshin:ラウマ": batch16Options("genshin", "ラウマ", "https://game8.jp/genshin/720295", t("支援", "Support", "辅助"), [
+    plan(["ラウマ", "ネフェル", "コロンビーナ", "ニィロウ"], "ネフェル入り月開花反応編成。月開花反応で火力を出すネフェルと相性抜群で、草露を集めるため水元素キャラを編成し月開花を起こすことが必須。", "A Lunar Bloom team with Nefer; pairs excellently with Nefer who deals damage via Lunar Bloom, and requires a Hydro character to gather Dendro Cores to trigger Lunar Bloom.", "带奈芙尔的月绽放反应编成;与依靠月绽放输出的奈芙尔配合极佳,需要编入水元素角色收集草原核以触发月绽放。"),
+    plan(["ラウマ", "珊瑚宮心海", "ナヒーダ", "ニィロウ"], "ニィロウ入り開花反応編成。純粋な開花反応編成で、ニィロウのバフ発動のため水/草元素キャラのみで編成し、ヒーラーで被ダメに対応する。", "A pure Bloom team with Nilou; built only from Hydro/Dendro characters to trigger Nilou buff, with a healer to handle incoming damage.", "带妮露的纯绽放反应编成;为触发妮露的增益,仅使用水/草元素角色组队,并搭配治疗者应对受到的伤害。"),
+    plan(["ラウマ", "ヌヴィレット", "コロンビーナ", "イネファ"], "月感電・超開花反応編成。水元素キャラをメインアタッカーとして月感電反応と超開花反応を発生させ、ラウマは草・水元素耐性を下げ水アタッカーと超開花双方の火力向上に寄与する。", "A Lunar-Charged and Hyperbloom team; uses a Hydro main DPS to trigger both Lunar-Charged and Hyperbloom, with Raum lowering Dendro/Hydro RES to boost damage for both the Hydro attacker and Hyperbloom.", "月感电+超绽放反应编成;以水元素角色作为主C,同时触发月感电反应与超绽放反应,劳玛降低草・水元素抗性,为水系主C与超绽放双方提升伤害。"),
+  ]),
+
+  "genshin:リサ": batch16Options("genshin", "リサ", "https://game8.jp/genshin/561393", t("支援", "Support", "辅助"), [
+    plan(["リサ", "アルハイゼン", "ナヒーダ", "久岐忍"], "激化編成1（メイン草）。激化による大ダメージを狙い、アルハイゼンが主火力、ナヒーダとリサが反応起点を担う。", "Aggravate team 1 (Dendro main); aims for big Aggravate damage with Alhaitham as main DPS while Nahida and Lisa serve as reaction triggers.", "激化编成1(草主C);追求激化反应的高额伤害,艾尔海森为主要输出,纳西妲与丽莎负责触发反应。"),
+    plan(["リサ", "刻晴", "ナヒーダ", "白朮"], "激化編成2（メイン雷）。刻晴がメイン火力枠、白朮がヒーラー兼シールド役を務める。", "Aggravate team 2 (Electro main); Keqing serves as the main damage dealer while Baizhu acts as healer and shield provider.", "激化编成2(雷主C);刻晴担任主要输出,白术兼任治疗与护盾角色。"),
+    plan(["リサ", "フィッシュル", "主人公(草)", "ディオナ"], "初心者激化編成。星4キャラのみで組める初心者向け激化反応編成。", "A beginner Aggravate team built entirely with 4-star characters, friendly for new players.", "新手激化编成;完全用4星角色组成,适合新手玩家。"),
+  ]),
+
+  "genshin:リネ": batch16Options("genshin", "リネ", "https://game8.jp/genshin/558841", t("主力", "Main DPS", "主C"), [
+    plan(["リネ", "香菱", "楓原万葉", "ベネット"], "火力面重視編成。炎×3でリネの固有天賦（与ダメアップ）が60%から100%に上昇し、モチーフ武器の火力効果も最大化する。", "A damage-focused team; with three Pyro characters, Lyney passive damage boost rises from 60% to 100%, maximizing his signature weapon effect too.", "偏重输出的编成;三火配置使林尼的固有天赋(伤害加成)从60%提升到100%,同时最大化专武的效果。"),
+    plan(["リネ", "フリーナ", "楓原万葉", "ベネット"], "フリーナ入り蒸発編成。固有天賦の最大化は狙わず、フリーナと万葉のダメバフで補いつつ蒸発反応も狙う高火力編成。", "A Vaporize team with Furina; does not maximize the passive but compensates with Furina and Kazuha damage buffs while also aiming for Vaporize, making it a high-damage team.", "带芙宁娜的蒸发编成;不追求固有天赋最大化,而是靠芙宁娜与万叶的伤害加成弥补,同时兼顾蒸发反应,属于高输出编成。"),
+    plan(["リネ", "ディシア", "鍾離", "ベネット"], "耐久面重視編成。シールドと防御補助で耐久を高め、回避が苦手な人向け。", "A durability-focused team; boosts survivability with shields and defensive support, suited for players who struggle with dodging.", "偏重耐久的编成;通过护盾与防御辅助提升生存能力,适合不擅长闪避的玩家。"),
+  ]),
+
+  "genshin:リネット": batch16Options("genshin", "リネット", "https://game8.jp/genshin/560155", t("支援", "Support", "辅助"), [
+    plan(["リネット", "タルタリヤ", "香菱", "ベネット"], "蒸発編成。単体戦・複数戦どちらでも活躍し、香菱とタルタリヤの火力割合が半々で蒸発反応の高い継続火力を実現する万能編成。", "A Vaporize team effective against both single targets and groups; Xiangling and Tartaglia split the damage roughly evenly, achieving strong sustained Vaporize damage in a versatile team.", "蒸发编成;单体与多目标战斗均可胜任,香菱与达达利亚的输出占比各半,实现蒸发反应带来的高持续伤害,是一套万能编成。"),
+    plan(["リネット", "ヌヴィレット", "タルタリヤ", "白朮"], "水元素共鳴編成。ヌヴィレットの火力を引き出す編成で、タルタリヤは表に出さなくてもよい役割分担でヌヴィレットをメインアタッカーとして活かす。", "A Hydro resonance team designed to bring out Neuvillette damage; Tartaglia does not need to be on-field, letting Neuvillette function as the main DPS.", "水元素共鸣编成;旨在发挥那维莱特的输出,达达利亚可以不用上场,让那维莱特担任主要输出。"),
+    plan(["リネット", "神里綾華", "申鶴", "珊瑚宮心海"], "凍結編成。綾華の育成が進んでいることが重要で、申鶴によって氷パでも火力が出る。", "A Freeze team where having a well-built Ayaka is important; Shenhe helps the Cryo team deal solid damage.", "冻结编成;需要绫华培养到位,申鹤能让冰系队伍也打出不错的伤害。"),
+  ]),
+
+  "genshin:レイラ": batch16Options("genshin", "レイラ", "https://game8.jp/genshin/483607", t("支援", "Support", "辅助"), [
+    plan(["レイラ", "胡桃", "行秋", "夜蘭"], "蒸発・溶解反応を狙う編成としてシールドと耐久を担う。", "A team aiming for Vaporize and Melt reactions, where Layla provides shielding and survivability.", "旨在触发蒸发与融化反应的编成,由蕾伊拉提供护盾与生存保障。"),
+    plan(["レイラ", "ヌヴィレット", "ジン", "フリーナ"], "凍結編成としてシールドと耐久を担う。", "A Freeze team where Layla provides shielding and survivability.", "冻结编成中由蕾伊拉提供护盾与生存保障。"),
+    plan(["レイラ", "甘雨", "モナ", "ウェンティ"], "凍結編成としてシールドと耐久を担う。", "A Freeze team where Layla provides shielding and survivability.", "冻结编成中由蕾伊拉提供护盾与生存保障。"),
+  ]),
+
+  "genshin:マーヴィカ": batch16Options("genshin", "マーヴィカ", "https://game8.jp/genshin/662568", t("主力", "Main DPS", "主C"), [
+    plan(["マーヴィカ", "フリーナ", "楓原万葉", "シロネン"], "蒸発反応編成（メインアタッカー運用）。マーヴィカを主力火力に、フリーナが水元素で蒸発反応を起点化し、楓原万葉が火元素ダメージを強化、シロネンが火力補助とヒーラーを兼務する。", "A Vaporize team (main DPS build); Mavuika serves as the main damage dealer, Furina triggers Vaporize with Hydro, Kazuha boosts Pyro damage, and Xilonen doubles as damage support and healer.", "蒸发反应编成(主C运用);玛薇卡担任主要输出,芙宁娜通过水元素触发蒸发反应,枫原万叶强化火元素伤害,希诺宁兼任输出辅助与治疗。"),
+    plan(["マーヴィカ", "シトラリ", "楓原万葉", "シロネン"], "溶解反応編成（メインアタッカー運用）。シトラリが氷元素で溶解反応を発動しマーヴィカの炎ダメージを増幅する。シトラリは元素反応起点と火力補助を兼ねる。", "A Melt team (main DPS build); Citlali triggers Melt with Cryo to amplify Mavuika Pyro damage, serving as both reaction trigger and damage support.", "融化反应编成(主C运用);希特拉莉用冰元素触发融化反应以增幅玛薇卡的火元素伤害,同时兼任元素反应起点与输出辅助。"),
+    plan(["マーヴィカ", "ムアラニ", "楓原万葉", "シロネン"], "サブサポート運用（ナタキャラ2人編成）。ムアラニをメインアタッカー、マーヴィカをサポート役に配置する。マーヴィカ以外にナタキャラを編成することが重要で、元素爆発の回転率が向上する。", "A sub-support build (a two-Natlan-character team); Mualani is the main DPS while Mavuika is placed in a support role. Including another Natlan character besides Mavuika is important, improving burst uptime.", "副辅助运用(纳塔双角色编成);玛拉妮担任主要输出,玛薇卡则作为辅助角色。除玛薇卡外再编入一名纳塔角色很重要,可以提高元素爆发的循环效率。"),
+  ]),
+
+  "genshin:ムアラニ": batch16Options("genshin", "ムアラニ", "https://game8.jp/genshin/636238", t("主力", "Main DPS", "主C"), [
+    plan(["ムアラニ", "エミリエ", "ディシア", "鍾離"], "燃焼蒸発編成。蒸発反応で火力アップを目指す。", "A Burning and Vaporize team aiming to boost damage through the Vaporize reaction.", "燃烧+蒸发编成;通过蒸发反应提升伤害。"),
+    plan(["ムアラニ", "フリーナ", "楓原万葉", "シグウィン"], "水元素特化編成。水元素共鳴を活かし、HP上限が火力に繋がる特性を最大限引き出す。", "A Hydro-focused team leveraging Hydro resonance to fully bring out the trait where HP cap converts into damage.", "水元素专精编成;利用水元素共鸣,最大限度发挥生命值上限转化为伤害的特性。"),
+    plan(["ムアラニ", "ディシア", "キャンディス", "鍾離"], "蒸発+水元素共鳴編成。蒸発反応と水元素共鳴の両立を狙い、キャンディスはムアラニの通常攻撃ダメージアップを狙える。", "A Vaporize and Hydro resonance team combining both effects; Candace can further boost Mualani Normal Attack damage.", "蒸发+水元素共鸣编成;兼顾两者效果,坎蒂丝还能提升玛拉妮的普通攻击伤害。"),
+  ]),
+
+  "genshin:フリンズ": batch16Options("genshin", "フリンズ", "https://game8.jp/genshin/724086", t("主力", "Main DPS", "主C"), [
+    plan(["フリンズ", "コロンビーナ", "スクロース", "イネファ"], "イネファ入り月感電反応編成。イネファと併用で月兆満照を狙い火力を大幅アップし、コロンビーナの固有天賦で月感電反応の攻撃回数を確率で追加する。", "A Lunar-Charged team with Ineffa; pairing with Ineffa aims for full Moonsign to greatly boost damage, and Columbina passive can add extra Lunar-Charged hits by chance.", "带伊涅芙的月感电反应编成;搭配伊涅芙争取月兆满照以大幅提升伤害,哥伦比娅的固有天赋有概率为月感电反应增加额外攻击次数。"),
+    plan(["フリンズ", "フィッシュル", "コロンビーナ", "スクロース"], "魔導秘儀を発動した月感電反応編成。イネファなしの場合、フィッシュルの魔導秘儀で熟知バフをかけ、月兆レベルを満照にして火力を強化する。フリンズ以外は星4キャラで構成可能。", "A Lunar-Charged team using the Arcane elemental buff; without Ineffa, Fischl Arcane buff grants Elemental Mastery and pushes the Moonsign to full to boost damage. Everyone besides Flins can be a 4-star character.", "发动奥秘增益的月感电反应编成;在没有伊涅芙的情况下,通过菲谢尔的奥秘效果提供元素精通增益,并将月兆等级提升至满照以强化伤害。除弗林斯外均可使用4星角色。"),
+  ]),
+
+  "genshin:ヤフォダ": batch16Options("genshin", "ヤフォダ", "https://game8.jp/genshin/748057", t("支援", "Support", "辅助"), [
+    plan(["ヤフォダ", "フリンズ", "コロンビーナ", "イネファ"], "月感電反応編成。月感電を軸とした編成でヤフォダのバフが活かせ、月兆満照状態を実現し、完凸効果で全員が会心バフを受けられる。", "A Lunar-Charged team; centers on Lunar-Charged where Yaffoda buffs shine, achieving full Moonsign so everyone gains a Crit buff at Constellation 6.", "月感电反应编成;以月感电为核心,能充分发挥雅弗妲的增益,达成月兆满照状态,满命效果下全员都能获得暴击增益。"),
+    plan(["ヤフォダ", "ネフェル", "コロンビーナ", "ラウマ"], "月開花反応編成。月開花を軸とした編成でヤフォダのバフが活かせ、全4人を月兆キャラで統一し完凸時会心バフを全員に発動できる。", "A Lunar Bloom team; centers on Lunar Bloom where Yaffoda buffs shine, with all four members being Moonsign characters so the Constellation 6 Crit buff applies to everyone.", "月绽放反应编成;以月绽放为核心,能充分发挥雅弗妲的增益,四人全部为月兆角色,满命时暴击增益可施加给全员。"),
+  ]),
+
+  "genshin:リオセスリ": batch16Options("genshin", "リオセスリ", "https://game8.jp/genshin/539460", t("主力", "Main DPS", "主C"), [
+    plan(["リオセスリ", "マーヴィカ", "エミリエ", "ベネット"], "燃焼+溶解反応編成。リオセスリとエミリエが火力枠、マーヴィカが元素反応起点と火力補助、ベネットが火力補助とヒーラーを担う。", "A Burning and Melt team; Lauma and Emilie serve as damage dealers, Mavuika triggers reactions and provides damage support, and Bennett offers damage support and healing.", "燃烧+融化反应编成;劳玛与艾梅莉埃担任输出,玛薇卡负责触发元素反应并提供输出辅助,班尼特提供输出辅助与治疗。"),
+    plan(["リオセスリ", "フリーナ", "楓原万葉", "シャルロット"], "凍結反応編成。リオセスリが火力枠、フリーナが元素反応起点と火力補助、楓原万葉が火力補助、シャルロットがヒーラーを担う。", "A Freeze team; Lauma is the damage dealer, Furina triggers reactions and provides damage support, Kazuha offers damage support, and Charlotte serves as healer.", "冻结反应编成;劳玛担任输出,芙宁娜负责触发元素反应并提供输出辅助,枫原万叶提供输出辅助,夏洛蒂担任治疗。"),
+    plan(["リオセスリ", "申鶴", "楓原万葉", "シロネン"], "キャリー編成。全てサポーター構成で火力を集約する。", "A carry team; the rest of the team is composed entirely of supports to concentrate damage on Lauma.", "核心输出编成;其余全部由辅助角色组成,以集中输出。"),
+  ]),
+
+  "hsr:不死途": batch16Options("hsr", "不死途", "https://game8.jp/houkaistarrail/756950", t("主力", "Main DPS", "主C"), [
+    plan(["不死途", "千冶・刃", "トリビー", "ヒアンシー"], "互いに支援性能を持つアタッカー2枚で火力を高め合う。", "Two attackers with mutual support capabilities boost each other damage.", "两名兼具辅助能力的攻击手互相提升伤害。"),
+    plan(["不死途", "サンデー", "トリビー", "丹恒・騰荒"], "行動支援と全体支援を主力へ集約する。", "Concentrates action advance and team-wide support onto the main DPS.", "将行动支援与全队辅助集中赋予主力。"),
+  ]),
+
+  "hsr:乱破": batch16Options("hsr", "乱破", "https://game8.jp/houkaistarrail/635340", t("撃破・主力", "Break & Main DPS", "击破主C"), [
+    plan(["乱破", "帰忘の流離人", "ダリア", "霊砂"], "超撃破を軸に虚数の全体撃破火力を伸ばす。", "Centers on Super Break to boost Imaginary AoE Break damage.", "以超击破为核心,提升虚数属性的全队击破伤害。"),
+    plan(["乱破", "ペラ", "開拓者（調和）", "ギャラガー"], "防御低下と超撃破支援を星4中心で組む。", "Built mainly with 4-star characters, focusing on DEF reduction and Super Break support.", "以4星角色为主,围绕降防与超击破支援组队。"),
+  ]),
+
+  "hsr:椒丘": batch16Options("hsr", "椒丘", "https://game8.jp/houkaistarrail/613886", t("デバフ", "Debuff", "减益"), [
+    plan(["椒丘", "黄泉", "千冶・刃", "アベンチュリン"], "焼尽の被ダメージ上昇を黄泉の火力へ乗せる。", "Stacks the Burn vulnerability increase onto Acheron damage.", "将灼烧引起的受伤加深叠加到黄泉的伤害上。"),
+    plan(["椒丘", "セイバー", "ギルガメッシュ", "フォフォ"], "単体主力へデバフと回復を添える。", "Adds debuffs and healing support to a single-target main DPS.", "为单体主力附加减益与治疗支援。"),
+  ]),
+
+  "hsr:爻光": batch16Options("hsr", "爻光", "https://game8.jp/houkaistarrail/754019", t("支援", "Support", "辅助"), [
+    plan(["爻光", "火花", "銀狼Lv.999", "フォフォ"], "アッハタイムの強制発動で愉悦キャラの火力とEPを補う。", "Forces Aha Moment to trigger, supplementing Remembrance characters damage and Energy.", "强制触发啊哈时刻,为愉悦命途角色补充伤害与能量。"),
+    plan(["爻光", "緋英", "開拓者（愉悦）", "フォフォ"], "愉悦編成を手持ちで組む案。", "A Joy-path team built with characters commonly on hand.", "用常见持有角色组建的愉悦命途编成方案。"),
+    plan(["爻光", "アーチャー", "花火", "丹恒・騰荒"], "単体主力へ行動支援と耐久を組み合わせる。", "Combines action advance support and survivability for a single-target main DPS.", "为单体主力提供行动支援与生存能力。"),
   ]),
 };
 

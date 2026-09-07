@@ -45,7 +45,7 @@ describe("推奨パーティー編成カタログ", () => {
       expect(options.length).toBeGreaterThan(0);
       expect(options.length).toBeLessThanOrEqual(MAX_PARTY_OPTIONS);
       expect(options.every((option) => option.members.some((partyMember) => partyMember.name.ja === name))).toBe(true);
-      expect(options.every((option) => option.communitySources.some((source) => /^2026-08-(25|26|27)$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
+      expect(options.every((option) => option.communitySources.some((source) => /^2026-(08-(25|26|27)|09-07)$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
     });
   });
 

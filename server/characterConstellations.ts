@@ -1630,3 +1630,211 @@ export function constellationProfileFor(identity: CharacterIdentity, rank: numbe
     activeTargetChanges: entry.effects.filter((item) => item.level <= acquiredRank).flatMap((item) => item.targetChanges ?? []),
   };
 }
+
+// 第16バッチ：HSR 4名の星魂。公式の英語・中国語の星魂名は未確認のため、名称は日本語のみ確定とし
+// en/zh には汎用ラベルを置く。効果本文は出典の記載を翻訳したもの。
+Object.assign(CURATED, {
+  "hsr:1504": { ...SOURCE.hsr, gameVersion: "4.5", sourceUrl: "https://game8.jp/houkaistarrail/756950", sourceLabel: t("Game8の2026-09-07更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-09-07", "已对照Game8于2026-09-07更新的公开指南"), dataAsOf: "2026-09-07", updatedAt: "2026-09-07", effects: [
+    effect(1, "ご用心、満月の夜は外に出るな", "Eidolon 1", "星魂1", "敵全体の被ダメージを24%上げる（敵HP50%以下では36%）。", "Increases DMG taken by all enemies by 24%, raised to 36% against enemies at 50% HP or less.", "全体敌人受到的伤害提高24%，敌人生命值低于50%时提高至36%。"),
+    effect(2, "ノック、中に響くのは忍び笑い", "Eidolon 2", "星魂2", "「暴食」の最大層数が18層になり、消費した「暴食」の35%が返還される。", "Raises the maximum Gluttony stacks to 18 and refunds 35% of the Gluttony consumed.", "「暴食」层数上限提高至18层，并返还已消耗「暴食」的35%。"),
+    effect(3, "静かに、旧友たちの秘めた想い", "Eidolon 3", "星魂3", "必殺技と通常攻撃のレベルを上げる。", "Raises the levels of the Ultimate and Basic ATK.", "提高终结技与普攻等级。"),
+    effect(4, "銘じろ、真実に咀嚼は必要ない", "Eidolon 4", "星魂4", "必殺技の発動時、攻撃力を40%上げる（3ターン）。", "After using the Ultimate, increases ATK by 40% for 3 turns.", "施放终结技后攻击力提高40%，持续3回合。"),
+    effect(5, "忠告を、探偵もまた犯人である", "Eidolon 5", "星魂5", "戦闘スキルと天賦のレベルを上げる。", "Raises the levels of the Skill and Talent.", "提高战技与天赋等级。"),
+    effect(6, "幕切れ、或いは誰もいなくなる", "Eidolon 6", "星魂6", "敵の全属性耐性を20%下げ、「暴食」1層につき与ダメージを4%上げる（最大120%）。", "Reduces enemies' All-Type RES by 20% and increases DMG dealt by 4% per Gluttony stack, up to 120%.", "使敌人全属性抗性降低20%，每层「暴食」使造成的伤害提高4%，最多提高120%。"),
+  ] },
+  "hsr:1317": { ...SOURCE.hsr, gameVersion: "4.5", sourceUrl: "https://gamewith.jp/houkaistarrail/article/show/461572", sourceLabel: t("GameWithの2026-08-26更新の公開ガイドを照合", "Cross-checked against GameWith's guide updated 2026-08-26", "已对照GameWith于2026-08-26更新的公开指南"), dataAsOf: "2026-08-26", updatedAt: "2026-09-07", effects: [
+    effect(1, "常世ノ道、三途ニ六文銭無シ", "Eidolon 1", "星魂1", "「結印」状態中、与ダメージが敵の防御力を15%無視する。状態終了後にEPを20回復する。", "While in the Sealing Wax state, DMG ignores 15% of enemy DEF; restores 20 Energy when the state ends.", "「结印」状态期间造成的伤害无视敌方15%防御力，状态结束后回复20点能量。"),
+    effect(2, "俳句ノ暗記、有識ニ罣礙無シ", "Eidolon 2", "星魂2", "単体対象への強化通常攻撃1段目・2段目の削靭値を50%上げる。", "Increases the Toughness reduction of the first and second hits of the Enhanced Basic ATK against single targets by 50%.", "对单体目标的强化普攻第1、2段削韧值提高50%。"),
+    effect(3, "伽藍ノ堂、無間獄ニ正法無シ", "Eidolon 3", "星魂3", "戦闘スキルと天賦のレベルを2上げる（最大Lv.15）。", "Raises Skill and Talent levels by 2, up to level 15.", "战技与天赋等级提高2级，最高15级。"),
+    effect(4, "経年劣化、任侠ニ忍義無シ", "Eidolon 4", "星魂4", "「結印」状態中、味方全体の速度を12%上げる。", "While in the Sealing Wax state, increases all allies' SPD by 12%.", "「结印」状态期间全队速度提高12%。"),
+    effect(5, "一心不乱、鳴弦ニ徒矢無シ", "Eidolon 5", "星魂5", "必殺技のレベルを2、通常攻撃のレベルを1上げる。", "Raises the Ultimate level by 2 and the Basic ATK level by 1.", "终结技等级提高2级，普攻等级提高1级。"),
+    effect(6, "破邪顕正、悪徒ニ慈悲無シ", "Eidolon 6", "星魂6", "戦闘開始時にチャージを5得て上限を5増やす。強化通常攻撃3段目の発動後にチャージを5得る。", "Gains 5 Charge at battle start and raises the cap by 5; gains 5 more Charge after the third Enhanced Basic ATK hit.", "战斗开始时获得5点充能且上限提高5点，强化普攻第3段发动后再获得5点充能。"),
+  ] },
+  "hsr:1218": { ...SOURCE.hsr, gameVersion: "4.5", sourceUrl: "https://game8.jp/houkaistarrail/613886", sourceLabel: t("Game8・GameWith・崩壊スターレイルWikiの公開星魂表を照合", "Cross-checked against public Eidolon tables on Game8, GameWith, and the Honkai: Star Rail wiki", "已对照Game8、GameWith与崩坏星穹铁道Wiki的公开星魂表"), dataAsOf: "2026-08-21", updatedAt: "2026-09-07", effects: [
+    effect(1, "五味五臓", "Eidolon 1", "星魂1", "「焼尽」状態の敵に対する味方の与ダメージを40%上げる。天賦で「焼尽」を付与する際、付与層数が1層増える。", "Allies deal 40% more DMG to enemies afflicted with Ashen Roast, and the Talent applies one extra stack.", "全队对处于「焚烧」状态敌人造成的伤害提高40%，天赋施加「焚烧」时层数+1。"),
+    effect(2, "厚味、万病の元", "Eidolon 2", "星魂2", "敵が「焼尽」状態の時、「焼尽」による炎属性持続ダメージの倍率を300%上げる。", "Increases the Fire DoT multiplier from Ashen Roast by 300%.", "敌人处于「焚烧」状态时，「焚烧」造成的火属性持续伤害倍率提高300%。"),
+    effect(3, "和合の神髄", "Eidolon 3", "星魂3", "戦闘スキルのレベルを2（最大Lv.15）、通常攻撃のレベルを1（最大Lv.10）上げる。", "Raises the Skill level by 2 (max 15) and the Basic ATK level by 1 (max 10).", "战技等级提高2级（最高15级），普攻等级提高1级（最高10级）。"),
+    effect(4, "気血充溢", "Eidolon 4", "星魂4", "結界が展開されている間、敵の攻撃力を15%下げる。", "While the field is deployed, reduces enemy ATK by 15%.", "结界展开期间，敌方攻击力降低15%。"),
+    effect(5, "巡らせる奇策", "Eidolon 5", "星魂5", "必殺技と天賦のレベルを2上げる（最大Lv.15）。", "Raises the Ultimate and Talent levels by 2, up to level 15.", "终结技与天赋等级提高2级，最高15级。"),
+    effect(6, "九沸九変", "Eidolon 6", "星魂6", "「焼尽」の累積上限が9層になり、1層につき敵の全属性耐性を3%（最大27%）下げる。敵が倒された時、その「焼尽」層数が最も層数の低い敵へ移行する。", "Raises the Ashen Roast cap to 9 stacks, reducing enemy All-Type RES by 3% per stack (up to 27%); when an enemy is defeated, its stacks transfer to the enemy with the fewest stacks.", "「焚烧」层数上限提高至9层，每层使敌人全属性抗性降低3%（最多27%）；敌人被击败时其层数转移至层数最少的敌人。"),
+  ] },
+  "hsr:1502": { ...SOURCE.hsr, gameVersion: "4.5", sourceUrl: "https://game8.jp/houkaistarrail/754019", sourceLabel: t("Game8の2026-09-07更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-09-07", "已对照Game8于2026-09-07更新的公开指南"), dataAsOf: "2026-09-07", updatedAt: "2026-09-07", effects: [
+    effect(1, "玉落つる処、満ち満ちる笑み", "Eidolon 1", "星魂1", "必殺技の「アッハ」で爆笑ネタが40に固定され、愉悦ダメージが敵の防御力を20%無視する。", "The Ultimate's Aha fixes the gag value at 40, and Joy DMG ignores 20% of enemy DEF.", "终结技的「阿哈」使爆梗值固定为40，愉悦伤害无视敌方20%防御力。"),
+    effect(2, "目無き飛箭、青き羽を瞳とす", "Eidolon 2", "星魂2", "結界の展開時、味方全体の速度を12%、愉悦度をさらに16%上げる。", "When the field is deployed, increases all allies' SPD by 12% and Joy by a further 16%.", "结界展开时，全队速度提高12%，愉悦度额外提高16%。"),
+    effect(3, "十方の世界、光は府中に映ゆ", "Eidolon 3", "星魂3", "戦闘スキルのレベルを2、通常攻撃と愉悦スキルのレベルを1上げる。", "Raises the Skill level by 2 and the Basic ATK and Joy Skill levels by 1.", "战技等级提高2级，普攻与愉悦技等级提高1级。"),
+    effect(4, "絹糸の如き命数、拈みて羽で彩る", "Eidolon 4", "星魂4", "「アッハ」の追加ターン中、愉悦スキルのダメージを150%上げる。", "During the extra turn granted by Aha, increases Joy Skill DMG by 150%.", "「阿哈」额外回合期间，愉悦技伤害提高150%。"),
+    effect(5, "瓔珞で飾る、琉璃の如き身", "Eidolon 5", "星魂5", "必殺技と天賦のレベルを上げる。", "Raises the levels of the Ultimate and Talent.", "提高终结技与天赋等级。"),
+    effect(6, "手繰り寄せる糸、天星が架くる虹", "Eidolon 6", "星魂6", "味方全体の愉悦ダメージを25%、爻光自身の愉悦スキルダメージを100%上げる。", "Increases all allies' Joy DMG by 25% and Yaoguang's own Joy Skill DMG by 100%.", "全队愉悦伤害提高25%，爻光自身愉悦技伤害提高100%。"),
+  ] },
+});
+
+// 第16バッチ：原神16名の命ノ星座。公式の英語・中国語の星座名は未確認のため、名称は日本語のみ確定とし
+// en/zh には汎用ラベルを置く。効果本文は出典の記載を要約・翻訳したもの。
+Object.assign(CURATED, {
+  "genshin:10000014": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/352604", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "虹色の歌", "Constellation 1", "命之座1", "10秒毎虹色の元素エネルギーを1回復する。", "Every 10 seconds, restores 1 Elemental Energy.", "每10秒恢复1点元素能量。"),
+    effect(2, "元気溌剌", "Constellation 2", "命之座2", "公演、開始♪のクールタイム-15%。スキル継続中、出場している自身のキャラクターの与える水ダメージ+15%。", "Cooldown of Let the Show Begin♪ decreases by 15%. While the skill is active, on-field party members deal 15% increased Hydro DMG.", "「演唱，开始♪」的冷却时间-15%。技能持续期间，出战的己方角色造成的水元素伤害+15%。"),
+    effect(3, "明日の星", "Constellation 3", "命之座3", "シャイニングミラクル♪のスキルLv.+3（最大Lv.15まで）。", "Shining Miracle♪'s Skill Level +3 (max Lv.15).", "「奇迹闪耀♪」技能等级+3（最高升至15级）。"),
+    effect(4, "努力が魔法なの", "Constellation 4", "命之座4", "重撃が敵に命中する度に、バーバラの元素エネルギーが1回復する。一回で最大元素エネルギーが5まで回復できる。", "Each time a Charged Attack hits an opponent, Barbara regenerates 1 Elemental Energy. A single Charged Attack can restore up to 5 Energy this way.", "重击命中敌人时，芭芭拉恢复1点元素能量，单次重击最多恢复5点元素能量。"),
+    effect(5, "純真な絆", "Constellation 5", "命之座5", "公演、開始♪のスキルLv.+3（最大Lv.15まで）。", "Let the Show Begin♪'s Skill Level +3 (max Lv.15).", "「演唱，开始♪」技能等级+3（最高升至15级）。"),
+    effect(6, "美しいものをあなたに", "Constellation 6", "命之座6", "バーバラ待機中にチーム内の自身のキャラクターが死亡すると、下記の効果が発動される。死亡したキャラを復活させ、該当キャラのHPが100%回復される。この効果は15分毎に1回のみ発動可能。", "If a party member dies while Barbara is off-field, the following triggers: the fallen character is revived and their HP is restored to 100%. This can only occur once every 15 minutes.", "芭芭拉处于待机状态时，如果我方出战角色死亡，则触发以下效果：复活该角色，并回复其100%生命值。该效果每15分钟只能触发一次。"),
+  ] },
+  "genshin:10000076": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/491546", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "破離求真", "Constellation 1", "命之座1", "1回の非想風天の「疾風示現」効果継続時間中、ファルザンはフルチャージ狙い撃ちで「風烈の矢」を最大2回まで放てる。", "During one instance of Wind Realm's 'Gale Manifestation' effect, Faruzan can fire the fully-charged Aimed Shot 'Gale Arrow' up to 2 times.", "「杀生诀」的「疾风示现」效果持续期间，法尔哈可以用满蓄力瞄准射击「烈风之矢」最多2次。"),
+    effect(2, "忘形煉智", "Constellation 2", "命之座2", "搏風秘道の「赫耀多面体」の存在時間+6秒。", "The duration of Pressurized Collapse's 'Prismatic Grid' is extended by 6 seconds.", "「霰步骤」的「赫耀多面体」存在时间+6秒。"),
+    effect(3, "霊囿漫遊", "Constellation 3", "命之座3", "非想風天のスキルLv.+3。最大Lv.15まで。", "Wind Realm's Skill Level +3 (max Lv.15).", "「杀生诀」技能等级+3，最高升至15级。"),
+    effect(4, "神機明悟", "Constellation 4", "命之座4", "命中した敵の数に基づき、風圧崩潰のサイクロンはファルザンの元素エネルギーを回復する。1体の敵に命中した場合、元素エネルギーを2ポイント回復する。追加で1体命中するたびに0.5ポイント回復し、1回のサイクロンで最大4ポイントまで回復できる。", "Based on the number of opponents hit, the whirlwind from Pressurized Collapse restores Faruzan's Elemental Energy: hitting 1 opponent restores 2 Energy, and each additional opponent hit restores an extra 0.5 Energy, up to a maximum of 4 Energy per whirlwind.", "根据命中的敌人数量，「霰步骤」产生的旋风为法尔哈恢复元素能量。命中1名敌人恢复2点元素能量，之后每额外命中1名敌人再恢复0.5点，单次旋风最多恢复4点元素能量。"),
+    effect(5, "思慮奇境", "Constellation 5", "命之座5", "搏風秘道のスキルLv.+3。最大Lv.15まで。", "Pressurized Collapse's Skill Level +3 (max Lv.15).", "「霰步骤」技能等级+3，最高升至15级。"),
+    effect(6, "妙道合一", "Constellation 6", "命之座6", "搏風秘道の「祈風の恵み」状態のキャラクターが風元素ダメージを与える時、会心ダメージ+40%。「祈風の恵み」状態のフィールド上キャラクターがダメージを与えると、追加で敵に「風圧崩潰」効果を付与する。この付与は3秒毎に1回のみ発動可能で、チーム全員がクールタイムを共有する。", "When a character under 'Wind Realm's Blessing' from Pressurized Collapse deals Anemo DMG, their CRIT DMG +40%. When an on-field character under this state deals DMG, they additionally apply the 'Pressurized Collapse' effect to opponents; this can only trigger once every 3 seconds, with the cooldown shared by the whole party.", "处于「霰步骤」的「祈风之惠」状态下的角色造成风元素伤害时，暴击伤害+40%。处于该状态的出战角色造成伤害时，将额外为敌人施加「风压聚变」效果，该效果每3秒只能触发一次，全队共享冷却。"),
+  ] },
+  "genshin:10000085": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/539448", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "深海と泡沫の夢", "Constellation 1", "命之座1", "プレッシャー・フロウ・高圧粉砕の会心率+15%。", "CRIT Rate of Pressure Gauge and High-Pressure Crush +15%.", "「压力表」「高压粉碎」的暴击率+15%。"),
+    effect(2, "ペンギンと豊穣の国", "Constellation 2", "命之座2", "プレッシャー・フロウ・高圧粉砕を発動すると、フレミネの元素エネルギーが2ポイント回復する。ランク4の高圧粉砕を発動すると、回復量が3ポイントに変わる。", "Triggering Pressure Gauge or High-Pressure Crush restores 2 Elemental Energy for Freminet. Triggering a Rank 4 High-Pressure Crush changes the amount restored to 3.", "触发「压力表」「高压粉碎」时，菲米尼恢复2点元素能量；触发4级的「高压粉碎」时，恢复量变为3点。"),
+    effect(3, "潜流と白い砂の歌", "Constellation 3", "命之座3", "潜流の剣のスキルLv.+3。最大Lv.15まで。", "Undercurrent Blade's Skill Level +3 (max Lv.15).", "「暗流之剑」技能等级+3，最高升至15级。"),
+    effect(4, "雪の月とあし笛の舞", "Constellation 4", "命之座4", "フレミネが敵に凍結、氷砕き、超電導、星電導反応を起こした後、攻撃力+9%、継続時間6秒、最大2重まで。この効果は0.3秒毎に1回のみ発動可能。", "After Freminet triggers Frozen, Shatter, Superconduct, or Electro-Charged on an opponent, her ATK +9% for 6s, stacking up to 2 times; can only trigger once every 0.3s.", "菲米尼使敌人产生冻结、碎冰、超导、感电反应后，攻击力提升9%，持续6秒，最多叠加2层，该效果每0.3秒最多触发一次。"),
+    effect(5, "暖炉と談笑の夜", "Constellation 5", "命之座5", "プレッシャー・フロウのスキルLv.+3。最大Lv.15まで。", "Pressure Gauge's Skill Level +3 (max Lv.15).", "「压力表」技能等级+3，最高升至15级。"),
+    effect(6, "目覚めと決意の刻", "Constellation 6", "命之座6", "フレミネが敵に凍結、氷砕き、超電導、星電導反応を起こした後、会心ダメージ+12%、継続時間6秒、最大3重まで。この効果は0.3秒毎に1回のみ発動可能。", "After Freminet triggers Frozen, Shatter, Superconduct, or Electro-Charged on an opponent, her CRIT DMG +12% for 6s, stacking up to 3 times; can only trigger once every 0.3s.", "菲米尼使敌人产生冻结、碎冰、超导、感电反应后，暴击伤害提升12%，持续6秒，最多叠加3层，该效果每0.3秒最多触发一次。"),
+  ] },
+  "genshin:10000080": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/481407", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "逢遇の因縁", "Constellation 1", "命之座1", "スターフロストスワールによる霊風状態は、スカイフェザーソングの鷹の羽状態のHP回復間隔を短縮できるようになる。短縮する割合は霊風状態による攻撃速度アップの割合と同一。", "The Windmusing state from Stardew Skypiercer shortens the HP-recovery interval of Skyfeather Song's Falcon's Plume state; the reduction ratio equals the attack-speed increase ratio granted by the Windmusing state.", "「白霜静谧」造成的鹤警状态，可以缩短「云消雨歇」鹰羽状态的生命值回复间隔，缩短比例与鹤警状态提升攻击速度的比例相同。"),
+    effect(2, "同行の旅路", "Constellation 2", "命之座2", "スターフロストスワールの流霜の矢が最初に敵に命中した時、または氷星のビーコンが敵に命中した時、固有天賦「速射牽制」の偵察効果が1層生成される。固有天賦「速射牽制」を解放する必要がある。", "When Stardew Skypiercer's Frost-Rime Arrow first hits an opponent, or a Rimestar Beacon hits an opponent, 1 stack of the Reconnaissance effect from the Passive Talent 'Harrying Shot' is generated. Requires unlocking the Passive Talent 'Harrying Shot'.", "「白霜静谧」的霜寒之箭首次命中敌人、或者寒星信标命中敌人时，生成1层固有天赋「速射牵制」的侦查效果。需解锁固有天赋「速射牵制」。"),
+    effect(3, "遊撃の心得", "Constellation 3", "命之座3", "スカイフェザーソングのスキルLv.+3。最大Lv.15まで。", "Skyfeather Song's Skill Level +3 (max Lv.15).", "「云消雨歇」技能等级+3，最高升至15级。"),
+    effect(4, "霜晴の祈念", "Constellation 4", "命之座4", "ミカ自身によるスカイフェザーソングの鷹の羽状態がチームにいるキャラクターのHPを回復した時、ミカの元素エネルギーを3回復する。1回の鷹の羽状態で、元素エネルギーは最大5回まで回復できる。", "When Mika's own Skyfeather Song Falcon's Plume state heals a party member's HP, Mika regenerates 3 Elemental Energy. Up to 5 Energy can be restored this way per instance of the Falcon's Plume state.", "米卡自身的「云消雨歇」鹰羽状态治疗队伍中角色的生命值时，米卡恢复3点元素能量。单次鹰羽状态最多恢复5次元素能量。"),
+    effect(5, "道標の鳴鏑", "Constellation 5", "命之座5", "スターフロストスワールのスキルLv.+3。最大Lv.15まで。", "Stardew Skypiercer's Skill Level +3 (max Lv.15).", "「白霜静谧」技能等级+3，最高升至15级。"),
+    effect(6, "臨機の策応", "Constellation 6", "命之座6", "スターフロストスワールの霊風状態における偵察効果の重ね掛け層数の上限+1。固有天賦「速射牽制」を解放する必要がある。また、霊風状態にあるフィールド上キャラクターは、物理ダメージの会心ダメージ+60%。", "The maximum stack limit of the Reconnaissance effect during Stardew Skypiercer's Windmusing state increases by 1 (requires unlocking the Passive Talent 'Harrying Shot'). Additionally, on-field characters under the Windmusing state deal 60% increased CRIT DMG for Physical DMG.", "「白霜静谧」鹤警状态下侦查效果的最大叠加层数+1，需解锁固有天赋「速射牵制」。此外，处于鹤警状态下的出战角色，造成的物理伤害的暴击伤害+60%。"),
+  ] },
+  "genshin:10000041": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/352614", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "沈没の預言", "Constellation 1", "命之座1", "チーム内の自身のキャラクターの攻撃が星異状態の敵に命中した8秒間、水元素関連反応の効果が強化される。感電反応ダメージ+15%、月感電反応ダメージ+15%、蒸発反応ダメージ+15%、水元素の拡散反応によるダメージ+15%。凍結反応の継続時間+15%。", "For 8 seconds after a party member's attack hits an opponent affected by Omen, Hydro-related reaction effects are enhanced: Electro-Charged DMG +15%, Lunar-Charged DMG +15%, Vaporize DMG +15%, Hydro Swirl DMG +15%; Frozen duration +15%.", "队伍中自己的角色的攻击命中处于星异状态的敌人后的8秒内，水元素相关反应效果得到强化：感电反应伤害+15%，月感电反应伤害+15%，蒸发反应伤害+15%，水元素扩散反应伤害+15%；冻结反应持续时间+15%。"),
+    effect(2, "星月の連珠", "Constellation 2", "命之座2", "通常攻撃が命中した時、20%の確率で自動的に重撃を発動する。モナが元素爆発星命定軌を発動した後の5秒間、次に発動する通常攻撃が命中した時、必ず重撃を自動で1回発動する。モナの重撃が敵に命中すると、周囲のチーム全員の元素熟知+80%、継続時間12秒。", "Normal Attack hits have a 20% chance to automatically trigger a Charged Attack. For 5s after Mona uses her Elemental Burst Stellaris Phantasm, the next Normal Attack that hits will always automatically trigger 1 Charged Attack. When Mona's Charged Attack hits an opponent, nearby party members gain +80% Elemental Mastery for 12s.", "普通攻击命中时，有20%概率自动触发一次重击。莫娜施放元素爆发「星命定轨」后的5秒内，下一次命中的普通攻击必定自动触发一次重击。莫娜的重击命中敌人时，附近的队伍中所有角色元素精通+80%，持续12秒。"),
+    effect(3, "果てしない天象", "Constellation 3", "命之座3", "星命定軌のスキルLv.+3。", "Stellaris Phantasm's Skill Level +3.", "「星命定轨」技能等级+3。"),
+    effect(4, "絶滅の預言", "Constellation 4", "命之座4", "チーム内キャラクターが星異状態の敵を攻撃する時、会心率+15%。チーム内魔導キャラクターが星異状態の敵を攻撃する時、会心ダメージ+15%。", "When party members attack an opponent affected by Omen, CRIT Rate +15%. When Catalyst-wielding party members attack an opponent affected by Omen, CRIT DMG +15%.", "队伍中的角色攻击处于星异状态的敌人时，暴击率+15%；队伍中的法器角色攻击处于星异状态的敌人时，暴击伤害+15%。"),
+    effect(5, "運命の愚弄", "Constellation 5", "命之座5", "水中幻願のスキルLv.+3。", "Illusory Torrent's Skill Level +3.", "「水中幻愿」技能等级+3。"),
+    effect(6, "災厄の修辞", "Constellation 6", "命之座6", "モナがフィールド上にいて虚実流動状態であるとき、または近くに星異状態の敵がいるとき、1秒毎にモナの次の重撃ダメージ+60%。この効果は最大で8秒間継続し、この方法でアップできる重撃ダメージは最大180%まで。星異状態の敵に対して、モナが与える重撃のダメージが通常の200%となる。", "While Mona is on the field in the Illusory Bubble state, or when an opponent affected by Omen is nearby, her next Charged Attack DMG increases by 60% every second, up to 8 seconds and a maximum increase of 180%. Against opponents affected by Omen, Mona's Charged Attack DMG becomes 200% of normal.", "莫娜在场上且处于虚实流动状态时，或附近存在处于星异状态的敌人时，每秒使莫娜下一次重击伤害+60%，该效果最多持续8秒，以此方式最多可使重击伤害提升180%。对处于星异状态的敌人，莫娜造成的重击伤害变为原来的200%。"),
+  ] },
+  "genshin:10000077": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/366248", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "瑶閣賜物", "Constellation 1", "命之座1", "白玉大根（元素爆発）が爆発した際、効果範囲内にいるフィールド上のキャラクター全員の草元素ダメージが15%アップ（継続8秒）。加えてスタミナを15ポイント回復する。", "When a White Jade Radish (Elemental Burst) explodes, all on-field characters within its effect range deal 15% increased Dendro DMG for 8 seconds. Additionally restores 15 Stamina.", "「白玉萝卜」（元素爆发）爆炸时，效果范围内的所有出战角色造成的草元素伤害提升15%，持续8秒；另外恢复15点体力。"),
+    effect(2, "正思無邪", "Constellation 2", "命之座2", "「桂子仙機」状態（元素スキル関連の状態）にある間、白玉大根の爆発が敵に命中すると、ヨォーヨの元素エネルギーを3ポイント回復する。", "While in the 'Cassia Immortal Mechanism' state (related to the Elemental Skill), if a White Jade Radish's explosion hits an opponent, Yoyo regenerates 3 Elemental Energy.", "处于「桂子仙机」状态（与元素技能相关）期间，「白玉萝卜」爆炸命中敌人时，瑶瑶恢复3点元素能量。"),
+    effect(3, "懇々善道", "Constellation 3", "命之座3", "元素スキル（祥雲団々落清白）のレベルが+3される（最大Lv.15まで）。", "The Elemental Skill's (Auspicious Clouds Fall) level increases by 3 (max Lv.15).", "元素技能（祥云团团落清白）等级+3，最高升至15级。"),
+    effect(4, "愛嬌悠々", "Constellation 4", "命之座4", "ヨォーヨのHP上限の0.3%を基準にヨォーヨ自身の元素熟知がアップする（継続8秒）。この方法で上昇する元素熟知は最大120まで。", "Yoyo's own Elemental Mastery increases based on 0.3% of her Max HP, for 8 seconds. Elemental Mastery gained this way is capped at 120.", "瑶瑶自身的元素精通根据其生命值上限的0.3%提升，持续8秒，以此方式提升的元素精通最多为120点。"),
+    effect(5, "惻隠本義", "Constellation 5", "命之座5", "元素爆発（玉颗珊々月中落）のレベルが+3される（最大Lv.15まで）。", "The Elemental Burst's (Jade Pearl Falls Amid the Moon) level increases by 3 (max Lv.15).", "元素爆发（玉颗珊珊月中落）等级+3，最高升至15级。"),
+    effect(6, "慈恵仁心", "Constellation 6", "命之座6", "月桂・投擲型が白玉大根を2回投げるごとに、次の投擲で追加の白玉大根（強化版）を1本さらに投げる。この追加分が爆発すると、ヨォーヨの攻撃力の75%を基準とした草元素ダメージと、ヨォーヨのHP上限の7.5%を基準とした回復効果が発生する。", "Every time the throwing-type Osmanthus device throws 2 White Jade Radishes, the next throw releases 1 additional, enhanced White Jade Radish. When this extra radish explodes, it deals Dendro DMG based on 75% of Yoyo's ATK, and heals based on 7.5% of Yoyo's Max HP.", "「月桂·投掷型」每投掷2次「白玉萝卜」，下一次投掷会额外投出1个强化版「白玉萝卜」。该额外萝卜爆炸时，会以瑶瑶攻击力的75%为基准造成草元素伤害，并以瑶瑶生命值上限的7.5%为基准产生治疗效果。"),
+  ] },
+  "genshin:10000119": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/706878", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "唇よ歌を紡ぎて 詩を織りなせ", "Constellation 1", "命之座1", "月開花反応でHP回復、重撃スタミナ消費軽減。", "Triggers HP recovery via the Lunar-Bloom reaction; reduces Charged Attack Stamina consumption.", "月绽放反应触发生命值回复，重击体力消耗降低。"),
+    effect(2, "北の戒めを綴りて 伝承を語れ", "Constellation 2", "命之座2", "「蒼の讃歌」効果強化、月兆満照で月開花ダメージ+40%。", "Strengthens the 'Blue Hymn' effect; when Moonsign is at Full Moon, Lunar-Bloom DMG +40%.", "强化「蓝色赞歌」效果；月兆满照时，月绽放伤害+40%。"),
+    effect(3, "元素爆発Lv.+3", "Constellation 3", "命之座3", "元素爆発Lv.+3。", "Elemental Burst Level +3.", "元素爆发等级+3。"),
+    effect(4, "巨熊の力を 恋い慕うこと勿れ", "Constellation 4", "命之座4", "元素スキルで元素エネルギー回復。", "Elemental Skill restores Elemental Energy.", "元素技能恢复元素能量。"),
+    effect(5, "元素スキルLv.+3", "Constellation 5", "命之座5", "元素スキルLv.+3。", "Elemental Skill Level +3.", "元素技能等级+3。"),
+    effect(6, "我が血と涙を 月に捧げ奉らん", "Constellation 6", "命之座6", "月開花追撃、通常攻撃で月開花ダメージ。", "Lunar-Bloom follow-up attack; Normal Attacks deal Lunar-Bloom DMG.", "月绽放追击，普通攻击造成月绽放伤害。"),
+  ] },
+  "genshin:10000006": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/352602", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "無限の電気回路", "Constellation 1", "命之座1", "蒼雷を長押しで発動した後、敵に命中する度にリサの元素エネルギー+2。一回で最大10まで回復可能。", "After using the hold version of Violet Arc, each hit on an opponent restores +2 Elemental Energy for Lisa. Up to 10 Energy can be restored this way per use.", "长按施放「紫罗兰之刺」后，每命中一次敌人便为丽莎恢复2点元素能量，单次最多恢复10点。"),
+    effect(2, "空間電位の結界", "Constellation 2", "命之座2", "蒼雷長押し時に防御力+20%。リサの中断耐性をアップする。", "While using the hold version of Violet Arc, DEF +20%; also increases Lisa's stagger resistance.", "长按施放「紫罗兰之刺」时，防御力+20%，并提升丽莎的抗打断能力。"),
+    effect(3, "共振の電光", "Constellation 3", "命之座3", "薔薇の電光のスキルLv.+3（最大Lv.15まで）。", "Lightning Rose's Skill Level +3 (max Lv.15).", "「玫瑰的电光」技能等级+3，最高升至15级。"),
+    effect(4, "雨の如くプラズマ", "Constellation 4", "命之座4", "薔薇の電光が攻撃する時、放つ稲妻が1〜3本に増加する。", "When Lightning Rose attacks, the number of lightning bolts it releases increases to 1-3.", "「玫瑰的电光」攻击时，释放的闪电数量增加至1~3条。"),
+    effect(5, "プラズマ落雷", "Constellation 5", "命之座5", "蒼雷のスキルLv.+3（最大Lv.15まで）。", "Violet Arc's Skill Level +3 (max Lv.15).", "「紫罗兰之刺」技能等级+3，最高升至15级。"),
+    effect(6, "パルスの魔女", "Constellation 6", "命之座6", "登場時、周囲の敵に蒼雷の誘雷効果を3重付与する。この効果は5秒毎に1回のみ発動する。", "On entering the field, applies 3 stacks of Violet Arc's Conductive status to nearby opponents. This effect can only trigger once every 5 seconds.", "登场时，为周围的敌人施加3层「紫罗兰之刺」的导电效果，该效果每5秒只能触发一次。"),
+  ] },
+  "genshin:10000084": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/464305", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "奇想天外の芸当", "Constellation 1", "命之座1", "ファニーキャット・ハットが同時に存在できる上限が2個に増える。またプロップアローが命中すると、ファニーキャット・ハットを2個召喚し、加えて「プロップ残数」を1層獲得する。この追加効果は15秒に1回のみ発動。", "The maximum number of Funny Cat Hats that can exist at once increases to 2. Additionally, when a Prop Surplus arrow hits, it summons 2 Funny Cat Hats and grants 1 stack of 'Prop Surplus.' This additional effect can only trigger once every 15 seconds.", "同时存在的「滑稽猫帽」数量上限提升至2个。此外，「余额百分百」箭矢命中时，会召唤2个「滑稽猫帽」，并获得1层「余额百分百」层数。该额外效果每15秒只能触发一次。"),
+    effect(2, "巧言令色の誘引", "Constellation 2", "命之座2", "リネがフィールドにいる間、2秒ごとに「一意専心」を1層獲得し、1層につきリネの会心ダメージが20%アップ（最大3層まで重複、リネが退場すると解除）。", "While Lyney is on the field, he gains 1 stack of 'Wholehearted Focus' every 2 seconds; each stack increases his CRIT DMG by 20% (up to 3 stacks; removed when Lyney leaves the field).", "林尼在场上时，每2秒获得1层「专心致志」，每层使林尼的暴击伤害提升20%（最多叠加3层，林尼退场后解除）。"),
+    effect(3, "玄妙敏速の手品", "Constellation 3", "命之座3", "元素スキル（フォース・カード）のレベルが+3される（最大Lv.15まで）。", "The Elemental Skill's (Prop Surplus) level increases by 3 (max Lv.15).", "元素技能（余额百分百）等级+3，最高升至15级。"),
+    effect(4, "熟知熱練の方策", "Constellation 4", "命之座4", "リネの炎元素重撃が敵に命中した後、その敵の炎元素耐性を20%ダウンさせる（継続6秒）。", "After Lyney's Pyro Charged Attack hits an opponent, that opponent's Pyro RES decreases by 20% for 6 seconds.", "林尼的火元素重击命中敌人后，使该敌人的火元素抗性降低20%，持续6秒。"),
+    effect(5, "隠密強襲の通則", "Constellation 5", "命之座5", "元素爆発（ミラクルパレード）のレベルが+3される（最大Lv.15まで）。", "The Elemental Burst's (Wondrous Trick: Miracle Parade) level increases by 3 (max Lv.15).", "元素爆发（大魔术·灵愿之秘）等级+3，最高升至15级。"),
+    effect(6, "本心相違の微笑", "Constellation 6", "命之座6", "リネがプロップアローを発射する際、追加でクラッカーバレット（重奏）を1発放ち、通常のクラッカーバレットの80%分のダメージを与える。このダメージは重撃ダメージ扱いとなる。", "When Lyney fires a Prop Surplus arrow, he additionally fires 1 Cracker Bullet (Reprise), dealing 80% of a normal Cracker Bullet's DMG. This DMG counts as Charged Attack DMG.", "林尼发射「余额百分百」箭矢时，额外发射1发「重奏」爆竹弹，造成普通爆竹弹80%的伤害，该伤害视为重击伤害。"),
+  ] },
+  "genshin:10000083": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/539443", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "流影幻視の冷刃", "Constellation 1", "命之座1", "敵位置にサイクロン生成、引き寄せ。", "Creates a whirlwind at the opponent's position, pulling them in.", "在敌人所在位置生成旋风，将其吸引。"),
+    effect(2, "千変万化の怪奇", "Constellation 2", "命之座2", "リボンバレット追加1発。", "Adds 1 extra Ribbon Bullet.", "缎带飞弹额外增加1发。"),
+    effect(3, "視覚認知の倒錯", "Constellation 3", "命之座3", "元素爆発Lv.+3。", "Elemental Burst Level +3.", "元素爆发等级+3。"),
+    effect(4, "暗黙霊犀の連携", "Constellation 4", "命之座4", "元素スキル使用回数+1。", "Elemental Skill gains +1 additional use.", "元素技能使用次数+1。"),
+    effect(5, "闇黒遮眼の遁法", "Constellation 5", "命之座5", "元素スキルLv.+3。", "Elemental Skill Level +3.", "元素技能等级+3。"),
+    effect(6, "真意看破の双眸", "Constellation 6", "命之座6", "風元素付与、風ダメ+20%、継続6秒。", "Applies Anemo, Anemo DMG +20%, lasting 6 seconds.", "附着风元素，风元素伤害+20%，持续6秒。"),
+  ] },
+  "genshin:10000074": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/483607", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "果てなき夢の領土", "Constellation 1", "命之座1", "シールドのダメージ吸収量+20%。スキル発動時、シールド状態でないチーム全員にシールド生成。", "Shield DMG absorption +20%. When the Elemental Skill is used, generates a shield for all party members who do not currently have one.", "护盾的伤害吸收量+20%。施放元素技能时，为所有未处于护盾状态的队伍成员生成护盾。"),
+    effect(2, "便りと共に還る星影", "Constellation 2", "命之座2", "飛星が敵命中時、元素エネルギー1ポイント回復。", "When a Flying Star hits an opponent, restores 1 Elemental Energy.", "「流星」命中敌人时，恢复1点元素能量。"),
+    effect(3, "秘密を見せる長夜", "Constellation 3", "命之座3", "元素スキルLv.+3（最大15まで）。", "Elemental Skill Level +3 (max 15).", "元素技能等级+3（最高15级）。"),
+    effect(4, "啓示を照らす星芒", "Constellation 4", "命之座4", "飛星発射時、チーム全員に「啓明」効果付与。通常・重撃ダメージをHP上限の5%分アップ。", "When a Flying Star is fired, grants all party members the 'Daybreak' effect, increasing Normal and Charged Attack DMG by an amount equal to 5% of Max HP.", "发射「流星」时，为队伍中所有角色赋予「拂晓之光」效果，使普通攻击和重击伤害提升相当于生命值上限5%的数值。"),
+    effect(5, "浮流の時に夢みるように", "Constellation 5", "命之座5", "元素爆発Lv.+3（最大15まで）。", "Elemental Burst Level +3 (max 15).", "元素爆发等级+3（最高15级）。"),
+    effect(6, "夜彩は輝く灯火のように", "Constellation 6", "命之座6", "飛星ダメージ+40%、星光弾ダメージ+40%、夜星生成間隔20%短縮。", "Flying Star DMG +40%, Starlight Bullet DMG +40%, Night Star generation interval shortened by 20%.", "「流星」伤害+40%，星光子弹伤害+40%，夜星生成间隔缩短20%。"),
+  ] },
+  "genshin:10000106": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/614760", sourceLabel: t("Game8の2026-09-07更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-09-07", "已对照Game8于2026-09-07更新的公开指南"), dataAsOf: "2026-09-07", updatedAt: "2026-09-07", effects: [
+    effect(1, "夜の主の授記", "Constellation 1", "命之座1", "夜魂値上限120に上昇、戦意獲得効率+25%、戦意獲得後の攻撃力+40%（8秒）。", "Nightsoul point cap increases to 120. Fighting Spirit gain efficiency +25%. After gaining Fighting Spirit, ATK +40% for 8 seconds.", "夜魂值上限提升至120，战意获取效率+25%，获得战意后攻击力+40%，持续8秒。"),
+    effect(2, "灰燼の代償", "Constellation 2", "命之座2", "夜魂状態で基礎攻撃力+200、防御力-20%デバフ付与、通常・重撃・元素爆発ダメージ上昇。", "While in the Nightsoul state, base ATK +200 and applies a DEF -20% debuff to opponents; increases Normal Attack, Charged Attack, and Elemental Burst DMG.", "处于夜魂状态时，基础攻击力+200，并为敌人施加防御力-20%的减益，同时提升普通攻击、重击、元素爆发造成的伤害。"),
+    effect(3, "燃え盛る太陽", "Constellation 3", "命之座3", "「天を焦がす刻」のスキルLv.+3（最大Lv.15）。", "'The Sun-Scorched Hour' Skill Level +3 (max Lv.15).", "「灼烧天空之时」技能等级+3，最高升至15级。"),
+    effect(4, "指導者の覚悟", "Constellation 4", "命之座4", "固有天賦効果強化。ダメージアップ効果が時間経過で減少しなくなり、追加でダメージ+10%。", "Enhances the Passive Talent effect: the DMG-increase effect no longer decreases over time, and an additional +10% DMG is granted.", "强化固有天赋效果：伤害提升效果不再随时间衰减，并额外提升10%伤害。"),
+    effect(5, "真実の意味", "Constellation 5", "命之座5", "「名を称える刻」のスキルLv.+3（最大Lv.15）。", "'The Name-Praising Hour' Skill Level +3 (max Lv.15).", "「赞颂其名之时」技能等级+3，最高升至15级。"),
+    effect(6, "「人の名」解放", "Constellation 6", "命之座6", "諸火武装完全強化、焚曜の輪に突進追撃、双駆輪に焚曜の輪・灼影召喚、防御力-20%デバフ付与、15秒毎に夜魂値80獲得。", "Unlocks 'The Name of the People': fully enhances all Fire Arms; the Ring of Scorching Deity gains a dash follow-up attack; the Dual-Wheel Ring summons the Ring of Scorching Deity and Burning Shadow; applies a DEF -20% debuff; gains 80 Nightsoul points every 15 seconds.", "解锁「人之名」：全面强化诸火武装，「焚曜之轮」获得突进追击，「双驱轮」召唤「焚曜之轮」与「灼影」，并施加防御力-20%的减益，每15秒获得80点夜魂值。"),
+  ] },
+  "genshin:10000102": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/622964", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "のどかなメツトリ", "Constellation 1", "命之座1", "夜魂の加護状態での初回サメサメバイト・ビッグウェーブと発射ロケットのダメージがHP上限の66%分アップ。戦闘中でない時は夜魂値と燃素消費-30%。", "The first instance of Sharky Bite - Big Wave and the fired rocket's DMG under the Nightsoul's Blessing state increases by an amount equal to 66% of Max HP. When not in combat, Nightsoul consumption -30%.", "夜魂加持状态下，首次「鲨鲨咬击·大浪」及发射的火箭的伤害提升相当于生命值上限66%的数值。非战斗状态下，夜魂消耗-30%。"),
+    effect(2, "ムアラニ、全力で行っきまーす！", "Constellation 2", "命之座2", "夜魂の加護状態に入るとウェーブチャージを2層獲得。プクフグフロート獲得で1層追加獲得。2個獲得後の2秒間で夜魂値を追加12回復。", "Entering the Nightsoul's Blessing state grants 2 stacks of Wave Charge. Obtaining a Pufferfish Float grants 1 additional stack. Within 2 seconds of obtaining 2 stacks, an additional 12 Nightsoul points are restored.", "进入夜魂加持状态时，获得2层浪潮充能。获得河豚气泡时额外获得1层。获得2层后的2秒内，额外恢复12点夜魂值。"),
+    effect(3, "喜びの波に乗ろう！", "Constellation 3", "命之座3", "サメサメウェーブブレイカーのスキルLV.+3（最大LV.15）。", "Sharky Wavebreaker's Skill Level +3 (max Lv.15).", "「鲨鲨破浪」技能等级+3，最高升至15级。"),
+    effect(4, "サメくんの主食はプクフグだよ", "Constellation 4", "命之座4", "プクフグフロート獲得時に元素エネルギーを8回復。爆瀑ロケットのダメージ+75%。", "Obtaining a Pufferfish Float restores 8 Elemental Energy. Surging Blast rocket DMG +75%.", "获得河豚气泡时恢复8点元素能量，「爆瀑火箭」伤害+75%。"),
+    effect(5, "おんなじサーフボード、販売中！", "Constellation 5", "命之座5", "爆瀑ロケットのスキルLV.+3（最大LV.15）。", "Surging Blast's Skill Level +3 (max Lv.15).", "「爆瀑火箭」技能等级+3，最高升至15级。"),
+    effect(6, "「流泉の衆」の精神", "Constellation 6", "命之座6", "1凸のダメージアップ効果の「初回」という制限を解除。", "Removes the 'first instance only' restriction on the DMG-increase effect from Constellation 1.", "解除1命伤害提升效果的「首次」限制。"),
+  ] },
+  "genshin:10000120": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/707119", sourceLabel: t("Game8の2026-09-01更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-09-01", "已对照Game8于2026-09-01更新的公开指南"), dataAsOf: "2026-09-01", updatedAt: "2026-09-07", effects: [
+    effect(1, "雪影の幕をひらく時", "Constellation 1", "命之座1", "特殊元素スキル北国の嵐槍の基本クールタイムを4秒に短縮。チーム内キャラクターが月感電反応を起こすと元素エネルギーを8回復（5.5秒に1回のみ）。", "Shortens the base cooldown of the special Elemental Skill Northland Bane Lance to 4 seconds. When a party member triggers Lunar-Charged, restores 8 Elemental Energy (can only occur once every 5.5 seconds).", "将特殊元素技能「北地哀铳」的基础冷却时间缩短至4秒。队伍中角色触发月感电反应时，恢复8点元素能量（每5.5秒最多触发一次）。"),
+    effect(2, "邪悪の壁を超える者", "Constellation 2", "命之座2", "北国の嵐槍発動後6秒間、次の通常攻撃命中時に追加で攻撃力50%分の雷元素範囲ダメージ（月感電反応ダメージ扱い）。月兆・満照／フリンズがフィールドにいる時、雷元素攻撃命中で敵の雷元素耐性-25%（7秒）。", "For 6 seconds after using Northland Bane Lance, the next Normal Attack that hits additionally deals AoE Electro DMG equal to 50% ATK (counted as Lunar-Charged DMG). While Moonsign is at Full Moon and Flins is on the field, hitting with an Electro attack decreases the opponent's Electro RES by 25% for 7 seconds.", "施放「北地哀铳」后的6秒内，下一次命中的普通攻击会额外造成相当于攻击力50%的雷元素范围伤害（视为月感电反应伤害）。月兆满照期间，弗林斯在场上时，命中雷元素攻击会使敌人的雷元素抗性降低25%，持续7秒。"),
+    effect(3, "闇に訪う見知らぬ客", "Constellation 3", "命之座3", "元素爆発「旧儀・夜の賓客」のスキルLv.+3（最大Lv.15）。", "Elemental Burst 'Ancient Rite: Night's Guest' Skill Level +3 (max Lv.15).", "元素爆发「旧仪·长夜来客」技能等级+3，最高升至15级。"),
+    effect(4, "咆哮する荒れ山の夜", "Constellation 4", "命之座4", "攻撃力+20%。固有天賦「幽炎の囁き」強化：元素熟知が攻撃力の10%分アップ（最大220まで）。", "ATK +20%. Enhances the Passive Talent 'Whispers of Demonfire': Elemental Mastery increases by an amount equal to 10% of ATK (up to 220).", "攻击力+20%，强化固有天赋「幽焰低语」：元素精通提升相当于攻击力10%的数值（最高220点）。"),
+    effect(5, "俗世から遠ざかる影", "Constellation 5", "命之座5", "元素スキル「古律・孤灯の秘密」のスキルLv.+3（最大Lv.15）。", "Elemental Skill 'Ancient Law: Secret of the Solitary Lamp' Skill Level +3 (max Lv.15).", "元素技能「古律·孤灯的秘密」技能等级+3，最高升至15级。"),
+    effect(6, "歌と死の舞踏", "Constellation 6", "命之座6", "月感電反応ダメージ+35%。月兆・満照／付近のチーム内キャラクターの月感電反応ダメージ+10%。", "Lunar-Charged DMG +35%. When Moonsign is at Full Moon, nearby party members' Lunar-Charged DMG +10%.", "月感电反应伤害+35%。月兆满照期间，附近的队伍中角色的月感电反应伤害+10%。"),
+  ] },
+  "genshin:10000124": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/707117", sourceLabel: t("Game8の2026-08-13更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-08-13", "已对照Game8于2026-08-13更新的公开指南"), dataAsOf: "2026-08-13", updatedAt: "2026-09-07", effects: [
+    effect(1, "よーし、もう一本！", "Constellation 1", "命之座1", "もふもふニャンコボールが敵に命中した時、50%の確率でバウンドし付近の敵に元素ダメージ。", "When a Fluffy Kitty Ball hits an opponent, there is a 50% chance it bounces and deals Elemental DMG to nearby opponents.", "「毛茸茸猫猫球」命中敌人时，有50%概率反弹并对附近的敌人造成元素伤害。"),
+    effect(2, "ゴロツキの臨機応変", "Constellation 2", "命之座2", "キャラクター数が最も多い元素タイプを除いた残りのうち最も人数が多い元素タイプもこっそり記録（最大2種類の効果を発動）。", "Also secretly records the elemental type with the second-most characters (excluding the type with the most), enabling up to 2 types of effects to trigger.", "悄悄记录除人数最多的元素类型以外，人数第二多的元素类型（最多可触发2种效果）。"),
+    effect(3, "寄る辺ないギャンブル", "Constellation 3", "命之座3", "元素爆発のスキルLv.+3（最大Lv.15）。", "Elemental Burst Skill Level +3 (max Lv.15).", "元素爆发技能等级+3，最高升至15级。"),
+    effect(4, "砂の上のベリー", "Constellation 4", "命之座4", "元素が変化した時、元素エネルギーを4回復。", "When the elemental type changes, restores 4 Elemental Energy.", "元素类型发生变化时，恢复4点元素能量。"),
+    effect(5, "偉大なる財宝", "Constellation 5", "命之座5", "元素スキルのスキルLv.+3（最大Lv.15）。", "Elemental Skill Skill Level +3 (max Lv.15).", "元素技能技能等级+3，最高升至15级。"),
+    effect(6, "ほんの小さな幸運", "Constellation 6", "命之座6", "ゴロニャンおボトルが満タンになってから20秒間、月兆キャラの会心率+5%、会心ダメージ+40%。", "For 20 seconds after the Purring Bottle becomes full, Nightsoul characters' CRIT Rate +5%, CRIT DMG +40%.", "「呼噜噜的瓶子」充满后的20秒内，月兆角色的暴击率+5%，暴击伤害+40%。"),
+  ] },
+  "genshin:10000086": { ...SOURCE.genshin, gameVersion: "7.0", sourceUrl: "https://game8.jp/genshin/539460", sourceLabel: t("Game8の2026-09-07更新の公開ガイドを照合", "Cross-checked against Game8's guide updated 2026-09-07", "已对照Game8于2026-09-07更新的公开指南"), dataAsOf: "2026-09-07", updatedAt: "2026-09-07", effects: [
+    effect(1, "悪を為す者に恐れを", "Constellation 1", "命之座1", "「恩典の戒め」の獲得条件が緩和され、リベルブローの5段目命中時にも獲得できる。誅罰・ヴォールティングアッパーのダメージが200%にアップし、命中時に烈霜の懲戒状態が4秒延長される。", "The acquisition condition for 'Grace's Admonishment' is eased, allowing it to also be gained when the 5th hit of Rebel Blow connects. Chastise: Vaulting Uppercut's DMG increases to 200%, and on hit, extends the Frost Discipline state by 4 seconds.", "「恩典的告诫」的获得条件放宽，「叛逆重击」第5段命中时也可获得。「惩戒·扶摇直上」伤害提升至200%，命中时使「凛霜惩戒」状态延长4秒。"),
+    effect(2, "力に驕る者に鎖を", "Constellation 2", "命之座2", "ガンメタル・ウルフバイト発動時、「抵罪の赦免」1層につきダメージ+40%。5層到達時は通常攻撃と重撃が125%/130%のダメージになる。", "When Gunmetal Wolfbite is used, each stack of 'Atonement's Pardon' increases DMG by 40%; upon reaching 5 stacks, Normal and Charged Attacks deal 125%/130% DMG.", "施放「重金属·狼噬」时，每层「赎罪的赦免」使伤害+40%；达到5层时，普通攻击和重击伤害变为125%/130%。"),
+    effect(3, "騙し盗る者に罰を", "Constellation 3", "命之座3", "フロストコンビネーションのスキルLv.+3（最大Lv.15）。", "Frost Combination's Skill Level +3 (max Lv.15).", "「冰霜连击」技能等级+3，最高升至15级。"),
+    effect(4, "苦に喘ぐ者に救いを", "Constellation 4", "命之座4", "誅罰・ヴォールティングアッパーの回復量がHP上限の50%にアップし、HP上限を超過した時に攻撃速度+20%（4秒）。", "Chastise: Vaulting Uppercut's healing amount increases to 50% of Max HP, and when HP exceeds the Max HP cap, ATK Speed +20% for 4 seconds.", "「惩戒·扶摇直上」的治疗量提升至生命值上限的50%，当生命值超过上限时，攻击速度+20%，持续4秒。"),
+    effect(5, "冤を蒙る者に赦しを", "Constellation 5", "命之座5", "ガンメタル・ウルフバイトのスキルLv.+3（最大Lv.15）。", "Gunmetal Wolfbite's Skill Level +3 (max Lv.15).", "「重金属·狼噬」技能等级+3，最高升至15级。"),
+    effect(6, "罪の無い者に慰めを", "Constellation 6", "命之座6", "誅罰・ヴォールティングアッパーの会心率+10%、会心ダメージ+80%。発動時に氷柱を生成し100%分の追撃ダメージを与える。", "Chastise: Vaulting Uppercut's CRIT Rate +10%, CRIT DMG +80%. On use, generates an ice pillar that deals a follow-up attack worth 100% of its DMG.", "「惩戒·扶摇直上」的暴击率+10%，暴击伤害+80%，发动时生成冰柱，造成相当于该伤害100%的追击伤害。"),
+  ] },
+});
+
+/**
+ * 図鑑（UID不要）でカタログ名から凸を引くための索引。値は公開メタデータで確認済みの source ID。
+ * UID照会経路は取得元の source ID をそのまま使うため、この索引を経由しない。
+ * お試し実装・派生実装（例 genshin:10000901 マーヴィカ（お試し））はカタログ名を持たないため、
+ * 名前一致で誤適用されることはない。
+ */
+const CATALOG_NAME_TO_SOURCE_ID: Record<string, string> = {
+  "hsr:不死途": "1504",
+  "hsr:乱破": "1317",
+  "hsr:椒丘": "1218",
+  "hsr:爻光": "1502",
+  "genshin:バーバラ": "10000014",
+  "genshin:ファルザン": "10000076",
+  "genshin:フレミネ": "10000085",
+  "genshin:ミカ": "10000080",
+  "genshin:モナ": "10000041",
+  "genshin:ヨォーヨ": "10000077",
+  "genshin:ラウマ": "10000119",
+  "genshin:リサ": "10000006",
+  "genshin:リネ": "10000084",
+  "genshin:リネット": "10000083",
+  "genshin:レイラ": "10000074",
+  "genshin:マーヴィカ": "10000106",
+  "genshin:ムアラニ": "10000102",
+  "genshin:フリンズ": "10000120",
+  "genshin:ヤフォダ": "10000124",
+  "genshin:リオセスリ": "10000086",
+};
+
+/** カタログ名（図鑑）から凸プロフィールを返す。ID索引に無い名前は従来の名前フォールバックへ委ねる。 */
+export function constellationProfileForCatalogName(game: CharacterIdentity["game"], name: string, rank: number | null): ConstellationProfile {
+  const sourceId = CATALOG_NAME_TO_SOURCE_ID[`${game}:${name}`];
+  const identity: CharacterIdentity = sourceId
+    ? { game, sourceId, key: `${game}:${sourceId}`, displayName: name, variantOf: null, resolved: true, resolution: "curated-id-map" }
+    : { game, sourceId: name, key: `${game}:${name}`, displayName: name, variantOf: null, resolved: true, resolution: "provider" };
+  return constellationProfileFor(identity, rank);
+}
