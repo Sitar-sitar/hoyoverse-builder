@@ -154,6 +154,11 @@ PT が2案のキャラクターは、出典に「入れ替え候補の列挙」�
 | 進捗台帳 | `server/characterUpdateLedger.ts`（`REVIEWED_BATCHES.16`、`NEXT_BATCH`＝第17バッチ、`nextBatch.id = 17`） |
 | 回帰テスト | `server/batch16CuratedGuides.test.ts`、更新した既存テスト4件 |
 
+図鑑（UID不要）経路で2つの欠落を実画面で検出し、あわせて修正した。
+
+1. `characterReference.ts` はカタログ名を source ID として `resolveCharacterIdentity()` へ渡していたため、ID キーの凸データへ到達しなかった。`constellationProfileForCatalogName()` で名前→確認済みIDを解決してから引く。
+2. 同ファイルは原神・ZZZのガイドを `generatedGenshinGuide()` / `generatedZzzGuide()` へ直接フォールバックしており、provider 経路（`GI_GUIDE_OVERRIDES` / `ZZZ_CHARACTER_GUIDES`）にだけ登録された個別ビルドが図鑑へ届かなかった。UID照会と同じ `genshinGuide()` / `zzzGuide()` を使うよう統一した。第16バッチだけでなく既存バッチの原神・ZZZにも同じ欠落があった。
+
 凸の英語名・中国語名は公式訳を確認できていないため、`Constellation N` / `命之座N`（HSRは `Eidolon N` / `星魂N`）の汎用ラベルを
 使用している。日本語名だけが出典で確認できた名称であり、説明文の英訳・中訳は日本語本文の訳である。ローカライズの正式訳が
 確認できた時点で差し替える。

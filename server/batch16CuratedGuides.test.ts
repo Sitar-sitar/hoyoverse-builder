@@ -3,7 +3,7 @@ import { guideFor } from "./buildAdvisor";
 import { constellationProfileFor } from "./characterConstellations";
 import { guideMetadataFor } from "./characterGuideMetadata";
 import { characterReferenceFor } from "./characterReference";
-import { normalizeGenshinPayload } from "./gameProviders";
+import { genshinGuide, normalizeGenshinPayload } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
 
 const BATCH16_DATE = "2026-09-07";
@@ -167,11 +167,12 @@ describe("第16バッチ20名の個別ガイド", () => {
       expect(reference?.constellations.dataStatus).toBe("curated");
       expect(reference?.constellations.effects).toHaveLength(6);
       expect(reference?.partyRecommendations.options.every((option) => option.members[0]?.name.ja === displayName)).toBe(true);
-      if (game === "hsr") {
-        const lookupGuide = guideFor(displayName, hsrPathFor[displayName]!);
-        expect(reference?.guide.targets).toEqual(lookupGuide.targets);
-        expect(reference?.guide.relicSet).toBe(lookupGuide.relicSet);
-      }
+      const lookupGuide = game === "hsr" ? guideFor(displayName, hsrPathFor[displayName]!) : genshinGuide(displayName);
+      expect(reference?.guide.targets).toEqual(lookupGuide.targets);
+      expect(reference?.guide.relicSet).toBe(lookupGuide.relicSet);
+      expect(reference?.guide.headline).toBe(lookupGuide.headline);
+      // 自動生成ガイドへのフォールバックではなく、精査済みの個別ビルドが返ること。
+      expect(reference?.guide.relicSet).not.toContain("公開ビルドに基づく");
       expect(reference?.partyRecommendations.options.map((option) => option.members.map((member) => member.name.ja)))
         .toEqual(partyRecommendationsFor(game, displayName).options.map((option) => option.members.map((member) => member.name.ja)));
     });

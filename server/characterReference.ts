@@ -6,7 +6,7 @@ import { batch15PartyFor } from "./batch15Parties";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS, type CatalogGameId } from "./characterGuideCatalog";
 import { constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
 import { characterUpdateLedger } from "./characterUpdateLedger";
-import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
+import { genshinGuide, zzzGuide } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 
@@ -37,10 +37,12 @@ function baseGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   if (game === "hsr") {
     return guideFor(name, HSR_RUNTIME_PATHS[name] ?? "");
   }
+  // UID照会と同じ個別ガイド解決を使う。generated* へ直接フォールバックすると、
+  // provider 経路だけに登録された個別ビルドが図鑑へ届かない。
   if (game === "genshin") {
-    return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
+    return genshinGuide(name);
   }
-  return withGuideMetadata("zzz", generatedZzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack"), name);
+  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
 }
 
 export function characterReferenceCatalog() {

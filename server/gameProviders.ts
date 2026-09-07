@@ -279,7 +279,7 @@ Object.assign(GI_GUIDE_OVERRIDES, {
   "リオセスリ": { headline: "HP変動で会心率を確保する氷法器アタッカーとして、公開値では会心・攻撃力を優先する。", relicSet: "ファントムハンター ×4 / 氷風を彷徨う勇士 ×4 / 遂げられなかった想い ×4", planarSet: "攻撃力・氷元素ダメージ・会心", mainStats: [{ slot: "時計", value: "攻撃力%" }, { slot: "杯", value: "氷元素ダメージ" }, { slot: "冠", value: "会心ダメージ / 会心率" }], targets: [], targetContext: "リオセスリ専用：出典は会心率・会心ダメージ・攻撃力を高優先とするのみで数値閾値を示さないため目標値を登録しない。ファントムハンターのHP変動による会心率上昇、烈霜の懲戒中の重撃強化、命ノ星座1/2/6の効果は戦闘中効果のため公開プロフィールへ加算しない。", dataAsOf: "2026-09-07", updatedAt: "2026-09-07", sourceLabel: "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合" },
 });
 
-function genshinGuide(name: string): GuideDefinition {
+export function genshinGuide(name: string): GuideDefinition {
   const individualGuide = GI_GUIDE_OVERRIDES[name];
   if (individualGuide) return withGuideMetadata("genshin", { ...individualGuide, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。武器・編成・元素反応・戦闘中バフにより必要値は変動します。` }, name);
   return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
@@ -647,7 +647,7 @@ Object.assign(ZZZ_CHARACTER_GUIDES, {
   "南宮羽": { headline: "異常とブレイクを両立する撃破として、異常マスタリーと異常掌握を優先して整える。", relicSet: "パエトーンの歌 ×4 / フリーダム・ブルース ×2 / ショックスター・ディスコ ×4・パエトーンの歌 ×2", planarSet: "異常マスタリー・エーテル属性ダメージまたは攻撃力%または貫通率・異常掌握", mainStats: [{ slot: "IV", value: "異常マスタリー" }, { slot: "V", value: "エーテル属性ダメージ / 攻撃力% / 貫通率" }, { slot: "VI", value: "異常掌握" }], targets: [], targetContext: "南宮羽専用：異常マスタリー＞攻撃力を優先する。コアの異常マスタリー+120、ビート、ナイトフィーバー、音動機・ディスク・心象映画の戦闘中または条件付き効果は公開プロフィールへ加算しない。根拠に固定数値閾値がないため推測で登録しない。", dataAsOf: "2026-08-27", updatedAt: "2026-08-27", sourceLabel: "Game8・GameWithの更新日付き個別エージェント・PTガイドを照合" },
 });
 
-function zzzGuide(name: string, profession: string): GuideDefinition {
+export function zzzGuide(name: string, profession: string): GuideDefinition {
   const characterGuide = ZZZ_CHARACTER_GUIDES[name];
   if (characterGuide) return withGuideMetadata("zzz", characterGuide, name);
   return withGuideMetadata("zzz", generatedZzzGuide(name, profession), name);
