@@ -5,8 +5,8 @@ describe("character reference catalog", () => {
   it("全248キャラクターをゲーム別に公開する", () => {
     const catalog = characterReferenceCatalog();
     expect(catalog.total).toBe(248);
-    expect(catalog.reviewed).toBe(220);
-    expect(catalog.pending).toBe(28);
+    expect(catalog.reviewed).toBe(248);
+    expect(catalog.pending).toBe(0);
     expect(catalog.games.hsr).toHaveLength(81);
     expect(catalog.games.genshin).toHaveLength(109);
     expect(catalog.games.zzz).toHaveLength(58);

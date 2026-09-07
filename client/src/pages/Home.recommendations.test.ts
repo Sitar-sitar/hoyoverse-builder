@@ -142,6 +142,17 @@ describe("優先強化項目の画面統合", () => {
     expect(screen.queryByRole("heading", { name: "公開キャラクター" })).toBeNull();
   });
 
+  it("比較対象が0件なら達成済みではなく固定目標未登録と表示する", () => {
+    activeLookupResult = structuredClone(lookupResult);
+    activeLookupResult.characters[0].comparisons = [];
+    activeLookupResult.characters[0].recommendations = [];
+    activeLookupResult.characters[0].guide.targets = [];
+    render(createElement(LanguageProvider, null, createElement(Home)));
+    fireEvent.click(screen.getByRole("button", { name: "照会する" }));
+    expect(screen.getByText("このキャラクターには比較可能な固定目標値が登録されていません。推奨ビルドと主ステータスを確認してください。")).toBeTruthy();
+    expect(screen.queryByText(/すべて目標水準に到達しています/)).toBeNull();
+  });
+
   it("保存済みの英語設定で、優先強化提案と装備アクションを英語表示する", () => {
     window.localStorage.setItem("starrail-build-advisor.language", "en");
     render(createElement(LanguageProvider, null, createElement(Home)));

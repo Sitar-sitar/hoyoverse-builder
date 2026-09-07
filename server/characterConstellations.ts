@@ -1,5 +1,6 @@
 import type { CharacterIdentity } from "./characterIdentity";
 import type { StatKey, TierName } from "./buildAdvisor";
+import { BATCH_17_CONSTELLATIONS } from "./batch17ConstellationData.generated";
 
 export type LocalizedText = { ja: string; en: string; "zh-CN": string };
 export type ConstellationTargetChange = {
@@ -1616,7 +1617,7 @@ Object.assign(CURATED, {
 });
 
 export function constellationProfileFor(identity: CharacterIdentity, rank: number | null): ConstellationProfile {
-  const entry = CURATED[identity.key] ?? CURATED[`${identity.game}:${identity.displayName}`];
+  const entry = CURATED[identity.key] ?? BATCH_17_CONSTELLATIONS[identity.key] ?? CURATED[`${identity.game}:${identity.displayName}`];
   const acquiredRank = Math.max(0, Math.min(6, rank ?? 0));
   if (!entry) {
     const source = SOURCE[identity.game];
@@ -1828,6 +1829,34 @@ const CATALOG_NAME_TO_SOURCE_ID: Record<string, string> = {
   "genshin:フリンズ": "10000120",
   "genshin:ヤフォダ": "10000124",
   "genshin:リオセスリ": "10000086",
+  "genshin:レザー": "10000020",
+  "genshin:ロサリア": "10000045",
+  "genshin:雲菫": "10000064",
+  "genshin:煙緋": "10000048",
+  "genshin:嘉明": "10000092",
+  "genshin:甘雨": "10000037",
+  "genshin:閑雲": "10000093",
+  "genshin:凝光": "10000027",
+  "genshin:九条裟羅": "10000056",
+  "genshin:荒瀧一斗": "10000057",
+  "genshin:刻晴": "10000042",
+  "genshin:珊瑚宮心海": "10000054",
+  "genshin:鹿野院平蔵": "10000059",
+  "genshin:七七": "10000035",
+  "genshin:重雲": "10000036",
+  "genshin:申鶴": "10000063",
+  "genshin:神里綾華": "10000002",
+  "genshin:神里綾人": "10000066",
+  "genshin:辛炎": "10000044",
+  "genshin:千織": "10000094",
+  "genshin:早柚": "10000053",
+  "genshin:放浪者": "10000075",
+  "genshin:北斗": "10000024",
+  "genshin:夢見月瑞希": "10000109",
+  "genshin:藍硯": "10000108",
+  "genshin:旅人": "10000005",
+  "genshin:綺良々": "10000061",
+  "genshin:魈": "10000026",
 };
 
 /** カタログ名（図鑑）から凸プロフィールを返す。ID索引に無い名前は従来の名前フォールバックへ委ねる。 */

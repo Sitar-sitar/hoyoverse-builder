@@ -1,6 +1,7 @@
 import type { StatKey, TierName } from "./buildAdvisor";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS } from "./characterGuideCatalog";
 import { generatedGenshinGuide, generatedHsrGuide, generatedZzzGuide } from "./individualGuides";
+import { batch17PartyFor } from "./batch17Parties";
 
 /**
  * 推奨編成の手動キュレーションデータ。
@@ -1270,6 +1271,10 @@ function genericOptionsFor(game: PartyGameId, name: string): PartyRecommendation
 export const PARTY_CATALOG_CHARACTER_COUNT = Object.values(CHARACTER_GUIDE_CATALOG).filter(Array.isArray).reduce((total, names) => total + names.length, 0);
 
 export function partyRecommendationsFor(game: PartyGameId, characterName: string): PartyRecommendationSet {
+  if (game === "genshin") {
+    const curated = batch17PartyFor(characterName);
+    if (curated) return curated;
+  }
   const key = `${game}:${characterName}`;
   const options = (MANUALLY_CURATED_HIGH_USAGE_CATALOG[key] ?? PARTY_CATALOG[key] ?? genericOptionsFor(game, characterName)).slice(0, MAX_PARTY_OPTIONS);
   const dataset = GAME_PARTY_DATASET[game];
