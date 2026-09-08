@@ -6,6 +6,25 @@ import { CHARACTER_GUIDE_METADATA, guideMetadataFor } from "./characterGuideMeta
 import { expectedProfileFor } from "./expectedGuideProfiles";
 import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
 
+// StarRailRes properties.json の実データ抜粋（field/ratio/percent の意味は本家スキーマに準拠）。
+const HSR_TEST_PROPERTIES: Record<string, Record<string, unknown>> = {
+  HPDelta: { type: "HPDelta", name: "HP", field: "hp", ratio: false, percent: false, order: 39 },
+  HPAddedRatio: { type: "HPAddedRatio", name: "HP", field: "hp", ratio: true, percent: true, order: 40 },
+  AttackDelta: { type: "AttackDelta", name: "攻撃力", field: "atk", ratio: false, percent: false, order: 42 },
+  AttackAddedRatio: { type: "AttackAddedRatio", name: "攻撃力", field: "atk", ratio: true, percent: true, order: 43 },
+  DefenceDelta: { type: "DefenceDelta", name: "防御力", field: "def", ratio: false, percent: false, order: 45 },
+  DefenceAddedRatio: { type: "DefenceAddedRatio", name: "防御力", field: "def", ratio: true, percent: true, order: 46 },
+  SpeedDelta: { type: "SpeedDelta", name: "速度", field: "spd", ratio: false, percent: false, order: 57 },
+  SpeedAddedRatio: { type: "SpeedAddedRatio", name: "速度", field: "spd", ratio: true, percent: true, order: 100 },
+  CriticalChanceBase: { type: "CriticalChanceBase", name: "会心率", field: "crit_rate", ratio: false, percent: true, order: 15 },
+  CriticalDamageBase: { type: "CriticalDamageBase", name: "会心ダメージ", field: "crit_dmg", ratio: false, percent: true, order: 16 },
+  BreakDamageAddedRatioBase: { type: "BreakDamageAddedRatioBase", name: "撃破特効", field: "break_dmg", ratio: false, percent: true, order: 8 },
+  StatusProbabilityBase: { type: "StatusProbabilityBase", name: "効果命中", field: "effect_hit", ratio: false, percent: true, order: 20 },
+  StatusResistanceBase: { type: "StatusResistanceBase", name: "効果抵抗", field: "effect_res", ratio: false, percent: true, order: 21 },
+  SPRatioBase: { type: "SPRatioBase", name: "EP回復効率", field: "sp_rate", ratio: false, percent: true, order: 19 },
+  ElationDamageAddedRatioBase: { type: "ElationDamageAddedRatioBase", name: "愉悦度", field: "elation_dmg", ratio: false, percent: true, order: 23 },
+};
+
 describe("MiHoMoデータ正規化", () => {
   it("公開キャラクターの装備と目標達成度を表示モデルに変換する", () => {
     const data = normalizeMihomoPayload({
@@ -121,7 +140,11 @@ describe("MiHoMoからEnkaへのフォールバック", () => {
       if (url.endsWith("characters.json")) return new Response(JSON.stringify({ "1310": { name: "ホタル", element: "Fire", path: "Warrior" } }), { headers: { "content-type": "application/json" } });
       if (url.endsWith("light_cones.json")) return new Response(JSON.stringify({ "23061": { name: "テスト光円錐" } }), { headers: { "content-type": "application/json" } });
       if (url.endsWith("relic_sets.json")) return new Response(JSON.stringify({ "108": { name: "テスト遺物セット" } }), { headers: { "content-type": "application/json" } });
-      if (url.endsWith("character_promotions.json")) return new Response(JSON.stringify({ "1310": { values: [{ spd: { base: 104 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("character_promotions.json")) return new Response(JSON.stringify({ "1310": { values: [{ hp: { base: 900, step: 56 }, atk: { base: 55, step: 3 }, def: { base: 50, step: 3 }, spd: { base: 104, step: 0 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("character_skill_trees.json")) return new Response(JSON.stringify({ "0": {} }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("light_cone_promotions.json")) return new Response(JSON.stringify({ "23061": { values: [{ hp: { base: 40, step: 6 }, atk: { base: 15, step: 2 }, def: { base: 12, step: 2 } }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("light_cone_ranks.json")) return new Response(JSON.stringify({ "23061": { properties: [[], [], [], [], []] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("properties.json")) return new Response(JSON.stringify(HSR_TEST_PROPERTIES), { headers: { "content-type": "application/json" } });
       return new Response(JSON.stringify({}), { headers: { "content-type": "application/json" } });
     }));
 
@@ -131,6 +154,7 @@ describe("MiHoMoからEnkaへのフォールバック", () => {
       expect(result.characters[0]).toMatchObject({ name: "ホタル", path: "壊滅", element: "炎" });
       expect(result.characters[0]?.lightCone?.name).toBe("テスト光円錐");
       expect(result.characters[0]?.relics[0]?.setName).toBe("テスト遺物セット");
+      expect(result.characters[0]?.statsStatus).toBe("final");
       expect(result.characters[0]?.comparisons.find((item) => item.label === "速度")?.current).toBe(112.9);
     } finally {
       vi.unstubAllGlobals();
@@ -144,14 +168,17 @@ describe("Enkaフォールバック正規化", () => {
       uid: "806071233",
       detailInfo: {
         nickname: "したーる", level: 70,
-        avatarDetailList: [{ avatarId: 1310, level: 80, rank: 1, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 61081, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "HPDelta", value: 705.6 }, { type: "SpeedDelta", value: 8.9 }, { type: "CriticalChance", value: 0.02916 }] } }] }, { avatarId: 1506, level: 80, rank: 0, relicList: [] }],
+        avatarDetailList: [{ avatarId: 1310, level: 80, rank: 1, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 61081, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "HPDelta", value: 705.6 }, { type: "SpeedDelta", value: 8.9 }, { type: "CriticalChanceBase", value: 0.02916 }] } }] }, { avatarId: 1506, level: 80, rank: 0, relicList: [] }],
       },
     }, {
       characters: { "1310": { name: "ホタル", element: "Fire", path: "Warrior" }, "1506": { name: "銀狼LV.999", element: "Imaginary", path: "Elation" } },
       lightCones: { "23061": { name: "Flickering Stars" } },
       relicSets: { "108": { name: "星の如く輝く天才" } },
-      characterPromotions: { "1310": { values: [{ spd: { base: 104 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } },
-      skillTrees: {},
+      characterPromotions: { "1310": { values: [{ hp: { base: 900, step: 56 }, atk: { base: 55, step: 3 }, def: { base: 50, step: 3 }, spd: { base: 104, step: 0 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } },
+      characterSkillTrees: {},
+      lightConePromotions: { "23061": { values: [{ hp: { base: 40, step: 6 }, atk: { base: 15, step: 2 }, def: { base: 12, step: 2 } }] } },
+      lightConeRanks: { "23061": { properties: [[], [], [], [], []] } },
+      properties: HSR_TEST_PROPERTIES,
     });
 
     expect(data.player.name).toBe("したーる");
@@ -160,6 +187,7 @@ describe("Enkaフォールバック正規化", () => {
     expect(data.characters[0]?.lightCone?.name).toBe("Flickering Stars");
     expect(data.characters[0]?.relics[0]?.setName).toBe("星の如く輝く天才");
     expect(data.characters[0]?.relics[0]?.main?.display).toBe("706");
+    expect(data.characters[0]?.statsStatus).toBe("final");
     expect(data.characters[0]?.allStats.find((stat) => stat.name === "会心率")?.display).toBe("7.9%");
     expect(data.characters[0]?.comparisons.map((item) => item.key)).toEqual(["breakEffect", "speed", "attackPercent"]);
     expect(data.characters[0]?.guide.targetContext).toContain("ホタル専用");
@@ -167,10 +195,50 @@ describe("Enkaフォールバック正規化", () => {
     expect(data.characters[1]).toMatchObject({ id: "1506", name: "銀狼Lv.999", element: "虚数", path: "歓楽", identity: { key: "hsr:1506", variantOf: "銀狼", resolution: "curated-id-map" } });
     expect(data.characters[1]?.guide.targetContext).toContain("銀狼Lv.999");
     expect(data.characters[1]?.guide.targetContext).not.toContain("銀狼専用");
+    // 静的なキャラクター基礎値（character_promotions）が欠落している場合、名称等は解決できる範囲で表示しつつ、最終値の算出は保留する。
+    expect(data.characters[1]?.statsStatus).toBe("unavailable");
+    expect(data.characters[1]?.allStats).toEqual([]);
+    expect(data.characters[1]?.comparisons.every((item) => item.current === null)).toBe(true);
 
-    const unresolved = normalizeEnkaPayload({ detailInfo: { avatarDetailList: [{ avatarId: 1310, level: 80, equipment: { tid: 99999, level: 80 }, relicList: [{ tid: 1, type: 1, level: 0, _flat: { setID: 99999, props: [] } }] }] } }, { characters: { "1310": { name: "ホタル", element: "Fire", path: "Warrior" } }, lightCones: {}, relicSets: {}, characterPromotions: {}, skillTrees: {} });
+    const unresolved = normalizeEnkaPayload({ detailInfo: { avatarDetailList: [{ avatarId: 1310, level: 80, equipment: { tid: 99999, level: 80 }, relicList: [{ tid: 1, type: 1, level: 0, _flat: { setID: 99999, props: [] } }] }] } }, { characters: { "1310": { name: "ホタル", element: "Fire", path: "Warrior" } }, lightCones: {}, relicSets: {}, characterPromotions: {}, characterSkillTrees: {}, lightConePromotions: {}, lightConeRanks: {}, properties: {} });
     expect(unresolved.characters[0]?.lightCone?.name).toBe("未解決（ID: 99999）");
     expect(unresolved.characters[0]?.relics[0]?.setName).toBe("未解決（ID: 99999）");
+    expect(unresolved.characters[0]?.statsStatus).toBe("unavailable");
+  });
+
+  it("キャラクターのレベル別基礎値・軌跡の要求レベル・遺物の割合と固定値を正しく合成する（hsr:1502 実データ相当）", () => {
+    const staticData = {
+      characters: { "1502": { name: "爻光", element: "Physical", path: "Elation" } },
+      lightCones: {},
+      relicSets: {},
+      characterPromotions: { "1502": { values: [{ hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }, { hp: { base: 574.464, step: 8.448 }, atk: { base: 215.424, step: 3.168 }, def: { base: 302.94, step: 4.455 }, spd: { base: 101, step: 0 }, crit_rate: { base: 0.05, step: 0 }, crit_dmg: { base: 0.5, step: 0 } }] } },
+      // StarRailRes character_skill_trees.json（1502）実データより：Point09/Point18 は共に max_level=1 の会心率軌跡。
+      characterSkillTrees: {
+        "1502201": { levels: [{ promotion: 0, level: 1, properties: [{ type: "CriticalChanceBase", value: 0.027 }] }] },
+        "1502210": { levels: [{ promotion: 0, level: 80, properties: [{ type: "CriticalChanceBase", value: 0.053 }] }] },
+      },
+      lightConePromotions: {},
+      lightConeRanks: {},
+      properties: HSR_TEST_PROPERTIES,
+    };
+
+    // レベル80: 要求レベル80の軌跡（会心率+5.3%）も含めて解放済みとして加算する。
+    const atLevel80 = normalizeEnkaPayload({ detailInfo: { avatarDetailList: [{ avatarId: 1502, level: 80, promotion: 6, rank: 0, skillTreeList: [{ pointId: 1502201, level: 1 }, { pointId: 1502210, level: 1 }], relicList: [] }] } }, staticData);
+    const character80 = atLevel80.characters[0]!;
+    expect(character80.statsStatus).toBe("final");
+    // hp = 574.464 + 8.448 * 79 ≒ 1241.86 / attack ≒ 465.70 / defense ≒ 654.89 / speed = 101
+    expect(character80.allStats.find((stat) => stat.name === "HP")?.display).toBe("1242");
+    expect(character80.allStats.find((stat) => stat.name === "攻撃力")?.display).toBe("466");
+    expect(character80.allStats.find((stat) => stat.name === "防御力")?.display).toBe("655");
+    expect(character80.allStats.find((stat) => stat.name === "速度")?.display).toBe("101.0");
+    // 会心率 = 基準5% + Point09(2.7%) + Point18(5.3%、要求Lv80) = 13.0%
+    expect(character80.allStats.find((stat) => stat.name === "会心率")?.display).toBe("13.0%");
+
+    // レベル79: 要求レベル80のPoint18は未解放のため、会心率へ加算されない（旧実装のレベル比較バグの再発防止）。
+    const atLevel79 = normalizeEnkaPayload({ detailInfo: { avatarDetailList: [{ avatarId: 1502, level: 79, promotion: 6, rank: 0, skillTreeList: [{ pointId: 1502201, level: 1 }, { pointId: 1502210, level: 1 }], relicList: [] }] } }, staticData);
+    const character79 = atLevel79.characters[0]!;
+    expect(character79.statsStatus).toBe("final");
+    expect(character79.allStats.find((stat) => stat.name === "会心率")?.display).toBe("7.7%");
   });
 });
 
