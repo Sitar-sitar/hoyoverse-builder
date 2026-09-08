@@ -21,3 +21,15 @@ StarRailResの`character_promotions`は昇格段階ごとの基礎HP・攻撃力
 最終検証では、ローカルの`build.lookup`経路で対象UIDを照会し、MiHoMoが利用できない状態からEnkaへ切り替わること、8名の公開キャラクターについて日本語名・属性・運命・光円錐名・遺物セット名を解決できることを確認した。選択中の遠坂凛では会心率70.8%、会心ダメージ129.7%、速度140.2、攻撃力%61.4%が基礎値・解放済み軌跡・遺物に基づく比較値として返され、達成判定にも反映された。戦闘中の一時バフや光円錐の条件付き効果は含めない。
 
 未解決IDについてもUI検証を行った。光円錐および遺物セットの静的データを意図的に未解決とした照会レスポンスで、画面に`未解決（ID: 99999）`が光円錐欄と装備遺物欄の両方で表示されることを確認した。
+
+## 第18パッチ：戦闘外最終ステータスの算出方法（Enkaフォールバック）
+
+2026-09-08、[修正設計書_HSR_Enkaフォールバック最終ステータス算出_2026-09-08.md](修正設計書_HSR_Enkaフォールバック最終ステータス算出_2026-09-08.md)に基づき、`server/enkaFallback.ts`の算出方法を、遺物`_flat.props`の単純加算から、キャラクター・光円錐のレベル別基礎値、遺物メイン・サブ、解放済み軌跡、光円錐重畳ランクの常時有効プロパティを`StatKey`単位で合成する方式へ改めた。
+
+- 基礎値: StarRailResの`character_promotions`・`light_cone_promotions`から`base + step × (level - 1)`で算出する。光円錐の`equipment._flat.props`に`BaseHP`/`BaseAttack`/`BaseDefence`がある場合はその値を優先する。
+- 合成式: `HP・攻撃力・防御力・速度 = 基礎値 × (1 + 割合加算) + 固定加算`。会心率は基準5%、会心ダメージは基準50%、EP回復効率は基準100%へ、解放済み軌跡・遺物・光円錐重畳ランクの独立割合を加える。
+- 軌跡の選択: `skillTreeList`の`pointId`ごとに`character_skill_trees`のノードを解決し、静的データが要求する`promotion`とキャラクターレベルをavatarの値と照合してから、該当段階の`properties`だけを一度加算する。ノード内の効果ランク（Enkaの`node.level`）と、静的データ側の必要キャラクターレベルは別スケールであるため、混同しない。
+- 光円錐重畳ランク: `light_cone_ranks`の`properties[rank-1]`（常時有効効果のみ）を加算し、説明文の可変`params`・戦闘条件付き効果は加算しない。
+- プロパティ名・割合か固定値かはStarRailResの`properties.json`から解決し、内部キー（`SPRatioBase`等）を一般画面へ表示しない。
+- 静的データ（`characters`/`light_cones`/`relic_sets`/`character_promotions`/`character_skill_trees`/`light_cone_promotions`/`light_cone_ranks`/`properties`の8種）は全て非空を検証してから24時間キャッシュし、取得失敗時は直近正常バンドル（最大7日）へ退避する。両方失敗した場合や、対象キャラクターの基礎値・光円錐基礎値・軌跡ノードのいずれかを解決できない場合は、そのキャラクターの`allStats`・比較・強化提案を返さず`statsStatus: "unavailable"`として比較を保留する（0補完しない）。
+- 静的データが不完全なEnka結果はUIDキャッシュへ保存しない。完全な結果のみキャッシュし、キャッシュヒット時も`dataSource: "Enka"`を維持する。

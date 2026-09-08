@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { fetchEnkaPayload } from "./enkaFallback";
+import { fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
 import { generatedHsrGuide } from "./individualGuides";
 import { guideMetadataFor } from "./characterGuideMetadata";
 import { partyRecommendationsFor, type PartyRecommendationSet } from "./partyRecommendations";
@@ -197,6 +197,7 @@ export type CharacterProfile = {
   }>;
   allStats: Array<{ name: string; display: string; icon: string | null }>;
   statsNote?: string;
+  statsStatus?: "final" | "unavailable";
   guide: GuideDefinition;
   comparisons: StatComparison[];
   recommendations: PriorityRecommendation[];
@@ -686,9 +687,10 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
     if (!normalized.characters.length) {
       throw new TRPCError({ code: "NOT_FOUND", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
     }
-    const expiresAt = lookupCache.set(uid, normalized, ttlFromPayload(payload));
+    const withSource = { ...normalized, dataSource: "MiHoMo" as const };
+    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
     const fetchedAt = new Date().toISOString();
-    return { ...normalized, dataSource: "MiHoMo", cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
+    return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
     throw new TRPCError({ code: "BAD_GATEWAY", message: "外部データサービスへ接続できませんでした。少し時間を置いて再試行してください。", cause: error });
@@ -699,9 +701,15 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
 
 async function requestEnka(uid: string): Promise<BuildLookupResult> {
   const fallback = await fetchEnkaPayload(uid);
-  const expiresAt = lookupCache.set(uid, fallback.data, fallback.ttlSeconds === null ? FALLBACK_TTL_MS : Math.max(60_000, Math.min(fallback.ttlSeconds * 1000, 10 * 60 * 1000)));
+  const withSource = { ...fallback.data, dataSource: "Enka" as const };
   const fetchedAt = new Date().toISOString();
-  return { ...fallback.data, dataSource: "Enka", cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
+  // 静的データ欠落等で最終ステータスを算出できないキャラクターを含む結果は、
+  // 再取得すれば回復し得るため通常のUIDキャッシュへ保存しない（不完全な値をTTL中固定しない）。
+  if (!isEnkaResultComplete(fallback.data)) {
+    return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: fetchedAt };
+  }
+  const expiresAt = lookupCache.set(uid, withSource, fallback.ttlSeconds === null ? FALLBACK_TTL_MS : Math.max(60_000, Math.min(fallback.ttlSeconds * 1000, 10 * 60 * 1000)));
+  return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
 }
 
 export async function lookupUidBuild(uid: string): Promise<BuildLookupResult> {
