@@ -453,13 +453,36 @@ function nullableNumber(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
+function isPercentStat(stat: RawRecord): boolean {
+  return stat.percent === true || text(stat.field).includes("ratio");
+}
+
 function statDisplay(stat: RawRecord): string {
   const shown = text(stat.display);
   if (shown) return shown;
   const value = nullableNumber(stat.value);
   if (value === null) return "—";
-  const percent = stat.percent === true || text(stat.field).includes("ratio");
+  const percent = isPercentStat(stat);
   return percent ? `${(value <= 1 ? value * 100 : value).toFixed(1)}%` : value.toFixed(0);
+}
+
+// MiHoMo(StarRailRes properties.json)は割合ステータスと絶対値ステータスで同一の`name`
+// （例: AttackAddedRatio/AttackDeltaが共に「攻撃力」）を返すため、そのまま表示すると
+// 「現在のステータス」欄でラベルが重複する。同名が複数ある場合のみ、割合側へ`%`を付けて区別する。
+function allStatsFor(properties: RawRecord[]): CharacterProfile["allStats"] {
+  const nameCounts = new Map<string, number>();
+  for (const stat of properties) {
+    const name = text(stat.name);
+    if (name) nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
+  }
+  return properties
+    .map((stat) => {
+      const baseName = text(stat.name);
+      const isDuplicate = (nameCounts.get(baseName) ?? 0) > 1;
+      const name = isDuplicate && isPercentStat(stat) && !baseName.endsWith("%") ? `${baseName}%` : baseName;
+      return { name, display: statDisplay(stat), icon: text(stat.icon) || null };
+    })
+    .filter((stat) => stat.name);
 }
 
 function statNumber(stat: RawRecord): number | null {
@@ -603,7 +626,7 @@ function parseCharacter(source: RawRecord): CharacterProfile {
       icon: text(lightCone.icon) || null,
     } : null,
     relics,
-    allStats: properties.map((stat) => ({ name: text(stat.name), display: statDisplay(stat), icon: text(stat.icon) || null })).filter((stat) => stat.name),
+    allStats: allStatsFor(properties),
     guide,
     comparisons,
     recommendations,
