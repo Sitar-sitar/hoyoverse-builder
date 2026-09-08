@@ -52,6 +52,33 @@ describe("MiHoMoデータ正規化", () => {
     expect(data.characters[0]?.equipmentActions.find((action) => action.recommendationKey === "breakEffect")).toMatchObject({ slot: "連結縄", action: "主ステータスを変更" });
   });
 
+  it("MiHoMoが絶対値・割合ステータスへ同一nameを返す場合（StarRailRes properties.json実データ相当）、現在のステータス欄でラベルが重複しない", () => {
+    // 実データ: AttackAddedRatio/AttackDelta、HPAddedRatio/HPDeltaはいずれもMiHoMoの`name`が
+    // 絶対値・割合で同一（例:「攻撃力」「HP」）であり、`percent`フラグのみが両者を区別する。
+    const data = normalizeMihomoPayload({
+      player: { uid: "800000009", nickname: "テスト開拓者" },
+      characters: [{
+        id: "1310", name: "ホタル", level: 80, rank: 1, path: { name: "壊滅" }, element: { name: "炎" },
+        properties: [
+          { field: "hp", name: "HP", value: 1800, display: "1800", percent: false },
+          { field: "hp", name: "HP", value: 0.082, display: "8.2%", percent: true },
+          { field: "atk", name: "攻撃力", value: 390, display: "390", percent: false },
+          { field: "atk", name: "攻撃力", value: 0.233, display: "23.3%", percent: true },
+          { field: "crit_rate", name: "会心率", value: 0.65, display: "65.0%", percent: true },
+        ],
+        relics: [],
+      }],
+    });
+
+    const allStats = data.characters[0]?.allStats ?? [];
+    expect(allStats.filter((stat) => stat.name === "HP")).toEqual([{ name: "HP", display: "1800", icon: null }]);
+    expect(allStats.filter((stat) => stat.name === "HP%")).toEqual([{ name: "HP%", display: "8.2%", icon: null }]);
+    expect(allStats.filter((stat) => stat.name === "攻撃力")).toEqual([{ name: "攻撃力", display: "390", icon: null }]);
+    expect(allStats.filter((stat) => stat.name === "攻撃力%")).toEqual([{ name: "攻撃力%", display: "23.3%", icon: null }]);
+    // 重複のない単独ステータス（会心率）は不要な%付与をしない。
+    expect(allStats.filter((stat) => stat.name === "会心率")).toEqual([{ name: "会心率", display: "65.0%", icon: null }]);
+  });
+
   it("主要キャラクターには個別の遺物推奨定義を適用する", () => {
     const data = normalizeMihomoPayload({
       player: { uid: "800000002", nickname: "テスト開拓者" },
