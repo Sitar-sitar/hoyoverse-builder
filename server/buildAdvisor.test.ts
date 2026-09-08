@@ -17,6 +17,8 @@ const HSR_TEST_PROPERTIES: Record<string, Record<string, unknown>> = {
   SpeedDelta: { type: "SpeedDelta", name: "速度", field: "spd", ratio: false, percent: false, order: 57 },
   SpeedAddedRatio: { type: "SpeedAddedRatio", name: "速度", field: "spd", ratio: true, percent: true, order: 100 },
   CriticalChanceBase: { type: "CriticalChanceBase", name: "会心率", field: "crit_rate", ratio: false, percent: true, order: 15 },
+  // field="" の集計済み表示専用タイプ（StarRailRes実データでは光円錐の_flat.propsに0埋めで含まれることがある）。
+  CriticalChance: { type: "CriticalChance", name: "会心率", field: "", ratio: false, percent: false, order: 5 },
   CriticalDamageBase: { type: "CriticalDamageBase", name: "会心ダメージ", field: "crit_dmg", ratio: false, percent: true, order: 16 },
   BreakDamageAddedRatioBase: { type: "BreakDamageAddedRatioBase", name: "撃破特効", field: "break_dmg", ratio: false, percent: true, order: 8 },
   StatusProbabilityBase: { type: "StatusProbabilityBase", name: "効果命中", field: "effect_hit", ratio: false, percent: true, order: 20 },
@@ -168,7 +170,7 @@ describe("Enkaフォールバック正規化", () => {
       uid: "806071233",
       detailInfo: {
         nickname: "したーる", level: 70,
-        avatarDetailList: [{ avatarId: 1310, level: 80, rank: 1, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 61081, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "HPDelta", value: 705.6 }, { type: "SpeedDelta", value: 8.9 }, { type: "CriticalChanceBase", value: 0.02916 }] } }] }, { avatarId: 1506, level: 80, rank: 0, relicList: [] }],
+        avatarDetailList: [{ avatarId: 1310, level: 80, rank: 1, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 61081, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "HPDelta", value: 705.6 }, { type: "SpeedDelta", value: 8.9 }, { type: "CriticalChanceBase", value: 0.02916 }, { type: "CriticalChance", value: 0 }] } }] }, { avatarId: 1506, level: 80, rank: 0, relicList: [] }],
       },
     }, {
       characters: { "1310": { name: "ホタル", element: "Fire", path: "Warrior" }, "1506": { name: "銀狼LV.999", element: "Imaginary", path: "Elation" } },
@@ -189,6 +191,9 @@ describe("Enkaフォールバック正規化", () => {
     expect(data.characters[0]?.relics[0]?.main?.display).toBe("706");
     expect(data.characters[0]?.statsStatus).toBe("final");
     expect(data.characters[0]?.allStats.find((stat) => stat.name === "会心率")?.display).toBe("7.9%");
+    // field="" の集計済み表示専用タイプ（実データで観測された `CriticalChance:0` 等）は、個別加算値として
+    // 二重表示・0埋め表示されてはならない（本番検証で発見した回帰）。
+    expect(data.characters[0]?.allStats.filter((stat) => stat.name === "会心率")).toHaveLength(1);
     expect(data.characters[0]?.comparisons.map((item) => item.key)).toEqual(["breakEffect", "speed", "attackPercent"]);
     expect(data.characters[0]?.guide.targetContext).toContain("ホタル専用");
     expect(data.characters[0]?.comparisons.find((item) => item.label === "速度")?.current).toBe(112.9);
