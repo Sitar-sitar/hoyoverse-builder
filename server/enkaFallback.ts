@@ -141,7 +141,8 @@ type Classified =
   | { kind: "ratio"; component: Component; value: number }
   | { kind: "flat"; component: Component; value: number }
   | { kind: "stat"; key: StatKey; value: number }
-  | { kind: "other"; found: boolean; name: string; value: number; percent: boolean; order: number };
+  | { kind: "other"; found: boolean; name: string; value: number; percent: boolean; order: number }
+  | { kind: "ignored" };
 
 function classify(properties: Record<string, RawRecord>, contribution: Contribution): Classified {
   const meta = propertyMeta(properties, contribution.type);
@@ -152,6 +153,9 @@ function classify(properties: Record<string, RawRecord>, contribution: Contribut
   }
   const statKey = meta.field ? FIELD_TO_STAT_KEY[meta.field] : undefined;
   if (statKey) return { kind: "stat", key: statKey, value: contribution.value };
+  // field="" の型（MaxHP/CriticalChance/StatusProbability等）はStarRailRes上「集計済み表示専用」の予約名であり、
+  // 遺物・軌跡・光円錐ランクからの個別加算値ではない。0埋めの重複行として一般画面へ出さない。
+  if (!meta.field) return { kind: "ignored" };
   return { kind: "other", found: meta.found, name: meta.name || contribution.type, value: meta.percent ? contribution.value * 100 : contribution.value, percent: meta.percent, order: meta.order };
 }
 
@@ -311,6 +315,7 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
     if (classified.kind === "ratio") { totals[classified.component].ratio += classified.value; continue; }
     if (classified.kind === "flat") { totals[classified.component].flat += classified.value; continue; }
     if (classified.kind === "stat") { statTotals[classified.key] = (statTotals[classified.key] ?? 0) + classified.value; continue; }
+    if (classified.kind === "ignored") continue;
     if (!classified.found || !classified.name) {
       console.warn(`[hsr-enka-fallback] 未知のプロパティ種別を検出しました: ${contribution.type}`);
       continue;
