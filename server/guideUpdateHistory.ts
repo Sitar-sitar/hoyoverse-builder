@@ -393,7 +393,7 @@ function batch17UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
   };
 }
 
-export function guideUpdateHistory() {
+function buildGuideUpdateHistory() {
   const games: CatalogGameId[] = ["hsr", "genshin", "zzz"];
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const metadata = CHARACTER_GUIDE_METADATA[game][name];
@@ -434,4 +434,14 @@ export function guideUpdateHistory() {
     };
   }));
   return { currentBaseline: CURRENT_BASELINE, siteEvents: SITE_EVENTS, characters, updateLedger: characterUpdateLedger() };
+}
+
+let cachedHistory: ReturnType<typeof buildGuideUpdateHistory> | undefined;
+
+/**
+ * 更新履歴は静的計算のため、プロセス内で1度だけ組み立てて共有する。
+ * 呼び出し側の applyBatch15History はスプレッドと map で新しい配列を作るため、この値を書き換えない。
+ */
+export function guideUpdateHistory() {
+  return (cachedHistory ??= buildGuideUpdateHistory());
 }

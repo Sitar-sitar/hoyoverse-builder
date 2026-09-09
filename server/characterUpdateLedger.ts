@@ -49,7 +49,7 @@ function batchFor(game: CatalogGameId, name: string) {
   return Object.entries(REVIEWED_BATCHES).find(([, games]) => games[game].includes(name))?.[0];
 }
 
-export function characterUpdateLedger(): CharacterUpdateLedger {
+function buildLedger(): CharacterUpdateLedger {
   const games: CatalogGameId[] = ["hsr", "genshin", "zzz"];
   const entries = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const batch = batchFor(game, name);
@@ -75,4 +75,18 @@ export function characterUpdateLedger(): CharacterUpdateLedger {
     criteria: "全248キャラクターについて、更新日付き個別ビルド根拠、確認済みsource IDの全6段階凸（未実装・未公開は安全表示）、最大3案の推奨PT、戦闘内補正の公開値分離、回帰テストを維持して公開する。",
     entries,
   };
+}
+
+let cachedLedger: CharacterUpdateLedger | undefined;
+let ledgerIndex: Map<string, CharacterUpdateLedgerEntry> | undefined;
+
+/** 台帳は入力を持たない静的計算のため、プロセス内で1度だけ組み立てて共有する。 */
+export function characterUpdateLedger(): CharacterUpdateLedger {
+  return (cachedLedger ??= buildLedger());
+}
+
+/** `game:name` で台帳エントリを引く（無ければ undefined）。台帳全体の線形探索を避けるための索引。 */
+export function ledgerEntryFor(game: CatalogGameId, name: string): CharacterUpdateLedgerEntry | undefined {
+  ledgerIndex ??= new Map(characterUpdateLedger().entries.map((entry) => [`${entry.game}:${entry.name}`, entry]));
+  return ledgerIndex.get(`${game}:${name}`);
 }

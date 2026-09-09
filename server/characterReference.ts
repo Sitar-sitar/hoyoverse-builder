@@ -5,7 +5,7 @@ import { batch15GuideFor } from "./batch15Guides";
 import { batch15PartyFor } from "./batch15Parties";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS, type CatalogGameId } from "./characterGuideCatalog";
 import { constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
-import { characterUpdateLedger } from "./characterUpdateLedger";
+import { characterUpdateLedger, ledgerEntryFor } from "./characterUpdateLedger";
 import { genshinGuide, zzzGuide } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
@@ -45,7 +45,7 @@ function baseGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
 }
 
-export function characterReferenceCatalog() {
+function buildReferenceCatalog() {
   const ledger = characterUpdateLedger();
   const entryByKey = new Map(ledger.entries.map((entry) => [`${entry.game}:${entry.name}`, entry]));
   const games = Object.fromEntries(GAME_IDS.map((game) => [
@@ -70,10 +70,17 @@ export function characterReferenceCatalog() {
   };
 }
 
+let cachedCatalog: ReturnType<typeof buildReferenceCatalog> | undefined;
+
+/** 図鑑一覧は静的計算のため、プロセス内で1度だけ組み立てて共有する。 */
+export function characterReferenceCatalog() {
+  return (cachedCatalog ??= buildReferenceCatalog());
+}
+
 export function characterReferenceFor(game: CatalogGameId, name: string): CharacterReference | null {
   if (!isCatalogCharacter(game, name)) return null;
 
-  const ledgerEntry = characterUpdateLedger().entries.find((entry) => entry.game === game && entry.name === name);
+  const ledgerEntry = ledgerEntryFor(game, name);
   const baseGuide = baseGuideFor(game, name);
   const guide = batch15GuideFor(game, name, baseGuide) ?? baseGuide;
   const partyRecommendations = batch15PartyFor(game, name) ?? partyRecommendationsFor(game, name);
