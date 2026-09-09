@@ -268,7 +268,7 @@ let cachedHistory: ReturnType<typeof buildGuideUpdateHistory> | undefined;
 
 /**
  * 更新履歴は静的計算のため、プロセス内で1度だけ組み立てて共有する。
- * 呼び出し側の applyBatch15History はスプレッドと map で新しい配列を作るため、この値を書き換えない。
+ * 呼び出し側は結果を読み取るだけで書き換えない（第15バッチの API 境界上書きは 2026-09-10 に撤去済み）。
  */
 export function guideUpdateHistory() {
   return (cachedHistory ??= buildGuideUpdateHistory());

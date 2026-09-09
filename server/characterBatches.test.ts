@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { BATCH15_CHARACTERS } from "./batch15Guides";
 import { BATCH_17_CHARACTER_NAMES } from "./batch17Guides";
 import { REVIEWED_BATCHES, batchNames } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
@@ -38,9 +37,5 @@ describe("バッチ名リストの正本", () => {
     expect([...batchNames(17).genshin].sort()).toEqual([...BATCH_17_CHARACTER_NAMES].sort());
     expect(batchNames(17).hsr).toEqual([]);
     expect(batchNames(17).zzz).toEqual([]);
-  });
-
-  it("BATCH15_CHARACTERS が batchNames(15) と一致する", () => {
-    expect(BATCH15_CHARACTERS).toEqual(batchNames(15));
   });
 });

@@ -1,8 +1,6 @@
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
-import { applyBatch15CuratedOverrides } from "./batch15CuratedData";
-import { applyBatch15History } from "./batch15History";
 import { characterReferenceCatalog, characterReferenceFor } from "./characterReference";
 import { createTranslationFeedback, getLookupAnalyticsDashboard, listTranslationFeedback, recordLookupAnalyticsEvent, updateTranslationFeedbackStatus } from "./db";
 import { lookupGameBuild } from "./gameProviders";
@@ -51,7 +49,7 @@ export const appRouter = router({
   }),
 
   build: router({
-    guideHistory: publicProcedure.query(() => applyBatch15History(guideUpdateHistory())),
+    guideHistory: publicProcedure.query(() => guideUpdateHistory()),
     referenceCatalog: publicProcedure.query(() => characterReferenceCatalog()),
     reference: publicProcedure
       .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), name: z.string().trim().min(1).max(80) }))
@@ -69,7 +67,7 @@ export const appRouter = router({
         }
       }))
       .query(async ({ input }) => {
-        const result = applyBatch15CuratedOverrides(await lookupGameBuild(input.game, input.uid));
+        const result = await lookupGameBuild(input.game, input.uid);
         // Analytics are anonymous and must not turn a successful lookup into a failure.
         try {
           await recordLookupAnalyticsEvent(input.game, result.cached);

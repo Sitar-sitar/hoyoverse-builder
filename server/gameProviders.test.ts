@@ -67,7 +67,8 @@ describe("原神公開プロフィールの正規化", () => {
     expect(byName["ノエル"]?.comparisons.map((comparison) => comparison.key)).toEqual(["defense", "critRate", "critDmg"]);
     expect(byName["香菱"]?.guide.targetContext).toContain("香菱専用");
     expect(byName["久岐忍"]?.guide.dataAsOf).toBe("2026-08-26");
-    expect(byName["ノエル"]?.guide.sourceLabel).toContain("GameWith");
+    // ノエルは第15バッチで個別ガイドを持つため、共通出典ではなく第15バッチの出典を返す（2026-09-10 の正規化）。
+    expect(byName["ノエル"]?.guide.sourceLabel).toContain("ノエルビルド・命ノ星座情報");
   });
 
   it("第2バッチの原神主力は個別の有効ステータスを比較する", () => {

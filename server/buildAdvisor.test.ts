@@ -138,7 +138,8 @@ describe("MiHoMoデータ正規化", () => {
     expect(byName["丹恒"]?.guide.targetContext).toContain("丹恒専用");
     expect(byName["白露"]?.comparisons.map((comparison) => comparison.key)).toEqual(["speed", "effectRes", "hpPercent"]);
     expect(byName["丹恒"]?.guide.dataAsOf).toBe("2026-08-11");
-    expect(byName["白露"]?.guide.sourceLabel).toContain("KQM");
+    // 白露は第15バッチで個別ガイドを持つため、基準日の共通出典ではなく第15バッチの出典を返す（2026-09-10 の正規化）。
+    expect(byName["白露"]?.guide.sourceLabel).toContain("白露ビルド・星魂情報");
   });
 });
 
@@ -330,10 +331,15 @@ describe("全キャラクターガイドの網羅性", () => {
     (Object.keys(CHARACTER_GUIDE_METADATA) as Array<keyof typeof CHARACTER_GUIDE_METADATA>).forEach((game) => {
       expect(Object.keys(CHARACTER_GUIDE_METADATA[game])).toHaveLength(CHARACTER_GUIDE_CATALOG[game].length);
       CHARACTER_GUIDE_CATALOG[game].forEach((name) => {
-        expect(CHARACTER_GUIDE_METADATA[game][name]).toMatchObject({ profileId: expect.any(String), dataAsOf: expect.stringMatching(/^2026-(05-31|06-05|07-31|08-(11|13|14|18|19|21|24|25|26|27)|09-(01|07|08))$/), updatedAt: expect.stringMatching(/^2026-(08-(18|25|26|27)|09-(07|08))$/) });
+        expect(CHARACTER_GUIDE_METADATA[game][name]).toMatchObject({ profileId: expect.any(String), dataAsOf: expect.stringMatching(/^2026-(05-31|06-05|07-31|08-(11|13|14|18|19|21|24|25|26|27)|09-(01|05|07|08))$/), updatedAt: expect.stringMatching(/^2026-(08-(18|25|26|27)|09-(05|07|08))$/) });
       });
     });
-    CHARACTER_GUIDE_CATALOG.hsr.forEach((name, index) => expect(hsrGuides[index]?.profileId).toBe(expectedProfileFor("hsr", name)));
+    CHARACTER_GUIDE_CATALOG.hsr.forEach((name, index) => {
+      const profileId = hsrGuides[index]?.profileId;
+      // 個別精査で固有プロファイルを持つキャラクター（第15バッチなど curated:* 接頭辞）はロール分類と一致しない。
+      if (profileId?.startsWith("curated:")) return;
+      expect(profileId).toBe(expectedProfileFor("hsr", name));
+    });
     CHARACTER_GUIDE_CATALOG.genshin.forEach((name, index) => expect(genshinGuides[index]?.profileId).toBe(expectedProfileFor("genshin", name)));
     CHARACTER_GUIDE_CATALOG.zzz.forEach((name, index) => expect(zzzGuides[index]?.profileId).toBe(expectedProfileFor("zzz", name)));
   });

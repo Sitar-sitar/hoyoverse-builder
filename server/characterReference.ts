@@ -1,8 +1,5 @@
 import type { GuideDefinition } from "./buildAdvisor";
 import { guideFor, withGuideMetadata } from "./buildAdvisor";
-import { batch15ConstellationFor } from "./batch15Constellations";
-import { batch15GuideFor } from "./batch15Guides";
-import { batch15PartyFor } from "./batch15Parties";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS, type CatalogGameId } from "./characterGuideCatalog";
 import { catalogSourceIdFor, constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
 import { characterUpdateLedger, ledgerEntryFor } from "./characterUpdateLedger";
@@ -83,11 +80,11 @@ export function characterReferenceFor(game: CatalogGameId, name: string): Charac
 
   const ledgerEntry = ledgerEntryFor(game, name);
   const baseGuide = baseGuideFor(game, name);
-  const guide = batch15GuideFor(game, name, baseGuide) ?? baseGuide;
-  const partyRecommendations = batch15PartyFor(game, name) ?? partyRecommendationsFor(game, name);
+  const guide = baseGuide;
+  const partyRecommendations = partyRecommendationsFor(game, name);
   const identity = resolveCharacterIdentity(game, name, name);
   // 図鑑はカタログ名しか持たないため、確認済み source ID へ解決してから凸を引く。
-  const constellations = batch15ConstellationFor(game, name, 0) ?? constellationProfileForCatalogName(game, name, 0);
+  const constellations = constellationProfileForCatalogName(game, name, 0);
 
   return {
     game,
