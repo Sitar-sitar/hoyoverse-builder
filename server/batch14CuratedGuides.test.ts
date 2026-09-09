@@ -91,6 +91,6 @@ describe("第14バッチ20名の個別ガイド", () => {
     });
     expect(partyRecommendationsFor("hsr", "刃").options[0]?.members.map((member) => member.name.ja)).toEqual(["刃", "サンデー", "トリビー", "ヒアンシー"]);
     expect(partyRecommendationsFor("genshin", "セトス").options[0]?.members.map((member) => member.name.ja)).toEqual(["セトス", "コロンビーナ", "イネファ", "シロネン"]);
-    expect(partyRecommendationsFor("zzz", "狛野真斗").options[0]?.members.map((member) => member.name.ja)).toEqual(["狛野真斗", "リュシア", "フーフー"]);
+    expect(partyRecommendationsFor("zzz", "狛野真斗").options[0]?.members.map((member) => member.name.ja)).toEqual(["狛野真斗", "リュシア", "橘福福"]);
   });
 });

@@ -4,12 +4,11 @@ import { resolvePartyMember, type PartyMemberResolution } from "./partyMemberAli
 import type { CatalogGameId } from "./characterGuideCatalog";
 
 describe("推奨PT影響レビュー", () => {
-  it("alias 経由の言及も mentioned に入る（zzz:潘引壺 は パン / パン・インフー 表記でも拾う）", () => {
+  it("表記統一後は潘引壺への言及をカタログ名として拾う", () => {
     const report = partyImpactFor("zzz", "潘引壺");
     const owners = report.mentioned.map((entry) => entry.owner);
-    // 「パン」表記で言及している イドリー・プルクラ・狛野真斗 と、「パン・インフー」表記の リュシア。
     expect(owners).toEqual(expect.arrayContaining(["イドリー", "プルクラ", "狛野真斗", "リュシア"]));
-    expect(report.mentioned.some((entry) => entry.matchedAs === "alias")).toBe(true);
+    expect(report.mentioned.every((entry) => entry.matchedAs === "catalog")).toBe(true);
   });
 
   it("対象自身の案は mentioned に入らない", () => {
