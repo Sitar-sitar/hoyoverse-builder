@@ -1,6 +1,7 @@
 import type { CharacterIdentity } from "./characterIdentity";
 import type { StatKey, TierName } from "./buildAdvisor";
 import { BATCH_17_CONSTELLATIONS } from "./batch17ConstellationData.generated";
+import { ACTIVE_CATALOG_IDENTITIES } from "./fixtures/identityCatalogSnapshot";
 
 export type LocalizedText = { ja: string; en: string; "zh-CN": string };
 export type ConstellationTargetChange = {
@@ -1808,56 +1809,25 @@ Object.assign(CURATED, {
  * お試し実装・派生実装（例 genshin:10000901 マーヴィカ（お試し））はカタログ名を持たないため、
  * 名前一致で誤適用されることはない。
  */
-const CATALOG_NAME_TO_SOURCE_ID: Record<string, string> = {
-  "hsr:不死途": "1504",
-  "hsr:乱破": "1317",
-  "hsr:椒丘": "1218",
-  "hsr:爻光": "1502",
-  "genshin:バーバラ": "10000014",
-  "genshin:ファルザン": "10000076",
-  "genshin:フレミネ": "10000085",
-  "genshin:ミカ": "10000080",
-  "genshin:モナ": "10000041",
-  "genshin:ヨォーヨ": "10000077",
-  "genshin:ラウマ": "10000119",
-  "genshin:リサ": "10000006",
-  "genshin:リネ": "10000084",
-  "genshin:リネット": "10000083",
-  "genshin:レイラ": "10000074",
-  "genshin:マーヴィカ": "10000106",
-  "genshin:ムアラニ": "10000102",
-  "genshin:フリンズ": "10000120",
-  "genshin:ヤフォダ": "10000124",
-  "genshin:リオセスリ": "10000086",
-  "genshin:レザー": "10000020",
-  "genshin:ロサリア": "10000045",
-  "genshin:雲菫": "10000064",
-  "genshin:煙緋": "10000048",
-  "genshin:嘉明": "10000092",
-  "genshin:甘雨": "10000037",
-  "genshin:閑雲": "10000093",
-  "genshin:凝光": "10000027",
-  "genshin:九条裟羅": "10000056",
-  "genshin:荒瀧一斗": "10000057",
-  "genshin:刻晴": "10000042",
-  "genshin:珊瑚宮心海": "10000054",
-  "genshin:鹿野院平蔵": "10000059",
-  "genshin:七七": "10000035",
-  "genshin:重雲": "10000036",
-  "genshin:申鶴": "10000063",
-  "genshin:神里綾華": "10000002",
-  "genshin:神里綾人": "10000066",
-  "genshin:辛炎": "10000044",
-  "genshin:千織": "10000094",
-  "genshin:早柚": "10000053",
-  "genshin:放浪者": "10000075",
-  "genshin:北斗": "10000024",
-  "genshin:夢見月瑞希": "10000109",
-  "genshin:藍硯": "10000108",
-  "genshin:旅人": "10000005",
-  "genshin:綺良々": "10000061",
-  "genshin:魈": "10000026",
-};
+/**
+ * 同名で複数の source ID がある基礎実装の採用ID。派生ID（"-" 付きの旅人元素別、お試し実装）は索引に入れない。
+ * 三月なのか: 1001（存護。1224 は巡狩の別実装）/ 旅人: 10000005（10000007 は性別違いで同一データ）/ イネファ: 10000116（10000903 はお試し）
+ */
+const CATALOG_SOURCE_ID_TIEBREAK: Record<string, string> = { "hsr:三月なのか": "1001", "genshin:旅人": "10000005", "genshin:イネファ": "10000116" };
+
+/**
+ * 図鑑（UID不要）でカタログ名から凸を引くための索引。公開メタデータのスナップショットから機械的に作る。
+ * UID照会経路は取得元の source ID をそのまま使うため、この索引を経由しない。
+ */
+const CATALOG_NAME_TO_SOURCE_ID: Record<string, string> = (() => {
+  const index: Record<string, string> = {};
+  for (const entry of ACTIVE_CATALOG_IDENTITIES) {
+    if (entry.sourceId.includes("-")) continue;
+    const key = entry.game + ":" + entry.providerName;
+    if (!(key in index)) index[key] = entry.sourceId;
+  }
+  return { ...index, ...CATALOG_SOURCE_ID_TIEBREAK };
+})();
 
 /** カタログ名（図鑑）から凸プロフィールを返す。ID索引に無い名前は従来の名前フォールバックへ委ねる。 */
 export function constellationProfileForCatalogName(game: CharacterIdentity["game"], name: string, rank: number | null): ConstellationProfile {

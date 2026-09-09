@@ -38,3 +38,19 @@ describe("character reference catalog", () => {
     expect(characterReferenceFor("hsr", "存在しないキャラ")).toBeNull();
   });
 });
+
+describe("図鑑の凸データ（R8 の再現テスト）", () => {
+  it("第1〜14バッチのキャラクターも図鑑で curated の凸を返す", () => {
+    for (const [game, name] of [["hsr", "ホタル"], ["zzz", "星見雅"]] as const) {
+      const reference = characterReferenceFor(game, name);
+      expect(reference?.constellations.dataStatus).toBe("curated");
+      expect(reference?.constellations.effects).toHaveLength(6);
+    }
+  });
+
+  it("凸データ未登録のキャラクターは preparing のまま効果を捏造しない", () => {
+    const reference = characterReferenceFor("zzz", "ニコ");
+    expect(reference?.constellations.dataStatus).toBe("preparing");
+    expect(reference?.constellations.effects).toEqual([]);
+  });
+});
