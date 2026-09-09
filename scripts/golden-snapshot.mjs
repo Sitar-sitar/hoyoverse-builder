@@ -7,6 +7,8 @@
  *   corepack pnpm exec tsx scripts/golden-snapshot.mjs compare --refresh catalogConstellations,referenceConstellations
  *                                                                          # 指定セクションだけ比較を省略し、比較後に baseline を更新する
  *   corepack pnpm exec tsx scripts/golden-snapshot.mjs check-r8            # 図鑑の凸が UID照会経路と一致するかを検査（R8 の受入判定）
+ *   corepack pnpm exec tsx scripts/golden-snapshot.mjs compare --allow hsr:御空,genshin:ノエル
+ *                                                                          # 指定キャラクターのキーだけ差分を許容する（データ更新の締め用）
  *
  * 目的: リファクタリング前後で公開 API が返すキャラクターデータ（台帳・履歴・図鑑・推奨PT・凸・
  * メタデータ・ガイド）が 1 バイトも変わっていないことを機械的に確認する。外部ネットワークは使わない。
@@ -123,6 +125,8 @@ async function main() {
   };
   const baselinePath = resolve(opt("out") ?? "tmp/golden/baseline.json");
   const refresh = new Set((opt("refresh") ?? "").split(",").filter(Boolean));
+  // データ更新の締めで「更新した名前だけが変わったか」を見るためのキー単位の許容リスト。
+  const allow = new Set((opt("allow") ?? "").split(",").map((entry) => entry.trim()).filter(Boolean));
 
   if (mode === "snapshot") {
     const sections = await collect();
@@ -145,7 +149,7 @@ async function main() {
   }
 
   if (mode !== "compare") {
-    console.error("usage: golden-snapshot.mjs <snapshot|compare|check-r8> [--out <path>] [--refresh <section,...>] [--report <path>]");
+    console.error("usage: golden-snapshot.mjs <snapshot|compare|check-r8> [--out <path>] [--refresh <section,...>] [--allow <game:name,...>] [--report <path>]");
     process.exit(2);
   }
 
@@ -170,12 +174,20 @@ async function main() {
       continue;
     }
     const detail = [];
-    if (current[section] && typeof current[section] === "object" && !Array.isArray(current[section])) {
+    const keyed = current[section] && typeof current[section] === "object" && !Array.isArray(current[section]);
+    if (keyed) {
       for (const key of new Set([...Object.keys(current[section]), ...Object.keys(baseline[section] ?? {})])) {
         if (stable(current[section][key]) !== stable(baseline[section]?.[key])) detail.push(key);
       }
     }
-    failures.push(`${section}: 差分あり${detail.length ? `（${detail.length}件: ${detail.slice(0, 8).join(", ")}${detail.length > 8 ? " ほか" : ""}）` : ""}`);
+    // --allow は「キーがキャラクター名のセクション」にだけ効く。metadata / ledger / history は
+    // セクション単位の比較のままにして、更新対象以外が動いていないかを人が確認する。
+    const notAllowed = keyed && allow.size > 0 ? detail.filter((key) => !allow.has(key)) : detail;
+    if (keyed && allow.size > 0 && notAllowed.length === 0) {
+      console.log(`ok (allow): ${section}（許容した差分 ${detail.length}件）`);
+      continue;
+    }
+    failures.push(`${section}: 差分あり${notAllowed.length ? `（${notAllowed.length}件: ${notAllowed.slice(0, 8).join(", ")}${notAllowed.length > 8 ? " ほか" : ""}）` : ""}`);
   }
   if (failures.length > 0) {
     // 差分がある場合は baseline を書き換えずに終了する（許可していない差分を承認しないため）。
