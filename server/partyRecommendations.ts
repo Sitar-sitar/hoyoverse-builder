@@ -144,89 +144,29 @@ const plan = (members: string[], ja: string, en: string, zh: string, targetChang
 const mainDps = t("主力", "Main DPS", "主C");
 const support = t("支援", "Support", "辅助");
 const anomaly = t("異常", "Anomaly", "异常");
-const batch3Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch4Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch5Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch6Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch7Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch8Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch9Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch10Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: [ManualPlan, ManualPlan, ManualPlan]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-26",
-  updatedAt: "2026-08-26",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-26" })),
-}));
-const batch11Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-27",
-  updatedAt: "2026-08-27",
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-27" })),
-}));
-const batch12Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-27",
-  updatedAt: "2026-08-27",
-  targetChanges: [],
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-27" })),
-}));
-const batch13Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-27",
-  updatedAt: "2026-08-27",
-  targetChanges: [],
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-27" })),
-}));
-const batch14Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-08-27",
-  updatedAt: "2026-08-27",
-  targetChanges: [],
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-08-27" })),
-}));
-
-const batch16Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) => manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
-  ...entry,
-  dataAsOf: "2026-09-07",
-  updatedAt: "2026-09-07",
-  targetChanges: [],
-  communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: "2026-09-07" })),
-}));
+/** バッチ日付を付与する登録ヘルパー。resetTargetChanges=true のバッチは公開値への補正を持たない。 */
+const datedOptions = (date: string, resetTargetChanges: boolean) =>
+  (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) =>
+    manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
+      ...entry,
+      dataAsOf: date,
+      updatedAt: date,
+      ...(resetTargetChanges ? { targetChanges: [] } : {}),
+      communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: date })),
+    }));
+const batch3Options = datedOptions("2026-08-26", false);
+const batch4Options = datedOptions("2026-08-26", false);
+const batch5Options = datedOptions("2026-08-26", false);
+const batch6Options = datedOptions("2026-08-26", false);
+const batch7Options = datedOptions("2026-08-26", false);
+const batch8Options = datedOptions("2026-08-26", false);
+const batch9Options = datedOptions("2026-08-26", false);
+const batch10Options = datedOptions("2026-08-26", false);
+const batch11Options = datedOptions("2026-08-27", false);
+const batch12Options = datedOptions("2026-08-27", true);
+const batch13Options = datedOptions("2026-08-27", true);
+const batch14Options = datedOptions("2026-08-27", true);
+const batch16Options = datedOptions("2026-09-07", true);
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
