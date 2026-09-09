@@ -556,8 +556,15 @@ Object.assign(GUIDE_OVERRIDES, {
   "爻光": { headline: "愉悦編成の起点となる支援役として、公開値では速度160を最優先し、会心率・会心ダメージを続けて確保する。", relicSet: "天命に従う旅の卜者 ×4", planarSet: "千の星が集う街 ×2", mainStats: [{ slot: "胴体", value: "会心ダメ / 会心率" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "HP% / 防御力%" }, { slot: "連結縄", value: "EP回復効率" }], targets: [{ key: "speed", label: "速度", unit: "", targets: { "厳選": 160, "目標": 160, "妥協": 160 } }, { key: "critRate", label: "会心率", unit: "%", targets: { "厳選": 72, "目標": 62, "妥協": 52 } }, { key: "critDmg", label: "会心ダメ", unit: "%", targets: { "厳選": 163, "目標": 145, "妥協": 140 } }], targetContext: "爻光専用：速度160以上は両出典が一致する下限のため同値で比較する。会心率はGame8のモチーフ光円錐装備時72%以上を厳選、GameWithの52〜62%を目標・妥協に対応させ、会心ダメージも同様にGameWithの145〜163%とGame8の140%以上を割り当てる。モチーフ光円錐・星魂2/6の速度上昇や愉悦ダメージ上昇は装備・戦闘中条件のため公開プロフィールへ加算しない。オーナメントはGameWithが海に沈んだルサカ ×2を挙げるが、愉悦編成全体へ会心ダメージを配る目的でGame8の千の星が集う街 ×2を採用する。", dataAsOf: "2026-09-07", updatedAt: "2026-09-07", sourceLabel: "Game8（2026-09-07更新）とGameWith（2026-08-26更新）の個別ビルド・星魂・PTガイドを照合" },
 });
 
-export function guideFor(name: string, path: string, identity?: Pick<CharacterIdentity, "variantOf">): GuideDefinition {
-  const individualGuide = identity?.variantOf ? undefined : GUIDE_OVERRIDES[name];
+/**
+ * 同名で複数の実装がある HSR キャラクターの個別ガイド。名前キーの GUIDE_OVERRIDES より優先する。
+ * 例: 三月なのかは存護（1001）と巡狩（1224）が同じ providerName で公開されるため、名前キーでは区別できない。
+ */
+const GUIDE_OVERRIDES_BY_SOURCE_ID: Record<string, GuideDefinition> = {};
+
+export function guideFor(name: string, path: string, identity?: Pick<CharacterIdentity, "variantOf" | "sourceId">): GuideDefinition {
+  const bySourceId = identity?.sourceId ? GUIDE_OVERRIDES_BY_SOURCE_ID[identity.sourceId] : undefined;
+  const individualGuide = bySourceId ?? (identity?.variantOf ? undefined : GUIDE_OVERRIDES[name]);
   if (individualGuide) {
     const sourceDataAsOf = ({ "セーバル": "2026-08-21", "ゼーレ": "2026-08-21", "ナターシャ": "2026-08-21", "ファイノン": "2026-05-31", "フォフォ": "2026-08-19" } as Record<string, string>)[name];
     return withGuideMetadata("hsr", { ...individualGuide, dataAsOf: sourceDataAsOf ?? individualGuide.dataAsOf, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。編成・光円錐・戦闘中バフによる変動分は含みません。` }, name);

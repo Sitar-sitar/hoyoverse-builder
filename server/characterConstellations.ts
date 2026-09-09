@@ -1829,6 +1829,14 @@ const CATALOG_NAME_TO_SOURCE_ID: Record<string, string> = (() => {
   return { ...index, ...CATALOG_SOURCE_ID_TIEBREAK };
 })();
 
+/**
+ * カタログ名（図鑑）に対応する確認済み source ID。索引に無ければ undefined。
+ * 図鑑は凸だけでなく個別ガイドの解決でも同じ ID を使う（同名で複数実装がある場合の取り違えを防ぐため）。
+ */
+export function catalogSourceIdFor(game: CharacterIdentity["game"], name: string): string | undefined {
+  return CATALOG_NAME_TO_SOURCE_ID[`${game}:${name}`];
+}
+
 /** カタログ名（図鑑）から凸プロフィールを返す。ID索引に無い名前は従来の名前フォールバックへ委ねる。 */
 export function constellationProfileForCatalogName(game: CharacterIdentity["game"], name: string, rank: number | null): ConstellationProfile {
   const sourceId = CATALOG_NAME_TO_SOURCE_ID[`${game}:${name}`];

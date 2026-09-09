@@ -4,7 +4,7 @@ import { batch15ConstellationFor } from "./batch15Constellations";
 import { batch15GuideFor } from "./batch15Guides";
 import { batch15PartyFor } from "./batch15Parties";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS, type CatalogGameId } from "./characterGuideCatalog";
-import { constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
+import { catalogSourceIdFor, constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
 import { characterUpdateLedger, ledgerEntryFor } from "./characterUpdateLedger";
 import { genshinGuide, zzzGuide } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
@@ -35,7 +35,8 @@ export function isCatalogCharacter(game: CatalogGameId, name: string) {
 
 function baseGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   if (game === "hsr") {
-    return guideFor(name, HSR_RUNTIME_PATHS[name] ?? "");
+    // 同名で複数実装があるキャラクターを取り違えないため、凸と同じ確認済み source ID を渡す。
+    return guideFor(name, HSR_RUNTIME_PATHS[name] ?? "", { variantOf: null, sourceId: catalogSourceIdFor("hsr", name) ?? name });
   }
   // UID照会と同じ個別ガイド解決を使う。generated* へ直接フォールバックすると、
   // provider 経路だけに登録された個別ビルドが図鑑へ届かない。
