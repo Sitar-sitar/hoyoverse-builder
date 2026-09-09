@@ -40,7 +40,7 @@ const identityFrom = (index, game, name) => {
 };
 
 export async function collect() {
-  const [catalog, ledgerModule, historyModule, referenceModule, partyModule, constellationModule, identities, metadataModule, profilesModule, buildAdvisor, providers, batch15History] = await Promise.all([
+  const [catalog, ledgerModule, historyModule, referenceModule, partyModule, constellationModule, identities, metadataModule, profilesModule, buildAdvisor, providers] = await Promise.all([
     load("server/characterGuideCatalog.ts"),
     load("server/characterUpdateLedger.ts"),
     load("server/guideUpdateHistory.ts"),
@@ -52,7 +52,6 @@ export async function collect() {
     load("server/expectedGuideProfiles.ts"),
     load("server/buildAdvisor.ts"),
     load("server/gameProviders.ts"),
-    load("server/batch15History.ts").catch(() => null),
   ]);
   const { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS } = catalog;
   const names = GAMES.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => ({ game, name, key: `${game}:${name}` })));
@@ -60,10 +59,9 @@ export async function collect() {
   const byKey = (fn) => Object.fromEntries(names.map((entry) => [entry.key, fn(entry)]));
   const references = byKey((entry) => referenceModule.characterReferenceFor(entry.game, entry.name));
 
-  const history = historyModule.guideUpdateHistory();
   return {
     ledger: ledgerModule.characterUpdateLedger(),
-    history: batch15History ? batch15History.applyBatch15History(history) : history,
+    history: historyModule.guideUpdateHistory(),
     referenceCatalog: referenceModule.characterReferenceCatalog(),
     // 図鑑応答は「凸以外」と「凸」に分けて保持する。R8 で許可する差分は referenceConstellations だけで、
     // referenceCore（guide / partyRecommendations / status / batch）は R8 でも一致必須にする。
@@ -88,15 +86,14 @@ export async function collect() {
 
 /**
  * R8 の受入判定。図鑑（characterReferenceFor）が返す凸が、UID照会経路と同じ解決結果
- * （第15バッチ上書きがあればそれを優先）と一致するかを全248名で検査する。
+ * （第15バッチの上書きは 2026-09-10 に撤去済みのため常に ID 経路）と一致するかを全248名で検査する。
  */
 export async function checkR8() {
-  const [catalog, referenceModule, constellationModule, identities, batch15Constellations] = await Promise.all([
+  const [catalog, referenceModule, constellationModule, identities] = await Promise.all([
     load("server/characterGuideCatalog.ts"),
     load("server/characterReference.ts"),
     load("server/characterConstellations.ts"),
     load("server/fixtures/identityCatalogSnapshot.ts"),
-    load("server/batch15Constellations.ts").catch(() => null),
   ]);
   const index = sourceIdIndex(identities);
   const mismatches = [];
@@ -109,8 +106,7 @@ export async function checkR8() {
       const key = `${game}:${name}`;
       if (!index.has(key)) unresolvedNames.push(key);
       const actual = referenceModule.characterReferenceFor(game, name)?.constellations ?? null;
-      const expected = (batch15Constellations?.batch15ConstellationFor(game, name, 0) ?? null)
-        ?? constellationModule.constellationProfileFor(identityFrom(index, game, name), 0);
+      const expected = constellationModule.constellationProfileFor(identityFrom(index, game, name), 0);
       if (stable(actual) !== stable(expected)) mismatches.push(key);
       if (actual?.dataStatus !== "curated") notCurated.push(key);
     }

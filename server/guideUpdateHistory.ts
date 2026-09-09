@@ -62,6 +62,15 @@ const SITE_EVENTS: GuideUpdateEvent[] = [
     games: ["hsr", "genshin", "zzz"],
   },
   {
+    date: "2026-09-05T16:55:00+09:00",
+    scope: "site",
+    title: "第15バッチ20名の個別情報を更新",
+    summary: "HSR 8名、原神8名、ZZZ 4名についてビルド・凸・推奨PTを現行情報へ更新しました。",
+    changes: ["個別精査済みを180/248から200/248へ更新", "第16バッチ候補20名へ台帳を更新"],
+    rationale: "Manus時代から継続している全キャラクター個別精査を再開するため。",
+    games: ["hsr", "genshin", "zzz"],
+  },
+  {
     date: "2026-09-07T12:00:00+09:00",
     scope: "site",
     title: "第16バッチ20名の個別情報を更新",
@@ -96,7 +105,7 @@ const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, Guid
 
 type BatchEventTemplate = { date: string; title: string; summary: (name: string) => string; changes: string[]; rationale: string };
 
-/** バッチ別の個別更新イベント。第15バッチは API 境界の applyBatch15History が担うためここに持たない。 */
+/** バッチ別の個別更新イベント。第1〜17バッチ（第15バッチを含む）をここに持つ。 */
 const BATCH_EVENT_TEMPLATES: Record<number, BatchEventTemplate> = {
   1: {
     date: "2026-08-25T12:35:00+09:00",
@@ -196,6 +205,13 @@ const BATCH_EVENT_TEMPLATES: Record<number, BatchEventTemplate> = {
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みsource IDの全6段階凸をID優先で追加", "固定値根拠のないステータスは推測で補わず、優先項目として記録", "戦闘中・編成・条件付き効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "保存UIDの復元・ゲーム切替・再読み込みで照会せず、明示Searchのみで検証"],
     rationale: "キャラクター固有の根拠とsource IDを優先し、同名別実装・未根拠数値・戦闘内バフを公開プロフィール評価へ混入させないため。",
   },
+  15: {
+    date: "2026-09-05T16:55:00+09:00",
+    title: "第15バッチ：個別ビルド・凸・推奨PTを再精査",
+    summary: (name) => `${name}の現行公開ガイドを再確認し、公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを第15バッチとして更新しました。`,
+    changes: ["2026-09-05時点の更新日付き個別ガイドへ再照合", "全6段階の星魂・命ノ星座・心象映画を登録", "対象キャラクターを必ず含む最大3案の推奨PTを更新", "戦闘中・編成・凸の条件付き補正を公開プロフィール値から分離", "固定値根拠のないステータスは推測で補完しない"],
+    rationale: "Manus時代と同じ個別精査基準を維持しつつ、Ver4.5/7.0/3.1の現行情報へ更新するため。",
+  },
   16: {
     date: "2026-09-07T12:00:00+09:00",
     title: "第16バッチ：個別ビルド・凸・推奨PTを再精査",
@@ -252,7 +268,7 @@ let cachedHistory: ReturnType<typeof buildGuideUpdateHistory> | undefined;
 
 /**
  * 更新履歴は静的計算のため、プロセス内で1度だけ組み立てて共有する。
- * 呼び出し側の applyBatch15History はスプレッドと map で新しい配列を作るため、この値を書き換えない。
+ * 呼び出し側は結果を読み取るだけで書き換えない（第15バッチの API 境界上書きは 2026-09-10 に撤去済み）。
  */
 export function guideUpdateHistory() {
   return (cachedHistory ??= buildGuideUpdateHistory());

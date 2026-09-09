@@ -282,6 +282,22 @@ Object.entries(batchNames(14)).forEach(([game, names]) => {
   });
 });
 
+/** 第15バッチ（2026-09-05）。旧 server/batch15History.ts が API 境界で上書きしていた日付・出典を基底へ移した。 */
+Object.entries(batchNames(15)).forEach(([game, names]) => {
+  const gameId = game as CatalogGameId;
+  names.forEach((name) => {
+    const record = CHARACTER_GUIDE_METADATA[gameId][name];
+    if (!record) return;
+    record.dataAsOf = "2026-09-05";
+    record.updatedAt = "2026-09-05";
+    record.sourceLabel = gameId === "hsr"
+      ? "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      : gameId === "genshin"
+        ? "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+        : "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合";
+  });
+});
+
 /** 第16バッチで参照した記事の更新日。実装日（updatedAt）とは別に、キャラクターごとに保持する。 */
 const BATCH_16_DATA_AS_OF: Record<string, string> = {
   "不死途": "2026-09-07",
