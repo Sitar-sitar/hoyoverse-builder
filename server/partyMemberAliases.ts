@@ -48,6 +48,7 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
   // 公開メタデータには存在するがカタログ（2026-08-18 スナップショット）に未登録。カタログ追加候補（監査 P0）。
   "hsr:姫子・旅立ち": "姫子の別実装（hsr:1510）。カタログ未登録のため追加候補",
   "hsr:千冶・刃": "刃の別実装（hsr:1507）。カタログ未登録のため追加候補",
+  "hsr:ロビン・夏空の歌": "ロビンの別実装（hsr:1512）。2026-09-10 の公開メタデータ取得で実装済みを確認。カタログ未登録のため追加候補",
 };
 
 /**
@@ -55,7 +56,6 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
  * 新キャラクター追加時の推奨PT影響レビュー（partyImpact）の第一入力になる。
  */
 export const UPCOMING_PARTY_MEMBERS: Record<string, { mentions: number; checkedAt: string; note?: string }> = {
-  "hsr:ロビン・夏空の歌": { mentions: 3, checkedAt: "2026-09-10", note: "Game8 の未実装キャラ一覧に掲載（Ver4.5以降・風/記憶）" },
   "hsr:アシュヴェイル": { mentions: 1, checkedAt: "2026-09-10" },
   "hsr:パーマンソー・テラエ": { mentions: 2, checkedAt: "2026-09-10" },
   "hsr:モルトナックス・ブレード": { mentions: 1, checkedAt: "2026-09-10", note: "Ver4.3 ベータで公開された名前" },

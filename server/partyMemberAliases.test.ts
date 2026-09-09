@@ -47,7 +47,7 @@ describe("推奨PTメンバー名の解決", () => {
 
   it("実装待ちの名前は upcoming として返す", () => {
     expect(resolvePartyMember("genshin", "オデット").kind).toBe("upcoming");
-    expect(resolvePartyMember("hsr", "ロビン・夏空の歌").kind).toBe("upcoming");
+    expect(resolvePartyMember("hsr", "ロビン・夏空の歌").kind).toBe("variant"); // 2026-09-10 に公開メタデータで実装済みを確認（hsr:1512）
   });
 
   it("表に無い名前は unknown を返す", () => {
