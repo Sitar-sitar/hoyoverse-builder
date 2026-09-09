@@ -3,6 +3,7 @@ import { equipmentActionsFor, guideFor, priorityRecommendations, type BuildLooku
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 import { constellationProfileFor } from "./characterConstellations";
+import { HSR_PATH_LABELS } from "./characterGuideCatalog";
 
 type RawRecord = Record<string, unknown>;
 type LookupData = Omit<BuildLookupResult, "cached" | "cacheExpiresAt" | "fetchedAt">;
@@ -42,7 +43,6 @@ let lastKnownGoodStatic: { value: StaticIndex; savedAt: number } | null = null;
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
   "1014": { name: "セイバー" }, "1310": { name: "ホタル" }, "1407": { name: "キャストリス" }, "1506": { name: "銀狼Lv.999" }, "1508": { name: "遠坂凛" }, "1509": { name: "ギルガメッシュ" },
 };
-const PATH_NAMES: Record<string, string> = { Knight: "存護", Mage: "知恵", Priest: "豊穣", Rogue: "巡狩", Shaman: "調和", Warlock: "虚無", Warrior: "壊滅", Memory: "記憶", Elation: "歓楽" };
 const ELEMENT_NAMES: Record<string, string> = { Fire: "炎", Ice: "氷", Imaginary: "虚数", Physical: "物理", Quantum: "量子", Thunder: "雷", Wind: "風" };
 
 const ENKA_FINAL_STATS_NOTE = "公開中のキャラクター・光円錐・遺物・解放済み軌跡から算出した戦闘外の最終値です。戦闘中・条件付き効果は含みません。";
@@ -406,7 +406,7 @@ export function normalizeEnkaPayload(payload: unknown, staticData: StaticIndex =
 
     const finalStats = computeFinalStats(avatar, staticData, relicContributions);
 
-    const cone = record(avatar.equipment); const coneId = str(cone.tid); const path = PATH_NAMES[str(avatarMeta.path)] ?? PATH_NAMES[fallbackMeta.path ?? ""] ?? "未設定"; const guide = guideFor(metaName, path, identity);
+    const cone = record(avatar.equipment); const coneId = str(cone.tid); const path = HSR_PATH_LABELS[str(avatarMeta.path)] ?? HSR_PATH_LABELS[fallbackMeta.path ?? ""] ?? "未設定"; const guide = guideFor(metaName, path, identity);
 
     const comparisons: StatComparison[] = guide.targets.map((target) => comparisonForKey(target, finalStats.status === "final" ? finalStats.map : null));
     const recommendations = priorityRecommendations(comparisons);

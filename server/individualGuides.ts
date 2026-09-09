@@ -1,14 +1,18 @@
 import type { GuideDefinition, TargetStatDefinition } from "./buildAdvisor";
+import { HSR_PATH_LABELS } from "./characterGuideCatalog";
 
 type GameId = "hsr" | "genshin" | "zzz";
-type ProfileId = "crit" | "dot" | "break" | "support" | "sustain" | "tank" | "hp" | "def" | "em" | "anomaly" | "stun" | "rupture";
+export type ProfileId = "crit" | "dot" | "break" | "support" | "sustain" | "tank" | "hp" | "def" | "em" | "anomaly" | "stun" | "rupture";
+type HsrProfileId = Exclude<ProfileId, "em" | "anomaly" | "stun" | "rupture">;
+type GenshinProfileId = Extract<ProfileId, "crit" | "hp" | "def" | "em" | "support" | "sustain">;
+type ZzzProfileId = Extract<ProfileId, "crit" | "anomaly" | "stun" | "support" | "tank" | "rupture">;
 
 const target = (key: TargetStatDefinition["key"], label: string, unit: "%" | "", strict: number, goal: number, base: number): TargetStatDefinition => ({ key, label, unit, targets: { "厳選": strict, "目標": goal, "妥協": base } });
 const hsrMain = (value: string): GuideDefinition["mainStats"] => [{ slot: "胴体", value: "会心率 / 会心ダメ" }, { slot: "脚部", value: "速度 / 攻撃力%" }, { slot: "次元界オーブ", value: "属性ダメージ" }, { slot: "連結縄", value }];
 const giMain = (clock: string, cup = "元素ダメージ", crown = "会心率 / 会心ダメージ"): GuideDefinition["mainStats"] => [{ slot: "時計", value: clock }, { slot: "杯", value: cup }, { slot: "冠", value: crown }];
 const zzzMain = (iv: string, v: string, vi: string): GuideDefinition["mainStats"] => [{ slot: "IV", value: iv }, { slot: "V", value: v }, { slot: "VI", value: vi }];
 
-const HSR_PROFILES: Record<Exclude<ProfileId, "em" | "anomaly" | "stun" | "rupture">, Omit<GuideDefinition, "headline">> = {
+const HSR_PROFILES: Record<HsrProfileId, Omit<GuideDefinition, "headline">> = {
   crit: { relicSet: "公開ビルドに基づく火力向け遺物", planarSet: "会心・行動回数に合うオーナメント", mainStats: hsrMain("攻撃力%"), targets: [target("critRate", "会心率", "%", 85, 75, 65), target("critDmg", "会心ダメ", "%", 200, 170, 140), target("speed", "速度", "", 143, 134, 120), target("attackPercent", "攻撃力%", "%", 75, 60, 45)] },
   dot: { relicSet: "公開ビルドに基づく持続ダメージ向け遺物", planarSet: "速度・攻撃力向けオーナメント", mainStats: [{ slot: "胴体", value: "効果命中 / 攻撃力%" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "攻撃力%" }], targets: [target("effectHitRate", "効果命中", "%", 120, 90, 67), target("speed", "速度", "", 160, 147, 134), target("attackPercent", "攻撃力%", "%", 90, 75, 60)] },
   break: { relicSet: "公開ビルドに基づく撃破向け遺物", planarSet: "撃破特効・速度向けオーナメント", mainStats: [{ slot: "胴体", value: "攻撃力%" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "撃破特効" }], targets: [target("breakEffect", "撃破特効", "%", 300, 240, 180), target("speed", "速度", "", 160, 150, 145), target("attackPercent", "攻撃力%", "%", 60, 45, 30)] },
@@ -19,7 +23,7 @@ const HSR_PROFILES: Record<Exclude<ProfileId, "em" | "anomaly" | "stun" | "ruptu
   def: { relicSet: "公開ビルドに基づく防御依存向け遺物", planarSet: "防御・会心向けオーナメント", mainStats: [{ slot: "胴体", value: "会心率 / 会心ダメ" }, { slot: "脚部", value: "速度 / 防御力%" }, { slot: "次元界オーブ", value: "防御力%" }, { slot: "連結縄", value: "防御力%" }], targets: [target("defPercent", "防御力%", "%", 100, 80, 60), target("critRate", "会心率", "%", 75, 65, 55), target("critDmg", "会心ダメ", "%", 180, 150, 120)] },
 };
 
-const GI_PROFILES: Record<"crit" | "hp" | "def" | "em" | "support" | "sustain", Omit<GuideDefinition, "headline">> = {
+const GI_PROFILES: Record<GenshinProfileId, Omit<GuideDefinition, "headline">> = {
   crit: { relicSet: "公開ビルドに基づく会心火力向け聖遺物", planarSet: "編成・武器に応じて元素チャージ効率を調整", mainStats: giMain("攻撃力% / 元素熟知"), targets: [target("critRate", "会心率", "%", 85, 75, 65), target("critDmg", "会心ダメージ", "%", 220, 180, 150), target("energyRecharge", "元素チャージ効率", "%", 160, 130, 115)] },
   hp: { relicSet: "公開ビルドに基づくHP依存向け聖遺物", planarSet: "元素爆発を使う場合は元素チャージ効率を優先", mainStats: giMain("HP% / 元素チャージ効率", "HP% / 元素ダメージ"), targets: [target("hp", "HP", "", 45000, 38000, 32000), target("critRate", "会心率", "%", 80, 70, 60), target("energyRecharge", "元素チャージ効率", "%", 220, 180, 150)] },
   def: { relicSet: "公開ビルドに基づく防御力依存向け聖遺物", planarSet: "元素爆発を使う場合は元素チャージ効率を調整", mainStats: giMain("防御力%", "岩元素ダメージ / 防御力%"), targets: [target("defense", "防御力", "", 2800, 2400, 2000), target("critRate", "会心率", "%", 80, 70, 60), target("critDmg", "会心ダメージ", "%", 220, 180, 150)] },
@@ -28,7 +32,7 @@ const GI_PROFILES: Record<"crit" | "hp" | "def" | "em" | "support" | "sustain", 
   sustain: { relicSet: "公開ビルドに基づく回復・耐久向け聖遺物", planarSet: "元素爆発を使う場合は元素チャージ効率を優先", mainStats: giMain("HP% / 元素チャージ効率", "HP%", "HP% / 与える治癒効果"), targets: [target("hp", "HP", "", 45000, 38000, 30000), target("energyRecharge", "元素チャージ効率", "%", 220, 180, 150)] },
 };
 
-const ZZZ_PROFILES: Record<"crit" | "anomaly" | "stun" | "support" | "tank" | "rupture", Omit<GuideDefinition, "headline">> = {
+const ZZZ_PROFILES: Record<ZzzProfileId, Omit<GuideDefinition, "headline">> = {
   crit: { relicSet: "公開ビルドに基づく直撃火力向けドライバディスク", planarSet: "戦闘外会心率を起点に条件付き補正を加味", mainStats: zzzMain("会心率 / 会心ダメージ", "属性ダメージ / 貫通率", "攻撃力%"), targets: [target("critRate", "会心率", "%", 80, 70, 60), target("critDmg", "会心ダメージ", "%", 200, 160, 130), target("attack", "攻撃力", "", 3000, 2700, 2400)] },
   anomaly: { relicSet: "公開ビルドに基づく状態異常向けドライバディスク", planarSet: "異常マスタリーと攻撃力を優先", mainStats: zzzMain("異常マスタリー", "属性ダメージ / 攻撃力%", "異常掌握 / 異常マスタリー"), targets: [target("anomalyMastery", "異常マスタリー", "", 420, 360, 300), target("attack", "攻撃力", "", 3000, 2700, 2400)] },
   stun: { relicSet: "公開ビルドに基づくブレイク支援向けドライバディスク", planarSet: "衝撃力を優先し、必要な行動回数を確保", mainStats: zzzMain("会心率 / 攻撃力%", "属性ダメージ / 攻撃力%", "衝撃力"), targets: [target("impact", "衝撃力", "", 190, 175, 160), target("attack", "攻撃力", "", 2600, 2300, 2000)] },
@@ -46,24 +50,38 @@ const HSR_BREAK = new Set(["ホタル", "ブートヒル", "乱破", "帰忘の�
 const HSR_HP = new Set(["刃", "キャストリス", "モーディス", "ヒアンシー", "長夜月"]);
 const HSR_DEF = new Set(["アベンチュリン"]);
 const HSR_SUSTAIN = new Set(["白露", "羅刹", "フォフォ", "リンクス", "ナターシャ", "ジェパード", "符玄", "丹恒・騰荒"]);
-const HSR_PATH_LABELS: Record<string, string> = { Warrior: "壊滅", Rogue: "巡狩", Mage: "知恵", Shaman: "調和", Knight: "存護", Warlock: "虚無", Priest: "豊穣", Memory: "記憶", Elation: "歓楽" };
+
+/** HSR のロール分類。ガイド生成（generatedHsrGuide）とメタデータの期待プロファイル（expectedProfileFor）で同じ判定を使う。 */
+export function hsrProfileIdFor(name: string, path: string): HsrProfileId {
+  const normalizedPath = HSR_PATH_LABELS[path] ?? path;
+  return HSR_DOT.has(name) ? "dot" : HSR_BREAK.has(name) ? "break" : HSR_HP.has(name) ? "hp" : HSR_DEF.has(name) ? "def" : HSR_SUSTAIN.has(name) ? "sustain" : normalizedPath === "調和" || normalizedPath === "記憶" ? "support" : normalizedPath === "存護" ? "tank" : "crit";
+}
+
+/** 原神のロール分類。 */
+export function genshinProfileIdFor(name: string): GenshinProfileId {
+  return GENS_HIT_REACTION.has(name) ? "em" : GENS_HP.has(name) ? "hp" : GENS_DEF.has(name) ? "def" : GENS_SUPPORT.has(name) ? "support" : "crit";
+}
+
+/** ZZZ のロール分類。特性（profession）だけで決まる。 */
+export function zzzProfileIdFor(profession: string): ZzzProfileId {
+  return profession === "Anomaly" ? "anomaly" : profession === "Stun" ? "stun" : profession === "Support" ? "support" : profession === "Defense" ? "tank" : profession === "Rupture" ? "rupture" : "crit";
+}
 
 function copyProfile(name: string, profileId: string, profile: Omit<GuideDefinition, "headline">, label: string): GuideDefinition {
   return { ...profile, profileId, headline: `${name}の${label}を軸に、公開プロフィールで比較できる有効ステータスを整える。` };
 }
 
 export function generatedHsrGuide(name: string, path: string): GuideDefinition {
-  const normalizedPath = HSR_PATH_LABELS[path] ?? path;
-  const profileId = HSR_DOT.has(name) ? "dot" : HSR_BREAK.has(name) ? "break" : HSR_HP.has(name) ? "hp" : HSR_DEF.has(name) ? "def" : HSR_SUSTAIN.has(name) ? "sustain" : normalizedPath === "調和" || normalizedPath === "記憶" ? "support" : normalizedPath === "存護" ? "tank" : "crit";
+  const profileId = hsrProfileIdFor(name, path);
   return { ...copyProfile(name, profileId, HSR_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。` };
 }
 
 export function generatedGenshinGuide(name: string): GuideDefinition {
-  const profileId = GENS_HIT_REACTION.has(name) ? "em" : GENS_HP.has(name) ? "hp" : GENS_DEF.has(name) ? "def" : GENS_SUPPORT.has(name) ? "support" : "crit";
+  const profileId = genshinProfileIdFor(name);
   return { ...copyProfile(name, profileId, GI_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。` };
 }
 
 export function generatedZzzGuide(name: string, profession: string): GuideDefinition {
-  const profileId = profession === "Anomaly" ? "anomaly" : profession === "Stun" ? "stun" : profession === "Support" ? "support" : profession === "Defense" ? "tank" : profession === "Rupture" ? "rupture" : "crit";
+  const profileId = zzzProfileIdFor(profession);
   return { ...copyProfile(name, profileId, ZZZ_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。` };
 }

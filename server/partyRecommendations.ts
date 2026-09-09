@@ -1,6 +1,6 @@
 import type { StatKey, TierName } from "./buildAdvisor";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS } from "./characterGuideCatalog";
-import { generatedGenshinGuide, generatedHsrGuide, generatedZzzGuide } from "./individualGuides";
+import { genshinProfileIdFor, hsrProfileIdFor, zzzProfileIdFor } from "./individualGuides";
 import { batch17PartyFor } from "./batch17Parties";
 
 /**
@@ -1217,9 +1217,9 @@ const ownMember = (name: string, roleJa: string, roleEn: string, roleZh: string)
 const roleMember = (name: string, roleJa: string, roleEn: string, roleZh: string) => member(name, name, name, roleJa, roleEn, roleZh);
 
 function genericProfileFor(game: PartyGameId, name: string): GenericProfile {
-  if (game === "hsr") return generatedHsrGuide(name, HSR_RUNTIME_PATHS[name] ?? "").profileId as GenericProfile;
-  if (game === "genshin") return generatedGenshinGuide(name).profileId as GenericProfile;
-  return generatedZzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack").profileId as GenericProfile;
+  if (game === "hsr") return hsrProfileIdFor(name, HSR_RUNTIME_PATHS[name] ?? "");
+  if (game === "genshin") return genshinProfileIdFor(name);
+  return zzzProfileIdFor(ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
 }
 
 function genericTargetChanges(game: PartyGameId, profile: GenericProfile): PartyTargetChange[] {
