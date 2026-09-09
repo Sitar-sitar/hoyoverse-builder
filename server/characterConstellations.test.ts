@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { constellationProfileFor } from "./characterConstellations";
+import { constellationProfileFor, constellationProfileForCatalogName } from "./characterConstellations";
+import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
+import { ACTIVE_CATALOG_IDENTITIES } from "./fixtures/identityCatalogSnapshot";
 import type { CharacterIdentity } from "./characterIdentity";
 
 const identity = (game: CharacterIdentity["game"], sourceId: string, displayName: string): CharacterIdentity => ({
@@ -163,5 +165,40 @@ describe("constellationProfileFor", () => {
     expect(profile.dataStatus).toBe("preparing");
     expect(profile.effects).toEqual([]);
     expect(profile.activeTargetChanges).toEqual([]);
+  });
+});
+
+describe("図鑑（カタログ名）経路の凸解決", () => {
+  const TIEBREAK: Record<string, string> = { "hsr:三月なのか": "1001", "genshin:旅人": "10000005", "genshin:イネファ": "10000116" };
+  const expectedSourceId = (game: string, name: string): string | undefined => {
+    if (TIEBREAK[`${game}:${name}`]) return TIEBREAK[`${game}:${name}`];
+    const entry = ACTIVE_CATALOG_IDENTITIES.find((candidate) => candidate.game === game && candidate.providerName === name && !String(candidate.sourceId).includes("-"));
+    return entry ? String(entry.sourceId) : undefined;
+  };
+
+  it("全248名でカタログ名経路とsource ID経路の凸が一致する（rank 0 と 6）", () => {
+    const mismatches: string[] = [];
+    for (const game of ["hsr", "genshin", "zzz"] as CatalogGameId[]) {
+      for (const name of CHARACTER_GUIDE_CATALOG[game]) {
+        const sourceId = expectedSourceId(game, name);
+        for (const rank of [0, 6]) {
+          const viaCatalog = constellationProfileForCatalogName(game, name, rank);
+          const viaId = constellationProfileFor(identity(game, sourceId ?? name, name), rank);
+          if (JSON.stringify(viaCatalog) !== JSON.stringify(viaId)) mismatches.push(`${game}:${name} rank=${rank}`);
+        }
+      }
+    }
+    expect(mismatches).toEqual([]);
+  });
+
+  it("旧手書き索引の代表例を同じIDへ解決する", () => {
+    const legacy: Record<string, string> = {
+      "hsr:不死途": "1504", "hsr:乱破": "1317", "hsr:椒丘": "1218", "hsr:爻光": "1502",
+      "genshin:バーバラ": "10000014", "genshin:旅人": "10000005", "genshin:魈": "10000026", "genshin:夢見月瑞希": "10000109",
+    };
+    for (const [key, sourceId] of Object.entries(legacy)) {
+      const [game, name] = key.split(":") as [CatalogGameId, string];
+      expect(constellationProfileForCatalogName(game, name, 6)).toEqual(constellationProfileFor(identity(game, sourceId, name), 6));
+    }
   });
 });

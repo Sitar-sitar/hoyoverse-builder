@@ -149,6 +149,33 @@ describe("UIDキャッシュ", () => {
     expect(cache.get("800000001", 1_099)).toBe("cached");
     expect(cache.get("800000001", 1_100)).toBeNull();
   });
+
+  // get() は期限切れを読んだ時点で削除するため、掃除の有無は「読み取り前の保持件数」でしか観測できない。
+  it("閾値を超えたset時に期限切れエントリを掃除し、有効エントリだけを残す", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 300; i += 1) cache.set(`expired-${i}`, `v${i}`, 1, 0);
+    cache.set("alive", "kept", 60_000, 2);
+
+    expect(cache.size).toBe(1);
+    expect(cache.get("alive", 3)).toBe("kept");
+    expect(cache.get("expired-0", 3)).toBeNull();
+  });
+
+  it("閾値以下では掃除せず、有効エントリを保持し続ける", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 10; i += 1) cache.set(`uid-${i}`, `v${i}`, 60_000, 0);
+
+    expect(cache.size).toBe(10);
+  });
+
+  it("掃除の期限境界は expiresAt <= now で、未期限のエントリは消さない", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 300; i += 1) cache.set(`old-${i}`, `v${i}`, 10, 0);
+    cache.set("edge", "kept", 10, 10);
+
+    expect(cache.size).toBe(1);
+    expect(cache.get("edge", 15)).toBe("kept");
+  });
 });
 
 describe("MiHoMoからEnkaへのフォールバック", () => {

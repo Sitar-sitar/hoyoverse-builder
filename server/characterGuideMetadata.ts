@@ -1,3 +1,4 @@
+import { batchNames } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { expectedProfileFor } from "./expectedGuideProfiles";
 import { BATCH17_GUIDE_DATA_AS_OF } from "./batch17Guides";
@@ -35,91 +36,7 @@ export const CHARACTER_GUIDE_METADATA: Record<CatalogGameId, Record<string, Char
   zzz: createGameRecords("zzz"),
 };
 
-const BATCH_2_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ロビン", "ルアン・メェイ", "飛霄"],
-  genshin: ["アルレッキーノ", "ヌヴィレット", "夜蘭"],
-  zzz: ["月城柳", "アストラ", "ライト", "レミエール"],
-};
-
-const BATCH_1_REVIEWED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アグライア", "アナイクス", "キャストリス", "ホタル"],
-  genshin: ["フリーナ", "楓原万葉", "ベネット", "シロネン"],
-  zzz: ["星見雅", "浮波柚葉"],
-};
-
-const BATCH_3_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["サンデー", "ブートヒル", "黄泉", "霊砂"],
-  genshin: ["雷電将軍", "ナヒーダ", "鍾離"],
-  zzz: ["ビビアン", "ジェーン", "エレン"],
-};
-
-const BATCH_4_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アベンチュリン", "トパーズ&カブ", "花火", "丹恒・飲月"],
-  genshin: ["アルハイゼン", "胡桃", "久岐忍"],
-  zzz: ["セス", "パイパー", "蒼角"],
-};
-
-const BATCH_5_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["Dr.レイシオ", "カフカ", "ブラックスワン", "鏡流"],
-  genshin: ["行秋", "香菱", "フィッシュル"],
-  zzz: ["グレース", "バーニス", "ルーシー"],
-};
-
-const BATCH_6_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ブローニャ", "銀狼", "符玄", "羅刹"],
-  genshin: ["白朮", "八重神子", "宵宮"],
-  zzz: ["シーザー", "リナ", "青衣"],
-};
-
-const BATCH_7_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アーチャー", "アーラン", "アスター", "アルジェンティ"],
-  genshin: ["アーロイ", "アイノ", "アルベド"],
-  zzz: ["「11号」", "「シード」", "「トリガー」"],
-};
-
-const BATCH_8_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ヴェルト", "ギャラガー", "キュレネ", "ギルガメッシュ"],
-  genshin: ["アンバー", "イアンサ", "イネファ"],
-  zzz: ["0号・アンビー", "アリア", "アリス"],
-};
-
-const BATCH_9_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["クラーラ", "ケリュドラ", "サフェル", "サンポ"],
-  genshin: ["イファ", "ヴァレサ", "ウェンティ"],
-  zzz: ["アンドー", "アンビー", "イヴリン"],
-};
-
-const BATCH_10_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ジェイド", "ジェパード", "セイバー", "セイレンス"],
-  genshin: ["エウルア", "エスコフィエ", "エミリエ"],
-  zzz: ["イドリー", "ヴェリナ", "オルペウス&「鬼火」"],
-};
-
-const BATCH_11_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["セーバル", "ゼーレ", "ダリア", "トリビー", "ナターシャ", "ヒアンシー", "ファイノン", "フォフォ"],
-  genshin: ["オロルン", "カーヴェ", "ガイア", "カチーナ", "キィニチ", "キャンディス"],
-  zzz: ["カリン", "クレタ", "シーシィア", "シグリッド", "スターライト･ビリー", "ダイアリン"],
-};
-
-const BATCH_12_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["フック", "ペラ", "ヘルタ", "マダム・ヘルタ", "ミーシャ", "モーディス", "モゼ", "リンクス"],
-  genshin: ["クレー", "クロリンデ", "コレイ", "ゴロー", "コロンビーナ", "シグウィン"],
-  zzz: ["ニコ", "ノルムー", "ヒューゴ", "ピュロイス", "ビリー", "プルクラ"],
-};
-
-const BATCH_13_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ルカ", "雲璃", "遠坂凛", "火花", "寒鴉", "帰忘の流離人", "景元", "桂乃芬"],
-  genshin: ["シトラリ", "シャルロット", "シュヴルーズ", "ジン", "スカーク", "スクロース"],
-  zzz: ["プロメイア", "ベン", "ライカン", "リュシア", "儀玄", "橘福福"],
-};
-
-const BATCH_14_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["刃", "青雀", "雪衣", "素裳", "丹恒", "丹恒・騰荒"],
-  genshin: ["セトス", "セノ", "ダリア", "タルタリヤ", "チャスカ", "ディオナ", "ディシア", "ティナリ"],
-  zzz: ["狛野真斗", "朱鳶", "照", "千夏", "浅羽悠真", "南宮羽"],
-};
-
-Object.entries(BATCH_2_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(2)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -134,7 +51,7 @@ Object.entries(BATCH_2_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_1_REVIEWED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(1)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -149,7 +66,7 @@ Object.entries(BATCH_1_REVIEWED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_3_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(3)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -164,7 +81,7 @@ Object.entries(BATCH_3_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_4_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(4)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -179,7 +96,7 @@ Object.entries(BATCH_4_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_5_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(5)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -194,7 +111,7 @@ Object.entries(BATCH_5_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_6_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(6)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -209,7 +126,7 @@ Object.entries(BATCH_6_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_7_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(7)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -224,7 +141,7 @@ Object.entries(BATCH_7_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_8_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(8)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -239,7 +156,7 @@ Object.entries(BATCH_8_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_9_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(9)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -260,7 +177,7 @@ Object.entries(BATCH_9_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_10_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(10)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -279,7 +196,7 @@ Object.entries(BATCH_10_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_11_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(11)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -300,7 +217,7 @@ Object.entries(BATCH_11_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_12_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(12)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -322,7 +239,7 @@ Object.entries(BATCH_12_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_13_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(13)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -341,7 +258,7 @@ Object.entries(BATCH_13_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-Object.entries(BATCH_14_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(14)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -365,12 +282,6 @@ Object.entries(BATCH_14_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-const BATCH_16_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["不死途", "乱破", "椒丘", "爻光"],
-  genshin: ["バーバラ", "ファルザン", "フリンズ", "フレミネ", "マーヴィカ", "ミカ", "ムアラニ", "モナ", "ヤフォダ", "ヨォーヨ", "ラウマ", "リオセスリ", "リサ", "リネ", "リネット", "レイラ"],
-  zzz: [],
-};
-
 /** 第16バッチで参照した記事の更新日。実装日（updatedAt）とは別に、キャラクターごとに保持する。 */
 const BATCH_16_DATA_AS_OF: Record<string, string> = {
   "不死途": "2026-09-07",
@@ -382,7 +293,7 @@ const BATCH_16_DATA_AS_OF: Record<string, string> = {
   "フリンズ": "2026-09-01",
 };
 
-Object.entries(BATCH_16_UPDATED_NAMES).forEach(([game, names]) => {
+Object.entries(batchNames(16)).forEach(([game, names]) => {
   const gameId = game as CatalogGameId;
   names.forEach((name) => {
     const record = CHARACTER_GUIDE_METADATA[gameId][name];
@@ -397,9 +308,7 @@ Object.entries(BATCH_16_UPDATED_NAMES).forEach(([game, names]) => {
   });
 });
 
-const BATCH_17_UPDATED_NAMES = ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"] as const;
-
-BATCH_17_UPDATED_NAMES.forEach((name) => {
+batchNames(17).genshin.forEach((name) => {
   const record = CHARACTER_GUIDE_METADATA.genshin[name];
   if (!record) return;
   record.profileId = `curated:batch17:genshin:${name}`;

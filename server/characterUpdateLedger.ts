@@ -1,3 +1,4 @@
+import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 
 export type UpdateLedgerStatus = "reviewed" | "pending";
@@ -19,41 +20,17 @@ export type CharacterUpdateLedger = {
   entries: CharacterUpdateLedgerEntry[];
 };
 
-const REVIEWED_BATCHES: Record<number, Record<CatalogGameId, readonly string[]>> = {
-  1: { hsr: ["アグライア", "アナイクス", "キャストリス", "ホタル"], genshin: ["フリーナ", "楓原万葉", "ベネット", "シロネン"], zzz: ["星見雅", "浮波柚葉"] },
-  2: { hsr: ["ロビン", "ルアン・メェイ", "飛霄"], genshin: ["アルレッキーノ", "ヌヴィレット", "夜蘭"], zzz: ["月城柳", "アストラ", "ライト", "レミエール"] },
-  3: { hsr: ["サンデー", "ブートヒル", "黄泉", "霊砂"], genshin: ["雷電将軍", "ナヒーダ", "鍾離"], zzz: ["ビビアン", "ジェーン", "エレン"] },
-  4: { hsr: ["アベンチュリン", "トパーズ&カブ", "花火", "丹恒・飲月"], genshin: ["アルハイゼン", "胡桃", "久岐忍"], zzz: ["セス", "パイパー", "蒼角"] },
-  5: { hsr: ["Dr.レイシオ", "カフカ", "ブラックスワン", "鏡流"], genshin: ["行秋", "香菱", "フィッシュル"], zzz: ["グレース", "バーニス", "ルーシー"] },
-  6: { hsr: ["ブローニャ", "銀狼", "符玄", "羅刹"], genshin: ["白朮", "八重神子", "宵宮"], zzz: ["シーザー", "リナ", "青衣"] },
-  7: { hsr: ["アーチャー", "アーラン", "アスター", "アルジェンティ"], genshin: ["アーロイ", "アイノ", "アルベド"], zzz: ["「11号」", "「シード」", "「トリガー」"] },
-  8: { hsr: ["ヴェルト", "ギャラガー", "キュレネ", "ギルガメッシュ"], genshin: ["アンバー", "イアンサ", "イネファ"], zzz: ["0号・アンビー", "アリア", "アリス"] },
-  9: { hsr: ["クラーラ", "ケリュドラ", "サフェル", "サンポ"], genshin: ["イファ", "ヴァレサ", "ウェンティ"], zzz: ["アンドー", "アンビー", "イヴリン"] },
-  10: { hsr: ["ジェイド", "ジェパード", "セイバー", "セイレンス"], genshin: ["エウルア", "エスコフィエ", "エミリエ"], zzz: ["イドリー", "ヴェリナ", "オルペウス&「鬼火」"] },
-  11: { hsr: ["セーバル", "ゼーレ", "ダリア", "トリビー", "ナターシャ", "ヒアンシー", "ファイノン", "フォフォ"], genshin: ["オロルン", "カーヴェ", "ガイア", "カチーナ", "キィニチ", "キャンディス"], zzz: ["カリン", "クレタ", "シーシィア", "シグリッド", "スターライト･ビリー", "ダイアリン"] },
-  12: { hsr: ["フック", "ペラ", "ヘルタ", "マダム・ヘルタ", "ミーシャ", "モーディス", "モゼ", "リンクス"], genshin: ["クレー", "クロリンデ", "コレイ", "ゴロー", "コロンビーナ", "シグウィン"], zzz: ["ニコ", "ノルムー", "ヒューゴ", "ピュロイス", "ビリー", "プルクラ"] },
-  13: { hsr: ["ルカ", "雲璃", "遠坂凛", "火花", "寒鴉", "帰忘の流離人", "景元", "桂乃芬"], genshin: ["シトラリ", "シャルロット", "シュヴルーズ", "ジン", "スカーク", "スクロース"], zzz: ["プロメイア", "ベン", "ライカン", "リュシア", "儀玄", "橘福福"] },
-  14: { hsr: ["刃", "青雀", "雪衣", "素裳", "丹恒", "丹恒・騰荒"], genshin: ["セトス", "セノ", "ダリア", "タルタリヤ", "チャスカ", "ディオナ", "ディシア", "ティナリ"], zzz: ["狛野真斗", "朱鳶", "照", "千夏", "浅羽悠真", "南宮羽"] },
-  15: { hsr: ["御空", "三月なのか", "長夜月", "停雲", "白露", "緋英", "彦卿", "姫子"], genshin: ["ディルック", "ドゥリン", "トーマ", "ドリー", "ナヴィア", "ニィロウ", "ネフェル", "ノエル"], zzz: ["猫又", "盤岳", "葉瞬光", "潘引壺"] },
-  16: { hsr: ["不死途", "乱破", "椒丘", "爻光"], genshin: ["バーバラ", "ファルザン", "フリンズ", "フレミネ", "マーヴィカ", "ミカ", "ムアラニ", "モナ", "ヤフォダ", "ヨォーヨ", "ラウマ", "リオセスリ", "リサ", "リネ", "リネット", "レイラ"], zzz: [] },
-  17: { hsr: [], genshin: ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"], zzz: [] },
-};
-
 const NEXT_BATCH: Record<CatalogGameId, readonly string[]> = {
   hsr: [],
   genshin: [],
   zzz: [],
 };
 
-function batchFor(game: CatalogGameId, name: string) {
-  return Object.entries(REVIEWED_BATCHES).find(([, games]) => games[game].includes(name))?.[0];
-}
-
-export function characterUpdateLedger(): CharacterUpdateLedger {
+function buildLedger(): CharacterUpdateLedger {
   const games: CatalogGameId[] = ["hsr", "genshin", "zzz"];
   const entries = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
-    const batch = batchFor(game, name);
-    return { game, name, status: batch ? "reviewed" as const : "pending" as const, batch: batch ? Number(batch) : null };
+    const batch = batchIdFor(game, name);
+    return { game, name, status: batch !== null ? "reviewed" as const : "pending" as const, batch };
   }));
   const byGame = Object.fromEntries(games.map((game) => {
     const gameEntries = entries.filter((entry) => entry.game === game);
@@ -75,4 +52,18 @@ export function characterUpdateLedger(): CharacterUpdateLedger {
     criteria: "全248キャラクターについて、更新日付き個別ビルド根拠、確認済みsource IDの全6段階凸（未実装・未公開は安全表示）、最大3案の推奨PT、戦闘内補正の公開値分離、回帰テストを維持して公開する。",
     entries,
   };
+}
+
+let cachedLedger: CharacterUpdateLedger | undefined;
+let ledgerIndex: Map<string, CharacterUpdateLedgerEntry> | undefined;
+
+/** 台帳は入力を持たない静的計算のため、プロセス内で1度だけ組み立てて共有する。 */
+export function characterUpdateLedger(): CharacterUpdateLedger {
+  return (cachedLedger ??= buildLedger());
+}
+
+/** `game:name` で台帳エントリを引く（無ければ undefined）。台帳全体の線形探索を避けるための索引。 */
+export function ledgerEntryFor(game: CatalogGameId, name: string): CharacterUpdateLedgerEntry | undefined {
+  ledgerIndex ??= new Map(characterUpdateLedger().entries.map((entry) => [`${entry.game}:${entry.name}`, entry]));
+  return ledgerIndex.get(`${game}:${name}`);
 }

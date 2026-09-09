@@ -1,3 +1,4 @@
+import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA } from "./characterGuideMetadata";
 import { characterUpdateLedger } from "./characterUpdateLedger";
@@ -93,310 +94,136 @@ const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, Guid
   },
 };
 
-const BATCH_2_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ロビン", "ルアン・メェイ", "飛霄"],
-  genshin: ["アルレッキーノ", "ヌヴィレット", "夜蘭"],
-  zzz: ["月城柳", "アストラ", "ライト", "レミエール"],
-};
+type BatchEventTemplate = { date: string; title: string; summary: (name: string) => string; changes: string[]; rationale: string };
 
-const BATCH_1_REVIEWED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アグライア", "アナイクス", "キャストリス", "ホタル"],
-  genshin: ["フリーナ", "楓原万葉", "ベネット", "シロネン"],
-  zzz: ["星見雅", "浮波柚葉"],
-};
-
-const BATCH_3_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["サンデー", "ブートヒル", "黄泉", "霊砂"],
-  genshin: ["雷電将軍", "ナヒーダ", "鍾離"],
-  zzz: ["ビビアン", "ジェーン", "エレン"],
-};
-
-const BATCH_4_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アベンチュリン", "トパーズ&カブ", "花火", "丹恒・飲月"],
-  genshin: ["アルハイゼン", "胡桃", "久岐忍"],
-  zzz: ["セス", "パイパー", "蒼角"],
-};
-
-const BATCH_5_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["Dr.レイシオ", "カフカ", "ブラックスワン", "鏡流"],
-  genshin: ["行秋", "香菱", "フィッシュル"],
-  zzz: ["グレース", "バーニス", "ルーシー"],
-};
-
-const BATCH_6_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ブローニャ", "銀狼", "符玄", "羅刹"],
-  genshin: ["白朮", "八重神子", "宵宮"],
-  zzz: ["シーザー", "リナ", "青衣"],
-};
-
-const BATCH_7_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アーチャー", "アーラン", "アスター", "アルジェンティ"],
-  genshin: ["アーロイ", "アイノ", "アルベド"],
-  zzz: ["「11号」", "「シード」", "「トリガー」"],
-};
-
-const BATCH_8_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ヴェルト", "ギャラガー", "キュレネ", "ギルガメッシュ"],
-  genshin: ["アンバー", "イアンサ", "イネファ"],
-  zzz: ["0号・アンビー", "アリア", "アリス"],
-};
-
-const BATCH_9_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["クラーラ", "ケリュドラ", "サフェル", "サンポ"],
-  genshin: ["イファ", "ヴァレサ", "ウェンティ"],
-  zzz: ["アンドー", "アンビー", "イヴリン"],
-};
-
-const BATCH_10_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ジェイド", "ジェパード", "セイバー", "セイレンス"],
-  genshin: ["エウルア", "エスコフィエ", "エミリエ"],
-  zzz: ["イドリー", "ヴェリナ", "オルペウス&「鬼火」"],
-};
-
-const BATCH_11_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["セーバル", "ゼーレ", "ダリア", "トリビー", "ナターシャ", "ヒアンシー", "ファイノン", "フォフォ"],
-  genshin: ["オロルン", "カーヴェ", "ガイア", "カチーナ", "キィニチ", "キャンディス"],
-  zzz: ["カリン", "クレタ", "シーシィア", "シグリッド", "スターライト･ビリー", "ダイアリン"],
-};
-
-const BATCH_12_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["フック", "ペラ", "ヘルタ", "マダム・ヘルタ", "ミーシャ", "モーディス", "モゼ", "リンクス"],
-  genshin: ["クレー", "クロリンデ", "コレイ", "ゴロー", "コロンビーナ", "シグウィン"],
-  zzz: ["ニコ", "ノルムー", "ヒューゴ", "ピュロイス", "ビリー", "プルクラ"],
-};
-
-const BATCH_13_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ルカ", "雲璃", "遠坂凛", "火花", "寒鴉", "帰忘の流離人", "景元", "桂乃芬"],
-  genshin: ["シトラリ", "シャルロット", "シュヴルーズ", "ジン", "スカーク", "スクロース"],
-  zzz: ["プロメイア", "ベン", "ライカン", "リュシア", "儀玄", "橘福福"],
-};
-
-const BATCH_14_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["刃", "青雀", "雪衣", "素裳", "丹恒", "丹恒・騰荒"],
-  genshin: ["セトス", "セノ", "ダリア", "タルタリヤ", "チャスカ", "ディオナ", "ディシア", "ティナリ"],
-  zzz: ["狛野真斗", "朱鳶", "照", "千夏", "浅羽悠真", "南宮羽"],
-};
-
-function batch2UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_2_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
-    date: "2026-08-25T12:14:00+09:00",
-    scope: "character",
-    title: "第2バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィールで比較する目標値、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
-    changes: ["ロール共通の目標値を個別ビルドへ置換", "全6段階の凸効果を追加", "条件付きの戦闘内効果を公開値から分離", "最新の個別根拠で推奨PTを更新"],
-    rationale: "ビルド・凸・編成の前提をキャラクターごとに明確化し、公開プロフィールと混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch1ReviewEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_1_REVIEWED_NAMES[game].includes(name)) return undefined;
-  return {
+/** バッチ別の個別更新イベント。第15バッチは API 境界の applyBatch15History が担うためここに持たない。 */
+const BATCH_EVENT_TEMPLATES: Record<number, BatchEventTemplate> = {
+  1: {
     date: "2026-08-25T12:35:00+09:00",
-    scope: "character",
     title: "第1バッチ：個別ビルド・凸・推奨PTを再監査",
-    summary: `${name}の初回バッチを、最新の更新日付き個別ガイドで再照合し、公開値・戦闘内補正・推奨PTの分離を見直しました。`,
+    summary: (name) => `${name}の初回バッチを、最新の更新日付き個別ガイドで再照合し、公開値・戦闘内補正・推奨PTの分離を見直しました。`,
     changes: ["個別ビルドの目標値・主ステータス・条件注記を再確認", "全6段階の凸効果を更新日付き根拠と照合", "戦闘中・条件付きの効果を公開プロフィール値から分離", "最大3案の推奨PTを個別ガイドと照合"],
     rationale: "初回適用データも同一基準で再点検し、キャラクター固有の条件が汎用目標へ混入しないようにするため。",
-    games: [game],
-  };
-}
-
-function batch3UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_3_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  2: {
+    date: "2026-08-25T12:14:00+09:00",
+    title: "第2バッチ：個別ビルド・凸・推奨PTを再精査",
+    summary: (name) => `${name}の公開プロフィールで比較する目標値、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    changes: ["ロール共通の目標値を個別ビルドへ置換", "全6段階の凸効果を追加", "条件付きの戦闘内効果を公開値から分離", "最新の個別根拠で推奨PTを更新"],
+    rationale: "ビルド・凸・編成の前提をキャラクターごとに明確化し、公開プロフィールと混同しない比較にするため。",
+  },
+  3: {
     date: "2026-08-26T12:00:00+09:00",
-    scope: "character",
     title: "第3バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新"],
     rationale: "キャラクター固有の目標と編成条件を明示し、公開プロフィールの数値と戦闘内効果を混同しないため。",
-    games: [game],
-  };
-}
-
-function batch4UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_4_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  4: {
     date: "2026-08-26T13:00:00+09:00",
-    scope: "character",
     title: "第4バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch5UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_5_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  5: {
     date: "2026-08-26T14:00:00+09:00",
-    scope: "character",
     title: "第5バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch6UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_6_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  6: {
     date: "2026-08-26T15:00:00+09:00",
-    scope: "character",
     title: "第6バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch7UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_7_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  7: {
     date: "2026-08-26T16:00:00+09:00",
-    scope: "character",
     title: "第7バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、確認可能な全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。アーロイは公式に命ノ星座が未実装のため準備中表示を維持します。`,
+    summary: (name) => `${name}の公開プロフィール目標、確認可能な全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。アーロイは公式に命ノ星座が未実装のため準備中表示を維持します。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "ID優先の全6段階凸を追加（アーロイは未実装として安全表示）", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch8UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_8_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  8: {
     date: "2026-08-26T17:00:00+09:00",
-    scope: "character",
     title: "第8バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch9UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_9_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  9: {
     date: "2026-08-26T18:00:00+09:00",
-    scope: "character",
     title: "第9バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch10UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_10_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  10: {
     date: "2026-08-26T19:00:00+09:00",
-    scope: "character",
     title: "第10バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
+    summary: (name) => `${name}の公開プロフィール目標、全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "全6段階の凸効果をID優先で追加", "戦闘中・編成・条件付き効果を公開値から分離", "最新の個別根拠で最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch11UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_11_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  11: {
     date: "2026-08-27T01:15:00+09:00",
-    scope: "character",
     title: "第11バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、確認可能な全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。シーシィアの未確認ソースIDは準備中表示を維持します。`,
+    summary: (name) => `${name}の公開プロフィール目標、確認可能な全6段階の凸効果、最大3案の推奨PTを更新日付き個別ガイドで照合しました。シーシィアの未確認ソースIDは準備中表示を維持します。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みIDの全6段階凸をID優先で追加（シーシィアは未確認として安全表示）", "戦闘中・編成・条件付き効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "公開UIDは明示検索のみで検証", "分割公開の対象を20キャラクター単位へ変更"],
     rationale: "20名単位の監査でも、キャラクター固有の公開値目標と編成条件を明示し、戦闘内バフと公開プロフィールを混同しない比較にするため。",
-    games: [game],
-  };
-}
-
-function batch12UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_12_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  12: {
     date: "2026-08-27T01:50:00+09:00",
-    scope: "character",
     title: "第12バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、更新日付き個別根拠、最大3案の推奨PTを照合しました。確認済みsource IDかつ全6段階本文を確認できた実装のみ凸を登録し、コロンビーナ、ニコ、ピュロイスの未解決・未公開部分は準備中を維持します。`,
+    summary: (name) => `${name}の公開プロフィール目標、更新日付き個別根拠、最大3案の推奨PTを照合しました。確認済みsource IDかつ全6段階本文を確認できた実装のみ凸を登録し、コロンビーナ、ニコ、ピュロイスの未解決・未公開部分は準備中を維持します。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みIDかつ全6段階本文を確認できた実装のみ凸をID優先で追加", "未解決source ID・未公開心象映画本文は推測で補わず安全表示", "戦闘中・編成・条件付き効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "公開UIDは明示Searchのみで検証"],
     rationale: "キャラクター固有の公開値目標と編成条件を明示し、不確かなID・効果や戦闘内バフを公開プロフィールへ混入させないため。",
-    games: [game],
-  };
-}
-
-function batch13UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_13_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  13: {
     date: "2026-08-27T02:30:00+09:00",
-    scope: "character",
     title: "第13バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、更新日付き個別根拠、ID優先の全6段階凸、最大3案の推奨PTを照合しました。根拠にない数値補間は行わず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
+    summary: (name) => `${name}の公開プロフィール目標、更新日付き個別根拠、ID優先の全6段階凸、最大3案の推奨PTを照合しました。根拠にない数値補間は行わず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みsource IDの全6段階凸をID優先で追加", "根拠に明示されない数値の補間を行わず、公開値比較の目標のみ登録", "戦闘中・編成・条件付き効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "公開UIDは明示Searchのみで検証"],
     rationale: "キャラクター固有の公開値目標を根拠に限定し、同名別実装・戦闘内バフ・未確認数値を公開プロフィール評価へ混入させないため。",
-    games: [game],
-  };
-}
-
-function batch14UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_14_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  14: {
     date: "2026-08-27T03:00:00+09:00",
-    scope: "character",
     title: "第14バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、更新日付き個別根拠、ID優先の全6段階凸、最大3案の推奨PTを照合しました。固定値の根拠がない場合は数値を推測せず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
+    summary: (name) => `${name}の公開プロフィール目標、更新日付き個別根拠、ID優先の全6段階凸、最大3案の推奨PTを照合しました。固定値の根拠がない場合は数値を推測せず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みsource IDの全6段階凸をID優先で追加", "固定値根拠のないステータスは推測で補わず、優先項目として記録", "戦闘中・編成・条件付き効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "保存UIDの復元・ゲーム切替・再読み込みで照会せず、明示Searchのみで検証"],
     rationale: "キャラクター固有の根拠とsource IDを優先し、同名別実装・未根拠数値・戦闘内バフを公開プロフィール評価へ混入させないため。",
-    games: [game],
-  };
-}
-
-const BATCH_16_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["不死途", "乱破", "椒丘", "爻光"],
-  genshin: ["バーバラ", "ファルザン", "フリンズ", "フレミネ", "マーヴィカ", "ミカ", "ムアラニ", "モナ", "ヤフォダ", "ヨォーヨ", "ラウマ", "リオセスリ", "リサ", "リネ", "リネット", "レイラ"],
-  zzz: [],
-};
-
-function batch16UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_16_UPDATED_NAMES[game].includes(name)) return undefined;
-  return {
+  },
+  16: {
     date: "2026-09-07T12:00:00+09:00",
-    scope: "character",
     title: "第16バッチ：個別ビルド・凸・推奨PTを再精査",
-    summary: `${name}の公開プロフィール目標、更新日付き個別根拠、確認済みsource IDの全6段階凸、最大3案の推奨PTを照合しました。出典に数値の明示がない項目は目標値を登録せず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
+    summary: (name) => `${name}の公開プロフィール目標、更新日付き個別根拠、確認済みsource IDの全6段階凸、最大3案の推奨PTを照合しました。出典に数値の明示がない項目は目標値を登録せず、戦闘中・条件付き効果は公開プロフィール値から分離しています。`,
     changes: ["ロール共通の旧目標を個別ビルドへ置換", "確認済みsource IDの全6段階凸をID優先で追加", "出典に明示値がない項目は水準差を作らず、優先度のみ記録", "戦闘中・編成・凸・武器条件の効果を公開値から分離", "根拠で確認できた最大3案の推奨PTを更新", "UID照会と図鑑（UID不要）の双方で同じ精査内容を返すことを検証"],
     rationale: "第15バッチのAPI境界上書きではなく基底データを更新し、UID照会と図鑑の双方で同一の個別根拠を返すため。",
-    games: [game],
-  };
-}
-
-const BATCH_17_UPDATED_NAMES = ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"] as const;
-
-function batch17UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (game !== "genshin" || !BATCH_17_UPDATED_NAMES.includes(name as typeof BATCH_17_UPDATED_NAMES[number])) return undefined;
-  return {
+  },
+  17: {
     date: "2026-09-08T02:00:00+09:00",
-    scope: "character",
     title: "第17パッチ：個別ビルド・命ノ星座・推奨PTを再精査",
-    summary: `${name}の更新日付き個別根拠、確認済みsource IDの全6段階命ノ星座、実名メンバーの推奨PTを照合しました。固定の戦闘外到達値は推測せず、比較対象なしとして明示します。`,
+    summary: (name) => `${name}の更新日付き個別根拠、確認済みsource IDの全6段階命ノ星座、実名メンバーの推奨PTを照合しました。固定の戦闘外到達値は推測せず、比較対象なしとして明示します。`,
     changes: ["個別の聖遺物・主ステータス方針へ更新", "確認済みsource IDの全6段階命ノ星座を登録", "実名4名編成を2案登録", "固定値根拠がないtargetsは空配列を維持", "UID照会と図鑑で同じ精査内容を返すよう統一"],
     rationale: "未根拠の数値水準や戦闘中バフを公開プロフィール評価へ混入させず、比較対象0件を達成済みと誤表示しないため。",
-    games: [game],
-  };
+  },
+};
+
+function batchEventFor(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
+  const id = batchIdFor(game, name);
+  const template = id === null ? undefined : BATCH_EVENT_TEMPLATES[id];
+  if (!template) return undefined;
+  return { date: template.date, scope: "character", title: template.title, summary: template.summary(name), changes: template.changes, rationale: template.rationale, games: [game] };
 }
 
-export function guideUpdateHistory() {
+function buildGuideUpdateHistory() {
   const games: CatalogGameId[] = ["hsr", "genshin", "zzz"];
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const metadata = CHARACTER_GUIDE_METADATA[game][name];
+    const batchEvent = batchEventFor(game, name);
     return {
       game,
       name,
@@ -406,22 +233,7 @@ export function guideUpdateHistory() {
       sourceLabel: metadata.sourceLabel,
       events: [
         ...(CHARACTER_CHANGE_EVENTS[game]?.[name] ?? []),
-        ...(batch2UpdateEvent(game, name) ? [batch2UpdateEvent(game, name)!] : []),
-        ...(batch1ReviewEvent(game, name) ? [batch1ReviewEvent(game, name)!] : []),
-        ...(batch3UpdateEvent(game, name) ? [batch3UpdateEvent(game, name)!] : []),
-        ...(batch4UpdateEvent(game, name) ? [batch4UpdateEvent(game, name)!] : []),
-        ...(batch5UpdateEvent(game, name) ? [batch5UpdateEvent(game, name)!] : []),
-        ...(batch6UpdateEvent(game, name) ? [batch6UpdateEvent(game, name)!] : []),
-        ...(batch7UpdateEvent(game, name) ? [batch7UpdateEvent(game, name)!] : []),
-        ...(batch8UpdateEvent(game, name) ? [batch8UpdateEvent(game, name)!] : []),
-        ...(batch9UpdateEvent(game, name) ? [batch9UpdateEvent(game, name)!] : []),
-        ...(batch10UpdateEvent(game, name) ? [batch10UpdateEvent(game, name)!] : []),
-        ...(batch11UpdateEvent(game, name) ? [batch11UpdateEvent(game, name)!] : []),
-        ...(batch12UpdateEvent(game, name) ? [batch12UpdateEvent(game, name)!] : []),
-        ...(batch13UpdateEvent(game, name) ? [batch13UpdateEvent(game, name)!] : []),
-        ...(batch14UpdateEvent(game, name) ? [batch14UpdateEvent(game, name)!] : []),
-        ...(batch16UpdateEvent(game, name) ? [batch16UpdateEvent(game, name)!] : []),
-        ...(batch17UpdateEvent(game, name) ? [batch17UpdateEvent(game, name)!] : []),
+        ...(batchEvent ? [batchEvent] : []),
         {
         date: metadata.updatedAt,
         scope: "character" as const,
@@ -434,4 +246,14 @@ export function guideUpdateHistory() {
     };
   }));
   return { currentBaseline: CURRENT_BASELINE, siteEvents: SITE_EVENTS, characters, updateLedger: characterUpdateLedger() };
+}
+
+let cachedHistory: ReturnType<typeof buildGuideUpdateHistory> | undefined;
+
+/**
+ * 更新履歴は静的計算のため、プロセス内で1度だけ組み立てて共有する。
+ * 呼び出し側の applyBatch15History はスプレッドと map で新しい配列を作るため、この値を書き換えない。
+ */
+export function guideUpdateHistory() {
+  return (cachedHistory ??= buildGuideUpdateHistory());
 }
