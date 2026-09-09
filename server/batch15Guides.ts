@@ -1,4 +1,5 @@
 import type { GuideDefinition, TargetStatDefinition } from "./buildAdvisor";
+import { batchNames } from "./characterBatches";
 import type { CharacterGameId } from "./characterIdentity";
 
 export const BATCH15_DATE = "2026-09-05";
@@ -112,11 +113,8 @@ function mergeTargets(current: TargetStatDefinition[], overrides?: TargetStatDef
   return [...byKey.values()];
 }
 
-export const BATCH15_CHARACTERS: Record<CharacterGameId, readonly string[]> = {
-  hsr: ["御空", "三月なのか", "長夜月", "停雲", "白露", "緋英", "彦卿", "姫子"],
-  genshin: ["ディルック", "ドゥリン", "トーマ", "ドリー", "ナヴィア", "ニィロウ", "ネフェル", "ノエル"],
-  zzz: ["猫又", "盤岳", "葉瞬光", "潘引壺"],
-};
+/** 第15バッチの対象20名。名前の正本は characterBatches.ts（台帳・履歴・メタデータと同じ表）。 */
+export const BATCH15_CHARACTERS: Record<CharacterGameId, readonly string[]> = batchNames(15);
 
 export function batch15GuideFor(game: CharacterGameId, name: string, current: GuideDefinition): GuideDefinition | null {
   const patch = PATCHES[`${game}:${name}`];

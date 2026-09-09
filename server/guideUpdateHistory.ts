@@ -1,3 +1,4 @@
+import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA } from "./characterGuideMetadata";
 import { characterUpdateLedger } from "./characterUpdateLedger";
@@ -93,92 +94,8 @@ const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, Guid
   },
 };
 
-const BATCH_2_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ロビン", "ルアン・メェイ", "飛霄"],
-  genshin: ["アルレッキーノ", "ヌヴィレット", "夜蘭"],
-  zzz: ["月城柳", "アストラ", "ライト", "レミエール"],
-};
-
-const BATCH_1_REVIEWED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アグライア", "アナイクス", "キャストリス", "ホタル"],
-  genshin: ["フリーナ", "楓原万葉", "ベネット", "シロネン"],
-  zzz: ["星見雅", "浮波柚葉"],
-};
-
-const BATCH_3_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["サンデー", "ブートヒル", "黄泉", "霊砂"],
-  genshin: ["雷電将軍", "ナヒーダ", "鍾離"],
-  zzz: ["ビビアン", "ジェーン", "エレン"],
-};
-
-const BATCH_4_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アベンチュリン", "トパーズ&カブ", "花火", "丹恒・飲月"],
-  genshin: ["アルハイゼン", "胡桃", "久岐忍"],
-  zzz: ["セス", "パイパー", "蒼角"],
-};
-
-const BATCH_5_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["Dr.レイシオ", "カフカ", "ブラックスワン", "鏡流"],
-  genshin: ["行秋", "香菱", "フィッシュル"],
-  zzz: ["グレース", "バーニス", "ルーシー"],
-};
-
-const BATCH_6_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ブローニャ", "銀狼", "符玄", "羅刹"],
-  genshin: ["白朮", "八重神子", "宵宮"],
-  zzz: ["シーザー", "リナ", "青衣"],
-};
-
-const BATCH_7_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["アーチャー", "アーラン", "アスター", "アルジェンティ"],
-  genshin: ["アーロイ", "アイノ", "アルベド"],
-  zzz: ["「11号」", "「シード」", "「トリガー」"],
-};
-
-const BATCH_8_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ヴェルト", "ギャラガー", "キュレネ", "ギルガメッシュ"],
-  genshin: ["アンバー", "イアンサ", "イネファ"],
-  zzz: ["0号・アンビー", "アリア", "アリス"],
-};
-
-const BATCH_9_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["クラーラ", "ケリュドラ", "サフェル", "サンポ"],
-  genshin: ["イファ", "ヴァレサ", "ウェンティ"],
-  zzz: ["アンドー", "アンビー", "イヴリン"],
-};
-
-const BATCH_10_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ジェイド", "ジェパード", "セイバー", "セイレンス"],
-  genshin: ["エウルア", "エスコフィエ", "エミリエ"],
-  zzz: ["イドリー", "ヴェリナ", "オルペウス&「鬼火」"],
-};
-
-const BATCH_11_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["セーバル", "ゼーレ", "ダリア", "トリビー", "ナターシャ", "ヒアンシー", "ファイノン", "フォフォ"],
-  genshin: ["オロルン", "カーヴェ", "ガイア", "カチーナ", "キィニチ", "キャンディス"],
-  zzz: ["カリン", "クレタ", "シーシィア", "シグリッド", "スターライト･ビリー", "ダイアリン"],
-};
-
-const BATCH_12_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["フック", "ペラ", "ヘルタ", "マダム・ヘルタ", "ミーシャ", "モーディス", "モゼ", "リンクス"],
-  genshin: ["クレー", "クロリンデ", "コレイ", "ゴロー", "コロンビーナ", "シグウィン"],
-  zzz: ["ニコ", "ノルムー", "ヒューゴ", "ピュロイス", "ビリー", "プルクラ"],
-};
-
-const BATCH_13_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["ルカ", "雲璃", "遠坂凛", "火花", "寒鴉", "帰忘の流離人", "景元", "桂乃芬"],
-  genshin: ["シトラリ", "シャルロット", "シュヴルーズ", "ジン", "スカーク", "スクロース"],
-  zzz: ["プロメイア", "ベン", "ライカン", "リュシア", "儀玄", "橘福福"],
-};
-
-const BATCH_14_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["刃", "青雀", "雪衣", "素裳", "丹恒", "丹恒・騰荒"],
-  genshin: ["セトス", "セノ", "ダリア", "タルタリヤ", "チャスカ", "ディオナ", "ディシア", "ティナリ"],
-  zzz: ["狛野真斗", "朱鳶", "照", "千夏", "浅羽悠真", "南宮羽"],
-};
-
 function batch2UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_2_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 2) return undefined;
   return {
     date: "2026-08-25T12:14:00+09:00",
     scope: "character",
@@ -191,7 +108,7 @@ function batch2UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch1ReviewEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_1_REVIEWED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 1) return undefined;
   return {
     date: "2026-08-25T12:35:00+09:00",
     scope: "character",
@@ -204,7 +121,7 @@ function batch1ReviewEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch3UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_3_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 3) return undefined;
   return {
     date: "2026-08-26T12:00:00+09:00",
     scope: "character",
@@ -217,7 +134,7 @@ function batch3UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch4UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_4_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 4) return undefined;
   return {
     date: "2026-08-26T13:00:00+09:00",
     scope: "character",
@@ -230,7 +147,7 @@ function batch4UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch5UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_5_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 5) return undefined;
   return {
     date: "2026-08-26T14:00:00+09:00",
     scope: "character",
@@ -243,7 +160,7 @@ function batch5UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch6UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_6_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 6) return undefined;
   return {
     date: "2026-08-26T15:00:00+09:00",
     scope: "character",
@@ -256,7 +173,7 @@ function batch6UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch7UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_7_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 7) return undefined;
   return {
     date: "2026-08-26T16:00:00+09:00",
     scope: "character",
@@ -269,7 +186,7 @@ function batch7UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch8UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_8_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 8) return undefined;
   return {
     date: "2026-08-26T17:00:00+09:00",
     scope: "character",
@@ -282,7 +199,7 @@ function batch8UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch9UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_9_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 9) return undefined;
   return {
     date: "2026-08-26T18:00:00+09:00",
     scope: "character",
@@ -295,7 +212,7 @@ function batch9UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent 
 }
 
 function batch10UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_10_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 10) return undefined;
   return {
     date: "2026-08-26T19:00:00+09:00",
     scope: "character",
@@ -308,7 +225,7 @@ function batch10UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
 }
 
 function batch11UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_11_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 11) return undefined;
   return {
     date: "2026-08-27T01:15:00+09:00",
     scope: "character",
@@ -321,7 +238,7 @@ function batch11UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
 }
 
 function batch12UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_12_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 12) return undefined;
   return {
     date: "2026-08-27T01:50:00+09:00",
     scope: "character",
@@ -334,7 +251,7 @@ function batch12UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
 }
 
 function batch13UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_13_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 13) return undefined;
   return {
     date: "2026-08-27T02:30:00+09:00",
     scope: "character",
@@ -347,7 +264,7 @@ function batch13UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
 }
 
 function batch14UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_14_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 14) return undefined;
   return {
     date: "2026-08-27T03:00:00+09:00",
     scope: "character",
@@ -359,14 +276,8 @@ function batch14UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
   };
 }
 
-const BATCH_16_UPDATED_NAMES: Record<CatalogGameId, readonly string[]> = {
-  hsr: ["不死途", "乱破", "椒丘", "爻光"],
-  genshin: ["バーバラ", "ファルザン", "フリンズ", "フレミネ", "マーヴィカ", "ミカ", "ムアラニ", "モナ", "ヤフォダ", "ヨォーヨ", "ラウマ", "リオセスリ", "リサ", "リネ", "リネット", "レイラ"],
-  zzz: [],
-};
-
 function batch16UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (!BATCH_16_UPDATED_NAMES[game].includes(name)) return undefined;
+  if (batchIdFor(game, name) !== 16) return undefined;
   return {
     date: "2026-09-07T12:00:00+09:00",
     scope: "character",
@@ -378,10 +289,8 @@ function batch16UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent
   };
 }
 
-const BATCH_17_UPDATED_NAMES = ["レザー", "ロサリア", "雲菫", "煙緋", "嘉明", "甘雨", "閑雲", "凝光", "九条裟羅", "荒瀧一斗", "刻晴", "珊瑚宮心海", "鹿野院平蔵", "七七", "重雲", "申鶴", "神里綾華", "神里綾人", "辛炎", "千織", "早柚", "放浪者", "北斗", "夢見月瑞希", "藍硯", "旅人", "綺良々", "魈"] as const;
-
 function batch17UpdateEvent(game: CatalogGameId, name: string): GuideUpdateEvent | undefined {
-  if (game !== "genshin" || !BATCH_17_UPDATED_NAMES.includes(name as typeof BATCH_17_UPDATED_NAMES[number])) return undefined;
+  if (batchIdFor(game, name) !== 17) return undefined;
   return {
     date: "2026-09-08T02:00:00+09:00",
     scope: "character",
