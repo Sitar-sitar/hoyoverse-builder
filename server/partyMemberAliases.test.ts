@@ -28,10 +28,12 @@ describe("推奨PTメンバー名の解決", () => {
     expect(resolvePartyMember("genshin", "ナヒーダ")).toEqual({ kind: "catalog", canonical: "ナヒーダ" });
   });
 
-  it("表記ゆれを正規名へ解決する", () => {
-    expect(resolvePartyMember("zzz", "トリガー")).toMatchObject({ kind: "alias", canonical: "「トリガー」" });
-    expect(resolvePartyMember("hsr", "飲月")).toMatchObject({ kind: "alias", canonical: "丹恒・飲月" });
-    expect(resolvePartyMember("zzz", "パン")).toMatchObject({ kind: "alias", canonical: "潘引壺" });
+  it("表記ゆれは 2026-09-10 の統一で解消済み（別名表は空）", () => {
+    expect(PARTY_MEMBER_ALIASES).toEqual({});
+    // 旧表記はデータ側から消えており、正規名がカタログとして解決される。
+    expect(resolvePartyMember("zzz", "「トリガー」")).toEqual({ kind: "catalog", canonical: "「トリガー」" });
+    expect(resolvePartyMember("zzz", "潘引壺")).toEqual({ kind: "catalog", canonical: "潘引壺" });
+    expect(resolvePartyMember("hsr", "丹恒・飲月")).toEqual({ kind: "catalog", canonical: "丹恒・飲月" });
   });
 
   it("中黒の全角・半角差を NFKC 正規化で吸収する", () => {
@@ -60,7 +62,7 @@ describe("推奨PTメンバー名の解決", () => {
     expect(keys.length).toBe(new Set(keys).size);
   });
 
-  it("別名の解決先が実在する（カタログ名または登録済みの派生名）", () => {
+  it("別名を足す場合は解決先が実在すること（表が空でも規約を守る）", () => {
     const missing: string[] = [];
     for (const [key, canonical] of Object.entries(PARTY_MEMBER_ALIASES)) {
       const game = key.slice(0, key.indexOf(":")) as CatalogGameId;
