@@ -649,8 +649,16 @@ export function normalizeMihomoPayload(payload: unknown): Omit<BuildLookupResult
   };
 }
 
+/** set 時にこの件数を超えていたら期限切れエントリを掃除する（常駐プロセスでの無制限増加を防ぐ）。 */
+const CACHE_SWEEP_THRESHOLD = 256;
+
 export class UidResponseCache<T> {
   private cache = new Map<string, { value: T; expiresAt: number }>();
+
+  /** 保持中のエントリ数（期限切れを含む）。掃除が効いていることをテストから観測するために公開する。 */
+  get size(): number {
+    return this.cache.size;
+  }
 
   getEntry(key: string, now = Date.now()): { value: T; expiresAt: number } | null {
     const entry = this.cache.get(key);
@@ -668,6 +676,11 @@ export class UidResponseCache<T> {
   set(key: string, value: T, ttlMs: number, now = Date.now()): number {
     const expiresAt = now + ttlMs;
     this.cache.set(key, { value, expiresAt });
+    if (this.cache.size > CACHE_SWEEP_THRESHOLD) {
+      for (const [entryKey, entry] of this.cache) {
+        if (entry.expiresAt <= now) this.cache.delete(entryKey);
+      }
+    }
     return expiresAt;
   }
 }
