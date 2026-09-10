@@ -21,13 +21,15 @@ function configureCors(app: Express) {
   const allowedOrigins = new Set([...DEFAULT_CORS_ORIGINS, ...configuredOrigins]);
 
   app.use((req, res, next) => {
+    // ACAO の有無が Origin で決まるため、許可済みかどうかに関係なく常に付ける。
+    // tRPC はこの値を setHeader で置き換えるので、tRPC 側は responseMeta で追記する（startServer 参照）。
+    res.vary("Origin");
     const origin = req.headers.origin;
     if (origin && allowedOrigins.has(origin)) {
       res.setHeader("Access-Control-Allow-Origin", origin);
       res.setHeader("Access-Control-Allow-Credentials", "true");
       res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
       res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-      res.setHeader("Vary", "Origin");
     }
 
     if (req.method === "OPTIONS") {
@@ -92,6 +94,10 @@ async function startServer() {
     createExpressMiddleware({
       router: appRouter,
       createContext,
+      // tRPC は `vary: trpc-accept` で CORS の `Vary: Origin` を上書きする。Headers で返すと tRPC が追記し
+      // `trpc-accept, Origin` になる（素のオブジェクトだと trpc-accept が消える）。
+      // 設計: docs/修正設計書_tRPC応答のVary_Origin欠落_2026-09-11.md。回帰テスト: server/_core/corsVary.test.ts。
+      responseMeta: () => ({ headers: new Headers({ vary: "Origin" }) }),
     })
   );
 
