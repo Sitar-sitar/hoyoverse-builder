@@ -29,10 +29,6 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
   "hsr:三月なのか（巡狩）": "三月なのかの巡狩実装（hsr:1224）。存護（hsr:1001）とは別データ",
   "hsr:銀狼Lv.999": "銀狼の別実装（hsr:1506）",
   "genshin:旅人（草）": "旅人の草元素実装。カタログは元素を持たない基礎名（旅人）だけを載せる",
-  // 公開メタデータには存在するがカタログ（2026-08-18 スナップショット）に未登録。カタログ追加候補（監査 P0）。
-  "hsr:姫子・旅立ち": "姫子の別実装（hsr:1510）。カタログ未登録のため追加候補",
-  "hsr:千冶・刃": "刃の別実装（hsr:1507）。カタログ未登録のため追加候補",
-  "hsr:ロビン・夏空の歌": "ロビンの別実装（hsr:1512）。2026-09-10 の公開メタデータ取得で実装済みを確認。カタログ未登録のため追加候補",
 };
 
 /**
@@ -40,8 +36,6 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
  * 新キャラクター追加時の推奨PT影響レビュー（partyImpact）の第一入力になる。
  */
 export const UPCOMING_PARTY_MEMBERS: Record<string, { mentions: number; checkedAt: string; note?: string }> = {
-  "hsr:モルトナックス・ブレード": { mentions: 1, checkedAt: "2026-09-10", note: "Ver4.3 ベータで公開された名前" },
-  "hsr:モーテナックス・ブレード": { mentions: 2, checkedAt: "2026-09-10", note: "モルトナックス・ブレードの表記ゆれの可能性。実装時に同一か確認する" },
   "genshin:茲白": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
   "genshin:イルーガ": { mentions: 3, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
   "genshin:オデット": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },

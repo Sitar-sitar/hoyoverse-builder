@@ -42,8 +42,13 @@ describe("監査の判定ロジック", () => {
 
   it("外部メタデータの未登録名を新規候補と派生に分ける", () => {
     expect(classifyMissingName("hsr", "アシュヴェイル")).toBe("new");
-    expect(classifyMissingName("hsr", "姫子・旅立ち")).toBe("derived"); // 既存カタログ名を含む
+    // 既存カタログ名を含んでも独立キャラクターであり得る（第18バッチで追加した姫子・旅立ちと同じ型）。名前の包含では派生にしない。
+    expect(classifyMissingName("hsr", "アベンチュリン・波と戯れる夏")).toBe("new");
     expect(classifyMissingName("genshin", "旅人（お試し）")).toBe("derived");
+    // 調査で対象外と確定した名前だけを明示的に除外する（NFKC で全角/半角の揺れは吸収する）。
+    expect(classifyMissingName("genshin", "炎神")).toBe("derived");
+    expect(classifyMissingName("hsr", "銀狼LV.999")).toBe("derived");
+    expect(classifyMissingName("hsr", "銀狼ＬＶ．999")).toBe("derived");
   });
 
   it("推奨PTのメンバー名に未解決が無く、実装待ちの言及を件数付きで集計する", () => {
@@ -60,12 +65,11 @@ describe("監査の判定ロジック", () => {
     const buckets = prioritize(records, { staleDays: 180, newCharacters: [{ game: "hsr", name: "アシュヴェイル" }] });
     expect(buckets.map((bucket) => bucket.id)).toEqual(["P0", "P1", "P2", "P3"]);
     expect(buckets[0]!.items).toHaveLength(1);
-    expect(buckets[1]!.items).toEqual([]); // 全248名精査済みのため P1 は空
-    // P2 は既知のデータ欠落7名。凸データ未整備5名（公式未実装）と、
-    // 第10バッチ扱いなのに個別ガイドが無い hsr:ジェイド・ジェパードの2名（既知の課題）。
-    expect(buckets[2]!.items).toHaveLength(7);
+    expect(buckets[1]!.items).toEqual([]); // 全251名精査済みのため P1 は空
+    // P2 は凸データ未整備の5名（公式未実装・未解決ID）だけ。ジェイド・ジェパードは第18バッチで個別ガイドを登録して解消した。
+    expect(buckets[2]!.items).toHaveLength(5);
     expect(buckets[2]!.items.filter((item) => item.reason.includes("凸データ未整備"))).toHaveLength(5);
-    expect(buckets[2]!.items.filter((item) => item.reason.includes("個別ガイド無し")).map((item) => item.name)).toEqual(["ジェイド", "ジェパード"]);
+    expect(buckets[2]!.items.filter((item) => item.reason.includes("個別ガイド無し"))).toEqual([]);
   });
 
   it("P2 と P3 は重複しない（欠落があるキャラクターは経過日数で二重計上しない）", () => {

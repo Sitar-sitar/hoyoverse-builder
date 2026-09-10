@@ -333,6 +333,16 @@ batchNames(17).genshin.forEach((name) => {
   record.sourceLabel = "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合";
 });
 
+// 第18バッチ（2026-09-11）でカタログへ追加した HSR 3名。記事の更新日はいずれも Game8 の 2026-09-11。
+batchNames(18).hsr.forEach((name) => {
+  const record = CHARACTER_GUIDE_METADATA.hsr[name];
+  if (!record) return;
+  record.profileId = `curated:batch18:hsr:${name}`;
+  record.dataAsOf = "2026-09-11";
+  record.updatedAt = "2026-09-11";
+  record.sourceLabel = "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合";
+});
+
 // 第18バッチ（2026-09-11）: 第10バッチの精査対象のうち、個別ガイドが役割共通値のままだった2名へガイドを登録した。
 // 台帳上のバッチ（第10）は変えず、採用プロファイル・日付・出典だけを今回の根拠へ更新する（docs/batch-18-research-notes.md 区分1）。
 const BATCH18_GUIDE_COMPLETIONS: Record<string, { dataAsOf: string }> = {

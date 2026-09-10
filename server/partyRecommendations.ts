@@ -281,7 +281,7 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
   ]),
   "hsr:黄泉": batch3Options("hsr", "黄泉", "https://game8.co/games/Honkai-Star-Rail/archives/436053", mainDps, [
     plan(["黄泉", "椒丘", "ペラ", "フォフォ"], "E0/E1では虚無2名を配置し、デバフ頻度で必殺技の残夢蓄積を支える。", "For E0/E1, two Nihility allies supply frequent debuffs and support Slashed Dream stacks.", "E0/E1使用两名虚无角色，以高频减益辅助残梦积累。"),
-    plan(["黄泉", "モルトナックス・ブレード", "サフェル", "アベンチュリン"], "虚無2名の追加能力条件を満たしつつ、デバフと耐久を両立する代替案。", "An alternative that preserves the two-Nihility passive requirement while balancing debuffs and sustain.", "在满足双虚无额外能力条件的同时兼顾减益与生存的替代方案。"),
+    plan(["黄泉", "千冶・刃", "サフェル", "アベンチュリン"], "虚無2名の追加能力条件を満たしつつ、デバフと耐久を両立する代替案。", "An alternative that preserves the two-Nihility passive requirement while balancing debuffs and sustain.", "在满足双虚无额外能力条件的同时兼顾减益与生存的替代方案。"),
     plan(["黄泉", "椒丘", "花火", "アベンチュリン"], "E2限定で虚無1名と調和1名を採用し、行動加速を必殺技回転へ変換する。", "E2-only: uses one Nihility and one Harmony unit, converting action advance into Ultimate cycling.", "仅限E2：采用一名虚无与一名同谐，将拉条转化为终结技循环。"),
   ]),
   "hsr:霊砂": batch3Options("hsr", "霊砂", "https://game8.co/games/Honkai-Star-Rail/archives/462279", t("耐久", "Sustain", "生存位"), [
@@ -535,9 +535,9 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["キュレネ", "アナイクス", "ケリュドラ", "丹恒・騰荒"], "弱点付与とChrysos支援を組み、風知恵主力の範囲火力を支える。", "Combines weakness application and Chrysos support for an Erudition carry's AoE damage.", "结合弱点附加与Chrysos辅助，支撑智识主C的范围输出。"),
   ]),
   "hsr:ギルガメッシュ": batch8Options("hsr", "ギルガメッシュ", "https://game8.co/games/Honkai-Star-Rail/archives/601941", mainDps, [
-    plan(["ギルガメッシュ", "セイバー", "モーテナックス・ブレード", "フォフォ"], "Fate連携の追撃・EP回復・耐久を重ね、Interestの消費機会を増やす。", "Stacks Fate follow-ups, Energy recovery, and sustain to create more Interest spending windows.", "叠加Fate联动追击、能量回复与生存位，增加消耗Interest的机会。"),
+    plan(["ギルガメッシュ", "セイバー", "千冶・刃", "フォフォ"], "Fate連携の追撃・EP回復・耐久を重ね、Interestの消費機会を増やす。", "Stacks Fate follow-ups, Energy recovery, and sustain to create more Interest spending windows.", "叠加Fate联动追击、能量回复与生存位，增加消耗Interest的机会。"),
     plan(["ギルガメッシュ", "セイバー", "開拓者（記憶）", "フォフォ"], "記憶支援とEP回復を組み、限定補助の所持状況に対応する。", "Pairs Remembrance support and Energy recovery as a roster-flexible alternative.", "结合记忆辅助与能量回复，适配限定辅助持有情况。"),
-    plan(["ギルガメッシュ", "不死途", "モーテナックス・ブレード", "フォフォ"], "追撃の連鎖と耐久を組み、雷主力の必殺技回転を支える。", "Combines follow-up chains and sustain to support the Lightning carry's Ultimate rotation.", "结合追击连锁与生存位，支撑雷系主C的终结技循环。"),
+    plan(["ギルガメッシュ", "不死途", "千冶・刃", "フォフォ"], "追撃の連鎖と耐久を組み、雷主力の必殺技回転を支える。", "Combines follow-up chains and sustain to support the Lightning carry's Ultimate rotation.", "结合追击连锁与生存位，支撑雷系主C的终结技循环。"),
   ]),
   "genshin:アンバー": batch8Options("genshin", "アンバー", "https://game8.co/games/Genshin-Impact/archives/297535", mainDps, [
     plan(["アンバー", "シトラリ", "シロネン", "ベネット"], "氷付着・耐性低下・攻撃支援を重ね、溶解重撃を主軸にする。", "Stacks Cryo application, RES shred, and ATK support for Melt Charged Shots.", "叠加冰附着、减抗与攻击辅助，以融化重击为核心。"),
@@ -629,6 +629,23 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["ジェパード", "彦卿", "停雲", "ペラ"], "氷主力の会心・単体火力をバリア、EP支援、敵防御低下で支える。", "Supports a Cryo carry with shields, Energy support, and DEF shred.", "用护盾、能量辅助和减防支撑冰系主C。"),
     plan(["ジェパード", "黄泉", "椒丘", "ペラ"], "虚無2名のデバフで黄泉の必殺技回転を早め、全体バリアで耐久を確保する。", "Two Nihility debuffers speed up Acheron's Ultimate while team shields provide sustain.", "以两名虚无的减益加快黄泉终结技循环，并以全队护盾保证生存。"),
     plan(["ジェパード", "姫子・旅立ち", "トリビー", "ヴェルト"], "姫子・旅立ちの支援スキル連携をヴェルトとトリビーで回し、全体バリアで耐久を担う（Game8 の編成例）。", "Welt and Tribbie drive Himeko • Departure's assist-skill rotation while Gepard's team shields provide sustain (Game8 example).", "由瓦尔特与缇宝推动姬子·启程的支援技能循环，杰帕德以全队护盾承担生存（Game8 配队示例）。"),
+  ]),
+  // 第18バッチ（2026-09-11）でカタログへ追加した HSR 3名。出典の実名編成だけを登録（docs/batch-18-research-notes.md 区分2）。
+  // 千冶・刃は案1が Game8・案2〜3が GameWith、姫子・旅立ちは案1〜2が Game8（案1は GameWith も同一）・案3が GameWith、ロビン・夏空の歌は案1が Game8・案2〜3が GameWith。
+  "hsr:千冶・刃": batch18Options("hsr", "千冶・刃", "https://gamewith.jp/houkaistarrail/article/show/553897", t("サブアタッカー・デバフ", "Sub DPS & debuff", "副C与减益"), [
+    plan(["千冶・刃", "不死途", "トリビー", "ヒアンシー"], "不死途と防御デバフを相互に活かすWアタッカー編成。トリビーの支援とヒアンシーの回復で2人の火力を支える。", "A dual-DPS team where Mortenax Blade and Ashveil share debuffs, backed by Tribbie's support and Hyacine's healing.", "不死途与千冶·刃互相利用减益的双输出队，由缇宝辅助与风堇治疗支撑两人输出。"),
+    plan(["千冶・刃", "黄泉", "サフェル", "ヒアンシー"], "虚無2名で黄泉の必殺技回転を早め、千冶・刃のデバフと追加攻撃扱いの必殺技を重ねる。", "Two Nihility units speed up Acheron's Ultimate while Mortenax Blade layers debuffs and Ultimate follow-up synergy.", "以两名虚无加快黄泉终结技循环，并叠加千冶·刃的减益与终结技追击联动。"),
+    plan(["千冶・刃", "姫子・旅立ち", "ヴェルト", "フォフォ"], "姫子・旅立ちの殲滅型をヴェルトの支援スキルで回し、千冶・刃の全体デバフで範囲火力を伸ばす。", "Welt drives Himeko • Departure's Annihilation form while Mortenax Blade's team-wide debuffs raise AoE damage.", "以瓦尔特的支援技能推动姬子·启程的歼灭形态，并以千冶·刃的全体减益提升群攻输出。"),
+  ]),
+  "hsr:姫子・旅立ち": batch18Options("hsr", "姫子・旅立ち", "https://game8.jp/houkaistarrail/784730", mainDps, [
+    plan(["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"], "ヴェルトで支援スキルを発動する殲滅編成。防御無視と防御低下を重ねて敵の防御力をほぼ無視する。", "An Annihilation team where Welt triggers assist skills, stacking DEF ignore and DEF reduction to nearly bypass enemy DEF.", "由瓦尔特发动支援技能的歼灭队，叠加无视防御与减防，几乎无视敌人防御力。"),
+    plan(["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"], "手数とEP回復が多い裁決編成。必殺技の回転率を高める。", "A Judgment team with many actions and high Energy gain that raises Ultimate uptime.", "行动次数与能量回复较多的裁决队，提高终结技循环率。"),
+    plan(["姫子・旅立ち", "開拓者（記憶）", "ルアン・メェイ", "フォフォ"], "記憶開拓者の支援スキルとルアン・メェイの支援で組む、微課金向けのハイパーキャリー編成。", "A budget hypercarry team using Remembrance Trailblazer's assist skill and Ruan Mei's support.", "利用记忆开拓者支援技能与阮·梅辅助的低氪超载队。"),
+  ]),
+  "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
+    plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),
+    plan(["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], "単体の不死途と全体の千冶・刃を並べ、単体・複数の両方に対応する。", "Pairs single-target Ashveil with AoE Mortenax Blade to handle both single and multiple enemies.", "并列擅长单体的不死途与擅长群攻的千冶·刃，同时应对单体与多目标。"),
+    plan(["ロビン・夏空の歌", "セイバー", "ギルガメッシュ", "フォフォ"], "ギルガメッシュとセイバーを組み、セイバーの火力と必殺技の回転を大きく上げる。", "Combines Gilgamesh with Saber to greatly raise Saber's damage and Ultimate uptime.", "组合吉尔伽美什与Saber，大幅提升Saber的输出与终结技循环。"),
   ]),
   "hsr:セイバー": batch10Options("hsr", "セイバー", "https://game8.jp/houkaistarrail/686759", mainDps, [
     plan(["セイバー", "サンデー", "トリビー", "丹恒・騰荒"], "行動順・必殺技回転・全体支援を重ね、必殺技主体の火力窓を作る。", "Stacks action advance, Ultimate rotation, and team support for Saber’s damage window.", "叠加拉条、终结技循环与全队辅助，创造以终结技为核心的输出窗口。"),

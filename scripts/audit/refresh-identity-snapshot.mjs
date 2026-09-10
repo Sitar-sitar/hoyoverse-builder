@@ -113,9 +113,13 @@ if (!write) {
 }
 
 const source = readFileSync(fixturePath, "utf8");
-const header = source.slice(0, source.indexOf("export const ACTIVE_CATALOG_IDENTITIES"));
+const start = source.indexOf("export const ACTIVE_CATALOG_IDENTITIES");
+const lineEnd = source.indexOf("\n", start);
+const header = source.slice(0, start);
+// 配列の行より後ろ（EXCLUDED_EMPTY_GENSHIN_CATALOG_IDS など）も残す。2026-09-11 まではここを捨てていた。
+const trailer = lineEnd === -1 ? "" : source.slice(lineEnd + 1);
 const body = `export const ACTIVE_CATALOG_IDENTITIES: CatalogIdentityFixture[] = ${JSON.stringify(remote)};\n`;
-writeFileSync(fixturePath, header + body, "utf8");
+writeFileSync(fixturePath, header + body + trailer, "utf8");
 console.log("");
 console.log(`書き換えた: ${fixturePath}（${remote.length}件）`);
 console.log("次に corepack pnpm test を実行して索引テストが通ることを確認する。");
