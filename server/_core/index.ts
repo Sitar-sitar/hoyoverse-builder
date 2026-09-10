@@ -1,4 +1,5 @@
 import "dotenv/config";
+import compression from "compression";
 import express, { type Express } from "express";
 import { createServer } from "http";
 import net from "net";
@@ -65,6 +66,9 @@ async function startServer() {
   app.disable("x-powered-by");
   configureCors(app);
 
+  // 応答を gzip/deflate/br で圧縮する。更新履歴は無圧縮だと 400KB 超（設計: docs/修正設計書_更新履歴APIの転送量削減_2026-09-10.md）。
+  // 回帰テスト server/_core/compression.test.ts が実サーバーでこの並びを確認する。
+  app.use(compression());
   applyBodyParsers(app);
 
   app.get("/api/health", (_req, res) => {
