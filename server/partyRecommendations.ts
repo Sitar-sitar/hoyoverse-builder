@@ -167,6 +167,7 @@ const batch12Options = datedOptions("2026-08-27", true);
 const batch13Options = datedOptions("2026-08-27", true);
 const batch14Options = datedOptions("2026-08-27", true);
 const batch16Options = datedOptions("2026-09-07", true);
+const batch18Options = datedOptions("2026-09-11", true);
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
@@ -618,15 +619,16 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["イヴリン", "アストラ", "ライト"], "炎・支援・ブレイクで高い連携スキル倍率を活かす。", "Uses Fire support and stun to capitalize on high Chain Attack multipliers.", "以火系辅助与失衡发挥高连携技能倍率。"),
     plan(["イヴリン", "アストラ", "ニコ"], "支援・集敵・防御低下を組む代替の炎直撃案。", "An alternative Fire direct-damage team using support, grouping, and DEF reduction.", "结合辅助、聚怪与减防的炎系直伤替代方案。"),
   ]),
-  "hsr:ジェイド": batch10Options("hsr", "ジェイド", "https://game8.jp/houkaistarrail/605745", t("範囲・追加攻撃", "AoE & follow-up", "群攻与追加攻击"), [
+  // 第18バッチ（2026-09-11）で出典の実名編成へ差し替え（docs/batch-18-research-notes.md 区分1）。ジェイドは案1が Game8・案2〜3が GameWith、ジェパードは案1〜2が GameWith・案3が Game8。
+  "hsr:ジェイド": batch18Options("hsr", "ジェイド", "https://gamewith.jp/houkaistarrail/article/show/447141", t("範囲・追加攻撃", "AoE & follow-up", "群攻与追加攻击"), [
     plan(["ジェイド", "マダム・ヘルタ", "トリビー", "ヒアンシー"], "範囲攻撃と追加攻撃を重ね、ジェイドのチャージと全体火力を確保する。", "Stacks AoE and follow-ups to sustain Jade's charges and team damage.", "叠加范围攻击与追加攻击，维持翡翠充能和全队输出。"),
-    plan(["ジェイド", "姫子", "ロビン", "アベンチュリン"], "追加攻撃の頻度と全体支援を重ね、虚構叙事向けの範囲火力を作る。", "Combines frequent follow-ups and team support for AoE content.", "结合高频追加攻击与全队辅助，应对群怪环境。"),
-    plan(["ジェイド", "刃", "ルアン・メェイ", "フォフォ"], "HP消費を伴う範囲主力と支援・回復を組み、債権回収者の条件を活かす。", "Pairs an HP-consuming AoE carry with support and healing to use Debt Collector conditions.", "搭配消耗生命的范围主C及辅助治疗，利用收债人条件。"),
+    plan(["ジェイド", "ヘルタ", "ロビン", "アベンチュリン"], "ヘルタの範囲追加攻撃でジェイドの追加攻撃機会を増やし、ロビンの全体支援とアベンチュリンのバリアで支える。", "Herta's AoE follow-ups add triggers for Jade, supported by Robin's team buffs and Aventurine's shields.", "以黑塔的群攻追加攻击增加翡翠的追击机会，并由知更鸟全队增益与砂金护盾支撑。"),
+    plan(["ジェイド", "クラーラ", "開拓者（記憶）", "ギャラガー"], "クラーラの反撃とジェイドの追加攻撃を重ね、記憶開拓者の会心率支援を活かす所持対応案。", "A roster option stacking Clara's counters with Jade's follow-ups and Remembrance Trailblazer's CRIT support.", "叠加克拉拉反击与翡翠追加攻击，并利用记忆开拓者暴击率辅助的配队适配方案。"),
   ]),
-  "hsr:ジェパード": batch10Options("hsr", "ジェパード", "https://game8.jp/houkaistarrail/524685", t("耐久・バリア", "Sustain & shields", "生存与护盾"), [
-    plan(["ジェパード", "彦卿", "ペラ", "停雲"], "氷主力の会心・単体火力をバリア、敵防御低下、EP支援で支える。", "Supports a Cryo carry with shields, DEF shred, and Energy support.", "用护盾、减防和能量辅助支撑冰系主C。"),
-    plan(["ジェパード", "黄泉", "椒丘", "銀狼"], "耐久を確保しながら複数デバフで必殺技主体の主力を支える。", "Provides sustain while multiple debuffs support an Ultimate-focused carry.", "在保证生存的同时，以多重减益辅助终结技主C。"),
-    plan(["ジェパード", "ヴェルト", "アスター", "ナターシャ"], "減速・行動順支援・追加回復を組み合わせる所持対応案。", "A roster-friendly team combining Slow, action support, and backup healing.", "结合减速、行动辅助与额外治疗的易获取方案。"),
+  "hsr:ジェパード": batch18Options("hsr", "ジェパード", "https://gamewith.jp/houkaistarrail/article/show/389899", t("耐久・バリア", "Sustain & shields", "生存与护盾"), [
+    plan(["ジェパード", "彦卿", "停雲", "ペラ"], "氷主力の会心・単体火力をバリア、EP支援、敵防御低下で支える。", "Supports a Cryo carry with shields, Energy support, and DEF shred.", "用护盾、能量辅助和减防支撑冰系主C。"),
+    plan(["ジェパード", "黄泉", "椒丘", "ペラ"], "虚無2名のデバフで黄泉の必殺技回転を早め、全体バリアで耐久を確保する。", "Two Nihility debuffers speed up Acheron's Ultimate while team shields provide sustain.", "以两名虚无的减益加快黄泉终结技循环，并以全队护盾保证生存。"),
+    plan(["ジェパード", "姫子・旅立ち", "トリビー", "ヴェルト"], "姫子・旅立ちの支援スキル連携をヴェルトとトリビーで回し、全体バリアで耐久を担う（Game8 の編成例）。", "Welt and Tribbie drive Himeko • Departure's assist-skill rotation while Gepard's team shields provide sustain (Game8 example).", "由瓦尔特与缇宝推动姬子·启程的支援技能循环，杰帕德以全队护盾承担生存（Game8 配队示例）。"),
   ]),
   "hsr:セイバー": batch10Options("hsr", "セイバー", "https://game8.jp/houkaistarrail/686759", mainDps, [
     plan(["セイバー", "サンデー", "トリビー", "丹恒・騰荒"], "行動順・必殺技回転・全体支援を重ね、必殺技主体の火力窓を作る。", "Stacks action advance, Ultimate rotation, and team support for Saber’s damage window.", "叠加拉条、终结技循环与全队辅助，创造以终结技为核心的输出窗口。"),
