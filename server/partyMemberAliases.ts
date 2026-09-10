@@ -40,17 +40,13 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
  * 新キャラクター追加時の推奨PT影響レビュー（partyImpact）の第一入力になる。
  */
 export const UPCOMING_PARTY_MEMBERS: Record<string, { mentions: number; checkedAt: string; note?: string }> = {
-  "hsr:アシュヴェイル": { mentions: 1, checkedAt: "2026-09-10" },
-  "hsr:パーマンソー・テラエ": { mentions: 2, checkedAt: "2026-09-10" },
   "hsr:モルトナックス・ブレード": { mentions: 1, checkedAt: "2026-09-10", note: "Ver4.3 ベータで公開された名前" },
   "hsr:モーテナックス・ブレード": { mentions: 2, checkedAt: "2026-09-10", note: "モルトナックス・ブレードの表記ゆれの可能性。実装時に同一か確認する" },
-  "genshin:茲白": { mentions: 2, checkedAt: "2026-09-10" },
-  "genshin:イルーガ": { mentions: 3, checkedAt: "2026-09-10" },
-  "genshin:オデット": { mentions: 2, checkedAt: "2026-09-10" },
-  "genshin:リンネア": { mentions: 1, checkedAt: "2026-09-10" },
-  "zzz:スンナ": { mentions: 1, checkedAt: "2026-09-10" },
-  "zzz:イーシェン": { mentions: 1, checkedAt: "2026-09-10" },
-  "zzz:ザオ": { mentions: 1, checkedAt: "2026-09-10" },
+  "genshin:茲白": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
+  "genshin:イルーガ": { mentions: 3, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
+  "genshin:オデット": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
+  "genshin:リンネア": { mentions: 1, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
+  "zzz:スンナ": { mentions: 1, checkedAt: "2026-09-11", note: "未実装（GameWith キャラ一覧 2026-09-10 の59名に無い）" },
 };
 
 /** 監査用の名前正規化。NFKC で全角/半角差を吸収し、空白を除く。 */
