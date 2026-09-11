@@ -44,7 +44,7 @@ const uiText = {
     progression: "凸・星魂・心象映画",
     preparing: "このキャラクターの6段階効果データは準備中です。推奨ビルドとPTは確認できます。",
     uidFree: "UID不要",
-    catalogStatus: "248キャラ収録",
+    catalogStatus: "{count}キャラ収録",
   },
   en: {
     eyebrow: "CHARACTER BUILD CATALOG",
@@ -73,7 +73,7 @@ const uiText = {
     progression: "Eidolons / Constellations / Mindscapes",
     preparing: "Six-stage progression data is still being prepared for this character. Build and team guidance is available.",
     uidFree: "No UID required",
-    catalogStatus: "248 characters",
+    catalogStatus: "{count} characters",
   },
   "zh-CN": {
     eyebrow: "CHARACTER BUILD CATALOG",
@@ -102,7 +102,7 @@ const uiText = {
     progression: "星魂 / 命座 / 心象电影",
     preparing: "该角色的六阶段效果数据仍在整理中，推荐配装与队伍可以正常查看。",
     uidFree: "无需UID",
-    catalogStatus: "收录248名角色",
+    catalogStatus: "收录{count}名角色",
   },
 } as const;
 
@@ -163,7 +163,7 @@ export default function CharacterCatalog() {
             <ArrowLeft className="h-3.5 w-3.5" />{copy.back}
           </Link>
           <div className="flex items-center gap-3">
-            <span className="detail-mono text-[9px] text-stone-500">{copy.uidFree} / {copy.catalogStatus}</span>
+            <span className="detail-mono text-[9px] text-stone-500">{copy.uidFree} / {copy.catalogStatus.replace("{count}", catalogQuery.data ? String(catalogQuery.data.total) : "…")}</span>
             <LanguageSwitcher />
           </div>
         </div>
