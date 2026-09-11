@@ -781,9 +781,19 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
     if (!normalized.characters.length) {
       throw new TRPCError({ code: "NOT_FOUND", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
     }
+    // 最終ステータスを1名も作れない応答は「不完全な主取得元」として扱い、Enka フォールバックへ回す。
+    // これを成功として返すと、静的データから最終値を算出できる Enka が一度も試されないまま
+    // 全員「未取得」の結果が TTL 中キャッシュされてしまう（Enka 側の isEnkaResultComplete と同じ考え方）。
+    if (normalized.characters.every((character) => character.statsStatus === "unavailable")) {
+      throw new TRPCError({ code: "BAD_GATEWAY", message: "最終ステータスを取得できませんでした。少し時間を置いて再試行してください。" });
+    }
     const withSource = { ...normalized, dataSource: "MiHoMo" as const };
-    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
     const fetchedAt = new Date().toISOString();
+    // 一部のキャラクターだけ最終値が欠けている結果は、再取得で回復し得るためキャッシュへ入れない。
+    if (normalized.characters.some((character) => character.statsStatus === "unavailable")) {
+      return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: fetchedAt };
+    }
+    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
     return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
   } catch (error) {
     if (error instanceof TRPCError) throw error;

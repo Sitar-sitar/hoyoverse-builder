@@ -329,6 +329,46 @@ describe("MiHoMoからEnkaへのフォールバック", () => {
       vi.unstubAllGlobals();
     }
   });
+
+  // DR-05（自動レビュー 2026-09-12）: MiHoMo が 200 を返しても最終ステータスを作れない場合、
+  // それを成功として返すと Enka が一度も試されず、全員「未取得」の結果が TTL 中キャッシュされる。
+  it("MiHoMoが最終ステータスを持たない応答を返した場合、Enkaフォールバックを試しキャッシュしない", async () => {
+    const mihomoPayloadWithoutFinals = {
+      player: { uid: "999000002", nickname: "テスト開拓者" },
+      characters: [{
+        id: "1310", name: "ホタル", level: 80, rank: 1, path: { name: "壊滅" }, element: { name: "炎" },
+        // statistics / attributes / additions のいずれも無い（加算分だけ）。
+        properties: [{ field: "spd", name: "速度", value: 34, display: "34", percent: false }],
+        relics: [],
+      }],
+    };
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL) => {
+      const url = String(input);
+      if (url.includes("api.mihomo.me")) return new Response(JSON.stringify(mihomoPayloadWithoutFinals), { headers: { "content-type": "application/json" } });
+      if (url.includes("enka.network/api/hsr/uid")) return new Response(JSON.stringify({ uid: "999000002", detailInfo: { nickname: "Fallback", avatarDetailList: [{ avatarId: 1310, level: 80, promotion: 0, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 1, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "SpeedDelta", value: 8.9 }] } }] }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("characters.json")) return new Response(JSON.stringify({ "1310": { name: "ホタル", element: "Fire", path: "Warrior" } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("light_cones.json")) return new Response(JSON.stringify({ "23061": { name: "テスト光円錐" } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("relic_sets.json")) return new Response(JSON.stringify({ "108": { name: "テスト遺物セット" } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("character_promotions.json")) return new Response(JSON.stringify({ "1310": { values: [{ hp: { base: 900, step: 56 }, atk: { base: 55, step: 3 }, def: { base: 50, step: 3 }, spd: { base: 104, step: 0 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("character_skill_trees.json")) return new Response(JSON.stringify({ "0": {} }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("light_cone_promotions.json")) return new Response(JSON.stringify({ "23061": { values: [{ hp: { base: 40, step: 6 }, atk: { base: 15, step: 2 }, def: { base: 12, step: 2 } }] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("light_cone_ranks.json")) return new Response(JSON.stringify({ "23061": { properties: [[], [], [], [], []] } }), { headers: { "content-type": "application/json" } });
+      if (url.endsWith("properties.json")) return new Response(JSON.stringify(HSR_TEST_PROPERTIES), { headers: { "content-type": "application/json" } });
+      return new Response(JSON.stringify({}), { headers: { "content-type": "application/json" } });
+    }));
+
+    try {
+      const result = await lookupUidBuild("999000002");
+      // 修正前は dataSource: "MiHoMo" のまま全員「未取得」でキャッシュされていた。
+      expect(result.dataSource).toBe("Enka");
+      expect(result.characters[0]?.statsStatus).toBe("final");
+      // 2回目の照会でも MiHoMo の不完全な結果がキャッシュから返らない。
+      const again = await lookupUidBuild("999000002");
+      expect(again.dataSource).toBe("Enka");
+    } finally {
+      vi.unstubAllGlobals();
+    }
+  });
 });
 
 describe("Enkaフォールバック正規化", () => {
