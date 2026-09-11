@@ -21,8 +21,9 @@ describe("ゲーム横断キャラクター識別", () => {
     });
   });
 
-  it("公開静的カタログの全281有効実装をID・非数値名称・画像参照として検証する", () => {
-    expect(ACTIVE_CATALOG_IDENTITIES).toHaveLength(281);
+  it("公開静的カタログの全285件（取得元に載った実装前のIDを含む）をID・非数値名称・画像参照として検証する", () => {
+    // 2026-09-11 に281→285件。hsr:1512 / hsr:1513 / zzz:1611 / zzz:1621 を追加（1513・1621 は実装前だが取得元に掲載済み）。
+    expect(ACTIVE_CATALOG_IDENTITIES).toHaveLength(285);
     for (const entry of ACTIVE_CATALOG_IDENTITIES) {
       const identity = resolveCharacterIdentity(entry.game, entry.sourceId, entry.providerName);
       expect(identity.key, `${entry.game}:${entry.sourceId}`).toBe(`${entry.game}:${entry.sourceId}`);

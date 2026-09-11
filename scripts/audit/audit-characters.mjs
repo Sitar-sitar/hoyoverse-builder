@@ -199,7 +199,7 @@ function markdown() {
 
   lines.push("## 経路一致（図鑑 と UID 照会）", "");
   lines.push(routeMismatches.length === 0
-    ? "全248名で図鑑と UID 照会が同じガイド・推奨PT・凸を返している（不一致 0 件）"
+    ? `全${records.length}名で図鑑と UID 照会が同じガイド・推奨PT・凸を返している（不一致 0 件）`
     : routeMismatches.map((entry) => `- ${GAME_LABEL[entry.game]} ${entry.name}: ${entry.field} が経路で異なる`).join("\n"));
 
   lines.push("", "## 推奨PTのメンバー名", "");

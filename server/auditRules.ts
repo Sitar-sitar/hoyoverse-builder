@@ -113,13 +113,26 @@ export function routeMismatches(): RouteMismatch[] {
 }
 
 /**
- * 外部メタデータの未登録名を「新規候補」と「派生（衣装・お試し・別実装）」へ分ける。
- * 既存カタログ名を含む名称は派生扱いとし、新規追加の判断はユーザー確認へ回す。
+ * 外部メタデータにあるが、調査のうえカタログ対象外と判断した名前。キーは `game:表記`、値は理由。
+ * ここに無い未登録名はすべて「新規候補」として P0 に出し、公開ガイドで実装・独立性を確認してから追加する。
+ */
+export const EXCLUDED_METADATA_NAMES: Record<string, string> = {
+  "hsr:銀狼LV.999": "銀狼の別実装（hsr:1506）。characterIdentity.ts の CURATED_IDENTITIES で variantOf: 銀狼 として扱う既存判断を維持",
+  "genshin:炎神": "genshin:11000046。ジンのアイコンを流用した物語・イベント用の特殊IDで、プレイアブルの公開ガイドが無い（docs/batch-18-research-notes.md 区分2）",
+};
+const excludedIndex = new Set(Object.keys(EXCLUDED_METADATA_NAMES).map((key) => {
+  const at = key.indexOf(":");
+  return `${key.slice(0, at)}:${normalizeMemberName(key.slice(at + 1))}`;
+}));
+
+/**
+ * 外部メタデータの未登録名を「新規候補」と「対象外（お試し・調査済みの除外）」へ分ける。
+ * 2026-09-11 まで「既存カタログ名を含む名称は派生」としていたが、千冶・刃・姫子・旅立ち・ロビン・夏空の歌のような
+ * 独立した★5（丹恒・飲月と同じ型）を取りこぼしたため、名前の包含では判定しない（docs/batch-18-research-notes.md 区分2）。
  */
 export function classifyMissingName(game: CatalogGameId, name: string): "new" | "derived" {
   if (/[（(]お試し[）)]/.test(name)) return "derived";
-  const key = normalizeMemberName(name);
-  return CHARACTER_GUIDE_CATALOG[game].some((known) => key.includes(normalizeMemberName(known))) ? "derived" : "new";
+  return excludedIndex.has(`${game}:${normalizeMemberName(name)}`) ? "derived" : "new";
 }
 
 /** 推奨PTのメンバー名解決の集計（未解決と実装待ちの言及）。 */
