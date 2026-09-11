@@ -35,10 +35,15 @@ describe("MiHoMoデータ正規化", () => {
         id: "1310", name: "ホタル", level: 80, rank: 1,
         portrait: "https://example.com/firefly.png", path: { name: "壊滅" }, element: { name: "炎", color: "#dc553a" },
         light_cone: { name: "夢が帰り着く場所", level: 80, rank: 1, icon: "https://example.com/cone.png" },
-        properties: [
-          { field: "speed", name: "速度", value: 154, display: "154", percent: false },
+        // MiHoMo は戦闘外の最終値を statistics で返す（properties は加算分のみ）。
+        statistics: [
+          { field: "spd", name: "速度", value: 154, display: "154", percent: false },
           { field: "break_dmg", name: "撃破特効", value: 2.4, display: "240.0%", percent: true },
-          { field: "attack_added_ratio", name: "攻撃力%", value: 0.5, display: "50.0%", percent: true },
+        ],
+        properties: [
+          { field: "spd", name: "速度", value: 24, display: "24", percent: false },
+          { field: "break_dmg", name: "撃破特効", value: 2.4, display: "240.0%", percent: true },
+          { field: "atk", name: "攻撃力", value: 0.5, display: "50.0%", percent: true },
         ],
         relics: [{ id: "1", name: "鉄騎", set_name: "鉄騎の執行者", level: 15, icon: "https://example.com/relic.png", main_affix: { name: "攻撃力%", value: 0.4, display: "43.2%", percent: true }, sub_affix: [] }],
       }],
@@ -47,36 +52,143 @@ describe("MiHoMoデータ正規化", () => {
     expect(data.player.name).toBe("テスト開拓者");
     expect(data.characters[0]?.relics).toHaveLength(1);
     expect(data.characters[0]?.guide.relicSet).toContain("鉄騎");
+    expect(data.characters[0]?.statsStatus).toBe("final");
     expect(data.characters[0]?.comparisons.find((item) => item.key === "speed")?.achieved["目標"]).toBe(true);
     expect(data.characters[0]?.comparisons.find((item) => item.key === "breakEffect")?.current).toBe(240);
     expect(data.characters[0]?.equipmentActions.find((action) => action.recommendationKey === "breakEffect")).toMatchObject({ slot: "連結縄", action: "主ステータスを変更" });
   });
 
-  it("MiHoMoが絶対値・割合ステータスへ同一nameを返す場合（StarRailRes properties.json実データ相当）、現在のステータス欄でラベルが重複しない", () => {
-    // 実データ: AttackAddedRatio/AttackDelta、HPAddedRatio/HPDeltaはいずれもMiHoMoの`name`が
-    // 絶対値・割合で同一（例:「攻撃力」「HP」）であり、`percent`フラグのみが両者を区別する。
-    const data = normalizeMihomoPayload({
-      player: { uid: "800000009", nickname: "テスト開拓者" },
-      characters: [{
-        id: "1310", name: "ホタル", level: 80, rank: 1, path: { name: "壊滅" }, element: { name: "炎" },
-        properties: [
-          { field: "hp", name: "HP", value: 1800, display: "1800", percent: false },
-          { field: "hp", name: "HP", value: 0.082, display: "8.2%", percent: true },
-          { field: "atk", name: "攻撃力", value: 390, display: "390", percent: false },
-          { field: "atk", name: "攻撃力", value: 0.233, display: "23.3%", percent: true },
-          { field: "crit_rate", name: "会心率", value: 0.65, display: "65.0%", percent: true },
-        ],
-        relics: [],
-      }],
-    });
+  // 再現テスト（2026-09-12）: 初期実装は加算分だけの properties を表示・比較に使っており、
+  // 速度・会心・攻撃力が実際の最終値より低く出ていた（本番の緋英で速度34、最終値は138）。
+  const hiei = (overrides: Record<string, unknown> = {}) => ({
+    id: "1415", name: "緋英", level: 80, rank: 0, path: { name: "愉悦" }, element: { name: "炎" },
+    attributes: [
+      { field: "hp", name: "基礎HP", value: 2000, percent: false },
+      { field: "atk", name: "基礎攻撃力", value: 1372, percent: false },
+      { field: "def", name: "基礎防御力", value: 800, percent: false },
+      { field: "spd", name: "速度", value: 104, percent: false },
+      { field: "crit_rate", name: "会心率", value: 0.05, percent: true },
+      { field: "crit_dmg", name: "会心ダメージ", value: 0.5, percent: true },
+    ],
+    additions: [
+      { field: "hp", name: "HP", value: 950, percent: false },
+      { field: "atk", name: "攻撃力", value: 711, percent: false },
+      { field: "def", name: "防御力", value: 160, percent: false },
+      { field: "spd", name: "速度", value: 34, percent: false },
+      { field: "crit_rate", name: "会心率", value: 0.562, percent: true },
+      { field: "crit_dmg", name: "会心ダメージ", value: 1.53, percent: true },
+    ],
+    statistics: [
+      { field: "hp", name: "基礎HP", value: 2950, display: "2950", percent: false },
+      { field: "atk", name: "基礎攻撃力", value: 2083, display: "2083", percent: false },
+      { field: "def", name: "基礎防御力", value: 960, display: "960", percent: false },
+      { field: "spd", name: "速度", value: 138, display: "138", percent: false },
+      { field: "crit_rate", name: "会心率", value: 0.612, display: "61.2%", percent: true },
+      { field: "crit_dmg", name: "会心ダメージ", value: 2.03, display: "203.0%", percent: true },
+    ],
+    properties: [
+      { field: "spd", name: "速度", value: 34, display: "34", percent: false },
+      { field: "atk", name: "攻撃力", value: 0.63, display: "63.0%", percent: true },
+      { field: "hp", name: "HP", value: 0.12, display: "12.0%", percent: true },
+      { field: "def", name: "防御力", value: 0.2, display: "20.0%", percent: true },
+    ],
+    relics: [],
+    ...overrides,
+  });
 
-    const allStats = data.characters[0]?.allStats ?? [];
-    expect(allStats.filter((stat) => stat.name === "HP")).toEqual([{ name: "HP", display: "1800", icon: null }]);
-    expect(allStats.filter((stat) => stat.name === "HP%")).toEqual([{ name: "HP%", display: "8.2%", icon: null }]);
-    expect(allStats.filter((stat) => stat.name === "攻撃力")).toEqual([{ name: "攻撃力", display: "390", icon: null }]);
-    expect(allStats.filter((stat) => stat.name === "攻撃力%")).toEqual([{ name: "攻撃力%", display: "23.3%", icon: null }]);
-    // 重複のない単独ステータス（会心率）は不要な%付与をしない。
-    expect(allStats.filter((stat) => stat.name === "会心率")).toEqual([{ name: "会心率", display: "65.0%", icon: null }]);
+  const profileOf = (character: Record<string, unknown>) => normalizeMihomoPayload({ player: { uid: "800000010" }, characters: [character] }).characters[0];
+  const currentOf = (character: Record<string, unknown>, key: string) => profileOf(character)?.comparisons.find((item) => item.key === key)?.current ?? null;
+
+  it("表示と比較に、加算分ではなく戦闘外の最終値（statistics）を使う", () => {
+    const profile = profileOf(hiei());
+    expect(profile?.statsStatus).toBe("final");
+    // 修正前は properties の 34（遺物ぶん）で比較していた。
+    expect(currentOf(hiei(), "speed")).toBe(138);
+    expect(profile?.allStats.find((stat) => stat.name === "速度")?.display).toBe("138");
+    // 基礎5%・50%を含む最終値になる（修正前は 56.2% / 153.0%）。
+    expect(currentOf(hiei(), "critRate")).toBeCloseTo(61.2, 5);
+    expect(currentOf(hiei(), "critDmg")).toBeCloseTo(203, 5);
+  });
+
+  it("割合キーと最終の実数を取り違えず、未取得だったキーにも値が入る", () => {
+    const profile = profileOf(hiei());
+    // 割合キーは properties の割合項目の合計と一致する。
+    expect(currentOf(hiei(), "attackPercent")).toBeCloseTo(63, 5);
+    // attack は割合ではなく最終の実数で表示・比較する（修正前は「63.0%」に当たっていた）。
+    expect(profile?.allStats.find((stat) => stat.name === "攻撃力")?.display).toBe("2083");
+    // アスターは速度・HP・防御力を目標に持つ。hp / defense は修正前、正規表現が当たらず常に「未取得」だった。
+    const aster = profileOf(hiei({ id: "1009", name: "アスター" }));
+    expect(aster?.comparisons.find((item) => item.key === "hp")?.current).toBe(2950);
+    expect(aster?.comparisons.find((item) => item.key === "defense")?.current).toBe(960);
+    expect(aster?.comparisons.every((item) => item.current !== null)).toBe(true);
+  });
+
+  it("statistics が無くても attributes と additions の合算で同じ最終値になる", () => {
+    const { statistics: _statistics, ...withoutStatistics } = hiei() as Record<string, unknown>;
+    expect(currentOf(withoutStatistics, "speed")).toBe(138);
+    expect(currentOf(withoutStatistics, "critRate")).toBeCloseTo(61.2, 5);
+  });
+
+  it("最終値を作れないときは properties へ戻らず比較を保留する", () => {
+    const { statistics: _s, attributes: _a, additions: _d, ...onlyProperties } = hiei() as Record<string, unknown>;
+    const profile = profileOf(onlyProperties);
+    expect(profile?.statsStatus).toBe("unavailable");
+    expect(profile?.allStats).toEqual([]);
+    expect(profile?.comparisons.every((item) => item.current === null && item.currentDisplay === "未取得")).toBe(true);
+    expect(profile?.recommendations).toEqual([]);
+  });
+
+  it("最終値の表示ラベルは「基礎HP」ではなく「HP」にする", () => {
+    const names = profileOf(hiei())?.allStats.map((stat) => stat.name) ?? [];
+    expect(names).toContain("HP");
+    expect(names).toContain("攻撃力");
+    expect(names).toContain("防御力");
+    expect(names.some((name) => name.startsWith("基礎"))).toBe(false);
+  });
+
+  // DR-01: 基礎100%込みの換算 (1 + 0.194) * 100 は 119.39999999999999 になる。
+  // 表示は119.4%なので、素の >= で未達にしてはならない。一方 0.1939（119.39）は未達のままにする。
+  const kafkaWithSpRate = (spRate: number | null) => hiei({
+    id: "1005", name: "カフカ",
+    statistics: [
+      { field: "spd", name: "速度", value: 160, percent: false },
+      { field: "atk", name: "基礎攻撃力", value: 2600, percent: false },
+      { field: "effect_hit", name: "効果命中", value: 0.8, percent: true },
+      ...(spRate === null ? [] : [{ field: "sp_rate", name: "EP回復効率", value: spRate, percent: true }]),
+    ],
+  });
+  const energyOf = (spRate: number | null) => profileOf(kafkaWithSpRate(spRate))?.comparisons.find((item) => item.key === "energyRecharge");
+
+  it("EP回復効率を基礎100%込みで表示・比較し、境界の丸め誤差で未達にしない", () => {
+    expect(energyOf(0.194)?.current).toBeCloseTo(119.4, 5);
+    expect(energyOf(0.194)?.currentDisplay).toBe("119.4%");
+    expect(energyOf(0.194)?.achieved["目標"]).toBe(true);
+    expect(profileOf(kafkaWithSpRate(0.194))?.recommendations.some((item) => item.key === "energyRecharge")).toBe(false);
+    expect(profileOf(kafkaWithSpRate(0.194))?.allStats.find((stat) => stat.name === "EP回復効率")?.display).toBe("119.4%");
+  });
+
+  it("わずかに低い 0.1939 は未達のままで、不足を「あと 0.0%」と表示しない", () => {
+    expect(energyOf(0.1939)?.current).toBeCloseTo(119.39, 5);
+    expect(energyOf(0.1939)?.achieved["目標"]).toBe(false);
+    const deficit = profileOf(kafkaWithSpRate(0.1939))?.recommendations.find((item) => item.key === "energyRecharge");
+    expect(deficit?.rationale).toContain("あと 0.1%未満");
+    expect(deficit?.rationale).not.toContain("あと 0.0%");
+  });
+
+  it("sp_rate が無ければ EP回復効率は基礎の100%になり、目標に未達となる", () => {
+    expect(energyOf(null)?.current).toBe(100);
+    expect(energyOf(null)?.achieved["目標"]).toBe(false);
+    // 妥協水準（100）はちょうど達成になる。
+    expect(energyOf(null)?.achieved["妥協"]).toBe(true);
+  });
+
+  it("カフカのEP回復効率の目標は基礎込みの119.4 / 119.4 / 100で、他の目標は変えない", () => {
+    const guide = guideFor("カフカ", "虚無");
+    const energy = guide.targets.find((target) => target.key === "energyRecharge");
+    expect(energy?.targets).toEqual({ "厳選": 119.4, "目標": 119.4, "妥協": 100 });
+    expect(guide.targets.find((target) => target.key === "speed")?.targets).toEqual({ "厳選": 170, "目標": 160, "妥協": 156 });
+    expect(guide.targets.find((target) => target.key === "effectHitRate")?.targets).toEqual({ "厳選": 90, "目標": 75, "妥協": 67 });
+    expect(guide.targets.find((target) => target.key === "attack")?.targets).toEqual({ "厳選": 3000, "目標": 2500, "妥協": 2300 });
   });
 
   it("主要キャラクターには個別の遺物推奨定義を適用する", () => {

@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { equipmentActionsFor, guideFor, priorityRecommendations, type BuildLookupResult, type CharacterProfile, type StatComparison, type StatKey, type TargetStatDefinition } from "./buildAdvisor";
+import { equipmentActionsFor, guideFor, meetsTarget, priorityRecommendations, type BuildLookupResult, type CharacterProfile, type StatComparison, type StatKey, type TargetStatDefinition } from "./buildAdvisor";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 import { constellationProfileFor } from "./characterConstellations";
@@ -109,8 +109,9 @@ async function getStaticIndex(): Promise<StaticIndex> {
 type Component = "hp" | "attack" | "defense" | "speed";
 type Contribution = { type: string; value: number };
 
-const FIELD_TO_COMPONENT: Record<string, Component> = { hp: "hp", atk: "attack", def: "defense", spd: "speed" };
-const FIELD_TO_STAT_KEY: Record<string, StatKey> = { crit_rate: "critRate", crit_dmg: "critDmg", break_dmg: "breakEffect", effect_hit: "effectHitRate", effect_res: "effectRes", sp_rate: "energyRecharge" };
+/** MiHoMo/StarRailRes の `field` と比較キーの対応。MiHoMo 経路（buildAdvisor）と共有し、表を二重に持たない。 */
+export const FIELD_TO_COMPONENT: Record<string, Component> = { hp: "hp", atk: "attack", def: "defense", spd: "speed" };
+export const FIELD_TO_STAT_KEY: Record<string, StatKey> = { crit_rate: "critRate", crit_dmg: "critDmg", break_dmg: "breakEffect", effect_hit: "effectHitRate", effect_res: "effectRes", sp_rate: "energyRecharge" };
 
 function propertyMeta(properties: Record<string, RawRecord>, type: string) {
   const raw = properties[type];
@@ -379,9 +380,9 @@ function comparisonForKey(target: TargetStatDefinition, finalMap: Partial<Record
     current,
     currentDisplay: current === null ? "未取得" : `算出 ${current.toFixed(target.unit === "%" ? 1 : 0)}${target.unit}`,
     achieved: {
-      "厳選": current === null ? null : current >= target.targets["厳選"],
-      "目標": current === null ? null : current >= target.targets["目標"],
-      "妥協": current === null ? null : current >= target.targets["妥協"],
+      "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
+      "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),
+      "妥協": current === null ? null : meetsTarget(current, target.targets["妥協"]),
     },
   };
 }
