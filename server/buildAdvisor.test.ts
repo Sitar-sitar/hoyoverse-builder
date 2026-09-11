@@ -222,7 +222,7 @@ describe("MiHoMoからEnkaへのフォールバック", () => {
 describe("Enkaフォールバック正規化", () => {
   it("生データの公開キャラクターと遺物を表示モデルへ変換する", () => {
     const data = normalizeEnkaPayload({
-      uid: "806071233",
+      uid: "800000001",
       detailInfo: {
         nickname: "したーる", level: 70,
         avatarDetailList: [{ avatarId: 1310, level: 80, rank: 1, equipment: { tid: 23061, level: 80, rank: 1 }, relicList: [{ tid: 61081, type: 1, level: 15, _flat: { setID: 108, props: [{ type: "HPDelta", value: 705.6 }, { type: "SpeedDelta", value: 8.9 }, { type: "CriticalChanceBase", value: 0.02916 }, { type: "CriticalChance", value: 0 }] } }] }, { avatarId: 1506, level: 80, rank: 0, relicList: [] }],

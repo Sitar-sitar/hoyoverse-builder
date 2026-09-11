@@ -6,7 +6,7 @@ import Home from "./Home";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const lookupResult = {
-  player: { uid: "1300622089", name: "検証用プロキシ", level: 60 },
+  player: { uid: "1300000001", name: "検証用プロキシ", level: 60 },
   cached: false,
   fetchedAt: "2026-08-18T10:00:00.000Z",
   characters: [{
@@ -82,7 +82,7 @@ describe("優先強化項目の画面統合", () => {
 
   beforeEach(() => {
     window.localStorage.setItem("starrail-build-advisor.language", "ja");
-    window.history.replaceState({}, "", "/?game=zzz&uid=1300622089&character=eren");
+    window.history.replaceState({}, "", "/?game=zzz&uid=1300000001&character=eren");
     mocks.queryEnabled.length = 0;
     activeLookupResult = lookupResult;
   });
@@ -117,7 +117,7 @@ describe("優先強化項目の画面統合", () => {
 
   it("星見雅M2では解放済み効果を既定表示し、未解放効果を折り畳み、会心率目標を再計算する", () => {
     activeLookupResult = lookupWithMiyabiMindscape();
-    window.history.replaceState({}, "", "/?game=zzz&uid=1300622089&character=miyabi");
+    window.history.replaceState({}, "", "/?game=zzz&uid=1300000001&character=miyabi");
     render(createElement(LanguageProvider, null, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
 

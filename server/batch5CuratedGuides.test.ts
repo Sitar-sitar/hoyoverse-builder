@@ -26,7 +26,7 @@ describe("第5バッチの個別ビルド", () => {
 
   it("原神3名を個別の公開プロフィール比較で正規化する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.6, "23": 1.3, "28": 150, "2000": 30000, "2001": 2000, "2002": 800 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000025), avatar(10000023), avatar(10000031)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000025), avatar(10000023), avatar(10000031)] }, {
       characters: {
         "10000025": { NameTextMapHash: 1, Element: "Water", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Xingqiu" },
         "10000023": { NameTextMapHash: 2, Element: "Fire", WeaponType: "WEAPON_POLE", SideIconName: "UI_Xiangling" },
@@ -43,7 +43,7 @@ describe("第5バッチの個別ビルド", () => {
 
   it("ZZZ3名の異常・支援目標を個別比較し、戦闘中の補正を現在値へ足さない", () => {
     const base = { Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000, "31201": 160, "31401": 400 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1181, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1171, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1151, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },

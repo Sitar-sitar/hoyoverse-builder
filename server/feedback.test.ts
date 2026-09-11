@@ -90,11 +90,11 @@ describe("translation feedback submission", () => {
   });
 
   it("records successful lookups anonymously with the game and cache result", async () => {
-    mocks.lookupGameBuild.mockResolvedValue({ cached: true, player: { uid: "802643469" }, characters: [] });
+    mocks.lookupGameBuild.mockResolvedValue({ cached: true, player: { uid: "800000002" }, characters: [] });
     mocks.recordLookupAnalyticsEvent.mockResolvedValue(undefined);
     const caller = appRouter.createCaller(context);
 
-    await expect(caller.build.lookup({ game: "hsr", uid: "802643469" })).resolves.toMatchObject({ cached: true });
+    await expect(caller.build.lookup({ game: "hsr", uid: "800000002" })).resolves.toMatchObject({ cached: true });
     await new Promise((resolve) => setTimeout(resolve, 0));
     expect(mocks.recordLookupAnalyticsEvent).toHaveBeenCalledWith("hsr", true);
   });

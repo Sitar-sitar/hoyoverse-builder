@@ -31,7 +31,7 @@ describe("第3バッチのHSR個別ビルド", () => {
 describe("第3バッチの原神・ZZZ個別ビルド", () => {
   it("原神3名の個別ステータスを公開プロフィール経路で選択する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.8, "22": 2, "23": 2.2, "28": 800, "2000": 45000, "2001": 1800, "2002": 900 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000052), avatar(10000073), avatar(10000030)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000052), avatar(10000073), avatar(10000030)] }, {
       characters: {
         "10000052": { NameTextMapHash: 1, Element: "Electric", WeaponType: "WEAPON_POLE", SideIconName: "UI_Raiden" },
         "10000073": { NameTextMapHash: 2, Element: "Grass", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_Nahida" },
@@ -53,7 +53,7 @@ describe("第3バッチの原神・ZZZ個別ビルド", () => {
 
   it("ZZZ3名の個別目標を公開プロフィール経路で選択し、戦闘中効果を現在値に加えない", () => {
     const metadata = { ElementTypes: ["Ether"], ProfessionType: "Anomaly", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1331, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1261, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1191, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
