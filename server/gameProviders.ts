@@ -8,6 +8,7 @@ import {
   TargetStatDefinition,
   UidResponseCache,
   lookupUidBuild,
+  meetsTarget,
   priorityRecommendations,
   withGuideMetadata,
 } from "./buildAdvisor";
@@ -306,9 +307,9 @@ function comparisonsFromStats(targets: TargetStatDefinition[], values: Record<st
       current,
       currentDisplay: current === null ? "未取得" : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
       achieved: {
-        "厳選": current === null ? null : current >= target.targets["厳選"],
-        "目標": current === null ? null : current >= target.targets["目標"],
-        "妥協": current === null ? null : current >= target.targets["妥協"],
+        "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
+        "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),
+        "妥協": current === null ? null : meetsTarget(current, target.targets["妥協"]),
       },
     };
   });

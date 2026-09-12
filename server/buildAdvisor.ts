@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
+import { FIELD_TO_COMPONENT, FIELD_TO_STAT_KEY, fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
 import { generatedHsrGuide } from "./individualGuides";
 import { guideMetadataFor } from "./characterGuideMetadata";
 import { partyRecommendationsFor, type PartyRecommendationSet } from "./partyRecommendations";
@@ -80,10 +80,31 @@ export type EquipmentAction = {
   reason: string;
 };
 
+/**
+ * 表示桁より細かい浮動小数点誤差だけを吸収する許容差。
+ * EP回復効率の基礎込み換算 `(1 + 0.194) * 100` は 119.39999999999999 になり、表示は「119.4%」でも
+ * 素の `>=` では目標 119.4 に未達となる。目標値の桁で丸めると 0.1939（=119.39）まで達成になってしまうため、
+ * 丸めではなく固定の許容差で吸収する。
+ */
+const COMPARISON_EPSILON = 1e-9;
+
+/** 達成判定と不足抽出で共通に使う比較。誤差だけを吸収し、本物の未達（0.01 以上の差）は未達のままにする。 */
+export function meetsTarget(current: number, target: number): boolean {
+  return current >= target - COMPARISON_EPSILON;
+}
+
+/** 目標までの不足量を表示する。丸めて 0 になる不足を「達成済み」に見せない。 */
+function deficitText(deficit: number, unit: "" | "%"): string {
+  const digits = unit === "%" ? 1 : 0;
+  const rounded = Number(deficit.toFixed(digits));
+  if (rounded === 0) return `あと ${(10 ** -digits).toFixed(digits)}${unit}未満`;
+  return `あと ${deficit.toFixed(digits)}${unit}`;
+}
+
 /** 公開プロフィールで計測できる値を、目標水準までの相対不足量で優先表示する。 */
 export function priorityRecommendations(comparisons: StatComparison[]): PriorityRecommendation[] {
   return comparisons
-    .filter((comparison): comparison is StatComparison & { current: number } => comparison.current !== null && comparison.current < comparison.targets["目標"])
+    .filter((comparison): comparison is StatComparison & { current: number } => comparison.current !== null && !meetsTarget(comparison.current, comparison.targets["目標"]))
     .map((comparison) => {
       const target = comparison.targets["目標"];
       const deficit = target - comparison.current;
@@ -97,7 +118,7 @@ export function priorityRecommendations(comparisons: StatComparison[]): Priority
         target,
         deficit,
         priority,
-        rationale: `目標 ${target}${comparison.unit} まであと ${deficit.toFixed(comparison.unit === "%" ? 1 : 0)}${comparison.unit}`,
+        rationale: `目標 ${target}${comparison.unit} まで${deficitText(deficit, comparison.unit)}`,
       };
     })
     .sort((left, right) => (right.deficit / Math.max(right.target, 1)) - (left.deficit / Math.max(left.target, 1)))
@@ -385,7 +406,7 @@ Object.assign(GUIDE_OVERRIDES, {
 
 Object.assign(GUIDE_OVERRIDES, {
   "Dr.レイシオ": { headline: "敵デバフを満たす追加攻撃を安定させるため、公開値の会心率70%・会心ダメージ150%・攻撃力2,600・速度134を優先する。", relicSet: "荒海を歩む旅人 ×4 / 灰燼を燃やし尽くす大公 ×4", planarSet: "自転が止まったサルソット ×2 / 奔狼の都藍王朝 ×2", mainStats: [{ slot: "胴体", value: "会心率 / 会心ダメ" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "虚数属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "攻撃力%" }], targets: [{ key: "critRate", label: "会心率", unit: "%", targets: { "厳選": 80, "目標": 70, "妥協": 60 } }, { key: "critDmg", label: "会心ダメ", unit: "%", targets: { "厳選": 170, "目標": 150, "妥協": 140 } }, { key: "attack", label: "攻撃力", unit: "", targets: { "厳選": 2900, "目標": 2600, "妥協": 2300 } }, { key: "speed", label: "速度", unit: "", targets: { "厳選": 143, "目標": 134, "妥協": 120 } }], targetContext: "Dr.レイシオ専用：Summationの会心率+15%・会心ダメージ+30%、敵デバフ数、味方・光円錐・星魂の条件付き効果は戦闘中にのみ適用されるため、公開プロフィールへ加算しない。", dataAsOf: "2026-08-26", updatedAt: "2026-08-26", sourceLabel: "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合" },
-  "カフカ": { headline: "DoT起爆支援を安定させるため、公開値の速度160・効果命中75%・攻撃力2,500を優先する。", relicSet: "深い牢獄の囚人 ×4", planarSet: "蒼穹戦線グラモス ×2 / 宇宙封印ステーション ×2", mainStats: [{ slot: "胴体", value: "効果命中 / 攻撃力%" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "雷属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "EP回復効率 / 攻撃力%" }], targets: [{ key: "speed", label: "速度", unit: "", targets: { "厳選": 170, "目標": 160, "妥協": 156 } }, { key: "effectHitRate", label: "効果命中", unit: "%", targets: { "厳選": 90, "目標": 75, "妥協": 67 } }, { key: "attack", label: "攻撃力", unit: "", targets: { "厳選": 3000, "目標": 2500, "妥協": 2300 } }, { key: "energyRecharge", label: "EP回復効率", unit: "%", targets: { "厳選": 19.4, "目標": 19.4, "妥協": 0 } }], targetContext: "カフカ専用：DoT即時起爆、追加能力Tortureの効果命中75%達成時の味方攻撃力、光円錐・味方・星魂の効果は戦闘中・編成条件であり、公開プロフィールへ加算しない。本人火力型の攻撃力3,600以上は別ビルドとして扱う。", dataAsOf: "2026-08-26", updatedAt: "2026-08-26", sourceLabel: "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合" },
+  "カフカ": { headline: "DoT起爆支援を安定させるため、公開値の速度160・効果命中75%・攻撃力2,500を優先する。", relicSet: "深い牢獄の囚人 ×4", planarSet: "蒼穹戦線グラモス ×2 / 宇宙封印ステーション ×2", mainStats: [{ slot: "胴体", value: "効果命中 / 攻撃力%" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "雷属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "EP回復効率 / 攻撃力%" }], targets: [{ key: "speed", label: "速度", unit: "", targets: { "厳選": 170, "目標": 160, "妥協": 156 } }, { key: "effectHitRate", label: "効果命中", unit: "%", targets: { "厳選": 90, "目標": 75, "妥協": 67 } }, { key: "attack", label: "攻撃力", unit: "", targets: { "厳選": 3000, "目標": 2500, "妥協": 2300 } }, { key: "energyRecharge", label: "EP回復効率", unit: "%", targets: { "厳選": 119.4, "目標": 119.4, "妥協": 100 } }], targetContext: "カフカ専用：EP回復効率は基礎100%込みの表記で、縄のメインステータスをEP回復効率にした場合の119.4%を目標にする（出典の19.4%は上乗せ分）。DoT即時起爆、追加能力Tortureの効果命中75%達成時の味方攻撃力、光円錐・味方・星魂の効果は戦闘中・編成条件であり、公開プロフィールへ加算しない。本人火力型の攻撃力3,600以上は別ビルドとして扱う。", dataAsOf: "2026-08-26", updatedAt: "2026-08-26", sourceLabel: "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合" },
   "ブラックスワン": { headline: "アルカナとDoTを安定させるため、公開値の効果命中120%・攻撃力3,600・速度143を優先する。", relicSet: "深い牢獄の囚人 ×4", planarSet: "囚われの歌姫 ×2 / 蒼穹戦線グラモス ×2", mainStats: [{ slot: "胴体", value: "効果命中" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "風属性ダメージ / 攻撃力%" }, { slot: "連結縄", value: "攻撃力%" }], targets: [{ key: "effectHitRate", label: "効果命中", unit: "%", targets: { "厳選": 130, "目標": 120, "妥協": 100 } }, { key: "attack", label: "攻撃力", unit: "", targets: { "厳選": 3900, "目標": 3600, "妥協": 3200 } }, { key: "speed", label: "速度", unit: "", targets: { "厳選": 160, "目標": 143, "妥協": 135 } }, { key: "hp", label: "HP", unit: "", targets: { "厳選": 3400, "目標": 3000, "妥協": 2800 } }], targetContext: "ブラックスワン専用：Candleflame's Portent、アルカナ蓄積、悟りによる被ダメージ増加、カフカより先行する行動順、味方・星魂の条件付き効果は公開プロフィールへ加算しない。", dataAsOf: "2026-08-26", updatedAt: "2026-08-26", sourceLabel: "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合" },
   "鏡流": { headline: "HP参照へ移行した特殊状態の火力を支えるため、公開値のHP6,000・会心率45%・会心ダメージ150%を優先し、速度型は135を選ぶ。", relicSet: "雪の密林の狩人 ×4 / 宝命長存の蒔者 ×4", planarSet: "自転が止まったサルソット ×2 / 奔狼の都藍王朝 ×2", mainStats: [{ slot: "胴体", value: "会心ダメ" }, { slot: "脚部", value: "HP% / 速度" }, { slot: "次元界オーブ", value: "氷属性ダメージ / HP%" }, { slot: "連結縄", value: "HP%" }], targets: [{ key: "hp", label: "HP", unit: "", targets: { "厳選": 7000, "目標": 6000, "妥協": 5500 } }, { key: "critRate", label: "会心率", unit: "%", targets: { "厳選": 50, "目標": 45, "妥協": 40 } }, { key: "critDmg", label: "会心ダメ", unit: "%", targets: { "厳選": 180, "目標": 150, "妥協": 130 } }, { key: "speed", label: "速度", unit: "", targets: { "厳選": 135, "目標": 96, "妥協": 96 } }], targetContext: "鏡流専用：特殊状態の会心率+50%と月光由来の会心ダメージ、味方HP変動、行動順操作、星魂効果は戦闘中・条件付きのため公開プロフィールへ加算しない。", dataAsOf: "2026-08-26", updatedAt: "2026-08-26", sourceLabel: "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合" },
 });
@@ -421,28 +442,6 @@ const DEFAULT_GUIDE: GuideDefinition = {
   targets: DAMAGE_TARGETS,
 };
 
-const STAT_MATCHERS: Record<StatKey, RegExp[]> = {
-  critRate: [/crit.*rate/i, /critical.*chance/i, /会心率/i],
-  critDmg: [/crit.*dmg/i, /critical.*damage/i, /会心ダメ/i],
-  speed: [/^speed$/i, /spd/i, /速度/i],
-  attack: [/^attack$/i, /^atk$/i, /攻撃力$/i],
-  attackPercent: [/attack.*ratio/i, /atk.*ratio/i, /attack.*percent/i, /攻撃力%/i],
-  breakEffect: [/break/i, /撃破特効/i],
-  effectHitRate: [/effect.*hit/i, /status.*hit/i, /効果命中/i],
-  effectRes: [/effect.*res/i, /status.*res/i, /効果抵抗/i],
-  hp: [/^hp$/i, /^health$/i, /^HP$/],
-  hpPercent: [/hp.*ratio/i, /hp.*percent/i, /HP%/i],
-  defense: [/^defense$/i, /^defence$/i, /^def$/i, /^防御力$/],
-  defPercent: [/def.*ratio/i, /def.*percent/i, /防御力%/i],
-  energyRecharge: [/energy.*recharge/i, /charge.*efficiency/i, /元素チャージ/i],
-  elementalMastery: [/elemental.*mastery/i, /元素熟知/i],
-  anomalyMastery: [/anomaly.*mastery/i, /異常マスタリー/i],
-  anomalyProficiency: [/anomaly.*proficiency/i, /異常掌握/i],
-  impact: [/impact/i, /衝撃力/i],
-  penRatio: [/pen.*ratio/i, /貫通率/i],
-  energyRegen: [/energy.*regen/i, /energy.*recovery/i, /エネルギー自動回復/i],
-};
-
 function asRecord(value: unknown): RawRecord {
   return value && typeof value === "object" && !Array.isArray(value) ? value as RawRecord : {};
 }
@@ -470,38 +469,6 @@ function statDisplay(stat: RawRecord): string {
   if (value === null) return "—";
   const percent = isPercentStat(stat);
   return percent ? `${(value <= 1 ? value * 100 : value).toFixed(1)}%` : value.toFixed(0);
-}
-
-// MiHoMo(StarRailRes properties.json)は割合ステータスと絶対値ステータスで同一の`name`
-// （例: AttackAddedRatio/AttackDeltaが共に「攻撃力」）を返すため、そのまま表示すると
-// 「現在のステータス」欄でラベルが重複する。同名が複数ある場合のみ、割合側へ`%`を付けて区別する。
-function allStatsFor(properties: RawRecord[]): CharacterProfile["allStats"] {
-  const nameCounts = new Map<string, number>();
-  for (const stat of properties) {
-    const name = text(stat.name);
-    if (name) nameCounts.set(name, (nameCounts.get(name) ?? 0) + 1);
-  }
-  return properties
-    .map((stat) => {
-      const baseName = text(stat.name);
-      const isDuplicate = (nameCounts.get(baseName) ?? 0) > 1;
-      const name = isDuplicate && isPercentStat(stat) && !baseName.endsWith("%") ? `${baseName}%` : baseName;
-      return { name, display: statDisplay(stat), icon: text(stat.icon) || null };
-    })
-    .filter((stat) => stat.name);
-}
-
-function statNumber(stat: RawRecord): number | null {
-  const value = nullableNumber(stat.value);
-  const display = statDisplay(stat);
-  if (display.includes("%")) {
-    const displayedPercent = Number.parseFloat(display.replace(/,/g, ""));
-    if (Number.isFinite(displayedPercent)) return displayedPercent;
-  }
-  const isPercent = stat.percent === true || display.includes("%") || /ratio|percent/i.test(text(stat.field));
-  if (value !== null) return isPercent && value <= 1 ? value * 100 : value;
-  const parsed = Number.parseFloat(display.replace(/,/g, ""));
-  return Number.isFinite(parsed) ? parsed : null;
 }
 
 Object.assign(GUIDE_OVERRIDES, {
@@ -587,20 +554,84 @@ export function guideFor(name: string, path: string, identity?: Pick<CharacterId
   return withGuideMetadata("hsr", generatedHsrGuide(name, path), name);
 }
 
-function comparisonFor(properties: RawRecord[], target: TargetStatDefinition): StatComparison {
-  const match = properties.find((property) => {
-    const haystack = `${text(property.field)} ${text(property.name)}`;
-    return STAT_MATCHERS[target.key].some((pattern) => pattern.test(haystack));
-  });
-  const current = match ? statNumber(match) : null;
+/**
+ * MiHoMo `sr_info_parsed` は戦闘外の最終値を `statistics`（= `attributes` + `additions`）で返す。
+ * 初期実装は加算分だけの `properties` を表示・比較に使っていたため、速度・会心・攻撃力が実際の値とずれていた。
+ * `statistics` が無い応答では `attributes` と `additions` を field ごとに合算して同じ最終値を作る。
+ */
+function finalStatsOf(source: RawRecord): RawRecord[] | null {
+  const statistics = asArray(source.statistics).map(asRecord).filter((stat) => text(stat.field) || text(stat.name));
+  if (statistics.length) return statistics;
+  const attributes = asArray(source.attributes).map(asRecord);
+  const additions = asArray(source.additions).map(asRecord);
+  if (!attributes.length && !additions.length) return null;
+  const summed = new Map<string, RawRecord>();
+  for (const stat of [...attributes, ...additions]) {
+    const key = text(stat.field) || text(stat.name);
+    if (!key) continue;
+    const value = nullableNumber(stat.value) ?? 0;
+    const previous = summed.get(key);
+    // display は合算後に一致しなくなるため持ち越さない（statDisplay が value から組み立てる）。
+    if (previous) previous.value = (nullableNumber(previous.value) ?? 0) + value;
+    else summed.set(key, { field: text(stat.field), name: text(stat.name), value, percent: stat.percent === true, icon: stat.icon });
+  }
+  return summed.size ? [...summed.values()] : null;
+}
+
+/** EP回復効率は基礎100%込みで扱う（ゲーム内・Enka 経路の表記に合わせる）。MiHoMo の `sp_rate` は上乗せ分のみ。 */
+const HSR_BASE_ENERGY_RECHARGE = 100;
+
+/** 最終値と `properties` の割合項目から、目標比較に使う StatKey → 数値の表を作る。 */
+function mihomoStatValues(finals: RawRecord[], properties: RawRecord[]): Partial<Record<StatKey, number>> {
+  const values: Partial<Record<StatKey, number>> = { energyRecharge: HSR_BASE_ENERGY_RECHARGE };
+  for (const stat of finals) {
+    const field = text(stat.field);
+    const value = nullableNumber(stat.value);
+    if (value === null) continue;
+    const component = FIELD_TO_COMPONENT[field];
+    if (component) { values[component] = value; continue; }
+    const statKey = FIELD_TO_STAT_KEY[field];
+    if (!statKey) continue;
+    values[statKey] = statKey === "energyRecharge" ? (1 + value) * 100 : value * 100;
+  }
+  // statistics には割合の項目が無いため、Enka 経路と同じ「割合ボーナスの合計」を properties から作る。
+  const percentKeys: Record<string, StatKey> = { hp: "hpPercent", atk: "attackPercent", def: "defPercent" };
+  for (const [field, key] of Object.entries(percentKeys)) {
+    const total = properties
+      .filter((property) => text(property.field) === field && property.percent === true)
+      .reduce((sum, property) => sum + (nullableNumber(property.value) ?? 0), 0);
+    values[key] = total * 100;
+  }
+  return values;
+}
+
+const MIHOMO_FINAL_STATS_NOTE = "公開中のキャラクター・光円錐・遺物・軌跡を合算した戦闘外の最終値です。戦闘中・条件付き効果は含みません。";
+const MIHOMO_UNAVAILABLE_NOTE = "最終ステータスを取得できないため、目標比較を保留しています。数分後に再度お試しください。";
+
+const MIHOMO_FINAL_LABELS: Record<string, string> ={ hp: "HP", atk: "攻撃力", def: "防御力", spd: "速度" };
+
+/** 最終値の一覧を「現在のステータス」として並べる。`statistics` の「基礎HP」等は中身が最終値なので表示名を直す。 */
+function finalAllStatsFor(finals: RawRecord[]): CharacterProfile["allStats"] {
+  return finals
+    .map((stat) => {
+      const field = text(stat.field);
+      const name = MIHOMO_FINAL_LABELS[field] ?? text(stat.name);
+      const value = nullableNumber(stat.value);
+      const display = field === "sp_rate" && value !== null ? `${((1 + value) * 100).toFixed(1)}%` : statDisplay(stat);
+      return { name, display, icon: text(stat.icon) || null };
+    })
+    .filter((stat) => stat.name);
+}
+
+function comparisonFromValue(target: TargetStatDefinition, current: number | null): StatComparison {
   return {
     ...target,
     current,
-    currentDisplay: match ? statDisplay(match) : "未取得",
+    currentDisplay: current === null ? "未取得" : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
     achieved: {
-      "厳選": current === null ? null : current >= target.targets["厳選"],
-      "目標": current === null ? null : current >= target.targets["目標"],
-      "妥協": current === null ? null : current >= target.targets["妥協"],
+      "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
+      "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),
+      "妥協": current === null ? null : meetsTarget(current, target.targets["妥協"]),
     },
   };
 }
@@ -629,7 +660,10 @@ function parseCharacter(source: RawRecord): CharacterProfile {
     };
   });
 
-  const comparisons = guide.targets.map((target) => comparisonFor(properties, target));
+  // 最終値を作れないときは properties（加算分だけ）へ戻らず、比較を保留する（誤った数字で比べない）。
+  const finals = finalStatsOf(source);
+  const values = finals ? mihomoStatValues(finals, properties) : {};
+  const comparisons = guide.targets.map((target) => comparisonFromValue(target, finals ? values[target.key] ?? null : null));
   const recommendations = priorityRecommendations(comparisons);
   return {
     id: identity.sourceId,
@@ -648,7 +682,9 @@ function parseCharacter(source: RawRecord): CharacterProfile {
       icon: text(lightCone.icon) || null,
     } : null,
     relics,
-    allStats: allStatsFor(properties),
+    allStats: finals ? finalAllStatsFor(finals) : [],
+    statsStatus: finals ? "final" : "unavailable",
+    statsNote: finals ? MIHOMO_FINAL_STATS_NOTE : MIHOMO_UNAVAILABLE_NOTE,
     guide,
     comparisons,
     recommendations,
@@ -745,9 +781,19 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
     if (!normalized.characters.length) {
       throw new TRPCError({ code: "NOT_FOUND", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
     }
+    // 最終ステータスを1名も作れない応答は「不完全な主取得元」として扱い、Enka フォールバックへ回す。
+    // これを成功として返すと、静的データから最終値を算出できる Enka が一度も試されないまま
+    // 全員「未取得」の結果が TTL 中キャッシュされてしまう（Enka 側の isEnkaResultComplete と同じ考え方）。
+    if (normalized.characters.every((character) => character.statsStatus === "unavailable")) {
+      throw new TRPCError({ code: "BAD_GATEWAY", message: "最終ステータスを取得できませんでした。少し時間を置いて再試行してください。" });
+    }
     const withSource = { ...normalized, dataSource: "MiHoMo" as const };
-    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
     const fetchedAt = new Date().toISOString();
+    // 一部のキャラクターだけ最終値が欠けている結果は、再取得で回復し得るためキャッシュへ入れない。
+    if (normalized.characters.some((character) => character.statsStatus === "unavailable")) {
+      return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: fetchedAt };
+    }
+    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
     return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
