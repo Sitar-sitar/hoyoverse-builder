@@ -343,6 +343,16 @@ batchNames(18).hsr.forEach((name) => {
   record.sourceLabel = "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合";
 });
 
+// 第19バッチ（2026-09-13）でカタログへ追加した ZZZ 1名（新特性「鋭御」の初登録）。
+batchNames(19).zzz.forEach((name) => {
+  const record = CHARACTER_GUIDE_METADATA.zzz[name];
+  if (!record) return;
+  record.profileId = `curated:batch19:zzz:${name}`;
+  record.dataAsOf = "2026-09-12";
+  record.updatedAt = "2026-09-13";
+  record.sourceLabel = "Game8・GameWithの更新日付き個別ビルド・編成・心象映画情報を照合";
+});
+
 // 第18バッチ（2026-09-11）: 第10バッチの精査対象のうち、個別ガイドが役割共通値のままだった2名へガイドを登録した。
 // 台帳上のバッチ（第10）は変えず、採用プロファイル・日付・出典だけを今回の根拠へ更新する（docs/batch-18-research-notes.md 区分1）。
 const BATCH18_GUIDE_COMPLETIONS: Record<string, { dataAsOf: string }> = {

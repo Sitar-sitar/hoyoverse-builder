@@ -5,14 +5,14 @@ import { HSR_RUNTIME_PATHS } from "./characterGuideCatalog";
 import { catalogSourceIdFor } from "./characterConstellations";
 
 describe("character reference catalog", () => {
-  it("全251キャラクターをゲーム別に公開する（第18バッチで HSR 3名を追加）", () => {
+  it("全252キャラクターをゲーム別に公開する（第19バッチで ZZZ クラレッタを追加）", () => {
     const catalog = characterReferenceCatalog();
-    expect(catalog.total).toBe(251);
-    expect(catalog.reviewed).toBe(251);
+    expect(catalog.total).toBe(252);
+    expect(catalog.reviewed).toBe(252);
     expect(catalog.pending).toBe(0);
     expect(catalog.games.hsr).toHaveLength(84);
     expect(catalog.games.genshin).toHaveLength(109);
-    expect(catalog.games.zzz).toHaveLength(58);
+    expect(catalog.games.zzz).toHaveLength(59);
   });
 
   it.each([

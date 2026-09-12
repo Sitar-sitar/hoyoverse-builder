@@ -168,6 +168,7 @@ const batch13Options = datedOptions("2026-08-27", true);
 const batch14Options = datedOptions("2026-08-27", true);
 const batch16Options = datedOptions("2026-09-07", true);
 const batch18Options = datedOptions("2026-09-11", true);
+const batch19Options = datedOptions("2026-09-13", true);
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
@@ -453,6 +454,13 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["宵宮", "行秋", "ベネット", "雲菫"], "継続水付着と通常攻撃支援を重ね、宵宮の蒸発通常攻撃を中断しにくくする。", "Combines sustained Hydro application and Normal Attack support for stable Vaporize strings.", "叠加持续挂水与普攻辅助，使宵宫的蒸发普攻连段更稳定。"),
     plan(["宵宮", "夜蘭", "雲菫", "鍾離"], "水付着・通常攻撃支援・護盾で単体主力の連射を保つ。", "Uses Hydro application, Normal Attack support, and a shield to preserve single-target attack strings.", "以挂水、普攻辅助与护盾维持单体主C连射。"),
     plan(["宵宮", "八重神子", "フィッシュル", "シュヴルーズ"], "炎・雷限定の過負荷で、遠距離通常攻撃と控え雷火力を組み合わせる。", "A Pyro-Electro-only Overload team combining ranged Normal Attacks with off-field Electro damage.", "火雷限定超载队，结合远程普攻与后台雷伤。"),
+  ]),
+  // 第19バッチ（2026-09-13）: クラレッタ。Game8 の3案はいずれも実名で、案1・案2 は GameWith とも一致する。
+  // 役割ラベルは鋭御＝防御力参照の主力として mainDps を選ぶ。
+  "zzz:クラレッタ": batch19Options("zzz", "クラレッタ", "https://game8.jp/zenless/814551", mainDps, [
+    plan(["クラレッタ", "ノルムー", "リナ"], "攻撃力以外のバフを重ねられる理想編成。防御力参照のクラレッタと噛み合う。", "The ideal team stacking buffs other than ATK, which suits DEF-scaling Clarette.", "以攻击力以外的增益为主的理想队伍，契合依赖防御力的克拉蕾塔。"),
+    plan(["クラレッタ", "クレタ", "リナ"], "恒常S級だけで組む代替案。鋭御を支援できるクレタと貫通支援を合わせる。", "A standard-banner alternative pairing Caesar-style Armorer support with PEN assistance.", "仅用常驻S级角色的替代方案，将锐御辅助与穿透辅助结合。"),
+    plan(["クラレッタ", "アンビー", "ニコ"], "入手しやすいメンバーで組む初心者向けの電気案。", "A beginner-friendly Electric team built from easily obtained members.", "由易获取成员组成的新手向电气队。"),
   ]),
   "zzz:シーザー": batch6Options("zzz", "シーザー", "https://game8.co/games/Zenless-Zone-Zero/archives/464303", t("防護", "Defense", "防护"), [
     plan(["シーザー", "エレン", "蒼角"], "防護支援でエレンの通常攻撃を守り、氷支援とブレイクで直撃火力を伸ばす。", "Defense support protects Ellen's attacks while Ice support and stun improve direct-damage windows.", "防护辅助保护艾莲的攻击，并以冰系辅助和失衡强化直伤窗口。"),

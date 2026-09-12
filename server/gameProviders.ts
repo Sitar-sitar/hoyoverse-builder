@@ -500,6 +500,21 @@ function finalZzzStats(catalog: ZzzCatalog, agent: Record<string, number>, weapo
 }
 
 const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = {
+  // 第19バッチ（2026-09-13）: Ver3.2 前半で実装された新特性「鋭御」の初登録。根拠は docs/batch-19-research-notes.md。
+  "クラレッタ": {
+    headline: "スキルダメージを防御力で計算する鋭御として、公開値の防御力と会心率129%を優先する。",
+    relicSet: "棘まとう薔薇 ×4 / ウッドペッカー・エレクトロ ×2",
+    planarSet: "防御力を主軸に、会心率は戦闘中の自己上昇分を除いて確保",
+    mainStats: [{ slot: "IV", value: "会心率" }, { slot: "V", value: "貫通率 / 防御力% / 電気属性ダメージ" }, { slot: "VI", value: "防御力%" }],
+    targets: [
+      { key: "defense", label: "防御力", unit: "", targets: { "厳選": 2451, "目標": 1800, "妥協": 1000 } },
+      { key: "critRate", label: "会心率", unit: "%", targets: { "厳選": 129, "目標": 129, "妥協": 128.9 } },
+    ],
+    targetContext: "クラレッタ専用：数値はいずれもステータス画面（戦闘外）の値です。会心率129%は Game8 の「戦闘中に自身で71%上げるため、キャラのステータスは129%にする」、128.9%は GameWith の Lv.60 開幕ステータス。戦闘中の上乗せ（最大199.9%）は加算しません。防御力は GameWith の開幕値2,451を厳選、棘まとう薔薇4セット効果が会心率を+16%/+8%する開幕防御力1,800/1,000を目標・妥協に採りました。会心ダメージは GameWith が98%を挙げる一方、Game8 は「会心時は会心ダメージではなく暴傷ダメージが適用されるため盛る意味がない」としており、出典が割れているため比較対象に入れていません。心象映画・編成・音動機の効果も公開プロフィールへ加算しません。",
+    dataAsOf: "2026-09-12",
+    updatedAt: "2026-09-13",
+    sourceLabel: "Game8・GameWithの更新日付き個別ビルド・編成・心象映画情報を照合",
+  },
   "0号・アンビー": {
     headline: "追加攻撃を主軸に、戦闘外の会心率を整えたうえで会心ダメージと攻撃力を伸ばす。",
     relicSet: "シャドウハーモニー ×4 / ウッドペッカー・エレクトロ ×2", planarSet: "会心率70%前後を起点に戦闘中補正を加味",
