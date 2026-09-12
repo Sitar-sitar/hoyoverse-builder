@@ -474,7 +474,8 @@ describe("全キャラクターガイドの網羅性", () => {
     ];
     guideRecords.forEach(({ game, name, guide }) => {
       const metadata = guideMetadataFor(game, name);
-      expect(guide.targets.length > 0 || guide.targetContext.includes("数値閾値") || guide.targetContext.includes("推測で登録しない")).toBe(true);
+      // 目標を持たないプロファイル（鋭御の共通ガイドなど）は、登録しない理由が説明に残っていること。
+      expect(guide.targets.length > 0 || /数値閾値|推測で登録/.test(guide.targetContext)).toBe(true);
       expect(guide.profileId).toBeTruthy();
       expect(guide.dataAsOf).toBe(metadata.dataAsOf);
       expect(guide.updatedAt).toBe(metadata.updatedAt);
@@ -484,7 +485,7 @@ describe("全キャラクターガイドの網羅性", () => {
     (Object.keys(CHARACTER_GUIDE_METADATA) as Array<keyof typeof CHARACTER_GUIDE_METADATA>).forEach((game) => {
       expect(Object.keys(CHARACTER_GUIDE_METADATA[game])).toHaveLength(CHARACTER_GUIDE_CATALOG[game].length);
       CHARACTER_GUIDE_CATALOG[game].forEach((name) => {
-        expect(CHARACTER_GUIDE_METADATA[game][name]).toMatchObject({ profileId: expect.any(String), dataAsOf: expect.stringMatching(/^2026-(05-31|06-05|07-31|08-(11|13|14|18|19|21|24|25|26|27)|09-(01|05|07|08|11))$/), updatedAt: expect.stringMatching(/^2026-(08-(18|25|26|27)|09-(05|07|08|11))$/) });
+        expect(CHARACTER_GUIDE_METADATA[game][name]).toMatchObject({ profileId: expect.any(String), dataAsOf: expect.stringMatching(/^2026-(05-31|06-05|07-31|08-(11|13|14|18|19|21|24|25|26|27)|09-(01|05|07|08|11|12))$/), updatedAt: expect.stringMatching(/^2026-(08-(18|25|26|27)|09-(05|07|08|11|13))$/) });
       });
     });
     CHARACTER_GUIDE_CATALOG.hsr.forEach((name, index) => {

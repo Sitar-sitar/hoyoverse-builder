@@ -63,6 +63,19 @@ const SOURCE = {
 } as const;
 
 const CURATED: Record<string, CuratedEntry> = {
+  // 第19バッチ（2026-09-13）: クラレッタ。日本語名は Game8 日本語版を採り、Game8 英語版の
+  // 心象映画名（Bloodstained Chronicle ほか）と対応することを確認した。効果本文は Game8・GameWith の2出典が一致。
+  // 公開プロフィールへ加算できる無条件の固定値は無いため targetChanges は全段で空。
+  "zzz:1611": {
+    ...SOURCE.zzz, gameVersion: "3.2", dataAsOf: "2026-09-12", updatedAt: "2026-09-13", effects: [
+      effect(1, "血塗られた年代記", "Bloodstained Chronicle", "血染的编年史", "攻撃命中で暴傷が発生した時、残痕の蓄積効率を20%上げる。重傷のダメージ倍率が本来の130%になる。", "When an attack lands and triggers Laceration, raises Gash buildup rate by 20% and increases Maim's damage multiplier to 130% of the original.", "攻击命中触发暴伤时，残痕积蓄效率提高20%，重伤伤害倍率提升至原本的130%。"),
+      effect(2, "薪の栄冠", "Crown of Inherited Flame", "薪火之冠", "ブラッドエンブレムの最大継続時間を2秒延ばす。同状態中や連携・終結・支援の発動中に攻撃が命中すると、対象の電気属性ダメージ耐性を18%無視する。", "Extends Crimson Inscription's maximum duration by 2s. While in that state or during Chain, Ultimate, and Assist actions, attacks ignore 18% of the target's Electric DMG RES.", "血纹状态最长持续时间延长2秒。该状态下或连携技、终结技、支援技发动中命中时，无视目标18%电属性抗性。"),
+      effect(3, "砂糖で書かれた誓い", "Oath Written in Frosting", "糖霜写就的誓言", "通常攻撃・回避・支援スキル・特殊スキル・連携スキルのレベルを2上げる。", "Raises Basic Attack, Dodge, Assist, Special, and Chain skill levels by 2.", "普攻、闪避、支援技、特殊技与连携技等级提高2级。"),
+      effect(4, "赤き月がさまよう", "Crimson Moon Wanderer", "赤月徘徊", "通常攻撃3段目の連続斬撃を延長できる時間が伸びる。3段目・連携スキル・終結スキルの与ダメージを20%上げる。", "Extends how long the third Basic Attack stage's continuous slashes can be prolonged, and raises the DMG of that stage, the Chain Attack, and the Ultimate by 20%.", "普攻第三段连续斩击的可延长时间增加，该段与连携技、终结技伤害提高20%。"),
+      effect(5, "血と黄昏の溶炉", "Duskblood Furnace", "血与黄昏之熔炉", "通常攻撃・回避・支援スキル・特殊スキル・連携スキルのレベルを2上げる。", "Raises Basic Attack, Dodge, Assist, Special, and Chain skill levels by 2.", "普攻、闪避、支援技、特殊技与连携技等级提高2级。"),
+      effect(6, "フィーヴァードリーム", "Warm Night's Dream", "热梦", "連携スキルまたは終結スキルの重撃が命中した時、残痕を消費せず単体へ重傷を1回発生させる。", "When a heavy hit from the Chain Attack or Ultimate lands, triggers Maim once on a single target without consuming Gash.", "连携技或终结技的重击命中时，不消耗残痕对单体触发1次重伤。"),
+    ],
+  },
   "hsr:1310": {
     ...SOURCE.hsr, dataAsOf: "2026-08-25", updatedAt: "2026-08-25", effects: [
       effect(1, "安眠せし赤染の繭", "In Red Cocoon, Once Slumbering", "沉眠绯茧", "強化戦闘スキルで防御力を15%無視し、SPを消費しない。", "Enhanced Skill ignores 15% DEF and consumes no Skill Point.", "强化战技无视15%防御力且不消耗战技点。"),

@@ -308,3 +308,62 @@ describe("ZZZ 新特性「鋭御」（Phase B）", () => {
     expect(result?.allStats.find((stat) => stat.name === "防御力")?.display).toBe("900");
   });
 });
+
+describe("第19バッチ（クラレッタ）", () => {
+  const catalog = {
+    avatars: { "1611": { Name: "Avatar_Claret", ElementTypes: ["Elec"], ProfessionType: "Armorer", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 8000, "12101": 700, "13101": 2451, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] } },
+    weapons: {},
+    equipments: { Items: {}, Suits: {} },
+    locs: { ja: { Avatar_Claret: "クラレッタ" } },
+    property: { "11101": { Name: "HP", Format: "{0:0}" }, "12101": { Name: "AttackBase", Format: "{0:0}" }, "13101": { Name: "DefenceBase", Format: "{0:0}" }, "20101": { Name: "CritRateBase", Format: "{0:0.0}%" }, "21101": { Name: "CritDmgBase", Format: "{0:0.0}%" } },
+  };
+  const profile = () => normalizeZzzPayload({
+    uid: "1300000001",
+    PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+      { Id: 1611, Level: 60, TalentLevel: 6, EquippedList: [] },
+    ] } },
+  }, catalog).characters[0];
+
+  it("UID照会で鋭御として解決され、個別ガイドの目標で比較される", () => {
+    const character = profile();
+    expect(character?.name).toBe("クラレッタ");
+    expect(character?.path).toBe("鋭御");
+    expect(character?.identity).toMatchObject({ key: "zzz:1611", resolution: "provider" });
+    // 役割共通（def）ではなく個別ガイドが優先される。
+    expect(character?.guide.relicSet).toBe("棘まとう薔薇 ×4 / ウッドペッカー・エレクトロ ×2");
+    expect(character?.guide.targets.map((target) => target.key)).toEqual(["defense", "critRate"]);
+    expect(character?.guide.targets.find((target) => target.key === "defense")?.targets).toEqual({ "厳選": 2451, "目標": 1800, "妥協": 1000 });
+    expect(character?.guide.targets.find((target) => target.key === "critRate")?.targets).toEqual({ "厳選": 129, "目標": 129, "妥協": 128.9 });
+    // 防御力は Phase B で比較値へ足したキー。実値で比較できる。
+    expect(character?.comparisons.find((comparison) => comparison.key === "defense")?.current).toBe(2451);
+  });
+
+  it("出典が割れている会心ダメージを比較対象にせず、理由を説明に残す", () => {
+    const guide = profile()?.guide;
+    expect(guide?.targets.some((target) => target.key === "critDmg")).toBe(false);
+    expect(guide?.targetContext).toContain("暴傷ダメージ");
+    expect(guide?.targetContext).toContain("戦闘外");
+  });
+
+  it("心象映画を全6段登録し、公開プロフィール値へ加算しない", () => {
+    const constellations = profile()?.constellations;
+    expect(constellations?.dataStatus).toBe("curated");
+    expect(constellations?.effects).toHaveLength(6);
+    expect(constellations?.effects.map((effect) => effect.name.ja)).toEqual([
+      "血塗られた年代記", "薪の栄冠", "砂糖で書かれた誓い", "赤き月がさまよう", "血と黄昏の溶炉", "フィーヴァードリーム",
+    ]);
+    expect(constellations?.effects[0]?.name.en).toBe("Bloodstained Chronicle");
+    // 無条件の固定値が無いため、凸による目標変更は全段で空。
+    expect(constellations?.effects.every((effect) => (effect.targetChanges ?? []).length === 0)).toBe(true);
+    expect(constellations?.activeTargetChanges).toEqual([]);
+  });
+
+  it("推奨PTは本人を含む実名3案で、公開値へ補正を持たない", () => {
+    const parties = profile()?.partyRecommendations;
+    expect(parties?.options).toHaveLength(3);
+    expect(parties?.options.every((option) => option.members.some((member) => member.name.ja === "クラレッタ"))).toBe(true);
+    expect(parties?.options.every((option) => option.targetChanges.length === 0)).toBe(true);
+    expect(parties?.options.every((option) => !option.id.startsWith("generated-"))).toBe(true);
+    expect(parties?.options[0]?.members.map((member) => member.name.ja)).toEqual(["クラレッタ", "ノルムー", "リナ"]);
+  });
+});
