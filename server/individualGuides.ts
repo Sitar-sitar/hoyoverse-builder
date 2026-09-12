@@ -5,7 +5,7 @@ type GameId = "hsr" | "genshin" | "zzz";
 export type ProfileId = "crit" | "dot" | "break" | "support" | "sustain" | "tank" | "hp" | "def" | "em" | "anomaly" | "stun" | "rupture";
 type HsrProfileId = Exclude<ProfileId, "em" | "anomaly" | "stun" | "rupture">;
 type GenshinProfileId = Extract<ProfileId, "crit" | "hp" | "def" | "em" | "support" | "sustain">;
-type ZzzProfileId = Extract<ProfileId, "crit" | "anomaly" | "stun" | "support" | "tank" | "rupture">;
+type ZzzProfileId = Extract<ProfileId, "crit" | "anomaly" | "stun" | "support" | "tank" | "rupture" | "def">;
 
 const target = (key: TargetStatDefinition["key"], label: string, unit: "%" | "", strict: number, goal: number, base: number): TargetStatDefinition => ({ key, label, unit, targets: { "厳選": strict, "目標": goal, "妥協": base } });
 const hsrMain = (value: string): GuideDefinition["mainStats"] => [{ slot: "胴体", value: "会心率 / 会心ダメ" }, { slot: "脚部", value: "速度 / 攻撃力%" }, { slot: "次元界オーブ", value: "属性ダメージ" }, { slot: "連結縄", value }];
@@ -39,6 +39,9 @@ const ZZZ_PROFILES: Record<ZzzProfileId, Omit<GuideDefinition, "headline">> = {
   support: { relicSet: "公開ビルドに基づく支援向けドライバディスク", planarSet: "バフ条件に必要な固有ステータスを優先", mainStats: zzzMain("攻撃力% / HP%", "攻撃力% / HP%", "エネルギー自動回復"), targets: [target("attack", "攻撃力", "", 3600, 3200, 2800), target("energyRegen", "エネルギー自動回復", "", 1.8, 1.2, 0.8)] },
   tank: { relicSet: "公開ビルドに基づく防護向けドライバディスク", planarSet: "HP・防御力・固有バフ条件を優先", mainStats: zzzMain("HP% / 防御力%", "HP% / 防御力%", "HP% / 攻撃力%"), targets: [target("hpPercent", "HP%", "%", 55, 40, 30), target("attack", "攻撃力", "", 2400, 2100, 1800)] },
   rupture: { relicSet: "公開ビルドに基づく命破向けドライバディスク", planarSet: "HP・会心・固有スケーリングを優先", mainStats: zzzMain("会心率 / 会心ダメージ", "属性ダメージ / HP%", "HP% / 攻撃力%"), targets: [target("critRate", "会心率", "%", 80, 70, 60), target("critDmg", "会心ダメージ", "%", 200, 160, 130), target("hpPercent", "HP%", "%", 50, 35, 25)] },
+  // 鋭御（Armorer）はスキルダメージを防御力で計算するため、原神の防御力アタッカーと同じ def を流用する。
+  // 役割共通の数値目標は出典で裏づけた根拠が無いため登録しない（推測しない）。
+  def: { relicSet: "公開ビルドに基づく防御力スケーリング向けドライバディスク", planarSet: "防御力を主軸に、会心は個別ガイドで補う", mainStats: zzzMain("会心率 / 会心ダメージ", "属性ダメージ / 貫通率", "防御力%"), targets: [], targetContext: "鋭御の共通ガイドです。防御力でスキルダメージが伸びる特性のため、防御力を主軸にします。役割共通の数値目標は、出典で裏づけた根拠が無いため推測で登録していません。個別ガイドが登録されるとそちらが優先されます。" },
 };
 
 const GENS_HIT_REACTION = new Set(["楓原万葉", "スクロース", "ウェンティ", "早柚", "夢見月瑞希", "ナヒーダ", "久岐忍", "雷主人公"]);
@@ -64,7 +67,7 @@ export function genshinProfileIdFor(name: string): GenshinProfileId {
 
 /** ZZZ のロール分類。特性（profession）だけで決まる。 */
 export function zzzProfileIdFor(profession: string): ZzzProfileId {
-  return profession === "Anomaly" ? "anomaly" : profession === "Stun" ? "stun" : profession === "Support" ? "support" : profession === "Defense" ? "tank" : profession === "Rupture" ? "rupture" : "crit";
+  return profession === "Anomaly" ? "anomaly" : profession === "Stun" ? "stun" : profession === "Support" ? "support" : profession === "Defense" ? "tank" : profession === "Rupture" ? "rupture" : profession === "Armorer" ? "def" : "crit";
 }
 
 function copyProfile(name: string, profileId: string, profile: Omit<GuideDefinition, "headline">, label: string): GuideDefinition {
@@ -83,5 +86,7 @@ export function generatedGenshinGuide(name: string): GuideDefinition {
 
 export function generatedZzzGuide(name: string, profession: string): GuideDefinition {
   const profileId = zzzProfileIdFor(profession);
-  return { ...copyProfile(name, profileId, ZZZ_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。` };
+  const profile = ZZZ_PROFILES[profileId];
+  // プロファイル固有の説明（目標を置かない理由など）があれば、共通文で上書きしない。
+  return { ...copyProfile(name, profileId, profile, "個別ビルド方針"), targetContext: profile.targetContext ?? `${name}用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。` };
 }

@@ -380,7 +380,7 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
 const ZZZ_ELEMENTS: Record<string, { label: string; color: string }> = {
   Fire: { label: "炎", color: "#d45b48" }, Ice: { label: "氷", color: "#76c8dc" }, Elec: { label: "電気", color: "#a278d2" }, Electric: { label: "電気", color: "#a278d2" }, Physical: { label: "物理", color: "#a6a6a6" }, Physics: { label: "物理", color: "#a6a6a6" }, Ether: { label: "エーテル", color: "#d875ce" },
 };
-const ZZZ_PROFESSIONS: Record<string, string> = { Attack: "強攻", Anomaly: "異常", Stun: "撃破", Support: "支援", Defense: "防護", Rupture: "命破" };
+const ZZZ_PROFESSIONS: Record<string, string> = { Attack: "強攻", Anomaly: "異常", Stun: "撃破", Support: "支援", Defense: "防護", Rupture: "命破", Armorer: "鋭御" };
 const ZZZ_PROP_FALLBACKS: Record<string, string> = {
   "11101": "HP", "11102": "HP%", "11103": "HP", "12101": "攻撃力", "12102": "攻撃力%", "12103": "攻撃力", "12201": "衝撃力", "12202": "衝撃力%", "13101": "防御力", "13102": "防御力%", "13103": "防御力",
   "20101": "会心率", "20103": "会心率", "21101": "会心ダメージ", "21103": "会心ダメージ", "23101": "貫通率", "23103": "貫通率", "23201": "貫通値", "23203": "貫通値", "30501": "エネルギー自動回復", "31201": "異常マスタリー", "31401": "異常掌握",
@@ -492,6 +492,8 @@ function finalZzzStats(catalog: ZzzCatalog, agent: Record<string, number>, weapo
     display,
     values: {
       attack: scale("12101", "12102", "12103"), critRate: total("20101") + total("20103"), critDmg: total("21101") + total("21103"), attackPercent: total("12102"), hpPercent: total("11102"),
+      // 表示用（display）と同じ式で HP・防御力も比較へ出す（登録済みの目標が常に「未取得」になっていた）。
+      hp: scale("11101", "11102", "11103", true), defense: scale("13101", "13102", "13103"), defPercent: total("13102"),
       impact: total("12201") * (1 + total("12202") / 100), anomalyMastery: total("31201") + total("31203"), anomalyProficiency: total("31401") * (1 + total("31402") / 100) + total("31403"), penRatio: total("23101") + total("23103"), energyRegen: total("30501") * (1 + total("30502") / 100) + total("30503"),
     },
   };

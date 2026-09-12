@@ -188,4 +188,47 @@ describe("優先強化項目の画面統合", () => {
     expect(screen.getAllByText(change.reason).length).toBeGreaterThan(0);
     expect(screen.getAllByText(`${change.target}${change.unit}`).length).toBeGreaterThan(0);
   });
+
+  it("部位を特定しない装備アクションを、3言語とも事実と合う文で表示する（Phase E・E5）", () => {
+    const anySlot = structuredClone(lookupResult);
+    anySlot.characters[0].equipmentActions = [{
+      recommendationKey: "critDmg", statLabel: "会心ダメージ", action: "サブステータスを厳選",
+      slot: "全部位", slotScope: "any", equippedName: null, currentMain: null, desiredStat: "会心ダメ",
+      reason: "ガイドの主ステータスは別の役割で埋まっています。部位は問わないので、会心ダメのサブステータスが付く装備を優先して厳選します。",
+    }] as any;
+    activeLookupResult = anySlot;
+
+    const expectations: Array<[string, string, string, string]> = [
+      ["ja", "全部位：会心ダメ", "ガイドの主ステータスは別の役割で埋まっています。部位は問わないので、会心ダメのサブステータスが付く装備を優先して厳選します。", "全部位の主ステータスは"],
+      ["en", "Any slot：会心ダメ", "The guide's main stats are assigned to other roles. Prioritize pieces with 会心ダメ substats in any slot.", "already has"],
+      ["zh-CN", "全部位：会心ダメ", "指南的主属性已用于其他用途。不限部位，优先筛选带有会心ダメ副属性的装备。", "的主属性为"],
+    ];
+
+    for (const [language, heading, reason, forbidden] of expectations) {
+      cleanup();
+      window.localStorage.setItem("starrail-build-advisor.language", language);
+      render(createElement(LanguageProvider, null, createElement(Home)));
+      fireEvent.click(screen.getByRole("button", { name: language === "ja" ? "照会する" : language === "en" ? "Search" : "查询" }));
+      // 部位ラベルが選択中の言語になる（日本語の「全部位」を英語画面へ出さない）。
+      expect(screen.getByText(heading)).toBeTruthy();
+      expect(screen.getByText(reason)).toBeTruthy();
+      // 「その部位のメインは既に○○」と読める文を出さない。
+      expect(screen.queryByText(new RegExp(forbidden))).toBeNull();
+    }
+    window.localStorage.setItem("starrail-build-advisor.language", "ja");
+  });
+
+  it("部位を指す従来の装備アクションは3言語とも文面が変わらない", () => {
+    const specific = structuredClone(lookupResult);
+    (specific.characters[0].equipmentActions[0] as any).slotScope = "specific";
+    activeLookupResult = specific;
+
+    cleanup();
+    window.localStorage.setItem("starrail-build-advisor.language", "en");
+    render(createElement(LanguageProvider, null, createElement(Home)));
+    fireEvent.click(screen.getByRole("button", { name: "Search" }));
+    expect(screen.getByText("IV：会心ダメ")).toBeTruthy();
+    expect(screen.getByText("IV is currently HP%. Replacing it with a 会心ダメ main-stat piece is the most direct way to close this gap.")).toBeTruthy();
+    window.localStorage.setItem("starrail-build-advisor.language", "ja");
+  });
 });

@@ -1,10 +1,11 @@
 import { describe, expect, it, vi } from "vitest";
-import { equipmentActionsFor, guideFor, lookupUidBuild, lookupWithFallback, UidResponseCache, normalizeMihomoPayload, priorityRecommendations, withGuideMetadata } from "./buildAdvisor";
+import { equipmentActionsFor, guideFor, lookupUidBuild, lookupWithFallback, UidResponseCache, normalizeMihomoPayload, priorityRecommendations, withGuideMetadata, type GuideDefinition, type PriorityRecommendation, type StatKey } from "./buildAdvisor";
 import { normalizeEnkaPayload } from "./enkaFallback";
 import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA, guideMetadataFor } from "./characterGuideMetadata";
 import { expectedProfileFor } from "./expectedGuideProfiles";
 import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
+import { genshinGuide, zzzGuide } from "./gameProviders";
 
 // StarRailRes properties.json の実データ抜粋（field/ratio/percent の意味は本家スキーマに準拠）。
 const HSR_TEST_PROPERTIES: Record<string, Record<string, unknown>> = {
@@ -521,5 +522,191 @@ describe("未達ステータスの優先強化提案", () => {
 
     expect(actions[0]).toMatchObject({ slot: "胴体", action: "主ステータスを変更", desiredStat: "会心ダメ" });
     expect(actions[1]).toMatchObject({ slot: "脚部", action: "サブステータスを厳選", desiredStat: "速度" });
+  });
+});
+
+describe("装備提案の部位選択（Phase E）", () => {
+  const guideWith = (mainStats: Array<{ slot: string; value: string }>): GuideDefinition => ({
+    headline: "テスト", relicSet: "テストセット ×4", planarSet: "テスト", mainStats, targets: [],
+  });
+  const deficit = (key: StatKey, label: string, unit: "" | "%" = ""): PriorityRecommendation =>
+    ({ key, label, unit, current: 0, target: 100, deficit: 100, priority: "最優先", rationale: "テスト" });
+
+  // シーザーの現行ガイド（IV=会心、V=物理/貫通、VI=衝撃力）。hp と defense の主ステータス欄を持たない。
+  const caesarGuide = guideWith([{ slot: "IV", value: "会心率 / 会心ダメージ" }, { slot: "V", value: "物理属性ダメージ / 貫通率" }, { slot: "VI", value: "衝撃力" }]);
+
+  it("再現テスト: 主ステータス欄が無い目標が同じ部位へ相反する変更を出さない", () => {
+    const actions = equipmentActionsFor(caesarGuide, [], [deficit("hp", "HP"), deficit("defense", "防御力")]);
+    // 修正前は hp も defense も既定部位の先頭（IV）を指し、「IV を HP へ」「IV を 防御力へ」を同時に返していた。
+    expect(actions).toHaveLength(2);
+    expect(actions.every((action) => action.action === "サブステータスを厳選")).toBe(true);
+    expect(actions.every((action) => action.slotScope === "any")).toBe(true);
+    expect(actions.some((action) => action.action === "主ステータスを変更")).toBe(false);
+    expect(new Set(actions.map((action) => action.slot))).toEqual(new Set(["全部位"]));
+  });
+
+  it("ガイドの主ステータス方針を壊す提案を出さない（セス・蒼角・潘引壺の形）", () => {
+    const attackGuide = guideWith([{ slot: "IV", value: "攻撃力%" }, { slot: "V", value: "攻撃力%" }, { slot: "VI", value: "異常掌握 / エネルギー自動回復" }]);
+    const actions = equipmentActionsFor(attackGuide, [], [deficit("hp", "HP")]);
+    expect(actions[0]).toMatchObject({ action: "サブステータスを厳選", slotScope: "any" });
+    expect(actions[0]?.currentMain).toBeNull();
+  });
+
+  it("HSR・原神でも同じ扱いになる（ファイノン・符玄・アルハイゼンの形）", () => {
+    const hsrGuide = guideWith([{ slot: "胴体", value: "会心率 / 会心ダメ" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "量子属性ダメージ" }, { slot: "連結縄", value: "攻撃力%" }]);
+    expect(equipmentActionsFor(hsrGuide, [], [deficit("hp", "HP"), deficit("defense", "防御力")]).every((action) => action.slotScope === "any")).toBe(true);
+    const giGuide = guideWith([{ slot: "時計", value: "元素熟知 / 攻撃力%" }, { slot: "杯", value: "草元素ダメージ" }, { slot: "冠", value: "会心率" }]);
+    expect(equipmentActionsFor(giGuide, [], [deficit("energyRecharge", "元素チャージ効率", "%")])[0]).toMatchObject({ slotScope: "any" });
+  });
+
+  it("ガイドが主ステータス欄を持つ場合は従来どおり部位を指す（ベンの形）", () => {
+    const benGuide = guideWith([{ slot: "IV", value: "防御力% / 会心ダメージ" }, { slot: "V", value: "防御力%" }, { slot: "VI", value: "防御力% / エネルギー自動回復" }]);
+    const actions = equipmentActionsFor(benGuide, [], [deficit("defense", "防御力")]);
+    expect(actions[0]).toMatchObject({ slot: "IV", slotScope: "specific", action: "主ステータスを変更" });
+  });
+
+  it("サブステータスに存在しないステータスには装備アクションを出さない（E4）", () => {
+    // ZZZ: 衝撃力・異常掌握・エネルギー自動回復・貫通率はディスクのメイン専用。
+    // （シーザーのガイドは VI に衝撃力を持つので、4キーとも欄が無いガイドで確かめる）
+    const zzzNoMainOnly = guideWith([{ slot: "IV", value: "会心率" }, { slot: "V", value: "電気属性ダメージ" }, { slot: "VI", value: "攻撃力%" }]);
+    for (const key of ["impact", "anomalyProficiency", "energyRegen", "penRatio"] as StatKey[]) {
+      expect(equipmentActionsFor(zzzNoMainOnly, [], [deficit(key, key)])).toEqual([]);
+    }
+    // HSR: EP回復効率は連結縄のメイン専用（ガイドに欄が無い形を作る）。
+    const hsrNoRope = guideWith([{ slot: "胴体", value: "会心率" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "攻撃力%" }, { slot: "連結縄", value: "攻撃力%" }]);
+    expect(equipmentActionsFor(hsrNoRope, [], [deficit("energyRecharge", "EP回復効率", "%")])).toEqual([]);
+    // 一方、サブで伸ばせるキーは従来どおり提案する。
+    expect(equipmentActionsFor(caesarGuide, [], [deficit("hp", "HP")])).toHaveLength(1);
+  });
+
+  it("ZZZ では実数ではなく割合の主ステータスを希望する（D7）", () => {
+    const zzzCases: Array<[StatKey, string]> = [["hp", "HP%"], ["hpPercent", "HP%"], ["defense", "防御力%"], ["defPercent", "防御力%"]];
+    for (const [key, expected] of zzzCases) {
+      expect(equipmentActionsFor(caesarGuide, [], [deficit(key, key)])[0]?.desiredStat).toBe(expected);
+    }
+    // 原神・HSR の同じ4キーは従来の表記のまま。
+    const giGuide = guideWith([{ slot: "時計", value: "HP%" }, { slot: "杯", value: "炎元素ダメージ" }, { slot: "冠", value: "会心率" }]);
+    expect(equipmentActionsFor(giGuide, [], [deficit("hp", "HP")])[0]).toMatchObject({ slot: "時計", desiredStat: "HP" });
+    const hsrGuide = guideWith([{ slot: "胴体", value: "防御力%" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "防御力%" }, { slot: "連結縄", value: "防御力%" }]);
+    expect(equipmentActionsFor(hsrGuide, [], [deficit("defense", "防御力")])[0]).toMatchObject({ slot: "胴体", desiredStat: "防御力" });
+    // EP回復効率は照合用の語（「元素チャージ」）ではなく、そのゲームの呼び名で提案する。
+    const kafkaRope = guideWith([{ slot: "胴体", value: "効果命中" }, { slot: "脚部", value: "速度" }, { slot: "次元界オーブ", value: "雷属性ダメージ" }, { slot: "連結縄", value: "EP回復効率 / 攻撃力%" }]);
+    expect(equipmentActionsFor(kafkaRope, [], [deficit("energyRecharge", "EP回復効率", "%")])[0]).toMatchObject({ slot: "連結縄", desiredStat: "EP回復効率" });
+    const giRope = guideWith([{ slot: "時計", value: "元素チャージ効率" }, { slot: "杯", value: "水元素ダメージ" }, { slot: "冠", value: "会心率" }]);
+    expect(equipmentActionsFor(giRope, [], [deficit("energyRecharge", "元素チャージ効率", "%")])[0]).toMatchObject({ slot: "時計", desiredStat: "元素チャージ効率" });
+  });
+
+  it("全251名のガイドで、推奨主ステータスを別の値へ変えるよう促す提案が0件になる", () => {
+    const conflicts: string[] = [];
+    for (const [game, names] of Object.entries(CHARACTER_GUIDE_CATALOG) as Array<[string, string[]]>) {
+      for (const name of names) {
+        const guide = game === "hsr"
+          ? guideFor(name, HSR_RUNTIME_PATHS[name] ?? "")
+          : game === "genshin"
+            ? genshinGuide(name)
+            : zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
+        const recommendations = guide.targets.map((target) => deficit(target.key, target.label, target.unit));
+        for (const action of equipmentActionsFor(guide, [], recommendations)) {
+          if (action.slotScope !== "specific" || action.action !== "主ステータスを変更") continue;
+          const guideValue = guide.mainStats.find((entry) => entry.slot === action.slot)?.value ?? "";
+          // 部位はガイドが対象ステータスを指定しているものだけを選ぶので、必ずガイド値に含まれる。
+          if (!guideValue.includes(action.desiredStat.replace("%", ""))) conflicts.push(`${game}:${name}:${action.slot}:${action.desiredStat}`);
+        }
+      }
+    }
+    expect(conflicts).toEqual([]);
+  });
+});
+
+describe("Enka経路の遺物サブ・セット効果（Phase D）", () => {
+  const STATIC = {
+    characters: { "1310": { name: "ホタル", element: "Fire", path: "Warrior" } },
+    lightCones: {},
+    relicSets: {
+      "108": { name: "テスト2セット", properties: [[{ type: "CriticalDamageBase", value: 0.16 }], []] },
+      "109": { name: "テスト4セット", properties: [[{ type: "SpeedAddedRatio", value: 0.06 }], [{ type: "SpeedAddedRatio", value: -0.08 }]] },
+      "110": { name: "条件付きのみ", properties: [[], []] },
+    },
+    characterPromotions: { "1310": { values: [{ hp: { base: 900, step: 56 }, atk: { base: 55, step: 3 }, def: { base: 50, step: 3 }, spd: { base: 100, step: 0 }, crit_rate: { base: 0.05 }, crit_dmg: { base: 0.5 } }] } },
+    characterSkillTrees: { "0": {} },
+    lightConePromotions: {},
+    lightConeRanks: {},
+    properties: HSR_TEST_PROPERTIES,
+  };
+
+  const payloadWith = (relicList: unknown[]) => ({
+    uid: "800000011",
+    detailInfo: { nickname: "テスト", avatarDetailList: [{ avatarId: 1310, level: 80, promotion: 0, relicList }] },
+  });
+  const relic = (setID: string, type: number, props: Array<{ type: string; value: number }>) =>
+    ({ tid: Number(`6108${type}`), type, level: 15, _flat: { setID, props } });
+
+  const statOf = (data: ReturnType<typeof normalizeEnkaPayload>, name: string) =>
+    data.characters[0]?.allStats.find((stat) => stat.name === name)?.display ?? "—";
+
+  it("再現テスト: 遺物サブの会心率・会心ダメージが合算される（E1）", () => {
+    // Enka はメインに Base 付き、サブに Base なしの型を使う。後者は properties.json の field が空で、
+    // 修正前は合算から丸ごと落ち、表示も「会心率 0」になっていた。
+    const withSubs = normalizeEnkaPayload(payloadWith([
+      relic("110", 1, [{ type: "HPDelta", value: 705.6 }, { type: "CriticalChance", value: 0.09072 }, { type: "CriticalDamage", value: 0.2268 }]),
+    ]), STATIC);
+    const withoutSubs = normalizeEnkaPayload(payloadWith([
+      relic("110", 1, [{ type: "HPDelta", value: 705.6 }]),
+    ]), STATIC);
+
+    expect(statOf(withSubs, "会心率")).toBe("14.1%");   // 基礎5% + サブ9.072%
+    expect(statOf(withoutSubs, "会心率")).toBe("5.0%");
+    expect(statOf(withSubs, "会心ダメ")).toBe("72.7%");  // 基礎50% + サブ22.68%
+    // サブの表示も百分率になる（修正前は実数扱いで「0」）。
+    expect(withSubs.characters[0]?.relics[0]?.subs.map((sub) => sub.display)).toEqual(["9.1%", "22.7%"]);
+  });
+
+  it("効果命中・効果抵抗・撃破特効・EP回復効率のサブも合算される（E1）", () => {
+    const data = normalizeEnkaPayload(payloadWith([
+      relic("110", 1, [{ type: "HPDelta", value: 1 }, { type: "StatusProbability", value: 0.1 }, { type: "StatusResistance", value: 0.2 }, { type: "BreakDamageAddedRatio", value: 0.3 }, { type: "SPRatio", value: 0.05 }]),
+    ]), STATIC);
+    expect(statOf(data, "効果命中")).toBe("10.0%");
+    expect(statOf(data, "効果抵抗")).toBe("20.0%");
+    expect(statOf(data, "撃破特効")).toBe("30.0%");
+    expect(statOf(data, "EP回復効率")).toBe("105.0%");
+  });
+
+  it("再現テスト: 遺物セット効果の無条件分が乗る（E2）", () => {
+    const one = normalizeEnkaPayload(payloadWith([relic("108", 1, [{ type: "HPDelta", value: 1 }])]), STATIC);
+    const two = normalizeEnkaPayload(payloadWith([
+      relic("108", 1, [{ type: "HPDelta", value: 1 }]), relic("108", 2, [{ type: "HPDelta", value: 1 }]),
+    ]), STATIC);
+    // 1個では乗らず、2個そろって初めて2セット効果（会心ダメージ+16%）が乗る。
+    expect(statOf(one, "会心ダメ")).toBe("50.0%");
+    expect(statOf(two, "会心ダメ")).toBe("66.0%");
+  });
+
+  it("4セットでは2セット分も累積し、マイナスの効果も符号どおりに効く（E2）", () => {
+    const twoPiece = normalizeEnkaPayload(payloadWith([
+      relic("109", 1, [{ type: "HPDelta", value: 1 }]), relic("109", 2, [{ type: "HPDelta", value: 1 }]),
+    ]), STATIC);
+    const fourPiece = normalizeEnkaPayload(payloadWith([
+      relic("109", 1, [{ type: "HPDelta", value: 1 }]), relic("109", 2, [{ type: "HPDelta", value: 1 }]),
+      relic("109", 3, [{ type: "HPDelta", value: 1 }]), relic("109", 4, [{ type: "HPDelta", value: 1 }]),
+    ]), STATIC);
+    // 基礎速度100。2セットは +6%、4セットは +6% と -8% の累積で -2%。
+    expect(statOf(twoPiece, "速度")).toBe("106.0");
+    expect(statOf(fourPiece, "速度")).toBe("98.0");
+  });
+
+  it("条件付き効果しか持たないセット（properties が空）は乗らない（E2）", () => {
+    const data = normalizeEnkaPayload(payloadWith([
+      relic("110", 1, [{ type: "HPDelta", value: 1 }]), relic("110", 2, [{ type: "HPDelta", value: 1 }]),
+    ]), STATIC);
+    expect(statOf(data, "速度")).toBe("100.0");
+    expect(statOf(data, "会心ダメ")).toBe("50.0%");
+  });
+
+  it("セットを解決できないときは比較を保留する（fail closed）", () => {
+    const data = normalizeEnkaPayload(payloadWith([
+      relic("999", 1, [{ type: "HPDelta", value: 1 }]),
+    ]), STATIC);
+    expect(data.characters[0]?.statsStatus).toBe("unavailable");
+    expect(data.characters[0]?.comparisons.every((comparison) => comparison.current === null)).toBe(true);
   });
 });

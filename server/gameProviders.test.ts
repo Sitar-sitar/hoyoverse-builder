@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { normalizeGenshinPayload, normalizeZzzPayload } from "./gameProviders";
+import { generatedZzzGuide } from "./individualGuides";
 
 describe("原神公開プロフィールの正規化", () => {
   it("武器・聖遺物・主要ステータスを共通表示モデルへ変換する", () => {
@@ -241,5 +242,69 @@ describe("ZZZ公開プロフィールの正規化", () => {
     expect(byName["浮波柚葉"]?.comparisons.find((comparison) => comparison.key === "attack")?.targets["目標"]).toBe(3000);
     expect(byName["星見雅"]?.guide.targetContext).toContain("M2");
     ["星見雅", "浮波柚葉"].forEach((name) => expect(byName[name]?.guide.dataAsOf).toBe("2026-08-25"));
+  });
+});
+
+describe("ZZZ 新特性「鋭御」（Phase B）", () => {
+  const catalog = {
+    avatars: { "1611": { Name: "Avatar_Armorer", ElementTypes: ["Ether"], ProfessionType: "Armorer", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 1000, "12101": 100, "13101": 600, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] } },
+    weapons: {},
+    equipments: { Items: {}, Suits: {} },
+    locs: { ja: { Avatar_Armorer: "テスト鋭御" } },
+    property: { "11101": { Name: "HP", Format: "{0:0}" }, "12101": { Name: "AttackBase", Format: "{0:0}" }, "13101": { Name: "DefenceBase", Format: "{0:0}" }, "20101": { Name: "CritRateBase", Format: "{0:0.0}%" }, "21101": { Name: "CritDmgBase", Format: "{0:0.0}%" } },
+  };
+  const payload = (profession: string) => ({
+    uid: "1300000001",
+    PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+      { Id: 1611, Level: 60, TalentLevel: 0, EquippedList: [] },
+    ] } },
+  });
+
+  it("特性が「鋭御」と表示され、防御力系の共通ガイドになる（D1・D2）", () => {
+    const result = normalizeZzzPayload(payload("Armorer"), catalog);
+    const character = result.characters[0];
+    expect(character?.path).toBe("鋭御");            // 修正前は英語コードの「Armorer」
+    expect(character?.guide.profileId).toBe("def");  // 修正前は強攻（crit）へ落ちていた
+    expect(character?.guide.targets).toEqual([]);
+    expect(character?.guide.mainStats.find((stat) => stat.slot === "VI")?.value).toBe("防御力%");
+  });
+
+  it("目標を置かない理由が最終応答に残る（D6）", () => {
+    const character = normalizeZzzPayload(payload("Armorer"), catalog).characters[0];
+    expect(character?.guide.targetContext).toContain("推測で登録していません");
+    expect(character?.guide.relicSet).toBe("公開ビルドに基づく防御力スケーリング向けドライバディスク");
+    expect(character?.guide.planarSet).toBe("防御力を主軸に、会心は個別ガイドで補う");
+    expect(character?.guide.mainStats.map((stat) => stat.value)).toEqual(["会心率 / 会心ダメージ", "属性ダメージ / 貫通率", "防御力%"]);
+  });
+
+  it("既存6特性の共通ガイドは変わらない", () => {
+    const attack = generatedZzzGuide("テスト強攻", "Attack");
+    expect(attack.profileId).toBe("crit");
+    expect(attack.targetContext).toContain("テスト強攻用の現行公開ビルド");
+    expect(generatedZzzGuide("テスト防護", "Defense").profileId).toBe("tank");
+    expect(generatedZzzGuide("テスト命破", "Rupture").profileId).toBe("rupture");
+  });
+
+  it("再現テスト: HP・防御力の目標が実値で比較される（D3）", () => {
+    // シーザー（HP・防御力を目標に持つ）と同じ形。修正前は values にキーが無く常に null だった。
+    const result = normalizeZzzPayload({
+      uid: "1300000001",
+      PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+        { Id: 1221, Level: 60, TalentLevel: 0, EquippedList: [] },
+      ] } },
+    }, {
+      ...catalog,
+      avatars: { "1221": { Name: "Avatar_Caesar", ElementTypes: ["Physical"], ProfessionType: "Defense", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 12000, "12101": 700, "13101": 900, "12201": 150, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] } },
+      locs: { ja: { Avatar_Caesar: "シーザー" } },
+      property: { ...catalog.property, "12201": { Name: "ImpactBase", Format: "{0:0}" } },
+    }).characters[0];
+
+    const hp = result?.comparisons.find((comparison) => comparison.key === "hp");
+    const defense = result?.comparisons.find((comparison) => comparison.key === "defense");
+    expect(hp?.current).toBe(12000);
+    expect(defense?.current).toBe(900);
+    // 表示用の最終ステータスと同じ値であること。
+    expect(result?.allStats.find((stat) => stat.name === "HP")?.display).toBe("12000");
+    expect(result?.allStats.find((stat) => stat.name === "防御力")?.display).toBe("900");
   });
 });
