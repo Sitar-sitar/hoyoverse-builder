@@ -113,6 +113,18 @@ type Contribution = { type: string; value: number };
 export const FIELD_TO_COMPONENT: Record<string, Component> = { hp: "hp", atk: "attack", def: "defense", spd: "speed" };
 export const FIELD_TO_STAT_KEY: Record<string, StatKey> = { crit_rate: "critRate", crit_dmg: "critDmg", break_dmg: "breakEffect", effect_hit: "effectHitRate", effect_res: "effectRes", sp_rate: "energyRecharge" };
 
+/**
+ * Enka の `_flat.props` は、メインに `Base` 付きの型を、サブに `Base` なしの型を使う。
+ * StarRailRes の properties.json は後者の `field` を "" にしているため `FIELD_TO_STAT_KEY` を引けず、
+ * 会心率・会心ダメージ・効果命中・効果抵抗・撃破特効・EP回復効率のサブが合算から丸ごと落ちていた。
+ * 型名で対応付けて救う。値は `Base` 付きと同じ比率（例: CriticalChance 0.09072 = 9.072%）で、
+ * properties.json の `percent` は `Base` 付きと食い違うため参照しない。
+ */
+const SUB_AFFIX_TYPE_TO_STAT_KEY: Record<string, StatKey> = {
+  CriticalChance: "critRate", CriticalDamage: "critDmg", StatusProbability: "effectHitRate",
+  StatusResistance: "effectRes", BreakDamageAddedRatio: "breakEffect", SPRatio: "energyRecharge",
+};
+
 function propertyMeta(properties: Record<string, RawRecord>, type: string) {
   const raw = properties[type];
   const found = Boolean(raw);
@@ -133,7 +145,10 @@ function propertyDisplay(properties: Record<string, RawRecord>, source: RawRecor
   const meta = propertyMeta(properties, type);
   const name = meta.name || type || "ステータス";
   if (value === null) return { name, display: "—" };
-  const display = meta.percent ? `${(value * 100).toFixed(1)}%` : value.toFixed(type === "SpeedDelta" || type === "BaseSpeed" ? 1 : 0);
+  // Base なしの型は properties.json の percent が Base 付きと食い違う（例: CriticalChance は false）。
+  // 実際は比率なので、対応表に載っている型は百分率で表示する。
+  const percent = meta.percent || Boolean(SUB_AFFIX_TYPE_TO_STAT_KEY[type]);
+  const display = percent ? `${(value * 100).toFixed(1)}%` : value.toFixed(type === "SpeedDelta" || type === "BaseSpeed" ? 1 : 0);
   return { name, display };
 }
 
@@ -152,7 +167,7 @@ function classify(properties: Record<string, RawRecord>, contribution: Contribut
     if (contribution.type.startsWith("Base")) return { kind: "base", component, value: contribution.value };
     return meta.ratio ? { kind: "ratio", component, value: contribution.value } : { kind: "flat", component, value: contribution.value };
   }
-  const statKey = meta.field ? FIELD_TO_STAT_KEY[meta.field] : undefined;
+  const statKey = (meta.field ? FIELD_TO_STAT_KEY[meta.field] : undefined) ?? SUB_AFFIX_TYPE_TO_STAT_KEY[contribution.type];
   if (statKey) return { kind: "stat", key: statKey, value: contribution.value };
   // field="" の型（MaxHP/CriticalChance/StatusProbability等）はStarRailRes上「集計済み表示専用」の予約名であり、
   // 遺物・軌跡・光円錐ランクからの個別加算値ではない。0埋めの重複行として一般画面へ出さない。
@@ -258,6 +273,32 @@ function traceContributions(avatar: RawRecord, staticData: StaticIndex): Contrib
   return { list, ok: true };
 }
 
+/**
+ * 遺物セット効果（2セット・4セット）の無条件分を集める。
+ * relic_sets.json の `properties` は段階別の配列で、条件付き効果は `desc` にしか無いため自然に除かれる。
+ * MiHoMo の statistics もこの範囲（戦闘外・無条件）を含むので、両経路の値が揃う。
+ */
+function relicSetContributions(avatar: RawRecord, staticData: StaticIndex): ContributionResult {
+  const counts = new Map<string, number>();
+  for (const raw of array(avatar.relicList)) {
+    const setId = str(record(record(raw)._flat).setID);
+    if (!setId) continue;
+    counts.set(setId, (counts.get(setId) ?? 0) + 1);
+  }
+  const list: Contribution[] = [];
+  for (const [setId, count] of counts) {
+    const meta = staticData.relicSets[setId];
+    if (!meta) return { list: [], ok: false }; // セットを解決できないなら欠けた合算値で比較しない
+    const byTier = array(meta.properties);
+    // 4セットが成立するときは2セット分も乗る（ゲーム内と同じ累積）。値の符号はそのまま使う（負の効果もある）。
+    for (let tier = 0; tier < byTier.length; tier++) {
+      if (count < (tier + 1) * 2) break;
+      list.push(...collectContributions(byTier[tier]));
+    }
+  }
+  return { list, ok: true };
+}
+
 function lightConeRankContributions(cone: RawRecord, staticData: StaticIndex): ContributionResult {
   const coneId = str(cone.tid);
   if (!coneId) return { list: [], ok: true };
@@ -297,6 +338,9 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
   const traces = traceContributions(avatar, staticData);
   if (!traces.ok) return { status: "unavailable" };
 
+  const relicSets = relicSetContributions(avatar, staticData);
+  if (!relicSets.ok) return { status: "unavailable" };
+
   let rankContributions: Contribution[] = [];
   if (coneEquipped) {
     const rankResult = lightConeRankContributions(cone, staticData);
@@ -310,7 +354,7 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
   const statTotals: Partial<Record<StatKey, number>> = {};
   const other: OtherStat[] = [];
 
-  for (const contribution of [...relicContributions, ...traces.list, ...rankContributions]) {
+  for (const contribution of [...relicContributions, ...relicSets.list, ...traces.list, ...rankContributions]) {
     const classified = classify(staticData.properties, contribution);
     if (classified.kind === "base") continue; // Base* は光円錐 _flat.props からの基礎値上書きとして既に消費済み
     if (classified.kind === "ratio") { totals[classified.component].ratio += classified.value; continue; }

@@ -74,6 +74,8 @@ export type EquipmentAction = {
   statLabel: string;
   action: "主ステータスを変更" | "サブステータスを厳選";
   slot: string;
+  /** "specific": slot は実在の部位。"any": 部位を特定しない（どの部位でもよいサブステータス厳選）。 */
+  slotScope: "specific" | "any";
   equippedName: string | null;
   currentMain: string | null;
   desiredStat: string;
@@ -140,21 +142,37 @@ function guideFamily(guide: GuideDefinition): "hsr" | "genshin" | "zzz" {
   return "hsr";
 }
 
-function defaultSlotsForStat(family: "hsr" | "genshin" | "zzz", key: StatKey): string[] {
-  if (key === "critRate" || key === "critDmg") return [family === "genshin" ? "冠" : family === "zzz" ? "IV" : "胴体"];
-  if (key === "speed") return family === "hsr" ? ["脚部"] : family === "zzz" ? ["VI"] : [];
-  if (key === "energyRecharge") return family === "genshin" ? ["時計"] : family === "hsr" ? ["連結縄"] : ["VI"];
-  if (key === "elementalMastery") return family === "genshin" ? ["時計", "杯", "冠"] : [];
-  if (key === "anomalyMastery") return family === "zzz" ? ["IV", "VI"] : [];
-  if (key === "anomalyProficiency") return family === "zzz" ? ["VI"] : [];
-  if (key === "impact" || key === "energyRegen") return family === "zzz" ? ["VI"] : [];
-  if (key === "penRatio") return family === "zzz" ? ["V"] : [];
-  if (key === "breakEffect") return family === "hsr" ? ["連結縄"] : [];
-  if (key === "effectHitRate") return family === "hsr" ? ["胴体"] : [];
-  if (key === "attack" || key === "attackPercent") return family === "genshin" ? ["時計", "杯"] : family === "zzz" ? ["V", "VI"] : ["脚部", "連結縄"];
-  if (key === "hp" || key === "hpPercent" || key === "defense" || key === "defPercent") return family === "genshin" ? ["時計", "杯", "冠"] : ["胴体", "次元界オーブ", "連結縄"];
-  return [];
+/**
+ * そのゲームでサブステータスとして出現しうる StatKey。
+ * ガイドが主ステータス欄を持たないステータスは「部位を問わずサブで伸ばす」と案内するが、
+ * サブに出ないステータスでは実行不可能な助言になるため、ここで切り分ける。
+ * HSR: StarRailRes relic_sub_affixes.json のサブ12種（SPRatioBase＝EP回復効率は含まれない）。
+ * ZZZ: ディスクのサブは全部位共通で、貫通率・属性ダメージ・異常掌握・衝撃力・エネルギー自動回復はメイン専用。
+ */
+const SUBSTAT_CAPABLE_KEYS: Record<"hsr" | "genshin" | "zzz", ReadonlySet<StatKey>> = {
+  hsr: new Set<StatKey>(["hp", "hpPercent", "attack", "attackPercent", "defense", "defPercent", "speed", "critRate", "critDmg", "breakEffect", "effectHitRate", "effectRes"]),
+  genshin: new Set<StatKey>(["hp", "hpPercent", "attack", "attackPercent", "defense", "defPercent", "critRate", "critDmg", "elementalMastery", "energyRecharge"]),
+  zzz: new Set<StatKey>(["hp", "hpPercent", "attack", "attackPercent", "defense", "defPercent", "critRate", "critDmg", "anomalyMastery"]),
+};
+
+/**
+ * 装備アクションで「こうしたい」と示す主ステータス名。
+ * ZZZ のディスク IV〜VI が持てる HP・防御力は割合だけなので、実数表記（「HP」「防御力」）を提案しない。
+ * 原神・HSR は従来どおり STAT_MAIN_LABELS の先頭を使う。
+ */
+const ZZZ_DESIRED_STAT_LABELS: Partial<Record<StatKey, string>> = { hp: "HP%", hpPercent: "HP%", defense: "防御力%", defPercent: "防御力%" };
+/** 同じキーでもゲームで呼び名が違うもの。STAT_MAIN_LABELS の先頭は照合用の語なので、提案文にそのまま使えない。 */
+const DESIRED_STAT_LABELS_BY_FAMILY: Partial<Record<StatKey, Partial<Record<"hsr" | "genshin" | "zzz", string>>>> = {
+  energyRecharge: { hsr: "EP回復効率", genshin: "元素チャージ効率" },
+};
+
+function desiredStatLabel(family: "hsr" | "genshin" | "zzz", key: StatKey): string | undefined {
+  if (family === "zzz" && ZZZ_DESIRED_STAT_LABELS[key]) return ZZZ_DESIRED_STAT_LABELS[key];
+  return DESIRED_STAT_LABELS_BY_FAMILY[key]?.[family];
 }
+
+/** 部位を特定しないときに返す既定ラベル（日本語）。画面は slotScope で言語別の語へ差し替える。 */
+const ALL_SLOTS_LABEL = "全部位";
 
 function normalizedSlot(slot: string) {
   const normalized = slot.replace("時の砂", "時計").replace("空の杯", "杯").replace("理の冠", "冠").replace("ドライバディスク ", "").trim();
@@ -170,23 +188,35 @@ function mainStatMatchesGuide(currentMain: string | null, guideValue: string | u
 /** 未達ステータスを、公開プロフィール上の装備部位と主・サブステータスの具体的な見直しへ変換する。 */
 export function equipmentActionsFor(guide: GuideDefinition, relics: RelicForAction[], recommendations: PriorityRecommendation[]): EquipmentAction[] {
   const family = guideFamily(guide);
-  return recommendations.map((recommendation) => {
+  return recommendations.flatMap((recommendation): EquipmentAction[] => {
     const labels = STAT_MAIN_LABELS[recommendation.key];
+    const desiredStat = desiredStatLabel(family, recommendation.key) ?? labels[0] ?? recommendation.label;
     const configuredSlots = guide.mainStats.filter((entry) => labels.some((label) => entry.value.includes(label))).map((entry) => entry.slot);
-    const slot = (configuredSlots.length ? configuredSlots : defaultSlotsForStat(family, recommendation.key))[0] ?? guide.mainStats[0]?.slot ?? "装備部位";
+
+    // ガイドがこのステータスを主ステータスに指定していない＝主ステータスは別の目的で埋まっている。
+    // 部位を選んで上書きを促すと、出典で裏づけた推奨を崩す（全251名の計測で、既定部位を使う75件すべてが衝突していた）。
+    if (!configuredSlots.length) {
+      if (!SUBSTAT_CAPABLE_KEYS[family].has(recommendation.key)) return [];
+      return [{
+        recommendationKey: recommendation.key, statLabel: recommendation.label, action: "サブステータスを厳選",
+        slot: ALL_SLOTS_LABEL, slotScope: "any", equippedName: null, currentMain: null, desiredStat,
+        reason: `ガイドの主ステータスは別の役割で埋まっています。部位は問わないので、${desiredStat}のサブステータスが付く装備を優先して厳選します。`,
+      }];
+    }
+
+    const slot = configuredSlots[0];
     const equipped = relics.find((relic) => normalizedSlot(relic.slot ?? relic.name) === normalizedSlot(slot)) ?? null;
     const currentMain = equipped?.main?.name ?? null;
     const guideValue = guide.mainStats.find((entry) => normalizedSlot(entry.slot) === normalizedSlot(slot))?.value;
     const mainMatches = mainStatMatchesGuide(currentMain, guideValue, labels);
-    const desiredStat = labels[0] ?? recommendation.label;
     const action: EquipmentAction["action"] = mainMatches ? "サブステータスを厳選" : "主ステータスを変更";
-    return {
-      recommendationKey: recommendation.key, statLabel: recommendation.label, action, slot,
+    return [{
+      recommendationKey: recommendation.key, statLabel: recommendation.label, action, slot, slotScope: "specific",
       equippedName: equipped?.name ?? null, currentMain, desiredStat,
       reason: mainMatches
         ? `${slot}の主ステータスは${currentMain}です。${desiredStat}のサブステータスが付く個体を優先して厳選します。`
         : `${slot}${currentMain ? `は現在${currentMain}` : ""}です。${desiredStat}を主ステータスにした${equipped?.name ?? "装備"}へ変更すると不足分を補いやすくなります。`,
-    };
+    }];
   });
 }
 
