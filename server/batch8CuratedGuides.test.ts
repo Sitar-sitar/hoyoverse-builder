@@ -26,7 +26,7 @@ describe("第8バッチの個別ビルド", () => {
 
   it("原神3名を個別の公開プロフィール比較で正規化する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.6, "22": 1.5, "23": 1.8, "28": 300, "2000": 22000, "2001": 2000, "2002": 900 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000021), avatar(10000110), avatar(10000116)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000021), avatar(10000110), avatar(10000116)] }, {
       characters: {
         "10000021": { NameTextMapHash: 1, Element: "Fire", WeaponType: "WEAPON_BOW", SideIconName: "UI_Ambor" },
         "10000110": { NameTextMapHash: 2, Element: "Electric", WeaponType: "WEAPON_POLE", SideIconName: "UI_Iansan" },
@@ -43,7 +43,7 @@ describe("第8バッチの個別ビルド", () => {
 
   it("ZZZ3名を個別比較し、心象映画由来の戦闘中補正を現在値へ足さない", () => {
     const base = { Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 10000, "12101": 1800, "12201": 120, "20101": 500, "21101": 5000, "23101": 0, "31201": 94, "31401": 93 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1381, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1501, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1401, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },

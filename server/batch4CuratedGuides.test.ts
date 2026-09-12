@@ -29,7 +29,7 @@ describe("第4バッチのHSR個別ビルド", () => {
 describe("第4バッチの原神・ZZZ個別ビルド", () => {
   it("原神3名の個別ステータスを公開プロフィール経路で選択する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.8, "23": 1.3, "28": 300, "2000": 32000, "2001": 1800, "2002": 900 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000078), avatar(10000046), avatar(10000065)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000078), avatar(10000046), avatar(10000065)] }, {
       characters: {
         "10000078": { NameTextMapHash: 1, Element: "Grass", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Alhaitham" },
         "10000046": { NameTextMapHash: 2, Element: "Fire", WeaponType: "WEAPON_POLE", SideIconName: "UI_Hutao" },
@@ -50,7 +50,7 @@ describe("第4バッチの原神・ZZZ個別ビルド", () => {
 
   it("ZZZ3名の個別目標で異常掌握を衝撃力と混同せず、戦闘中効果を現在値に加えない", () => {
     const metadata = { ElementTypes: ["Physical"], ProfessionType: "Anomaly", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "12201": 86, "20101": 500, "21101": 5000, "31201": 150, "31401": 400 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1271, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1281, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1131, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },

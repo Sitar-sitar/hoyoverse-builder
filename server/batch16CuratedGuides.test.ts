@@ -88,7 +88,7 @@ describe("第16バッチ20名の個別ガイド", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.5, "23": 2, "28": 400, "2000": 50000, "2001": 2500, "2002": 900 }, equipList: [] });
     const ids = genshinTargets.map((target) => Number(target.sourceId));
     const names = genshinTargets.map((target) => target.displayName);
-    const payload = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: ids.map(avatar) }, {
+    const payload = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: ids.map(avatar) }, {
       characters: Object.fromEntries(ids.map((id, index) => [`${id}`, { NameTextMapHash: index + 1, Element: "Wind", WeaponType: "WEAPON_BOW", SideIconName: `UI_B16_${id}` }])),
       loc: { ja: Object.fromEntries(names.map((name, index) => [`${index + 1}`, name])) },
     });

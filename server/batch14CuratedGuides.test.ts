@@ -39,7 +39,7 @@ describe("第14バッチ20名の個別ガイド", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.5, "23": 2, "28": 400, "2000": 50000, "2001": 2500, "2002": 900 }, equipList: [] });
     const genshinIds = [10000097, 10000071, 10000115, 10000033, 10000104, 10000039, 10000079, 10000069];
     const names = ["セトス", "セノ", "ダリア", "タルタリヤ", "チャスカ", "ディオナ", "ディシア", "ティナリ"];
-    const genshin = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: genshinIds.map(avatar) }, {
+    const genshin = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: genshinIds.map(avatar) }, {
       characters: Object.fromEntries(genshinIds.map((id, index) => [`${id}`, { NameTextMapHash: index + 1, Element: "Elec", WeaponType: "WEAPON_BOW", SideIconName: `UI_B14_${id}` }])),
       loc: { ja: Object.fromEntries(names.map((name, index) => [`${index + 1}`, name])) },
     });
@@ -52,7 +52,7 @@ describe("第14バッチ20名の個別ガイド", () => {
     const agentMetadata = { Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 10000, "12101": 1800, "12201": 180, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
     const zzzIds = [1441, 1241, 1341, 1491, 1201, 1511];
     const zzzNames = ["狛野真斗", "朱鳶", "照", "千夏", "浅羽悠真", "南宮羽"];
-    const zzz = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: zzzIds.map((Id) => ({ Id, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] })) } } }, {
+    const zzz = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: zzzIds.map((Id) => ({ Id, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] })) } } }, {
       avatars: Object.fromEntries(zzzIds.map((id, index) => [`${id}`, { ...agentMetadata, Name: `Avatar_B14_${id}`, ElementTypes: ["Ether"], ProfessionType: "Support" }])),
       weapons: { "12001": { ItemName: "Weapon_Test", ImagePath: "/ui/zzz/weapon.png", MainStat: { PropertyId: 12101, PropertyValue: 50 }, SecondaryStat: {} } }, equipments: { Items: {}, Suits: {} },
       locs: { ja: { ...Object.fromEntries(zzzIds.map((id, index) => [`Avatar_B14_${id}`, zzzNames[index]])), Weapon_Test: "テスト音動機" } }, property: { "11101": { Name: "HP", Format: "{0:0}" }, "12101": { Name: "AttackBase", Format: "{0:0}" }, "12201": { Name: "Impact", Format: "{0:0}" }, "20101": { Name: "CritRateBase", Format: "{0:0.0}%" }, "21101": { Name: "CritDmgBase", Format: "{0:0.0}%" } },

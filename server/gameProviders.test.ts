@@ -4,7 +4,7 @@ import { normalizeGenshinPayload, normalizeZzzPayload } from "./gameProviders";
 describe("原神公開プロフィールの正規化", () => {
   it("武器・聖遺物・主要ステータスを共通表示モデルへ変換する", () => {
     const result = normalizeGenshinPayload({
-      uid: "618285856",
+      uid: "800000004",
       playerInfo: { nickname: "テスト旅人", level: 60 },
       avatarInfoList: [{
         avatarId: 10000002,
@@ -32,7 +32,7 @@ describe("原神公開プロフィールの正規化", () => {
 
   it("キャラクターごとに異なる有効ステータスと優先度注記を選択する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [], fightPropMap: { "20": 0.6, "22": 1.8, "23": 2.0, "28": 800, "2000": 40000, "2001": 3000, "2002": 3200 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000002), avatar(10000073), avatar(10000030)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000002), avatar(10000073), avatar(10000030)] }, {
       characters: {
         "10000002": { NameTextMapHash: 1, Element: "Ice", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_AvatarIcon_Side_Ayaka" },
         "10000073": { NameTextMapHash: 2, Element: "Grass", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_AvatarIcon_Side_Nahida" },
@@ -52,7 +52,7 @@ describe("原神公開プロフィールの正規化", () => {
 
   it("精密定義がない原神キャラクターにも個別プロファイルとデータ時点を付与する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [], fightPropMap: { "20": 0.6, "22": 1.8, "23": 1.8, "28": 850, "2000": 40000, "2001": 2500, "2002": 2700 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000023), avatar(10000065), avatar(10000034)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000023), avatar(10000065), avatar(10000034)] }, {
       characters: {
         "10000023": { NameTextMapHash: 1, Element: "Fire", WeaponType: "WEAPON_POLE", SideIconName: "UI_AvatarIcon_Side_Xiangling" },
         "10000065": { NameTextMapHash: 2, Element: "Electric", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_AvatarIcon_Side_Kuki" },
@@ -73,7 +73,7 @@ describe("原神公開プロフィールの正規化", () => {
 
   it("第2バッチの原神主力は個別の有効ステータスを比較する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [], fightPropMap: { "20": 0.75, "22": 1.6, "23": 2.0, "28": 120, "2000": 40000, "2001": 2400, "2002": 900 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000901), avatar(10000902), avatar(10000903)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000901), avatar(10000902), avatar(10000903)] }, {
       characters: {
         "10000901": { NameTextMapHash: 1, Element: "Fire", WeaponType: "WEAPON_POLE", SideIconName: "UI_Test_Arlecchino" },
         "10000902": { NameTextMapHash: 2, Element: "Water", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_Test_Neuvillette" },
@@ -93,7 +93,7 @@ describe("原神公開プロフィールの正規化", () => {
 
   it("第1バッチの原神4名は個別の最新目標と戦闘内凸の分離を返す", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.8, "23": 1.9, "28": 850, "2000": 40000, "2001": 2400, "2002": 2800 }, equipList: [] });
-    const result = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000089), avatar(10000047), avatar(10000032), avatar(10000103)] }, {
+    const result = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000089), avatar(10000047), avatar(10000032), avatar(10000103)] }, {
       characters: {
         "10000089": { NameTextMapHash: 1, Element: "Water", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Test_Furina" },
         "10000047": { NameTextMapHash: 2, Element: "Wind", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Test_Kazuha" },
@@ -119,7 +119,7 @@ describe("原神公開プロフィールの正規化", () => {
 describe("ZZZ公開プロフィールの正規化", () => {
   it("音動機・ドライバディスク・会心ステータスを共通表示モデルへ変換する", () => {
     const result = normalizeZzzPayload({
-      uid: "17287976",
+      uid: "10000001",
       PlayerInfo: {
         SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } },
         ShowcaseDetail: { AvatarList: [{
@@ -151,7 +151,7 @@ describe("ZZZ公開プロフィールの正規化", () => {
   it("キャラクターごとに異なる有効ステータスと優先度注記を選択する", () => {
     const baseMetadata = { ElementTypes: ["Elec"], ProfessionType: "Attack", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
     const result = normalizeZzzPayload({
-      uid: "17287976",
+      uid: "10000001",
       PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
         { Id: 1011, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
         { Id: 1331, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
@@ -176,7 +176,7 @@ describe("ZZZ公開プロフィールの正規化", () => {
 
   it("精密定義がないZZZエージェントにも個別プロファイルとデータ時点を付与する", () => {
     const metadata = { ElementTypes: ["Elec"], Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "17287976", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "10000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1011, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1101, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1181, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
@@ -198,7 +198,7 @@ describe("ZZZ公開プロフィールの正規化", () => {
 
   it("第2バッチのZZZエージェントは役割共通値でなく個別の目標軸を返す", () => {
     const metadata = { ElementTypes: ["Elec"], ProfessionType: "Anomaly", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1901, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1902, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1903, Level: 60, TalentLevel: 0, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
@@ -224,7 +224,7 @@ describe("ZZZ公開プロフィールの正規化", () => {
 
   it("第1バッチのZZZ2名は個別目標と戦闘内心象映画の分離を返す", () => {
     const metadata = { ElementTypes: ["Ice"], ProfessionType: "Anomaly", Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 100, "12101": 100, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const result = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const result = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1091, Level: 60, TalentLevel: 2, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1411, Level: 60, TalentLevel: 2, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
     ] } } }, {

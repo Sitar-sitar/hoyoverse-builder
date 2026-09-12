@@ -12,13 +12,13 @@ function createStorage() {
 describe("UID history", () => {
   it("stores the latest UID separately for each game", () => {
     const storage = createStorage();
-    saveLastUid("hsr", "600002947", storage);
-    saveLastUid("genshin", "618285856", storage);
-    saveLastUid("zzz", "1300622089", storage);
+    saveLastUid("hsr", "800000003", storage);
+    saveLastUid("genshin", "800000004", storage);
+    saveLastUid("zzz", "1300000001", storage);
 
-    expect(loadLastUid("hsr", storage)).toBe("600002947");
-    expect(loadLastUid("genshin", storage)).toBe("618285856");
-    expect(loadLastUid("zzz", storage)).toBe("1300622089");
+    expect(loadLastUid("hsr", storage)).toBe("800000003");
+    expect(loadLastUid("genshin", storage)).toBe("800000004");
+    expect(loadLastUid("zzz", storage)).toBe("1300000001");
   });
 
   it("ignores malformed or wrong-length UIDs", () => {

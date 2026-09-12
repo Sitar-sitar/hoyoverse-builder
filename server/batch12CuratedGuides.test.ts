@@ -45,7 +45,7 @@ describe("第12バッチ20名の個別ガイド", () => {
 
   it("原神・ZZZの個別数値目標を公開プロフィール正規化経路で選択し、未明示閾値を補わない", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.5, "23": 2, "28": 400, "2000": 50000, "2001": 2500, "2002": 900 }, equipList: [] });
-    const genshin = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000029), avatar(10000098), avatar(10000067), avatar(10000055), avatar(10000125), avatar(10000095)] }, {
+    const genshin = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000029), avatar(10000098), avatar(10000067), avatar(10000055), avatar(10000125), avatar(10000095)] }, {
       characters: {
         "10000029": { NameTextMapHash: 1, Element: "Fire", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_Klee" },
         "10000098": { NameTextMapHash: 2, Element: "Electric", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Clorinde" },
@@ -63,7 +63,7 @@ describe("第12バッチ20名の個別ガイド", () => {
     expect(giByName["シグウィン"]?.comparisons.find((comparison) => comparison.key === "hp")?.targets["目標"]).toBe(50000);
 
     const metadata = { Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 10000, "12101": 1800, "12201": 180, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const zzz = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
+    const zzz = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [
       { Id: 1031, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1571, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },
       { Id: 1291, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] },

@@ -40,7 +40,7 @@ describe("第13バッチ20名の個別ガイド", () => {
 
   it("原神・ZZZの個別目標を公開プロフィール正規化経路で選択する", () => {
     const avatar = (avatarId: number) => ({ avatarId, propMap: { "4001": { val: 90 } }, talentIdList: [1, 2], fightPropMap: { "20": 0.7, "22": 1.5, "23": 2, "28": 400, "2000": 50000, "2001": 2500, "2002": 900 }, equipList: [] });
-    const genshin = normalizeGenshinPayload({ uid: "618285856", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000107), avatar(10000088), avatar(10000090), avatar(10000003), avatar(10000114), avatar(10000043)] }, {
+    const genshin = normalizeGenshinPayload({ uid: "800000004", playerInfo: { nickname: "テスト旅人", level: 60 }, avatarInfoList: [avatar(10000107), avatar(10000088), avatar(10000090), avatar(10000003), avatar(10000114), avatar(10000043)] }, {
       characters: {
         "10000107": { NameTextMapHash: 1, Element: "Ice", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_Citlali" }, "10000088": { NameTextMapHash: 2, Element: "Ice", WeaponType: "WEAPON_CATALYST", SideIconName: "UI_Charlotte" },
         "10000090": { NameTextMapHash: 3, Element: "Fire", WeaponType: "WEAPON_POLE", SideIconName: "UI_Chevreuse" }, "10000003": { NameTextMapHash: 4, Element: "Wind", WeaponType: "WEAPON_SWORD_ONE_HAND", SideIconName: "UI_Jean" },
@@ -56,7 +56,7 @@ describe("第13バッチ20名の個別ガイド", () => {
     expect(gi["スクロース"]?.comparisons.find((comparison) => comparison.key === "elementalMastery")?.targets["目標"]).toBe(800);
 
     const metadata = { Image: "/ui/zzz/avatar.png", BaseProps: { "11101": 10000, "12101": 1800, "12201": 180, "20101": 500, "21101": 5000 }, GrowthProps: {}, PromotionProps: [{}], CoreEnhancementProps: [{}] };
-    const zzz = normalizeZzzPayload({ uid: "1300622089", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [1541, 1121, 1141, 1451, 1371, 1391].map((Id) => ({ Id, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] })) } } }, {
+    const zzz = normalizeZzzPayload({ uid: "1300000001", PlayerInfo: { SocialDetail: { ProfileDetail: { Nickname: "テストプロキシ", Level: 60 } }, ShowcaseDetail: { AvatarList: [1541, 1121, 1141, 1451, 1371, 1391].map((Id) => ({ Id, Level: 60, TalentLevel: 6, Weapon: { Id: 12001, Level: 60, BreakLevel: 0 }, EquippedList: [] })) } } }, {
       avatars: {
         "1541": { ...metadata, Name: "Avatar_Promeia", ElementTypes: ["Ice"], ProfessionType: "Anomaly" }, "1121": { ...metadata, Name: "Avatar_Ben", ElementTypes: ["Fire"], ProfessionType: "Defense" },
         "1141": { ...metadata, Name: "Avatar_Lycaon", ElementTypes: ["Ice"], ProfessionType: "Stun" }, "1451": { ...metadata, Name: "Avatar_Lucia", ElementTypes: ["Ether"], ProfessionType: "Support" },
