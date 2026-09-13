@@ -52,10 +52,16 @@ export function useAuth(options?: UseAuthOptions) {
   }, [logoutMutation, utils]);
 
   const state = useMemo(() => {
-    localStorage.setItem(
-      "manus-runtime-user-info",
-      JSON.stringify(meQuery.data)
-    );
+    // Auxiliary copy only. Authentication uses the query result, so a storage
+    // failure (blocked site data, private mode quota) must not stop rendering.
+    try {
+      localStorage.setItem(
+        "manus-runtime-user-info",
+        JSON.stringify(meQuery.data)
+      );
+    } catch {
+      // Ignore storage failures.
+    }
     return {
       user: meQuery.data ?? null,
       loading: meQuery.isLoading || logoutMutation.isPending,

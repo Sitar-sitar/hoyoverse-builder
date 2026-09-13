@@ -11,7 +11,7 @@ function defaultAdminReturnPath() {
 // the GitHub client secret, and the resulting GitHub access token are handled
 // only by the backend; the browser receives only the application session cookie.
 export const startLogin = (returnTo?: string) => {
-  const safeReturnTo = returnTo === "/admin/feedback" || returnTo === "/admin"
+  const safeReturnTo = returnTo === "/admin/feedback" || returnTo === "/admin" || returnTo === "/admin/display"
     ? returnTo
     : defaultAdminReturnPath();
   saveLoginReturnPath(safeReturnTo);

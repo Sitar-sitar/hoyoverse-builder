@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it } from "vitest";
-import { ADMIN_LOGIN_RETURN_PATH, consumeLoginReturnPath, LOGIN_RETURN_PATH_KEY, saveLoginReturnPath } from "./loginReturnPath";
+import { ADMIN_DISPLAY_RETURN_PATH, ADMIN_LOGIN_RETURN_PATH, consumeLoginReturnPath, LOGIN_RETURN_PATH_KEY, saveLoginReturnPath } from "./loginReturnPath";
 
 describe("管理者ログイン後の復帰先", () => {
   afterEach(() => sessionStorage.clear());
@@ -10,6 +10,11 @@ describe("管理者ログイン後の復帰先", () => {
     expect(sessionStorage.getItem(LOGIN_RETURN_PATH_KEY)).toBe(ADMIN_LOGIN_RETURN_PATH);
     expect(consumeLoginReturnPath()).toBe(ADMIN_LOGIN_RETURN_PATH);
     expect(consumeLoginReturnPath()).toBeNull();
+  });
+
+  it("表示デザインの管理画面も復帰先として受け付ける", () => {
+    saveLoginReturnPath(ADMIN_DISPLAY_RETURN_PATH);
+    expect(consumeLoginReturnPath()).toBe("/admin/display");
   });
 
   it("外部URLや任意の内部パスは復帰先として受け付けない", () => {

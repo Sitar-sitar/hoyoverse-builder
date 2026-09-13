@@ -6,10 +6,12 @@ import NotFound from "@/pages/NotFound";
 import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import { Suspense, lazy, useEffect } from "react";
 import AdminLogoutButton from "./components/AdminLogoutButton";
+import DisplayPreviewBanner from "./components/DisplayPreviewBanner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PublicCatalogShortcut from "./components/PublicCatalogShortcut";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { DisplaySettingsProvider, useDisplaySettings } from "./contexts/DisplaySettingsContext";
 
 // 画面はルート単位で遅延読み込みする（設計: docs/修正設計書_Pagesのルート単位コード分割_2026-09-10.md）。
 // NotFound は catch-all で小さいため同期のまま（遅延にすると 404 の前にフォールバックが一瞬出る）。
@@ -19,6 +21,7 @@ const GuideHistory = lazy(() => import("./pages/GuideHistory"));
 const TranslationFeedback = lazy(() => import("./pages/TranslationFeedback"));
 const AdminHome = lazy(() => import("./pages/AdminHome"));
 const FeedbackAdmin = lazy(() => import("./pages/FeedbackAdmin"));
+const DisplaySettingsAdmin = lazy(() => import("./pages/DisplaySettingsAdmin"));
 
 /** 画面チャンクの取得中に描く外枠だけのプレースホルダ。文言を出すと初回表示でちらつくため空にする。 */
 function RouteFallback() {
@@ -28,6 +31,8 @@ function RouteFallback() {
 function Router() {
   const [, setLocation] = useLocation();
   const { isAuthenticated, loading } = useAuth();
+  // 前回値が無い初回訪問だけ、公開中の見せ方を最大600ms待ってから描く（設計 §4.2.3）。
+  const { ready } = useDisplaySettings();
 
   useEffect(() => {
     if (loading || !isAuthenticated) return;
@@ -36,6 +41,8 @@ function Router() {
       setLocation(returnTo);
     }
   }, [isAuthenticated, loading, setLocation]);
+
+  if (!ready) return <RouteFallback />;
 
   return (
     <Suspense fallback={<RouteFallback />}>
@@ -46,6 +53,7 @@ function Router() {
         <Route path={"/feedback"} component={TranslationFeedback} />
         <Route path={"/admin"} component={AdminHome} />
         <Route path={"/admin/feedback"} component={FeedbackAdmin} />
+        <Route path={"/admin/display"} component={DisplaySettingsAdmin} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
@@ -64,11 +72,14 @@ function App() {
         <TooltipProvider>
           <LanguageProvider>
             <Toaster />
-            <WouterRouter base={routerBase}>
-              <Router />
-              <PublicCatalogShortcut />
-              <AdminLogoutButton />
-            </WouterRouter>
+            <DisplaySettingsProvider>
+              <WouterRouter base={routerBase}>
+                <DisplayPreviewBanner />
+                <Router />
+                <PublicCatalogShortcut />
+                <AdminLogoutButton />
+              </WouterRouter>
+            </DisplaySettingsProvider>
           </LanguageProvider>
         </TooltipProvider>
       </ThemeProvider>
