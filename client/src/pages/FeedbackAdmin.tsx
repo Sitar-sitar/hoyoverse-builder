@@ -4,7 +4,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { startLogin } from "@/const";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { trpc } from "@/lib/trpc";
-import { ArrowLeft, LogIn, ShieldAlert } from "lucide-react";
+import { ArrowLeft, LayoutDashboard, LogIn, Palette, ShieldAlert } from "lucide-react";
 import React, { useMemo, useState } from "react";
 import { Link } from "wouter";
 
@@ -79,7 +79,7 @@ export default function FeedbackAdmin() {
   };
 
   return <div className="min-h-screen overflow-hidden">
-    <header className="container pt-6 sm:pt-8"><div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3"><div className="flex items-center gap-3"><span className="inline-block h-2 w-2 rounded-full bg-amber-700" /><p className="detail-mono text-[9px] text-stone-600">ADMIN / TRANSLATION QUALITY</p></div><div className="flex items-center gap-2"><LanguageSwitcher /><Link href="/"><Button variant="ghost" size="sm" className="h-8 rounded-none text-[10px] text-stone-600 hover:bg-stone-200"><ArrowLeft className="h-3.5 w-3.5" />{t("backToLookup")}</Button></Link></div></div></header>
+    <header className="container pt-6 sm:pt-8"><div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3"><div className="flex items-center gap-3"><span className="inline-block h-2 w-2 rounded-full bg-amber-700" /><p className="detail-mono text-[9px] text-stone-600">ADMIN / TRANSLATION QUALITY</p></div><div className="flex flex-wrap items-center justify-end gap-2"><LanguageSwitcher />{isAdmin && <><Link href="/admin" className="inline-flex h-8 items-center gap-1 px-2 text-[10px] text-stone-600 hover:bg-stone-200"><LayoutDashboard className="h-3.5 w-3.5" aria-hidden="true" />{t("adminPortal")}</Link><Link href="/admin/display" className="inline-flex h-8 items-center gap-1 px-2 text-[10px] text-stone-600 hover:bg-stone-200"><Palette className="h-3.5 w-3.5" aria-hidden="true" />{t("displayDesign")}</Link></>}<Link href="/"><Button variant="ghost" size="sm" className="h-8 rounded-none text-[10px] text-stone-600 hover:bg-stone-200"><ArrowLeft className="h-3.5 w-3.5" />{t("backToLookup")}</Button></Link></div></div></header>
     <main className="container pb-20 pt-10 sm:pt-16">
       <section className="mx-auto max-w-5xl"><p className="detail-mono text-[10px] text-amber-800">ADMIN REVIEW QUEUE</p><h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">{t("feedbackManagement")}</h1><p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{t("feedbackManagementIntro")}</p></section>
       {loading && <section className="mx-auto mt-12 max-w-5xl border-y border-stone-300 py-10 text-center"><p className="detail-mono text-[10px] text-stone-500">{t("loading")}</p></section>}
