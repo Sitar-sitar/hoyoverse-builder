@@ -58,6 +58,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
       { id: "gauge", label: "達成ゲージ", description: "1ステータス1本のゲージに妥協・目標・厳選と現在値を示し、全体の到達と装備提案（開閉式）を表示します。" },
     ],
   },
+  {
+    key: "partyFormation",
+    proposal: "C",
+    label: "推奨PTの隊列",
+    screens: ["UID照会", "キャラ図鑑"],
+    previewPath: "/characters",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "UID照会は PLAN の切替とメンバーの2列カード、図鑑は全案を並べて表示します。" },
+      { id: "formation", label: "隊列", description: "PLAN の横タブと、役割の色帯付きメンバーカードを横一列に並べ、目標変更を「基礎目標 → 編成目標」で表示します。図鑑でも案を切り替えられます。" },
+    ],
+  },
 ];
 
 export type DisplayVariants = Record<string, string>;

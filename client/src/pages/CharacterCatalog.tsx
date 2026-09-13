@@ -1,4 +1,5 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import PartyFormation, { type FormationOption } from "@/components/variants/PartyFormation";
 import ProgressionStepper, { type ProgressionProfile } from "@/components/variants/ProgressionStepper";
 import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
 import { Input } from "@/components/ui/input";
@@ -43,6 +44,16 @@ const uiText = {
     updated: "更新日",
     parties: "推奨PT",
     synergy: "編成ポイント",
+    partySelect: "編成を選択",
+    partyMembers: "編成メンバー",
+    partyTargets: "この編成での目標変更",
+    partyVersion: "対応バージョン",
+    partyDataAsOf: "編成基準日",
+    partyUpdated: "最終更新日",
+    partySource: "編成の参照",
+    partyCommunity: "SNS・コミュニティ照合",
+    partyChecked: "確認日",
+    partyNone: "このキャラクターの推奨PTは準備中です。",
     progression: "凸・星魂・心象映画",
     preparing: "このキャラクターの6段階効果データは準備中です。推奨ビルドとPTは確認できます。",
     uidFree: "UID不要",
@@ -72,6 +83,16 @@ const uiText = {
     updated: "Updated",
     parties: "Recommended Teams",
     synergy: "Team notes",
+    partySelect: "Select a team",
+    partyMembers: "Team members",
+    partyTargets: "Targets for this team",
+    partyVersion: "Game version",
+    partyDataAsOf: "Team data as of",
+    partyUpdated: "Last updated",
+    partySource: "Team reference",
+    partyCommunity: "Social & community checks",
+    partyChecked: "Checked",
+    partyNone: "Team recommendations for this character are being prepared.",
     progression: "Eidolons / Constellations / Mindscapes",
     preparing: "Six-stage progression data is still being prepared for this character. Build and team guidance is available.",
     uidFree: "No UID required",
@@ -101,6 +122,16 @@ const uiText = {
     updated: "更新日",
     parties: "推荐队伍",
     synergy: "配队要点",
+    partySelect: "选择队伍",
+    partyMembers: "队伍成员",
+    partyTargets: "此队的目标变更",
+    partyVersion: "适用版本",
+    partyDataAsOf: "队伍基准日",
+    partyUpdated: "最后更新日",
+    partySource: "队伍参考",
+    partyCommunity: "SNS与社区核对",
+    partyChecked: "核对日",
+    partyNone: "该角色的推荐队伍正在准备中。",
     progression: "星魂 / 命座 / 心象电影",
     preparing: "该角色的六阶段效果数据仍在整理中，推荐配装与队伍可以正常查看。",
     uidFree: "无需UID",
@@ -116,12 +147,15 @@ export default function CharacterCatalog() {
   const { language } = useLanguage();
   const copy = uiText[language];
   const progressionVariant = useDisplayVariant("progressionStepper");
+  const formationVariant = useDisplayVariant("partyFormation");
   const initialParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const requestedGame = initialParams.get("game");
   const initialGame = (requestedGame && requestedGame in GAMES ? requestedGame : "hsr") as GameId;
   const [game, setGame] = useState<GameId>(initialGame);
   const [selectedName, setSelectedName] = useState(initialParams.get("character") ?? "");
   const [filter, setFilter] = useState("");
+  // 案 C の図鑑だけで使う推奨PTの選択。legacy の全案一覧では使わない。
+  const [selectedPartyId, setSelectedPartyId] = useState("");
 
   const catalogQuery = trpc.build.referenceCatalog.useQuery(undefined, { staleTime: 10 * 60_000 });
   const entries = catalogQuery.data?.games[game] ?? [];
@@ -144,6 +178,11 @@ export default function CharacterCatalog() {
     url.searchParams.set("game", game);
     url.searchParams.set("character", selectedName);
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }, [game, selectedName]);
+
+  // ゲーム・キャラクターが変わったら先頭の案へ戻す（存在しない id も部品側で先頭に戻る）。
+  useEffect(() => {
+    setSelectedPartyId("");
   }, [game, selectedName]);
 
   const referenceQuery = trpc.build.reference.useQuery(
@@ -321,6 +360,18 @@ export default function CharacterCatalog() {
 
                 <section>
                   <div className="flex items-center gap-2 border-b border-stone-400 pb-3"><Users className="h-4 w-4 text-amber-800" /><h3 className="display-serif text-2xl font-semibold">{copy.parties}</h3></div>
+                  {formationVariant === "formation" ? (
+                    <PartyFormation
+                      options={reference.partyRecommendations.options as unknown as FormationOption[]}
+                      selectedId={selectedPartyId}
+                      onSelect={setSelectedPartyId}
+                      selectedName={reference.name}
+                      baseTargets={reference.guide.targets}
+                      language={language}
+                      tone="light"
+                      labels={{ select: copy.partySelect, members: copy.partyMembers, synergy: copy.synergy, targets: copy.partyTargets, version: copy.partyVersion, dataAsOf: copy.partyDataAsOf, updated: copy.partyUpdated, source: copy.partySource, community: copy.partyCommunity, checked: copy.partyChecked, noData: copy.partyNone }}
+                    />
+                  ) : (
                   <div className="mt-4 grid gap-4 xl:grid-cols-3">
                     {reference.partyRecommendations.options.map((option) => (
                       <article key={option.id} className="border border-stone-300 p-4">
@@ -338,6 +389,7 @@ export default function CharacterCatalog() {
                       </article>
                     ))}
                   </div>
+                  )}
                 </section>
 
                 <section>
