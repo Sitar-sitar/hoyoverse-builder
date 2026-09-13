@@ -1,10 +1,12 @@
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
+import { DISPLAY_VARIANTS, isKnownDisplayKey, isKnownDisplayVariant } from "@shared/displayVariants";
 import { characterReferenceCatalog, characterReferenceFor } from "./characterReference";
 import { createTranslationFeedback, getLookupAnalyticsDashboard, listTranslationFeedback, recordLookupAnalyticsEvent, updateTranslationFeedbackStatus } from "./db";
 import { lookupGameBuild } from "./gameProviders";
 import { guideUpdateHistory } from "./guideUpdateHistory";
+import { publishDisplaySettings, readAdminDisplaySettings, readPublicDisplaySettings } from "./displaySettings";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { adminProcedure, publicProcedure, router } from "./_core/trpc";
@@ -29,6 +31,25 @@ const analyticsFilterInput = z.object({
   if (input.startDate && input.endDate && input.startDate > input.endDate) {
     ctx.addIssue({ code: "custom", path: ["endDate"], message: "終了日は開始日以降を指定してください。" });
   }
+});
+
+const displayPublishInput = z.object({
+  changes: z.array(z.object({ key: z.string().trim().min(1).max(64), variant: z.string().trim().min(1).max(32) }))
+    .min(1)
+    .max(DISPLAY_VARIANTS.length),
+}).superRefine((input, ctx) => {
+  const seen = new Set<string>();
+  input.changes.forEach((change, index) => {
+    if (!isKnownDisplayKey(change.key)) {
+      ctx.addIssue({ code: "custom", path: ["changes", index, "key"], message: "Unknown display key" });
+    } else if (!isKnownDisplayVariant(change.key, change.variant)) {
+      ctx.addIssue({ code: "custom", path: ["changes", index, "variant"], message: "Unknown display variant" });
+    }
+    if (seen.has(change.key)) {
+      ctx.addIssue({ code: "custom", path: ["changes", index, "key"], message: "Duplicate display key" });
+    }
+    seen.add(change.key);
+  });
 });
 
 const startOfJst = (date: string) => new Date(`${date}T00:00:00.000+09:00`);
@@ -76,6 +97,27 @@ export const appRouter = router({
         }
         return result;
       }),
+  }),
+
+  display: router({
+    // 公開用。例外を投げず、取得できないときは全キー legacy を返す。照会分析は記録しない。
+    settings: publicProcedure.query(() => readPublicDisplaySettings()),
+    adminSettings: adminProcedure.query(async () => {
+      try {
+        return await readAdminDisplaySettings();
+      } catch (error) {
+        console.error("[DisplaySettings] Failed to load admin display settings:", error);
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to load display settings" });
+      }
+    }),
+    publish: adminProcedure.input(displayPublishInput).mutation(async ({ input }) => {
+      try {
+        return await publishDisplaySettings(input.changes);
+      } catch (error) {
+        console.error("[DisplaySettings] Failed to save display settings:", error);
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to save display settings" });
+      }
+    }),
   }),
 
   analytics: router({

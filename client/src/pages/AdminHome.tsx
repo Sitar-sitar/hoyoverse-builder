@@ -3,7 +3,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { startLogin } from "@/const";
 import { trpc } from "@/lib/trpc";
-import { Activity, ArrowLeft, BarChart3, Github, LogIn, LogOut, MessageSquareText, ShieldCheck } from "lucide-react";
+import { Activity, ArrowLeft, BarChart3, Github, LogIn, LogOut, MessageSquareText, Palette, ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
@@ -135,6 +135,11 @@ export default function AdminHome() {
                   <MessageSquareText className="h-5 w-5 text-amber-800" />
                   <h3 className="mt-4 font-serif text-2xl font-semibold">Feedback / Analytics</h3>
                   <p className="mt-2 text-sm leading-6 text-stone-600">翻訳フィードバックの対応状況変更、検索数・ゲーム別内訳・キャッシュヒット率を確認します。</p>
+                </Link>
+                <Link href="/admin/display" className="group border border-stone-300 bg-stone-50/50 p-6 transition-colors hover:border-stone-900 hover:bg-stone-100">
+                  <Palette className="h-5 w-5 text-amber-800" />
+                  <h3 className="mt-4 font-serif text-2xl font-semibold">表示デザイン</h3>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">公開サイトの見せ方を案ごとにプレビューし、公開・現行への復帰を切り替えます。</p>
                 </Link>
                 <div className="border border-stone-300 bg-stone-50/50 p-6">
                   <ShieldCheck className="h-5 w-5 text-emerald-800" />

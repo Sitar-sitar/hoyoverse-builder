@@ -60,3 +60,16 @@ export const lookupAnalyticsEvents = mysqlTable("lookup_analytics_events", {
 ]);
 
 export type InsertLookupAnalyticsEvent = typeof lookupAnalyticsEvents.$inferInsert;
+
+/**
+ * Published display variant per display key (admin-switchable presentation).
+ * A missing row means the legacy presentation. Values are validated against
+ * shared/displayVariants.ts, so the column is not an enum. No user data is stored.
+ */
+export const siteDisplaySettings = mysqlTable("site_display_settings", {
+  settingKey: varchar("settingKey", { length: 64 }).primaryKey(),
+  variant: varchar("variant", { length: 32 }).notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type SiteDisplaySetting = typeof siteDisplaySettings.$inferSelect;

@@ -1,10 +1,12 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ProgressionStepper, { type ProgressionProfile } from "@/components/variants/ProgressionStepper";
+import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
 import { Input } from "@/components/ui/input";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trpc } from "@/lib/trpc";
 import { ArrowLeft, BookOpen, CheckCircle2, Loader2, Search, Users } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 type GameId = "hsr" | "genshin" | "zzz";
@@ -113,6 +115,7 @@ function localText(text: LocalizedText, language: "ja" | "en" | "zh-CN") {
 export default function CharacterCatalog() {
   const { language } = useLanguage();
   const copy = uiText[language];
+  const progressionVariant = useDisplayVariant("progressionStepper");
   const initialParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const requestedGame = initialParams.get("game");
   const initialGame = (requestedGame && requestedGame in GAMES ? requestedGame : "hsr") as GameId;
@@ -339,7 +342,9 @@ export default function CharacterCatalog() {
 
                 <section>
                   <div className="border-b border-stone-400 pb-3"><h3 className="display-serif text-2xl font-semibold">{copy.progression}</h3></div>
-                  {reference.constellations.dataStatus === "curated" && reference.constellations.effects.length ? (
+                  {progressionVariant === "stepper" ? (
+                    <ProgressionStepper game={game} tone="light" mode="catalog" profile={reference.constellations as unknown as ProgressionProfile} resetKey={`${game}:${reference.name}`} emptyText={copy.preparing} />
+                  ) : reference.constellations.dataStatus === "curated" && reference.constellations.effects.length ? (
                     <div className="mt-4 grid gap-3 sm:grid-cols-2">
                       {reference.constellations.effects.map((effect) => (
                         <article key={effect.level} className="border border-stone-300 p-4">

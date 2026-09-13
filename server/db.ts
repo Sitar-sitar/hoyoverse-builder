@@ -1,6 +1,6 @@
 import { and, count, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertTranslationFeedback, InsertUser, lookupAnalyticsEvents, translationFeedback, users } from "../drizzle/schema";
+import { InsertTranslationFeedback, InsertUser, lookupAnalyticsEvents, siteDisplaySettings, translationFeedback, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -175,4 +175,26 @@ export async function getLookupAnalyticsDashboard(filters: LookupAnalyticsFilter
   };
   const byGame = (["hsr", "genshin", "zzz"] as const).map((game) => ({ game, ...normalize(grouped.find((row) => row.game === game) ?? { totalLookups: 0, cacheHits: 0 }) }));
   return { filters: { game: filters.game ?? null, startDate: filters.startAt?.toISOString().slice(0, 10) ?? null, endDate: filters.endAt?.toISOString().slice(0, 10) ?? null }, ...normalize(total ?? { totalLookups: 0, cacheHits: 0 }), byGame };
+}
+
+export async function getDisplaySettingRows() {
+  const db = await getDb();
+  if (!db) throw new Error("Display settings storage is unavailable");
+  return db
+    .select({ settingKey: siteDisplaySettings.settingKey, variant: siteDisplaySettings.variant, updatedAt: siteDisplaySettings.updatedAt })
+    .from(siteDisplaySettings);
+}
+
+/** Upserts every change in one transaction so a partial publish is rolled back. */
+export async function upsertDisplaySettings(changes: Array<{ key: string; variant: string }>): Promise<void> {
+  const db = await getDb();
+  if (!db) throw new Error("Display settings storage is unavailable");
+  await db.transaction(async (tx) => {
+    for (const change of changes) {
+      await tx
+        .insert(siteDisplaySettings)
+        .values({ settingKey: change.key, variant: change.variant })
+        .onDuplicateKeyUpdate({ set: { variant: change.variant, updatedAt: sql`CURRENT_TIMESTAMP` } });
+    }
+  });
 }
