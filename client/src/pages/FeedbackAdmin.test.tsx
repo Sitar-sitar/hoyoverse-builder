@@ -61,6 +61,19 @@ describe("フィードバック管理画面", () => {
     expect(mocks.dashboardInput).toHaveBeenLastCalledWith({ game: "zzz", startDate: "2026-08-01", endDate: "2026-08-25" });
   });
 
+  it("管理者には管理者ポータルと表示デザインへのリンクを出す", () => {
+    render(<LanguageProvider><FeedbackAdmin /></LanguageProvider>);
+    expect(screen.getByRole("link", { name: "管理者ポータル" }).getAttribute("href")).toBe("/admin");
+    expect(screen.getByRole("link", { name: "表示デザイン" }).getAttribute("href")).toBe("/admin/display");
+  });
+
+  it("非管理者には管理画面へのリンクを出さない", () => {
+    mocks.authState = { user: { id: 2, role: "user" }, loading: false, isAuthenticated: true };
+    render(<LanguageProvider><FeedbackAdmin /></LanguageProvider>);
+    expect(screen.queryByRole("link", { name: "管理者ポータル" })).toBeNull();
+    expect(screen.queryByRole("link", { name: "表示デザイン" })).toBeNull();
+  });
+
   it("非管理者には一覧を表示しない", () => {
     mocks.authState = { user: { id: 2, role: "user" }, loading: false, isAuthenticated: true };
     render(<LanguageProvider><FeedbackAdmin /></LanguageProvider>);
