@@ -39,7 +39,8 @@ type PendingPublish = { changes: DisplayVariantChange[]; target: DisplayVariants
 const variantLabel = (key: string, id: string) =>
   DISPLAY_VARIANTS.find((definition) => definition.key === key)?.variants.find((variant) => variant.id === id)?.label ?? id;
 const keyLabel = (key: string) => DISPLAY_VARIANTS.find((definition) => definition.key === key)?.label ?? key;
-const toVariants = (entries: AdminEntry[]) => Object.fromEntries(entries.map((entry) => [entry.key, entry.variant]));
+// 登録表のキーが応答に無い場合も現行として扱い、ラジオを空にしない（R2）。
+const toVariants = (entries: AdminEntry[]) => ({ ...legacyDisplayVariants(), ...Object.fromEntries(entries.map((entry) => [entry.key, entry.variant])) });
 const formatJst = (value: string | null) => value
   ? new Intl.DateTimeFormat("ja-JP", { timeZone: "Asia/Tokyo", dateStyle: "medium", timeStyle: "short" }).format(new Date(value))
   : "未保存（現行）";
