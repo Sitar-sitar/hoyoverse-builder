@@ -13,6 +13,7 @@ export const LANGUAGE_LABELS: Record<AppLanguage, string> = {
 const copy = {
   ja: {
     adminPortal: "管理者ポータル", displayDesign: "表示デザイン",
+    gaugeListLabel: "ステータスの到達状況", gaugeTargetsMet: "目標を満たす項目", gaugeOverallTier: "全体の到達", gaugeBelowBaseline: "妥協未満", gaugePending: "判定保留", gaugeAchieved: "達成", gaugeNotAchieved: "未達", gaugeUnknown: "未判定", gaugeBaseTarget: "変更前", gaugeMissing: "未取得",
     progressionStepList: "段を選択", progressionNextUnlock: "次に解放", progressionUnlockedStage: "解放済み", progressionLockedStage: "未解放", progressionTargetChange: "目標変更あり", progressionTargetHeading: "この段で変わる目標", progressionCaution: "注意",
     language: "言語", updates: "更新履歴", lookup: "照会", backToLookup: "照会画面へ",
     publicBuildIntelligence: "公開ビルド分析", uidOnly: "UIDのみ", archiveAccess: "公開プロフィールを照会",
@@ -45,6 +46,7 @@ const copy = {
   },
   en: {
     adminPortal: "Admin Portal", displayDesign: "Display Design",
+    gaugeListLabel: "Stat progress", gaugeTargetsMet: "Stats at target", gaugeOverallTier: "Overall tier", gaugeBelowBaseline: "Below baseline", gaugePending: "Pending", gaugeAchieved: "Met", gaugeNotAchieved: "Not met", gaugeUnknown: "Unknown", gaugeBaseTarget: "Before", gaugeMissing: "Not available",
     progressionStepList: "Select a stage", progressionNextUnlock: "Next unlock", progressionUnlockedStage: "Unlocked", progressionLockedStage: "Locked", progressionTargetChange: "Changes targets", progressionTargetHeading: "Targets changed at this stage", progressionCaution: "Note",
     language: "Language", updates: "Update History", lookup: "Lookup", backToLookup: "Back to Lookup",
     publicBuildIntelligence: "PUBLIC BUILD INTELLIGENCE", uidOnly: "UID ONLY", archiveAccess: "PUBLIC PROFILE LOOKUP",
@@ -77,6 +79,7 @@ const copy = {
   },
   "zh-CN": {
     adminPortal: "管理门户", displayDesign: "显示设计",
+    gaugeListLabel: "属性达成情况", gaugeTargetsMet: "达到目标的属性", gaugeOverallTier: "整体档位", gaugeBelowBaseline: "未达过渡", gaugePending: "暂不判定", gaugeAchieved: "已达成", gaugeNotAchieved: "未达成", gaugeUnknown: "未判定", gaugeBaseTarget: "变更前", gaugeMissing: "未获取",
     progressionStepList: "选择阶段", progressionNextUnlock: "下一次解锁", progressionUnlockedStage: "已解锁", progressionLockedStage: "未解锁", progressionTargetChange: "包含目标变更", progressionTargetHeading: "此阶段变更的目标", progressionCaution: "注意",
     language: "语言", updates: "更新记录", lookup: "查询", backToLookup: "返回查询",
     publicBuildIntelligence: "公开配装分析", uidOnly: "仅 UID", archiveAccess: "公开资料查询",

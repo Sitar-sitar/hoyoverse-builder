@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import DisplaySettingsAdmin from "./DisplaySettingsAdmin";
 
 type Entries = Array<{ key: string; variant: string; updatedAt: string | null }>;
-const entries = (variant: string, updatedAt: string | null = null): { entries: Entries } => ({ entries: [{ key: "progressionStepper", variant, updatedAt }] });
+const entries = (variant: string, updatedAt: string | null = null, gauge = "legacy"): { entries: Entries } => ({ entries: [{ key: "progressionStepper", variant, updatedAt }, { key: "statGauge", variant: gauge, updatedAt: null }] });
 
 const mocks = vi.hoisted(() => ({
   authState: { user: { id: 1, role: "admin" } as { id: number; role: string } | null, loading: false, isAuthenticated: true },
@@ -148,7 +148,7 @@ describe("DisplaySettingsAdmin", () => {
     fireEvent.click(screen.getByRole("radio", { name: /縦のタイムライン/ }));
     fireEvent.change(screen.getByLabelText("プレビューで開く画面"), { target: { value: "/" } });
     fireEvent.click(screen.getByRole("button", { name: /この組み合わせをプレビュー/ }));
-    expect(mocks.setPreview).toHaveBeenCalledWith({ progressionStepper: "stepper" });
+    expect(mocks.setPreview).toHaveBeenCalledWith({ progressionStepper: "stepper", statGauge: "legacy" });
     await waitFor(() => expect(window.location.pathname).toBe("/"));
   });
 
@@ -157,6 +157,23 @@ describe("DisplaySettingsAdmin", () => {
     renderPage();
     expect((screen.getByRole("radio", { name: /縦のタイムライン/ }) as HTMLInputElement).checked).toBe(true);
     expect((publishButton() as HTMLButtonElement).disabled).toBe(false);
+  });
+
+  it("R2 登録した達成ゲージも選択でき、公開する差分はそのキーだけになる", async () => {
+    renderPage();
+    expect([...document.querySelectorAll("fieldset > legend")].map((legend) => legend.textContent)).toEqual(["案 D凸の6段表示", "案 A目標の達成ゲージ"]);
+    fireEvent.click(screen.getByRole("radio", { name: /達成ゲージ/ }));
+    fireEvent.click(publishButton());
+    const dialog = await screen.findByRole("alertdialog");
+    expect(within(dialog).getAllByRole("listitem").map((item) => item.textContent)).toEqual(["目標の達成ゲージ：現行 → 達成ゲージ"]);
+  });
+
+  it("R2 応答に無い登録キーは現行として選択済みにする", () => {
+    mocks.adminQuery = { data: { entries: [{ key: "progressionStepper", variant: "legacy", updatedAt: null }] }, isLoading: false, isError: false, refetch: vi.fn(async () => ({ data: entries("legacy"), isError: false })) };
+    renderPage();
+    const legacyRadios = screen.getAllByRole("radio", { name: /現行/ }) as HTMLInputElement[];
+    expect(legacyRadios).toHaveLength(2);
+    expect(legacyRadios.every((radio) => radio.checked)).toBe(true);
   });
 
   it("すべて現行に戻すは、公開中の差分だけを legacy にする", async () => {

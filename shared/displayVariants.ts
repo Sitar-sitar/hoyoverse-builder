@@ -47,6 +47,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
       { id: "stepper", label: "縦のタイムライン", description: "1〜6段をゲームごとの記号付きの縦タイムラインで並べ、選んだ段の詳細を表示します。" },
     ],
   },
+  {
+    key: "statGauge",
+    proposal: "A",
+    label: "目標の達成ゲージ",
+    screens: ["UID照会"],
+    previewPath: "/",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "目標値を表（スマートフォンではカード）で並べ、次の強化をカードで表示します。" },
+      { id: "gauge", label: "達成ゲージ", description: "1ステータス1本のゲージに妥協・目標・厳選と現在値を示し、全体の到達と装備提案（開閉式）を表示します。" },
+    ],
+  },
 ];
 
 export type DisplayVariants = Record<string, string>;
