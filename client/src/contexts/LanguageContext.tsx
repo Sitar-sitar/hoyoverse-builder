@@ -13,6 +13,7 @@ export const LANGUAGE_LABELS: Record<AppLanguage, string> = {
 const copy = {
   ja: {
     adminPortal: "管理者ポータル", displayDesign: "表示デザイン",
+    portalSubtitle: "崩壊：スターレイル / 原神 / ゼンレスゾーンゼロ のビルド支援", portalGameHsr: "崩壊：スターレイル", portalGameGenshin: "原神", portalGameZzz: "ゼンレスゾーンゼロ", portalLookup: "UIDで照会", portalCatalog: "図鑑を見る", portalCatalogCount: "図鑑の収録数", portalCountFailed: "収録数を取得できませんでした。", portalCountRetry: "再取得", portalChangeUid: "UIDを変更", portalOtherGames: "ほかのゲーム",
     formationBaseTarget: "基礎目標", formationTeamTarget: "編成目標", formationCurrentCharacter: "表示中のキャラクター",
     gaugeListLabel: "ステータスの到達状況", gaugeTargetsMet: "目標を満たす項目", gaugeOverallTier: "全体の到達", gaugeBelowBaseline: "妥協未満", gaugePending: "判定保留", gaugeAchieved: "達成", gaugeNotAchieved: "未達", gaugeUnknown: "未判定", gaugeBaseTarget: "変更前", gaugeMissing: "未取得",
     progressionStepList: "段を選択", progressionNextUnlock: "次に解放", progressionUnlockedStage: "解放済み", progressionLockedStage: "未解放", progressionTargetChange: "目標変更あり", progressionTargetHeading: "この段で変わる目標", progressionCaution: "注意",
@@ -47,6 +48,7 @@ const copy = {
   },
   en: {
     adminPortal: "Admin Portal", displayDesign: "Display Design",
+    portalSubtitle: "Build support for Honkai: Star Rail / Genshin Impact / Zenless Zone Zero", portalGameHsr: "Honkai: Star Rail", portalGameGenshin: "Genshin Impact", portalGameZzz: "Zenless Zone Zero", portalLookup: "Look up by UID", portalCatalog: "Open catalog", portalCatalogCount: "Catalog entries", portalCountFailed: "Could not load catalog counts.", portalCountRetry: "Retry", portalChangeUid: "Change UID", portalOtherGames: "Other games",
     formationBaseTarget: "Base target", formationTeamTarget: "Team target", formationCurrentCharacter: "Current character",
     gaugeListLabel: "Stat progress", gaugeTargetsMet: "Stats at target", gaugeOverallTier: "Overall tier", gaugeBelowBaseline: "Below baseline", gaugePending: "Pending", gaugeAchieved: "Met", gaugeNotAchieved: "Not met", gaugeUnknown: "Unknown", gaugeBaseTarget: "Before", gaugeMissing: "Not available",
     progressionStepList: "Select a stage", progressionNextUnlock: "Next unlock", progressionUnlockedStage: "Unlocked", progressionLockedStage: "Locked", progressionTargetChange: "Changes targets", progressionTargetHeading: "Targets changed at this stage", progressionCaution: "Note",
@@ -81,6 +83,7 @@ const copy = {
   },
   "zh-CN": {
     adminPortal: "管理门户", displayDesign: "显示设计",
+    portalSubtitle: "崩坏：星穹铁道 / 原神 / 绝区零 的配装辅助", portalGameHsr: "崩坏：星穹铁道", portalGameGenshin: "原神", portalGameZzz: "绝区零", portalLookup: "通过 UID 查询", portalCatalog: "查看图鉴", portalCatalogCount: "图鉴收录数", portalCountFailed: "无法获取收录数。", portalCountRetry: "重新获取", portalChangeUid: "更改 UID", portalOtherGames: "其他游戏",
     formationBaseTarget: "基础目标", formationTeamTarget: "配队目标", formationCurrentCharacter: "当前角色",
     gaugeListLabel: "属性达成情况", gaugeTargetsMet: "达到目标的属性", gaugeOverallTier: "整体档位", gaugeBelowBaseline: "未达过渡", gaugePending: "暂不判定", gaugeAchieved: "已达成", gaugeNotAchieved: "未达成", gaugeUnknown: "未判定", gaugeBaseTarget: "变更前", gaugeMissing: "未获取",
     progressionStepList: "选择阶段", progressionNextUnlock: "下一次解锁", progressionUnlockedStage: "已解锁", progressionLockedStage: "未解锁", progressionTargetChange: "包含目标变更", progressionTargetHeading: "此阶段变更的目标", progressionCaution: "注意",
