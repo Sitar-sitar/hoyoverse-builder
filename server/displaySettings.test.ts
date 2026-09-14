@@ -32,23 +32,23 @@ describe("T1 表示バリアントの解決規則", () => {
   it("取得成功時は公開スナップショットだけを使い、欠落は legacy（過去キャッシュへ戻らない）", () => {
     const cached = { progressionStepper: "stepper" };
     expect(resolveDisplayVariants({ published: { status: "success", variants: {} }, cached, preview: null, isAdmin: false }))
-      .toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy" });
+      .toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
     expect(resolveDisplayVariants({ published: { status: "success", variants: { progressionStepper: "stepper" } }, cached: null, preview: null, isAdmin: false }))
-      .toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy" });
+      .toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
   });
 
   it("取得中は期限内キャッシュ、取得失敗は全キー legacy", () => {
     const cached = { progressionStepper: "stepper" };
-    expect(resolveDisplayVariants({ published: { status: "loading" }, cached, preview: null, isAdmin: false })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy" });
-    expect(resolveDisplayVariants({ published: { status: "loading" }, cached: null, preview: null, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy" });
-    expect(resolveDisplayVariants({ published: { status: "error" }, cached, preview: null, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "loading" }, cached, preview: null, isAdmin: false })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "loading" }, cached: null, preview: null, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "error" }, cached, preview: null, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
   });
 
   it("プレビューは管理者だけに適用し、取得失敗中も維持する", () => {
     const preview = { progressionStepper: "stepper" };
-    expect(resolveDisplayVariants({ published: { status: "success", variants: {} }, cached: null, preview, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy" });
-    expect(resolveDisplayVariants({ published: { status: "success", variants: {} }, cached: null, preview, isAdmin: true })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy" });
-    expect(resolveDisplayVariants({ published: { status: "error" }, cached: null, preview, isAdmin: true })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "success", variants: {} }, cached: null, preview, isAdmin: false })).toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "success", variants: {} }, cached: null, preview, isAdmin: true })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
+    expect(resolveDisplayVariants({ published: { status: "error" }, cached: null, preview, isAdmin: true })).toEqual({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
   });
 
   it("未知のキー・未知の値・プロトタイプ由来のキーは除外し、全登録キーが値を持つ", () => {
@@ -56,7 +56,7 @@ describe("T1 表示バリアントの解決規則", () => {
     expect(sanitizeDisplaySettings(Object.create({ progressionStepper: "stepper" }))).toEqual({});
     expect(sanitizeDisplaySettings(["stepper"])).toEqual({});
     expect(resolveDisplayVariants({ published: { status: "success", variants: { progressionStepper: "hexagon" } }, cached: null, preview: { progressionStepper: 1 as any }, isAdmin: true }))
-      .toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy" });
+      .toEqual({ progressionStepper: "legacy", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy" });
   });
 
   it("キャッシュは24時間以内・正しい形だけを使い、プレビューは有効値が無ければ null", () => {
@@ -73,7 +73,7 @@ describe("T1 表示バリアントの解決規則", () => {
 
   it("R2 キーごとに独立して解決し、別キーのバリアント名は受け付けない", () => {
     expect(resolveDisplayVariants({ published: { status: "success", variants: { statGauge: "gauge" } }, cached: null, preview: { progressionStepper: "stepper" }, isAdmin: true }))
-      .toEqual({ progressionStepper: "stepper", statGauge: "gauge", partyFormation: "legacy" });
+      .toEqual({ progressionStepper: "stepper", statGauge: "gauge", partyFormation: "legacy", topPortal: "legacy" });
     expect(sanitizeDisplaySettings({ statGauge: "stepper", progressionStepper: "gauge" })).toEqual({});
   });
 
@@ -121,6 +121,7 @@ describe("display API", () => {
     await expect(admin.display.publish({ changes: [] })).rejects.toMatchObject({ code: "BAD_REQUEST" });
     await expect(admin.display.publish({ changes: [{ key: "statGauge", variant: "stepper" }] })).rejects.toMatchObject({ code: "BAD_REQUEST" });
     await expect(admin.display.publish({ changes: [{ key: "partyFormation", variant: "gauge" }] })).rejects.toMatchObject({ code: "BAD_REQUEST" });
+    await expect(admin.display.publish({ changes: [{ key: "topPortal", variant: "formation" }] })).rejects.toMatchObject({ code: "BAD_REQUEST" });
     expect(mocks.upsertDisplaySettings).not.toHaveBeenCalled();
   });
 
@@ -134,9 +135,9 @@ describe("display API", () => {
 
   it("管理用の取得は登録表の全キーを、未保存は legacy・更新日時 null で返す", async () => {
     mocks.getDisplaySettingRows.mockResolvedValue([]);
-    await expect(appRouter.createCaller(adminContext).display.adminSettings()).resolves.toEqual({ entries: [{ key: "progressionStepper", variant: "legacy", updatedAt: null }, { key: "statGauge", variant: "legacy", updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }] });
+    await expect(appRouter.createCaller(adminContext).display.adminSettings()).resolves.toEqual({ entries: [{ key: "progressionStepper", variant: "legacy", updatedAt: null }, { key: "statGauge", variant: "legacy", updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }, { key: "topPortal", variant: "legacy", updatedAt: null }] });
     mocks.getDisplaySettingRows.mockResolvedValue([row("progressionStepper", "stepper")]);
-    await expect(appRouter.createCaller(adminContext).display.adminSettings()).resolves.toEqual({ entries: [{ key: "progressionStepper", variant: "stepper", updatedAt: "2026-09-13T08:00:00.000Z" }, { key: "statGauge", variant: "legacy", updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }] });
+    await expect(appRouter.createCaller(adminContext).display.adminSettings()).resolves.toEqual({ entries: [{ key: "progressionStepper", variant: "stepper", updatedAt: "2026-09-13T08:00:00.000Z" }, { key: "statGauge", variant: "legacy", updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }, { key: "topPortal", variant: "legacy", updatedAt: null }] });
   });
 
   it("T5 公開の成功でキャッシュを破棄し、新しい値を返す", async () => {

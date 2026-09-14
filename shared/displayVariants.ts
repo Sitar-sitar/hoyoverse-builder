@@ -69,6 +69,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
       { id: "formation", label: "隊列", description: "PLAN の横タブと、役割の色帯付きメンバーカードを横一列に並べ、目標変更を「基礎目標 → 編成目標」で表示します。図鑑でも案を切り替えられます。" },
     ],
   },
+  {
+    key: "topPortal",
+    proposal: "F",
+    label: "トップの3ゲーム入口",
+    screens: ["UID照会"],
+    previewPath: "/",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "「Build with Intention.」の見出しと、ゲーム切替付きの UID 照会フォームを表示します。" },
+      { id: "portal", label: "3ゲーム入口", description: "崩壊：スターレイル・原神・ゼンレスゾーンゼロのパネルに図鑑の収録数と入口を並べ、選んだゲームのパネル内で UID を照会します。" },
+    ],
+  },
 ];
 
 export type DisplayVariants = Record<string, string>;

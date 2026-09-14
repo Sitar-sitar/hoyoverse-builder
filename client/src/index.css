@@ -71,4 +71,10 @@
   .detail-mono { font-family: "DM Mono", monospace; letter-spacing: .13em; }
   .editorial-rule { height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
   .paper-card { background: color-mix(in oklch, var(--card) 92%, transparent); box-shadow: 0 18px 48px rgb(47 31 11 / 8%); }
+  /* 案 F の3ゲームパネル。公式画像を使わず、図形・線・色だけでゲームらしさを出す（設計 §4.4 F / §10 Q6）。 */
+  .portal-deco { position: absolute; right: -1.5rem; top: -1.5rem; width: 7rem; height: 7rem; opacity: .22; pointer-events: none; }
+  [data-testid="portal-strip"] .portal-deco { position: static; opacity: .8; border-radius: 9999px; }
+  .portal-deco-hsr { border-radius: 9999px; background: repeating-radial-gradient(circle, transparent 0 9px, #92400e 9px 10px); }
+  .portal-deco-genshin { border-radius: 9999px; background: conic-gradient(#b91c1c, #c2410c, #a16207, #15803d, #0e7490, #1d4ed8, #7e22ce, #b91c1c); -webkit-mask: radial-gradient(circle, transparent 55%, #000 56%); mask: radial-gradient(circle, transparent 55%, #000 56%); }
+  .portal-deco-zzz { background: repeating-linear-gradient(135deg, #1c1917 0 8px, #eab308 8px 16px); }
 }
