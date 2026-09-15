@@ -87,6 +87,18 @@ describe("A1 全体の到達と異常系", () => {
     expect(gaugePercent(50, 10)).toBe(100);
   });
 
+  it("各目盛りの真下に値を置き、ラベルの位置は目盛りと同じで、現在値の位置も数値どおり（緋英の会心率の再現）", () => {
+    renderGauge({ comparisons: [comparison("critRate", 61.3, [60, 70, 80])] });
+    const marks = screen.getAllByTestId("stat-gauge-mark");
+    const ticks = (["妥協", "目標", "厳選"] as const).map((tier) => screen.getByTestId(`stat-gauge-tick-${tier}`));
+    expect(ticks.map((tick) => tick.textContent)).toEqual(["60%", "70%", "80%"]);
+    const maximum = 80 * 1.1;
+    expect(ticks.map(leftPercent)).toEqual([60, 70, 80].map((value) => (value / maximum) * 100));
+    expect(marks.map(leftPercent).sort((x, y) => x - y)).toEqual(ticks.map(leftPercent));
+    expect(leftPercent(screen.getByTestId("stat-gauge-marker"))).toBeCloseTo((61.3 / maximum) * 100, 5);
+    expect(ticks[1].className).toContain("top-4");
+  });
+
   it("旧目標が新目標より高くても、全目印と現在値が範囲内に収まる", () => {
     const current = comparison("speed", 150, [120, 134, 143], undefined, "");
     const base = comparison("speed", 150, [150, 160, 175], undefined, "");
