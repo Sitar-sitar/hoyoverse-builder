@@ -1,4 +1,5 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import SiteHeader from "@/components/SiteHeader";
 import PartyFormation, { type FormationOption } from "@/components/variants/PartyFormation";
 import ProgressionStepper, { type ProgressionProfile } from "@/components/variants/ProgressionStepper";
 import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
@@ -148,6 +149,7 @@ export default function CharacterCatalog() {
   const copy = uiText[language];
   const progressionVariant = useDisplayVariant("progressionStepper");
   const formationVariant = useDisplayVariant("partyFormation");
+  const chromeVariant = useDisplayVariant("siteChrome");
   const initialParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const requestedGame = initialParams.get("game");
   const initialGame = (requestedGame && requestedGame in GAMES ? requestedGame : "hsr") as GameId;
@@ -198,7 +200,8 @@ export default function CharacterCatalog() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
+    <div className="min-h-screen bg-stone-50 text-stone-900" data-site-chrome={chromeVariant === "unified" ? "unified" : undefined} data-game={chromeVariant === "unified" ? game : undefined}>
+      {chromeVariant === "unified" ? <SiteHeader activePage="catalog" game={game}><span className="detail-mono hidden text-[11px] text-stone-500 sm:inline">{copy.uidFree} / {copy.catalogStatus.replace("{count}", catalogQuery.data ? String(catalogQuery.data.total) : "…")}</span><LanguageSwitcher /></SiteHeader> : (
       <header className="container pt-6 sm:pt-8">
         <div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3">
           <Link href="/" className="detail-mono inline-flex items-center gap-2 text-[9px] text-amber-800 underline-offset-4 hover:underline">
@@ -210,6 +213,7 @@ export default function CharacterCatalog() {
           </div>
         </div>
       </header>
+      )}
 
       <main className="container pb-20 pt-10 sm:pt-14">
         <section className="border-b border-stone-300 pb-8">

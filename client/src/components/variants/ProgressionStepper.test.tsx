@@ -93,6 +93,14 @@ describe("T7 ProgressionStepper（縦のタイムライン）", () => {
     expect(screen.queryByText("対応バージョン")).toBeNull();
   });
 
+  it("E-1 のゲーム別アクセントは、濃色面では濃色面用の変数を、明るい面では通常の変数を参照する", () => {
+    const view = renderStepper();
+    expect(screen.getByTestId("progression-stepper").style.getPropertyValue("--stepper-accent")).toBe("var(--game-accent-on-dark, #fde68a)");
+    view.unmount();
+    renderStepper({ tone: "light" });
+    expect(screen.getByTestId("progression-stepper").style.getPropertyValue("--stepper-accent")).toBe("var(--game-accent, #92400e)");
+  });
+
   it("表示中のキャラクターが変わったら初期選択へ戻す", () => {
     const view = renderStepper();
     fireEvent.click(screen.getByRole("tab", { name: /星魂 6/ }));

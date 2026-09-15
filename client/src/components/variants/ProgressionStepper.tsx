@@ -93,7 +93,7 @@ export default function ProgressionStepper({ game, tone, mode, profile, resetKey
   const { name: symbolName, Icon } = GAME_SYMBOLS[game];
 
   const dark = tone === "dark";
-  const accentStyle = { "--stepper-accent": `var(--game-accent, ${dark ? "#fde68a" : "#92400e"})` } as CSSProperties;
+  const accentStyle = { "--stepper-accent": dark ? "var(--game-accent-on-dark, #fde68a)" : "var(--game-accent, #92400e)" } as CSSProperties;
 
   const statusFor = (level: number) => {
     if (mode !== "lookup" || !curated) return null;

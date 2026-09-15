@@ -31,6 +31,7 @@ export const DISPLAY_PREVIEW_PATHS = [
   { path: "/", label: "UID照会" },
   { path: "/characters", label: "キャラ図鑑" },
   { path: "/updates", label: "更新履歴" },
+  { path: "/feedback", label: "翻訳フィードバック" },
 ] as const;
 
 export type DisplayPreviewPath = (typeof DISPLAY_PREVIEW_PATHS)[number]["path"];
@@ -78,6 +79,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
     variants: [
       { id: LEGACY_VARIANT, label: "現行", description: "「Build with Intention.」の見出しと、ゲーム切替付きの UID 照会フォームを表示します。" },
       { id: "portal", label: "3ゲーム入口", description: "崩壊：スターレイル・原神・ゼンレスゾーンゼロのパネルに図鑑の収録数と入口を並べ、選んだゲームのパネル内で UID を照会します。" },
+    ],
+  },
+  {
+    key: "siteChrome",
+    proposal: "E-1",
+    label: "共通ヘッダーとゲーム別アクセント",
+    screens: ["UID照会", "キャラ図鑑", "更新履歴", "翻訳フィードバック"],
+    previewPath: "/characters",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "画面ごとのヘッダーと、UID照会の左下にキャラ図鑑への固定ボタンを表示します。" },
+      { id: "unified", label: "共通ヘッダー", description: "4画面に同じヘッダー（UID照会・キャラ図鑑・更新履歴・翻訳フィードバック・管理者）を置き、現在地とゲーム別の色を示します。固定ボタンは出しません。" },
     ],
   },
 ];

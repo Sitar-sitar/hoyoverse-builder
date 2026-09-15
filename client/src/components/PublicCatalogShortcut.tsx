@@ -1,11 +1,15 @@
+import React from "react";
 import { BookOpen } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
 
 export default function PublicCatalogShortcut() {
   const [location] = useLocation();
   const { language } = useLanguage();
-  if (location !== "/") return null;
+  // 案 E-1 の共通ヘッダーに図鑑への導線があるため、unified のときは固定ボタンを出さない（設計 §4.4 E-1）。
+  const chromeVariant = useDisplayVariant("siteChrome");
+  if (location !== "/" || chromeVariant === "unified") return null;
 
   const label = language === "ja" ? "キャラ図鑑（UID不要）" : language === "zh-CN" ? "角色图鉴（无需UID）" : "Character Catalog (No UID)";
 
