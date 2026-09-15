@@ -92,6 +92,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
       { id: "unified", label: "共通ヘッダー", description: "4画面に同じヘッダー（UID照会・キャラ図鑑・更新履歴・翻訳フィードバック・管理者）を置き、現在地とゲーム別の色を示します。固定ボタンは出しません。" },
     ],
   },
+  {
+    key: "catalogShelf",
+    proposal: "B",
+    label: "図鑑カード棚・詳細シート",
+    screens: ["キャラ図鑑"],
+    previewPath: "/characters",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "左に名前の一覧、右に選んだキャラクターの詳細を並べ、最初のキャラクターを自動で選びます。" },
+      { id: "shelf", label: "カード棚", description: "キャラクターをカードで並べ、名前・精査状態・バッチで絞り込めます。カードを選ぶと詳細を右のシート（スマートフォンは全画面）で開きます。" },
+    ],
+  },
 ];
 
 export type DisplayVariants = Record<string, string>;

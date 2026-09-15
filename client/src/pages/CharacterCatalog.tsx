@@ -1,5 +1,6 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import SiteHeader from "@/components/SiteHeader";
+import CatalogShelf, { SHELF_SECTION_IDS, shelfBatchOptions, shelfEntries, type ShelfSort, type ShelfStatusFilter } from "@/components/variants/CatalogShelf";
 import PartyFormation, { type FormationOption } from "@/components/variants/PartyFormation";
 import ProgressionStepper, { type ProgressionProfile } from "@/components/variants/ProgressionStepper";
 import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
@@ -8,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { trpc } from "@/lib/trpc";
 import { ArrowLeft, BookOpen, CheckCircle2, Loader2, Search, Users } from "lucide-react";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
 
 type GameId = "hsr" | "genshin" | "zzz";
@@ -59,6 +60,24 @@ const uiText = {
     preparing: "このキャラクターの6段階効果データは準備中です。推奨ビルドとPTは確認できます。",
     uidFree: "UID不要",
     catalogStatus: "{count}キャラ収録",
+    statusFilter: "精査状態",
+    statusAll: "すべて",
+    batchFilter: "バッチ",
+    batchAll: "すべてのバッチ",
+    sort: "並び順",
+    sortCatalog: "図鑑の順",
+    sortBatch: "バッチの新しい順",
+    catalogFailed: "キャラクター一覧を取得できませんでした。",
+    retry: "再試行",
+    loading: "読み込み中",
+    notFound: "該当キャラクターが見つかりません。",
+    close: "閉じる",
+    jump: "詳細の項目へ移動",
+    sectionStats: "ステータス",
+    sectionProgression: "凸",
+    detailFailed: "キャラクターの詳細を取得できませんでした。",
+    detailEmpty: "このキャラクターの詳細はありません。",
+    detailDescription: "推奨ビルド・ステータス・推奨PT・凸",
   },
   en: {
     eyebrow: "CHARACTER BUILD CATALOG",
@@ -98,6 +117,24 @@ const uiText = {
     preparing: "Six-stage progression data is still being prepared for this character. Build and team guidance is available.",
     uidFree: "No UID required",
     catalogStatus: "{count} characters",
+    statusFilter: "Review status",
+    statusAll: "All",
+    batchFilter: "Batch",
+    batchAll: "All batches",
+    sort: "Sort",
+    sortCatalog: "Catalog order",
+    sortBatch: "Newest batch first",
+    catalogFailed: "The character list could not be loaded.",
+    retry: "Retry",
+    loading: "Loading",
+    notFound: "The requested character was not found.",
+    close: "Close",
+    jump: "Jump to a detail section",
+    sectionStats: "Stats",
+    sectionProgression: "Progression",
+    detailFailed: "Character details could not be loaded.",
+    detailEmpty: "No details are available for this character.",
+    detailDescription: "Build, stats, teams, and progression",
   },
   "zh-CN": {
     eyebrow: "CHARACTER BUILD CATALOG",
@@ -137,6 +174,24 @@ const uiText = {
     preparing: "该角色的六阶段效果数据仍在整理中，推荐配装与队伍可以正常查看。",
     uidFree: "无需UID",
     catalogStatus: "收录{count}名角色",
+    statusFilter: "审核状态",
+    statusAll: "全部",
+    batchFilter: "批次",
+    batchAll: "全部批次",
+    sort: "排序",
+    sortCatalog: "图鉴顺序",
+    sortBatch: "批次从新到旧",
+    catalogFailed: "无法获取角色列表。",
+    retry: "重试",
+    loading: "加载中",
+    notFound: "未找到对应角色。",
+    close: "关闭",
+    jump: "跳转到详情项目",
+    sectionStats: "属性",
+    sectionProgression: "星魂/命座/影画",
+    detailFailed: "无法获取角色详情。",
+    detailEmpty: "该角色暂无详情。",
+    detailDescription: "推荐配装・属性・推荐队伍・星魂/命座/影画",
   },
 } as const;
 
@@ -150,6 +205,7 @@ export default function CharacterCatalog() {
   const progressionVariant = useDisplayVariant("progressionStepper");
   const formationVariant = useDisplayVariant("partyFormation");
   const chromeVariant = useDisplayVariant("siteChrome");
+  const isShelf = useDisplayVariant("catalogShelf") === "shelf";
   const initialParams = useMemo(() => new URLSearchParams(window.location.search), []);
   const requestedGame = initialParams.get("game");
   const initialGame = (requestedGame && requestedGame in GAMES ? requestedGame : "hsr") as GameId;
@@ -158,6 +214,13 @@ export default function CharacterCatalog() {
   const [filter, setFilter] = useState("");
   // 案 C の図鑑だけで使う推奨PTの選択。legacy の全案一覧では使わない。
   const [selectedPartyId, setSelectedPartyId] = useState("");
+  // 案 B のカード棚だけで使う絞り込み・並び順・不正な直リンクの案内・閉じたあとのフォーカス先。
+  const [statusFilter, setStatusFilter] = useState<ShelfStatusFilter>("all");
+  const [batchFilter, setBatchFilter] = useState<number | null>(null);
+  const [sortOrder, setSortOrder] = useState<ShelfSort>("catalog");
+  const [notFound, setNotFound] = useState(false);
+  const [openerName, setOpenerName] = useState("");
+  const searchRef = useRef<HTMLInputElement>(null);
 
   const catalogQuery = trpc.build.referenceCatalog.useQuery(undefined, { staleTime: 10 * 60_000 });
   const entries = catalogQuery.data?.games[game] ?? [];
@@ -168,19 +231,36 @@ export default function CharacterCatalog() {
   }, [entries, filter]);
 
   useEffect(() => {
+    // カード棚は自動で選ばない。取得できた一覧に無い名前だけを不正と判断し、取得中・失敗中は断定しない。
+    if (isShelf) {
+      if (selectedName && catalogQuery.isSuccess && !entries.some((entry) => entry.name === selectedName)) {
+        setSelectedName("");
+        setNotFound(true);
+      }
+      return;
+    }
     if (!entries.length) return;
     if (!entries.some((entry) => entry.name === selectedName)) {
       setSelectedName(entries[0]?.name ?? "");
     }
-  }, [entries, selectedName]);
+  }, [entries, selectedName, isShelf, catalogQuery.isSuccess]);
 
   useEffect(() => {
-    if (!selectedName) return;
+    if (!selectedName) {
+      // カード棚で閉じたときは character だけを消し、game・他のパラメータ・hash は残す。
+      if (!isShelf) return;
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has("character") && url.searchParams.get("game") === game) return;
+      url.searchParams.set("game", game);
+      url.searchParams.delete("character");
+      window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+      return;
+    }
     const url = new URL(window.location.href);
     url.searchParams.set("game", game);
     url.searchParams.set("character", selectedName);
     window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
-  }, [game, selectedName]);
+  }, [game, selectedName, isShelf]);
 
   // ゲーム・キャラクターが変わったら先頭の案へ戻す（存在しない id も部品側で先頭に戻る）。
   useEffect(() => {
@@ -193,10 +273,145 @@ export default function CharacterCatalog() {
   );
   const reference = referenceQuery.data;
 
+  const detail = reference ? (
+    <div className="space-y-8">
+      <section className="paper-card border border-stone-300 p-5 sm:p-7">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <p className="detail-mono text-[9px] text-stone-500">{GAMES[game].short} / {reference.guide.profileId ?? "BUILD"}</p>
+            <h2 className="display-serif mt-2 text-3xl font-bold sm:text-4xl">{reference.name}</h2>
+          </div>
+          <span className={cn("inline-flex items-center gap-1.5 border px-2.5 py-1 detail-mono text-[9px]", reference.status === "reviewed" ? "border-emerald-700 text-emerald-800" : "border-stone-400 text-stone-500")}>
+            {reference.status === "reviewed" && <CheckCircle2 className="h-3.5 w-3.5" />}
+            {reference.status === "reviewed" ? `${copy.reviewed} / ${copy.batch} ${reference.batch}` : copy.pending}
+          </span>
+        </div>
+        <p className="mt-5 max-w-3xl font-serif text-base leading-7 text-stone-700">{reference.guide.headline}</p>
+      </section>
+
+      <section id={SHELF_SECTION_IDS[0]} className="scroll-mt-20">
+        <div className="flex items-center gap-2 border-b border-stone-400 pb-3">
+          <BookOpen className="h-4 w-4 text-amber-800" />
+          <h3 className="display-serif text-2xl font-semibold">{copy.build}</h3>
+        </div>
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div className="border border-stone-300 p-4">
+            <p className="detail-mono text-[9px] text-stone-500">{copy.relic}</p>
+            <p className="mt-2 text-sm font-semibold leading-6">{reference.guide.relicSet}</p>
+          </div>
+          <div className="border border-stone-300 p-4">
+            <p className="detail-mono text-[9px] text-stone-500">{copy.secondary}</p>
+            <p className="mt-2 text-sm font-semibold leading-6">{reference.guide.planarSet}</p>
+          </div>
+        </div>
+
+        <div className="mt-4 border border-stone-300 p-4">
+          <p className="detail-mono text-[9px] text-stone-500">{copy.mainStats}</p>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            {reference.guide.mainStats.map((stat) => (
+              <div key={`${stat.slot}:${stat.value}`} className="flex items-start justify-between gap-4 border-b border-stone-200 py-2 text-sm last:border-b-0">
+                <span className="text-stone-500">{stat.slot}</span>
+                <span className="text-right font-semibold">{stat.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id={SHELF_SECTION_IDS[1]} className="scroll-mt-20">
+        <div className="border-b border-stone-400 pb-3"><h3 className="display-serif text-2xl font-semibold">{copy.targets}</h3></div>
+        {reference.guide.targets.length ? (
+          <div className="mt-4 overflow-x-auto border border-stone-300">
+            <table className="w-full min-w-[560px] border-collapse text-sm">
+              <thead className="bg-stone-100 detail-mono text-[9px] text-stone-500">
+                <tr><th className="px-4 py-3 text-left">STAT</th><th className="px-4 py-3 text-right">{copy.strict}</th><th className="px-4 py-3 text-right">{copy.goal}</th><th className="px-4 py-3 text-right">{copy.baseline}</th></tr>
+              </thead>
+              <tbody>
+                {reference.guide.targets.map((target) => (
+                  <tr key={target.key} className="border-t border-stone-200">
+                    <td className="px-4 py-3 font-semibold">{target.label}</td>
+                    <td className="px-4 py-3 text-right font-mono">{target.targets["厳選"]}{target.unit}</td>
+                    <td className="bg-amber-50/70 px-4 py-3 text-right font-mono font-bold text-amber-900">{target.targets["目標"]}{target.unit}</td>
+                    <td className="px-4 py-3 text-right font-mono">{target.targets["妥協"]}{target.unit}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : <p className="mt-4 border border-stone-300 p-4 text-sm leading-6 text-stone-600">{copy.noFixedTarget}</p>}
+        {reference.guide.targetContext && <div className="mt-4 border-l-2 border-amber-700 pl-4"><p className="detail-mono text-[9px] text-stone-500">{copy.context}</p><p className="mt-2 text-sm leading-6 text-stone-600">{reference.guide.targetContext}</p></div>}
+        <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 detail-mono text-[9px] text-stone-500">
+          {reference.guide.sourceLabel && <span>{copy.source}: {reference.guide.sourceLabel}</span>}
+          {reference.guide.updatedAt && <span>{copy.updated}: {reference.guide.updatedAt}</span>}
+        </div>
+      </section>
+
+      <section id={SHELF_SECTION_IDS[2]} className="scroll-mt-20">
+        <div className="flex items-center gap-2 border-b border-stone-400 pb-3"><Users className="h-4 w-4 text-amber-800" /><h3 className="display-serif text-2xl font-semibold">{copy.parties}</h3></div>
+        {formationVariant === "formation" ? (
+          <PartyFormation
+            options={reference.partyRecommendations.options as unknown as FormationOption[]}
+            selectedId={selectedPartyId}
+            onSelect={setSelectedPartyId}
+            selectedName={reference.name}
+            baseTargets={reference.guide.targets}
+            language={language}
+            tone="light"
+            labels={{ select: copy.partySelect, members: copy.partyMembers, synergy: copy.synergy, targets: copy.partyTargets, version: copy.partyVersion, dataAsOf: copy.partyDataAsOf, updated: copy.partyUpdated, source: copy.partySource, community: copy.partyCommunity, checked: copy.partyChecked, noData: copy.partyNone }}
+          />
+        ) : (
+        <div className="mt-4 grid gap-4 xl:grid-cols-3">
+          {reference.partyRecommendations.options.map((option) => (
+            <article key={option.id} className="border border-stone-300 p-4">
+              <p className="detail-mono text-[9px] text-amber-800">PLAN {option.rank}</p>
+              <h4 className="mt-2 font-serif text-lg font-semibold">{localText(option.title as LocalizedText, language)}</h4>
+              <div className="mt-4 space-y-2">
+                {option.members.map((member, index) => (
+                  <div key={`${option.id}:${index}`} className="flex items-center justify-between gap-3 border-b border-stone-200 pb-2 text-xs last:border-b-0">
+                    <span className="font-semibold">{localText(member.name as LocalizedText, language)}</span>
+                    <span className="text-stone-500">{localText(member.role as LocalizedText, language)}</span>
+                  </div>
+                ))}
+              </div>
+              {option.synergy[0] && <div className="mt-4"><p className="detail-mono text-[8px] text-stone-500">{copy.synergy}</p><p className="mt-1 text-xs leading-5 text-stone-600">{localText(option.synergy[0] as LocalizedText, language)}</p></div>}
+            </article>
+          ))}
+        </div>
+        )}
+      </section>
+
+      <section id={SHELF_SECTION_IDS[3]} className="scroll-mt-20">
+        <div className="border-b border-stone-400 pb-3"><h3 className="display-serif text-2xl font-semibold">{copy.progression}</h3></div>
+        {progressionVariant === "stepper" ? (
+          <ProgressionStepper game={game} tone="light" mode="catalog" profile={reference.constellations as unknown as ProgressionProfile} resetKey={`${game}:${reference.name}`} emptyText={copy.preparing} />
+        ) : reference.constellations.dataStatus === "curated" && reference.constellations.effects.length ? (
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {reference.constellations.effects.map((effect) => (
+              <article key={effect.level} className="border border-stone-300 p-4">
+                <div className="flex items-center justify-between gap-3"><span className="detail-mono text-[9px] text-amber-800">{localText(reference.constellations.rankLabel as LocalizedText, language)} {effect.level}</span></div>
+                <h4 className="mt-2 text-sm font-bold">{localText(effect.name as LocalizedText, language)}</h4>
+                <p className="mt-2 text-xs leading-5 text-stone-600">{localText(effect.description as LocalizedText, language)}</p>
+              </article>
+            ))}
+          </div>
+        ) : <p className="mt-4 border border-stone-300 p-4 text-sm leading-6 text-stone-600">{copy.preparing}</p>}
+      </section>
+    </div>
+  ) : null;
+
   const changeGame = (next: GameId) => {
     setGame(next);
     setSelectedName("");
     setFilter("");
+    setStatusFilter("all");
+    setBatchFilter(null);
+    setNotFound(false);
+    setOpenerName("");
+  };
+  const openShelfCard = (name: string) => {
+    setOpenerName(name);
+    setNotFound(false);
+    setSelectedName(name);
   };
 
   return (
@@ -231,6 +446,37 @@ export default function CharacterCatalog() {
           </div>
         </section>
 
+        {isShelf ? (
+          <CatalogShelf
+            game={game}
+            games={GAMES}
+            onGameChange={changeGame}
+            totalInGame={entries.length}
+            entries={shelfEntries(entries, { keyword: filter, status: statusFilter, batch: batchFilter, sort: sortOrder })}
+            batchOptions={shelfBatchOptions(entries)}
+            keyword={filter}
+            onKeywordChange={setFilter}
+            status={statusFilter}
+            onStatusChange={setStatusFilter}
+            batch={batchFilter}
+            onBatchChange={setBatchFilter}
+            sort={sortOrder}
+            onSortChange={setSortOrder}
+            catalogState={catalogQuery.isError ? "error" : catalogQuery.isSuccess ? "ready" : "loading"}
+            onCatalogRetry={() => void catalogQuery.refetch()}
+            notFound={notFound}
+            selectedName={selectedName}
+            onSelect={openShelfCard}
+            onClose={() => setSelectedName("")}
+            detailState={referenceQuery.error ? "error" : reference ? "ready" : referenceQuery.isFetching || referenceQuery.isLoading ? "loading" : "empty"}
+            onDetailRetry={() => void referenceQuery.refetch()}
+            searchRef={searchRef}
+            openerName={openerName}
+            labels={{ search: copy.search, noMatch: copy.noMatch, reviewed: copy.reviewed, pending: copy.pending, batch: copy.batch, statusFilter: copy.statusFilter, statusAll: copy.statusAll, batchFilter: copy.batchFilter, batchAll: copy.batchAll, sort: copy.sort, sortCatalog: copy.sortCatalog, sortBatch: copy.sortBatch, catalogFailed: copy.catalogFailed, retry: copy.retry, loading: copy.loading, notFound: copy.notFound, close: copy.close, jump: copy.jump, sections: [copy.build, copy.sectionStats, copy.parties, copy.sectionProgression], detailFailed: copy.detailFailed, detailEmpty: copy.detailEmpty, detailDescription: copy.detailDescription }}
+          >
+            {detail}
+          </CatalogShelf>
+        ) : (
         <section className="mt-8 grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)]">
           <aside>
             <div className="grid grid-cols-3 gap-1 border border-stone-300 bg-stone-100/70 p-1">
@@ -289,133 +535,10 @@ export default function CharacterCatalog() {
               <div className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">{referenceQuery.error.message}</div>
             )}
 
-            {reference && (
-              <div className="space-y-8">
-                <section className="paper-card border border-stone-300 p-5 sm:p-7">
-                  <div className="flex flex-wrap items-start justify-between gap-4">
-                    <div>
-                      <p className="detail-mono text-[9px] text-stone-500">{GAMES[game].short} / {reference.guide.profileId ?? "BUILD"}</p>
-                      <h2 className="display-serif mt-2 text-3xl font-bold sm:text-4xl">{reference.name}</h2>
-                    </div>
-                    <span className={cn("inline-flex items-center gap-1.5 border px-2.5 py-1 detail-mono text-[9px]", reference.status === "reviewed" ? "border-emerald-700 text-emerald-800" : "border-stone-400 text-stone-500")}>
-                      {reference.status === "reviewed" && <CheckCircle2 className="h-3.5 w-3.5" />}
-                      {reference.status === "reviewed" ? `${copy.reviewed} / ${copy.batch} ${reference.batch}` : copy.pending}
-                    </span>
-                  </div>
-                  <p className="mt-5 max-w-3xl font-serif text-base leading-7 text-stone-700">{reference.guide.headline}</p>
-                </section>
-
-                <section>
-                  <div className="flex items-center gap-2 border-b border-stone-400 pb-3">
-                    <BookOpen className="h-4 w-4 text-amber-800" />
-                    <h3 className="display-serif text-2xl font-semibold">{copy.build}</h3>
-                  </div>
-                  <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                    <div className="border border-stone-300 p-4">
-                      <p className="detail-mono text-[9px] text-stone-500">{copy.relic}</p>
-                      <p className="mt-2 text-sm font-semibold leading-6">{reference.guide.relicSet}</p>
-                    </div>
-                    <div className="border border-stone-300 p-4">
-                      <p className="detail-mono text-[9px] text-stone-500">{copy.secondary}</p>
-                      <p className="mt-2 text-sm font-semibold leading-6">{reference.guide.planarSet}</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-4 border border-stone-300 p-4">
-                    <p className="detail-mono text-[9px] text-stone-500">{copy.mainStats}</p>
-                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
-                      {reference.guide.mainStats.map((stat) => (
-                        <div key={`${stat.slot}:${stat.value}`} className="flex items-start justify-between gap-4 border-b border-stone-200 py-2 text-sm last:border-b-0">
-                          <span className="text-stone-500">{stat.slot}</span>
-                          <span className="text-right font-semibold">{stat.value}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-
-                <section>
-                  <div className="border-b border-stone-400 pb-3"><h3 className="display-serif text-2xl font-semibold">{copy.targets}</h3></div>
-                  {reference.guide.targets.length ? (
-                    <div className="mt-4 overflow-x-auto border border-stone-300">
-                      <table className="w-full min-w-[560px] border-collapse text-sm">
-                        <thead className="bg-stone-100 detail-mono text-[9px] text-stone-500">
-                          <tr><th className="px-4 py-3 text-left">STAT</th><th className="px-4 py-3 text-right">{copy.strict}</th><th className="px-4 py-3 text-right">{copy.goal}</th><th className="px-4 py-3 text-right">{copy.baseline}</th></tr>
-                        </thead>
-                        <tbody>
-                          {reference.guide.targets.map((target) => (
-                            <tr key={target.key} className="border-t border-stone-200">
-                              <td className="px-4 py-3 font-semibold">{target.label}</td>
-                              <td className="px-4 py-3 text-right font-mono">{target.targets["厳選"]}{target.unit}</td>
-                              <td className="bg-amber-50/70 px-4 py-3 text-right font-mono font-bold text-amber-900">{target.targets["目標"]}{target.unit}</td>
-                              <td className="px-4 py-3 text-right font-mono">{target.targets["妥協"]}{target.unit}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  ) : <p className="mt-4 border border-stone-300 p-4 text-sm leading-6 text-stone-600">{copy.noFixedTarget}</p>}
-                  {reference.guide.targetContext && <div className="mt-4 border-l-2 border-amber-700 pl-4"><p className="detail-mono text-[9px] text-stone-500">{copy.context}</p><p className="mt-2 text-sm leading-6 text-stone-600">{reference.guide.targetContext}</p></div>}
-                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-1 detail-mono text-[9px] text-stone-500">
-                    {reference.guide.sourceLabel && <span>{copy.source}: {reference.guide.sourceLabel}</span>}
-                    {reference.guide.updatedAt && <span>{copy.updated}: {reference.guide.updatedAt}</span>}
-                  </div>
-                </section>
-
-                <section>
-                  <div className="flex items-center gap-2 border-b border-stone-400 pb-3"><Users className="h-4 w-4 text-amber-800" /><h3 className="display-serif text-2xl font-semibold">{copy.parties}</h3></div>
-                  {formationVariant === "formation" ? (
-                    <PartyFormation
-                      options={reference.partyRecommendations.options as unknown as FormationOption[]}
-                      selectedId={selectedPartyId}
-                      onSelect={setSelectedPartyId}
-                      selectedName={reference.name}
-                      baseTargets={reference.guide.targets}
-                      language={language}
-                      tone="light"
-                      labels={{ select: copy.partySelect, members: copy.partyMembers, synergy: copy.synergy, targets: copy.partyTargets, version: copy.partyVersion, dataAsOf: copy.partyDataAsOf, updated: copy.partyUpdated, source: copy.partySource, community: copy.partyCommunity, checked: copy.partyChecked, noData: copy.partyNone }}
-                    />
-                  ) : (
-                  <div className="mt-4 grid gap-4 xl:grid-cols-3">
-                    {reference.partyRecommendations.options.map((option) => (
-                      <article key={option.id} className="border border-stone-300 p-4">
-                        <p className="detail-mono text-[9px] text-amber-800">PLAN {option.rank}</p>
-                        <h4 className="mt-2 font-serif text-lg font-semibold">{localText(option.title as LocalizedText, language)}</h4>
-                        <div className="mt-4 space-y-2">
-                          {option.members.map((member, index) => (
-                            <div key={`${option.id}:${index}`} className="flex items-center justify-between gap-3 border-b border-stone-200 pb-2 text-xs last:border-b-0">
-                              <span className="font-semibold">{localText(member.name as LocalizedText, language)}</span>
-                              <span className="text-stone-500">{localText(member.role as LocalizedText, language)}</span>
-                            </div>
-                          ))}
-                        </div>
-                        {option.synergy[0] && <div className="mt-4"><p className="detail-mono text-[8px] text-stone-500">{copy.synergy}</p><p className="mt-1 text-xs leading-5 text-stone-600">{localText(option.synergy[0] as LocalizedText, language)}</p></div>}
-                      </article>
-                    ))}
-                  </div>
-                  )}
-                </section>
-
-                <section>
-                  <div className="border-b border-stone-400 pb-3"><h3 className="display-serif text-2xl font-semibold">{copy.progression}</h3></div>
-                  {progressionVariant === "stepper" ? (
-                    <ProgressionStepper game={game} tone="light" mode="catalog" profile={reference.constellations as unknown as ProgressionProfile} resetKey={`${game}:${reference.name}`} emptyText={copy.preparing} />
-                  ) : reference.constellations.dataStatus === "curated" && reference.constellations.effects.length ? (
-                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                      {reference.constellations.effects.map((effect) => (
-                        <article key={effect.level} className="border border-stone-300 p-4">
-                          <div className="flex items-center justify-between gap-3"><span className="detail-mono text-[9px] text-amber-800">{localText(reference.constellations.rankLabel as LocalizedText, language)} {effect.level}</span></div>
-                          <h4 className="mt-2 text-sm font-bold">{localText(effect.name as LocalizedText, language)}</h4>
-                          <p className="mt-2 text-xs leading-5 text-stone-600">{localText(effect.description as LocalizedText, language)}</p>
-                        </article>
-                      ))}
-                    </div>
-                  ) : <p className="mt-4 border border-stone-300 p-4 text-sm leading-6 text-stone-600">{copy.preparing}</p>}
-                </section>
-              </div>
-            )}
+            {detail}
           </div>
         </section>
+        )}
       </main>
     </div>
   );
