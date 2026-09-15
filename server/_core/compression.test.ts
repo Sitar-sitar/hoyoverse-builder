@@ -81,7 +81,7 @@ describe("API 応答の圧縮", () => {
     expect(res.headers["content-encoding"]).toBe("gzip");
     const vary = String(res.headers.vary ?? "").toLowerCase();
     // tRPC が付ける trpc-accept を残したまま追記されること。
-    // なお CORS の `Vary: Origin` は圧縮導入前から tRPC の setHeader に上書きされて消えている（設計書 §2 D1 の注記）。
+    // CORS の `Vary: Origin` は server/_core/corsVary.test.ts が検査する（Phase 41 で tRPC の上書きを解消）。
     expect(vary).toContain("trpc-accept");
     expect(vary).toContain("accept-encoding");
   });
