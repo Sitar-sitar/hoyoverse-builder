@@ -72,6 +72,10 @@
   .editorial-rule { height: 1px; background: linear-gradient(90deg, var(--border), transparent); }
   .paper-card { background: color-mix(in oklch, var(--card) 92%, transparent); box-shadow: 0 18px 48px rgb(47 31 11 / 8%); }
   /* 案 F の3ゲームパネル。公式画像を使わず、図形・線・色だけでゲームらしさを出す（設計 §4.4 F / §10 Q6）。 */
+  /* 案 E-1 のゲーム別アクセント。unified のときだけ UID照会と図鑑の外枠に付き、body へは残さない（設計 §4.4 E-1）。 */
+  [data-site-chrome="unified"][data-game="hsr"] { --game-accent: #92400e; --game-accent-on-dark: #fde68a; }
+  [data-site-chrome="unified"][data-game="genshin"] { --game-accent: #115e59; --game-accent-on-dark: #99f6e4; }
+  [data-site-chrome="unified"][data-game="zzz"] { --game-accent: #854d0e; --game-accent-on-dark: #fef08a; }
   .portal-deco { position: absolute; right: -1.5rem; top: -1.5rem; width: 7rem; height: 7rem; opacity: .22; pointer-events: none; }
   [data-testid="portal-strip"] .portal-deco { position: static; opacity: .8; border-radius: 9999px; }
   .portal-deco-hsr { border-radius: 9999px; background: repeating-radial-gradient(circle, transparent 0 9px, #92400e 9px 10px); }
