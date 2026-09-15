@@ -161,6 +161,23 @@ export function StatGauge({ comparisons, baseComparisons, statsUnavailable, tier
                 )}
               </div>
 
+              {/* 各目盛りの真下に値を置き、どの線が何を指すかを読めるようにする（2026-09-15 ユーザー決定 A）。目標は1段下げて隣と重ならないようにする。 */}
+              <div aria-hidden="true" className="relative mt-1 h-8 text-[11px] leading-4" data-testid="stat-gauge-tick-labels">
+                {GAUGE_TIERS.map((tier) => {
+                  const left = gaugePercent(comparison.targets[tier], maximum);
+                  return (
+                    <span
+                      key={tier}
+                      data-testid={`stat-gauge-tick-${tier}`}
+                      className={cn("absolute whitespace-nowrap font-mono", tier === "目標" ? "top-4 text-amber-800" : tier === "厳選" ? "top-0 text-stone-900" : "top-0 text-stone-500", left > 92 ? "-translate-x-full" : left < 8 ? "" : "-translate-x-1/2")}
+                      style={{ left: `${left}%` }}
+                    >
+                      {comparison.targets[tier]}{comparison.unit}
+                    </span>
+                  );
+                })}
+              </div>
+
               <div className="mt-2 grid grid-cols-3 gap-2 text-[11px] leading-4">
                 {GAUGE_TIERS.map((tier) => {
                   const achieved = comparison.achieved[tier];
