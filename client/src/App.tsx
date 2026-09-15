@@ -4,14 +4,14 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { consumeLoginReturnPath } from "@/lib/loginReturnPath";
 import NotFound from "@/pages/NotFound";
 import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
-import { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import AdminLogoutButton from "./components/AdminLogoutButton";
 import DisplayPreviewBanner from "./components/DisplayPreviewBanner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PublicCatalogShortcut from "./components/PublicCatalogShortcut";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
-import { DisplaySettingsProvider, useDisplaySettings } from "./contexts/DisplaySettingsContext";
+import { DisplaySettingsProvider, useDisplaySettings, useDisplayVariant } from "./contexts/DisplaySettingsContext";
 
 // 画面はルート単位で遅延読み込みする（設計: docs/修正設計書_Pagesのルート単位コード分割_2026-09-10.md）。
 // NotFound は catch-all で小さいため同期のまま（遅延にすると 404 の前にフォールバックが一瞬出る）。
@@ -22,6 +22,20 @@ const TranslationFeedback = lazy(() => import("./pages/TranslationFeedback"));
 const AdminHome = lazy(() => import("./pages/AdminHome"));
 const FeedbackAdmin = lazy(() => import("./pages/FeedbackAdmin"));
 const DisplaySettingsAdmin = lazy(() => import("./pages/DisplaySettingsAdmin"));
+
+/** テーマを切り替えられる公開画面（案 E-2）。管理画面と 404 はライト固定。 */
+export const THEME_SWITCHABLE_PATHS = ["/", "/characters", "/updates", "/feedback"] as const;
+
+/**
+ * 公開4画面かつ colorTheme = switchable のときだけ、利用者の好みのテーマを有効にする（設計 §4.4 E-2、DR-03）。
+ * Provider に key を付けないため、切り替えても言語・UID・選択などの状態は保たれる。
+ */
+export function ThemeGate({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const colorTheme = useDisplayVariant("colorTheme");
+  const switchable = colorTheme === "switchable" && (THEME_SWITCHABLE_PATHS as readonly string[]).includes(location);
+  return <ThemeProvider switchable={switchable}>{children}</ThemeProvider>;
+}
 
 /** 画面チャンクの取得中に描く外枠だけのプレースホルダ。文言を出すと初回表示でちらつくため空にする。 */
 function RouteFallback() {
@@ -68,21 +82,21 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
-        <TooltipProvider>
-          <LanguageProvider>
-            <Toaster />
-            <DisplaySettingsProvider>
-              <WouterRouter base={routerBase}>
+      <LanguageProvider>
+        <DisplaySettingsProvider>
+          <WouterRouter base={routerBase}>
+            <ThemeGate>
+              <TooltipProvider>
+                <Toaster />
                 <DisplayPreviewBanner />
                 <Router />
                 <PublicCatalogShortcut />
                 <AdminLogoutButton />
-              </WouterRouter>
-            </DisplaySettingsProvider>
-          </LanguageProvider>
-        </TooltipProvider>
-      </ThemeProvider>
+              </TooltipProvider>
+            </ThemeGate>
+          </WouterRouter>
+        </DisplaySettingsProvider>
+      </LanguageProvider>
     </ErrorBoundary>
   );
 }

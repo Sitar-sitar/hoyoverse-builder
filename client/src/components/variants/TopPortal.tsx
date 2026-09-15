@@ -101,7 +101,7 @@ export default function TopPortal({ game, uid, validUid, uidHint, isFetching, ha
             <button type="button" onClick={() => choose(game)} className="detail-mono min-h-9 border border-stone-400 px-3 text-[11px] text-stone-800 hover:border-stone-900">{t("portalChangeUid")}</button>
           </div>
           <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={t("portalOtherGames")}>
-            {PORTAL_GAME_ORDER.filter((id) => id !== game).map((id) => <button key={id} type="button" onClick={() => choose(id)} className="portal-panel detail-mono min-h-9 border border-stone-300 px-3 text-[11px] text-stone-700 hover:border-[var(--portal-accent)]" style={accentStyle(id)}>{PORTAL_GAMES[id].mark} / {gameName(id)}</button>)}
+            {PORTAL_GAME_ORDER.filter((id) => id !== game).map((id) => <button key={id} type="button" onClick={() => choose(id)} className="portal-panel detail-mono min-h-9 border border-stone-300 px-3 text-[11px] text-stone-700 hover:border-[var(--portal-accent)]" style={accentStyle(id)} data-game={id}>{PORTAL_GAMES[id].mark} / {gameName(id)}</button>)}
           </div>
         </div>
       ) : (

@@ -117,7 +117,7 @@ export default function ProgressionStepper({ game, tone, mode, profile, resetKey
   };
 
   return (
-    <div className="mt-5" style={accentStyle} data-testid="progression-stepper" data-game={game} data-symbol={symbolName}>
+    <div className="mt-5" style={accentStyle} data-testid="progression-stepper" data-tone={tone} data-game={game} data-symbol={symbolName}>
       {curated && note && <p className={cn("mb-4 text-sm leading-6", dark ? "text-stone-200" : "text-stone-600")}>{note}</p>}
       <div className="grid gap-5 lg:grid-cols-[minmax(0,.85fr)_minmax(0,1.15fr)]">
         <ol role="tablist" aria-orientation="vertical" aria-label={`${rankLabel} ${t("progressionStepList")}`.trim()} onKeyDown={moveSelection} className={cn(!curated && "opacity-50")}>
