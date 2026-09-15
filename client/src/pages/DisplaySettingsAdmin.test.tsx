@@ -6,7 +6,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import DisplaySettingsAdmin from "./DisplaySettingsAdmin";
 
 type Entries = Array<{ key: string; variant: string; updatedAt: string | null }>;
-const entries = (variant: string, updatedAt: string | null = null, gauge = "legacy"): { entries: Entries } => ({ entries: [{ key: "progressionStepper", variant, updatedAt }, { key: "statGauge", variant: gauge, updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }, { key: "topPortal", variant: "legacy", updatedAt: null }, { key: "siteChrome", variant: "legacy", updatedAt: null }, { key: "catalogShelf", variant: "legacy", updatedAt: null }] });
+const entries = (variant: string, updatedAt: string | null = null, gauge = "legacy"): { entries: Entries } => ({ entries: [{ key: "progressionStepper", variant, updatedAt }, { key: "statGauge", variant: gauge, updatedAt: null }, { key: "partyFormation", variant: "legacy", updatedAt: null }, { key: "topPortal", variant: "legacy", updatedAt: null }, { key: "siteChrome", variant: "legacy", updatedAt: null }, { key: "catalogShelf", variant: "legacy", updatedAt: null }, { key: "colorTheme", variant: "legacy", updatedAt: null }] });
 
 const mocks = vi.hoisted(() => ({
   authState: { user: { id: 1, role: "admin" } as { id: number; role: string } | null, loading: false, isAuthenticated: true },
@@ -148,7 +148,7 @@ describe("DisplaySettingsAdmin", () => {
     fireEvent.click(screen.getByRole("radio", { name: /縦のタイムライン/ }));
     fireEvent.change(screen.getByLabelText("プレビューで開く画面"), { target: { value: "/" } });
     fireEvent.click(screen.getByRole("button", { name: /この組み合わせをプレビュー/ }));
-    expect(mocks.setPreview).toHaveBeenCalledWith({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy", siteChrome: "legacy", catalogShelf: "legacy" });
+    expect(mocks.setPreview).toHaveBeenCalledWith({ progressionStepper: "stepper", statGauge: "legacy", partyFormation: "legacy", topPortal: "legacy", siteChrome: "legacy", catalogShelf: "legacy", colorTheme: "legacy" });
     await waitFor(() => expect(window.location.pathname).toBe("/"));
   });
 
@@ -171,7 +171,7 @@ describe("DisplaySettingsAdmin", () => {
 
   it("R2 登録した達成ゲージも選択でき、公開する差分はそのキーだけになる", async () => {
     renderPage();
-    expect([...document.querySelectorAll("fieldset > legend")].map((legend) => legend.textContent)).toEqual(["案 D凸の6段表示", "案 A目標の達成ゲージ", "案 C推奨PTの隊列", "案 Fトップの3ゲーム入口", "案 E-1共通ヘッダーとゲーム別アクセント", "案 B図鑑カード棚・詳細シート"]);
+    expect([...document.querySelectorAll("fieldset > legend")].map((legend) => legend.textContent)).toEqual(["案 D凸の6段表示", "案 A目標の達成ゲージ", "案 C推奨PTの隊列", "案 Fトップの3ゲーム入口", "案 E-1共通ヘッダーとゲーム別アクセント", "案 B図鑑カード棚・詳細シート", "案 E-2ダークテーマの切替"]);
     fireEvent.click(screen.getByRole("radio", { name: /達成ゲージ/ }));
     fireEvent.click(publishButton());
     const dialog = await screen.findByRole("alertdialog");
@@ -182,7 +182,7 @@ describe("DisplaySettingsAdmin", () => {
     mocks.adminQuery = { data: { entries: [{ key: "progressionStepper", variant: "legacy", updatedAt: null }] }, isLoading: false, isError: false, refetch: vi.fn(async () => ({ data: entries("legacy"), isError: false })) };
     renderPage();
     const legacyRadios = screen.getAllByRole("radio", { name: /現行/ }) as HTMLInputElement[];
-    expect(legacyRadios).toHaveLength(6);
+    expect(legacyRadios).toHaveLength(7);
     expect(legacyRadios.every((radio) => radio.checked)).toBe(true);
   });
 

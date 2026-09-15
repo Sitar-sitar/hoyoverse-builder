@@ -48,11 +48,11 @@ export default function SiteHeader({ activePage, game, children }: SiteHeaderPro
 
   return (
     <header className="container pt-6 sm:pt-8" data-testid="site-header" onKeyDown={closeWithEscape}>
-      <div className="border-y border-stone-400 py-3" style={{ borderTopColor: "var(--game-accent, #92400e)" }}>
+      <div className="border-y border-stone-400 py-3" style={{ borderTopColor: "var(--game-accent, var(--site-accent-fallback, #92400e))" }}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3">
             <Link href="/" className="display-serif text-lg font-bold tracking-[-.02em] text-stone-900">HoYoverse Builder</Link>
-            {game && <p className="detail-mono truncate text-[11px] text-[var(--game-accent,#92400e)]" data-testid="site-header-game">{GAME_MARKS[game].mark} / {t(GAME_MARKS[game].name)}</p>}
+            {game && <p className="detail-mono truncate text-[11px] text-[var(--game-accent,var(--site-accent-fallback,#92400e))]" data-testid="site-header-game">{GAME_MARKS[game].mark} / {t(GAME_MARKS[game].name)}</p>}
           </div>
           <div className="flex items-center gap-2">
             {children}
@@ -67,7 +67,7 @@ export default function SiteHeader({ activePage, game, children }: SiteHeaderPro
               const current = item.page === activePage;
               return (
                 <li key={item.page}>
-                  <Link href={item.href} onClick={() => setOpen(false)} aria-current={current ? "page" : undefined} className={cn("detail-mono inline-flex min-h-9 items-center text-[11px] underline-offset-4 hover:underline", current ? "font-semibold text-stone-900 underline decoration-[var(--game-accent,#92400e)] decoration-2" : "text-stone-600")}>
+                  <Link href={item.href} onClick={() => setOpen(false)} aria-current={current ? "page" : undefined} className={cn("detail-mono inline-flex min-h-9 items-center text-[11px] underline-offset-4 hover:underline", current ? "font-semibold text-stone-900 underline decoration-[var(--game-accent,var(--site-accent-fallback,#92400e))] decoration-2" : "text-stone-600")}>
                     {item.label}
                   </Link>
                 </li>

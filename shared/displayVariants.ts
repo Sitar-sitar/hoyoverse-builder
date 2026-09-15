@@ -103,6 +103,17 @@ export const DISPLAY_VARIANTS: readonly DisplayVariantDefinition[] = [
       { id: "shelf", label: "カード棚", description: "キャラクターをカードで並べ、名前・精査状態・バッチで絞り込めます。カードを選ぶと詳細を右のシート（スマートフォンは全画面）で開きます。" },
     ],
   },
+  {
+    key: "colorTheme",
+    proposal: "E-2",
+    label: "ダークテーマの切替",
+    screens: ["UID照会", "キャラ図鑑", "更新履歴", "翻訳フィードバック"],
+    previewPath: "/",
+    variants: [
+      { id: LEGACY_VARIANT, label: "現行", description: "ライトテーマ固定で、テーマの切替は出しません。" },
+      { id: "switchable", label: "切替を開放", description: "公開4画面の言語切替の隣にライト／ダークの切替を出します。初期はライトで、選んだテーマはその端末に保存します。管理画面はライト固定です。" },
+    ],
+  },
 ];
 
 export type DisplayVariants = Record<string, string>;

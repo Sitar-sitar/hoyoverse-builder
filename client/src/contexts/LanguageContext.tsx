@@ -13,6 +13,7 @@ export const LANGUAGE_LABELS: Record<AppLanguage, string> = {
 const copy = {
   ja: {
     adminPortal: "管理者ポータル", displayDesign: "表示デザイン",
+    themeDark: "ダークテーマ", themeDarkOn: "ダーク", themeLightOn: "ライト",
     siteNavLookup: "UID照会", siteNavCatalog: "キャラ図鑑", siteNavLabel: "サイト内の移動", siteMenu: "メニューを開く", siteMenuClose: "メニューを閉じる",
     portalSubtitle: "崩壊：スターレイル / 原神 / ゼンレスゾーンゼロ のビルド支援", portalGameHsr: "崩壊：スターレイル", portalGameGenshin: "原神", portalGameZzz: "ゼンレスゾーンゼロ", portalLookup: "UIDで照会", portalCatalog: "図鑑を見る", portalCatalogCount: "図鑑の収録数", portalCountFailed: "収録数を取得できませんでした。", portalCountRetry: "再取得", portalChangeUid: "UIDを変更", portalOtherGames: "ほかのゲーム",
     formationBaseTarget: "基礎目標", formationTeamTarget: "編成目標", formationCurrentCharacter: "表示中のキャラクター",
@@ -49,6 +50,7 @@ const copy = {
   },
   en: {
     adminPortal: "Admin Portal", displayDesign: "Display Design",
+    themeDark: "Dark theme", themeDarkOn: "Dark", themeLightOn: "Light",
     siteNavLookup: "UID Lookup", siteNavCatalog: "Character Catalog", siteNavLabel: "Site navigation", siteMenu: "Open menu", siteMenuClose: "Close menu",
     portalSubtitle: "Build support for Honkai: Star Rail / Genshin Impact / Zenless Zone Zero", portalGameHsr: "Honkai: Star Rail", portalGameGenshin: "Genshin Impact", portalGameZzz: "Zenless Zone Zero", portalLookup: "Look up by UID", portalCatalog: "Open catalog", portalCatalogCount: "Catalog entries", portalCountFailed: "Could not load catalog counts.", portalCountRetry: "Retry", portalChangeUid: "Change UID", portalOtherGames: "Other games",
     formationBaseTarget: "Base target", formationTeamTarget: "Team target", formationCurrentCharacter: "Current character",
@@ -85,6 +87,7 @@ const copy = {
   },
   "zh-CN": {
     adminPortal: "管理门户", displayDesign: "显示设计",
+    themeDark: "深色主题", themeDarkOn: "深色", themeLightOn: "浅色",
     siteNavLookup: "UID 查询", siteNavCatalog: "角色图鉴", siteNavLabel: "站内导航", siteMenu: "打开菜单", siteMenuClose: "关闭菜单",
     portalSubtitle: "崩坏：星穹铁道 / 原神 / 绝区零 的配装辅助", portalGameHsr: "崩坏：星穹铁道", portalGameGenshin: "原神", portalGameZzz: "绝区零", portalLookup: "通过 UID 查询", portalCatalog: "查看图鉴", portalCatalogCount: "图鉴收录数", portalCountFailed: "无法获取收录数。", portalCountRetry: "重新获取", portalChangeUid: "更改 UID", portalOtherGames: "其他游戏",
     formationBaseTarget: "基础目标", formationTeamTarget: "配队目标", formationCurrentCharacter: "当前角色",

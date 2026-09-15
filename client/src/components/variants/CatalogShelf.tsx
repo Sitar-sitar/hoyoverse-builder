@@ -115,7 +115,7 @@ export default function CatalogShelf(props: CatalogShelfProps) {
   }
 
   return (
-    <section className="mt-8" style={accent} data-testid="catalog-shelf">
+    <section className="mt-8" style={accent} data-testid="catalog-shelf" data-game={game}>
       <div className="grid gap-3 border-b border-stone-300 pb-5 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-end">
         <div>
           <div className="grid grid-cols-3 gap-1 border border-stone-300 bg-stone-100/70 p-1">
