@@ -738,14 +738,32 @@ export function normalizeMihomoPayload(payload: unknown): Omit<BuildLookupResult
 }
 
 /** set 時にこの件数を超えていたら期限切れエントリを掃除する（常駐プロセスでの無制限増加を防ぐ）。 */
-const CACHE_SWEEP_THRESHOLD = 256;
+/**
+ * 1 キャッシュあたりの上限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 47）。
+ * このクラスは HSR・原神・ZZZ の3インスタンスで使うため、全体では最大 768 件になる。
+ * 期限切れを掃除するだけでは、全件が有効な間は無制限に増えていた。
+ */
+const CACHE_MAX_ENTRIES = 256;
 
 export class UidResponseCache<T> {
   private cache = new Map<string, { value: T; expiresAt: number }>();
 
-  /** 保持中のエントリ数（期限切れを含む）。掃除が効いていることをテストから観測するために公開する。 */
+  /** 保持中のエントリ数（期限切れを含む）。掃除と追い出しが効いていることをテストから観測するために公開する。 */
   get size(): number {
     return this.cache.size;
+  }
+
+  /** 期限切れを先に捨て、それでも上限を超える分は最後に使われたのが古い順に捨てる。 */
+  private evict(now: number) {
+    if (this.cache.size <= CACHE_MAX_ENTRIES) return;
+    for (const [entryKey, entry] of this.cache) {
+      if (entry.expiresAt <= now) this.cache.delete(entryKey);
+    }
+    while (this.cache.size > CACHE_MAX_ENTRIES) {
+      const oldest = this.cache.keys().next();
+      if (oldest.done) break;
+      this.cache.delete(oldest.value);
+    }
   }
 
   getEntry(key: string, now = Date.now()): { value: T; expiresAt: number } | null {
@@ -754,6 +772,10 @@ export class UidResponseCache<T> {
       this.cache.delete(key);
       return null;
     }
+    // 読み取りも「使った」とみなして末尾へ動かす。Map は挿入順を保つので、
+    // 先頭が最後に使われたのが最も古いエントリになる。
+    this.cache.delete(key);
+    this.cache.set(key, entry);
     return entry;
   }
 
@@ -763,12 +785,10 @@ export class UidResponseCache<T> {
 
   set(key: string, value: T, ttlMs: number, now = Date.now()): number {
     const expiresAt = now + ttlMs;
+    // Map.set は既存キーの更新では挿入順を変えないため、必ず消してから入れ直す。
+    this.cache.delete(key);
     this.cache.set(key, { value, expiresAt });
-    if (this.cache.size > CACHE_SWEEP_THRESHOLD) {
-      for (const [entryKey, entry] of this.cache) {
-        if (entry.expiresAt <= now) this.cache.delete(entryKey);
-      }
-    }
+    this.evict(now);
     return expiresAt;
   }
 }
