@@ -94,6 +94,10 @@ async function startServer() {
     createExpressMiddleware({
       router: appRouter,
       createContext,
+      // query を POST でも受け付ける。クライアントの httpBatchLink が methodOverride: "POST" を使うため
+      // UID が GET の URL へ載らなくなる（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 42）。
+      // GET は禁止されないので、CI の build.guideHistory 疎通確認（GET）はそのまま通る。
+      allowMethodOverride: true,
       // tRPC は既定の vary を setHeader で書き、CORS の Vary: Origin を消す。Headers インスタンスなら追記される
       // （素のオブジェクトだと既定の vary を置き換える）。設計: docs/修正設計書_tRPC応答のVary_Origin欠落_Phase41_2026-09-15.md
       responseMeta: () => ({ headers: new Headers({ vary: "Origin" }) }),
