@@ -501,17 +501,47 @@ export function isEnkaResultComplete(data: LookupData): boolean {
   return data.characters.every((character) => character.statsStatus !== "unavailable");
 }
 
+const ENKA_NOT_FOUND_MESSAGE = "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。";
+const ENKA_TOO_MANY_REQUESTS_MESSAGE = "照会が集中しています。数分後に再度お試しください。";
+const ENKA_UPSTREAM_DOWN_MESSAGE = "外部データサービスが一時的に応答していません。数分後に再度お試しください。";
+const ENKA_UPSTREAM_BAD_MESSAGE = "外部データサービスから正常な応答を取得できませんでした。数分後に再度お試しください。";
+const ENKA_UNREACHABLE_MESSAGE = "公開データサービスへ接続できませんでした。数分後に再度お試しください。";
+
+/** HTTP status からエラー種別を決める。文言は MiHoMo 経路（server/buildAdvisor.ts）と揃える。 */
+function enkaStatusError(status: number): TRPCError {
+  if (status === 404) return new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
+  if (status === 429) return new TRPCError({ code: "TOO_MANY_REQUESTS", message: ENKA_TOO_MANY_REQUESTS_MESSAGE });
+  if (status >= 500) return new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
+  return new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_BAD_MESSAGE });
+}
+
+/**
+ * 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 45-1。
+ * HTTP status を先に見て、失敗応答では静的カタログ（最大5秒）を取りに行かない。
+ * Content-Type は必須条件にしない。200 の本文が正しい JSON なら Content-Type が
+ * 欠落・誤設定でも従来どおり処理する（A-04）。
+ */
 export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData; ttlSeconds: number | null }> {
   const controller = new AbortController(); const timeout = setTimeout(() => controller.abort(), 14_000);
   try {
     const response = await fetch(`https://enka.network/api/hsr/uid/${encodeURIComponent(uid)}/`, { headers: { "User-Agent": "Star-Rail-Build-Advisor/1.0 (personal-use)" }, signal: controller.signal });
-    const raw = await response.text(); const payload: unknown = JSON.parse(raw || "{}");
+    if (!response.ok) throw enkaStatusError(response.status);
+
+    const raw = await response.text();
+    let payload: unknown;
+    try {
+      payload = JSON.parse(raw || "{}");
+    } catch {
+      throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
+    }
+
     const staticData = await getStaticIndex();
     const data = normalizeEnkaPayload(payload, staticData);
-    if (!response.ok || !data.characters.length) throw new TRPCError({ code: response.status === 404 ? "NOT_FOUND" : "BAD_GATEWAY", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
+    // 200 でも公開中のキャラクターが 0 件なら「見つからない」。空の結果を返さない。
+    if (!data.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
     return { data, ttlSeconds: num(record(payload).ttl) };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
-    throw new TRPCError({ code: "BAD_GATEWAY", message: "公開データサービスへ接続できませんでした。数分後に再度お試しください。", cause: error });
+    throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UNREACHABLE_MESSAGE, cause: error });
   } finally { clearTimeout(timeout); }
 }
