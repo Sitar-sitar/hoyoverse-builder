@@ -36,9 +36,14 @@ const STATIC_BASE = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/maste
 const STATIC_TTL_MS = 24 * 60 * 60 * 1000;
 const STATIC_FETCH_TIMEOUT_MS = 5_000;
 const LAST_KNOWN_GOOD_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+// 取得に失敗したあと、この時間は外部へ再取得しに行かない（設計:
+// docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 44）。
+// 原神・ZZZ の createTimedLoader と同じ値にそろえる。
+const STATIC_RETRY_SUPPRESSION_MS = 60 * 1000;
 
 let staticCache: { value: StaticIndex; expiresAt: number } | null = null;
 let lastKnownGoodStatic: { value: StaticIndex; savedAt: number } | null = null;
+let staticNextRetryAt = 0;
 
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
   "1014": { name: "セイバー" }, "1310": { name: "ホタル" }, "1407": { name: "キャストリス" }, "1506": { name: "銀狼Lv.999" }, "1508": { name: "遠坂凛" }, "1509": { name: "ギルガメッシュ" },
@@ -87,21 +92,38 @@ async function loadStaticIndex(): Promise<StaticIndex | null> {
   }
 }
 
-async function getStaticIndex(): Promise<StaticIndex> {
-  const now = Date.now();
-  if (staticCache && staticCache.expiresAt > now) return staticCache.value;
-  const fresh = await loadStaticIndex();
-  if (fresh) {
-    staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
-    lastKnownGoodStatic = { value: fresh, savedAt: now };
-    return fresh;
-  }
+function staticIndexWithoutFetch(now: number): StaticIndex {
   if (lastKnownGoodStatic && now - lastKnownGoodStatic.savedAt <= LAST_KNOWN_GOOD_MAX_AGE_MS) {
     console.warn(`[hsr-enka-fallback] 静的データの取得に失敗したため、直近正常バンドル（保存: ${new Date(lastKnownGoodStatic.savedAt).toISOString()}）を使用します。`);
     return lastKnownGoodStatic.value;
   }
   console.warn("[hsr-enka-fallback] 静的データを取得できず、直近正常バンドルも利用できません。戦闘外最終値の算出を保留します。");
   return EMPTY_STATIC_INDEX;
+}
+
+export async function getStaticIndex(): Promise<StaticIndex> {
+  const now = Date.now();
+  if (staticCache && staticCache.expiresAt > now) return staticCache.value;
+  // 失敗直後は外部へ行かない。8 エンドポイントを 5 秒のタイムアウトで毎回叩き直すと、
+  // 障害中は照会のたびにその分だけ待たされる。
+  if (now < staticNextRetryAt) return staticIndexWithoutFetch(now);
+
+  const fresh = await loadStaticIndex();
+  if (fresh) {
+    staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
+    lastKnownGoodStatic = { value: fresh, savedAt: now };
+    staticNextRetryAt = 0;
+    return fresh;
+  }
+  staticNextRetryAt = Date.now() + STATIC_RETRY_SUPPRESSION_MS;
+  return staticIndexWithoutFetch(now);
+}
+
+/** テスト専用。モジュール内の静的データ状態を初期化する。 */
+export function resetStaticIndexForTests() {
+  staticCache = null;
+  lastKnownGoodStatic = null;
+  staticNextRetryAt = 0;
 }
 
 // ---- プロパティ分類（properties.json のメタデータ駆動） ----

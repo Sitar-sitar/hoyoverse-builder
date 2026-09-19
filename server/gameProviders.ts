@@ -28,6 +28,9 @@ const ENKA_STORE = "https://api.enka.network/store";
 const USER_AGENT = "Star-Rail-Build-Advisor/1.2 (public-build-lookup)";
 const FALLBACK_TTL_MS = 4 * 60 * 1000;
 const CATALOG_TTL_MS = 24 * 60 * 60 * 1000;
+// HSR（server/enkaFallback.ts）の静的データと同じ保持期間・同じ再試行抑止にそろえる。
+const CATALOG_LAST_KNOWN_GOOD_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const CATALOG_RETRY_SUPPRESSION_MS = 60 * 1000;
 
 function asRecord(value: unknown): RawRecord {
   return value && typeof value === "object" && !Array.isArray(value) ? value as RawRecord : {};
@@ -90,16 +93,70 @@ async function fetchJson(url: string): Promise<unknown> {
 
 type TimedValue<T> = { value: T; expiresAt: number };
 
-function createTimedLoader<T>(load: () => Promise<T>) {
+/**
+ * TTL キャッシュ ＋ Last Known Good ＋ negative caching
+ * （設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 44）。
+ *
+ * LKG だけでは、外部障害中に毎リクエストが取得を試み、fetchJson のタイムアウト（14 秒）を
+ * 毎回待ってから LKG を返すことになる。そのため失敗時は次の再試行時刻を記録し、
+ * その間は外部へ行かずに即答する。LKG が無い場合も同じ 60 秒だけ外部を叩かず、
+ * 直前のエラーをそのまま返す（起動直後の障害で外部を叩き続けないため）。
+ */
+export function createTimedLoader<T>(label: string, load: () => Promise<T>) {
   let entry: TimedValue<T> | null = null;
+  let lastKnownGood: { value: T; savedAt: number } | null = null;
+  let nextRetryAt = 0;
+  let lastError: unknown = null;
   let pending: Promise<T> | null = null;
-  return async () => {
-    if (entry && entry.expiresAt > Date.now()) return entry.value;
+
+  const usableLastKnownGood = (now: number) =>
+    lastKnownGood && now - lastKnownGood.savedAt <= CATALOG_LAST_KNOWN_GOOD_MAX_AGE_MS ? lastKnownGood : null;
+
+  const warnStale = (savedAt: number) => {
+    console.warn(`[${label}] 静的カタログの取得に失敗したため、直近正常データ（保存: ${new Date(savedAt).toISOString()}）を使用します。`);
+  };
+
+  const failure = () => lastError ?? new TRPCError({
+    code: "BAD_GATEWAY",
+    message: "外部データサービスが一時的に応答していません。数分後に再度お試しください。",
+  });
+
+  return async (): Promise<T> => {
+    const now = Date.now();
+    if (entry && entry.expiresAt > now) return entry.value;
+
+    // 再試行抑止中は外部へ行かない。
+    if (now < nextRetryAt) {
+      const stale = usableLastKnownGood(now);
+      if (stale) {
+        warnStale(stale.savedAt);
+        return stale.value;
+      }
+      throw failure();
+    }
+
     if (!pending) {
-      pending = load().then((value) => {
-        entry = { value, expiresAt: Date.now() + CATALOG_TTL_MS };
-        return value;
-      }).finally(() => { pending = null; });
+      pending = load().then(
+        (value) => {
+          const at = Date.now();
+          entry = { value, expiresAt: at + CATALOG_TTL_MS };
+          lastKnownGood = { value, savedAt: at };
+          nextRetryAt = 0;
+          lastError = null;
+          return value;
+        },
+        (error: unknown) => {
+          const at = Date.now();
+          nextRetryAt = at + CATALOG_RETRY_SUPPRESSION_MS;
+          lastError = error;
+          const stale = usableLastKnownGood(at);
+          if (stale) {
+            warnStale(stale.savedAt);
+            return stale.value;
+          }
+          throw error;
+        },
+      ).finally(() => { pending = null; });
     }
     return pending;
   };
@@ -316,7 +373,7 @@ function comparisonsFromStats(targets: TargetStatDefinition[], values: Record<st
 }
 
 type GenshinCatalog = { characters: RawRecord; loc: RawRecord };
-const getGenshinCatalog = createTimedLoader(async (): Promise<GenshinCatalog> => {
+const getGenshinCatalog = createTimedLoader("genshin-catalog", async (): Promise<GenshinCatalog> => {
   const [characters, loc] = await Promise.all([fetchJson(`${ENKA_STORE}/characters.json`), fetchJson(`${ENKA_STORE}/loc.json`)]);
   return { characters: asRecord(characters), loc: asRecord(loc) };
 });
@@ -387,7 +444,7 @@ const ZZZ_PROP_FALLBACKS: Record<string, string> = {
 };
 
 type ZzzCatalog = { avatars: RawRecord; weapons: RawRecord; equipments: RawRecord; locs: RawRecord; property: RawRecord };
-const getZzzCatalog = createTimedLoader(async (): Promise<ZzzCatalog> => {
+const getZzzCatalog = createTimedLoader("zzz-catalog", async (): Promise<ZzzCatalog> => {
   const [avatars, weapons, equipments, locs, property] = await Promise.all([
     fetchJson(`${ENKA_STORE}/zzz/avatars.json`), fetchJson(`${ENKA_STORE}/zzz/weapons.json`), fetchJson(`${ENKA_STORE}/zzz/equipments.json`), fetchJson(`${ENKA_STORE}/zzz/locs.json`), fetchJson(`${ENKA_STORE}/zzz/property.json`),
   ]);
