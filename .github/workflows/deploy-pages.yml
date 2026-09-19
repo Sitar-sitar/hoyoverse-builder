@@ -76,12 +76,35 @@ jobs:
           # GitHub Pages does not provide SPA history fallback for nested paths.
           # Publish index.html at every known client-side route so direct links and
           # OAuth redirects such as /admin work without a Pages 404.
-          for route in characters updates feedback admin admin/feedback; do
+          for route in characters updates feedback admin admin/feedback admin/display; do
             mkdir -p "dist/public/$route"
             cp dist/public/index.html "dist/public/$route/index.html"
           done
 
           cp dist/public/index.html dist/public/404.html
+
+      - name: Verify every client-side route is published
+        run: |
+          set -euo pipefail
+
+          # ルートを足したのに上の列挙を更新し忘れると、直接アクセスが Pages の 404 を経由する。
+          # App.tsx の Route から一覧を取り、対応するディレクトリがあることを確かめる。
+          # `/` は index.html 自身、`/404` は 404.html で足りるため対象外。
+          missing=0
+          routes="$(grep -oE 'path=\{"[^"]+"\}' client/src/App.tsx | sed -E 's/path=\{"(.*)"\}/\1/')"
+          for route in $routes; do
+            case "$route" in
+              /|/404) continue ;;
+            esac
+            if [ ! -f "dist/public${route}/index.html" ]; then
+              echo "missing Pages directory for client-side route: $route"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "Add the route to the 'for route in ...' list in the Prepare Pages artifact step."
+            exit 1
+          fi
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6

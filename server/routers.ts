@@ -106,12 +106,12 @@ export const appRouter = router({
       })
       .query(async ({ input }) => {
         const result = await lookupGameBuild(input.game, input.uid);
-        // Analytics are anonymous and must not turn a successful lookup into a failure.
-        try {
-          await recordLookupAnalyticsEvent(input.game, result.cached);
-        } catch (error) {
-          console.error("[Analytics] Failed to record lookup:", error);
-        }
+        // 匿名のベストエフォート記録。照会の成否も応答時間も左右させない。
+        // await を外すだけだと reject 時に unhandledRejection になるため、必ず catch を付けて捨てる。
+        // timeout は付けない（待たない以上は無意味で、DB 側の接続も解放されない）。
+        // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 46-1
+        void recordLookupAnalyticsEvent(input.game, result.cached)
+          .catch(error => console.error("[Analytics] Failed to record lookup:", error));
         return result;
       }),
   }),
