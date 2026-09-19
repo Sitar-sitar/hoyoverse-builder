@@ -6,6 +6,7 @@ import type { Express, Request, Response } from "express";
 import { SignJWT, jwtVerify } from "jose";
 import * as db from "../db";
 import { getSessionCookieOptions } from "./cookies";
+import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
 
 const GITHUB_AUTHORIZE_URL = "https://github.com/login/oauth/authorize";
 const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
@@ -19,6 +20,7 @@ const ADMIN_BEARER_TTL_SECONDS = 60 * 60;
 const OAUTH_STATE_COOKIE = "github_admin_oauth_state";
 const OAUTH_STATE_TTL_MS = 10 * 60 * 1000;
 const ADMIN_EXCHANGE_CODE_TTL_MS = 2 * 60 * 1000;
+const exchangeLimiter = createRateLimiter({ windowMs: 60_000, max: 10 });
 const DEFAULT_ADMIN_FRONTEND_URL = "https://sitar-sitar.github.io/hoyoverse-builder";
 
 type GitHubUser = {
@@ -349,6 +351,15 @@ export function registerGitHubAdminAuthRoutes(app: Express) {
   app.post("/api/auth/github/exchange", async (req: Request, res: Response) => {
     res.setHeader("Cache-Control", "no-store");
     res.setHeader("Pragma", "no-cache");
+
+    // 交換コードは 32 バイト乱数・ハッシュ保存・単回使用・短 TTL なので総当たりは成立しない。
+    // ここでの上限は DB 照合の負荷を抑えるためのもの（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(D)）。
+    const verdict = exchangeLimiter.consume(clientIpFromRequest(req));
+    if (!verdict.allowed) {
+      applyRetryAfter(res, verdict.retryAfterSeconds);
+      res.status(429).json({ error: "Too Many Requests" });
+      return;
+    }
 
     const code = typeof req.body?.code === "string" ? req.body.code.trim() : "";
     if (!/^[A-Za-z0-9_-]{43}$/.test(code)) {

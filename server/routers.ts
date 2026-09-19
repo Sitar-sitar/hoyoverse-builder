@@ -9,7 +9,18 @@ import { guideUpdateHistory } from "./guideUpdateHistory";
 import { publishDisplaySettings, readAdminDisplaySettings, readPublicDisplaySettings } from "./displaySettings";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
-import { adminProcedure, publicProcedure, router } from "./_core/trpc";
+import { clientIpFromRequest, rateLimitKeyForUid } from "./_core/rateLimit";
+import { adminProcedure, createProcedureRateLimiter, enforceRateLimit, publicProcedure, router } from "./_core/trpc";
+
+// procedure 別のレート制限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(C)）。
+// キャッシュヒットは区別しない。middleware は lookupGameBuild の前に走るため事前に判別できず、
+// 事後にカウントを戻す方式は UID キャッシュの TTL を使った回避経路になる。
+const lookupIpLimiter = createProcedureRateLimiter({ windowMs: 60_000, max: 20 });
+const lookupUidLimiter = createProcedureRateLimiter({ windowMs: 60_000, max: 6 });
+const feedbackIpLimiter = createProcedureRateLimiter({ windowMs: 10 * 60_000, max: 5 });
+
+const LOOKUP_TOO_MANY_REQUESTS = "照会が集中しています。数分後に再度お試しください。";
+const FEEDBACK_TOO_MANY_REQUESTS = "送信が集中しています。しばらく待ってから再度お試しください。";
 
 const isCalendarDate = (date: string) => {
   const [year, month, day] = date.split("-").map(Number);
@@ -87,6 +98,12 @@ export const appRouter = router({
           ctx.addIssue({ code: "custom", path: ["uid"], message: "このゲームのUIDは9〜10桁の数字で入力してください。" });
         }
       }))
+      .use(({ ctx, input, next }) => {
+        enforceRateLimit(ctx, lookupIpLimiter, `lookup:ip:${clientIpFromRequest(ctx.req)}`, LOOKUP_TOO_MANY_REQUESTS);
+        // UID は平文で持たない。ゲーム間でキーを共有しない。
+        enforceRateLimit(ctx, lookupUidLimiter, `lookup:uid:${input.game}:${rateLimitKeyForUid(input.uid)}`, LOOKUP_TOO_MANY_REQUESTS);
+        return next();
+      })
       .query(async ({ input }) => {
         const result = await lookupGameBuild(input.game, input.uid);
         // Analytics are anonymous and must not turn a successful lookup into a failure.
@@ -145,6 +162,10 @@ export const appRouter = router({
         suggestedText: z.string().trim().min(3).max(1000),
         notes: z.string().trim().max(2000).optional(),
       }))
+      .use(({ ctx, next }) => {
+        enforceRateLimit(ctx, feedbackIpLimiter, `feedback:ip:${clientIpFromRequest(ctx.req)}`, FEEDBACK_TOO_MANY_REQUESTS);
+        return next();
+      })
       .mutation(async ({ input }) => {
         try {
           await createTranslationFeedback({
