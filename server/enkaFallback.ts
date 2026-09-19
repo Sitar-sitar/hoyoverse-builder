@@ -36,9 +36,14 @@ const STATIC_BASE = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/maste
 const STATIC_TTL_MS = 24 * 60 * 60 * 1000;
 const STATIC_FETCH_TIMEOUT_MS = 5_000;
 const LAST_KNOWN_GOOD_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+// 取得に失敗したあと、この時間は外部へ再取得しに行かない（設計:
+// docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 44）。
+// 原神・ZZZ の createTimedLoader と同じ値にそろえる。
+const STATIC_RETRY_SUPPRESSION_MS = 60 * 1000;
 
 let staticCache: { value: StaticIndex; expiresAt: number } | null = null;
 let lastKnownGoodStatic: { value: StaticIndex; savedAt: number } | null = null;
+let staticNextRetryAt = 0;
 
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
   "1014": { name: "セイバー" }, "1310": { name: "ホタル" }, "1407": { name: "キャストリス" }, "1506": { name: "銀狼Lv.999" }, "1508": { name: "遠坂凛" }, "1509": { name: "ギルガメッシュ" },
@@ -87,21 +92,38 @@ async function loadStaticIndex(): Promise<StaticIndex | null> {
   }
 }
 
-async function getStaticIndex(): Promise<StaticIndex> {
-  const now = Date.now();
-  if (staticCache && staticCache.expiresAt > now) return staticCache.value;
-  const fresh = await loadStaticIndex();
-  if (fresh) {
-    staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
-    lastKnownGoodStatic = { value: fresh, savedAt: now };
-    return fresh;
-  }
+function staticIndexWithoutFetch(now: number): StaticIndex {
   if (lastKnownGoodStatic && now - lastKnownGoodStatic.savedAt <= LAST_KNOWN_GOOD_MAX_AGE_MS) {
     console.warn(`[hsr-enka-fallback] 静的データの取得に失敗したため、直近正常バンドル（保存: ${new Date(lastKnownGoodStatic.savedAt).toISOString()}）を使用します。`);
     return lastKnownGoodStatic.value;
   }
   console.warn("[hsr-enka-fallback] 静的データを取得できず、直近正常バンドルも利用できません。戦闘外最終値の算出を保留します。");
   return EMPTY_STATIC_INDEX;
+}
+
+export async function getStaticIndex(): Promise<StaticIndex> {
+  const now = Date.now();
+  if (staticCache && staticCache.expiresAt > now) return staticCache.value;
+  // 失敗直後は外部へ行かない。8 エンドポイントを 5 秒のタイムアウトで毎回叩き直すと、
+  // 障害中は照会のたびにその分だけ待たされる。
+  if (now < staticNextRetryAt) return staticIndexWithoutFetch(now);
+
+  const fresh = await loadStaticIndex();
+  if (fresh) {
+    staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
+    lastKnownGoodStatic = { value: fresh, savedAt: now };
+    staticNextRetryAt = 0;
+    return fresh;
+  }
+  staticNextRetryAt = Date.now() + STATIC_RETRY_SUPPRESSION_MS;
+  return staticIndexWithoutFetch(now);
+}
+
+/** テスト専用。モジュール内の静的データ状態を初期化する。 */
+export function resetStaticIndexForTests() {
+  staticCache = null;
+  lastKnownGoodStatic = null;
+  staticNextRetryAt = 0;
 }
 
 // ---- プロパティ分類（properties.json のメタデータ駆動） ----
@@ -479,17 +501,47 @@ export function isEnkaResultComplete(data: LookupData): boolean {
   return data.characters.every((character) => character.statsStatus !== "unavailable");
 }
 
+const ENKA_NOT_FOUND_MESSAGE = "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。";
+const ENKA_TOO_MANY_REQUESTS_MESSAGE = "照会が集中しています。数分後に再度お試しください。";
+const ENKA_UPSTREAM_DOWN_MESSAGE = "外部データサービスが一時的に応答していません。数分後に再度お試しください。";
+const ENKA_UPSTREAM_BAD_MESSAGE = "外部データサービスから正常な応答を取得できませんでした。数分後に再度お試しください。";
+const ENKA_UNREACHABLE_MESSAGE = "公開データサービスへ接続できませんでした。数分後に再度お試しください。";
+
+/** HTTP status からエラー種別を決める。文言は MiHoMo 経路（server/buildAdvisor.ts）と揃える。 */
+function enkaStatusError(status: number): TRPCError {
+  if (status === 404) return new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
+  if (status === 429) return new TRPCError({ code: "TOO_MANY_REQUESTS", message: ENKA_TOO_MANY_REQUESTS_MESSAGE });
+  if (status >= 500) return new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
+  return new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_BAD_MESSAGE });
+}
+
+/**
+ * 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 45-1。
+ * HTTP status を先に見て、失敗応答では静的カタログ（最大5秒）を取りに行かない。
+ * Content-Type は必須条件にしない。200 の本文が正しい JSON なら Content-Type が
+ * 欠落・誤設定でも従来どおり処理する（A-04）。
+ */
 export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData; ttlSeconds: number | null }> {
   const controller = new AbortController(); const timeout = setTimeout(() => controller.abort(), 14_000);
   try {
     const response = await fetch(`https://enka.network/api/hsr/uid/${encodeURIComponent(uid)}/`, { headers: { "User-Agent": "Star-Rail-Build-Advisor/1.0 (personal-use)" }, signal: controller.signal });
-    const raw = await response.text(); const payload: unknown = JSON.parse(raw || "{}");
+    if (!response.ok) throw enkaStatusError(response.status);
+
+    const raw = await response.text();
+    let payload: unknown;
+    try {
+      payload = JSON.parse(raw || "{}");
+    } catch {
+      throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
+    }
+
     const staticData = await getStaticIndex();
     const data = normalizeEnkaPayload(payload, staticData);
-    if (!response.ok || !data.characters.length) throw new TRPCError({ code: response.status === 404 ? "NOT_FOUND" : "BAD_GATEWAY", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
+    // 200 でも公開中のキャラクターが 0 件なら「見つからない」。空の結果を返さない。
+    if (!data.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
     return { data, ttlSeconds: num(record(payload).ttl) };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
-    throw new TRPCError({ code: "BAD_GATEWAY", message: "公開データサービスへ接続できませんでした。数分後に再度お試しください。", cause: error });
+    throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UNREACHABLE_MESSAGE, cause: error });
   } finally { clearTimeout(timeout); }
 }

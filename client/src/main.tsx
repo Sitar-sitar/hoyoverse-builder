@@ -50,6 +50,10 @@ const trpcClient = trpc.createClient({
     httpBatchLink({
       url: trpcUrl,
       transformer: superjson,
+      // query も POST で送る。UID は利用者のゲームアカウント識別子であり、GET のクエリ文字列に載せると
+      // CDN・プロキシ・アクセスログ・ブラウザ履歴へ残るため（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 42）。
+      // サーバー側は createExpressMiddleware の allowMethodOverride: true で受ける。
+      methodOverride: "POST",
       headers() {
         // Safari/ITP fallback: the GitHub callback provides a one-time exchange
         // code in the URL fragment. It is exchanged for a short-lived Bearer

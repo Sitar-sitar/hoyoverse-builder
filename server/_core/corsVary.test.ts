@@ -14,6 +14,11 @@ const PAGES_ORIGIN = "https://sitar-sitar.github.io";
 const OTHER_ORIGIN = "https://example.invalid";
 const HISTORY_PATH = "/api/trpc/build.guideHistory?input=%7B%7D";
 
+// 実サーバーを起動するテストは複数ファイルが同時に走る。ランダムなポートだと帯域が重なり、
+// index.ts の findAvailablePort（空きを探して +20 まで走査）でも取り合いになって
+// 起動待ちがタイムアウトすることがあった。ファイルごとに重ならない固定の基点を割り当てる。
+const PORT_BASE = 41000;
+
 let server: ChildProcess;
 let port: number;
 
@@ -40,7 +45,7 @@ function varyTokens(res: RawResponse): string[] {
 beforeAll(async () => {
   server = spawn(process.execPath, ["--import", "tsx", "server/_core/index.ts"], {
     cwd: ROOT,
-    env: { ...process.env, API_ONLY: "true", NODE_ENV: "production", PORT: String(40000 + Math.floor(Math.random() * 10000)) },
+    env: { ...process.env, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
     stdio: ["ignore", "pipe", "pipe"],
   });
   port = await new Promise<number>((resolve, reject) => {

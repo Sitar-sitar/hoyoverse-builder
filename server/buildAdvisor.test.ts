@@ -290,6 +290,66 @@ describe("UIDキャッシュ", () => {
     expect(cache.size).toBe(1);
     expect(cache.get("edge", 15)).toBe("kept");
   });
+
+  // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 47
+  it("全件が有効でも 256 件を超えない", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 1_000; i += 1) cache.set(`uid-${i}`, `v${i}`, 60_000, 0);
+
+    expect(cache.size).toBe(256);
+  });
+
+  it("256 件までは保持し、257 件目で最も古い 1 件だけを追い出す", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 256; i += 1) cache.set(`uid-${i}`, `v${i}`, 60_000, 0);
+    expect(cache.size).toBe(256);
+
+    cache.set("uid-256", "v256", 60_000, 0);
+    expect(cache.size).toBe(256);
+    expect(cache.get("uid-0", 1)).toBeNull();
+    expect(cache.get("uid-1", 1)).toBe("v1");
+    expect(cache.get("uid-256", 1)).toBe("v256");
+  });
+
+  it("読み取ったエントリは最後に使われた扱いになり、追い出されない", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 256; i += 1) cache.set(`uid-${i}`, `v${i}`, 60_000, 0);
+
+    // 最も古い uid-0 を読むと末尾へ動き、代わりに uid-1 が最も古くなる。
+    expect(cache.get("uid-0", 1)).toBe("v0");
+    cache.set("uid-256", "v256", 60_000, 1);
+
+    expect(cache.size).toBe(256);
+    expect(cache.get("uid-0", 2)).toBe("v0");
+    expect(cache.get("uid-1", 2)).toBeNull();
+  });
+
+  it("既存キーの set も最後に使われた扱いになる", () => {
+    const cache = new UidResponseCache<string>();
+    for (let i = 0; i < 256; i += 1) cache.set(`uid-${i}`, `v${i}`, 60_000, 0);
+
+    cache.set("uid-0", "updated", 60_000, 1);
+    cache.set("uid-256", "v256", 60_000, 1);
+
+    expect(cache.size).toBe(256);
+    expect(cache.get("uid-0", 2)).toBe("updated");
+    expect(cache.get("uid-1", 2)).toBeNull();
+  });
+
+  it("期限切れがある場合は LRU の追い出しより先に期限切れを捨てる", () => {
+    const cache = new UidResponseCache<string>();
+    // 先に入れた 100 件だけ短い TTL にする。
+    for (let i = 0; i < 100; i += 1) cache.set(`short-${i}`, `v${i}`, 10, 0);
+    for (let i = 0; i < 156; i += 1) cache.set(`long-${i}`, `v${i}`, 60_000, 0);
+    expect(cache.size).toBe(256);
+
+    // 短い TTL が切れたあとに 1 件足すと、期限切れ 100 件が消えるだけで
+    // まだ有効な long-0（最も古い有効エントリ）は残る。
+    cache.set("fresh", "kept", 60_000, 20);
+    expect(cache.size).toBe(157);
+    expect(cache.get("long-0", 21)).toBe("v0");
+    expect(cache.get("short-0", 21)).toBeNull();
+  });
 });
 
 describe("MiHoMoからEnkaへのフォールバック", () => {
