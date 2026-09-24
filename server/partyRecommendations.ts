@@ -169,6 +169,7 @@ const batch14Options = datedOptions("2026-08-27", true);
 const batch16Options = datedOptions("2026-09-07", true);
 const batch18Options = datedOptions("2026-09-11", true);
 const batch19Options = datedOptions("2026-09-13", true);
+const batch20Options = datedOptions("2026-09-24", true);
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
@@ -649,6 +650,11 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"], "ヴェルトで支援スキルを発動する殲滅編成。防御無視と防御低下を重ねて敵の防御力をほぼ無視する。", "An Annihilation team where Welt triggers assist skills, stacking DEF ignore and DEF reduction to nearly bypass enemy DEF.", "由瓦尔特发动支援技能的歼灭队，叠加无视防御与减防，几乎无视敌人防御力。"),
     plan(["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"], "手数とEP回復が多い裁決編成。必殺技の回転率を高める。", "A Judgment team with many actions and high Energy gain that raises Ultimate uptime.", "行动次数与能量回复较多的裁决队，提高终结技循环率。"),
     plan(["姫子・旅立ち", "開拓者（記憶）", "ルアン・メェイ", "フォフォ"], "記憶開拓者の支援スキルとルアン・メェイの支援で組む、微課金向けのハイパーキャリー編成。", "A budget hypercarry team using Remembrance Trailblazer's assist skill and Ruan Mei's support.", "利用记忆开拓者支援技能与阮·梅辅助的低氪超载队。"),
+  ]),
+  // 第20バッチ（2026-09-24）: アベンチュリン・波と戯れる夏。Game8・GameWith の2案が実名で一致する（3案目の実名編成は無いため2案）。
+  "hsr:アベンチュリン・波と戯れる夏": batch20Options("hsr", "アベンチュリン・波と戯れる夏", "https://gamewith.jp/houkaistarrail/article/show/565894", mainDps, [
+    plan(["アベンチュリン・波と戯れる夏", "不死途", "千冶・刃", "ヒアンシー"], "他に歓楽キャラがいない追加攻撃編成。愉悦スキルが追加攻撃として扱われ、手数の多い不死途・千冶・刃で熱気を溜める。", "A follow-up attack team with no other Elation characters, so his Elation Skill counts as a follow-up attack while high-action Ashveil and Mortenax Blade build Fervor.", "队伍中没有其他欢愉角色的追加攻击队。欢愉技视为追加攻击，由行动次数多的不死途与千冶·刃积攒热意。"),
+    plan(["アベンチュリン・波と戯れる夏", "ロビン・夏空の歌", "爻光", "ヒアンシー"], "歓楽の味方と組む愉悦キャリー編成。爻光の必殺技でアッハタイムを早め、本人の愉悦度を上げる。", "An Elation hypercarry team with other Elation allies; Yaoguang's Ultimate speeds up Aha Instant and raises his Elation.", "与欢愉队友组成的欢愉主C队。爻光的终结技加快阿哈时刻，并提高其欢愉度。"),
   ]),
   "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
     plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),

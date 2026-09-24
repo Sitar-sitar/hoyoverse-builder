@@ -48,7 +48,7 @@ function buildLedger(): CharacterUpdateLedger {
     reviewed,
     pending: entries.length - reviewed,
     byGame,
-    nextBatch: { id: 19, names: nextBatch },
+    nextBatch: { id: 21, names: nextBatch },
     criteria: `全${entries.length}キャラクターについて、更新日付き個別ビルド根拠、確認済みsource IDの全6段階凸（未実装・未公開は安全表示）、最大3案の推奨PT、戦闘内補正の公開値分離、回帰テストを維持して公開する。`,
     entries,
   };

@@ -31,17 +31,17 @@ const BATCH_16_MEMBERS = [
 ] as const;
 
 describe("全キャラクター更新台帳", () => {
-  it("全252件を重複なく追跡し、第19バッチ後も未精査0件を返す", () => {
+  it("全253件を重複なく追跡し、第20バッチ後も未精査0件を返す", () => {
     const ledger = characterUpdateLedger();
-    expect(ledger.total).toBe(252);
-    expect(ledger.reviewed).toBe(252);
+    expect(ledger.total).toBe(253);
+    expect(ledger.reviewed).toBe(253);
     expect(ledger.pending).toBe(0);
     expect(ledger.byGame).toEqual({
-      hsr: { total: 84, reviewed: 84, pending: 0 },
+      hsr: { total: 85, reviewed: 85, pending: 0 },
       genshin: { total: 109, reviewed: 109, pending: 0 },
       zzz: { total: 59, reviewed: 59, pending: 0 },
     });
-    expect(ledger.nextBatch.id).toBe(19);
+    expect(ledger.nextBatch.id).toBe(21);
     expect(new Set(ledger.entries.map((entry) => `${entry.game}:${entry.name}`)).size).toBe(ledger.total);
     expect(ledger.nextBatch.names).toEqual([]);
   });
