@@ -202,3 +202,18 @@ describe("図鑑（カタログ名）経路の凸解決", () => {
     }
   });
 });
+
+describe("HSR eidolon names", () => {
+  it("uses official localized names instead of generic Eidolon N labels for every catalog character", () => {
+    const hsr = ACTIVE_CATALOG_IDENTITIES.filter((entry) => entry.game === "hsr" && !String(entry.sourceId).includes("-"));
+    expect(hsr.length).toBeGreaterThan(0);
+    for (const entry of hsr) {
+      const profile = constellationProfileFor(identity("hsr", String(entry.sourceId), entry.providerName), 0);
+      for (const effect of profile.effects) {
+        expect(effect.name.ja, `${entry.providerName} ${effect.level}`).not.toMatch(/^星魂\d$/);
+        expect(effect.name.en, `${entry.providerName} ${effect.level}`).not.toMatch(/^Eidolon \d$/);
+        expect(effect.name["zh-CN"], `${entry.providerName} ${effect.level}`).not.toMatch(/^星魂\d$/);
+      }
+    }
+  });
+});
