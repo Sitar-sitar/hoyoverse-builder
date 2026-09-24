@@ -66,9 +66,10 @@ describe("監査の判定ロジック", () => {
     expect(buckets.map((bucket) => bucket.id)).toEqual(["P0", "P1", "P2", "P3"]);
     expect(buckets[0]!.items).toHaveLength(1);
     expect(buckets[1]!.items).toEqual([]); // 全251名精査済みのため P1 は空
-    // P2 は凸データ未整備の5名（公式未実装・未解決ID）だけ。ジェイド・ジェパードは第18バッチで個別ガイドを登録して解消した。
-    expect(buckets[2]!.items).toHaveLength(5);
-    expect(buckets[2]!.items.filter((item) => item.reason.includes("凸データ未整備"))).toHaveLength(5);
+    // P2 は凸データ未整備の3名（アーロイ＝凸が存在しない、コロンビーナ＝正規IDが取得元に無い、ピュロイス＝6段目未公開）だけ。
+    // ジェイド・ジェパードは第18バッチ、ニコ・シーシィアは第20バッチで解消した。
+    expect(buckets[2]!.items).toHaveLength(3);
+    expect(buckets[2]!.items.filter((item) => item.reason.includes("凸データ未整備"))).toHaveLength(3);
     expect(buckets[2]!.items.filter((item) => item.reason.includes("個別ガイド無し"))).toEqual([]);
   });
 

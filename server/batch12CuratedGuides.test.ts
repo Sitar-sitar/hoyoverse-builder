@@ -22,13 +22,13 @@ const curatedProfiles = [
   identity("zzz", "1571", "ノルムー"), identity("zzz", "1291", "ヒューゴ"), identity("zzz", "1081", "ビリー"), identity("zzz", "1351", "プルクラ"),
 ];
 
+// ニコ（zzz:1031）は第20バッチで心象映画を登録したため、ここから外した（検証は characterReference.test.ts）。
 const unresolvedProfiles = [
   identity("genshin", "10000125", "コロンビーナ"),
-  identity("zzz", "1031", "ニコ"),
   identity("zzz", "1551", "ピュロイス"),
 ];
 
-const allBatch12 = [...curatedProfiles, ...unresolvedProfiles];
+const allBatch12 = [...curatedProfiles, ...unresolvedProfiles, identity("zzz", "1031", "ニコ")];
 
 describe("第12バッチ20名の個別ガイド", () => {
   it("HSR8名をロール共通値ではなく個別公開プロフィール比較として返し、未明示閾値を創作しない", () => {
