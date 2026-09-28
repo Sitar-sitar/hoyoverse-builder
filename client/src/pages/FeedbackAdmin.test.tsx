@@ -22,7 +22,7 @@ vi.mock("@/lib/trpc", () => ({
       updateStatus: { useMutation: (options: { onSuccess?: (result: unknown) => void }) => ({ mutate: (input: unknown) => mocks.mutate(input, options), isPending: false }) },
     },
     analytics: {
-      lookupDashboard: { useQuery: (input: unknown) => { mocks.dashboardInput(input); return { isLoading: false, error: null, data: { totalLookups: 3, cacheHits: 2, cacheMisses: 1, cacheHitRate: 66.7, byGame: [{ game: "hsr", totalLookups: 1, cacheHits: 1, cacheMisses: 0, cacheHitRate: 100 }, { game: "genshin", totalLookups: 1, cacheHits: 0, cacheMisses: 1, cacheHitRate: 0 }, { game: "zzz", totalLookups: 1, cacheHits: 1, cacheMisses: 0, cacheHitRate: 100 }] } }; } },
+      lookupDashboard: { useQuery: (input: unknown) => { mocks.dashboardInput(input); return { isLoading: false, error: null, data: { totalLookups: 3, cacheHits: 2, cacheMisses: 1, cacheHitRate: 66.7, byGame: [{ game: "hsr", totalLookups: 1, cacheHits: 1, cacheMisses: 0, cacheHitRate: 100 }, { game: "genshin", totalLookups: 1, cacheHits: 0, cacheMisses: 1, cacheHitRate: 0 }, { game: "zzz", totalLookups: 1, cacheHits: 1, cacheMisses: 0, cacheHitRate: 100 }], byDay: [{ date: "2026-09-28", totalLookups: 2, cacheHits: 1, byGame: { hsr: 1, genshin: 0, zzz: 1 } }, { date: "2026-09-27", totalLookups: 1, cacheHits: 1, byGame: { hsr: 0, genshin: 1, zzz: 0 } }] } }; } },
     },
     useUtils: () => ({ feedback: { list: { invalidate: mocks.invalidate } } }),
   },
@@ -59,6 +59,14 @@ describe("フィードバック管理画面", () => {
     fireEvent.change(screen.getByLabelText("ゲームタイトル"), { target: { value: "zzz" } });
     fireEvent.click(screen.getByRole("button", { name: "適用する" }));
     expect(mocks.dashboardInput).toHaveBeenLastCalledWith({ game: "zzz", startDate: "2026-08-01", endDate: "2026-08-25" });
+  });
+
+  it("日別の照会回数を日付ごとに表示する", () => {
+    render(<LanguageProvider><FeedbackAdmin /></LanguageProvider>);
+    expect(screen.getAllByText("日別推移").length).toBeGreaterThan(0);
+    const rows = screen.getAllByRole("row");
+    expect(rows.some((row) => row.textContent?.startsWith("2026-09-282"))).toBe(true);
+    expect(rows.some((row) => row.textContent?.startsWith("2026-09-271"))).toBe(true);
   });
 
   it("管理者には管理者ポータルと表示デザインへのリンクを出す", () => {

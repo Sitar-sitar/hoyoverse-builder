@@ -47,6 +47,10 @@ export default function AdminHome() {
     [feedbackQuery.data],
   );
 
+  // byDay は新しい順。グラフは左から古い順に並べる。
+  const recentDays = useMemo(() => (analyticsQuery.data?.byDay ?? []).slice(0, 7).reverse(), [analyticsQuery.data]);
+  const recentPeak = Math.max(1, ...recentDays.map(day => day.totalLookups));
+
   const signOut = async () => {
     await logout();
     window.location.href = import.meta.env.BASE_URL || "/";
@@ -118,11 +122,30 @@ export default function AdminHome() {
 
             <section className="mx-auto mt-10 max-w-5xl">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <AdminMetric label="TOTAL LOOKUPS" value={analyticsQuery.data?.totalLookups ?? "—"} detail="全ゲームの公開UID検索" />
+                <AdminMetric label="TODAY LOOKUPS" value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={`本日（JST）の照会数 / 累計 ${analyticsQuery.data?.totalLookups ?? "—"}`} />
                 <AdminMetric label="CACHE HIT RATE" value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail="外部API負荷の抑制率" />
                 <AdminMetric label="OPEN FEEDBACK" value={feedbackQuery.data ? unresolvedFeedback : "—"} detail="未解決・対応中フィードバック" />
                 <AdminMetric label="API STATUS" value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail="Railway API health check" />
               </div>
+              {recentDays.length > 0 && (
+                <div className="mt-6 border border-stone-300 bg-stone-50/50 p-5">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <p className="detail-mono text-[9px] text-stone-500">DAILY LOOKUPS / 直近7日（JST）</p>
+                    <Link href="/admin/feedback" className="text-[10px] text-amber-800 underline-offset-2 hover:underline">30日分を見る</Link>
+                  </div>
+                  <ol className="mt-4 grid grid-cols-7 gap-2">
+                    {recentDays.map(day => (
+                      <li key={day.date} className="flex flex-col items-center gap-1 text-center">
+                        <div className="flex h-16 w-full items-end bg-stone-200/60">
+                          <div className="w-full bg-amber-800" style={{ height: `${(day.totalLookups / recentPeak) * 100}%` }} />
+                        </div>
+                        <span className="text-sm font-semibold text-stone-900">{day.totalLookups}</span>
+                        <span className="detail-mono text-[9px] text-stone-500">{day.date.slice(5).replace("-", "/")}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </section>
 
             <section className="mx-auto mt-14 max-w-5xl">
