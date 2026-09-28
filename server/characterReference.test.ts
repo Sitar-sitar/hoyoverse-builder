@@ -5,12 +5,12 @@ import { HSR_RUNTIME_PATHS } from "./characterGuideCatalog";
 import { catalogSourceIdFor } from "./characterConstellations";
 
 describe("character reference catalog", () => {
-  it("全253キャラクターをゲーム別に公開する（第20バッチで HSR アベンチュリン・波と戯れる夏を追加）", () => {
+  it("全254キャラクターをゲーム別に公開する（第21バッチで HSR パールを追加）", () => {
     const catalog = characterReferenceCatalog();
-    expect(catalog.total).toBe(253);
-    expect(catalog.reviewed).toBe(253);
+    expect(catalog.total).toBe(254);
+    expect(catalog.reviewed).toBe(254);
     expect(catalog.pending).toBe(0);
-    expect(catalog.games.hsr).toHaveLength(85);
+    expect(catalog.games.hsr).toHaveLength(86);
     expect(catalog.games.genshin).toHaveLength(109);
     expect(catalog.games.zzz).toHaveLength(59);
   });
@@ -156,5 +156,41 @@ describe("第20バッチ", () => {
       expect(constellations.dataStatus).toBe("preparing");
       expect(constellations.effects).toEqual([]);
     }
+  });
+});
+
+describe("第21バッチ", () => {
+  it("パールは確認済みID（hsr:1503）の個別ガイド・一致2案のPT・公式6段階星魂を返す", () => {
+    const name = "パール";
+    const reference = characterReferenceFor("hsr", name);
+    expect(reference?.status).toBe("reviewed");
+    expect(reference?.batch).toBe(21);
+    expect(HSR_RUNTIME_PATHS[name]).toBe("Elation");
+    expect(catalogSourceIdFor("hsr", name)).toBe("1503");
+    expect(reference?.guide.profileId).toBe(`curated:batch21:hsr:${name}`);
+    expect(reference?.guide.targets.map((target) => [target.key, target.targets])).toEqual([
+      ["defense", { "厳選": 3600, "目標": 3600, "妥協": 2400 }],
+      ["speed", { "厳選": 174, "目標": 173, "妥協": 157 }],
+    ]);
+    expect(reference?.guide.targetContext).toContain("公開プロフィールへ加算しない");
+    expect(reference?.partyRecommendations.options.map((option) => option.members.map((member) => member.name.ja))).toEqual([
+      [name, "銀狼Lv.999", "火花", "爻光"],
+      [name, "緋英", "愉悦主人公", "爻光"],
+    ]);
+    reference?.partyRecommendations.options.forEach((option) => {
+      expect(option.targetChanges).toEqual([]);
+      // 共通データセットの Ver.4.4 表記・4.4編成議論の出典を持ち込まず、役割は位置ではなく明示する。
+      expect(option.gameVersion).toBe("4.6");
+      expect(option.communitySources.map((source) => source.url)).toEqual(["https://game8.jp/houkaistarrail/759885", "https://gamewith.jp/houkaistarrail/article/show/572184"]);
+      expect(option.members.map((member) => member.role.ja)).toEqual(["耐久サポート", "主力", "支援", "支援"]);
+    });
+    const constellations = reference!.constellations;
+    expect(constellations.dataStatus).toBe("curated");
+    expect(constellations.effects.map((effect) => effect.level)).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(constellations.effects[0]?.name).toEqual({ ja: "真珠、海の余白に秘め", en: "Nestle That Pearl in Uninked Tides", "zh-CN": "珍珠，藏在海的留白处" });
+    expect(constellations.effects[5]?.name.ja).toBe("身体を以て命を解く");
+    expect(constellations.effects.every((effect) => (effect.targetChanges ?? []).length === 0)).toBe(true);
+    expect(constellations.activeTargetChanges).toEqual([]);
+    expect(routeMismatches()).toEqual([]);
   });
 });
