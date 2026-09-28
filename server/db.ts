@@ -2,6 +2,7 @@ import { and, count, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertTranslationFeedback, InsertUser, lookupAnalyticsEvents, siteDisplaySettings, translationFeedback, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
+import { buildDailyLookupSeries, resolveDailyWindow } from "./lookupDailySeries";
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
@@ -174,7 +175,23 @@ export async function getLookupAnalyticsDashboard(filters: LookupAnalyticsFilter
     return { totalLookups, cacheHits, cacheMisses: Math.max(0, totalLookups - cacheHits), cacheHitRate: totalLookups ? Math.round((cacheHits / totalLookups) * 1000) / 10 : 0 };
   };
   const byGame = (["hsr", "genshin", "zzz"] as const).map((game) => ({ game, ...normalize(grouped.find((row) => row.game === game) ?? { totalLookups: 0, cacheHits: 0 }) }));
-  return { filters: { game: filters.game ?? null, startDate: filters.startAt?.toISOString().slice(0, 10) ?? null, endDate: filters.endAt?.toISOString().slice(0, 10) ?? null }, ...normalize(total ?? { totalLookups: 0, cacheHits: 0 }), byGame };
+
+  // 日別推移: UNIX_TIMESTAMP 基準で JST の暦日に振り分け、セッションのタイムゾーンに依存させない。
+  const dailyWindow = resolveDailyWindow(filters);
+  const jstDayIndex = sql<number>`floor((unix_timestamp(${lookupAnalyticsEvents.createdAt}) + 32400) / 86400)`.as("dayIndex");
+  const dailyConditions = [
+    filters.game ? eq(lookupAnalyticsEvents.game, filters.game) : undefined,
+    gte(lookupAnalyticsEvents.createdAt, new Date(dailyWindow.startDay * 86400000 - 32400000)),
+    lte(lookupAnalyticsEvents.createdAt, new Date((dailyWindow.endDay + 1) * 86400000 - 32400000 - 1)),
+  ].filter((condition): condition is NonNullable<typeof condition> => Boolean(condition));
+  const dailyRows = await db
+    .select({ dayIndex: jstDayIndex, game: lookupAnalyticsEvents.game, ...aggregateFields })
+    .from(lookupAnalyticsEvents)
+    .where(and(...dailyConditions))
+    .groupBy(sql`dayIndex`, lookupAnalyticsEvents.game);
+  const byDay = buildDailyLookupSeries(dailyRows, dailyWindow);
+
+  return { filters: { game: filters.game ?? null, startDate: filters.startAt?.toISOString().slice(0, 10) ?? null, endDate: filters.endAt?.toISOString().slice(0, 10) ?? null }, ...normalize(total ?? { totalLookups: 0, cacheHits: 0 }), byGame, byDay };
 }
 
 export async function getDisplaySettingRows() {
