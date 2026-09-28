@@ -170,6 +170,7 @@ const batch16Options = datedOptions("2026-09-07", true);
 const batch18Options = datedOptions("2026-09-11", true);
 const batch19Options = datedOptions("2026-09-13", true);
 const batch20Options = datedOptions("2026-09-24", true);
+const batch21Options = datedOptions("2026-09-28", true);
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
@@ -655,6 +656,11 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
   "hsr:アベンチュリン・波と戯れる夏": batch20Options("hsr", "アベンチュリン・波と戯れる夏", "https://gamewith.jp/houkaistarrail/article/show/565894", mainDps, [
     plan(["アベンチュリン・波と戯れる夏", "不死途", "千冶・刃", "ヒアンシー"], "他に歓楽キャラがいない追加攻撃編成。愉悦スキルが追加攻撃として扱われ、手数の多い不死途・千冶・刃で熱気を溜める。", "A follow-up attack team with no other Elation characters, so his Elation Skill counts as a follow-up attack while high-action Ashveil and Mortenax Blade build Fervor.", "队伍中没有其他欢愉角色的追加攻击队。欢愉技视为追加攻击，由行动次数多的不死途与千冶·刃积攒热意。"),
     plan(["アベンチュリン・波と戯れる夏", "ロビン・夏空の歌", "爻光", "ヒアンシー"], "歓楽の味方と組む愉悦キャリー編成。爻光の必殺技でアッハタイムを早め、本人の愉悦度を上げる。", "An Elation hypercarry team with other Elation allies; Yaoguang's Ultimate speeds up Aha Instant and raises his Elation.", "与欢愉队友组成的欢愉主C队。爻光的终结技加快阿哈时刻，并提高其欢愉度。"),
+  ]),
+  // 第21バッチ（2026-09-28）: パール。Game8・GameWith の2案が実名で一致する（Game8 の3案目は水着アベンチュリン入りで GameWith に無いため登録しない）。
+  "hsr:パール": batch21Options("hsr", "パール", "https://gamewith.jp/houkaistarrail/article/show/572184", support, [
+    plan(["パール", "銀狼Lv.999", "火花", "爻光"], "銀狼Lv.999を火力役にする愉悦4人編成。パールが耐久を支え、火花が爆笑ネタを供給し、爻光が火力を補助する。", "A four-Elation team with Silver Wolf LV.999 as the damage dealer: Pearl sustains the team, Sparxie supplies Punchlines, and Yaoguang supports damage.", "以银狼LV.999为输出的欢愉四人队。真珠负责生存，火花提供笑点，爻光辅助输出。"),
+    plan(["パール", "緋英", "愉悦主人公", "爻光"], "愉悦サポーターを重ねて緋英の必殺技を高頻度で回す編成。パールは爆笑の褒美で緋英のEPを稼ぐ。", "A team stacking Elation supports to fire Evanescia's Ultimate often; Pearl feeds Certified Banger to refill her Energy.", "叠加欢愉辅助以高频施放绯英终结技的队伍。真珠通过好活当赏为绯英补充能量。"),
   ]),
   "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
     plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),

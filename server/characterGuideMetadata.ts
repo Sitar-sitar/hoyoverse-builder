@@ -343,6 +343,16 @@ batchNames(18).hsr.forEach((name) => {
   record.sourceLabel = "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合";
 });
 
+// 第21バッチ（2026-09-28）でカタログへ追加した HSR 1名。記事の更新日は Game8 2026-09-28 19:14・GameWith 2026-09-28 11:22。
+batchNames(21).hsr.forEach((name) => {
+  const record = CHARACTER_GUIDE_METADATA.hsr[name];
+  if (!record) return;
+  record.profileId = `curated:batch21:hsr:${name}`;
+  record.dataAsOf = "2026-09-28";
+  record.updatedAt = "2026-09-28";
+  record.sourceLabel = "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合";
+});
+
 // 第19バッチ（2026-09-13）でカタログへ追加した ZZZ 1名（新特性「鋭御」の初登録）。
 batchNames(19).zzz.forEach((name) => {
   const record = CHARACTER_GUIDE_METADATA.zzz[name];
