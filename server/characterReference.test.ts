@@ -177,7 +177,13 @@ describe("第21バッチ", () => {
       [name, "銀狼Lv.999", "火花", "爻光"],
       [name, "緋英", "愉悦主人公", "爻光"],
     ]);
-    reference?.partyRecommendations.options.forEach((option) => expect(option.targetChanges).toEqual([]));
+    reference?.partyRecommendations.options.forEach((option) => {
+      expect(option.targetChanges).toEqual([]);
+      // 共通データセットの Ver.4.4 表記・4.4編成議論の出典を持ち込まず、役割は位置ではなく明示する。
+      expect(option.gameVersion).toBe("4.6");
+      expect(option.communitySources.map((source) => source.url)).toEqual(["https://game8.jp/houkaistarrail/759885", "https://gamewith.jp/houkaistarrail/article/show/572184"]);
+      expect(option.members.map((member) => member.role.ja)).toEqual(["耐久サポート", "主力", "支援", "支援"]);
+    });
     const constellations = reference!.constellations;
     expect(constellations.dataStatus).toBe("curated");
     expect(constellations.effects.map((effect) => effect.level)).toEqual([1, 2, 3, 4, 5, 6]);

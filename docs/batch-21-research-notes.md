@@ -47,6 +47,7 @@
   | 1 | パール / 銀狼Lv.999 / 火花 / 爻光 | 耐久サポート |
   | 2 | パール / 緋英 / 愉悦主人公 / 爻光 | 耐久サポート |
 
+  - 共通データセットの Ver.4.4 表記と「4.4編成議論」の出典は持ち込まず、`gameVersion` は 4.6、補助根拠は Game8・GameWith の2記事（確認日 2026-09-28）にした。メンバーの役割は位置ではなく明示している（パール＝耐久サポート、アタッカー＝主力、爻光ほか＝支援）。
   - Game8 の3案目（アベンチュリン・波と戯れる夏 / 爻光 / パール / 愉悦主人公）は GameWith に無いため登録しない。
 - 星魂（公式ゲームデータ。日本語はルビを除去）: 1「真珠、海の余白に秘め」/ 2「瞬間、朝日を切り取る」/ 3「速写、大波止まる刹那」/ 4「解析、謎めいた微笑み」/ 5「洞察、星夜感ずる筆先」/ 6「身体を以て命を解く」。`targetChanges` は全段で空（愉悦度・愉悦ダメージ・耐性貫通はいずれも戦闘中・条件付き）。
 - 実装先: `characterGuideCatalog.ts` / `buildAdvisor.ts`（`GUIDE_OVERRIDES`） / `characterConstellations.ts`（`hsr:1503`） / `partyRecommendations.ts`（`batch21Options`） / `characterGuideMetadata.ts`（profileId `curated:batch21:hsr:パール`） / `guideUpdateHistory.ts` / `fixtures/identityCatalogSnapshot.ts` / `characterBatches.ts`。

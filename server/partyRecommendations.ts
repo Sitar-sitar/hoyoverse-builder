@@ -170,7 +170,20 @@ const batch16Options = datedOptions("2026-09-07", true);
 const batch18Options = datedOptions("2026-09-11", true);
 const batch19Options = datedOptions("2026-09-13", true);
 const batch20Options = datedOptions("2026-09-24", true);
-const batch21Options = datedOptions("2026-09-28", true);
+/**
+ * 第21バッチ（Ver.4.6）用。共通データセットの Ver.4.4 表記・4.4編成議論の出典を持ち込まず、
+ * 実際に照合した Game8・GameWith を補助根拠にし、役割は位置ではなく明示する。
+ */
+const batch21Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[], roles: readonly LocalizedText[][]) =>
+  datedOptions("2026-09-28", true)(game, name, sourceUrl, selectedRole, plans).map((entry, index) => ({
+    ...entry,
+    gameVersion: "4.6",
+    members: entry.members.map((partyMember, memberIndex) => ({ ...partyMember, role: roles[index]![memberIndex] ?? partyMember.role })),
+    communitySources: [
+      { label: t("Game8 パールの遺物と評価・パーティ編成", "Game8 Pearl relic, rating and team guide", "Game8 真珠遗器·评价·配队指南"), url: "https://game8.jp/houkaistarrail/759885", checkedAt: "2026-09-28", note: t("更新日付き（2026-09-28）。実名編成をGameWithと照合。", "Dated 2026-09-28; team names cross-checked against GameWith.", "更新日期2026-09-28；队伍成员已与GameWith核对。"), status: "crossChecked" as const },
+      { label: t("GameWith パールの評価と遺物・光円錐ビルド", "GameWith Pearl rating and build guide", "GameWith 真珠评价·遗器·光锥指南"), url: sourceUrl, checkedAt: "2026-09-28", note: t("更新日付き（2026-09-28）。実名編成をGame8と照合。", "Dated 2026-09-28; team names cross-checked against Game8.", "更新日期2026-09-28；队伍成员已与Game8核对。"), status: "crossChecked" as const },
+    ],
+  }));
 
 /**
  * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
@@ -658,9 +671,12 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["アベンチュリン・波と戯れる夏", "ロビン・夏空の歌", "爻光", "ヒアンシー"], "歓楽の味方と組む愉悦キャリー編成。爻光の必殺技でアッハタイムを早め、本人の愉悦度を上げる。", "An Elation hypercarry team with other Elation allies; Yaoguang's Ultimate speeds up Aha Instant and raises his Elation.", "与欢愉队友组成的欢愉主C队。爻光的终结技加快阿哈时刻，并提高其欢愉度。"),
   ]),
   // 第21バッチ（2026-09-28）: パール。Game8・GameWith の2案が実名で一致する（Game8 の3案目は水着アベンチュリン入りで GameWith に無いため登録しない）。
-  "hsr:パール": batch21Options("hsr", "パール", "https://gamewith.jp/houkaistarrail/article/show/572184", support, [
+  "hsr:パール": batch21Options("hsr", "パール", "https://gamewith.jp/houkaistarrail/article/show/572184", t("耐久サポート", "Sustain support", "生存辅助"), [
     plan(["パール", "銀狼Lv.999", "火花", "爻光"], "銀狼Lv.999を火力役にする愉悦4人編成。パールが耐久を支え、火花が爆笑ネタを供給し、爻光が火力を補助する。", "A four-Elation team with Silver Wolf LV.999 as the damage dealer: Pearl sustains the team, Sparxie supplies Punchlines, and Yaoguang supports damage.", "以银狼LV.999为输出的欢愉四人队。真珠负责生存，火花提供笑点，爻光辅助输出。"),
     plan(["パール", "緋英", "愉悦主人公", "爻光"], "愉悦サポーターを重ねて緋英の必殺技を高頻度で回す編成。パールは爆笑の褒美で緋英のEPを稼ぐ。", "A team stacking Elation supports to fire Evanescia's Ultimate often; Pearl feeds Certified Banger to refill her Energy.", "叠加欢愉辅助以高频施放绯英终结技的队伍。真珠通过好活当赏为绯英补充能量。"),
+  ], [
+    [t("耐久サポート", "Sustain support", "生存辅助"), t("主力", "Main DPS", "主C"), t("支援", "Support", "辅助"), t("支援", "Support", "辅助")],
+    [t("耐久サポート", "Sustain support", "生存辅助"), t("主力", "Main DPS", "主C"), t("支援", "Support", "辅助"), t("支援", "Support", "辅助")],
   ]),
   "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
     plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),
