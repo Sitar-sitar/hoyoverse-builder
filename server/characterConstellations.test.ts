@@ -161,7 +161,7 @@ describe("constellationProfileFor", () => {
   });
 
   it("never fabricates effects for an uncollected character", () => {
-    const profile = constellationProfileFor(identity("genshin", "10000125", "コロンビーナ"), 3);
+    const profile = constellationProfileFor(identity("zzz", "1551", "ピュロイス"), 3);
     expect(profile.dataStatus).toBe("preparing");
     expect(profile.effects).toEqual([]);
     expect(profile.activeTargetChanges).toEqual([]);
@@ -169,7 +169,7 @@ describe("constellationProfileFor", () => {
 });
 
 describe("図鑑（カタログ名）経路の凸解決", () => {
-  const TIEBREAK: Record<string, string> = { "hsr:三月なのか": "1001", "genshin:旅人": "10000005", "genshin:イネファ": "10000116" };
+  const TIEBREAK: Record<string, string> = { "hsr:三月なのか": "1001", "genshin:旅人": "10000005", "genshin:イネファ": "10000116", "genshin:コロンビーナ": "10000125" };
   const expectedSourceId = (game: string, name: string): string | undefined => {
     if (TIEBREAK[`${game}:${name}`]) return TIEBREAK[`${game}:${name}`];
     const entry = ACTIVE_CATALOG_IDENTITIES.find((candidate) => candidate.game === game && candidate.providerName === name && !String(candidate.sourceId).includes("-"));
@@ -215,5 +215,15 @@ describe("HSR eidolon names", () => {
         expect(effect.name["zh-CN"], `${entry.providerName} ${effect.level}`).not.toMatch(/^星魂\d$/);
       }
     }
+  });
+
+  it("registers Columbina under the canonical ID and not the Enka placeholder", () => {
+    const profile = constellationProfileFor(identity("genshin", "10000125", "コロンビーナ"), 2);
+    expect(profile.dataStatus).toBe("curated");
+    expect(profile.effects.map((effect) => effect.level)).toEqual([1, 2, 3, 4, 5, 6]);
+    expect(profile.effects[1]?.name.ja).toBe("夜輝かす君と共に在る光");
+    expect(profile.effects[5]?.description.ja).toContain("80%");
+    expect(constellationProfileFor(identity("genshin", "10000904", "コロンビーナ"), 2).dataStatus).toBe("preparing");
+    expect(constellationProfileForCatalogName("genshin", "コロンビーナ", 2).dataStatus).toBe("curated");
   });
 });

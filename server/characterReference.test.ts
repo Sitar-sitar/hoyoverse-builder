@@ -150,8 +150,8 @@ describe("第20バッチ", () => {
     expect(constellations.activeTargetChanges).toEqual([]);
   });
 
-  it("本文が揃わない凸は登録しない（アーロイ＝凸なし、コロンビーナ＝正規IDが取得元に無い、ピュロイス＝6段目未公開）", () => {
-    for (const [game, name] of [["genshin", "アーロイ"], ["genshin", "コロンビーナ"], ["zzz", "ピュロイス"]] as const) {
+  it("本文が揃わない凸は登録しない（アーロイ＝凸なし、ピュロイス＝6段目未公開）", () => {
+    for (const [game, name] of [["genshin", "アーロイ"], ["zzz", "ピュロイス"]] as const) {
       const constellations = characterReferenceFor(game, name)!.constellations;
       expect(constellations.dataStatus).toBe("preparing");
       expect(constellations.effects).toEqual([]);
