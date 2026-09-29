@@ -137,6 +137,15 @@ const SITE_EVENTS: GuideUpdateEvent[] = [
     rationale: "Ver.4.6で実装されたキャラクターを、既存キャラクターと同じ精査基準で扱うため。",
     games: ["hsr"],
   },
+  {
+    date: "2026-09-29T23:00:00+09:00",
+    scope: "site",
+    title: "第22バッチ：コロンビーナの命ノ星座を登録",
+    summary: "原神のコロンビーナの命ノ星座を、正規ID（10000125）で全6段登録しました。",
+    changes: ["全6段の命ノ星座を公開データ（日本語・英語・中国語）で登録", "Game8・GameWith の2026-09-29更新ガイドと全6段の本文が一致することを確認", "Enka の仮ID（10000904）は対象にしない"],
+    rationale: "第12バッチ以来、正規IDが取得元に無く準備中のままだった凸を、確認できた出典で解消するため。",
+    games: ["genshin"],
+  },
 ];
 
 const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, GuideUpdateEvent[]>>> = {
@@ -147,6 +156,7 @@ const CHARACTER_CHANGE_EVENTS: Partial<Record<CatalogGameId, Record<string, Guid
     "ビビアン": [{ date: "2026-08-18T06:20:00+09:00", scope: "character", title: "異常マスタリー優先の個別目標へ移行", summary: "会心系を主判定から外し、異常マスタリー・攻撃力を比較します。", changes: ["主判定を異常マスタリーと攻撃力へ変更", "会心系を補助値として扱う注記を追加"], rationale: "異常ダメージへの寄与を優先して比較するため。", games: ["zzz"] }],
   },
   genshin: {
+    "コロンビーナ": [{ date: "2026-09-29T23:00:00+09:00", scope: "character", title: "第22バッチ：命ノ星座を登録", summary: "正規ID（genshin:10000125）を確認し、準備中だった命ノ星座を Game8・GameWith の一致本文で全6段登録しました。", changes: ["命ノ星座1〜6の名称と効果を登録（日本語・英語・中国語）", "引力の干渉時の効果など戦闘中・条件付きの効果は公開値へ加算しない"], rationale: "第12バッチでは正規IDが取得元に無かったため。Enka の仮ID（10000904）とは別実装として扱う。", games: ["genshin"] }],
     "ナヒーダ": [{ date: "2026-08-18T06:20:00+09:00", scope: "character", title: "元素熟知を軸とする個別目標を更新", summary: "元素熟知・会心率・会心ダメージの比較を登録しました。", changes: ["元素熟知の目標を専用値に設定", "反応・武器による変動を注記"], rationale: "元素反応における元素熟知の重要度を比較へ反映するため。", games: ["genshin"] }],
   },
   hsr: {

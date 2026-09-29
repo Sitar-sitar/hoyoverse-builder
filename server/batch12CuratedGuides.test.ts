@@ -24,11 +24,11 @@ const curatedProfiles = [
 
 // ニコ（zzz:1031）は第20バッチで心象映画を登録したため、ここから外した（検証は characterReference.test.ts）。
 const unresolvedProfiles = [
-  identity("genshin", "10000125", "コロンビーナ"),
   identity("zzz", "1551", "ピュロイス"),
 ];
 
-const allBatch12 = [...curatedProfiles, ...unresolvedProfiles, identity("zzz", "1031", "ニコ")];
+// コロンビーナ（genshin:10000125）は第22バッチで登録したため、ここから外した（検証は characterConstellations.test.ts）。
+const allBatch12 = [...curatedProfiles, ...unresolvedProfiles, identity("genshin", "10000125", "コロンビーナ"), identity("zzz", "1031", "ニコ")];
 
 describe("第12バッチ20名の個別ガイド", () => {
   it("HSR8名をロール共通値ではなく個別公開プロフィール比較として返し、未明示閾値を創作しない", () => {
@@ -125,10 +125,10 @@ describe("第12バッチ20名の個別ガイド", () => {
     expect(partyRecommendationsFor("zzz", "ビリー").options[2]?.members.map((member) => member.name.ja)).toEqual(["ビリー", "アンビー", "ニコ"]);
   });
 
-  it("ID未解決のコロンビーナは名称だけで別実装へ誤接続しない", () => {
-    const unresolved = constellationProfileFor(identity("genshin", "10000125", "コロンビーナ"), 6);
+  it("コロンビーナは正規IDでのみ凸を解決し、Enkaの仮ID(10000904)へ誤接続しない", () => {
+    const resolved = constellationProfileFor(identity("genshin", "10000125", "コロンビーナ"), 6);
     const conflicting = constellationProfileFor(identity("genshin", "10000904", "コロンビーナ"), 6);
-    expect(unresolved.dataStatus).toBe("preparing");
+    expect(resolved.dataStatus).toBe("curated");
     expect(conflicting.dataStatus).toBe("preparing");
   });
 });
