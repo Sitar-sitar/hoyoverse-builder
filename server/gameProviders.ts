@@ -14,7 +14,8 @@ import {
 } from "./buildAdvisor";
 import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
 import { partyRecommendationsFor } from "./partyRecommendations";
-import { resolveCharacterIdentity } from "./characterIdentity";
+import { resolveCharacterIdentity, type CharacterIdentity } from "./characterIdentity";
+import { BATCH23_GENSHIN_CHARACTERS, batch23CharacterForName } from "./batch23GenshinData";
 import { constellationProfileFor } from "./characterConstellations";
 import { batch17GuideFor } from "./batch17Guides";
 
@@ -350,7 +351,14 @@ Object.assign(GI_GUIDE_OVERRIDES, {
   "ノエル": {"relicSet":"華館夢醒形骸記 ×4","planarSet":"岩共鳴・フリーナ支援など長時間の爆発運用を標準想定","mainStats":[{"slot":"時計","value":"防御力%"},{"slot":"杯","value":"岩元素ダメージ"},{"slot":"冠","value":"会心率 / 会心ダメ"}],"targets":[{"key":"defense","label":"防御力","unit":"","targets":{"厳選":2800,"目標":2400,"妥協":2000}},{"key":"critRate","label":"会心率","unit":"%","targets":{"厳選":80,"目標":70,"妥協":60}},{"key":"critDmg","label":"会心ダメージ","unit":"%","targets":{"厳選":220,"目標":180,"妥協":150}}],"profileId":"curated:batch15:noelle","headline":"防御力を攻撃・回復・シールドへ変換する岩アタッカーとして、防御力・会心・岩元素ダメージを優先する。","targetContext":"ノエル専用：大掃除中の防御力→攻撃力変換、C1回復確定、C6の追加防御力50%相当の攻撃力変換と継続時間延長は戦闘中条件のため公開プロフィールへ加算しない。","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":"Game8の更新日付きノエルビルド・命ノ星座情報を照合"},
 });
 
-export function genshinGuide(name: string): GuideDefinition {
+export function genshinGuide(name: string, identity?: CharacterIdentity): GuideDefinition {
+  const addition = batch23CharacterForName(name);
+  if (addition) {
+    if (identity && (identity.key !== `genshin:${addition[0]}` || identity.variantOf || !identity.resolved)) {
+      return { headline: "取得元IDに対応する個別ガイドは準備中です。", relicSet: "未確認", planarSet: "未確認", mainStats: [], targets: [], targetContext: "確認済みの別IDのビルドや編成は適用しません。" };
+    }
+    return withGuideMetadata("genshin", { ...addition[1].guide }, name);
+  }
   const individualGuide = batch17GuideFor(name) ?? GI_GUIDE_OVERRIDES[name];
   if (individualGuide) return withGuideMetadata("genshin", { ...individualGuide, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。武器・編成・元素反応・戦闘中バフにより必要値は変動します。` }, name);
   return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
@@ -383,7 +391,8 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
   const player = asRecord(root.playerInfo);
   const characters = asArray(root.avatarInfoList).map(asRecord).map((avatar): CharacterProfile => {
     const id = text(avatar.avatarId);
-    const metadata = asRecord(catalog.characters[id]);
+    const addition = BATCH23_GENSHIN_CHARACTERS[id];
+    const metadata: RawRecord = { ...(addition ? { Element: addition.element, WeaponType: addition.weaponType, SideIconName: addition.sideIcon } : {}), ...asRecord(catalog.characters[id]) };
     const identity = resolveCharacterIdentity("genshin", id, localized(catalog.loc, metadata.NameTextMapHash));
     const name = identity.displayName;
     const elementMeta = GI_ELEMENTS[text(metadata.Element)] ?? { label: "元素", color: "#c28a42" };
@@ -420,7 +429,8 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
     });
     const weaponFlat = asRecord(weapon?.flat);
     const weaponInfo = asRecord(weapon?.weapon);
-    const guide = genshinGuide(name);
+    const guide = genshinGuide(name, identity);
+    const mismatchedAddition = batch23CharacterForName(name)?.[0] !== id && Boolean(batch23CharacterForName(name));
     const comparisons = comparisonsFromStats(guide.targets, statValues);
     const recommendations = priorityRecommendations(comparisons);
     return {
@@ -428,7 +438,7 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
       rank: asArray(avatar.talentIdList).length, portrait: iconUrl(text(metadata.SideIconName)) ?? null,
       element: elementMeta.label, elementColor: elementMeta.color, path: GI_WEAPONS[text(metadata.WeaponType)] ?? "武器",
       lightCone: weapon ? { name: localized(catalog.loc, weaponFlat.nameTextMapHash, "武器"), level: number(weaponInfo.level, null as unknown as number), rank: number(Object.values(asRecord(weaponInfo.affixMap))[0], -1) + 1, icon: iconUrl(text(weaponFlat.icon)) ?? null } : null,
-      relics, allStats, guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: partyRecommendationsFor("genshin", name), constellations: constellationProfileFor(identity, asArray(avatar.talentIdList).length),
+      relics, allStats, guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: mismatchedAddition ? { gameVersion: "7.1", dataAsOf: "2026-10-01", updatedAt: "2026-10-01", options: [] } : partyRecommendationsFor("genshin", name), constellations: constellationProfileFor(identity, asArray(avatar.talentIdList).length),
     };
   });
   return { player: { uid: text(root.uid), name: text(player.nickname, "旅人"), level: number(player.level, null as unknown as number) }, characters };

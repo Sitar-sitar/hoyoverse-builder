@@ -5,13 +5,13 @@ import { HSR_RUNTIME_PATHS } from "./characterGuideCatalog";
 import { catalogSourceIdFor } from "./characterConstellations";
 
 describe("character reference catalog", () => {
-  it("全254キャラクターをゲーム別に公開する（第21バッチで HSR パールを追加）", () => {
+  it("全256キャラクターをゲーム別に公開する（第23バッチで原神2名を追加）", () => {
     const catalog = characterReferenceCatalog();
-    expect(catalog.total).toBe(254);
-    expect(catalog.reviewed).toBe(254);
+    expect(catalog.total).toBe(256);
+    expect(catalog.reviewed).toBe(256);
     expect(catalog.pending).toBe(0);
     expect(catalog.games.hsr).toHaveLength(86);
-    expect(catalog.games.genshin).toHaveLength(109);
+    expect(catalog.games.genshin).toHaveLength(111);
     expect(catalog.games.zzz).toHaveLength(59);
   });
 

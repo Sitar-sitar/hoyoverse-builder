@@ -16,11 +16,13 @@ describe("推奨PT影響レビュー", () => {
     expect(report.mentioned.every((entry) => entry.owner !== "ホタル")).toBe(true);
   });
 
-  it("未実装の名前でも言及済みPTを洗い出せる（新キャラクター追加の第一入力）", () => {
+  it("カタログ未登録の名前でも言及済みPTを洗い出せる（新キャラクター追加の第一入力）", () => {
     const report = partyImpactFor("genshin", "オデット");
     expect(report.selfStatus).toBe("absent");
-    expect(report.mentioned).toHaveLength(2);
-    expect(report.mentioned.every((entry) => entry.owner === "イファ")).toBe(true);
+    expect(report.mentioned).toHaveLength(5);
+    expect(report.mentioned.filter((entry) => entry.owner === "イファ")).toHaveLength(2);
+    expect(report.mentioned.filter((entry) => entry.owner === "ヴェスナ")).toHaveLength(2);
+    expect(report.mentioned.filter((entry) => entry.owner === "ヴォジャニーツァ")).toHaveLength(1);
     expect(report.mentioned.every((entry) => entry.matchedAs === "upcoming")).toBe(true);
   });
 
@@ -57,7 +59,7 @@ describe("推奨PT影響レビュー", () => {
   it("Markdown はチェックリスト形式で出力する", () => {
     const markdown = formatPartyImpactMarkdown(partyImpactFor("genshin", "オデット"));
     expect(markdown).toContain("### genshin:オデット の推奨PT影響レビュー");
-    expect(markdown).toContain("#### 言及済みPT（2件");
-    expect(markdown.match(/^- \[ \] /gm)?.length).toBe(2);
+    expect(markdown).toContain("#### 言及済みPT（5件");
+    expect(markdown.match(/^- \[ \] /gm)?.length).toBe(5);
   });
 });

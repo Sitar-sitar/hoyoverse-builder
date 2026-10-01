@@ -2,6 +2,7 @@ import type { CharacterIdentity } from "./characterIdentity";
 import type { StatKey, TierName } from "./buildAdvisor";
 import { BATCH_17_CONSTELLATIONS } from "./batch17ConstellationData.generated";
 import { ACTIVE_CATALOG_IDENTITIES } from "./fixtures/identityCatalogSnapshot";
+import { BATCH23_GENSHIN_CONSTELLATIONS } from "./batch23GenshinData";
 
 export type LocalizedText = { ja: string; en: string; "zh-CN": string };
 export type ConstellationTargetChange = {
@@ -63,6 +64,7 @@ const SOURCE = {
 } as const;
 
 const CURATED: Record<string, CuratedEntry> = {
+  ...BATCH23_GENSHIN_CONSTELLATIONS,
   // 第20バッチ（2026-09-24）: アベンチュリン・波と戯れる夏。名称・本文とも StarRailRes の公式ゲームデータ（日本語・英語・中国語）。
   // 星魂1の全属性耐性貫通+24%は公開プロフィールの比較項目に無く、他は戦闘中・条件付きのため targetChanges は全段で空。
   "hsr:1513": { ...SOURCE.hsr, gameVersion: "4.5", sourceUrl: "https://game8.jp/houkaistarrail/794467", sourceLabel: t("StarRailRes の公式ゲームデータ（日本語・英語・中国語）と Game8 の2026-09-24更新ガイドを照合", "Cross-checked against official StarRailRes game data (JA/EN/ZH) and Game8's guide updated 2026-09-24", "已对照StarRailRes官方游戏数据（日/英/中）与Game8于2026-09-24更新的指南"), dataAsOf: "2026-09-24", updatedAt: "2026-09-24", effects: [
@@ -1695,7 +1697,8 @@ Object.assign(CURATED, {
 });
 
 export function constellationProfileFor(identity: CharacterIdentity, rank: number | null): ConstellationProfile {
-  const entry = CURATED[identity.key] ?? BATCH_17_CONSTELLATIONS[identity.key] ?? CURATED[`${identity.game}:${identity.displayName}`];
+  const blockedAddition = Boolean(BATCH23_GENSHIN_CONSTELLATIONS[identity.key]) && (!identity.resolved || Boolean(identity.variantOf));
+  const entry = blockedAddition ? undefined : CURATED[identity.key] ?? BATCH_17_CONSTELLATIONS[identity.key] ?? CURATED[`${identity.game}:${identity.displayName}`];
   const acquiredRank = Math.max(0, Math.min(6, rank ?? 0));
   if (!entry) {
     const source = SOURCE[identity.game];
