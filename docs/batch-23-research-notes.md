@@ -1,6 +1,6 @@
 # 第23バッチ: 原神 ヴェスナ・ヴォジャニーツァ
 
-確認日: 2026-10-01（Asia/Tokyo）。Phase 51 のローカルデータ追加。公開反映と実UIDでの新キャラ表示は未検証。
+確認日: 2026-10-01（Asia/Tokyo）。Phase 51 のデータ追加と公開検証。公開反映は末尾の証跡で確認済み。実UIDでの新キャラ表示は未検証。
 
 ## 対象と採用ID
 
@@ -103,3 +103,9 @@ PT全体は版7.1・基準日2026-09-29・更新日2026-10-01。維持する旧�
 - ローカルChromeの画面確認は実装ログPhase 51参照。実UID・公開API・Pages反映は未検証。
 
 追補だけ戻す場合は追補コミットをrevertする。新規2名の追加を戻す必要はない。
+
+## 公開検証（2026-10-01）
+
+上記の「未検証」はローカル検証時点の記録。公開依頼後に [PR #96](https://github.com/Sitar-sitar/hoyoverse-builder/pull/96) をpush・CI成功後にマージした（main `3b0c592`）。[Pages run 36849428175](https://github.com/Sitar-sitar/hoyoverse-builder/actions/runs/36849428175) と同SHAのRailway deploymentがsuccess。公開APIで図鑑256名・履歴と、対象7名のガイド・PT・凸・元バッチがローカル検証値と完全一致。health・Pages Origin CORS・公開HTML/JS/CSSの到達を確認した。Chrome画面の確認範囲は実装ログPhase 51へ記載する。API health自体にSHAはないため、GitHub deploymentのSHAと実データを併せて確認している。
+
+実Enkaで新規2名を含むUID照会は引き続き未検証。APIの図鑑応答を実UID成功と読み替えない。
