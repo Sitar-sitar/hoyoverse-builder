@@ -2,6 +2,7 @@ import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA } from "./characterGuideMetadata";
 import { characterUpdateLedger } from "./characterUpdateLedger";
+import { BATCH23_EXISTING_PARTY_UPDATES, BATCH23_EXISTING_PARTY_METADATA } from "./batch23GenshinData";
 
 export type GuideUpdateEvent = {
   date: string;
@@ -16,6 +17,13 @@ export type GuideUpdateEvent = {
 const CURRENT_BASELINE = "2026-08-18";
 
 const SITE_EVENTS: GuideUpdateEvent[] = [
+  {
+    date: "2026-10-01T19:23:00+09:00", scope: "site", games: ["genshin"],
+    title: "第23バッチ追補：既存5キャラの推奨PTを更新",
+    summary: "ファルザン・ディオナ・スカーク・フリーナ・エスコフィエ側にも、ヴェスナ・ヴォジャニーツァを含む根拠付き編成を登録しました。",
+    changes: ["既存5名へ合計6案を反映", "各キャラ最大3案の範囲で旧案を入替", "個別ビルドと現在値は維持"],
+    rationale: "新キャラのページだけでなく、既存キャラからも同じ実名編成を参照できるようにするため。",
+  },
   {
     date: "2026-10-01T18:00:00+09:00", scope: "site", games: ["genshin"],
     title: "第23バッチ：ヴェスナ・ヴォジャニーツァを追加",
@@ -345,14 +353,22 @@ function buildGuideUpdateHistory() {
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const metadata = CHARACTER_GUIDE_METADATA[game][name];
     const batchEvent = batchEventFor(game, name);
+    const partyUpdated = game === "genshin" && BATCH23_EXISTING_PARTY_UPDATES[name];
     return {
       game,
       name,
       profileId: metadata.profileId,
       dataAsOf: metadata.dataAsOf,
-      updatedAt: metadata.updatedAt,
-      sourceLabel: metadata.sourceLabel,
+      updatedAt: partyUpdated ? BATCH23_EXISTING_PARTY_METADATA.updatedAt : metadata.updatedAt,
+      sourceLabel: partyUpdated ? `${metadata.sourceLabel} / 推奨PTのみGame8の2026-09-29更新の個別編成ガイドで更新` : metadata.sourceLabel,
       events: [
+        ...(partyUpdated ? [{
+          date: "2026-10-01T19:23:00+09:00", scope: "character" as const, games: [game],
+          title: "第23バッチ追補：新キャラ入りの推奨PTを登録",
+          summary: `${name}側へ新キャラ入りの編成を${partyUpdated.length}案反映しました。`,
+          changes: ["本人を含む4名編成を追加", "役割・条件・三言語・出典を維持", "ビルドの基準日・固定目標・命ノ星座は変更せず、PT更新だけを記録"],
+          rationale: "新キャラの編成に参加する既存キャラからも同じ構成を選べるようにするため。",
+        }] : []),
         ...(CHARACTER_CHANGE_EVENTS[game]?.[name] ?? []),
         ...(batchEvent ? [batchEvent] : []),
         {

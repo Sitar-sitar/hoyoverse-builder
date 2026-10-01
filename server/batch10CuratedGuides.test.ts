@@ -49,7 +49,7 @@ describe("第10バッチの個別ガイド", () => {
       expect(parties.options).toHaveLength(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "ジェイド" || displayName === "ジェパード" ? "2026-09-11" : "2026-08-26");
+      expect(parties.updatedAt).toBe(displayName === "エスコフィエ" ? "2026-10-01" : displayName === "ジェイド" || displayName === "ジェパード" ? "2026-09-11" : "2026-08-26");
       // ジェイド・ジェパードは第18バッチ（2026-09-11）で個別ガイドを登録し、メタデータを更新した（台帳上は第10バッチのまま）。
       expect(guideMetadataFor(game, displayName).updatedAt).toBe(displayName === "ジェイド" || displayName === "ジェパード" ? "2026-09-11" : "2026-08-26");
     });
