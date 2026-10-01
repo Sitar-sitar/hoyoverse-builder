@@ -2,6 +2,7 @@ import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA } from "./characterGuideMetadata";
 import { characterUpdateLedger } from "./characterUpdateLedger";
+import { BATCH23_EXISTING_PARTY_UPDATES, BATCH23_EXISTING_PARTY_METADATA } from "./batch23GenshinData";
 
 export type GuideUpdateEvent = {
   date: string;
@@ -16,6 +17,20 @@ export type GuideUpdateEvent = {
 const CURRENT_BASELINE = "2026-08-18";
 
 const SITE_EVENTS: GuideUpdateEvent[] = [
+  {
+    date: "2026-10-01T19:23:00+09:00", scope: "site", games: ["genshin"],
+    title: "第23バッチ追補：既存5キャラの推奨PTを更新",
+    summary: "ファルザン・ディオナ・スカーク・フリーナ・エスコフィエ側にも、ヴェスナ・ヴォジャニーツァを含む根拠付き編成を登録しました。",
+    changes: ["既存5名へ合計6案を反映", "各キャラ最大3案の範囲で旧案を入替", "個別ビルドと現在値は維持"],
+    rationale: "新キャラのページだけでなく、既存キャラからも同じ実名編成を参照できるようにするため。",
+  },
+  {
+    date: "2026-10-01T18:00:00+09:00", scope: "site", games: ["genshin"],
+    title: "第23バッチ：ヴェスナ・ヴォジャニーツァを追加",
+    summary: "原神 Ver.7.1 の2名を追加し、全256名の図鑑・UID照会へ個別ビルド・命ノ星座・推奨PTを登録しました。",
+    changes: ["原神のカタログを109名から111名へ拡張", "各6段の命ノ星座を三言語で登録", "各2案の実名推奨PTを登録", "Enkaメタデータ欠落時の確認済みID補完を追加"],
+    rationale: "実装済みの新キャラクターを確認済みIDと個別根拠に基づいて案内するため。",
+  },
   {
     date: "2026-08-18T02:50:00+09:00",
     scope: "site",
@@ -310,6 +325,13 @@ const BATCH_EVENT_TEMPLATES: Record<number, BatchEventTemplate> = {
     changes: ["図鑑とUID照会の母集団へ追加", "公開プロフィールで比較する会心率・速度・会心ダメージの目標を登録", "全6段階の星魂を公式ゲームデータ（日本語・英語・中国語）で登録", "Game8・GameWith で一致する実名編成を2案登録", "必殺技の速度バフ・熱気・アッハタイムなど戦闘中の補正を公開プロフィール値から分離"],
     rationale: "Ver.4.5後半で実装された歓楽キャラクターを、既存キャラクターと同じ精査基準で扱うため。",
   },
+  23: {
+    date: "2026-10-01T18:00:00+09:00",
+    title: "第23バッチ：原神 Ver.7.1 の2名を追加",
+    summary: (name) => `${name}の確認済みID、個別ビルド、三言語の命ノ星座6段、実名4名の推奨PT2案を登録しました。`,
+    changes: ["図鑑とUID照会へ追加", "聖遺物・主ステータス・武器候補を登録", "確認済みIDに三言語の命ノ星座6段を登録", "実名の推奨PT2案を登録", "戦闘中効果を公開プロフィールの現在値から分離"],
+    rationale: "実装済み2名を取得元のメタデータ欠落時もID照合して案内し、戦闘外の根拠がない固定値を持ち込まないため。",
+  },
   21: {
     date: "2026-09-28T23:00:00+09:00",
     title: "第21バッチ：パールを追加",
@@ -331,14 +353,22 @@ function buildGuideUpdateHistory() {
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const metadata = CHARACTER_GUIDE_METADATA[game][name];
     const batchEvent = batchEventFor(game, name);
+    const partyUpdated = game === "genshin" && BATCH23_EXISTING_PARTY_UPDATES[name];
     return {
       game,
       name,
       profileId: metadata.profileId,
       dataAsOf: metadata.dataAsOf,
-      updatedAt: metadata.updatedAt,
-      sourceLabel: metadata.sourceLabel,
+      updatedAt: partyUpdated ? BATCH23_EXISTING_PARTY_METADATA.updatedAt : metadata.updatedAt,
+      sourceLabel: partyUpdated ? `${metadata.sourceLabel} / 推奨PTのみGame8の2026-09-29更新の個別編成ガイドで更新` : metadata.sourceLabel,
       events: [
+        ...(partyUpdated ? [{
+          date: "2026-10-01T19:23:00+09:00", scope: "character" as const, games: [game],
+          title: "第23バッチ追補：新キャラ入りの推奨PTを登録",
+          summary: `${name}側へ新キャラ入りの編成を${partyUpdated.length}案反映しました。`,
+          changes: ["本人を含む4名編成を追加", "役割・条件・三言語・出典を維持", "ビルドの基準日・固定目標・命ノ星座は変更せず、PT更新だけを記録"],
+          rationale: "新キャラの編成に参加する既存キャラからも同じ構成を選べるようにするため。",
+        }] : []),
         ...(CHARACTER_CHANGE_EVENTS[game]?.[name] ?? []),
         ...(batchEvent ? [batchEvent] : []),
         {

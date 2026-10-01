@@ -388,6 +388,15 @@ Object.entries(BATCH18_GUIDE_COMPLETIONS).forEach(([name, { dataAsOf }]) => {
   record.sourceLabel = "Game8・GameWithの更新日付き個別ビルドを照合";
 });
 
+batchNames(23).genshin.forEach((name) => {
+  const record = CHARACTER_GUIDE_METADATA.genshin[name];
+  if (!record) return;
+  record.profileId = `curated:batch23:genshin:${name}`;
+  record.dataAsOf = "2026-10-01";
+  record.updatedAt = "2026-10-01";
+  record.sourceLabel = "Game8・Prydwenの個別ビルド・編成とgenshin-dbの命ノ星座データを照合";
+});
+
 export function guideMetadataFor(game: CatalogGameId, name?: string): CharacterGuideMetadata {
   const record = name ? CHARACTER_GUIDE_METADATA[game][name] : undefined;
   return record ?? {

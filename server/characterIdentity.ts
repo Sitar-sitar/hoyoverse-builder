@@ -1,3 +1,5 @@
+import { BATCH23_GENSHIN_CHARACTERS } from "./batch23GenshinData";
+
 export type CharacterGameId = "hsr" | "genshin" | "zzz";
 
 export type CharacterIdentity = {
@@ -41,6 +43,7 @@ const CURATED_IDENTITIES: Partial<Record<CharacterGameId, Record<string, Curated
     "8010": { displayName: "開拓者（雷・歓楽）", variantOf: "開拓者" },
   },
   genshin: {
+    ...Object.fromEntries(Object.entries(BATCH23_GENSHIN_CHARACTERS).map(([id, entry]) => [id, { displayName: entry.name, variantOf: null }])),
     // HoYoVerse 公開のキャラクターID一覧に基づく現在の表示名。
     "10000125": { displayName: "コロンビーナ", variantOf: null },
   },

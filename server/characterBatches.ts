@@ -28,6 +28,7 @@ export const REVIEWED_BATCHES: Record<number, BatchNames> = {
   19: { hsr: [], genshin: [], zzz: ["クラレッタ"] },
   20: { hsr: ["アベンチュリン・波と戯れる夏"], genshin: [], zzz: [] },
   21: { hsr: ["パール"], genshin: [], zzz: [] },
+  23: { hsr: [], genshin: ["ヴェスナ", "ヴォジャニーツァ"], zzz: [] },
 };
 
 const EMPTY: BatchNames = { hsr: [], genshin: [], zzz: [] };
