@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolvePartyMember } from "../partyMemberAliases";
 import { CHARACTER_PARTIES } from "./characterParties";
+import { INITIAL_PARTY_REFS } from "./initialRefs";
 import { PARTY_LINK_BATCHES, PARTY_LINK_RECORDS } from "./linkRecords";
 import { backlogLinks, rosterKey, teamStoreIssues, uncoveredLinks, type LinkStatusInput } from "./linkStatus";
 import { refsFor } from "./resolve";
@@ -90,7 +91,8 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
     const batches = { ...PARTY_LINK_BATCHES, 25: { ...B24, batch: 25 } };
     const pending = uncoveredLinks({ store, batches });
     expect(owners(pending)).toEqual(["火花", "爻光"].sort());
-    expect(teamStoreIssues({ store, batches })).toEqual([]);
+    // 起点の共有化も参照IDの変更なので、旧IDの除外と新IDの採用を記録する（PT-06）。
+    expect(teamStoreIssues({ store, batches }).some((issue) => issue.startsWith("B7/E2"))).toBe(true);
 
     // 火花は参照（＋変更記録）、爻光は見送り。
     const sparkleRefs = refsFor("hsr", "火花");
@@ -101,7 +103,9 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
       "hsr:火花": { refs: [...kept, { team: converted.id }] },
       "hsr:爻光": { skipped: [{ team: converted.id, reason: "爻光の個別ガイドの編成節に記載なし", sourceUrl: "https://example.com/yaoguang", checkedAt: "2026-10-20" }] },
     };
-    const records: PartyLinkRecord[] = [...PARTY_LINK_RECORDS, { batch: 25, game: "hsr", owner: "火花", added: [converted.id], removed: dropped }];
+    const records: PartyLinkRecord[] = [...PARTY_LINK_RECORDS,
+      { batch: 25, game: "hsr", owner: "パール", added: [converted.id], removed: [legacy.id] },
+      { batch: 25, game: "hsr", owner: "火花", added: [converted.id], removed: dropped }];
     expect(uncoveredLinks({ store, batches, parties, records })).toEqual([]);
     expect(teamStoreIssues({ store, batches, parties, records })).toEqual([]);
 
@@ -159,7 +163,7 @@ describe("整合性の否定例", () => {
       "genshin:香菱": { refs: [...refsFor("genshin", "香菱").slice(0, 2), { team: BENNETT_TEAM.id }] },
     };
     expect(has(issuesWith({ store, parties: linked }), "B7/E2")).toBe(true);
-    const record: PartyLinkRecord = { batch: 24, game: "genshin", owner: "香菱", added: [BENNETT_TEAM.id], removed: [] };
+    const record: PartyLinkRecord = { batch: 24, game: "genshin", owner: "香菱", added: [BENNETT_TEAM.id], removed: refsFor("genshin", "香菱").slice(2).map((ref) => ref.team) };
     expect(issuesWith({ store, parties: linked, records: [...PARTY_LINK_RECORDS, record] })).toEqual([]);
     expect(has(issuesWith({ store, parties: linked, records: [...PARTY_LINK_RECORDS, { ...record, batch: 30 }] }), "E3")).toBe(true);
     expect(has(issuesWith({ parties: linked, records: [...PARTY_LINK_RECORDS, record] }), "E4")).toBe(true);

@@ -110,7 +110,7 @@ export type PartyLinkRecord = {
   batch: number;
   game: PartyGameId;
   owner: string;
-  /** このバッチで参照に加えた Team.id（起点以外の共有編成）。表示順 */
+  /** このバッチで参照に加えた Team.id（自分起点を含む）。表示順 */
   added: string[];
   /** このバッチで参照から外した Team.id（起点の旧案を含む）。表示順 */
   removed: string[];

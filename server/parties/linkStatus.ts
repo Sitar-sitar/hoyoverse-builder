@@ -2,6 +2,7 @@ import { batchIdFor } from "../characterBatches";
 import { CHARACTER_GUIDE_CATALOG } from "../characterGuideCatalog";
 import { resolvePartyMember, VARIANT_ROSTER_CANONICAL, type PartyMemberResolution } from "../partyMemberAliases";
 import { CHARACTER_PARTIES } from "./characterParties";
+import { INITIAL_PARTY_REFS } from "./initialRefs";
 import { LEGACY_PARTY_KEYS } from "./legacyCatalog";
 import { PARTY_LINK_BATCHES, PARTY_LINK_RECORDS } from "./linkRecords";
 import { refsFor } from "./resolve";
@@ -31,6 +32,7 @@ export type LinkStatusInput = {
   resolve: PartyMemberResolver;
   records: readonly PartyLinkRecord[];
   batches: Record<number, PartyLinkBatch>;
+  initialRefs: Readonly<Record<string, readonly string[]>>;
   catalog: Record<PartyGameId, readonly string[]>;
   batchOf: (game: PartyGameId, name: string) => number | null;
 };
@@ -41,6 +43,7 @@ export const DEFAULT_LINK_STATUS_INPUT: LinkStatusInput = {
   resolve: resolvePartyMember,
   records: PARTY_LINK_RECORDS,
   batches: PARTY_LINK_BATCHES,
+  initialRefs: INITIAL_PARTY_REFS,
   catalog: { hsr: CHARACTER_GUIDE_CATALOG.hsr, genshin: CHARACTER_GUIDE_CATALOG.genshin, zzz: CHARACTER_GUIDE_CATALOG.zzz },
   batchOf: batchIdFor,
 };
@@ -141,13 +144,26 @@ export function teamStoreIssues(input: Partial<LinkStatusInput> = {}): string[] 
     if (!isCatalog(key.slice(0, at) as PartyGameId, key.slice(at + 1))) issues.push(`A5 旧データのキーがカタログ外: ${key}`);
   }
 
-  // 変更記録の再生（E2・B7）
+  // 固定した初期参照から全参照を再生する。バッチ番号や起点で履歴を免除しない（PT-05・PT-06）。
   const replayed = new Map<string, Set<string>>();
+  for (const [key, ids] of Object.entries(s.initialRefs)) {
+    const at = key.indexOf(":");
+    const game = key.slice(0, at) as PartyGameId;
+    const owner = key.slice(at + 1);
+    if (!PARTY_GAMES.includes(game) || !isCatalog(game, owner)) issues.push(`E6 初期参照のキーがカタログ外: ${key}`);
+    if (ids.length > MAX_PARTY_OPTIONS || new Set(ids).size !== ids.length) issues.push(`E6 初期参照は重複の無い0〜${MAX_PARTY_OPTIONS}件: ${key}`);
+    replayed.set(key, new Set(ids));
+  }
   for (const record of [...s.records].sort((a, b) => a.batch - b.batch)) {
     const key = ownerKey(record.game, record.owner);
     const set = replayed.get(key) ?? new Set<string>();
-    for (const id of record.added) set.add(id);
-    for (const id of record.removed) set.delete(id);
+    for (const id of record.removed) {
+      if (!set.delete(id)) issues.push(`E7 参照していない編成を除外: ${key} → ${id}（batch ${record.batch}）`);
+    }
+    for (const id of record.added) {
+      if (set.has(id)) issues.push(`E7 参照済みの編成を追加: ${key} → ${id}（batch ${record.batch}）`);
+      set.add(id);
+    }
     replayed.set(key, set);
   }
   const batch23Added = new Set(s.records.filter((record) => record.batch === 23).flatMap((record) => record.added.map((id) => `${ownerKey(record.game, record.owner)}>${id}`)));
@@ -160,7 +176,6 @@ export function teamStoreIssues(input: Partial<LinkStatusInput> = {}): string[] 
     const owner = key.slice(at + 1);
     if (!PARTY_GAMES.includes(game) || !isCatalog(game, owner)) issues.push(`B1 参照のキーがカタログ外: ${key}`);
     const refs = entry.refs;
-    const linked = new Set<string>();
     if (refs) {
       if (refs.length < 1 || refs.length > MAX_PARTY_OPTIONS) issues.push(`B2 参照は1〜${MAX_PARTY_OPTIONS}件: ${key}（${refs.length}件）`);
       const seenIds = new Set<string>();
@@ -184,16 +199,8 @@ export function teamStoreIssues(input: Partial<LinkStatusInput> = {}): string[] 
           if (viewIds.has(ref.viewId) || s.store.byId.has(ref.viewId)) issues.push(`B6 viewId が衝突: ${ref.viewId}`);
           viewIds.add(ref.viewId);
         }
-        const ownerBatch = s.batchOf(game, owner);
-        const isNewer = ownerBatch !== null && team.batch !== null && ownerBatch >= team.batch;
-        if (!isOrigin && !isNewer) linked.add(ref.team);
       }
     }
-    const expected = replayed.get(key) ?? new Set<string>();
-    const missing = [...linked].filter((id) => !expected.has(id));
-    const extra = [...expected].filter((id) => !linked.has(id));
-    if (missing.length > 0) issues.push(`B7/E2 参照を加えたのに変更記録が無い: ${key} → ${missing.join(", ")}（linkRecords.ts に追記）`);
-    if (extra.length > 0) issues.push(`E2 変更記録の再生結果が現在の参照と合わない: ${key} → ${extra.join(", ")}`);
     const skippedIds = new Set<string>();
     for (const skip of entry.skipped ?? []) {
       const team = s.store.byId.get(skip.team);
@@ -208,9 +215,18 @@ export function teamStoreIssues(input: Partial<LinkStatusInput> = {}): string[] 
       skippedIds.add(skip.team);
     }
   }
-  // 明示参照が無く既定参照だけのキャラにも記録があれば不整合（E2）
-  for (const [key, set] of replayed) {
-    if (!s.parties[key]?.refs && set.size > 0) issues.push(`E2 変更記録があるのに明示参照が無い: ${key}`);
+  // 明示参照の無いキャラも含めて表示参照全体を比較する。削除・追加の両方の記録漏れを検出する。
+  for (const game of PARTY_GAMES) {
+    for (const owner of s.catalog[game]) {
+      const key = ownerKey(game, owner);
+      if (!Object.hasOwn(s.initialRefs, key)) issues.push(`E6 初期参照が無い: ${key}（initialRefs.ts に初回登録時の参照を追記）`);
+      const current = new Set(refsFor(game, owner, s.store, s.parties).slice(0, MAX_PARTY_OPTIONS).map((ref) => ref.team));
+      const expected = replayed.get(key) ?? new Set<string>();
+      const missing = [...current].filter((id) => !expected.has(id));
+      const extra = [...expected].filter((id) => !current.has(id));
+      if (missing.length > 0) issues.push(`B7/E2 参照を加えたのに変更記録が無い: ${key} → ${missing.join(", ")}（linkRecords.ts に追記）`);
+      if (extra.length > 0) issues.push(`E2 変更記録の再生結果が現在の参照と合わない: ${key} → ${extra.join(", ")}`);
+    }
   }
 
   // D 共有編成
