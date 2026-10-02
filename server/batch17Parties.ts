@@ -3,7 +3,7 @@ import type {
   PartyMember,
   PartyRecommendation,
   PartyRecommendationSet,
-} from "./partyRecommendations";
+} from "./parties/types";
 import { BATCH17_DATE } from "./batch17Guides";
 
 const t = (ja: string, en: string, zh: string): LocalizedText => ({

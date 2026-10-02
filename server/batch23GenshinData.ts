@@ -37,19 +37,6 @@ export function batch23CharacterForName(name: string) {
   return Object.entries(BATCH23_GENSHIN_CHARACTERS).find(([, entry]) => entry.name === name);
 }
 
-// 第23バッチの固定4名編成を、参加する既存キャラのページにも登録する。
-// 同じ4名の順序違いは1案。未登録のオデットはカタログを増やさず研究メモで保留する。
-export const BATCH23_EXISTING_PARTY_UPDATES: Record<string, { sourceOwner: string; sourceRank: number }[]> = {
-  "ファルザン": [{ sourceOwner: "ヴェスナ", sourceRank: 1 }, { sourceOwner: "ヴェスナ", sourceRank: 2 }],
-  "ディオナ": [{ sourceOwner: "ヴェスナ", sourceRank: 2 }],
-  "スカーク": [{ sourceOwner: "ヴォジャニーツァ", sourceRank: 2 }],
-  "フリーナ": [{ sourceOwner: "ヴォジャニーツァ", sourceRank: 2 }],
-  "エスコフィエ": [{ sourceOwner: "ヴォジャニーツァ", sourceRank: 2 }],
-};
-export const BATCH23_EXISTING_PARTY_METADATA = {
-  gameVersion: "7.1", dataAsOf: "2026-09-29", updatedAt: "2026-10-01",
-};
-
 type CuratedEntry = Omit<ConstellationProfile, "rankLabel" | "acquiredRank" | "dataStatus" | "activeTargetChanges">;
 
 // 命ノ星座の三言語名称・本文は上記revisionの公式ゲームデータ由来。生成時に表示用markupのみ除去。

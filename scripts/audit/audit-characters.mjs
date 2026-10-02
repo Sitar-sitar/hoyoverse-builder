@@ -35,12 +35,14 @@ const GAME_LABEL = { hsr: "HSR", genshin: "原神", zzz: "ZZZ" };
 const warnings = [];
 const load = (relative) => import(pathToFileURL(join(repo, relative)).href);
 
-const [rules, catalogModule, ledgerModule, aliases, impact] = await Promise.all([
+const [rules, catalogModule, ledgerModule, aliases, impact, linkStatus, characterParties] = await Promise.all([
   load("server/auditRules.ts"),
   load("server/characterGuideCatalog.ts"),
   load("server/characterUpdateLedger.ts"),
   load("server/partyMemberAliases.ts"),
   load("server/partyImpact.ts"),
+  load("server/parties/linkStatus.ts"),
+  load("server/parties/characterParties.ts"),
 ]);
 const { AUDIT_GAMES: GAMES } = rules;
 const { CHARACTER_GUIDE_CATALOG } = catalogModule;
@@ -127,6 +129,11 @@ function integrityIssues(records) {
   if (unknownMembers.length > 0) {
     issues.push(`推奨PTのメンバー名を解決できない: ${unknownMembers.length}件（${unknownMembers.slice(0, 6).map((entry) => `${GAME_LABEL[entry.game]} ${entry.name}`).join("、")}）。server/partyMemberAliases.ts へ分類を追加する`);
   }
+  // 推奨PTの連動ゲート（docs/実装設計書_推奨PTの編成マスタ化と関連キャラ連動_2026-10-01.md §4.9.2）
+  const uncoveredLinks = linkStatus.uncoveredLinks();
+  if (uncoveredLinks.length > 0) {
+    issues.push(`推奨PTの連動未対応: ${uncoveredLinks.length}件（scripts/audit/party-links.mjs で一覧）`);
+  }
   return issues;
 }
 
@@ -166,6 +173,11 @@ const summary = {
     routeMismatches: routeMismatches.length,
     unknownMembers: memberResolution.unknown.length,
     upcomingMentions: memberResolution.upcoming.length,
+  },
+  partyLinks: {
+    uncovered: linkStatus.uncoveredLinks().length,
+    skipped: Object.values(characterParties.CHARACTER_PARTIES).reduce((total, entry) => total + (entry.skipped?.length ?? 0), 0),
+    backlog: linkStatus.backlogLinks().length,
   },
   nextBatchId: ledger.nextBatch.id,
 };

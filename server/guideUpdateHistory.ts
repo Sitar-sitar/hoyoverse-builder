@@ -2,7 +2,7 @@ import { batchIdFor } from "./characterBatches";
 import { CHARACTER_GUIDE_CATALOG, type CatalogGameId } from "./characterGuideCatalog";
 import { CHARACTER_GUIDE_METADATA } from "./characterGuideMetadata";
 import { characterUpdateLedger } from "./characterUpdateLedger";
-import { BATCH23_EXISTING_PARTY_UPDATES, BATCH23_EXISTING_PARTY_METADATA } from "./batch23GenshinData";
+import { historyUpdatedAt, linkEventFor, linkRecordsFor, mergeLinkEvents } from "./parties/linkRecords";
 
 export type GuideUpdateEvent = {
   date: string;
@@ -353,33 +353,29 @@ function buildGuideUpdateHistory() {
   const characters = games.flatMap((game) => CHARACTER_GUIDE_CATALOG[game].map((name) => {
     const metadata = CHARACTER_GUIDE_METADATA[game][name];
     const batchEvent = batchEventFor(game, name);
-    const partyUpdated = game === "genshin" && BATCH23_EXISTING_PARTY_UPDATES[name];
-    return {
-      game,
-      name,
-      profileId: metadata.profileId,
-      dataAsOf: metadata.dataAsOf,
-      updatedAt: partyUpdated ? BATCH23_EXISTING_PARTY_METADATA.updatedAt : metadata.updatedAt,
-      sourceLabel: partyUpdated ? `${metadata.sourceLabel} / 推奨PTのみGame8の2026-09-29更新の個別編成ガイドで更新` : metadata.sourceLabel,
-      events: [
-        ...(partyUpdated ? [{
-          date: "2026-10-01T19:23:00+09:00", scope: "character" as const, games: [game],
-          title: "第23バッチ追補：新キャラ入りの推奨PTを登録",
-          summary: `${name}側へ新キャラ入りの編成を${partyUpdated.length}案反映しました。`,
-          changes: ["本人を含む4名編成を追加", "役割・条件・三言語・出典を維持", "ビルドの基準日・固定目標・命ノ星座は変更せず、PT更新だけを記録"],
-          rationale: "新キャラの編成に参加する既存キャラからも同じ構成を選べるようにするため。",
-        }] : []),
-        ...(CHARACTER_CHANGE_EVENTS[game]?.[name] ?? []),
-        ...(batchEvent ? [batchEvent] : []),
-        {
+    // PT 連動の履歴は追記専用の変更記録から作る（現在の参照からは作らない）。設計 §4.7
+    const links = linkRecordsFor(game, name);
+    const baseEvents: GuideUpdateEvent[] = [
+      ...(CHARACTER_CHANGE_EVENTS[game]?.[name] ?? []),
+      ...(batchEvent ? [batchEvent] : []),
+      {
         date: metadata.updatedAt,
-        scope: "character" as const,
+        scope: "character",
         title: "個別目標ステータスの基準を登録",
         summary: `採用プロファイル: ${metadata.profileId}。公開プロフィールで比較可能な戦闘外の目標値を設定しました。`,
         changes: ["profileId・参照範囲・基準日・更新日を記録"],
         rationale: "目標値の時点と比較条件を、キャラクターごとに追跡可能にするため。",
         games: [game],
-      }],
+      },
+    ];
+    return {
+      game,
+      name,
+      profileId: metadata.profileId,
+      dataAsOf: metadata.dataAsOf,
+      updatedAt: historyUpdatedAt(metadata.updatedAt, links),
+      sourceLabel: links.length > 0 ? `${metadata.sourceLabel} / ${links.map(({ def }) => def.sourceNote).join(" / ")}` : metadata.sourceLabel,
+      events: mergeLinkEvents(baseEvents, links.map((entry) => linkEventFor(game, name, entry))),
     };
   }));
   return { currentBaseline: CURRENT_BASELINE, siteEvents: SITE_EVENTS, characters, updateLedger: characterUpdateLedger() };

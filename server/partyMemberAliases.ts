@@ -43,6 +43,16 @@ export const UPCOMING_PARTY_MEMBERS: Record<string, { mentions: number; checkedA
   "zzz:スンナ": { mentions: 1, checkedAt: "2026-09-11", note: "未実装（GameWith キャラ一覧 2026-09-10 の59名に無い）" },
 };
 
+/**
+ * 編成の構成比較（rosterKey）専用。主人公の略記を運命別の正式表記へ寄せる。表示には使わない。
+ * 設計: docs/実装設計書_推奨PTの編成マスタ化と関連キャラ連動_2026-10-01.md §4.8.1
+ */
+export const VARIANT_ROSTER_CANONICAL: Record<string, string> = {
+  "hsr:記憶主人公": "開拓者（記憶）",
+  "hsr:調和主人公": "開拓者（調和）",
+  "hsr:愉悦主人公": "開拓者（愉悦）",
+};
+
 /** 監査用の名前正規化。NFKC で全角/半角差を吸収し、空白を除く。 */
 export function normalizeMemberName(name: string): string {
   return name.normalize("NFKC").replace(/\s+/g, "");
