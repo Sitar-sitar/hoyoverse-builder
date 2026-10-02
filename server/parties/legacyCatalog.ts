@@ -1,0 +1,1356 @@
+import type { StatKey, TierName } from "../buildAdvisor";
+import { CHARACTER_GUIDE_CATALOG, HSR_RUNTIME_PATHS, ZZZ_RUNTIME_PROFESSIONS } from "../characterGuideCatalog";
+import { genshinProfileIdFor, hsrProfileIdFor, zzzProfileIdFor } from "../individualGuides";
+import { batch17PartyFor } from "../batch17Parties";
+import { BATCH23_EXISTING_PARTY_UPDATES, BATCH23_EXISTING_PARTY_METADATA } from "../batch23GenshinData";
+
+/**
+ * 推奨編成の手動キュレーションデータ。
+ * バージョン更新時は GAME_PARTY_DATASET と PARTY_CATALOG の該当ゲームだけを更新する。
+ * 表示件数は MAX_PARTY_OPTIONS に固定し、比較可能な戦闘外ステータスだけを targetChanges に記録する。
+ */
+export type PartyGameId = "hsr" | "genshin" | "zzz";
+export type LocalizedText = { ja: string; en: string; "zh-CN": string };
+
+export type PartyMember = { name: LocalizedText; role: LocalizedText };
+export type PartyTargetChange = {
+  key: StatKey;
+  label: LocalizedText;
+  unit: "%" | "";
+  targets: Record<TierName, number>;
+  reason: LocalizedText;
+};
+
+export type PartyCommunitySource = {
+  label: LocalizedText;
+  url: string;
+  checkedAt: string;
+  note: LocalizedText;
+  status: "crossChecked" | "watching";
+};
+
+export type PartyRecommendation = {
+  id: string;
+  rank: 1 | 2 | 3;
+  title: LocalizedText;
+  members: PartyMember[];
+  synergy: LocalizedText[];
+  targetChanges: PartyTargetChange[];
+  targetSummary: LocalizedText;
+  gameVersion: string;
+  dataAsOf: string;
+  updatedAt: string;
+  sourceLabel: LocalizedText;
+  sourceUrl: string;
+  communitySources: PartyCommunitySource[];
+};
+
+export type PartyRecommendationSet = {
+  gameVersion: string;
+  dataAsOf: string;
+  updatedAt: string;
+  options: PartyRecommendation[];
+};
+
+export const MAX_PARTY_OPTIONS = 3;
+
+const t = (ja: string, en: string, zh: string): LocalizedText => ({ ja, en, "zh-CN": zh });
+const member = (ja: string, en: string, zh: string, roleJa: string, roleEn: string, roleZh: string): PartyMember => ({ name: t(ja, en, zh), role: t(roleJa, roleEn, roleZh) });
+const change = (key: StatKey, ja: string, en: string, zh: string, unit: "%" | "", strict: number, goal: number, base: number, reasonJa: string, reasonEn: string, reasonZh: string): PartyTargetChange => ({
+  key, label: t(ja, en, zh), unit, targets: { "厳選": strict, "目標": goal, "妥協": base }, reason: t(reasonJa, reasonEn, reasonZh),
+});
+
+const GAME_PARTY_DATASET: Record<PartyGameId, Omit<PartyRecommendationSet, "options">> = {
+  hsr: { gameVersion: "4.4", dataAsOf: "2026-08-25", updatedAt: "2026-08-25" },
+  genshin: { gameVersion: "7.0", dataAsOf: "2026-08-25", updatedAt: "2026-08-25" },
+  zzz: { gameVersion: "3.1", dataAsOf: "2026-08-25", updatedAt: "2026-08-25" },
+};
+
+const sourceFor = (game: PartyGameId) => game === "hsr"
+  ? { label: t("公開チームガイドを照合", "Cross-checked public team guides", "交叉核对公开配队指南"), url: "https://game8.co/games/Honkai-Star-Rail/archives/409824" }
+  : game === "genshin"
+    ? { label: t("公開チームガイドを照合", "Cross-checked public team guides", "交叉核对公开配队指南"), url: "https://game8.co/games/Genshin-Impact/archives/301819" }
+    : { label: t("公開エージェントガイドを照合", "Cross-checked public agent guides", "交叉核对公开代理人指南"), url: "https://game8.co/games/Zenless-Zone-Zero/archives/458656" };
+
+const communitySourcesFor = (game: PartyGameId): PartyCommunitySource[] => game === "hsr"
+  ? [{ label: t("HoYoLAB由来の4.4編成議論（Reddit公開投稿）", "HoYoLAB-derived 4.4 team discussion (public Reddit post)", "来自HoYoLAB的4.4配队讨论（Reddit公开帖）"), url: "https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/", checkedAt: "2026-08-25", note: t("主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。", "Checked against the primary guide and used only to assess alternatives.", "已与主指南交叉核对，仅用于评估替代位。"), status: "crossChecked" }]
+  : game === "genshin"
+    ? [{ label: t("Game8原神ガイドの公開Xアカウント", "Game8 Genshin public X account", "Game8原神公开X账号"), url: "https://x.com/G8_Genshin", checkedAt: "2026-08-25", note: t("更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。", "Used with the dated primary guide to monitor meta updates and alternatives.", "与带更新日期的主指南结合，用于确认环境更新和替代配队。"), status: "crossChecked" }]
+    : [{ label: t("Game8 ZZZガイドの公開Xアカウント", "Game8 ZZZ public X account", "Game8 ZZZ公开X账号"), url: "https://x.com/Zenless_Game8", checkedAt: "2026-08-25", note: t("更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。", "Used with the dated primary guide to monitor alternative slots and meta changes.", "与带更新日期的主指南结合，确认替代位和环境变化。"), status: "crossChecked" }];
+
+function option(game: PartyGameId, input: Omit<PartyRecommendation, "gameVersion" | "dataAsOf" | "updatedAt" | "sourceLabel" | "sourceUrl" | "communitySources">): PartyRecommendation {
+  const dataset = GAME_PARTY_DATASET[game];
+  const source = sourceFor(game);
+  return { ...input, ...dataset, sourceLabel: source.label, sourceUrl: source.url, communitySources: communitySourcesFor(game) };
+}
+
+const PARTY_CATALOG: Record<string, PartyRecommendation[]> = {
+  "hsr:ホタル": [
+    option("hsr", { id: "firefly-superbreak", rank: 1, title: t("超撃破・完成形", "Premium Super Break", "超击破完整队"), members: [member("ホタル", "Firefly", "流萤", "主力", "Main DPS", "主C"), member("ルアン・メェイ", "Ruan Mei", "阮·梅", "撃破支援", "Break support", "击破辅助"), member("開拓者（調和）", "Trailblazer (Harmony)", "开拓者（同谐）", "超撃破支援", "Super Break support", "超击破辅助"), member("霊砂", "Lingsha", "灵砂", "耐久", "Sustain", "生存位")], synergy: [t("ルアン・メェイの戦闘中速度補正と弱点撃破支援で、超撃破の回転を整える。", "Ruan Mei's in-combat SPD bonus and break support stabilize Super Break rotations.", "阮·梅的战斗内速度加成与击破辅助可稳定超击破循环。")], targetChanges: [change("speed", "速度", "SPD", "速度", "", 154, 150, 145, "ルアン・メェイ編成では戦闘中速度補正を加味し、公開プロフィールでは速度150を目標にする。", "With Ruan Mei, account for in-combat SPD; target 150 SPD on the public profile.", "搭配阮·梅时计入战斗内速度加成，公开面板以150速度为目标。")], targetSummary: t("速度は戦闘外の公開値。撃破特効は戦闘中バフを含めずに比較する。", "SPD is an out-of-combat value; Break Effect is compared without combat buffs.", "速度为战斗外面板值；击破特攻不计入战斗内增益。") }),
+    option("hsr", { id: "firefly-fugue", rank: 2, title: t("超撃破・代替支援", "Super Break Alternative", "超击破替代辅助队"), members: [member("ホタル", "Firefly", "流萤", "主力", "Main DPS", "主C"), member("帰忘の流離人", "Fugue", "忘归人", "撃破支援", "Break support", "击破辅助"), member("開拓者（調和）", "Trailblazer (Harmony)", "开拓者（同谐）", "超撃破支援", "Super Break support", "超击破辅助"), member("ギャラガー", "Gallagher", "加拉赫", "耐久", "Sustain", "生存位")], synergy: [t("弱点撃破へ寄せた支援とギャラガーの撃破寄り回復で、超撃破の発動回数を確保する。", "Break-focused support and Gallagher's break-oriented sustain maintain Super Break triggers.", "击破向辅助与加拉赫的击破型生存位可维持超击破触发次数。")], targetChanges: [change("speed", "速度", "SPD", "速度", "", 160, 154, 150, "ルアン・メェイの戦闘中速度補正を受けないため、公開プロフィールの速度目標を引き上げる。", "Without Ruan Mei's in-combat SPD, raise the public-profile SPD target.", "不享受阮·梅的战斗内速度加成，因此提高公开面板的速度目标。")], targetSummary: t("速度はこの編成では高めに必要。撃破特効の比較方法は第1案と同じ。", "This team needs more out-of-combat SPD; Break Effect is assessed as in Plan 1.", "此队更需要较高战斗外速度；击破特攻按第1案的方式评估。") }),
+    option("hsr", { id: "firefly-accessible", rank: 3, title: t("超撃破・入手しやすい案", "Accessible Super Break", "易获取超击破队"), members: [member("ホタル", "Firefly", "流萤", "主力", "Main DPS", "主C"), member("アスター", "Asta", "艾丝妲", "速度支援", "SPD support", "速度辅助"), member("開拓者（調和）", "Trailblazer (Harmony)", "开拓者（同谐）", "超撃破支援", "Super Break support", "超击破辅助"), member("ギャラガー", "Gallagher", "加拉赫", "耐久", "Sustain", "生存位")], synergy: [t("アスターの速度支援と調和開拓者の超撃破で、限定支援がいない場合の軸を作る。", "Asta's SPD support plus Harmony Trailblazer's Super Break forms an accessible core.", "艾丝妲的速度辅助与同谐开拓者的超击破构成易获取核心。")], targetChanges: [change("speed", "速度", "SPD", "速度", "", 160, 154, 150, "速度バフの稼働率が編成・ローテーションで変わるため、公開値は154を目安にする。", "Since SPD-buff uptime depends on rotation, aim for 154 SPD on the public profile.", "速度增益覆盖率取决于队伍和循环，公开面板以154速度为参考。")], targetSummary: t("速度補正の常時適用を前提にせず、公開値で循環を確保する。", "Do not assume permanent SPD buffs; secure rotations with the public value.", "不要假定速度增益永久覆盖，应以公开面板值保证循环。") }),
+  ],
+  "hsr:飛霄": [
+    option("hsr", { id: "feixiao-fua", rank: 1, title: t("追加攻撃・高相性", "Follow-Up Premium", "追击高协同队"), members: [member("飛霄", "Feixiao", "飞霄", "主力", "Main DPS", "主C"), member("トパーズ&カブ", "Topaz & Numby", "托帕&账账", "副火力", "Sub DPS", "副C"), member("ロビン", "Robin", "知更鸟", "支援", "Support", "辅助"), member("アベンチュリン", "Aventurine", "砂金", "耐久", "Sustain", "生存位")], synergy: [t("頻繁な追加攻撃で飛霄の「飛黄」蓄積を加速し、ロビンの全体支援で単体火力を伸ばす。", "Frequent follow-ups accelerate Flying Aureus stacks while Robin boosts team damage.", "高频追击加快「飞黄」叠层，知更鸟提升全队伤害。")], targetChanges: [], targetSummary: t("会心・攻撃力・速度の公開値は基本目標を維持。戦闘中バフは別表示として扱う。", "Keep the baseline out-of-combat CRIT, ATK, and SPD targets; combat buffs stay separate.", "维持基础战斗外暴击、攻击和速度目标；战斗内增益单独处理。") }),
+    option("hsr", { id: "feixiao-hunt", rank: 2, title: t("巡狩連携・低コスト", "Hunt Synergy Accessible", "巡猎联动易获取队"), members: [member("飛霄", "Feixiao", "飞霄", "主力", "Main DPS", "主C"), member("三月なのか（巡狩）", "March 7th (Hunt)", "三月七（巡猎）", "副火力", "Sub DPS", "副C"), member("開拓者（記憶）", "Trailblazer (Remembrance)", "开拓者（记忆）", "支援", "Support", "辅助"), member("ナターシャ", "Natasha", "娜塔莎", "耐久", "Sustain", "生存位")], synergy: [t("三月なのかの攻撃と師匠効果で相互に行動回数を増やし、飛黄の蓄積を補助する。", "March's attacks and Shifu effect raise joint action frequency and help build Flying Aureus.", "三月七的攻击与师傅效果增加协同行动频率，辅助积累「飞黄」。")], targetChanges: [change("speed", "速度", "SPD", "速度", "", 143, 134, 120, "三月なのかの師匠効果で戦闘中速度を得られるため、公開値は速度134の到達を優先する。", "March's Shifu can grant in-combat SPD, so prioritize reaching 134 SPD on the public profile.", "三月七的师傅效果可提供战斗内速度，公开面板优先达到134速度。")], targetSummary: t("師匠効果は戦闘中補正。会心・攻撃力は公開値で比較する。", "Shifu is an in-combat modifier; compare CRIT and ATK by public values.", "师傅效果为战斗内修正；暴击和攻击以公开面板比较。") }),
+    option("hsr", { id: "feixiao-alternative", rank: 3, title: t("追加攻撃・代替枠", "Follow-Up Alternatives", "追击替代队"), members: [member("飛霄", "Feixiao", "飞霄", "主力", "Main DPS", "主C"), member("モゼ", "Moze", "貊泽", "副火力", "Sub DPS", "副C"), member("トリビー", "Tribbie", "缇宝", "支援", "Support", "辅助"), member("フォフォ", "Huohuo", "藿藿", "耐久", "Sustain", "生存位")], synergy: [t("モゼとトリビーの追加攻撃で飛黄を補助し、単体戦の手数を増やす。", "Moze and Tribbie supply follow-ups to build Flying Aureus in single-target fights.", "貊泽与缇宝提供追击，在单体战中辅助积累「飞黄」。")], targetChanges: [], targetSummary: t("速度134以上を起点に、会心率と会心ダメージの比率を公開値で整える。", "Use 134 SPD as the baseline and tune out-of-combat CRIT ratio.", "以134速度为起点，调整战斗外暴击率与暴击伤害比例。") }),
+  ],
+  "genshin:神里綾華": [
+    option("genshin", { id: "ayaka-freeze", rank: 1, title: t("凍結・氷共鳴", "Freeze with Cryo Resonance", "冻结与双冰共鸣"), members: [member("神里綾華", "Kamisato Ayaka", "神里绫华", "主力", "Main DPS", "主C"), member("申鶴", "Shenhe", "申鹤", "氷支援", "Cryo support", "冰系辅助"), member("楓原万葉", "Kaedehara Kazuha", "枫原万叶", "耐性低下", "RES shred", "减抗"), member("珊瑚宮心海", "Sangonomiya Kokomi", "珊瑚宫心海", "水付着・回復", "Hydro & healing", "挂水与治疗")], synergy: [t("凍結維持、氷共鳴、氷風4セットの会心率補正を前提に、元素爆発へ火力を集中する。", "Freeze uptime, Cryo Resonance, and Blizzard Strayer CRIT bonuses focus damage into Ayaka's Burst.", "维持冻结、双冰共鸣与冰风套暴击加成，集中强化元素爆发。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 55, 45, 35, "氷共鳴と氷風4セットを前提にした、戦闘外会心率の目安。", "Out-of-combat CRIT Rate target assuming Cryo Resonance and 4pc Blizzard Strayer.", "以双冰共鸣与冰风4件套为前提的战斗外暴击率目标。")], targetSummary: t("この案は氷共鳴・氷風4セットを前提に会心率目標を下げる。", "This plan lowers the public CRIT Rate target through Cryo Resonance and Blizzard Strayer.", "此方案因双冰共鸣与冰风套而降低公开面板暴击率目标。") }),
+    option("genshin", { id: "ayaka-mono-cryo", rank: 2, title: t("氷元素集中", "Mono Cryo", "纯冰队"), members: [member("神里綾華", "Kamisato Ayaka", "神里绫华", "主力", "Main DPS", "主C"), member("申鶴", "Shenhe", "申鹤", "氷支援", "Cryo support", "冰系辅助"), member("ロサリア", "Rosaria", "罗莎莉亚", "会心補助", "CRIT support", "暴击辅助"), member("ディオナ", "Diona", "迪奥娜", "耐久", "Sustain", "生存位")], synergy: [t("氷元素粒子と氷共鳴を活かし、元素爆発の循環と会心補助を安定させる。", "Cryo particles and resonance stabilize Burst uptime and CRIT support.", "利用冰元素粒子与双冰共鸣，稳定元素爆发循环和暴击辅助。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 55, 45, 35, "氷共鳴と氷風4セットを使う場合の戦闘外会心率目安。", "Out-of-combat CRIT Rate target when using Cryo Resonance and Blizzard Strayer.", "使用双冰共鸣与冰风套时的战斗外暴击率参考。")], targetSummary: t("会心率補正は戦闘中に発生するため、公開値と混同しない。", "CRIT bonuses occur in combat and should not be confused with the public stat value.", "暴击加成发生在战斗中，不应与公开面板混淆。") }),
+    option("genshin", { id: "ayaka-non-resonance", rank: 3, title: t("非氷共鳴・柔軟枠", "Flexible Non-Resonance", "非双冰灵活队"), members: [member("神里綾華", "Kamisato Ayaka", "神里绫华", "主力", "Main DPS", "主C"), member("フリーナ", "Furina", "芙宁娜", "水支援", "Hydro support", "水系辅助"), member("楓原万葉", "Kaedehara Kazuha", "枫原万叶", "耐性低下", "RES shred", "减抗"), member("閑雲", "Xianyun", "闲云", "回復・支援", "Healing support", "治疗辅助")], synergy: [t("水付着・全体バフ・耐性低下を組み合わせるが、氷共鳴は得ない柔軟な編成。", "Hydro, team buffs, and RES shred offer flexibility, but this team has no Cryo Resonance.", "组合挂水、全队增益与减抗，但不享受双冰共鸣。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 70, 60, 50, "氷共鳴を得ないため、公開プロフィールの会心率目標を15%高く置く。", "Without Cryo Resonance, raise the public CRIT Rate target by 15%.", "没有双冰共鸣时，公开面板暴击率目标提高15%。")], targetSummary: t("氷共鳴なしでは会心率の公開値を追加で確保する。", "Without Cryo Resonance, secure more out-of-combat CRIT Rate.", "没有双冰共鸣时，需要额外堆叠战斗外暴击率。") }),
+  ],
+  "genshin:アルレッキーノ": [
+    option("genshin", { id: "arlecchino-vaporize", rank: 1, title: t("蒸発・高火力", "Vaporize High Damage", "蒸发高伤队"), members: [member("アルレッキーノ", "Arlecchino", "阿蕾奇诺", "主力", "Main DPS", "主C"), member("モナ", "Mona", "莫娜", "水付着・バフ", "Hydro & buffs", "挂水与增益"), member("フィッシュル", "Fischl", "菲谢尔", "副火力", "Sub DPS", "副C"), member("ベネット", "Bennett", "班尼特", "攻撃支援", "ATK support", "攻击辅助")], synergy: [t("水付着に炎を当てる蒸発を軸に、攻撃力バフと控え火力を重ねる。", "Apply Pyro onto Hydro for Vaporize while stacking ATK buffs and off-field damage.", "以火附着水触发蒸发为核心，叠加攻击增益与后台输出。")], targetChanges: [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 220, 160, 100, "蒸発反応を安定して起こす案では、会心・攻撃力に加えて元素熟知を比較対象へ加える。", "For a consistent Vaporize team, add Elemental Mastery to CRIT and ATK checks.", "稳定蒸发队除暴击和攻击外，还应将元素精通纳入比较。")], targetSummary: t("蒸発案では元素熟知が追加目標。元素反応を使わない案とは評価軸が異なる。", "Vaporize adds Elemental Mastery as a target; it uses a different evaluation axis than non-reaction teams.", "蒸发队新增元素精通目标，与非反应队的评价维度不同。") }),
+    option("genshin", { id: "arlecchino-overload", rank: 2, title: t("過負荷・炎雷限定", "Overload Pyro-Electro", "超载火雷队"), members: [member("アルレッキーノ", "Arlecchino", "阿蕾奇诺", "主力", "Main DPS", "主C"), member("シュヴルーズ", "Chevreuse", "夏沃蕾", "耐性低下", "RES shred", "减抗"), member("フィッシュル", "Fischl", "菲谢尔", "副火力", "Sub DPS", "副C"), member("ベネット", "Bennett", "班尼特", "攻撃支援", "ATK support", "攻击辅助")], synergy: [t("炎・雷のみで編成して耐性低下を有効化し、攻撃バフと控え火力を両立する。", "Use only Pyro and Electro to enable RES shred while retaining ATK buffs and off-field damage.", "仅使用火雷角色以启用减抗，同时保留攻击增益与后台输出。")], targetChanges: [], targetSummary: t("会心率・会心ダメージ・攻撃力は基本目標を維持。元素熟知は主比較対象にしない。", "Keep baseline CRIT and ATK targets; Elemental Mastery is not a primary check.", "维持基础暴击与攻击目标；元素精通不是主要比较项。") }),
+    option("genshin", { id: "arlecchino-melt", rank: 3, title: t("溶解・氷付着", "Melt with Cryo", "融化挂冰队"), members: [member("アルレッキーノ", "Arlecchino", "阿蕾奇诺", "主力", "Main DPS", "主C"), member("シトラリ", "Citlali", "茜特菈莉", "氷付着", "Cryo application", "挂冰"), member("ベネット", "Bennett", "班尼特", "攻撃支援", "ATK support", "攻击辅助"), member("楓原万葉", "Kaedehara Kazuha", "枫原万叶", "耐性低下", "RES shred", "减抗")], synergy: [t("控えからの氷付着で溶解を狙い、攻撃バフと炎耐性低下を重ねる。", "Off-field Cryo enables Melt while ATK buffs and Pyro RES shred amplify damage.", "后台挂冰触发融化，并叠加攻击增益与火抗降低。")], targetChanges: [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 220, 160, 100, "溶解の一撃を重視するため、元素熟知を追加目標として扱う。", "Treat Elemental Mastery as an additional target for Melt hits.", "重视融化单次伤害时，将元素精通作为附加目标。")], targetSummary: t("溶解案は元素熟知も不足判定に含める。", "The Melt plan includes Elemental Mastery in its shortage assessment.", "融化方案会将元素精通纳入不足判定。") }),
+  ],
+  "zzz:エレン": [
+    option("zzz", { id: "ellen-ice-core", rank: 1, title: t("氷・ブレイク連携", "Ice Stun Core", "冰系失衡核心队"), members: [member("エレン", "Ellen", "艾莲", "主力", "Main DPS", "主C"), member("ライカン", "Von Lycaon", "莱卡恩", "撃破", "Stun", "击破"), member("蒼角", "Soukaku", "苍角", "氷支援", "Ice support", "冰系辅助")], synergy: [t("ライカンのブレイク支援と蒼角の氷・攻撃支援で、エレンの氷属性直撃火力を伸ばす。", "Lycaon's stun support and Soukaku's Ice and ATK buffs amplify Ellen's Ice damage.", "莱卡恩的失衡辅助与苍角的冰伤、攻击增益提升艾莲的冰属性直伤。")], targetChanges: [], targetSummary: t("会心率・会心ダメージ・攻撃力は公開プロフィールの基本目標を維持する。", "Keep baseline public-profile CRIT and ATK targets.", "维持公开面板的基础暴击与攻击目标。") }),
+    option("zzz", { id: "ellen-premium", rank: 2, title: t("氷・支援強化", "Ice Premium Support", "冰系高配支援队"), members: [member("エレン", "Ellen", "艾莲", "主力", "Main DPS", "主C"), member("ライト", "Lighter", "莱特", "撃破", "Stun", "击破"), member("アストラ", "Astra", "耀嘉音", "支援", "Support", "辅助")], synergy: [t("ブレイク時間と支援バフを重ね、短い火力窓でエレンの直撃ダメージを集中させる。", "Stack stun windows and support buffs to concentrate Ellen's direct damage in burst windows.", "叠加失衡窗口与辅助增益，在短暂爆发期集中艾莲的直伤。")], targetChanges: [], targetSummary: t("戦闘中の攻撃・ダメージ補正は公開値へ加算せず、基本目標で比較する。", "Do not add in-combat ATK and DMG buffs to public stats; compare with baseline targets.", "不将战斗内攻击与伤害增益计入公开面板，按基础目标比较。") }),
+    option("zzz", { id: "ellen-accessible", rank: 3, title: t("氷・入手しやすい案", "Accessible Ice Team", "易获取冰队"), members: [member("エレン", "Ellen", "艾莲", "主力", "Main DPS", "主C"), member("アンビー", "Anby", "安比", "撃破", "Stun", "击破"), member("蒼角", "Soukaku", "苍角", "氷支援", "Ice support", "冰系辅助")], synergy: [t("アンビーでブレイク機会を作り、蒼角の氷支援をエレンへ渡す入手しやすい構成。", "Anby creates stun opportunities while Soukaku passes Ice support to Ellen.", "安比创造失衡机会，苍角向艾莲提供冰系辅助，是易获取的组合。")], targetChanges: [], targetSummary: t("基本目標を維持し、会心率70%以上を起点に会心ダメージと攻撃力を整える。", "Keep baseline targets; start around 70% CRIT Rate and balance CRIT DMG with ATK.", "维持基础目标，以70%以上暴击率为起点平衡暴伤与攻击。") }),
+  ],
+  "zzz:星見雅": [
+    option("zzz", { id: "miyabi-disorder", rank: 1, title: t("混沌・異常連携", "Disorder Anomaly", "紊乱异常联动队"), members: [member("星見雅", "Hoshimi Miyabi", "星见雅", "主力", "Main DPS", "主C"), member("浮波柚葉", "Ukinami Yuzuha", "浮波柚叶", "支援", "Support", "辅助"), member("月城柳", "Tsukishiro Yanagi", "月城柳", "異常", "Anomaly", "异常")], synergy: [t("異常・混沌の発生で落霜を得やすくし、氷異常と火力バフを重ねる。", "Disorder triggers help generate Fallen Frost while stacking Frost Anomaly and damage buffs.", "触发紊乱更容易获得落霜，并叠加霜异常与伤害增益。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 80, 80, 70, "コアスキルによる霜異常蓄積を最大化するため、会心率80%を公開値の目標にする。", "Target 80% public CRIT Rate to maximize Frost Anomaly buildup from the Core Skill.", "为最大化核心技的霜异常积累，公开面板以80%暴击率为目标。")], targetSummary: t("この案では会心率80%が重要。戦闘中の異常・ダメージ補正は別扱い。", "80% CRIT Rate matters in this plan; combat anomaly and damage buffs stay separate.", "此方案80%暴击率很关键；战斗内异常和伤害增益单独处理。") }),
+    option("zzz", { id: "miyabi-f2p", rank: 2, title: t("氷・入手しやすい案", "Accessible Ice Team", "易获取冰队"), members: [member("星見雅", "Hoshimi Miyabi", "星见雅", "主力", "Main DPS", "主C"), member("アンビー", "Anby", "安比", "撃破", "Stun", "击破"), member("蒼角", "Soukaku", "苍角", "氷支援", "Ice support", "冰系辅助")], synergy: [t("アンビーのブレイクと蒼角の氷・攻撃支援で、凍結状態の火力を支える。", "Anby's stun and Soukaku's Ice and ATK support strengthen Frozen-state damage.", "安比的失衡与苍角的冰伤、攻击辅助支撑冻结状态下的输出。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 80, 80, 70, "コアスキルの霜異常蓄積を最大化する会心率目安は維持する。", "Retain the CRIT Rate benchmark that maximizes Core Skill Frost Anomaly buildup.", "维持最大化核心技霜异常积累的暴击率基准。")], targetSummary: t("会心率80%を優先し、会心ダメージと攻撃力は基本目標で比較する。", "Prioritize 80% CRIT Rate; compare CRIT DMG and ATK with baseline targets.", "优先80%暴击率；暴伤与攻击按基础目标比较。") }),
+    option("zzz", { id: "miyabi-generalist", rank: 3, title: t("ブレイク・汎用案", "Generalist Stun Team", "通用失衡队"), members: [member("星見雅", "Hoshimi Miyabi", "星见雅", "主力", "Main DPS", "主C"), member("ライト", "Lighter", "莱特", "撃破", "Stun", "击破"), member("ルーシー", "Lucy", "露西", "支援", "Support", "辅助")], synergy: [t("ブレイクと攻撃支援を重ね、単一の異常連携に依存しない扱いやすい編成。", "Stack stun and ATK support in a flexible team that does not rely on a specific Disorder pairing.", "叠加失衡与攻击辅助，不依赖特定紊乱搭配的易用队伍。")], targetChanges: [change("critRate", "会心率", "CRIT Rate", "暴击率", "%", 80, 80, 70, "星見雅のコアスキルを活かすため、会心率80%を維持する。", "Maintain 80% CRIT Rate to support Miyabi's Core Skill.", "为发挥星见雅核心技，保持80%暴击率。")], targetSummary: t("会心率80%を目標にし、その他は公開プロフィールの基本目標を使う。", "Target 80% CRIT Rate and use baseline public targets for other stats.", "以80%暴击率为目标，其他属性使用公开面板基础目标。") }),
+  ],
+};
+
+type ManualPlan = { members: string[]; synergy: LocalizedText; targetChanges?: PartyTargetChange[] };
+
+const manualMember = (name: string, index: number, selectedRole: LocalizedText): PartyMember => index === 0
+  ? { name: t(name, name, name), role: selectedRole }
+  : member(name, name, name, index === 1 ? "主力・副火力" : index === 2 ? "支援・反応" : "耐久・補助", index === 1 ? "DPS / Sub DPS" : index === 2 ? "Support / Reaction" : "Sustain / utility", index === 1 ? "主C/副C" : index === 2 ? "辅助/反应" : "生存/功能位");
+
+function manualOptions(game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]): PartyRecommendation[] {
+  const planTitles = [t("実戦・高相性", "Curated High Synergy", "实战高协同"), t("実戦・代替編成", "Curated Alternative", "实战替代队"), t("実戦・所持対応", "Curated Roster Option", "实战配队适配")];
+  const profile = genericProfileFor(game, name);
+  return plans.map((plan, index) => {
+    const rank = (index + 1) as 1 | 2 | 3;
+    const recommendation = option(game, {
+      id: `curated-${game}-${name}-${rank}`,
+      rank,
+      title: planTitles[index],
+      members: plan.members.map((partyMember, memberIndex) => manualMember(partyMember, memberIndex, selectedRole)),
+      synergy: [plan.synergy],
+      targetChanges: plan.targetChanges ?? [],
+      targetSummary: t(`${name}の現行エンドコンテンツ向けに手動精査した編成。戦闘中バフは公開プロフィールの現在値へ加算しない。`, `Manually curated for ${name} in the current endgame environment. In-combat buffs are not added to public-profile stats.`, `针对${name}当前终局环境手动精查的配队。战斗内增益不会计入公开面板。`),
+    });
+    return { ...recommendation, sourceLabel: t("手動精査：個別・総合チームガイド", "Manually curated: individual and general team guides", "手动精查：角色与综合配队指南"), sourceUrl };
+  });
+}
+
+const plan = (members: string[], ja: string, en: string, zh: string, targetChanges?: PartyTargetChange[]): ManualPlan => ({ members, synergy: t(ja, en, zh), targetChanges });
+const mainDps = t("主力", "Main DPS", "主C");
+const support = t("支援", "Support", "辅助");
+const anomaly = t("異常", "Anomaly", "异常");
+/** バッチ日付を付与する登録ヘルパー。resetTargetChanges=true のバッチは公開値への補正を持たない。 */
+const datedOptions = (date: string, resetTargetChanges: boolean) =>
+  (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[]) =>
+    manualOptions(game, name, sourceUrl, selectedRole, plans).map((entry) => ({
+      ...entry,
+      dataAsOf: date,
+      updatedAt: date,
+      ...(resetTargetChanges ? { targetChanges: [] } : {}),
+      communitySources: entry.communitySources.map((source) => ({ ...source, checkedAt: date })),
+    }));
+const batch3Options = datedOptions("2026-08-26", false);
+const batch4Options = datedOptions("2026-08-26", false);
+const batch5Options = datedOptions("2026-08-26", false);
+const batch6Options = datedOptions("2026-08-26", false);
+const batch7Options = datedOptions("2026-08-26", false);
+const batch8Options = datedOptions("2026-08-26", false);
+const batch9Options = datedOptions("2026-08-26", false);
+const batch10Options = datedOptions("2026-08-26", false);
+const batch11Options = datedOptions("2026-08-27", false);
+const batch12Options = datedOptions("2026-08-27", true);
+const batch13Options = datedOptions("2026-08-27", true);
+const batch14Options = datedOptions("2026-08-27", true);
+const batch16Options = datedOptions("2026-09-07", true);
+const batch18Options = datedOptions("2026-09-11", true);
+const batch19Options = datedOptions("2026-09-13", true);
+const batch20Options = datedOptions("2026-09-24", true);
+/**
+ * 第21バッチ（Ver.4.6）用。共通データセットの Ver.4.4 表記・4.4編成議論の出典を持ち込まず、
+ * 実際に照合した Game8・GameWith を補助根拠にし、役割は位置ではなく明示する。
+ */
+const batch21Options = (game: PartyGameId, name: string, sourceUrl: string, selectedRole: LocalizedText, plans: readonly ManualPlan[], roles: readonly LocalizedText[][]) =>
+  datedOptions("2026-09-28", true)(game, name, sourceUrl, selectedRole, plans).map((entry, index) => ({
+    ...entry,
+    gameVersion: "4.6",
+    members: entry.members.map((partyMember, memberIndex) => ({ ...partyMember, role: roles[index]![memberIndex] ?? partyMember.role })),
+    communitySources: [
+      { label: t("Game8 パールの遺物と評価・パーティ編成", "Game8 Pearl relic, rating and team guide", "Game8 真珠遗器·评价·配队指南"), url: "https://game8.jp/houkaistarrail/759885", checkedAt: "2026-09-28", note: t("更新日付き（2026-09-28）。実名編成をGameWithと照合。", "Dated 2026-09-28; team names cross-checked against GameWith.", "更新日期2026-09-28；队伍成员已与GameWith核对。"), status: "crossChecked" as const },
+      { label: t("GameWith パールの評価と遺物・光円錐ビルド", "GameWith Pearl rating and build guide", "GameWith 真珠评价·遗器·光锥指南"), url: sourceUrl, checkedAt: "2026-09-28", note: t("更新日付き（2026-09-28）。実名編成をGame8と照合。", "Dated 2026-09-28; team names cross-checked against Game8.", "更新日期2026-09-28；队伍成员已与Game8核对。"), status: "crossChecked" as const },
+    ],
+  }));
+
+/**
+ * 公開使用率・現行エンドコンテンツ・更新日付きチームガイドを照合した上位20の手動精査データ。
+ * 既存の PARTY_CATALOG は代表6名を保持し、この表が同名キーを優先して上書きする。
+ */
+const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]> = {
+  "hsr:アグライア": manualOptions("hsr", "アグライア", "https://game8.co/games/Honkai-Star-Rail/archives/409824", mainDps, [
+    plan(["アグライア", "サンデー", "ロビン", "フォフォ"], "サンデーの行動支援とロビンの全体火力支援で、記憶主力の手数と火力窓を重ねる。", "Sunday's action support and Robin's team buffs stack turns and burst windows for the Remembrance carry.", "星期日的行动辅助与知更鸟的全队增益叠加记忆主C的行动和爆发窗口。"),
+    plan(["アグライア", "サンデー", "トリビー", "アベンチュリン"], "単体火力と耐久を重視する代替案。支援2枠で主力の行動価値を高める。", "A durable single-target alternative that uses two supports to raise the carry's turn value.", "重视单体输出与生存的替代队，以双辅助提高主C的行动价值。"),
+    plan(["アグライア", "開拓者（記憶）", "ロビン", "ギャラガー"], "記憶開拓者を活かし、限定支援の所持状況に対応する実用案。", "A practical roster option built around Remembrance Trailblazer when premium supports vary.", "利用记忆开拓者、适应限定辅助持有情况的实用方案。"),
+  ]),
+  "hsr:アナイクス": manualOptions("hsr", "アナイクス", "https://game8.co/games/Honkai-Star-Rail/archives/409824", mainDps, [
+    plan(["アナイクス", "ロビン", "サンデー", "フォフォ"], "行動支援と全体バフを重ね、知恵主力のスキル・必殺技回転を安定させる。", "Action support and team buffs stabilize the Erudition carry's skill and Ultimate rotation.", "叠加行动辅助和全队增益，稳定智识主C的技能与终结技循环。"),
+    plan(["アナイクス", "トリビー", "ルアン・メェイ", "アベンチュリン"], "範囲火力と弱点撃破補助を両立する、複数敵向けの編成。", "A multi-target setup that combines AoE output with Weakness Break assistance.", "兼顾范围输出和弱点击破辅助的多目标配队。"),
+    plan(["アナイクス", "ペラ", "アスター", "ギャラガー"], "防御低下と速度支援を使う低コスト代替案。", "A lower-cost alternative using DEF shred and SPD support.", "利用减防与速度辅助的低成本替代队。"),
+  ]),
+  "hsr:キャストリス": manualOptions("hsr", "キャストリス", "https://game8.co/games/Honkai-Star-Rail/archives/486305", mainDps, [
+    plan(["キャストリス", "長夜月", "キュレネ", "ヒアンシー"], "記憶・HP消費の相性を最大化し、主力と召喚物の火力を一体で伸ばす。", "Maximizes Remembrance and HP-consumption synergy to raise both carry and memosprite damage.", "最大化记忆与生命消耗协同，同时提高主C和忆灵伤害。"),
+    plan(["キャストリス", "開拓者（記憶）", "トリビー", "霊砂"], "記憶開拓者の行動補助と範囲支援を重ねる実戦代替案。", "A practical alternative that combines Remembrance Trailblazer action support with AoE buffs.", "结合记忆开拓者行动辅助与范围增益的实战替代队。"),
+    plan(["キャストリス", "開拓者（記憶）", "ペラ", "リンクス"], "公式ガイド掲載の低コスト軸。会心・HPを公開値で整え、速度は過度に積まない。", "The guide's accessible core; tune public CRIT and HP without over-investing in SPD.", "指南中的易获取核心；公开面板调整暴击与生命，不宜过度堆速度。"),
+  ]),
+  "hsr:ホタル": PARTY_CATALOG["hsr:ホタル"],
+  "hsr:ロビン": manualOptions("hsr", "ロビン", "https://game8.jp/houkaistarrail/598842", support, [
+    plan(["ロビン", "飛霄", "トパーズ&カブ", "アベンチュリン"], "追加攻撃の頻度を全体支援へ変換し、飛霄の蓄積と決定打を同時に伸ばす。", "Converts Follow-Up frequency into team value while accelerating Feixiao's stacks and finishers.", "将追击频率转化为全队收益，同时加快飞霄叠层与终结爆发。"),
+    plan(["ロビン", "アグライア", "サンデー", "フォフォ"], "行動支援を重ねる記憶主力編成。ロビンは主力でなく全体火力の軸として扱う。", "A Remembrance-carry setup with stacked action support; Robin remains the team-wide damage core.", "叠加行动辅助的记忆主C队，知更鸟作为全队伤害核心。"),
+    plan(["ロビン", "雪衣", "モゼ", "ギャラガー"], "追加攻撃を軸にしつつ、限定主力の所持状況に対応する案。", "An accessible follow-up-oriented option for rosters without the premium carry core.", "以追击为轴、适应未持有高配主C的方案。"),
+  ]),
+  "hsr:ルアン・メェイ": manualOptions("hsr", "ルアン・メェイ", "https://game8.jp/houkaistarrail/573084", support, [
+    plan(["ルアン・メェイ", "ホタル", "帰忘の流離人", "ダリア"], "弱点撃破効率・耐性貫通・超撃破を重ねる現行の完成形。", "A current premium Super Break core stacking Break Efficiency, RES PEN, and Super Break.", "叠加击破效率、减抗与超击破的当前高配核心队。"),
+    plan(["ルアン・メェイ", "乱破", "帰忘の流離人", "霊砂"], "範囲型の超撃破主力を、撃破効率と耐久で支える案。", "An AoE Super Break option that supports the carry with Break Efficiency and sustain.", "以击破效率与生存辅助范围超击破主C的方案。"),
+    plan(["ルアン・メェイ", "カフカ", "セイレンス", "フォフォ"], "撃破以外の持続ダメージ主力でも全体支援を活かす案。", "A DoT option that uses her team support outside Break-centered teams.", "在非击破的持续伤害队中发挥全队辅助价值的方案。"),
+  ]),
+  "hsr:飛霄": manualOptions("hsr", "飛霄", "https://game8.jp/houkaistarrail/625602", mainDps, [
+    plan(["飛霄", "サフェル", "サンデー", "丹恒・騰荒"], "行動回数と追加攻撃を重ね、飛黄の蓄積と必殺技の決定打を伸ばす現行主力案。", "A current premium core stacking actions and follow-ups for Flying Aureus buildup and Ultimate finishers.", "叠加行动与追击、提高飞黄积累和终结爆发的当前高配方案。"),
+    plan(["飛霄", "サフェル", "トリビー", "丹恒・騰荒"], "追加攻撃頻度と範囲対応を両立する実戦代替案。", "A practical alternative balancing follow-up frequency and multi-target coverage.", "兼顾追击频率和范围应对的实战替代方案。"),
+    plan(["飛霄", "三月なのか（巡狩）", "開拓者（記憶）", "ナターシャ"], "巡狩連携の行動回数を活かす所持対応案。", "A roster-friendly option that uses Hunt synergy for more actions.", "利用巡猎联动增加行动次数的持有适配方案。"),
+  ]),
+
+  "genshin:フリーナ": manualOptions("genshin", "フリーナ", "https://game8.co/games/Genshin-Impact/archives/301819", support, [
+    plan(["フリーナ", "ヌヴィレット", "楓原万葉", "シロネン"], "HP変動を活かす主力と耐性低下・回復支援を組み、全体バフの稼働を安定させる。", "Pairs an HP-fluctuation carry with RES shred and healing support to stabilize team buffs.", "搭配生命波动主C与减抗、治疗辅助，稳定全队增益。"),
+    plan(["フリーナ", "アルレッキーノ", "シロネン", "ベネット"], "炎主力の直接火力と全体バフを組み合わせる高火力軸。", "A high-damage core combining a Pyro carry's direct output with team buffs.", "结合火系主C直伤与全队增益的高伤核心队。"),
+    plan(["フリーナ", "胡桃", "閑雲", "夜蘭"], "HP変動と蒸発を両立する代替案。元素爆発を回すための元素チャージ効率を優先する。", "A Vaporize alternative built around HP fluctuation; prioritize ER to maintain Bursts.", "兼顾生命波动与蒸发的替代队，优先元素充能以维持爆发。"),
+  ]),
+  "genshin:シロネン": manualOptions("genshin", "シロネン", "https://game8.co/games/Genshin-Impact/archives/301819", support, [
+    plan(["シロネン", "ヌヴィレット", "フリーナ", "楓原万葉"], "耐性低下・回復・バフを水主力へ集中させる現行の高採用軸。", "A high-adoption current core focusing RES shred, healing, and buffs on a Hydro carry.", "将减抗、治疗与增益集中给水系主C的高使用核心队。"),
+    plan(["シロネン", "アルレッキーノ", "夜蘭", "ベネット"], "蒸発補助と攻撃支援を組み合わせ、炎主力の安定した火力窓を作る。", "Combines Vaporize enabling and ATK support for reliable Pyro carry damage windows.", "组合蒸发辅助与攻击增益，为火系主C创造稳定输出窗口。"),
+    plan(["シロネン", "ナヴィア", "フリーナ", "ベネット"], "結晶反応を利用する岩主力向けの実戦代替。", "A practical alternative for a Geo carry that leverages Crystallize.", "利用结晶反应的岩系主C实战替代队。"),
+  ]),
+  "genshin:楓原万葉": manualOptions("genshin", "楓原万葉", "https://game8.co/games/Genshin-Impact/archives/332826", support, [
+    plan(["楓原万葉", "ヌヴィレット", "フリーナ", "シロネン"], "拡散による耐性低下と元素ダメージ支援をHP変動主力へ合わせる。", "Matches Swirl RES shred and elemental support to an HP-fluctuation carry.", "将扩散减抗与元素增益配合生命波动主C。"),
+    plan(["楓原万葉", "アルレッキーノ", "シトラリ", "ベネット"], "炎耐性低下と溶解補助を組み、短時間火力を高める。", "Combines Pyro RES shred and Melt enabling for stronger short damage windows.", "结合火抗降低与融化辅助，提高短时间爆发。"),
+    plan(["楓原万葉", "マーヴィカ", "シロネン", "ベネット"], "元素ダメージ支援を主力へ集約する代替案。", "An alternative that concentrates elemental damage support on the carry.", "将元素伤害增益集中给主C的替代队。"),
+  ]),
+  "genshin:ベネット": manualOptions("genshin", "ベネット", "https://game8.co/games/Genshin-Impact/archives/301819", support, [
+    plan(["ベネット", "アルレッキーノ", "夜蘭", "シロネン"], "攻撃バフ・水付着・耐性低下で蒸発主力の実戦火力を伸ばす。", "ATK buffs, Hydro application, and RES shred raise a Vaporize carry's practical damage.", "攻击增益、挂水与减抗提高蒸发主C的实战伤害。"),
+    plan(["ベネット", "マーヴィカ", "楓原万葉", "シロネン"], "炎主力の元素ダメージと攻撃力を同時に伸ばす軸。", "A Pyro core that raises both elemental damage and ATK.", "同时提高火系主C元素伤害与攻击的核心队。"),
+    plan(["ベネット", "ナヴィア", "フリーナ", "シロネン"], "攻撃力を参照する岩主力の火力窓を補助する代替案。", "An alternative that supports an ATK-scaling Geo carry's damage window.", "辅助攻击力收益岩系主C输出窗口的替代队。"),
+  ]),
+  "genshin:アルレッキーノ": manualOptions("genshin", "アルレッキーノ", "https://game8.jp/genshin/605945", mainDps, [
+    plan(["アルレッキーノ", "ベネット", "シロネン", "シトラリ"], "氷付着・耐性低下・攻撃支援を重ね、一撃の溶解を重視する現行主力案。", "A current premium Melt team stacking Cryo application, RES shred, and ATK support for larger hits.", "叠加挂冰、减抗与攻击增益、重视单次融化伤害的当前高配方案。", [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 220, 160, 100, "溶解反応を主軸にするため、元素熟知を追加の比較対象として扱う。", "Melt is the core reaction, so include Elemental Mastery as an additional comparison stat.", "以融化反应为核心，因此将元素精通纳入额外比较属性。")]),
+    plan(["アルレッキーノ", "ベネット", "夜蘭", "シロネン"], "水付着を安定させ、蒸発・攻撃支援・耐性低下を両立する案。", "A Vaporize option with stable Hydro application, ATK support, and RES shred.", "兼顾稳定挂水、蒸发、攻击增益与减抗的方案。", [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 220, 160, 100, "蒸発反応を主軸にするため、元素熟知を追加の比較対象として扱う。", "Vaporize is the core reaction, so include Elemental Mastery as an additional comparison stat.", "以蒸发反应为核心，因此将元素精通纳入额外比较属性。")]),
+    plan(["アルレッキーノ", "シュヴルーズ", "フィッシュル", "ベネット"], "炎・雷限定で耐性低下を活かす過負荷代替。", "An Overload alternative using a Pyro-Electro-only RES-shred core.", "利用火雷限定减抗核心的超载替代队。"),
+  ]),
+  "genshin:ヌヴィレット": manualOptions("genshin", "ヌヴィレット", "https://game8.jp/genshin/353144", mainDps, [
+    plan(["ヌヴィレット", "コロンビーナ", "イネファ", "シロネン"], "月感電と中断対策を両立し、固有天賦の反応条件も満たす現行案。", "A current Lunar-Charged option that provides interruption resistance and fulfills reaction conditions for his passive.", "兼顾月感电与抗打断，并满足固有天赋反应条件的当前方案。"),
+    plan(["ヌヴィレット", "フリーナ", "シロネン", "楓原万葉"], "水共鳴、HP変動、耐性低下を重ねる高相性の水主体案。", "A high-synergy Hydro core stacking Hydro Resonance, HP fluctuation, and RES shred.", "叠加水元素共鸣、生命波动与减抗的高协同水系核心队。"),
+    plan(["ヌヴィレット", "マーヴィカ", "シロネン", "シトラリ"], "蒸発と複数反応を用いて、無凸でも固有天賦条件を満たしやすくする案。", "A Vaporize option using multiple reactions to more easily fulfill his passive at C0.", "利用蒸发与多种反应、让零命更容易满足固有天赋条件的方案。"),
+  ]),
+  "genshin:夜蘭": manualOptions("genshin", "夜蘭", "https://game8.jp/genshin/558856", support, [
+    plan(["夜蘭", "胡桃", "行秋", "鍾離"], "水付着を厚くし、蒸発主力の通常攻撃連動と耐久を両立する定番軸。", "A classic core with dense Hydro application, Normal Attack synergy, and sustain for a Vaporize carry.", "兼顾高频挂水、普攻联动与生存的经典蒸发核心队。"),
+    plan(["珊瑚宮心海", "夜蘭", "フリーナ", "楓原万葉"], "回復・水共鳴・全体バフを重ねる水主体の個別相性案。", "A Hydro-focused option that combines healing, Hydro Resonance, and team buffs.", "组合治疗、水元素共鸣与全队增益的水系高协同方案。"),
+    plan(["夜蘭", "ナヒーダ", "ニィロウ", "白朮"], "豊穣開花の水付着と回復を支える開花案。", "A Bloom option that supplies Hydro application and sustain for Nilou's Bountiful Cores.", "为妮露绽放提供挂水与生存支持的绽放方案。"),
+  ]),
+
+  "zzz:星見雅": PARTY_CATALOG["zzz:星見雅"],
+  "zzz:浮波柚葉": manualOptions("zzz", "浮波柚葉", "https://game8.co/games/Zenless-Zone-Zero/archives/458656", support, [
+    plan(["浮波柚葉", "星見雅", "月城柳"], "異常・混沌の発生を支援し、星見雅の落霜蓄積と主力火力を補助する。", "Supports Anomaly and Disorder triggers to help Miyabi's Fallen Frost stacks and carry damage.", "辅助异常与紊乱触发，帮助星见雅积累落霜并提高主C伤害。"),
+    plan(["浮波柚葉", "星見雅", "蒼角"], "月城柳不在時に氷支援へ置き換える実用案。", "A practical Ice-support alternative when Yanagi is unavailable.", "月城柳不在时替换为冰系辅助的实用方案。"),
+    plan(["浮波柚葉", "アリス", "ビビアン"], "異常2枠を活かして混沌と控え火力を両立する代替。", "An alternative that uses two Anomaly slots for Disorder and off-field damage.", "利用双异常位兼顾紊乱与后台输出的替代队。"),
+  ]),
+  "zzz:月城柳": manualOptions("zzz", "月城柳", "https://game8.co/games/Zenless-Zone-Zero/archives/474448", anomaly, [
+    plan(["月城柳", "星見雅", "浮波柚葉"], "星見雅の異常蓄積を助けつつ、月城柳側の異常・混沌ダメージも活かす完成形。", "A premium Disorder core that helps Miyabi's buildup while enabling Yanagi's own Anomaly damage.", "协助星见雅积累异常，同时发挥月城柳自身异常伤害的完成队。"),
+    plan(["月城柳", "ビビアン", "アストラ"], "柳を表に出し、異常付与とクイック支援で混沌を回す案。", "An on-field Yanagi option that rotates Disorder through Anomaly application and Quick Assist support.", "以柳站场、通过异常附着与快速支援循环紊乱的方案。"),
+    plan(["月城柳", "セス", "リナ"], "電気編成で防護と貫通率支援を組み合わせる所持対応案。", "A roster-friendly Electric option combining Defense and PEN support.", "结合防护与穿透辅助的电气队持有适配方案。"),
+  ]),
+  "zzz:アストラ": manualOptions("zzz", "アストラ", "https://game8.co/games/Zenless-Zone-Zero/archives/490842", support, [
+    plan(["アストラ", "イヴリン", "ライト"], "ライトのブレイクと炎支援、アストラの火力バフをイヴリンの短時間火力へ集中する。", "Lighter's stun and Fire support plus Astra's buffs concentrate Evelyn's short burst window.", "莱特的失衡与火系辅助、耀嘉音的增益集中强化伊芙琳的短爆发窗口。"),
+    plan(["アストラ", "星見雅", "月城柳"], "全体ダメージ支援と異常連鎖を組み合わせる異常編成。", "An Anomaly composition combining team damage support with Disorder chains.", "结合全队伤害辅助与紊乱连锁的异常队。"),
+    plan(["アストラ", "0号・アンビー", "「トリガー」"], "控えブレイクと電気主力の切替をクイック支援で支える案。", "An Electric option that supports off-field stun and carry swaps through Quick Assist.", "通过快速支援辅助后台失衡与电气主C切换的方案。"),
+  ]),
+  "zzz:ライト": manualOptions("zzz", "ライト", "https://game8.co/games/Zenless-Zone-Zero/archives/474509", t("撃破", "Stun", "击破"), [
+    plan(["ライト", "イヴリン", "アストラ"], "炎主力の火力窓をブレイクと支援で伸ばす、個別ガイドの高相性軸。", "The individual guide's high-synergy core for extending a Fire carry's damage window with stun and buffs.", "个别指南推荐的高协同核心，以失衡与增益延长火系主C输出窗口。"),
+    plan(["ライト", "エレン", "蒼角"], "氷耐性低下と氷支援を重ね、エレンのブレイク火力を伸ばす案。", "An Ice option stacking Ice RES shred and Ice support for Ellen's stun-window damage.", "叠加冰抗降低与冰系辅助、提升艾莲失衡窗口伤害的方案。"),
+    plan(["ライト", "星見雅", "ルーシー"], "炎・氷系の異常ダメージと攻撃支援を両立する代替案。", "An alternative combining Fire/Ice-oriented Anomaly damage with ATK support.", "兼顾炎冰系异常伤害与攻击增益的替代方案。"),
+  ]),
+  "zzz:レミエール": manualOptions("zzz", "レミエール", "https://game8.co/games/Zenless-Zone-Zero/archives/588854", anomaly, [
+    plan(["レミエール", "ヴェリナ", "プロメイア"], "異常3名で昇華・耀変・全体攻撃力バフを最大化する現行主力案。", "A current premium three-Anomaly core maximizing Refringe, Luminize, and team ATK buffs.", "以三异常最大化昇华、耀变与全队攻击增益的当前高配方案。"),
+    plan(["レミエール", "ヴェリナ", "ジェーン"], "物理異常の高速蓄積で昇華を回す案。", "An option that uses rapid Physical Anomaly buildup to cycle Refringe.", "利用高速物理异常积累循环昇华的方案。"),
+    plan(["レミエール", "パイパー", "グレース"], "異常3名を維持する所持対応の代替案。", "A roster-friendly alternative that retains the three-Anomaly condition.", "保持三异常条件的持有适配替代方案。"),
+  ]),
+
+  "hsr:サンデー": batch3Options("hsr", "サンデー", "https://game8.co/games/Honkai-Star-Rail/archives/437272", support, [
+    plan(["サンデー", "アグライア", "ロビン", "フォフォ"], "アグライアと召喚物の行動をサンデーで補助し、ロビンの全体火力支援と耐久を重ねる。", "Sunday advances Aglaea and her summon while Robin supplies team damage and Huohuo sustains the core.", "星期日拉条阿格莱雅及其召唤物，知更鸟提供全队增益，藿藿维持生存。"),
+    plan(["サンデー", "丹恒・飲月", "花火", "フォフォ"], "単体ハイパーキャリーで行動順操作とSP供給を組み、主力より1低い速度設計を活かす。", "A hypercarry core that combines action control and Skill Point supply while using the carry-minus-one SPD setup.", "单核队结合行动控制与战技点供给，利用比主C低1点速度的配速。"),
+    plan(["サンデー", "姫子", "ジェイド", "霊砂"], "姫子・ジェイドの2アタッカー連携に行動支援と撃破寄り耐久を添える。", "Pairs Sunday’s action support with the Himeko–Jade dual-DPS core and break-oriented sustain.", "以星期日的行动辅助搭配姬子、翡翠双输出与击破向生存位。"),
+  ]),
+  "hsr:ブートヒル": batch3Options("hsr", "ブートヒル", "https://game8.co/games/Honkai-Star-Rail/archives/Boothill-Best-Builds", mainDps, [
+    plan(["ブートヒル", "サンデー", "ルアン・メェイ", "霊砂"], "行動補助・弱点撃破効率・撃破回復を重ね、決闘と物理撃破を安定させる。", "Action support, Break Efficiency, and break sustain stabilize Boothill’s duels and Physical Breaks.", "叠加行动辅助、击破效率与击破生存，稳定波提欧的决斗与物理击破。"),
+    plan(["ブートヒル", "帰忘の流離人", "ダリア", "霊砂"], "超撃破と撃破支援を組み、弱点撃破後の追撃価値を高める。", "Combines Super Break and break support to raise payoff after Weakness Breaks.", "结合超击破与击破辅助，提高弱点击破后的收益。"),
+    plan(["ブートヒル", "開拓者（調和）", "アスター", "ナターシャ"], "調和開拓者の超撃破と速度支援を使う、所持対応の撃破編成。", "A roster-friendly Break team using Harmony Trailblazer’s Super Break and Asta’s SPD support.", "使用同谐开拓者超击破与艾丝妲速度辅助的持有适配击破队。"),
+  ]),
+  "hsr:黄泉": batch3Options("hsr", "黄泉", "https://game8.co/games/Honkai-Star-Rail/archives/436053", mainDps, [
+    plan(["黄泉", "椒丘", "ペラ", "フォフォ"], "E0/E1では虚無2名を配置し、デバフ頻度で必殺技の残夢蓄積を支える。", "For E0/E1, two Nihility allies supply frequent debuffs and support Slashed Dream stacks.", "E0/E1使用两名虚无角色，以高频减益辅助残梦积累。"),
+    plan(["黄泉", "千冶・刃", "サフェル", "アベンチュリン"], "虚無2名の追加能力条件を満たしつつ、デバフと耐久を両立する代替案。", "An alternative that preserves the two-Nihility passive requirement while balancing debuffs and sustain.", "在满足双虚无额外能力条件的同时兼顾减益与生存的替代方案。"),
+    plan(["黄泉", "椒丘", "花火", "アベンチュリン"], "E2限定で虚無1名と調和1名を採用し、行動加速を必殺技回転へ変換する。", "E2-only: uses one Nihility and one Harmony unit, converting action advance into Ultimate cycling.", "仅限E2：采用一名虚无与一名同谐，将拉条转化为终结技循环。"),
+  ]),
+  "hsr:霊砂": batch3Options("hsr", "霊砂", "https://game8.co/games/Honkai-Star-Rail/archives/462279", t("耐久", "Sustain", "生存位"), [
+    plan(["霊砂", "ホタル", "帰忘の流離人", "ダリア"], "超撃破の撃破機会と霊砂の回復・追加攻撃を重ねる完成形。", "A premium Super Break core that layers break opportunities with Lingsha’s healing and follow-ups.", "超击破高配队叠加击破机会与灵砂的治疗、追加攻击。"),
+    plan(["霊砂", "マダム・ヘルタ", "アナイクス", "トリビー"], "知恵の範囲火力へ回復・追加攻撃を添える非撃破の実戦案。", "A non-Break practical team that adds healing and follow-ups to an Erudition AoE core.", "为智识范围输出核心补充治疗与追加攻击的非击破实战队。"),
+    plan(["霊砂", "三月なのか（巡狩）", "開拓者（調和）", "ルアン・メェイ"], "撃破支援と超撃破を組み、霊砂自身の撃破特効運用を活かす案。", "Combines Break support and Super Break to use Lingsha’s own Break Effect build.", "结合击破辅助与超击破，发挥灵砂自身击破特攻配装。"),
+  ]),
+  "genshin:雷電将軍": batch3Options("genshin", "雷電将軍", "https://game8.co/games/Genshin-Impact/archives/337161", mainDps, [
+    plan(["雷電将軍", "行秋", "香菱", "ベネット"], "高コスト元素爆発の循環を雷電の回復で支える雷電ナショナル。", "Raiden National uses her Energy restoration to sustain the team’s high-cost Bursts.", "雷电国家队利用雷电的回能维持队伍高能量终结技循环。"),
+    plan(["雷電将軍", "楓原万葉", "九条裟羅", "ベネット"], "雷元素ダメージ・攻撃力・会心支援を重ねる高投資ハイパーキャリー。", "A high-investment hypercarry stacking Electro DMG, ATK, and CRIT support.", "叠加雷伤、攻击与暴击辅助的高投入单核队。"),
+    plan(["雷電将軍", "ナヒーダ", "夜蘭", "白朮"], "超開花のトリガーとして運用し、元素熟知1,000前後の別ビルドを選ぶ。", "Uses Raiden as a Hyperbloom trigger with the separate ~1,000 Elemental Mastery build.", "作为超绽放触发器使用，选择约1000元素精通的独立配装。", [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 1100, 1000, 800, "超開花型は元素爆発DPSの会心・攻撃力・元素チャージではなく元素熟知を比較する。", "Hyperbloom compares Elemental Mastery rather than the Burst DPS CRIT, ATK, and ER package.", "超绽放比较元素精通，而非元素爆发输出的暴击、攻击与充能组合。")]),
+  ]),
+  "genshin:ナヒーダ": batch3Options("genshin", "ナヒーダ", "https://game8.co/games/Genshin-Impact/archives/Nahida-Best-Builds", support, [
+    plan(["ナヒーダ", "ラウマ", "ニィロウ", "珊瑚宮心海"], "深林4セットの草付着と元素熟知支援で、豊穣開花の反応密度を支える。", "Deepwood Dendro application and Elemental Mastery support sustain dense Bountiful Core reactions.", "以深林套草附着和元素精通辅助维持丰穰之核的高反应密度。"),
+    plan(["ナヒーダ", "アルハイゼン", "夜蘭", "久岐忍"], "高頻度の草・水・雷付着で超開花を回し、控えからも草元素を維持する。", "Frequent Dendro, Hydro, and Electro application sustains Hyperbloom while Nahida applies Dendro off-field.", "高频草、水、雷附着维持超绽放，纳西妲在后台持续挂草。"),
+    plan(["ナヒーダ", "アルハイゼン", "八重神子", "鍾離"], "草激化・激化の火力を、草付着・雷副火力・中断耐性で安定させる。", "Stabilizes Spread/Aggravate with Dendro application, Electro sub-DPS, and interruption resistance.", "以草附着、雷系副输出与抗打断稳定蔓激化和超激化。"),
+  ]),
+  "genshin:鍾離": batch3Options("genshin", "鍾離", "https://game8.co/games/Genshin-Impact/archives/305858", t("耐久", "Sustain", "生存位"), [
+    plan(["鍾離", "ヌヴィレット", "フリーナ", "シャルロット"], "護盾・耐性低下で重撃主力の中断を抑え、フリーナのHP変動編成を安定させる。", "Shielding and RES shred protect a Charged Attack carry while stabilizing Furina’s HP-fluctuation team.", "护盾和减抗保护重击主C，并稳定芙宁娜生命波动队。"),
+    plan(["鍾離", "荒瀧一斗", "アルベド", "ゴロー"], "岩共鳴と岩粒子を活かし、耐久と岩主力の継続火力を両立する。", "Uses Geo Resonance and Geo particles to combine sustain with a Geo carry’s sustained output.", "利用岩元素共鸣与岩元素微粒，兼顾生存和岩系主C持续输出。"),
+    plan(["鍾離", "胡桃", "行秋", "夜蘭"], "護盾で中断を防ぎ、水付着を厚くして蒸発主力の攻撃時間を守る。", "The shield prevents interruption while double Hydro supports Vaporize carry uptime.", "护盾防止打断，双水保证蒸发主C的输出时间。"),
+  ]),
+  "zzz:ビビアン": batch3Options("zzz", "ビビアン", "https://game8.jp/zenless/673769", anomaly, [
+    plan(["ビビアン", "月城柳", "浮波柚葉"], "エーテル・電気の異常と混沌を重ね、柚葉の異常支援で侵蝕を活かす。", "Layers Ether and Electric Anomaly/Disorder while Yuzuha supports Anomaly buildup and Corruption.", "叠加以太和电气异常、紊乱，并以柚叶辅助异常积累与侵蚀。"),
+    plan(["ビビアン", "アリス", "浮波柚葉"], "異常2枠と支援で混沌の回数を確保する代替編成。", "An alternative with two Anomaly agents and support to sustain Disorder frequency.", "以双异常角色和辅助维持紊乱频率的替代队。"),
+    plan(["ビビアン", "パイパー", "ルーシー"], "物理異常と攻撃支援を組み、限定支援不在時にも混沌を回す所持対応案。", "Pairs Physical Anomaly with ATK support for a roster-friendly Disorder option.", "组合物理异常与攻击辅助，适合缺少限定辅助时的持有适配紊乱队。"),
+  ]),
+  "zzz:ジェーン": batch3Options("zzz", "ジェーン", "https://game8.jp/zenless/625565", anomaly, [
+    plan(["ジェーン", "セス", "浮波柚葉"], "防護と異常支援で強撃の蓄積・会心・生存を支える物理異常軸。", "Defense and Anomaly support stabilize Assault buildup, crit behavior, and sustain for the Physical Anomaly core.", "防护与异常辅助稳定物理异常核心的强击积累、会心与生存。"),
+    plan(["ジェーン", "レミエール", "ヴェリナ"], "異常3人編成の相乗を活かし、複数の状態異常で混沌を回す案。", "Uses three-Anomaly synergy and multiple statuses to cycle Disorder.", "利用三异常协同与多种异常状态循环紊乱。"),
+    plan(["ジェーン", "セス", "ルーシー"], "防護と攻撃支援を使う所持対応の物理異常編成。", "A roster-friendly Physical Anomaly team with Defense and ATK support.", "结合防护与攻击辅助的持有适配物理异常队。"),
+  ]),
+  "zzz:エレン": batch3Options("zzz", "エレン", "https://game8.jp/zenless/607800", mainDps, [
+    plan(["エレン", "ダイアリン", "千夏"], "ブレイクと氷支援を重ね、エレンの急凍を火力窓へ変える現行高難度案。", "A current endgame core that layers stun and Ice support to convert Flash Freeze into damage windows.", "当前高难度核心队叠加失衡和冰系辅助，将急冻转化为输出窗口。"),
+    plan(["エレン", "シーザー", "ライト"], "耐久支援と氷耐性低下・ブレイク延長を組み、短時間の直撃火力を伸ばす。", "Combines defensive support with Ice RES shred and extended stun windows for burst damage.", "结合防护辅助、冰抗降低与延长失衡窗口，提高短爆发直伤。"),
+    plan(["エレン", "蒼角", "ルーシー"], "氷・攻撃力支援を使う入手しやすい代替案。", "An accessible alternative using Ice and ATK support.", "使用冰系与攻击辅助的易获取替代方案。"),
+  ]),
+  "hsr:アベンチュリン": batch4Options("hsr", "アベンチュリン", "https://game8.co/games/Honkai-Star-Rail/archives/429966", t("耐久", "Sustain", "生存位"), [
+    plan(["アベンチュリン", "飛霄", "サフェル", "ロビン"], "追加攻撃の頻度を耐久・会心支援へつなげ、飛霄の蓄積と決定打を安定させる。", "Connects follow-up frequency to sustain and CRIT support, stabilizing Feixiao’s stack building and finisher.", "将追击频率转化为生存与暴击辅助，稳定飞霄的叠层与终结爆发。"),
+    plan(["アベンチュリン", "Dr.レイシオ", "トパーズ&カブ", "ロビン"], "デバフと追加攻撃を連鎖させ、単体主力の追撃回数を伸ばす。", "Chains debuffs and follow-ups to increase a single-target carry’s follow-up frequency.", "串联减益与追击，提高单体主C的追击频率。"),
+    plan(["アベンチュリン", "黄泉", "椒丘", "サフェル"], "耐久枠のデバフも残夢蓄積に活かす虚無軸。", "A Nihility core that also turns the sustain slot’s debuffs into Slashed Dream stacks.", "将生存位减益也用于残梦积累的虚无核心队。"),
+  ]),
+  "hsr:トパーズ&カブ": batch4Options("hsr", "トパーズ&カブ", "https://game8.co/games/Honkai-Star-Rail/archives/421778", mainDps, [
+    plan(["トパーズ&カブ", "飛霄", "ロビン", "アベンチュリン"], "頻繁な追加攻撃を相互に増やし、飛霄の飛黄とカブの行動を循環させる。", "Mutual frequent follow-ups cycle Feixiao’s Flying Aureus and Numby’s turns.", "以高频互相追击循环飞霄的飞黄与账账行动。"),
+    plan(["トパーズ&カブ", "Dr.レイシオ", "銀狼", "羅刹"], "単体デバフと追加攻撃を重ね、レイシオとカブの追撃条件を満たす。", "Stacks single-target debuffs and follow-ups to meet Dr. Ratio and Numby follow-up conditions.", "叠加单体减益与追击，满足真理医生和账账的追击条件。"),
+    plan(["トパーズ&カブ", "姫子", "銀狼", "符玄"], "炎・量子の火力軸に単体追撃を加える所持対応案。", "A roster-friendly Fire/Quantum damage core with a single-target follow-up slot.", "为火量输出核心加入单体追击位的持有适配方案。"),
+  ]),
+  "hsr:花火": batch4Options("hsr", "花火", "https://game8.co/games/Honkai-Star-Rail/archives/Sparkle-Best-Builds", support, [
+    plan(["花火", "丹恒・飲月", "停雲", "羅刹"], "SP供給と行動順操作を重ね、強化通常攻撃を継続するハイパーキャリー。", "Stacks Skill Point supply and action control to sustain enhanced Basic Attacks in hypercarry play.", "叠加战技点供给与行动控制，维持强化普攻的单核队。"),
+    plan(["花火", "アーチャー", "サフェル", "ギャラガー"], "会心支援と行動順操作を単体主力へ集約する代替案。", "An alternative concentrating CRIT support and action control on a single-target carry.", "将暴击辅助与行动控制集中给单体主C的替代方案。"),
+    plan(["花火", "黄泉", "椒丘", "アベンチュリン"], "黄泉E2限定で虚無1名と調和1名を採用し、行動加速を必殺技回転へ変える。", "E2 Acheron only: uses one Nihility and one Harmony unit to turn action advance into Ultimate cycling.", "仅限E2黄泉：采用一名虚无与一名同谐，将拉条转化为终结技循环。"),
+  ]),
+  "hsr:丹恒・飲月": batch4Options("hsr", "丹恒・飲月", "https://game8.co/games/Honkai-Star-Rail/archives/417235", mainDps, [
+    plan(["丹恒・飲月", "花火", "停雲", "アベンチュリン"], "SP供給・行動順操作・耐久を組み、強化通常攻撃の3SP消費を安定させる。", "Combines Skill Point supply, action control, and sustain to stabilize 3-SP enhanced Basic Attacks.", "组合战技点供给、行动控制与生存，稳定三战技点强化普攻。"),
+    plan(["丹恒・飲月", "花火", "銀狼", "羅刹"], "虚数寄りのデバフとSP供給を組み合わせる単体戦向け案。", "A single-target option combining Imaginary-oriented debuffs and Skill Point supply.", "结合虚数向减益与战技点供给的单体战方案。"),
+    plan(["丹恒・飲月", "ロビン", "サンデー", "アベンチュリン"], "SP収支を確認しつつ、行動支援を強化通常攻撃の回数へ変換する編成。", "A setup that monitors Skill Point economy while converting action support into more enhanced Basic Attacks.", "在关注战技点收支的同时，将行动辅助转化为更多强化普攻。"),
+  ]),
+  "genshin:アルハイゼン": batch4Options("genshin", "アルハイゼン", "https://game8.co/games/Genshin-Impact/archives/383712", mainDps, [
+    plan(["アルハイゼン", "ナヒーダ", "夜蘭", "久岐忍"], "草・水・雷の高頻度付着で超開花を回し、鏡の投影攻撃を反応へつなげる。", "Frequent Dendro, Hydro, and Electro application sustains Hyperbloom and converts mirror projections into reaction damage.", "高频草、水、雷附着维持超绽放，将琢光镜投影转化为反应伤害。"),
+    plan(["アルハイゼン", "ナヒーダ", "八重神子", "鍾離"], "草激化・超激化の火力を草付着・雷副火力・耐性低下で安定させる。", "Stabilizes Spread/Aggravate with Dendro application, Electro sub-DPS, and RES shred.", "以草附着、雷系副输出与减抗稳定蔓激化和超激化。"),
+    plan(["アルハイゼン", "フィッシュル", "フリーナ", "白朮"], "フリーナのHP変動と草激化を組み合わせる所持対応の火力案。", "A roster option combining Furina’s HP fluctuation with Spread/Aggravate.", "组合芙宁娜生命波动与激化的持有适配输出方案。"),
+  ]),
+  "genshin:胡桃": batch4Options("genshin", "胡桃", "https://game8.co/games/Genshin-Impact/archives/314347", mainDps, [
+    plan(["胡桃", "フリーナ", "夜蘭", "閑雲"], "HP変動・水付着・落下蒸発を重ね、重撃以外の高火力窓も作る。", "Stacks HP fluctuation, Hydro application, and plunging Vaporize for additional high-damage windows.", "叠加生命波动、挂水与下落蒸发，创造重击以外的高伤窗口。"),
+    plan(["胡桃", "行秋", "夜蘭", "鍾離"], "二重水の安定した水付着と護盾で、蒸発重撃の中断を抑える定番軸。", "A classic core using double Hydro application and a shield to protect Vaporize Charged Attacks.", "以双水稳定挂水和护盾保护蒸发重击的经典核心队。"),
+    plan(["胡桃", "行秋", "ロサリア", "シトラリ"], "蒸発と溶解の反応機会を組み、会心と元素熟知を活かす代替案。", "An alternative combining Vaporize and Melt opportunities to use CRIT and Elemental Mastery.", "结合蒸发与融化机会，发挥暴击和元素精通的替代方案。"),
+  ]),
+  "genshin:久岐忍": batch4Options("genshin", "久岐忍", "https://game8.co/games/Genshin-Impact/archives/346199", support, [
+    plan(["久岐忍", "アルハイゼン", "夜蘭", "ナヒーダ"], "雷草の輪で超開花を起こし、回復と持続雷付着を同時に担う。", "The Sanctifying Ring triggers Hyperbloom while providing healing and sustained Electro application.", "草轮同时触发超绽放、治疗与持续雷附着。"),
+    plan(["久岐忍", "ナヒーダ", "行秋", "夜蘭"], "二重水の種生成を超開花へ変換する実戦的な反応軸。", "A practical reaction core that converts double-Hydro seed generation into Hyperbloom.", "将双水产种转化为超绽放的实战反应核心。"),
+    plan(["久岐忍", "アルハイゼン", "八重神子", "ナヒーダ"], "回復を確保しながら草激化・超激化を回す支援型案。", "A support-oriented option that sustains Spread/Aggravate while retaining healing.", "在保留治疗的同时循环蔓激化和超激化的支援型方案。"),
+  ]),
+  "zzz:セス": batch4Options("zzz", "セス", "https://game8.co/games/Zenless-Zone-Zero/archives/460687", t("防護", "Defense", "防护"), [
+    plan(["セス", "ジェーン", "ビビアン"], "主力異常の直後に入り、盾・異常掌握付与・クイック支援で強撃と混沌をつなぐ。", "Placed after the primary Anomaly agent, Seth links Assault and Disorder through shields, Anomaly Proficiency, and Quick Assist.", "置于主异常角色之后，以护盾、异常精通与快速支援衔接强击和紊乱。"),
+    plan(["セス", "ジェーン", "月城柳"], "物理・電気の状態異常を重ね、盾支援で主力の行動を守る。", "Layers Physical and Electric Anomaly while shield support protects the carry’s actions.", "叠加物理与电气异常，并以护盾辅助保护主C行动。"),
+    plan(["セス", "グレース", "リナ"], "電気異常の蓄積と貫通支援を組み合わせる電気軸。", "An Electric core combining Anomaly buildup with PEN support.", "结合异常积累与穿透辅助的电气核心队。"),
+  ]),
+  "zzz:パイパー": batch4Options("zzz", "パイパー", "https://game8.co/games/Zenless-Zone-Zero/archives/459818", anomaly, [
+    plan(["パイパー", "ビビアン", "浮波柚葉"], "物理・エーテル異常を重ね、柚葉の支援で混沌と控え火力を回す。", "Layers Physical and Ether Anomaly while Yuzuha support sustains Disorder and off-field damage.", "叠加物理和以太异常，以柚叶辅助循环紊乱与后台伤害。"),
+    plan(["パイパー", "バーニス", "アストラ"], "炎・物理の異常を交互に起こし、全体支援で混沌の価値を高める。", "Alternates Fire and Physical Anomaly while team buffs raise Disorder payoff.", "交替触发火与物理异常，以全队增益提高紊乱收益。"),
+    plan(["パイパー", "アンビー", "ニコ"], "状態異常・ブレイク・集敵を使う入手しやすい物理軸。", "An accessible Physical option using Anomaly, stun, and grouping.", "使用异常、失衡与聚怪的易获取物理队。"),
+  ]),
+  "zzz:蒼角": batch4Options("zzz", "蒼角", "https://game8.co/games/Zenless-Zone-Zero/archives/436880", support, [
+    plan(["蒼角", "星見雅", "月城柳"], "旗揚げの攻撃力・氷ダメージ支援と異常連鎖で、霜灼・烈霜の回転を支える。", "Fly the Flag’s ATK/Ice support and Anomaly chains sustain Frostburn and Fallen Frost rotations.", "以旗扬的攻击力、冰伤辅助和异常连锁支撑霜灼与落霜循环。"),
+    plan(["蒼角", "エレン", "ライト"], "氷ダメージ支援と氷耐性低下・ブレイク延長を重ね、エレンの直撃火力を伸ばす。", "Stacks Ice support with Ice RES shred and longer stun windows for Ellen’s direct damage.", "叠加冰系辅助、冰抗降低与延长失衡窗口，提高艾莲直伤。"),
+    plan(["蒼角", "星見雅", "ライカン"], "氷軸の耐性低下・ブレイクと旗揚げを組む実戦代替案。", "A practical Ice alternative combining RES shred, stun, and Fly the Flag.", "结合减抗、失衡与旗扬的实战冰系替代队。"),
+  ]),
+  "hsr:Dr.レイシオ": batch5Options("hsr", "Dr.レイシオ", "https://game8.co/games/Honkai-Star-Rail/archives/431768", mainDps, [
+    plan(["Dr.レイシオ", "サフェル", "ロビン", "アベンチュリン"], "デバフと追加攻撃を重ね、敵デバフ数を満たしてレイシオの追撃を安定させる。", "Stacks debuffs and follow-ups to stabilize Ratio's Talent follow-up conditions.", "叠加减益与追击，稳定满足真理医生天赋追击条件。"),
+    plan(["Dr.レイシオ", "トパーズ&カブ", "銀狼", "羅刹"], "単体デバフと追加攻撃を組み、カブとレイシオ双方の追撃条件を満たす。", "Combines single-target debuffs and follow-ups for both Numby and Ratio.", "组合单体减益与追击，满足账账和真理医生的追击条件。"),
+    plan(["Dr.レイシオ", "三月なのか（巡狩）", "アスター", "ナターシャ"], "デバフ供給を補助しつつ行動回数を確保する所持対応案。", "A roster-friendly option that supports debuffs and action frequency.", "兼顾减益供给与行动次数的持有适配方案。"),
+  ]),
+  "hsr:カフカ": batch5Options("hsr", "カフカ", "https://game8.co/games/Honkai-Star-Rail/archives/405755", anomaly, [
+    plan(["カフカ", "ヒアンシー", "ルアン・メェイ", "フォフォ"], "DoTの付与と起爆、全体支援、EP回復を重ねて持続ダメージ循環を整える。", "Combines DoT application and detonation with team support and Energy recovery.", "结合持续伤害施加、引爆、全队辅助与能量回复，稳定循环。"),
+    plan(["カフカ", "ブラックスワン", "椒丘", "ギャラガー"], "アルカナ・燃焼・感電の起爆を重ねるDoT／デバフ案。", "A DoT and debuff option layering Arcana, Burn, and Shock detonation.", "叠加奥迹、灼烧与触电引爆的持续伤害减益方案。"),
+    plan(["カフカ", "サンポ", "アスター", "ナターシャ"], "入手しやすいDoT付与と速度支援で起爆頻度を確保する。", "An accessible DoT core with SPD support for frequent detonation.", "以易获取的持续伤害与速度辅助保证引爆频率。"),
+  ]),
+  "hsr:ブラックスワン": batch5Options("hsr", "ブラックスワン", "https://game8.co/games/Honkai-Star-Rail/archives/Black-Swan-Best-Builds", anomaly, [
+    plan(["ブラックスワン", "カフカ", "ルアン・メェイ", "フォフォ"], "アルカナを先行付与してカフカの起爆へつなげ、DoT支援とEP回復を重ねる。", "Applies Arcana before Kafka detonates it while adding DoT support and Energy recovery.", "先施加奥迹再由卡芙卡引爆，并叠加持续伤害辅助与能量回复。"),
+    plan(["ブラックスワン", "カフカ", "椒丘", "ギャラガー"], "複数デバフとDoTを重ね、単体・範囲の継続ダメージを同時に支える。", "Layers multiple debuffs and DoTs for single-target and AoE damage over time.", "叠加多种减益与持续伤害，同时支撑单体和群体输出。"),
+    plan(["ブラックスワン", "セーバル", "アスター", "ナターシャ"], "雷DoTと速度支援を使う入手しやすい代替案。", "An accessible alternative using Lightning DoT and SPD support.", "利用雷属性持续伤害与速度辅助的易获取替代队。"),
+  ]),
+  "hsr:鏡流": batch5Options("hsr", "鏡流", "https://game8.co/games/Honkai-Star-Rail/archives/411783", mainDps, [
+    plan(["鏡流", "サンデー", "トリビー", "ヒアンシー"], "行動順支援とHP変動支援で特殊状態とHP参照火力を維持する。", "Action support and HP fluctuation support maintain her special state and HP-scaling damage.", "以行动辅助与生命波动辅助维持特殊状态和生命倍率输出。"),
+    plan(["鏡流", "刃", "トリビー", "ヒアンシー"], "HP消費を共有するダブルDPSで、味方HP変動の価値を高める。", "A double-DPS option that shares HP consumption to maximize HP fluctuation value.", "共享生命消耗的双C方案，提高队伍生命波动收益。"),
+    plan(["鏡流", "アスター", "開拓者（記憶）", "リンクス"], "行動補助・HP管理・回復を組み合わせる所持対応案。", "A roster-friendly option combining action aid, HP management, and healing.", "结合行动辅助、生命管理与治疗的持有适配方案。"),
+  ]),
+  "genshin:行秋": batch5Options("genshin", "行秋", "https://game8.co/games/Genshin-Impact/archives/297531", support, [
+    plan(["行秋", "胡桃", "夜蘭", "鍾離"], "二重水の水付着と護盾で蒸発重撃の中断を抑え、元素爆発を安定させる。", "Double Hydro application and a shield stabilize Vaporize Charged Attacks and Bursts.", "双水挂水与护盾稳定蒸发重击和元素爆发。"),
+    plan(["行秋", "アルハイゼン", "ナヒーダ", "久岐忍"], "水・草・雷の高頻度付着で超開花を回し、水付着と軽減を担う。", "Frequent Hydro, Dendro, and Electro application sustains Hyperbloom while Xingqiu supplies mitigation.", "高频水草雷附着维持超绽放，并由行秋提供挂水与减伤。"),
+    plan(["行秋", "雷電将軍", "香菱", "ベネット"], "元素爆発の相互回復と水付着で雷電ナショナルの蒸発循環を作る。", "Mutual Burst recovery and Hydro application support Raiden National rotations.", "以元素爆发互充和水附着支持雷神国家队循环。"),
+  ]),
+  "genshin:香菱": batch5Options("genshin", "香菱", "https://game8.co/games/Genshin-Impact/archives/297530", anomaly, [
+    plan(["香菱", "行秋", "雷電将軍", "ベネット"], "水付着・EP回復・攻撃支援で旋火輪の蒸発と循環を安定させる。", "Hydro application, Energy recovery, and ATK support stabilize Pyronado Vaporize rotations.", "挂水、能量回复与攻击辅助稳定旋火轮蒸发循环。"),
+    plan(["香菱", "タルタリヤ", "楓原万葉", "ベネット"], "高頻度水付着と炎耐性低下で国際編成の範囲蒸発を伸ばす。", "High-frequency Hydro and Pyro RES shred amplify International-team AoE Vaporize.", "高频挂水与火抗降低强化国际队的范围蒸发。"),
+    plan(["香菱", "クロリンデ", "フィッシュル", "シュヴルーズ"], "炎・雷限定の過負荷軸で控え炎と雷副火力を重ねる。", "A Pyro-Electro Overload core layering off-field Pyro and Electro damage.", "火雷限定超载核心，叠加后台火与雷伤害。"),
+  ]),
+  "genshin:フィッシュル": batch5Options("genshin", "フィッシュル", "https://game8.co/games/Genshin-Impact/archives/297524", anomaly, [
+    plan(["フィッシュル", "クロリンデ", "ナヒーダ", "楓原万葉"], "オズの雷付着と草激化を重ね、主力の反応火力と控えダメージを補助する。", "Oz's Electro application supports Aggravate, reaction damage, and off-field output.", "奥兹的雷附着支持超激化、反应伤害与后台输出。"),
+    plan(["フィッシュル", "行秋", "北斗", "スクロース"], "感電と集敵を重ねる入手しやすい感電編成。", "An accessible Electro-Charged option combining reaction damage and grouping.", "叠加感电与聚怪的易获取感电队。"),
+    plan(["フィッシュル", "雷電将軍", "行秋", "楓原万葉"], "2雷の粒子と水付着・耐性低下で元素爆発とオズを維持する。", "Double Electro particles, Hydro, and RES shred maintain Burst and Oz uptime.", "双雷粒子、挂水与减抗维持元素爆发和奥兹覆盖。"),
+  ]),
+  "zzz:グレース": batch5Options("zzz", "グレース", "https://game8.co/games/Zenless-Zone-Zero/archives/436878", anomaly, [
+    plan(["グレース", "星見雅", "浮波柚葉"], "電気・氷の異常と支援を重ね、感電・混沌の発生を安定させる。", "Layers Electric and Ice Anomaly with support to stabilize Shock and Disorder.", "叠加电、冰异常与辅助，稳定触电和紊乱。"),
+    plan(["グレース", "浅羽悠真", "リナ"], "感電の蓄積と電気主力・貫通支援を組み合わせる電気軸。", "An Electric core combining Shock buildup, an Electric carry, and PEN support.", "结合触电积蓄、电系主C与穿透辅助的电气核心队。"),
+    plan(["グレース", "アンビー", "蒼角"], "ブレイク・氷支援を併用する入手しやすい代替案。", "An accessible alternative using stun and Ice support.", "使用失衡与冰系辅助的易获取替代队。"),
+  ]),
+  "zzz:バーニス": batch5Options("zzz", "バーニス", "https://game8.co/games/Zenless-Zone-Zero/archives/464323", anomaly, [
+    plan(["バーニス", "星見雅", "浮波柚葉"], "控え燃焼と氷異常を重ね、混沌とAfterburnを同時に回す。", "Layers off-field Burn and Ice Anomaly for Disorder and Afterburn.", "叠加后台燃烧与冰异常，循环紊乱和余烬。"),
+    plan(["バーニス", "ジェーン", "シーザー"], "炎・物理の異常を交互に起こし、防護で混沌の主力行動を守る。", "Alternates Fire and Physical Anomaly while Defense support protects Disorder rotations.", "交替触发火与物理异常，并以防护保障紊乱循环。"),
+    plan(["バーニス", "「11号」", "ルーシー"], "燃焼と炎主力の直撃を共存させ、ルーシーの支援で炎属性案を組む。", "Combines Burn with a Fire carry and Lucy's support in a Fire-focused option.", "结合燃烧、火系主C和露西辅助的火属性方案。"),
+  ]),
+  "zzz:ルーシー": batch5Options("zzz", "ルーシー", "https://game8.co/games/Zenless-Zone-Zero/archives/459730", support, [
+    plan(["ルーシー", "バーニス", "ジェーン"], "Cheer On!の攻撃支援で異常2名の混沌と控え火力を伸ばす。", "Cheer On! ATK support raises two Anomaly agents' Disorder and off-field damage.", "以加油攻击辅助提升双异常角色的紊乱与后台伤害。"),
+    plan(["ルーシー", "「11号」", "ライト"], "炎主力・ブレイク・攻撃支援を重ねる炎属性の直撃編成。", "A Fire direct-damage core layering a Fire carry, stun, and ATK support.", "叠加火系主C、失衡与攻击辅助的火属性直伤队。"),
+    plan(["ルーシー", "パイパー", "バーニス"], "カリュドーンの異常連携で物理・炎の混沌と長時間の支援を両立する。", "Sons of Calydon Anomaly synergy sustains Physical-Fire Disorder and long support uptime.", "卡吕冬异常联动兼顾物理火紊乱与长时间辅助覆盖。"),
+  ]),
+  "hsr:ブローニャ": batch6Options("hsr", "ブローニャ", "https://game8.co/games/Honkai-Star-Rail/archives/405750", support, [
+    plan(["ブローニャ", "ファイノン", "サンデー", "開拓者（記憶）"], "行動順操作を主力と記憶支援へ集約し、ブローニャの再行動で火力窓を増やす。", "Concentrates action control on the carry and Remembrance support, using Bronya's Advance Forward for more damage windows.", "将行动控制集中给主C与记忆辅助，通过布洛妮娅拉条增加输出窗口。"),
+    plan(["ブローニャ", "刃", "トリビー", "ヒアンシー"], "単体主力の再行動とHP変動支援を重ね、刃の行動価値を高める。", "Combines Advance Forward with HP-fluctuation support to raise Blade's turn value.", "结合拉条与生命波动辅助，提高刃每次行动的价值。"),
+    plan(["ブローニャ", "ゼーレ", "開拓者（存護）", "ナターシャ"], "単体主力へスキルを集中する所持対応案。耐久枠で再行動中の被弾を補う。", "A roster-friendly hypercarry option that focuses Skill use on a single-target carry while covering survival.", "将战技集中给单体主C、并用生存位保障再行动窗口的持有适配方案。"),
+  ]),
+  "hsr:銀狼": batch6Options("hsr", "銀狼", "https://game8.co/games/Honkai-Star-Rail/archives/405757", support, [
+    plan(["銀狼", "黄泉", "椒丘", "ギャラガー"], "敵デバフを重ねて黄泉の必殺技回転を支え、銀狼は弱点付与と防御低下を担う。", "Stacks enemy debuffs for Acheron's Ultimate rotation while Silver Wolf supplies Weakness Implant and DEF shred.", "叠加敌方减益支撑黄泉终结技循环，由银狼提供弱点植入与减防。"),
+    plan(["銀狼", "ゼーレ", "花火", "符玄"], "量子主力への弱点付与と行動順支援を重ねる量子寄せ編成。", "A Quantum-leaning team that pairs Weakness Implant with action-order support for the carry.", "为量子主C叠加弱点植入与行动辅助的量子倾向队。"),
+    plan(["銀狼", "Dr.レイシオ", "トパーズ&カブ", "羅刹"], "単体デバフでレイシオとカブの追加攻撃条件を満たす案。", "Uses single-target debuffs to satisfy follow-up conditions for Dr. Ratio and Numby.", "以单体减益满足真理医生与账账追击条件的方案。"),
+  ]),
+  "hsr:符玄": batch6Options("hsr", "符玄", "https://game8.co/games/Honkai-Star-Rail/archives/405760", t("耐久", "Sustain", "生存位"), [
+    plan(["符玄", "ゼーレ", "花火", "銀狼"], "量子主力の単体火力と弱点付与を守り、被ダメージ分配で行動を継続させる。", "Protects a Quantum single-target core and preserves its actions through damage redistribution.", "保护量子单体核心，并以伤害分摊维持行动。"),
+    plan(["符玄", "ゼーレ", "花火", "停雲"], "行動順支援とEP支援を重ね、ゼーレの高頻度行動を安定させる。", "Combines action-order and Energy support to stabilize Seele's frequent turns.", "叠加行动辅助与能量辅助，稳定希儿的高频行动。"),
+    plan(["符玄", "丹恒", "アスター", "御空"], "速度・攻撃支援と耐久を組む所持対応の単体火力案。", "A roster-friendly single-target team combining SPD, ATK support, and sustain.", "结合速度、攻击辅助与生存的持有适配单体队。"),
+  ]),
+  "hsr:羅刹": batch6Options("hsr", "羅刹", "https://game8.co/games/Honkai-Star-Rail/archives/405764", t("耐久", "Sustain", "生存位"), [
+    plan(["羅刹", "キャストリス", "開拓者（記憶）", "トリビー"], "HP消費と記憶支援を継続回復で支え、主力と召喚物の行動を守る。", "Sustains HP consumption and Remembrance support with continuous healing for the carry and summon.", "以持续治疗支撑生命消耗和记忆辅助，保护主C与忆灵行动。"),
+    plan(["羅刹", "モーディス", "サンデー", "トリビー"], "行動順支援を重ねるHP参照主力を、結界回復と解除で安定させる。", "Stabilizes an HP-scaling carry with stacked action support through field healing and cleansing.", "以结界治疗和解除保障叠加行动辅助的生命倍率主C。"),
+    plan(["羅刹", "クラーラ", "停雲", "アスター"], "反撃主力への継続回復とEP・速度支援を組み合わせる所持対応案。", "A roster-friendly option combining sustain for a counter carry with Energy and SPD support.", "为反击主C提供持续治疗并结合能量、速度辅助的持有适配方案。"),
+  ]),
+  "genshin:白朮": batch6Options("genshin", "白朮", "https://game8.co/games/Genshin-Impact/archives/314348", support, [
+    plan(["白朮", "セノ", "ナヒーダ", "夜蘭"], "草・水・雷の付着を維持し、白朮の回復と中断耐性で激化・開花の主力行動を守る。", "Maintains Dendro, Hydro, and Electro application while Baizhu's healing and interruption resistance protect the carry.", "维持草水雷附着，并以白术的治疗和抗打断保护主C行动。"),
+    plan(["白朮", "アルハイゼン", "八重神子", "フィッシュル"], "草激化・超激化の付着と控え雷火力を、草支援と回復で安定させる。", "Stabilizes Spread/Aggravate application and off-field Electro damage with Dendro support and healing.", "以草系辅助与治疗稳定蔓激化、超激化附着和后台雷伤。"),
+    plan(["白朮", "ニィロウ", "ナヒーダ", "行秋"], "豊穣の核を草・水だけで回し、継続回復で開花の自傷を補う。", "Runs Bountiful Cores with Dendro and Hydro only, offsetting Bloom self-damage with continuous healing.", "仅以草水角色运行丰穰之核，并用持续治疗抵消绽放自伤。"),
+  ]),
+  "genshin:八重神子": batch6Options("genshin", "八重神子", "https://game8.co/games/Genshin-Impact/archives/327533", anomaly, [
+    plan(["八重神子", "アルハイゼン", "ナヒーダ", "白朮"], "草付着と雷追撃を重ね、激化反応と回復で控え・表火力を両立する。", "Layers Dendro application and Electro follow-ups for Aggravate damage with reliable healing.", "叠加草附着与雷追击，以激化伤害和稳定治疗兼顾前后台输出。"),
+    plan(["八重神子", "クロリンデ", "シュヴルーズ", "ベネット"], "炎・雷限定で過負荷と耐性低下を有効化し、八重神子は控え雷火力を担う。", "Uses a Pyro-Electro-only core to enable Overload and RES shred, with Yae supplying off-field Electro damage.", "使用纯火雷核心触发超载与减抗，由八重神子提供后台雷伤。"),
+    plan(["八重神子", "雷電将軍", "楓原万葉", "珊瑚宮心海"], "二雷の粒子と耐性低下・回復を組み、殺生櫻と元素爆発の循環を支える。", "Combines double-Electro particles, RES shred, and healing to support Sesshou Sakura and Burst rotations.", "结合双雷粒子、减抗与治疗，支撑杀生樱和元素爆发循环。"),
+  ]),
+  "genshin:宵宮": batch6Options("genshin", "宵宮", "https://game8.co/games/Genshin-Impact/archives/333497", mainDps, [
+    plan(["宵宮", "行秋", "ベネット", "雲菫"], "継続水付着と通常攻撃支援を重ね、宵宮の蒸発通常攻撃を中断しにくくする。", "Combines sustained Hydro application and Normal Attack support for stable Vaporize strings.", "叠加持续挂水与普攻辅助，使宵宫的蒸发普攻连段更稳定。"),
+    plan(["宵宮", "夜蘭", "雲菫", "鍾離"], "水付着・通常攻撃支援・護盾で単体主力の連射を保つ。", "Uses Hydro application, Normal Attack support, and a shield to preserve single-target attack strings.", "以挂水、普攻辅助与护盾维持单体主C连射。"),
+    plan(["宵宮", "八重神子", "フィッシュル", "シュヴルーズ"], "炎・雷限定の過負荷で、遠距離通常攻撃と控え雷火力を組み合わせる。", "A Pyro-Electro-only Overload team combining ranged Normal Attacks with off-field Electro damage.", "火雷限定超载队，结合远程普攻与后台雷伤。"),
+  ]),
+  // 第19バッチ（2026-09-13）: クラレッタ。Game8 の3案はいずれも実名で、案1・案2 は GameWith とも一致する。
+  // 役割ラベルは鋭御＝防御力参照の主力として mainDps を選ぶ。
+  "zzz:クラレッタ": batch19Options("zzz", "クラレッタ", "https://game8.jp/zenless/814551", mainDps, [
+    plan(["クラレッタ", "ノルムー", "リナ"], "攻撃力以外のバフを重ねられる理想編成。防御力参照のクラレッタと噛み合う。", "The ideal team stacking buffs other than ATK, which suits DEF-scaling Clarette.", "以攻击力以外的增益为主的理想队伍，契合依赖防御力的克拉蕾塔。"),
+    plan(["クラレッタ", "クレタ", "リナ"], "恒常S級だけで組む代替案。鋭御を支援できるクレタと貫通支援を合わせる。", "A standard-banner alternative pairing Caesar-style Armorer support with PEN assistance.", "仅用常驻S级角色的替代方案，将锐御辅助与穿透辅助结合。"),
+    plan(["クラレッタ", "アンビー", "ニコ"], "入手しやすいメンバーで組む初心者向けの電気案。", "A beginner-friendly Electric team built from easily obtained members.", "由易获取成员组成的新手向电气队。"),
+  ]),
+  "zzz:シーザー": batch6Options("zzz", "シーザー", "https://game8.co/games/Zenless-Zone-Zero/archives/464303", t("防護", "Defense", "防护"), [
+    plan(["シーザー", "エレン", "蒼角"], "防護支援でエレンの通常攻撃を守り、氷支援とブレイクで直撃火力を伸ばす。", "Defense support protects Ellen's attacks while Ice support and stun improve direct-damage windows.", "防护辅助保护艾莲的攻击，并以冰系辅助和失衡强化直伤窗口。"),
+    plan(["シーザー", "ビビアン", "月城柳"], "防護で異常主力の行動を守り、エーテル・電気の混沌を継続する。", "Protects Anomaly rotations while sustaining Ether-Electric Disorder.", "以防护保障异常循环，并维持以太、电气紊乱。"),
+    plan(["シーザー", "ビリー", "ニコ"], "護盾・集敵・遠距離主力を組む所持対応の物理直撃案。", "A roster-friendly Physical direct-damage team with shielding, grouping, and a ranged carry.", "结合护盾、聚怪与远程主C的持有适配物理直伤队。"),
+  ]),
+  "zzz:リナ": batch6Options("zzz", "リナ", "https://game8.co/games/Zenless-Zone-Zero/archives/436876", support, [
+    plan(["リナ", "星見雅", "月城柳"], "人形の貫通率支援と電気異常を重ね、烈霜・極性混沌の回転を補助する。", "Pairs puppet-based PEN support with Electric Anomaly to assist Frost and Polarized Disorder rotations.", "将人偶穿透辅助与电气异常结合，辅助烈霜与极性紊乱循环。"),
+    plan(["リナ", "浅羽悠真", "青衣"], "電気主力・ブレイク・貫通率支援を組み、短いブレイク時間の直撃火力を伸ばす。", "Combines an Electric carry, stun, and PEN support for stronger direct damage during short stun windows.", "结合电系主C、失衡与穿透辅助，提高短暂失衡期的直伤。"),
+    plan(["リナ", "アンビー", "ビリー"], "感電付着・ブレイク・遠距離主力を組み合わせる入手しやすい電気案。", "An accessible Electric team combining Shock application, stun, and a ranged carry.", "结合感电附着、失衡与远程主C的易获取电气队。"),
+  ]),
+  "zzz:青衣": batch6Options("zzz", "青衣", "https://game8.co/games/Zenless-Zone-Zero/archives/460407", t("撃破", "Stun", "击破"), [
+    plan(["青衣", "アストラ", "朱鳶"], "畏服によるブレイク倍率と支援バフを重ね、朱鳶の爆発窓を作る。", "Stacks Subjugation's stun multiplier with support buffs to create Zhu Yuan burst windows.", "叠加威服的失衡倍率与辅助增益，为朱鸢创造爆发窗口。"),
+    plan(["青衣", "アストラ", "浅羽悠真"], "電気主力へブレイク時間と支援を渡し、短時間の連続攻撃を支える。", "Passes stun windows and support to an Electric carry for short burst sequences.", "为电系主C提供失衡窗口与辅助，支撑短时间连段爆发。"),
+    plan(["青衣", "ニコ", "ビリー"], "集敵・防御低下・ブレイクを遠距離主力へ繋ぐ入手しやすい案。", "An accessible option linking grouping, DEF reduction, and stun to a ranged carry.", "将聚怪、减防与失衡衔接给远程主C的易获取方案。"),
+  ]),
+  "hsr:アーチャー": batch7Options("hsr", "アーチャー", "https://game8.co/games/Honkai-Star-Rail/archives/519877", mainDps, [
+    plan(["アーチャー", "花火", "開拓者（記憶）", "丹恒・騰荒"], "SP供給と行動順支援を重ね、スキル連射と量子単体火力を安定させる。", "Combines Skill Point supply and action support to stabilize repeated Skills and Quantum single-target damage.", "叠加战技点供给与行动辅助，稳定战技连发和量子单体输出。"),
+    plan(["アーチャー", "開拓者（記憶）", "寒鴉", "リンクス"], "SP回復・行動順補助・回復を組み、限定支援の所持状況に対応する。", "Uses SP recovery, action support, and healing as a roster-friendly alternative.", "结合战技点回复、行动辅助与治疗，适配限定辅助持有情况。"),
+    plan(["アーチャー", "花火", "爻光", "丹恒・騰荒"], "高SP環境と支援を重ね、主力のターン内スキル回数を伸ばす。", "Stacks high-SP conditions and support to increase the carry's in-turn Skill uses.", "叠加高战技点环境与辅助，增加主C单回合战技次数。"),
+  ]),
+  "hsr:アーラン": batch7Options("hsr", "アーラン", "https://game8.co/games/Honkai-Star-Rail/archives/405754", mainDps, [
+    plan(["アーラン", "御空", "アスター", "開拓者（存護）"], "速度・攻撃支援とシールドを組み、低HP運用の火力と生存を両立する。", "Combines SPD/ATK support with shielding for low-HP damage and survival.", "结合速度、攻击辅助与护盾，兼顾低血量输出与生存。"),
+    plan(["アーラン", "ブローニャ", "停雲", "アベンチュリン"], "再行動とEP支援を高耐久シールドで守り、攻撃機会を増やす。", "Protects extra actions and Energy support with strong shielding to create more attack windows.", "以高强度护盾保护再行动与能量辅助，增加输出机会。"),
+    plan(["アーラン", "サンデー", "丹恒・騰荒", "フォフォ"], "行動順・耐久・回復を重ね、低HP依存の主力を継続させる。", "Stacks action support, sustain, and healing to keep a low-HP-dependent carry active.", "叠加行动辅助、生存与治疗，维持低血量主C的持续输出。"),
+  ]),
+  "hsr:アスター": batch7Options("hsr", "アスター", "https://game8.co/games/Honkai-Star-Rail/archives/405743", support, [
+    plan(["アスター", "姫子", "トパーズ&カブ", "符玄"], "炎弱点・追加攻撃の手数を、速度と攻撃力支援・耐久で支える。", "Supports Fire weakness and follow-up frequency with SPD/ATK buffs and sustain.", "以速度、攻击辅助与生存支撑火弱点和追击频率。"),
+    plan(["アスター", "フック", "銀狼", "アベンチュリン"], "炎主力への速度支援と弱点付与を重ね、単体戦を安定させる。", "Combines SPD support for a Fire carry with Weakness Implant for stable single-target play.", "将炎系主C的速度辅助与弱点植入结合，稳定单体战。"),
+    plan(["アスター", "ホタル", "開拓者（調和）", "ギャラガー"], "速度支援と超撃破を組み、撃破主力の行動回数を補う。", "Pairs SPD support with Super Break to add actions for a Break carry.", "结合速度辅助与超击破，补足击破主C的行动次数。"),
+  ]),
+  "hsr:アルジェンティ": batch7Options("hsr", "アルジェンティ", "https://game8.co/games/Honkai-Star-Rail/archives/428046", mainDps, [
+    plan(["アルジェンティ", "サンデー", "トリビー", "フォフォ"], "行動順・全体支援・EP回復を重ね、180EP必殺技の回転を支える。", "Stacks action support, team buffs, and Energy recovery for 180-Energy Ultimate rotations.", "叠加行动辅助、全队增益与能量回复，支撑180能量终结技循环。"),
+    plan(["アルジェンティ", "マダム・ヘルタ", "トリビー", "フォフォ"], "範囲火力を並べ、複数敵への必殺技価値と耐久を両立する。", "Pairs AoE damage dealers to raise Ultimate value against multiple enemies while retaining sustain.", "组合范围输出角色，提高多目标终结技价值并保留生存。"),
+    plan(["アルジェンティ", "御空", "開拓者（記憶）", "ナターシャ"], "会心・行動順・回復を組む所持対応の必殺技回転案。", "A roster-friendly Ultimate rotation using CRIT support, action support, and healing.", "使用暴击辅助、行动辅助与治疗的持有适配终结技循环队。"),
+  ]),
+  "genshin:アーロイ": batch7Options("genshin", "アーロイ", "https://www.icy-veins.com/genshin-impact/aloy-team-guide", mainDps, [
+    plan(["アーロイ", "フリーナ", "ジン", "甘雨"], "水付着・HP変動支援・回復・氷粒子を組み、爆発クイックスワップを回す。", "Combines Hydro, HP-fluctuation support, healing, and Cryo particles for Burst quickswap rotations.", "结合挂水、生命波动辅助、治疗与冰元素微粒，循环爆发速切。"),
+    plan(["アーロイ", "神里綾華", "珊瑚宮心海", "申鶴"], "凍結・氷粒子・氷支援を重ね、氷チームの爆発枠として扱う。", "Layers Freeze, Cryo particles, and Cryo support to use Aloy as a Burst slot in a Cryo team.", "叠加冻结、冰元素微粒与冰系辅助，将埃洛伊作为冰队爆发位。"),
+    plan(["アーロイ", "ベネット", "香菱", "楓原万葉"], "炎付着と集敵で溶解を狙い、爆発を主軸にする。", "Uses Pyro application and grouping for Melt-focused Burst damage.", "利用火元素附着与聚怪打出融化，以元素爆发为核心。"),
+  ]),
+  "genshin:アイノ": batch7Options("genshin", "アイノ", "https://game8.co/games/Genshin-Impact/archives/537903", support, [
+    plan(["アイノ", "フリンズ", "イネファ", "スクロース"], "水・雷・風の反応と元素熟知支援を組み、月感電の主力を補助する。", "Combines Hydro-Electro-Anemo reactions and Elemental Mastery support for a Lunar-Charged carry.", "结合水雷风反应与元素精通辅助，支撑月感电主C。"),
+    plan(["アイノ", "ナヒーダ", "ニィロウ", "白朮"], "草水のみで開花を回し、元素熟知支援と継続回復を両立する。", "Runs Bloom with Dendro and Hydro only, balancing Elemental Mastery support and sustained healing.", "以草水角色运行绽放，兼顾元素精通辅助与持续治疗。"),
+    plan(["アイノ", "アルレッキーノ", "イネファ", "ベネット"], "水・雷反応支援と攻撃支援を組み、炎主力の行動時間を確保する。", "Combines Hydro-Electro reaction support and ATK support for a Pyro carry's field time.", "结合水雷反应辅助与攻击辅助，保障火系主C的站场时间。"),
+  ]),
+  "genshin:アルベド": batch7Options("genshin", "アルベド", "https://game8.co/games/Genshin-Impact/archives/312182", support, [
+    plan(["アルベド", "ナヴィア", "ドゥリン", "ベネット"], "岩共鳴と結晶反応を支え、控え岩火力と主力の元素スキル火力を重ねる。", "Supports Geo Resonance and Crystallize while stacking off-field Geo damage with the carry's Skill damage.", "支撑岩元素共鸣与结晶反应，叠加后台岩伤与主C元素战技伤害。"),
+    plan(["アルベド", "荒瀧一斗", "ゴロー", "鍾離"], "岩共鳴・防御支援・護盾を揃え、陽華の控え火力を岩主力へ重ねる。", "Uses Geo Resonance, DEF support, and shielding to layer Solar Isotoma damage into a Geo carry team.", "组合岩元素共鸣、防御辅助与护盾，将阳华后台伤害叠加至岩系主C队。"),
+    plan(["アルベド", "胡桃", "行秋", "鍾離"], "結晶と護盾で中断を抑え、蒸発主力へ控え火力を足す。", "Uses Crystallize and shielding to reduce interruption while adding off-field damage to a Vaporize carry.", "以结晶与护盾减少打断，并为蒸发主C补充后台输出。"),
+  ]),
+  "zzz:「11号」": batch7Options("zzz", "「11号」", "https://game8.co/games/Zenless-Zone-Zero/archives/436882", mainDps, [
+    plan(["「11号」", "ライト", "アストラ"], "炎耐性低下・ブレイク・全体支援を重ね、炎抑制中の通常攻撃を伸ばす。", "Stacks Fire RES shred, stun, and team support for stronger Fire Suppression Basic Attacks.", "叠加火抗降低、失衡与全队辅助，强化火力镇压期间的普攻。"),
+    plan(["「11号」", "「トリガー」", "アストラ"], "短い表時間でブレイク倍率と支援を渡し、炎主力の火力窓を作る。", "Passes stun multiplier and support through low field time to create Fire carry damage windows.", "以短站场提供失衡倍率和辅助，为火系主C创造输出窗口。"),
+    plan(["「11号」", "ベン", "ニコ"], "炎追加能力の条件と護盾・集敵を組み、入手しやすい炎直撃編成にする。", "Meets the Fire additional-ability condition while adding shielding and grouping in an accessible Fire team.", "满足火系额外能力条件，并以护盾、聚怪构成易获取火系直伤队。"),
+  ]),
+  "zzz:「シード」": batch7Options("zzz", "「シード」", "https://www.prydwen.gg/zenless/characters/seed", mainDps, [
+    plan(["「シード」", "0号・アンビー", "「トリガー」"], "強攻ヴァンガードとオフフィールドブレイクを組み、相互のEX特殊を回して鋼鉄チャージを確保する。", "Pairs an Attack Vanguard with off-field stun to cycle both EX Specials and build Steel Charge.", "结合强攻先锋与后台失衡，通过双方强化特殊循环积累钢铁蓄力。"),
+    plan(["「シード」", "オルペウス&「鬼火」", "「トリガー」"], "オボルス隊の強攻2名とブレイクを重ね、素早い交代で主力2名の火力を活かす。", "Combines two Obol Squad Attack agents with stun for quick swaps and dual-carry damage.", "组合两名奥波勒斯小队强攻与失衡，以快速切换发挥双主C伤害。"),
+    plan(["「シード」", "「11号」", "アストラ"], "炎・電気の強攻2名と支援を組み、ヴァンガード条件と持続的なEX特殊循環を満たす。", "Uses two Attack agents and support to meet Vanguard requirements and sustain EX Special cycles.", "使用两名强攻与辅助，满足先锋条件并维持强化特殊循环。"),
+  ]),
+  "zzz:「トリガー」": batch7Options("zzz", "「トリガー」", "https://game8.co/games/Zenless-Zone-Zero/archives/495167", t("撃破", "Stun", "击破"), [
+    plan(["「トリガー」", "アストラ", "0号・アンビー"], "オフフィールドAftershockと支援を重ね、電気主力の短い火力窓を増幅する。", "Combines off-field Aftershocks and support to amplify an Electric carry's burst windows.", "结合后台追击与辅助，放大电系主C的爆发窗口。"),
+    plan(["「トリガー」", "アストラ", "浅羽悠真"], "電気主力の連続攻撃をAftershockのブレイク支援と全体バフで補助する。", "Supports an Electric carry's attack strings with Aftershock stun support and team buffs.", "以追击失衡辅助和全队增益支撑电系主C的连续攻击。"),
+    plan(["「トリガー」", "ニコ", "ビリー"], "集敵・防御低下・遠距離主力をAftershockで補助する所持対応案。", "A roster-friendly option where Aftershocks support grouping, DEF reduction, and a ranged carry.", "以追击辅助聚怪、减防和远程主C的持有适配方案。"),
+  ]),
+  "hsr:ヴェルト": batch8Options("hsr", "ヴェルト", "https://game8.co/games/Honkai-Star-Rail/archives/405763", mainDps, [
+    plan(["ヴェルト", "花火", "トリビー", "丹恒・騰荒"], "会心支援と行動順操作を虚数主力へ集約し、必殺技・戦闘スキルの火力窓を作る。", "Focuses CRIT support and action control on the Imaginary carry to create Ultimate and Skill damage windows.", "将暴击辅助与行动控制集中给虚数主C，创造终结技和战技输出窗口。"),
+    plan(["ヴェルト", "黄泉", "銀狼", "丹恒・騰荒"], "減速・禁錮とデバフを重ね、黄泉の必殺技回転を補助する。", "Layers slow, Imprisonment, and debuffs to support Acheron's Ultimate rotation.", "叠加减速、禁锢与减益，辅助黄泉的终结技循环。"),
+    plan(["ヴェルト", "開拓者（記憶）", "アスター", "丹恒・騰荒"], "行動順支援と耐久を組み合わせる所持対応の虚数火力案。", "A roster-friendly Imaginary damage option combining action support and sustain.", "结合行动辅助与生存位的持有适配虚数输出方案。"),
+  ]),
+  "hsr:ギャラガー": batch8Options("hsr", "ギャラガー", "https://game8.co/games/Honkai-Star-Rail/archives/437255", t("耐久・撃破", "Sustain & Break", "生存与击破"), [
+    plan(["ギャラガー", "ホタル", "帰忘の流離人", "ダリア"], "撃破特効・弱点撃破・回復を重ね、超撃破主力の継続火力を支える。", "Combines Break, weakness breaking, and healing to sustain a Super Break carry.", "结合击破、弱点击破与治疗，支撑超击破主C的持续输出。"),
+    plan(["ギャラガー", "黄泉", "椒丘", "ペラ"], "デバフ付与と回復を両立し、黄泉の必殺技回転を補助する。", "Pairs debuff application with healing to support Acheron's Ultimate rotation.", "兼顾减益施加与治疗，辅助黄泉的终结技循环。"),
+    plan(["ギャラガー", "三月なのか（巡狩）", "開拓者（調和）", "アスター"], "撃破と速度支援を入手しやすい枠で組む代替案。", "An accessible alternative combining Break and SPD support.", "以易获取角色结合击破与速度辅助的替代方案。"),
+  ]),
+  "hsr:キュレネ": batch8Options("hsr", "キュレネ", "https://game8.co/games/Honkai-Star-Rail/archives/541348", support, [
+    plan(["キュレネ", "キャストリス", "長夜月", "ヒアンシー"], "ChrysosのHP消費・記憶精霊・回復を連動させ、長い火力循環を支える。", "Links Chrysos HP expenditure, memosprites, and healing for sustained rotations.", "联动Chrysos生命消耗、忆灵与治疗，支撑持续循环。"),
+    plan(["キュレネ", "アグライア", "サンデー", "丹恒・騰荒"], "記憶主力の行動順と記憶精霊支援を重ね、手数を確保する。", "Stacks action control and memosprite support for a Remembrance carry.", "叠加行动控制与忆灵辅助，保证记忆主C的行动次数。"),
+    plan(["キュレネ", "アナイクス", "ケリュドラ", "丹恒・騰荒"], "弱点付与とChrysos支援を組み、風知恵主力の範囲火力を支える。", "Combines weakness application and Chrysos support for an Erudition carry's AoE damage.", "结合弱点附加与Chrysos辅助，支撑智识主C的范围输出。"),
+  ]),
+  "hsr:ギルガメッシュ": batch8Options("hsr", "ギルガメッシュ", "https://game8.co/games/Honkai-Star-Rail/archives/601941", mainDps, [
+    plan(["ギルガメッシュ", "セイバー", "千冶・刃", "フォフォ"], "Fate連携の追撃・EP回復・耐久を重ね、Interestの消費機会を増やす。", "Stacks Fate follow-ups, Energy recovery, and sustain to create more Interest spending windows.", "叠加Fate联动追击、能量回复与生存位，增加消耗Interest的机会。"),
+    plan(["ギルガメッシュ", "セイバー", "開拓者（記憶）", "フォフォ"], "記憶支援とEP回復を組み、限定補助の所持状況に対応する。", "Pairs Remembrance support and Energy recovery as a roster-flexible alternative.", "结合记忆辅助与能量回复，适配限定辅助持有情况。"),
+    plan(["ギルガメッシュ", "不死途", "千冶・刃", "フォフォ"], "追撃の連鎖と耐久を組み、雷主力の必殺技回転を支える。", "Combines follow-up chains and sustain to support the Lightning carry's Ultimate rotation.", "结合追击连锁与生存位，支撑雷系主C的终结技循环。"),
+  ]),
+  "genshin:アンバー": batch8Options("genshin", "アンバー", "https://game8.co/games/Genshin-Impact/archives/297535", mainDps, [
+    plan(["アンバー", "シトラリ", "シロネン", "ベネット"], "氷付着・耐性低下・攻撃支援を重ね、溶解重撃を主軸にする。", "Stacks Cryo application, RES shred, and ATK support for Melt Charged Shots.", "叠加冰附着、减抗与攻击辅助，以融化重击为核心。"),
+    plan(["アンバー", "ロサリア", "鍾離", "ベネット"], "氷付着と中断耐性を確保し、重撃を安全に継続する。", "Provides Cryo application and interruption resistance for safer sustained Charged Shots.", "提供冰附着与抗打断，使重击更稳定持续。"),
+    plan(["アンバー", "シトラリ", "スクロース", "ベネット"], "拡散と元素熟知支援を加え、C4以降の爆弾人形連携も活かす。", "Adds Swirl and Elemental Mastery support while enabling C4+ Baron Bunny sequences.", "加入扩散与元素精通辅助，并利用C4后的兔兔伯爵连携。"),
+  ]),
+  "genshin:イアンサ": batch8Options("genshin", "イアンサ", "https://game8.co/games/Genshin-Impact/archives/345881", support, [
+    plan(["イアンサ", "マーヴィカ", "シトラリ", "シロネン"], "夜魂・炎・氷・岩の相性を重ね、主力への攻撃支援と耐性低下を両立する。", "Combines Nightsoul, Pyro, Cryo, and Geo synergies for ATK support and RES shred.", "结合夜魂、火、冰、岩的协同，兼顾攻击辅助与减抗。"),
+    plan(["イアンサ", "ヴァレサ", "フリーナ", "閑雲"], "雷主力の移動条件とHP変動支援・回復を組み、ハイパー運用を支える。", "Supports an Electro carry's movement conditions with HP-fluctuation buffs and healing.", "以生命波动增益与治疗支撑雷系主C的移动条件和强化输出。"),
+    plan(["イアンサ", "クロリンデ", "ベネット", "シュヴルーズ"], "炎・雷限定の過負荷で攻撃支援と耐性低下を組み合わせる。", "Uses a Pyro-Electro-only Overload core for ATK support and RES shred.", "使用纯火雷超载核心，结合攻击辅助与减抗。"),
+  ]),
+  "genshin:イネファ": batch8Options("genshin", "イネファ", "https://game8.co/games/Genshin-Impact/archives/531360", t("月感電サブDPS", "Lunar-Charged sub DPS", "月感电副C"), [
+    plan(["イネファ", "フリンズ", "アイノ", "スクロース"], "水・雷・風の反応と元素熟知支援を重ね、月感電の主力を補助する。", "Combines Hydro-Electro-Anemo reactions and Elemental Mastery support for a Lunar-Charged carry.", "结合水雷风反应与元素精通辅助，支撑月感电主C。"),
+    plan(["イネファ", "イファ", "オロルン", "フリーナ"], "水・雷の控え火力と回復・HP変動支援を組み、反応を継続する。", "Uses off-field Hydro-Electro damage with healing and HP-fluctuation support for sustained reactions.", "利用后台水雷伤害、治疗与生命波动辅助维持反应。"),
+    plan(["イネファ", "ラウマ", "ヌヴィレット", "フリーナ"], "水主力と草・雷反応を組み、月反応複合の控え火力を加える。", "Pairs a Hydro carry with Dendro-Electro reactions and off-field Lunar reaction damage.", "结合水系主C、草雷反应与后台月反应伤害。"),
+  ]),
+  "zzz:0号・アンビー": batch8Options("zzz", "0号・アンビー", "https://game8.co/games/Zenless-Zone-Zero/archives/495109", mainDps, [
+    plan(["0号・アンビー", "「トリガー」", "アストラ"], "Aftershockのブレイク支援と全体バフを重ね、電気主力の短い火力窓を伸ばす。", "Stacks Aftershock stun support and team buffs for an Electric carry's burst windows.", "叠加追击失衡辅助与全队增益，强化电系主C的爆发窗口。"),
+    plan(["0号・アンビー", "アンビー", "ニコ"], "電気・ブレイク・集敵を組む所持対応の直撃案。", "An accessible direct-damage option combining Electric synergy, stun, and grouping.", "结合电系协同、失衡与聚怪的易获取直伤方案。"),
+    plan(["0号・アンビー", "オルペウス&「鬼火」", "「トリガー」"], "Aftershockと強攻2名の交代を組み、電気・炎の手数を活かす。", "Pairs Aftershocks with two Attack agents for rapid Electric-Fire swaps.", "结合追击与双强攻，通过电火快速切换发挥手数。"),
+  ]),
+  "zzz:アリア": batch8Options("zzz", "アリア", "https://game8.co/games/Zenless-Zone-Zero/archives/572601", anomaly, [
+    plan(["アリア", "スンナ", "南宮羽"], "同陣営の異常・支援を組み、エーテル異常とAbloomを継続させる。", "Uses faction synergy to sustain Ether Anomaly and Abloom rotations.", "利用同阵营协同，维持以太异常与Abloom循环。"),
+    plan(["アリア", "プロメイア", "南宮羽"], "異常蓄積と支援を重ね、Abloomの発動回数を確保する。", "Stacks Anomaly buildup and support to increase Abloom triggers.", "叠加异常积蓄与辅助，确保Abloom的触发次数。"),
+    plan(["アリア", "アンビー", "ニコ"], "ブレイク・集敵・エーテル主力を組む入手しやすい代替案。", "An accessible alternative combining stun, grouping, and an Ether carry.", "结合失衡、聚怪与以太主C的易获取替代方案。"),
+  ]),
+  "zzz:アリス": batch8Options("zzz", "アリス", "https://game8.co/games/Zenless-Zone-Zero/archives/527839", anomaly, [
+    plan(["アリス", "ヴェリナ", "レミエール"], "異常3名の反応連鎖を組み、極性強襲・混沌の回転を支える。", "Combines three Anomaly agents for Polarized Assault and Disorder rotations.", "组合三名异常角色，支撑极性强击与紊乱循环。"),
+    plan(["アリス", "カリン", "ニコ"], "物理主力・集敵・防御低下を組む入手しやすい代替案。", "An accessible alternative combining a Physical carry, grouping, and DEF reduction.", "结合物理主C、聚怪与减防的易获取替代方案。"),
+    plan(["アリス", "アストラ", "セス"], "支援・護盾・異常補助を組み、前線での強襲蓄積を安定させる。", "Uses support, shielding, and Anomaly aid to stabilize Assault buildup on field.", "结合辅助、护盾与异常补助，稳定前线强击积蓄。"),
+  ]),
+  "hsr:クラーラ": batch9Options("hsr", "クラーラ", "https://game8.jp/houkaistarrail/524682", mainDps, [
+    plan(["クラーラ", "不死途", "トリビー", "フォフォ"], "被弾誘導・追加攻撃・全体支援を重ね、クラーラの反撃機会と耐久を支える。", "Combines aggro, follow-ups, and team support to sustain Clara's counters.", "结合受击引导、追加攻击与全队辅助，支撑克拉拉的反击与生存。"),
+    plan(["クラーラ", "サフェル", "サンデー", "丹恒・騰荒"], "追撃と行動順支援を重ね、クラーラの反撃とサフェルの追加攻撃を連動させる。", "Pairs follow-ups with action support to link Clara's counters and Cipher's follow-ups.", "将追加攻击与行动辅助结合，联动克拉拉反击和赛飞儿追击。"),
+    plan(["クラーラ", "三月なのか", "リンクス", "停雲"], "ヘイト・回復・EP支援でカウンターを安定させる所持対応案。", "A roster-friendly counter team using aggro, healing, and Energy support.", "通过仇恨、治疗和能量辅助稳定反击的易获取方案。"),
+  ]),
+  "hsr:ケリュドラ": batch9Options("hsr", "ケリュドラ", "https://game8.jp/houkaistarrail/698898", support, [
+    plan(["ケリュドラ", "ファイノン", "キュレネ", "丹恒・騰荒"], "単体主力への軍功支援と記憶・耐久支援を重ね、スキル主軸の火力窓を作る。", "Stacks Merit support, Remembrance aid, and sustain for a single-target carry's Skill windows.", "叠加军功、记忆与生存辅助，为单体主C创造战技爆发窗口。"),
+    plan(["ケリュドラ", "アナイクス", "キュレネ", "丹恒・騰荒"], "弱点付与を行う範囲主力へ行動・攻撃支援を集中する。", "Focuses action and ATK support on an AoE carry that applies weaknesses.", "将行动与攻击辅助集中给可施加弱点的范围主C。"),
+    plan(["ケリュドラ", "アーチャー", "花火", "ヒアンシー"], "SP消費の大きい単体主力へ行動順・SP・耐久を組み合わせる代替案。", "An alternative combining action order, SP, and sustain for an SP-hungry single-target carry.", "为高耗点单体主C结合行动顺序、战技点与生存的替代方案。"),
+  ]),
+  "hsr:サフェル": batch9Options("hsr", "サフェル", "https://game8.jp/houkaistarrail/678974", t("サブ火力・デバフ", "Sub DPS & debuff", "副C与减益"), [
+    plan(["サフェル", "飛霄", "ロビン", "丹恒・騰荒"], "手数の多い追加攻撃主力へ敵被ダメージ上昇と追撃を重ねる。", "Adds Vulnerability and follow-ups to a frequent-attacking FUA carry.", "为高频追加攻击主C叠加易伤与追击。"),
+    plan(["サフェル", "黄泉", "椒丘", "アベンチュリン"], "デバフを重ねて黄泉の必殺技回転を支えつつ、耐久を確保する。", "Layers debuffs for Acheron's Ultimate rotation while retaining sustain.", "叠加减益支撑黄泉终结技循环，同时确保生存。"),
+    plan(["サフェル", "アーチャー", "花火", "丹恒・騰荒"], "高速のSP供給と行動支援でSP消費の大きい主力を補助する。", "Uses high-speed SP supply and action support for an SP-hungry carry.", "以高速战技点供给和行动辅助支撑高耗点主C。"),
+  ]),
+  "hsr:サンポ": batch9Options("hsr", "サンポ", "https://game8.co/games/Honkai-Star-Rail/archives/405761", t("持続ダメージ", "DoT", "持续伤害"), [
+    plan(["サンポ", "カフカ", "ルアン・メェイ", "フォフォ"], "風化と必殺技のDoT被ダメージ上昇を、カフカの起爆と全体支援へ接続する。", "Links Wind Shear and DoT Vulnerability to Kafka detonation and team support.", "将风化与DoT易伤连接到卡芙卡引爆及全队辅助。"),
+    plan(["サンポ", "セーバル", "アスター", "ナターシャ"], "風化・感電・燃焼を重ねるF2P向けのDoT構成。", "A F2P DoT team stacking Wind Shear, Shock, and Burn.", "叠加风化、感电与燃烧的免费DoT队。"),
+    plan(["サンポ", "カフカ", "椒丘", "ギャラガー"], "カフカDoT編成の支援枠をデバフ・回復へ置き換える代替案。", "A Kafka DoT alternative that replaces support slots with debuffs and healing.", "以减益和治疗替换辅助位的卡芙卡DoT替代方案。"),
+  ]),
+  "genshin:イファ": batch9Options("genshin", "イファ", "https://game8.jp/genshin/639101", support, [
+    plan(["イファ", "コロンビーナ", "オロルン", "イネファ"], "月感電の水・雷起点とナタ同伴を重ね、拡散・感電支援を最大化する。", "Combines Lunar-Charged Hydro-Electro triggers and Natlan allies to maximize reaction support.", "结合月感电水雷起点与纳塔同伴，最大化扩散和感电辅助。"),
+    plan(["イファ", "オデット", "ファルザン", "七七"], "風2氷2の星拡散で集敵・風支援・回復を確保する。", "A two-Anemo two-Cryo Stellar Swirl team for grouping, Anemo support, and healing.", "风2冰2的星扩散队，兼顾聚怪、风系辅助与治疗。"),
+    plan(["イファ", "オデット", "コロンビーナ", "イネファ"], "星反応と月感電を両立し、複合反応の頻度を高める。", "Combines Stellar reactions and Lunar-Charged for frequent composite reactions.", "兼顾星反应与月感电，提高复合反应频率。"),
+  ]),
+  "genshin:ヴァレサ": batch9Options("genshin", "ヴァレサ", "https://game8.jp/genshin/669311", mainDps, [
+    plan(["ヴァレサ", "イアンサ", "ドゥリン", "シュヴルーズ"], "雷・炎限定の過負荷で攻撃支援と耐性低下を重ねる。", "Uses a Pyro-Electro-only Overload core for ATK support and RES shred.", "使用纯火雷超载核心，叠加攻击辅助与减抗。"),
+    plan(["ヴァレサ", "フリーナ", "閑雲", "イアンサ"], "落下攻撃・HP変動・回復・攻撃支援を組み合わせるハイパーキャリー案。", "A hypercarry team combining Plunges, HP fluctuation, healing, and ATK support.", "结合下落攻击、生命波动、治疗与攻击辅助的强化主C方案。"),
+    plan(["ヴァレサ", "ナヒーダ", "イアンサ", "楓原万葉"], "草・雷激化と耐性低下で落下攻撃を支える代替案。", "An Aggravate alternative that supports Plunges with Dendro-Electro and RES shred.", "以草雷激化和减抗支撑下落攻击的替代方案。"),
+  ]),
+  "genshin:ウェンティ": batch9Options("genshin", "ウェンティ", "https://game8.jp/genshin/352607", t("集敵・拡散", "Grouping & Swirl", "聚怪与扩散"), [
+    plan(["ウェンティ", "フィッシュル", "アイノ", "イネファ"], "月感電の水・雷付着を集敵と拡散でまとめ、反応回数を増やす。", "Groups Lunar-Charged Hydro-Electro application and Swirls it for more reactions.", "通过聚怪和扩散汇总月感电水雷附着，提高反应次数。"),
+    plan(["ウェンティ", "クレー", "フリーナ", "ベネット"], "集敵・水付着・炎主力・攻撃支援で蒸発火力を支える。", "Supports Vaporize damage through grouping, Hydro application, a Pyro carry, and ATK support.", "以聚怪、水附着、火系主C与攻击辅助支撑蒸发输出。"),
+    plan(["ウェンティ", "エミリエ", "ドゥリン", "ベネット"], "燃焼・風拡散・攻撃支援を重ねる燃焼反応案。", "A Burning-reaction option stacking Burning, Anemo Swirl, and ATK support.", "叠加燃烧、风扩散与攻击辅助的燃烧反应方案。"),
+  ]),
+  "zzz:アンドー": batch9Options("zzz", "アンドー", "https://game8.jp/zenless/682786", mainDps, [
+    plan(["アンドー", "アストラ", "青衣"], "ブレイクとクイック支援を重ね、バーストモード中の電気火力を伸ばす。", "Stacks stun and Quick Assist to amplify Electric damage during Burst Mode.", "叠加失衡与快速支援，放大爆发模式的电系输出。"),
+    plan(["アンドー", "リナ", "月城柳"], "感電・貫通支援・異常を組み、電気主力の連続攻撃を支える。", "Combines Shock, PEN support, and Anomaly for an Electric carry's attack strings.", "结合感电、穿透辅助与异常，支撑电系主C的连续攻击。"),
+    plan(["アンドー", "アンビー", "ニコ"], "ブレイク・集敵・防御低下を組む入手しやすい電気案。", "An accessible Electric team with stun, grouping, and DEF reduction.", "结合失衡、聚怪与减防的易获取电系方案。"),
+  ]),
+  "zzz:アンビー": batch9Options("zzz", "アンビー", "https://game8.jp/zenless/607757", t("撃破", "Stun", "击破"), [
+    plan(["アンビー", "アストラ", "浅羽悠真"], "クイック支援とブレイクで電気主力の短い火力窓を伸ばす。", "Uses Quick Assist and stun to extend an Electric carry's burst windows.", "以快速支援和失衡延长电系主C的爆发窗口。"),
+    plan(["アンビー", "浅羽悠真", "蒼角"], "ブレイクと支援を重ね、強攻主力の直撃火力を支える。", "Combines stun and support for an Attack carry's direct damage.", "结合失衡与辅助支撑强攻主C的直伤。"),
+    plan(["アンビー", "ニコ", "アンドー"], "集敵・防御低下・電気強攻を組む初期編成案。", "An early-game team combining grouping, DEF reduction, and an Electric Attack agent.", "结合聚怪、减防与电系强攻的初期方案。"),
+  ]),
+  "zzz:イヴリン": batch9Options("zzz", "イヴリン", "https://game8.jp/zenless/658501", mainDps, [
+    plan(["イヴリン", "千夏", "ノルムー"], "炎主力へ支援とブレイクを重ね、連携スキルの火力窓を作る。", "Stacks support and stun for a Fire carry's Chain Attack damage window.", "为火系主C叠加辅助与失衡，创造连携技输出窗口。"),
+    plan(["イヴリン", "アストラ", "ライト"], "炎・支援・ブレイクで高い連携スキル倍率を活かす。", "Uses Fire support and stun to capitalize on high Chain Attack multipliers.", "以火系辅助与失衡发挥高连携技能倍率。"),
+    plan(["イヴリン", "アストラ", "ニコ"], "支援・集敵・防御低下を組む代替の炎直撃案。", "An alternative Fire direct-damage team using support, grouping, and DEF reduction.", "结合辅助、聚怪与减防的炎系直伤替代方案。"),
+  ]),
+  // 第18バッチ（2026-09-11）で出典の実名編成へ差し替え（docs/batch-18-research-notes.md 区分1）。ジェイドは案1が Game8・案2〜3が GameWith、ジェパードは案1〜2が GameWith・案3が Game8。
+  "hsr:ジェイド": batch18Options("hsr", "ジェイド", "https://gamewith.jp/houkaistarrail/article/show/447141", t("範囲・追加攻撃", "AoE & follow-up", "群攻与追加攻击"), [
+    plan(["ジェイド", "マダム・ヘルタ", "トリビー", "ヒアンシー"], "範囲攻撃と追加攻撃を重ね、ジェイドのチャージと全体火力を確保する。", "Stacks AoE and follow-ups to sustain Jade's charges and team damage.", "叠加范围攻击与追加攻击，维持翡翠充能和全队输出。"),
+    plan(["ジェイド", "ヘルタ", "ロビン", "アベンチュリン"], "ヘルタの範囲追加攻撃でジェイドの追加攻撃機会を増やし、ロビンの全体支援とアベンチュリンのバリアで支える。", "Herta's AoE follow-ups add triggers for Jade, supported by Robin's team buffs and Aventurine's shields.", "以黑塔的群攻追加攻击增加翡翠的追击机会，并由知更鸟全队增益与砂金护盾支撑。"),
+    plan(["ジェイド", "クラーラ", "開拓者（記憶）", "ギャラガー"], "クラーラの反撃とジェイドの追加攻撃を重ね、記憶開拓者の会心率支援を活かす所持対応案。", "A roster option stacking Clara's counters with Jade's follow-ups and Remembrance Trailblazer's CRIT support.", "叠加克拉拉反击与翡翠追加攻击，并利用记忆开拓者暴击率辅助的配队适配方案。"),
+  ]),
+  "hsr:ジェパード": batch18Options("hsr", "ジェパード", "https://gamewith.jp/houkaistarrail/article/show/389899", t("耐久・バリア", "Sustain & shields", "生存与护盾"), [
+    plan(["ジェパード", "彦卿", "停雲", "ペラ"], "氷主力の会心・単体火力をバリア、EP支援、敵防御低下で支える。", "Supports a Cryo carry with shields, Energy support, and DEF shred.", "用护盾、能量辅助和减防支撑冰系主C。"),
+    plan(["ジェパード", "黄泉", "椒丘", "ペラ"], "虚無2名のデバフで黄泉の必殺技回転を早め、全体バリアで耐久を確保する。", "Two Nihility debuffers speed up Acheron's Ultimate while team shields provide sustain.", "以两名虚无的减益加快黄泉终结技循环，并以全队护盾保证生存。"),
+    plan(["ジェパード", "姫子・旅立ち", "トリビー", "ヴェルト"], "姫子・旅立ちの支援スキル連携をヴェルトとトリビーで回し、全体バリアで耐久を担う（Game8 の編成例）。", "Welt and Tribbie drive Himeko • Departure's assist-skill rotation while Gepard's team shields provide sustain (Game8 example).", "由瓦尔特与缇宝推动姬子·启程的支援技能循环，杰帕德以全队护盾承担生存（Game8 配队示例）。"),
+  ]),
+  // 第18バッチ（2026-09-11）でカタログへ追加した HSR 3名。出典の実名編成だけを登録（docs/batch-18-research-notes.md 区分2）。
+  // 千冶・刃は案1が Game8・案2〜3が GameWith、姫子・旅立ちは案1〜2が Game8（案1は GameWith も同一）・案3が GameWith、ロビン・夏空の歌は案1が Game8・案2〜3が GameWith。
+  "hsr:千冶・刃": batch18Options("hsr", "千冶・刃", "https://gamewith.jp/houkaistarrail/article/show/553897", t("サブアタッカー・デバフ", "Sub DPS & debuff", "副C与减益"), [
+    plan(["千冶・刃", "不死途", "トリビー", "ヒアンシー"], "不死途と防御デバフを相互に活かすWアタッカー編成。トリビーの支援とヒアンシーの回復で2人の火力を支える。", "A dual-DPS team where Mortenax Blade and Ashveil share debuffs, backed by Tribbie's support and Hyacine's healing.", "不死途与千冶·刃互相利用减益的双输出队，由缇宝辅助与风堇治疗支撑两人输出。"),
+    plan(["千冶・刃", "黄泉", "サフェル", "ヒアンシー"], "虚無2名で黄泉の必殺技回転を早め、千冶・刃のデバフと追加攻撃扱いの必殺技を重ねる。", "Two Nihility units speed up Acheron's Ultimate while Mortenax Blade layers debuffs and Ultimate follow-up synergy.", "以两名虚无加快黄泉终结技循环，并叠加千冶·刃的减益与终结技追击联动。"),
+    plan(["千冶・刃", "姫子・旅立ち", "ヴェルト", "フォフォ"], "姫子・旅立ちの殲滅型をヴェルトの支援スキルで回し、千冶・刃の全体デバフで範囲火力を伸ばす。", "Welt drives Himeko • Departure's Annihilation form while Mortenax Blade's team-wide debuffs raise AoE damage.", "以瓦尔特的支援技能推动姬子·启程的歼灭形态，并以千冶·刃的全体减益提升群攻输出。"),
+  ]),
+  "hsr:姫子・旅立ち": batch18Options("hsr", "姫子・旅立ち", "https://game8.jp/houkaistarrail/784730", mainDps, [
+    plan(["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"], "ヴェルトで支援スキルを発動する殲滅編成。防御無視と防御低下を重ねて敵の防御力をほぼ無視する。", "An Annihilation team where Welt triggers assist skills, stacking DEF ignore and DEF reduction to nearly bypass enemy DEF.", "由瓦尔特发动支援技能的歼灭队，叠加无视防御与减防，几乎无视敌人防御力。"),
+    plan(["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"], "手数とEP回復が多い裁決編成。必殺技の回転率を高める。", "A Judgment team with many actions and high Energy gain that raises Ultimate uptime.", "行动次数与能量回复较多的裁决队，提高终结技循环率。"),
+    plan(["姫子・旅立ち", "開拓者（記憶）", "ルアン・メェイ", "フォフォ"], "記憶開拓者の支援スキルとルアン・メェイの支援で組む、微課金向けのハイパーキャリー編成。", "A budget hypercarry team using Remembrance Trailblazer's assist skill and Ruan Mei's support.", "利用记忆开拓者支援技能与阮·梅辅助的低氪超载队。"),
+  ]),
+  // 第20バッチ（2026-09-24）: アベンチュリン・波と戯れる夏。Game8・GameWith の2案が実名で一致する（3案目の実名編成は無いため2案）。
+  "hsr:アベンチュリン・波と戯れる夏": batch20Options("hsr", "アベンチュリン・波と戯れる夏", "https://gamewith.jp/houkaistarrail/article/show/565894", mainDps, [
+    plan(["アベンチュリン・波と戯れる夏", "不死途", "千冶・刃", "ヒアンシー"], "他に歓楽キャラがいない追加攻撃編成。愉悦スキルが追加攻撃として扱われ、手数の多い不死途・千冶・刃で熱気を溜める。", "A follow-up attack team with no other Elation characters, so his Elation Skill counts as a follow-up attack while high-action Ashveil and Mortenax Blade build Fervor.", "队伍中没有其他欢愉角色的追加攻击队。欢愉技视为追加攻击，由行动次数多的不死途与千冶·刃积攒热意。"),
+    plan(["アベンチュリン・波と戯れる夏", "ロビン・夏空の歌", "爻光", "ヒアンシー"], "歓楽の味方と組む愉悦キャリー編成。爻光の必殺技でアッハタイムを早め、本人の愉悦度を上げる。", "An Elation hypercarry team with other Elation allies; Yaoguang's Ultimate speeds up Aha Instant and raises his Elation.", "与欢愉队友组成的欢愉主C队。爻光的终结技加快阿哈时刻，并提高其欢愉度。"),
+  ]),
+  // 第21バッチ（2026-09-28）: パール。Game8・GameWith の2案が実名で一致する（Game8 の3案目は水着アベンチュリン入りで GameWith に無いため登録しない）。
+  "hsr:パール": batch21Options("hsr", "パール", "https://gamewith.jp/houkaistarrail/article/show/572184", t("耐久サポート", "Sustain support", "生存辅助"), [
+    plan(["パール", "銀狼Lv.999", "火花", "爻光"], "銀狼Lv.999を火力役にする愉悦4人編成。パールが耐久を支え、火花が爆笑ネタを供給し、爻光が火力を補助する。", "A four-Elation team with Silver Wolf LV.999 as the damage dealer: Pearl sustains the team, Sparxie supplies Punchlines, and Yaoguang supports damage.", "以银狼LV.999为输出的欢愉四人队。真珠负责生存，火花提供笑点，爻光辅助输出。"),
+    plan(["パール", "緋英", "愉悦主人公", "爻光"], "愉悦サポーターを重ねて緋英の必殺技を高頻度で回す編成。パールは爆笑の褒美で緋英のEPを稼ぐ。", "A team stacking Elation supports to fire Evanescia's Ultimate often; Pearl feeds Certified Banger to refill her Energy.", "叠加欢愉辅助以高频施放绯英终结技的队伍。真珠通过好活当赏为绯英补充能量。"),
+  ], [
+    [t("耐久サポート", "Sustain support", "生存辅助"), t("主力", "Main DPS", "主C"), t("支援", "Support", "辅助"), t("支援", "Support", "辅助")],
+    [t("耐久サポート", "Sustain support", "生存辅助"), t("主力", "Main DPS", "主C"), t("支援", "Support", "辅助"), t("支援", "Support", "辅助")],
+  ]),
+  "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
+    plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),
+    plan(["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], "単体の不死途と全体の千冶・刃を並べ、単体・複数の両方に対応する。", "Pairs single-target Ashveil with AoE Mortenax Blade to handle both single and multiple enemies.", "并列擅长单体的不死途与擅长群攻的千冶·刃，同时应对单体与多目标。"),
+    plan(["ロビン・夏空の歌", "セイバー", "ギルガメッシュ", "フォフォ"], "ギルガメッシュとセイバーを組み、セイバーの火力と必殺技の回転を大きく上げる。", "Combines Gilgamesh with Saber to greatly raise Saber's damage and Ultimate uptime.", "组合吉尔伽美什与Saber，大幅提升Saber的输出与终结技循环。"),
+  ]),
+  "hsr:セイバー": batch10Options("hsr", "セイバー", "https://game8.jp/houkaistarrail/686759", mainDps, [
+    plan(["セイバー", "サンデー", "トリビー", "丹恒・騰荒"], "行動順・必殺技回転・全体支援を重ね、必殺技主体の火力窓を作る。", "Stacks action advance, Ultimate rotation, and team support for Saber’s damage window.", "叠加拉条、终结技循环与全队辅助，创造以终结技为核心的输出窗口。"),
+    plan(["ギルガメッシュ", "セイバー", "千冶・刃", "フォフォ"], "EP支援と耐久を組み、必殺技を連続して使う構成。", "Combines Energy support and sustain for repeated Ultimate use.", "结合能量辅助与生存，支持连续施放终结技。"),
+    plan(["セイバー", "停雲", "記憶主人公", "ギャラガー"], "EP供給・記憶支援・回復をまとめる代替案。", "An alternative that combines Energy supply, Remembrance support, and healing.", "结合能量供给、记忆辅助与治疗的替代方案。"),
+  ]),
+  "hsr:セイレンス": batch10Options("hsr", "セイレンス", "https://game8.jp/houkaistarrail/698610", t("持続ダメージ", "DoT", "持续伤害"), [
+    plan(["セイレンス", "カフカ", "ルアン・メェイ", "フォフォ"], "持続ダメージの付与・起爆・全体支援・回復を重ねる基本構成。", "A core DoT team that layers application, detonation, support, and healing.", "叠加持续伤害附加、引爆、全队辅助与治疗的基础队伍。"),
+    plan(["セイレンス", "カフカ", "ブラックスワン", "ギャラガー"], "複数の持続ダメージとカフカの起爆を組み合わせる攻撃的な案。", "An offensive option combining multiple DoTs with Kafka detonation.", "结合多种持续伤害与卡芙卡引爆的进攻方案。"),
+    plan(["セイレンス", "椒丘", "トリビー", "羅刹"], "デバフ・全体支援・耐久を組み、結界と持続ダメージを維持する代替案。", "A sustain alternative using debuffs and team support to maintain the field and DoTs.", "以减益、全队辅助与生存维持结界和持续伤害的替代方案。"),
+  ]),
+  "genshin:エウルア": batch10Options("genshin", "エウルア", "https://www.icy-veins.com/genshin-impact/eula-guide-best-builds", mainDps, [
+    plan(["エウルア", "雷電将軍", "ロサリア", "鍾離"], "雷・氷で超電導を維持し、会心補助・耐性低下・護盾で物理爆発を支える。", "Maintains Superconduct with Electro-Cryo while adding CRIT support, RES shred, and shielding.", "以雷冰维持超导，并提供暴击辅助、减抗和护盾。"),
+    plan(["エウルア", "エスコフィエ", "夜蘭", "フリーナ"], "水・氷の控え火力と回復を組み、元素爆発の火力窓を支える。", "Uses off-field Hydro-Cryo damage and healing to support Burst damage windows.", "以后台水冰输出和治疗支撑终结技输出窗口。"),
+    plan(["エウルア", "雷電将軍", "ミカ", "フリーナ"], "超電導、物理支援、HP変動支援を組み合わせる代替案。", "An alternative combining Superconduct, Physical support, and HP fluctuation support.", "结合超导、物理辅助与生命波动辅助的替代方案。"),
+  ]),
+  "genshin:エスコフィエ": batch10Options("genshin", "エスコフィエ", "https://game8.jp/genshin/678671", support, [
+    plan(["エスコフィエ", "スカーク", "フリーナ", "申鶴"], "水・氷4人統一で耐性低下、凍結、回復、氷主力の火力を重ねる。", "A Hydro-Cryo core stacking RES shred, Freeze, healing, and Cryo carry damage.", "以水冰核心叠加减抗、冻结、治疗与冰系主C输出。"),
+    plan(["エスコフィエ", "神里綾華", "フリーナ", "申鶴"], "凍結と氷支援を重ねる神里綾華向けの代替案。", "An Ayaka alternative that layers Freeze and Cryo support.", "为神里绫华叠加冻结与冰系辅助的替代方案。"),
+    plan(["エスコフィエ", "リオセスリ", "フリーナ", "夜蘭"], "氷・水統一の回復と控え火力でオンフィールド氷主力を支える。", "Supports an on-field Cryo carry with Hydro-Cryo synergy, healing, and off-field damage.", "通过水冰协同、治疗和后台输出支撑站场冰系主C。"),
+  ]),
+  "genshin:エミリエ": batch10Options("genshin", "エミリエ", "https://game8.jp/genshin/574298", t("燃焼サブ火力", "Burning sub DPS", "燃烧副C"), [
+    plan(["エミリエ", "アルレッキーノ", "楓原万葉", "ベネット"], "炎共鳴と燃焼を維持し、風支援と攻撃支援で炎主力・草サブ火力を支える。", "Maintains Burning with Pyro resonance while Anemo and ATK support amplify the core.", "以火共鸣维持燃烧，并由风系和攻击辅助强化核心。"),
+    plan(["エミリエ", "リオセスリ", "トーマ", "ベネット"], "燃焼付着を利用して氷主力の溶解と草サブ火力を両立する。", "Uses Burning application for Cryo carry Melt while retaining Dendro sub DPS damage.", "利用燃烧附着兼顾冰主C融化与草系副C输出。"),
+    plan(["エミリエ", "クロリンデ", "香菱", "ベネット"], "燃焼と激化を併用し、炎共鳴で攻撃力も確保する。", "Combines Burning and Aggravate while Pyro resonance supports ATK.", "结合燃烧与激化，并以火共鸣保障攻击力。"),
+  ]),
+  "zzz:イドリー": batch10Options("zzz", "イドリー", "https://game8.jp/zenless/712545", mainDps, [
+    plan(["イドリー", "リュシア", "ダイアリン"], "命破支援と高速ブレイクを重ね、カウンターと透徹火力を支える。", "Combines Rupture support and fast stun for counter and Sheer damage.", "结合命破辅助与高速失衡，支撑反击和透彻输出。"),
+    plan(["イドリー", "潘引壺", "橘福福"], "透徹力支援と撃破を組み、モチーフなしでも安定する代替案。", "An alternative using Sheer support and stun for a stable non-signature setup.", "以透彻辅助和失衡构成的无专武稳定替代方案。"),
+    plan(["イドリー", "リュシア", "ライカン"], "命破支援と氷属性撃破を組み合わせる代替案。", "An alternative combining Rupture support with Ice stun.", "结合命破辅助与冰系失衡的替代方案。"),
+  ]),
+  "zzz:ヴェリナ": batch10Options("zzz", "ヴェリナ", "https://game8.jp/zenless/614253", anomaly, [
+    plan(["ヴェリナ", "レミエール", "アリア"], "異常3名で風・エーテル・複合異常を連鎖させる主案。", "A three-Anomaly core chaining Wind, Ether, and composite Anomalies.", "三异常核心，连锁风、以太和复合异常。"),
+    plan(["ヴェリナ", "プロメイア", "アリア"], "乱流と狂咲を組み合わせ、異常蓄積と控え火力を支える。", "Combines Vortex and Abloom to support Anomaly buildup and off-field damage.", "结合乱流与狂咲，支撑异常积累和后台输出。"),
+    plan(["ヴェリナ", "レミエール", "プロメイア"], "風異常と異常主力を組み、状態異常の回転を維持する代替案。", "An alternative pairing Wind Anomaly with Anomaly carries to sustain rotations.", "以风异常与异常主C维持循环的替代方案。"),
+  ]),
+  "zzz:オルペウス&「鬼火」": batch10Options("zzz", "オルペウス&「鬼火」", "https://game8.jp/zenless/695654", mainDps, [
+    plan(["オルペウス&「鬼火」", "アストラ", "ライト"], "炎キャリーへ支援と撃破を重ね、追加攻撃と連携スキルの火力窓を作る。", "Stacks support and stun for a Fire carry's Aftershock and Chain Attack windows.", "为火系主C叠加辅助与失衡，创造追加攻击和连携技窗口。"),
+    plan(["オルペウス&「鬼火」", "0号・アンビー", "「トリガー」"], "追加攻撃相性と撃破支援を重ねるAftershock寄りの案。", "An Aftershock-oriented team stacking follow-up synergy and stun support.", "叠加追加攻击协同与失衡辅助的Aftershock方案。"),
+    plan(["オルペウス&「鬼火」", "アストラ", "橘福福"], "支援と撃破を組み、炎直撃・追加攻撃を安定させる代替案。", "An alternative using support and stun to stabilize Fire direct and follow-up damage.", "以辅助和失衡稳定火系直伤与追加攻击的替代方案。"),
+  ]),
+  "hsr:セーバル": batch11Options("hsr", "セーバル", "https://game8.jp/houkaistarrail/524686", mainDps, [
+    plan(["セーバル", "サンデー", "トリビー", "丹恒・騰荒"], "行動順・全体支援・耐久を組み、雷範囲火力を回す。", "Uses action support, team buffs, and sustain for Lightning AoE rotations.", "结合行动辅助、全队增益与生存位，循环雷系范围输出。"),
+    plan(["セーバル", "停雲", "記憶主人公", "ギャラガー"], "EP支援・記憶支援・回復を重ねる代替案。", "An alternative layering Energy, Remembrance support, and healing.", "叠加能量、记忆辅助与治疗的替代方案。"),
+  ]),
+  "hsr:ゼーレ": batch11Options("hsr", "ゼーレ", "https://game8.jp/houkaistarrail/524687", mainDps, [
+    plan(["ゼーレ", "サンデー", "ケリュドラ", "丹恒・騰荒"], "再行動・追加火力・耐久で単体会心主力を支える。", "Advance, extra damage, and sustain support a single-target CRIT carry.", "以拉条、追加输出与生存位支撑单体暴击主C。"),
+  ]),
+  "hsr:ダリア": batch11Options("hsr", "ダリア", "https://game8.jp/houkaistarrail/732480", support, [
+    plan(["ホタル", "ダリア", "帰忘の流離人", "霊砂"], "超撃破・弱点撃破・回復を組み、炎撃破主力を支える。", "Combines Super Break, weakness breaking, and healing for a Fire Break carry.", "结合超击破、弱点击破与治疗，支撑火系击破主C。"),
+    plan(["ホタル", "ダリア", "帰忘の流離人", "ルアン・メェイ"], "撃破支援を重ねる耐久枠なしの高火力案。", "A high-output no-sustain option stacking Break support.", "叠加击破辅助的无生存位高输出方案。"),
+  ]),
+  "hsr:トリビー": batch11Options("hsr", "トリビー", "https://game8.jp/houkaistarrail/662211", support, [
+    plan(["マダム・ヘルタ", "アナイクス", "トリビー", "ヒアンシー"], "範囲火力・全体支援・回復を組む知恵編成。", "An Erudition team combining AoE damage, team support, and healing.", "结合范围输出、全队辅助与治疗的智识队。"),
+    plan(["キャストリス", "長夜月", "トリビー", "ヒアンシー"], "HP変動型の記憶主力を全体支援と回復で支える。", "Supports HP-fluctuation Remembrance carries with team buffs and healing.", "以全队辅助与治疗支撑生命波动型记忆主C。"),
+    plan(["モーディス", "サンデー", "トリビー", "ヒアンシー"], "再行動と全体支援を重ねるHP参照主力の案。", "An HP-scaling carry team with advance and team support.", "为生命倍率主C叠加拉条与全队辅助的方案。"),
+  ]),
+  "hsr:ナターシャ": batch11Options("hsr", "ナターシャ", "https://game8.jp/houkaistarrail/524684", t("耐久・回復", "Sustain & healing", "生存与治疗"), [
+    plan(["緋英", "銀狼Lv.999", "爻光", "ナターシャ"], "デバフと支援を重ね、ナターシャが回復・解除を担う。", "Stacks debuffs and support while Natasha supplies healing and cleanse.", "叠加减益与辅助，由娜塔莎承担治疗和解除。"),
+    plan(["不死途", "千冶・刃", "トリビー", "ナターシャ"], "HP変動型の主力と支援を継続回復で支える。", "Sustains an HP-fluctuation carry and support with continuous healing.", "以持续治疗支撑生命波动型主C及辅助。"),
+  ]),
+  "hsr:ヒアンシー": batch11Options("hsr", "ヒアンシー", "https://game8.jp/houkaistarrail/677023", t("耐久・記憶", "Sustain & Remembrance", "生存与记忆"), [
+    plan(["キュレネ", "長夜月", "ヒアンシー", "ロビン・夏空の歌"], "記憶精霊・HP変動・全体支援を回復で支える。", "Supports memosprites, HP fluctuation, and team buffs with healing.", "以治疗支撑忆灵、生命波动与全队增益。"),
+    plan(["キュレネ", "長夜月", "ヒアンシー", "キャストリス"], "記憶主力2名を回復とHP参照支援で組む。", "Pairs two Remembrance carries with healing and HP-scaling support.", "以治疗和生命倍率辅助搭配两名记忆主C。"),
+    plan(["キュレネ", "モーディス", "ヒアンシー", "トリビー"], "HP変動主力に全体支援と回復を渡す。", "Provides team buffs and healing to an HP-fluctuation carry.", "为生命波动主C提供全队辅助与治疗。"),
+  ]),
+  "hsr:ファイノン": batch11Options("hsr", "ファイノン", "https://www.prydwen.gg/star-rail/characters/phainon", mainDps, [
+    plan(["ファイノン", "ケリュドラ", "サンデー", "丹恒・騰荒"], "行動順・追加火力・耐久を変身型主力へ集約する。", "Focuses advance, extra damage, and sustain on the transforming carry.", "将拉条、追加输出与生存位集中给变身型主C。"),
+    plan(["ファイノン", "ケリュドラ", "キュレネ", "記憶主人公"], "記憶支援と行動回数を重ねる案。", "A plan layering Remembrance support and actions.", "叠加记忆辅助与行动次数的方案。"),
+    plan(["ファイノン", "ケリュドラ", "花火", "サンデー"], "SP・行動順支援を重ねる高頻度行動案。", "A high-action option stacking Skill Point and advance support.", "叠加战技点与拉条辅助的高频行动方案。"),
+  ]),
+  "hsr:フォフォ": batch11Options("hsr", "フォフォ", "https://game8.jp/houkaistarrail/556584", t("耐久・EP支援", "Sustain & Energy", "生存与能量辅助"), [
+    plan(["銀狼Lv.999", "火花", "爻光", "フォフォ"], "デバフと支援に回復・EP供給を合わせる汎用例。", "A general team pairing debuffs and support with healing and Energy supply.", "将减益、辅助与治疗、能量供给结合的通用例。"),
+  ]),
+  "genshin:オロルン": batch11Options("genshin", "オロルン", "https://game8.jp/genshin/654393", t("雷サブ火力・支援", "Electro sub DPS & support", "雷系副C与辅助"), [
+    plan(["ムアラニ", "オロルン", "フリーナ", "シロネン"], "水・雷の反応と夜魂・耐性低下を重ねる。", "Combines Hydro-Electro reactions, Nightsoul, and RES shred.", "结合水雷反应、夜魂与减抗。"),
+    plan(["ヌヴィレット", "オロルン", "フリーナ", "シロネン"], "水主力へ雷の控え火力と支援を加える。", "Adds off-field Electro damage and support to a Hydro carry.", "为水系主C加入后台雷伤和辅助。"),
+    plan(["クロリンデ", "オロルン", "行秋", "シロネン"], "雷主力・水付着・夜魂支援を組む。", "Pairs an Electro carry with Hydro application and Nightsoul support.", "结合雷系主C、挂水与夜魂辅助。"),
+  ]),
+  "genshin:カーヴェ": batch11Options("genshin", "カーヴェ", "https://game8.jp/genshin/560164", t("開花ドライバー", "Bloom driver", "绽放驾驶员"), [
+    plan(["カーヴェ", "ニィロウ", "ナヒーダ", "珊瑚宮心海"], "草水のみで豊穣の核と回復を安定させる。", "Uses Dendro-Hydro only for Bountiful Cores and healing.", "仅用草水角色稳定丰穰之核与治疗。"),
+    plan(["カーヴェ", "フリーナ", "珊瑚宮心海", "白朮"], "水・草付着と回復を重ねる開花案。", "A Bloom team layering Hydro/Dendro application and healing.", "叠加水草附着与治疗的绽放方案。"),
+    plan(["カーヴェ", "行秋", "旅人（草）", "バーバラ"], "水付着・草共鳴・回復を組む所持対応案。", "A roster-friendly plan with Hydro, Dendro Resonance, and healing.", "结合挂水、草共鸣与治疗的持有适配方案。"),
+  ]),
+  "genshin:ガイア": batch11Options("genshin", "ガイア", "https://game8.jp/genshin/561395", t("氷サブ火力", "Cryo sub DPS", "冰系副C"), [
+    plan(["神里綾華", "ガイア", "楓原万葉", "珊瑚宮心海"], "凍結・氷粒子・耐性低下で氷爆発を支える。", "Supports Cryo Burst with Freeze, particles, and RES shred.", "以冻结、冰元素微粒与减抗支撑冰系爆发。"),
+    plan(["アルレッキーノ", "ガイア", "楓原万葉", "ベネット"], "氷付着と風支援で炎主力の溶解を補助する。", "Cryo application and Anemo support enable Pyro carry Melt.", "以冰附着与风系辅助帮助火系主C打融化。"),
+    plan(["ロサリア", "香菱", "ガイア", "ベネット"], "氷・炎付着と攻撃支援を重ねる溶解案。", "Layers Cryo/Pyro application and ATK support for Melt.", "叠加冰火附着与攻击辅助的融化方案。"),
+  ]),
+  "genshin:カチーナ": batch11Options("genshin", "カチーナ", "https://game8.jp/genshin/636264", t("岩サブ火力・支援", "Geo sub DPS & support", "岩系副C与辅助"), [
+    plan(["ナヴィア", "香菱", "カチーナ", "ベネット"], "結晶・炎共鳴・攻撃支援で岩主力を補助する。", "Uses Crystallize, Pyro Resonance, and ATK support for a Geo carry.", "以结晶、火共鸣与攻击辅助支撑岩系主C。"),
+    plan(["ノエル", "カチーナ", "フリーナ", "ゴロー"], "岩共鳴・防御支援・HP変動支援を組む。", "Combines Geo Resonance, DEF support, and HP-fluctuation buffs.", "结合岩共鸣、防御辅助与生命波动增益。"),
+    plan(["ムアラニ", "カチーナ", "キャンディス", "鍾離"], "水・岩の支援と中断耐性を組む。", "Pairs Hydro-Geo support with interruption resistance.", "结合水岩辅助与抗打断。"),
+  ]),
+  "genshin:キィニチ": batch11Options("genshin", "キィニチ", "https://game8.jp/genshin/640184", mainDps, [
+    plan(["キィニチ", "エミリエ", "マーヴィカ", "トーマ"], "燃焼・草控え火力・炎共鳴・耐久を組む。", "Combines Burning, Dendro off-field damage, Pyro Resonance, and sustain.", "结合燃烧、草系后台输出、火共鸣与生存位。"),
+    plan(["キィニチ", "フリーナ", "マーヴィカ", "白朮"], "水・炎反応と回復を伴う代替案。", "An alternative with Hydro-Pyro reactions and healing.", "结合水火反应与治疗的替代方案。"),
+  ]),
+  "genshin:キャンディス": batch11Options("genshin", "キャンディス", "https://game8.jp/genshin/560314", support, [
+    plan(["キャンディス", "楓原万葉", "香菱", "ベネット"], "水付与・拡散・炎控え火力・攻撃支援を組む。", "Combines Hydro infusion, Swirl, off-field Pyro, and ATK support.", "结合水附魔、扩散、后台火伤与攻击辅助。"),
+    plan(["キャンディス", "ナヒーダ", "ニィロウ", "白朮"], "水・草だけで開花と回復を回す。", "Runs Bloom and healing with Hydro and Dendro only.", "仅用水草角色循环绽放与治疗。"),
+  ]),
+  "zzz:カリン": batch11Options("zzz", "カリン", "https://www.prydwen.gg/zenless/characters/corin", mainDps, [
+    plan(["カリン", "ダイアリン", "アストラ"], "公開ガイドの基準チームで、高速ブレイクと支援を持続斬撃へつなぐ。", "The guide's baseline team links fast stun and support to sustained slashes.", "采用公开指南的基准队伍，以快速失衡和辅助衔接持续斩击。"),
+  ]),
+  "zzz:クレタ": batch11Options("zzz", "クレタ", "https://www.prydwen.gg/zenless/characters/koleda", t("撃破", "Stun", "击破"), [
+    plan(["イヴリン", "クレタ", "アストラ"], "炎主力への高速ブレイクと全体支援を組む。", "Provides fast stun and team support for a Fire carry.", "为火系主C提供快速失衡与全队辅助。"),
+    plan(["スターライト･ビリー", "クレタ", "シーシィア"], "命破主力へブレイクと電気支援を組む。", "Pairs stun and Electric support with a Rupture carry.", "为命破主C搭配失衡和电系辅助。"),
+    plan(["スターライト･ビリー", "クレタ", "潘引壺"], "命破・撃破・防護を組む代替案。", "An alternative combining Rupture, stun, and Defense.", "结合命破、失衡与防护的替代方案。"),
+  ]),
+  "zzz:シーシィア": batch11Options("zzz", "シーシィア", "https://gamewith.jp/zenless/545038", mainDps, [
+    plan(["シーシィア", "「シード」", "「トリガー」"], "電気強攻とオフフィールド撃破を組む基本案。", "A core with Electric Attack and off-field stun.", "结合电系强攻与后台失衡的基础方案。"),
+    plan(["シーシィア", "「シード」", "千夏"], "本文の撃破枠代替を用いる支援重視案。", "A support-focused option using the guide's stun-slot alternative.", "采用本文击破位替代的辅助向方案。"),
+    plan(["シーシィア", "「シード」", "アストラ"], "本文の支援代替を用いる火力補助案。", "A damage-support option using the guide's listed alternative.", "采用本文列出辅助替代的增伤方案。"),
+  ]),
+  "zzz:シグリッド": batch11Options("zzz", "シグリッド", "https://gamewith.jp/zenless/560635", mainDps, [
+    plan(["シグリッド", "ダイアリン", "千夏"], "高速ブレイクと攻撃支援で氷主力の爆発窓を作る。", "Fast stun and ATK support create burst windows for the Ice carry.", "以快速失衡与攻击辅助为冰系主C创造爆发窗口。"),
+    plan(["シグリッド", "ライカン", "リナ"], "氷耐性低下と貫通率支援を重ねる恒常中心案。", "A standard-focused team layering Ice RES shred and PEN support.", "叠加冰抗降低与穿透辅助的常驻角色方案。"),
+  ]),
+  "zzz:スターライト･ビリー": batch11Options("zzz", "スターライト･ビリー", "https://gamewith.jp/zenless/551848", t("命破", "Rupture", "命破"), [
+    plan(["スターライト･ビリー", "ダイアリン", "リュシア"], "命破主力へ撃破と支援を組む。", "Pairs stun and support with a Rupture carry.", "为命破主C搭配失衡与辅助。"),
+    plan(["スターライト･ビリー", "潘引壺", "クレタ"], "防護と炎撃破を組む代替案。", "An alternative with Defense and Fire stun.", "结合防护与火系失衡的替代方案。"),
+  ]),
+  "zzz:ダイアリン": batch11Options("zzz", "ダイアリン", "https://gamewith.jp/zenless/522882", t("撃破", "Stun", "击破"), [
+    plan(["ダイアリン", "照", "葉瞬光"], "ブレイク弱体と支援を、物理撃破の連携へつなぐ。", "Links stun vulnerability and support to Physical chain rotations.", "将失衡易伤与辅助衔接至物理击破连携循环。"),
+    plan(["ダイアリン", "リュシア", "儀玄"], "命破支援と物理撃破を組む。", "Combines Rupture support with Physical stun.", "结合命破辅助与物理失衡。"),
+    plan(["ダイアリン", "ニコ", "カリン"], "防御低下・集敵・物理主力を組む代替案。", "An alternative using DEF shred, grouping, and a Physical carry.", "结合减防、聚怪与物理主C的替代方案。"),
+  ]),
+  "hsr:フック": batch12Options("hsr", "フック", "https://game8.jp/houkaistarrail/524680", mainDps, [
+    plan(["フック", "サンデー", "ケリュドラ", "丹恒・騰荒"], "行動支援、追加火力、耐久を組み、炎壊滅の強化スキルを回す。", "Pairs action support, extra damage, and sustain to cycle the Fire Destruction carry's enhanced Skill.", "组合行动辅助、追加输出与生存位，循环火系毁灭角色的强化战技。"),
+    plan(["フック", "桂乃芬", "アスター", "ギャラガー"], "燃焼・デバフ・速度支援・回復を組む低コスト案。", "An accessible team combining Burn, debuffs, SPD support, and healing.", "结合灼烧、减益、速度辅助与治疗的易获取方案。"),
+  ]),
+  "hsr:ペラ": batch12Options("hsr", "ペラ", "https://game8.jp/houkaistarrail/524683", support, [
+    plan(["黄泉", "ペラ", "銀狼"], "防御低下と複数デバフを重ね、黄泉の必殺技回転を支える。", "Stacks DEF shred and multiple debuffs to support Acheron's Ultimate rotation.", "叠加减防与多种减益，支撑黄泉的终结技循环。"),
+  ]),
+  "hsr:ヘルタ": batch12Options("hsr", "ヘルタ", "https://game8.jp/houkaistarrail/524689", mainDps, [
+    plan(["ヘルタ", "ジェイド", "トリビー", "アベンチュリン"], "全体攻撃と追加攻撃を重ね、複数敵での殲滅速度を上げる。", "Stacks AoE and follow-ups to improve clear speed against multiple enemies.", "叠加范围攻击与追加攻击，提升多目标清场效率。"),
+  ]),
+  "hsr:マダム・ヘルタ": batch12Options("hsr", "マダム・ヘルタ", "https://game8.jp/houkaistarrail/654345", mainDps, [
+    plan(["マダム・ヘルタ", "姫子・旅立ち", "ヴェルト", "フォフォ"], "知恵2名の条件と全体攻撃を活かし、EP支援と回復で安定させる。", "Uses the two-Erudition condition and AoE attacks with Energy support and sustain.", "利用双智识条件与范围攻击，并以能量辅助和生存位保证循环。"),
+    plan(["マダム・ヘルタ", "姫子・旅立ち", "長夜月", "ヒアンシー"], "知恵の追加攻撃とHP変動軸を回復で支える代替案。", "An alternative supporting Erudition follow-ups and an HP-fluctuation core with healing.", "以治疗支撑智识追加攻击与生命波动核心的替代方案。"),
+    plan(["マダム・ヘルタ", "アナイクス", "トリビー", "フォフォ"], "知恵の範囲火力と全体支援を組み合わせる。", "Combines Erudition AoE damage with team-wide support.", "结合智识范围输出与全队辅助。"),
+  ]),
+  "hsr:ミーシャ": batch12Options("hsr", "ミーシャ", "https://game8.jp/houkaistarrail/582412", mainDps, [
+    plan(["ミーシャ", "サンデー", "トリビー", "丹恒・騰荒"], "SP消費と行動支援を重ね、必殺技の段数と氷火力を支える。", "Stacks Skill Point consumption and action support to feed Ultimate hits and Ice damage.", "叠加战技点消耗与行动辅助，支撑终结技段数和冰元素输出。"),
+    plan(["ミーシャ", "停雲", "記憶主人公", "ギャラガー"], "EP支援、記憶支援、回復を組む所持対応案。", "A roster option combining Energy support, Remembrance support, and healing.", "结合能量辅助、记忆辅助和治疗的持有适配方案。"),
+  ]),
+  "hsr:モーディス": batch12Options("hsr", "モーディス", "https://game8.jp/houkaistarrail/662245", mainDps, [
+    plan(["モーディス", "記憶主人公", "キュレネ", "ヒアンシー"], "HP変動・記憶支援・回復を重ね、強化攻撃の循環を支える。", "Stacks HP-fluctuation synergy, Remembrance support, and healing for enhanced-attack rotations.", "叠加生命波动协同、记忆辅助与治疗，支撑强化攻击循环。"),
+    plan(["モーディス", "サンデー", "記憶主人公", "羅刹"], "行動支援と回復でHP消費型主力を安定させる。", "Uses advance and healing to stabilize an HP-consuming carry.", "以拉条与治疗稳定消耗生命的主C。"),
+    plan(["モーディス", "記憶主人公", "ブローニャ", "ギャラガー"], "記憶・再行動・回復を組む代替案。", "An alternative combining Remembrance, extra turns, and healing.", "结合记忆、再行动与治疗的替代方案。"),
+  ]),
+  "hsr:モゼ": batch12Options("hsr", "モゼ", "https://game8.jp/houkaistarrail/626982", t("追撃副火力", "Follow-up sub DPS", "追击副C"), [
+    plan(["不死途", "モゼ", "トリビー", "フォフォ"], "単体追撃、全体支援、回復を組み、獲物への攻撃回数を増やす。", "Combines single-target follow-ups, team support, and healing to raise attacks against Prey.", "组合单体追击、全队辅助与治疗，增加对猎物目标的攻击次数。"),
+    plan(["飛霄", "モゼ", "ロビン", "アベンチュリン"], "追加攻撃の頻度を飛霄の蓄積とモゼの追撃へつなげる。", "Channels Follow-Up frequency into Feixiao stacks and Moze's follow-ups.", "将追加攻击频率转化为飞霄叠层和貊泽的追击。"),
+    plan(["雪衣", "モゼ", "ペラ", "ギャラガー"], "追加攻撃・デバフ・回復を組む低コスト案。", "An accessible team combining follow-ups, debuffs, and healing.", "结合追击、减益与治疗的易获取方案。"),
+  ]),
+  "hsr:リンクス": batch12Options("hsr", "リンクス", "https://game8.jp/houkaistarrail/539919", t("耐久・回復", "Sustain & healing", "生存与治疗"), [
+    plan(["モーディス", "サンデー", "トリビー", "リンクス"], "HP変動主力へ行動支援・全体支援・回復を渡す。", "Provides advance, team support, and healing for an HP-fluctuation carry.", "为生命波动主C提供拉条、全队辅助与治疗。"),
+    plan(["クラーラ", "停雲", "記憶主人公", "リンクス"], "被弾しやすい主力へ回復とサバイバル反応を渡す。", "Provides healing and Survival Response to a carry that benefits from being hit.", "为受击受益的主C提供治疗和求生反应。"),
+  ]),
+  "genshin:クレー": batch12Options("genshin", "クレー", "https://game8.jp/genshin/352608", mainDps, [
+    plan(["クレー", "夜蘭", "楓原万葉", "ベネット"], "水付着、耐性低下、攻撃支援で炎表アタッカーの反応火力を支える。", "Hydro application, RES shred, and ATK support amplify the Pyro on-field carry.", "以挂水、减抗和攻击辅助强化火系站场主C的反应伤害。"),
+    plan(["クレー", "夜蘭", "ナヒーダ", "久岐忍"], "水・草反応と回復を組み、複数の反応機会を作る。", "Combines Hydro-Dendro reactions and healing to create multiple reaction windows.", "结合水草反应与治疗，创造多种反应窗口。"),
+    plan(["クレー", "フィッシュル", "北斗", "ベネット"], "炎・雷の控え火力と攻撃支援を組む。", "Pairs off-field Pyro-Electro damage with ATK support.", "结合火雷后台输出与攻击辅助。"),
+  ]),
+  "genshin:クロリンデ": batch12Options("genshin", "クロリンデ", "https://game8.jp/genshin/539444", mainDps, [
+    plan(["クロリンデ", "フィッシュル", "ナヒーダ", "楓原万葉"], "雷・草の反応と耐性低下で表アタッカーを支える。", "Uses Electro-Dendro reactions and RES shred to support the on-field carry.", "利用雷草反应与减抗支撑站场主C。"),
+    plan(["クロリンデ", "九条裟羅", "シュヴルーズ", "ベネット"], "炎・雷限定の過負荷軸で攻撃支援と耐性低下を重ねる。", "A Pyro-Electro Overload team that stacks ATK support and RES shred.", "火雷限定的超载体系，叠加攻击辅助与减抗。"),
+    plan(["クロリンデ", "夜蘭", "フィッシュル", "楓原万葉"], "水付着、雷控え火力、耐性低下を組む感電寄り案。", "An Electro-Charged-oriented plan with Hydro, off-field Electro, and RES shred.", "结合挂水、后台雷伤与减抗的感电向方案。"),
+  ]),
+  "genshin:コレイ": batch12Options("genshin", "コレイ", "https://game8.jp/genshin/466765", t("草サブ火力・反応起点", "Dendro sub DPS & reaction enabler", "草系副C与反应起点"), [
+    plan(["コレイ", "アルハイゼン", "行秋", "久岐忍"], "草・水・雷を組み、草反応と回復を安定させる。", "Combines Dendro, Hydro, and Electro for Dendro reactions and healing.", "结合草、水、雷，稳定草元素反应与治疗。"),
+    plan(["ティナリ", "八重神子", "コレイ", "鍾離"], "草共鳴と雷反応にシールドを合わせる。", "Pairs Dendro resonance and Electro reactions with shielding.", "将草共鸣和雷元素反应与护盾结合。"),
+    plan(["珊瑚宮心海", "コレイ", "ナヒーダ", "ニィロウ"], "草水のみで開花と回復を回す。", "Runs Bloom and healing using only Dendro and Hydro.", "仅用草水角色循环绽放与治疗。"),
+  ]),
+  "genshin:ゴロー": batch12Options("genshin", "ゴロー", "https://game8.jp/genshin/395529", support, [
+    plan(["茲白", "コロンビーナ", "イルーガ", "ゴロー"], "岩元素人数と月結晶を活かす岩元素編成。", "A Geo team using Geo-member scaling and Lunar Crystallize.", "利用岩元素人数加成与月结晶的岩元素队伍。"),
+    plan(["荒瀧一斗", "ゴロー", "イルーガ", "鍾離"], "防御参照の岩主力へ岩支援とシールドを渡す。", "Provides Geo support and shielding to a DEF-scaling Geo carry.", "为防御倍率岩系主C提供岩元素辅助与护盾。"),
+  ]),
+  "genshin:コロンビーナ": batch12Options("genshin", "コロンビーナ", "https://game8.jp/genshin/756695", t("水サブ火力・支援", "Hydro sub DPS & support", "水系副C与辅助"), [
+    plan(["ネフェル", "コロンビーナ", "ニィロウ", "ラウマ"], "月反応と草水の相互作用を重ねる。", "Stacks Lunar reactions and Dendro-Hydro interaction.", "叠加月反应与草水相互作用。"),
+    plan(["茲白", "コロンビーナ", "イルーガ", "リンネア"], "月結晶と水支援を組む構成。", "Combines Lunar Crystallize with Hydro support.", "结合月结晶与水系辅助。"),
+    plan(["フリンズ", "コロンビーナ", "スクロース", "イネファ"], "水・風・雷の反応と元素熟知支援を組む。", "Combines Hydro-Anemo-Electro reactions with Elemental Mastery support.", "结合水风雷反应与元素精通辅助。"),
+  ]),
+  "genshin:シグウィン": batch12Options("genshin", "シグウィン", "https://game8.jp/genshin/620751", t("回復・待機中支援", "Healing & off-field support", "治疗与后台辅助"), [
+    plan(["ナヴィア", "千織", "フリーナ", "シグウィン"], "岩共鳴とHP変動を全体回復で支える。", "Supports Geo resonance and HP fluctuation with team-wide healing.", "以全队治疗支撑岩共鸣与生命波动。"),
+    plan(["胡桃", "フリーナ", "楓原万葉", "シグウィン"], "水付着、耐性低下、回復を炎主力へ組み合わせる。", "Combines Hydro, RES shred, and healing for a Pyro carry.", "为火系主C组合挂水、减抗与治疗。"),
+    plan(["ナヒーダ", "フリーナ", "ニィロウ", "シグウィン"], "草水のみで反応と回復を回す。", "Runs Dendro-Hydro reactions and healing with the listed core.", "利用所列核心循环草水反应与治疗。"),
+  ]),
+  "zzz:ニコ": batch12Options("zzz", "ニコ", "https://game8.jp/zenless/607758", support, [
+    plan(["浮波柚葉", "ニコ", "星見雅"], "異常主力の蓄積と支援を、集敵・防御デバフで補助する。", "Supports an Anomaly carry's buildup with grouping and DEF shred.", "以聚怪与减防辅助异常主C的积累和输出。"),
+    plan(["アストラ", "0号・アンビー", "ニコ"], "支援と集敵を電気直撃主力へ組み合わせる。", "Combines support and grouping for an Electric direct-damage carry.", "为电系直伤主C组合辅助与聚怪。"),
+    plan(["青衣", "ニコ", "朱鳶"], "ブレイク、集敵、防御デバフをエーテル主力へつなぐ。", "Links stun, grouping, and DEF shred to an Ether carry.", "将失衡、聚怪与减防衔接至以太主C。"),
+  ]),
+  "zzz:ノルムー": batch12Options("zzz", "ノルムー", "https://game8.jp/zenless/760639", t("撃破", "Stun", "击破"), [
+    plan(["スターライト･ビリー", "ノルムー", "リュシア"], "命破主力へ連携誘発と支援を組む。", "Pairs Chain triggering and support with a Rupture carry.", "为命破主C组合连携诱发与辅助。"),
+    plan(["ノルムー", "千夏", "イヴリン"], "炎のブレイク・支援・強攻を組む。", "Combines Fire stun, support, and Attack.", "结合火系失衡、辅助与强攻。"),
+    plan(["ノルムー", "千夏", "ピュロイス"], "エーテル強攻へブレイクと支援を渡す。", "Provides stun and support for an Ether Attack carry.", "为以太强攻主C提供失衡与辅助。"),
+  ]),
+  "zzz:ヒューゴ": batch12Options("zzz", "ヒューゴ", "https://game8.jp/zenless/666110", mainDps, [
+    plan(["ヒューゴ", "ダイアリン", "ライト"], "高いブレイク頻度を氷強攻の決定打へつなぐ。", "Channels frequent stun windows into an Ice Attack carry's finishing damage.", "将高频失衡窗口转化为冰系强攻主C的终结伤害。"),
+    plan(["ヒューゴ", "アンビー", "プルクラ"], "電気・物理の撃破役でブレイクを補助する代替案。", "An alternative using Electric and Physical stun agents to support Stun.", "使用电系与物理击破角色辅助失衡的替代方案。"),
+  ]),
+  "zzz:ピュロイス": batch12Options("zzz", "ピュロイス", "https://game8.jp/zenless/781979", mainDps, [
+    plan(["千夏", "ピュロイス", "ダイアリン"], "支援と物理撃破を組み、終結スキルの火力窓を作る。", "Combines support and Physical stun to create Ultimate damage windows.", "结合辅助与物理失衡，创造终结技输出窗口。"),
+    plan(["アンビー", "ニコ", "ピュロイス"], "ブレイク、集敵、防御デバフをエーテル強攻へつなぐ。", "Links stun, grouping, and DEF shred to an Ether Attack carry.", "将失衡、聚怪与减防衔接至以太强攻主C。"),
+  ]),
+  "zzz:ビリー": batch12Options("zzz", "ビリー", "https://game8.jp/zenless/607806", mainDps, [
+    plan(["ビリー", "アストラ", "ニコ"], "支援、集敵、防御デバフで遠距離物理火力を支える。", "Uses support, grouping, and DEF shred for ranged Physical damage.", "以辅助、聚怪与减防支撑远程物理输出。"),
+    plan(["シーザー", "ビリー", "「トリガー」"], "防護とオフフィールド撃破を遠距離主力へ組み合わせる。", "Combines Defense and off-field stun for a ranged carry.", "为远程主C组合防护与后台失衡。"),
+    plan(["ビリー", "アンビー", "ニコ"], "低コストのブレイク・集敵・防御デバフ軸。", "An accessible stun, grouping, and DEF-shred core.", "易获取的失衡、聚怪与减防核心。"),
+  ]),
+  "zzz:プルクラ": batch12Options("zzz", "プルクラ", "https://game8.jp/zenless/665675", t("撃破・追加攻撃", "Stun & follow-up", "击破与追加攻击"), [
+    plan(["0号・アンビー", "プルクラ", "オルペウス&「鬼火」"], "追加攻撃と撃破を組み、電気主力の火力窓を作る。", "Combines follow-ups and stun to create burst windows for an Electric carry.", "结合追加攻击与失衡，为电系主C创造输出窗口。"),
+    plan(["プルクラ", "狛野真斗", "潘引壺"], "追加攻撃とブレイクを支援・耐久枠と組み合わせる。", "Combines follow-ups and stun with the listed support and sustain slots.", "将追加攻击和失衡与所列辅助、生存位结合。"),
+  ]),
+  "hsr:ルカ": batch13Options("hsr", "ルカ", "https://game8.jp/houkaistarrail/529689", t("持続ダメージ・デバフ", "DoT & debuff", "持续伤害与减益"), [
+    plan(["カフカ", "ルカ", "セイレンス", "フォフォ"], "裂創と他の持続ダメージをカフカの起爆、支援、回復でつなぐ。", "Connects Bleed and other DoTs through Kafka detonation, support, and sustain.", "以卡芙卡引爆、辅助和生存位衔接裂伤与其他持续伤害。"),
+    plan(["ブートヒル", "調和主人公", "ルカ", "ギャラガー"], "物理弱点と超撃破を組み、ルカの裂創・デバフを補助に使う。", "Pairs Physical weakness and Super Break, using Luka's Bleed and debuffs as support.", "组合物理弱点与超击破，将卢卡的裂伤和减益作为辅助。"),
+  ]),
+  "hsr:雲璃": batch13Options("hsr", "雲璃", "https://game8.jp/houkaistarrail/613642", mainDps, [
+    plan(["雲璃", "サンデー", "ロビン", "丹恒・騰荒"], "行動支援、全体強化、耐久でカウンター主力の反撃機会を支える。", "Uses advance, team buffs, and sustain to support a counter carry's retaliation windows.", "以拉条、全队增益与生存位支撑反击主C的反击窗口。"),
+    plan(["雲璃", "ジェイド", "ロビン", "丹恒・騰荒"], "追加攻撃と全体火力を重ねる複数敵向けの代替案。", "A multi-target alternative stacking follow-ups and team-wide damage.", "叠加追加攻击与全队输出的多目标替代方案。"),
+    plan(["雲璃", "ルアン・メェイ", "記憶主人公", "リンクス"], "撃破支援と回復を組み、カウンターの継続性を確保する。", "Combines Break support and healing to keep counter rotations stable.", "结合击破辅助与治疗，保证反击循环稳定。"),
+  ]),
+  "hsr:遠坂凛": batch13Options("hsr", "遠坂凛", "https://game8.jp/houkaistarrail/785266", mainDps, [
+    plan(["遠坂凛", "アーチャー", "花火", "丹恒・騰荒"], "SP連携、行動支援、耐久を組み、強化スキルを回す。", "Combines Skill Point synergy, advance, and sustain for enhanced Skill rotations.", "组合战技点联动、拉条与生存位，循环强化战技。"),
+    plan(["遠坂凛", "ケリュドラ", "花火", "丹恒・騰荒"], "量子知恵主力へ追加火力・行動支援・耐久を渡す。", "Provides added damage, advance, and sustain to the Quantum Erudition carry.", "为量子智识主C提供追加输出、拉条和生存。"),
+  ]),
+  "hsr:火花": batch13Options("hsr", "火花", "https://game8.jp/houkaistarrail/754095", mainDps, [
+    plan(["火花", "銀狼Lv.999", "爻光", "フォフォ"], "愉悦主力へ条件を満たす連携、支援、回復を組む。", "Pairs the Elation carry with qualifying synergy, support, and healing.", "为欢愉主C搭配满足条件的联动、辅助与治疗。"),
+    plan(["火花", "爻光", "花火", "丹恒・騰荒"], "追加火力と行動支援を組み、愉悦スキルの回転を支える。", "Combines added damage and advance to support Elation Skill rotations.", "组合追加输出与拉条，支撑欢愉技能循环。"),
+  ]),
+  "hsr:寒鴉": batch13Options("hsr", "寒鴉", "https://game8.jp/houkaistarrail/557338", support, [
+    plan(["アーチャー", "寒鴉", "サフェル", "丹恒・騰荒"], "SP供給と単体支援を、量子主力と追加火力へつなぐ。", "Links Skill Point supply and single-target support to a Quantum carry and added damage.", "将战技点供给和单体辅助衔接至量子主C与追加输出。"),
+    plan(["アルジェンティ", "停雲", "寒鴉", "フォフォ"], "EP支援、SP供給、回復を範囲主力へ組み合わせる。", "Combines Energy support, Skill Point supply, and healing for an AoE carry.", "为范围主C组合能量辅助、战技点供给与治疗。"),
+  ]),
+  "hsr:帰忘の流離人": batch13Options("hsr", "帰忘の流離人", "https://game8.jp/houkaistarrail/643244", t("超撃破支援", "Super Break support", "超击破辅助"), [
+    plan(["ホタル", "帰忘の流離人", "ダリア", "霊砂"], "弱点撃破を主軸に、超撃破支援と回復を重ねる。", "Builds around Weakness Break with Super Break support and healing.", "围绕弱点击破叠加超击破辅助与治疗。"),
+    plan(["ブートヒル", "帰忘の流離人", "ルアン・メェイ", "霊砂"], "物理撃破主力へ弱点撃破効率、耐性低下、回復を組む。", "Pairs Weakness Break Efficiency, RES shred, and healing for a Physical Break carry.", "为物理击破主C组合弱点击破效率、减抗与治疗。"),
+    plan(["姫子", "帰忘の流離人", "ルアン・メェイ", "ギャラガー"], "炎範囲火力と超撃破支援・回復を組み合わせる。", "Combines Fire AoE damage with Super Break support and healing.", "结合火系范围输出、超击破辅助与治疗。"),
+  ]),
+  "hsr:景元": batch13Options("hsr", "景元", "https://game8.jp/houkaistarrail/524677", mainDps, [
+    plan(["景元", "サンデー", "ロビン", "丹恒・騰荒"], "神君の手数を行動支援と全体強化で支える。", "Supports Lightning-Lord frequency with advance and team-wide buffs.", "以拉条与全队增益支撑神君的攻击频率。"),
+    plan(["景元", "停雲", "アスター", "ギャラガー"], "EP、速度、回復を組む恒常中心の代替案。", "A standard-focused alternative with Energy, SPD, and healing.", "以能量、速度与治疗组成的常驻角色替代方案。"),
+    plan(["景元", "停雲", "寒鴉", "リンクス"], "SP供給・EP支援と量子回復を組み合わせる。", "Combines Skill Point and Energy support with Quantum healing.", "结合战技点、能量辅助与量子治疗。"),
+  ]),
+  "hsr:桂乃芬": batch13Options("hsr", "桂乃芬", "https://game8.jp/houkaistarrail/545409", t("持続ダメージ・デバフ", "DoT & debuff", "持续伤害与减益"), [
+    plan(["カフカ", "桂乃芬", "セイレンス", "フォフォ"], "燃焼をカフカの起爆、支援、回復へつなぐ。", "Connects Burn to Kafka detonation, support, and sustain.", "将灼烧衔接至卡芙卡引爆、辅助与生存位。"),
+    plan(["桂乃芬", "サンポ", "アスター", "ギャラガー"], "複数DoT、速度支援、回復を組む所持対応案。", "A roster option with multiple DoTs, SPD support, and healing.", "包含多种持续伤害、速度辅助与治疗的持有适配方案。"),
+    plan(["桂乃芬", "セーバル", "アスター", "ナターシャ"], "燃焼・感電・速度支援・回復を組み合わせる。", "Combines Burn, Shock, SPD support, and healing.", "结合灼烧、触电、速度辅助与治疗。"),
+  ]),
+  "genshin:シトラリ": batch13Options("genshin", "シトラリ", "https://game8.jp/genshin/662570", support, [
+    plan(["マーヴィカ", "シトラリ", "シロネン", "ベネット"], "炎主力へシールド、耐性低下、攻撃支援を重ねる。", "Layers shielding, RES shred, and ATK support for a Pyro carry.", "为火系主C叠加护盾、减抗与攻击辅助。"),
+    plan(["ヌヴィレット", "フリーナ", "シトラリ", "シロネン"], "水主力の反応、全体バフ、耐性低下を組み合わせる。", "Combines reactions, team buffs, and RES shred for a Hydro carry.", "为水系主C组合反应、全队增益与减抗。"),
+    plan(["嘉明", "シトラリ", "閑雲", "ベネット"], "落下攻撃の炎主力へ氷反応、落下支援、攻撃支援を渡す。", "Provides Cryo reactions, plunge support, and ATK support to a Pyro plunge carry.", "为火系下落主C提供冰元素反应、下落辅助与攻击辅助。"),
+  ]),
+  "genshin:シャルロット": batch13Options("genshin", "シャルロット", "https://game8.jp/genshin/527370", t("回復・氷付着", "Healing & Cryo application", "治疗与冰元素附着"), [
+    plan(["ヌヴィレット", "フリーナ", "楓原万葉", "シャルロット"], "水主力、全体バフ、耐性低下、全体回復を組む。", "Combines a Hydro carry, team buffs, RES shred, and team healing.", "组合水系主C、全队增益、减抗与全队治疗。"),
+    plan(["リオセスリ", "フリーナ", "楓原万葉", "シャルロット"], "氷主力へ水付着、集敵・耐性低下、回復を渡す。", "Provides Hydro, grouping/RES shred, and healing for a Cryo carry.", "为冰系主C提供挂水、聚怪减抗与治疗。"),
+    plan(["ナヒーダ", "久岐忍", "行秋", "シャルロット"], "草・水・雷反応に氷回復枠を組み合わせる。", "Adds a Cryo healing slot to Dendro-Hydro-Electro reactions.", "为草水雷反应组合冰系治疗位。"),
+  ]),
+  "genshin:シュヴルーズ": batch13Options("genshin", "シュヴルーズ", "https://game8.jp/genshin/574300", support, [
+    plan(["ヴァレサ", "イアンサ", "ドゥリン", "シュヴルーズ"], "炎・雷限定の過負荷軸で支援と回復を組む。", "Builds Pyro-Electro-only Overload with support and healing.", "以火雷限定的超载体系组合辅助与治疗。"),
+    plan(["クロリンデ", "フィッシュル", "ドゥリン", "シュヴルーズ"], "雷主力へ雷副火力、炎枠、過負荷支援を渡す。", "Pairs an Electro carry with an Electro sub-DPS, Pyro slot, and Overload support.", "为雷系主C搭配雷副C、火元素位与超载辅助。"),
+    plan(["アルレッキーノ", "フィッシュル", "ベネット", "シュヴルーズ"], "炎・雷の表火力と攻撃支援、過負荷支援を重ねる。", "Stacks Pyro-Electro on-field damage, ATK support, and Overload support.", "叠加火雷站场输出、攻击辅助与超载辅助。"),
+  ]),
+  "genshin:ジン": batch13Options("genshin", "ジン", "https://game8.jp/genshin/352599", t("回復・風支援", "Healing & Anemo support", "治疗与风元素辅助"), [
+    plan(["雷電将軍", "フリーナ", "夜蘭", "ジン"], "雷・水の爆発循環とHP変動を全体回復で支える。", "Supports Electro-Hydro Burst rotations and HP fluctuation with team healing.", "以全队治疗支撑雷水爆发循环与生命波动。"),
+    plan(["リオセスリ", "ベネット", "シロネン", "ジン"], "氷主力へ炎支援、耐性低下、回復を組む。", "Pairs Pyro support, RES shred, and healing for a Cryo carry.", "为冰系主C组合火元素辅助、减抗与治疗。"),
+    plan(["放浪者", "フリーナ", "ファルザン", "ジン"], "風主力へ全体バフ、風支援、回復を渡す。", "Provides team buffs, Anemo support, and healing for an Anemo carry.", "为风系主C提供全队增益、风元素辅助与治疗。"),
+  ]),
+  "genshin:スカーク": batch13Options("genshin", "スカーク", "https://game8.jp/genshin/662513", mainDps, [
+    plan(["スカーク", "フリーナ", "夜蘭", "エスコフィエ"], "水・氷の条件を満たし、全体バフと氷支援を組む。", "Meets Hydro-Cryo conditions while providing team buffs and Cryo support.", "满足水冰条件，并提供全队增益与冰元素辅助。"),
+    plan(["スカーク", "モナ", "申鶴", "エスコフィエ"], "氷主力へ水付着、氷強化、氷支援を重ねる。", "Stacks Hydro application, Cryo amplification, and Cryo support for the carry.", "为冰系主C叠加挂水、冰元素增幅与冰元素辅助。"),
+    plan(["スカーク", "行秋", "ロサリア", "ダリア"], "水付着、氷共鳴、耐久を組む代替案。", "An alternative with Hydro application, Cryo resonance, and sustain.", "结合挂水、冰元素共鸣与生存位的替代方案。"),
+  ]),
+  "genshin:スクロース": batch13Options("genshin", "スクロース", "https://game8.jp/genshin/352613", support, [
+    plan(["マーヴィカ", "ベネット", "スクロース", "シトラリ"], "炎主力へ攻撃支援、元素熟知共有、氷反応支援を組む。", "Combines ATK support, Elemental Mastery sharing, and Cryo reactions for a Pyro carry.", "为火系主C组合攻击辅助、元素精通共享与冰元素反应辅助。"),
+    plan(["フリンズ", "アイノ", "スクロース", "イネファ"], "水・風・雷の反応へ集敵と元素熟知支援を渡す。", "Provides grouping and Elemental Mastery support to Hydro-Anemo-Electro reactions.", "为水风雷反应提供聚怪与元素精通辅助。"),
+    plan(["クレー", "フリーナ", "ベネット", "スクロース"], "炎主力へ水付着、攻撃支援、拡散支援を組み合わせる。", "Combines Hydro application, ATK support, and Swirl support for a Pyro carry.", "为火系主C组合挂水、攻击辅助与扩散辅助。"),
+  ]),
+  "zzz:プロメイア": batch13Options("zzz", "プロメイア", "https://game8.jp/zenless/760627", t("異常", "Anomaly", "异常"), [
+    plan(["プロメイア", "南宮羽", "浮波柚葉"], "氷異常主力へ異常支援と全体支援を組む。", "Pairs Anomaly support and team support with an Ice Anomaly carry.", "为冰系异常主C组合异常辅助与全队辅助。"),
+    plan(["プロメイア", "ビビアン", "浮波柚葉"], "氷・エーテルの異常蓄積と支援を重ねる。", "Stacks Ice-Ether Anomaly buildup with support.", "叠加冰与以太异常积累及辅助。"),
+    plan(["プロメイア", "パイパー", "ルーシー"], "異常・物理強撃と炎支援を組む代替案。", "An alternative combining Anomaly, Physical Assault, and Fire support.", "结合异常、物理强击与火元素辅助的替代方案。"),
+  ]),
+  "zzz:ベン": batch13Options("zzz", "ベン", "https://game8.jp/zenless/607796", t("防護・反撃", "Defense & counter", "防护与反击"), [
+    plan(["イヴリン", "クレタ", "ベン"], "炎強攻、炎撃破、防護を組み、ブレイクとガードを両立する。", "Combines Fire Attack, Fire Stun, and Defense for both Stun windows and guarding.", "组合火系强攻、火系击破与防护，兼顾失衡窗口和格挡。"),
+    plan(["アストラ", "クレタ", "ベン"], "支援、炎撃破、防護の安定した編成。", "A stable team of support, Fire Stun, and Defense.", "由辅助、火系击破与防护组成的稳定队伍。"),
+    plan(["プルクラ", "ベン", "ルーシー"], "物理撃破、防護、炎支援を組む代替案。", "An alternative with Physical Stun, Defense, and Fire support.", "结合物理击破、防护与火元素辅助的替代方案。"),
+  ]),
+  "zzz:ライカン": batch13Options("zzz", "ライカン", "https://game8.jp/zenless/607802", t("撃破", "Stun", "击破"), [
+    plan(["星見雅", "蒼角", "ライカン"], "氷主力へ氷支援とブレイクを組み、凍結・ブレイクの火力窓を作る。", "Pairs Cryo support and Stun with an Ice carry to create Freeze/Stun damage windows.", "为冰系主C组合冰元素辅助与失衡，创造冻结/失衡输出窗口。"),
+    plan(["ヒューゴ", "ライト", "ライカン"], "氷強攻へ2種の撃破役を組み、決定打の機会を増やす。", "Uses two Stun agents with an Ice Attack carry to increase finishing windows.", "为冰系强攻主C搭配两名击破角色，增加终结输出机会。"),
+    plan(["イドリー", "リュシア", "ライカン"], "命破主力へ支援と氷撃破を渡す。", "Provides support and Ice Stun to a Rupture carry.", "为命破主C提供辅助与冰系击破。"),
+  ]),
+  "zzz:リュシア": batch13Options("zzz", "リュシア", "https://game8.jp/zenless/712532", support, [
+    plan(["儀玄", "橘福福", "リュシア"], "命破主力へ炎撃破とエーテル支援を組む。", "Pairs Fire Stun and Ether support with a Rupture carry.", "为命破主C组合火系击破与以太辅助。"),
+    plan(["儀玄", "ダイアリン", "リュシア"], "エーテル命破主力へ物理撃破と支援を渡す。", "Provides Physical Stun and support to an Ether Rupture carry.", "为以太命破主C提供物理击破与辅助。"),
+    plan(["狛野真斗", "潘引壺", "リュシア"], "主力、防護、支援を組む代替案。", "An alternative with carry, Defense, and support roles.", "由主C、防护与辅助组成的替代方案。"),
+  ]),
+  "zzz:儀玄": batch13Options("zzz", "儀玄", "https://game8.jp/zenless/681363", t("命破", "Rupture", "命破"), [
+    plan(["儀玄", "ダイアリン", "リュシア"], "物理撃破とエーテル支援を命破主力の透徹火力へつなぐ。", "Links Physical Stun and Ether support to a Rupture carry's Sheer damage.", "将物理击破与以太辅助衔接至命破主C的透彻伤害。"),
+    plan(["儀玄", "アストラ", "「トリガー」"], "全体支援とオフフィールド撃破で主力の火力窓を作る。", "Creates damage windows with team support and off-field Stun.", "以全队辅助和后台击破创造主C的输出窗口。"),
+    plan(["儀玄", "潘引壺", "クレタ"], "防護と炎撃破を組む代替案。", "An alternative combining Defense and Fire Stun.", "结合防护与火系击破的替代方案。"),
+  ]),
+  "zzz:橘福福": batch13Options("zzz", "橘福福", "https://game8.jp/zenless/676195", t("撃破・連携支援", "Stun & Chain support", "击破与连携辅助"), [
+    plan(["儀玄", "橘福福", "アストラ"], "命破主力へ炎撃破と全体支援を渡す。", "Provides Fire Stun and team support to a Rupture carry.", "为命破主C提供火系击破与全队辅助。"),
+    plan(["ヒューゴ", "橘福福", "ライト"], "氷強攻へ炎撃破2枠を組み、ブレイク回数を確保する。", "Pairs two Fire Stun slots with an Ice Attack carry to secure Stun frequency.", "为冰系强攻主C搭配两名火系击破角色，确保失衡频率。"),
+    plan(["「11号」", "橘福福", "ルーシー"], "炎強攻へ撃破と炎支援を組み合わせる。", "Combines Stun and Fire support for a Fire Attack carry.", "为火系强攻主C组合击破与火元素辅助。"),
+  ]),
+  "genshin:セトス": batch14Options("genshin", "セトス", "https://game8.jp/genshin/604468", mainDps, [
+    plan(["セトス", "コロンビーナ", "イネファ", "シロネン"], "月反応・支援・耐性低下を重ね、雷アタッカーの重撃／爆発を支える。", "Stacks Lunar reactions, support, and RES shred for the Electro carry's charged shots and Burst.", "叠加月反应、辅助与减抗，支撑雷系主C的重击与爆发。"),
+    plan(["セトス", "フリーナ", "ラウマ", "白朮"], "水・草反応と回復を組み、元素反応を安定させる。", "Combines Hydro-Dendro reactions and healing to stabilize elemental reactions.", "结合水草反应与治疗，稳定元素反应。"),
+    plan(["セトス", "八重神子", "ナヒーダ", "鍾離"], "雷・草の反応と中断耐性を組む代替案。", "An alternative with Electro-Dendro reactions and interruption resistance.", "结合雷草反应与抗打断的替代方案。"),
+  ]),
+  "genshin:セノ": batch14Options("genshin", "セノ", "https://game8.jp/genshin/464157", mainDps, [
+    plan(["セノ", "ナヒーダ", "フリーナ", "白朮"], "草・水の付着と回復で激化系の継続火力を支える。", "Uses Dendro-Hydro application and healing to support sustained Quicken-based damage.", "以草水附着与治疗支撑激化体系的持续输出。"),
+    plan(["セノ", "夜蘭", "ナヒーダ", "久岐忍"], "水・草・雷の高頻度付着で超開花を回す。", "Cycles Hyperbloom through frequent Hydro, Dendro, and Electro application.", "通过高频水草雷附着循环超绽放。"),
+    plan(["セノ", "フィッシュル", "ナヒーダ", "白朮"], "雷副火力と草・回復支援を組む激化案。", "An Aggravate option with Electro sub-DPS and Dendro-healing support.", "结合雷系副C与草系治疗辅助的超激化方案。"),
+  ]),
+  "genshin:ダリア": batch14Options("genshin", "ダリア", "https://game8.jp/genshin/678676", t("シールド・回復", "Shield & healing", "护盾与治疗"), [
+    plan(["スカーク", "フリーナ", "エスコフィエ", "ダリア"], "水・氷の条件と回復を組み、氷主力の継続火力を支える。", "Pairs Hydro-Cryo conditions and healing for sustained Cryo carry damage.", "结合水冰条件与治疗，支撑冰系主C持续输出。"),
+    plan(["放浪者", "ファルザン", "ベネット", "ダリア"], "風主力へ風支援、攻撃支援、シールドと回復を組む。", "Adds Anemo support, ATK support, shielding, and healing for an Anemo carry.", "为风系主C组合风系辅助、攻击辅助、护盾与治疗。"),
+    plan(["宵宮", "夜蘭", "ベネット", "ダリア"], "炎主力へ水付着、攻撃支援、耐久を組み合わせる。", "Combines Hydro application, ATK support, and sustain for a Pyro carry.", "为火系主C组合挂水、攻击辅助与生存位。"),
+  ]),
+  "genshin:タルタリヤ": batch14Options("genshin", "タルタリヤ", "https://game8.jp/genshin/358211", mainDps, [
+    plan(["タルタリヤ", "香菱", "楓原万葉", "ベネット"], "水付着、炎控え火力、耐性低下、攻撃支援を重ねる。", "Stacks Hydro application, off-field Pyro, RES shred, and ATK support.", "叠加挂水、后台火伤、减抗与攻击辅助。"),
+    plan(["ヌヴィレット", "タルタリヤ", "楓原万葉", "シロネン"], "水主力へ水共鳴と耐性低下を組み合わせる。", "Pairs Hydro Resonance and RES shred for a Hydro carry.", "为水系主C组合水元素共鸣与减抗。"),
+    plan(["タルタリヤ", "フィッシュル", "楓原万葉", "北斗"], "感電と風支援を組む代替案。", "An alternative combining Electro-Charged and Anemo support.", "结合感电与风元素辅助的替代方案。"),
+  ]),
+  "genshin:チャスカ": batch14Options("genshin", "チャスカ", "https://game8.jp/genshin/624943", mainDps, [
+    plan(["チャスカ", "マーヴィカ", "ベネット", "シトラリ"], "炎要素と氷反応、攻撃支援を重ねて元素変化重撃を支える。", "Stacks Pyro, Cryo reactions, and ATK support for elemental-converted charged shots.", "叠加火元素、冰元素反应与攻击辅助，支撑元素转化重击。"),
+    plan(["チャスカ", "コロンビーナ", "イネファ", "ベネット"], "水・雷反応と攻撃支援を組み合わせる。", "Combines Hydro-Electro reactions with ATK support.", "结合水雷反应与攻击辅助。"),
+    plan(["チャスカ", "フリーナ", "マーヴィカ", "ベネット"], "水・炎反応と攻撃支援を重ねる代替案。", "An alternative stacking Hydro-Pyro reactions and ATK support.", "叠加水火反应与攻击辅助的替代方案。"),
+  ]),
+  "genshin:ディオナ": batch14Options("genshin", "ディオナ", "https://game8.jp/genshin/358215", t("シールド・回復", "Shield & healing", "护盾与治疗"), [
+    plan(["甘雨", "モナ", "ウェンティ", "ディオナ"], "凍結、集敵、氷共鳴、シールドと回復を組み合わせる。", "Combines Freeze, grouping, Cryo Resonance, shielding, and healing.", "结合冻结、聚怪、冰元素共鸣、护盾与治疗。"),
+    plan(["ヌヴィレット", "ナヒーダ", "楓原万葉", "ディオナ"], "水・草反応に風支援と耐久を添える。", "Adds Anemo support and sustain to Hydro-Dendro reactions.", "为水草反应补充风系辅助与生存位。"),
+    plan(["神里綾華", "楓原万葉", "申鶴", "ディオナ"], "氷主力へ耐性低下、氷支援、シールドと回復を組む。", "Pairs RES shred, Cryo support, shielding, and healing for a Cryo carry.", "为冰系主C组合减抗、冰系辅助、护盾与治疗。"),
+  ]),
+  "genshin:ディシア": batch14Options("genshin", "ディシア", "https://game8.jp/genshin/468760", t("耐久・炎支援", "Sustain & Pyro support", "生存与火系辅助"), [
+    plan(["キィニチ", "ディシア", "エミリエ", "ベネット"], "燃焼、草控え火力、炎共鳴、肩代わりを組み合わせる。", "Combines Burning, Dendro off-field damage, Pyro Resonance, and damage mitigation.", "结合燃烧、草系后台输出、火元素共鸣与伤害分担。"),
+    plan(["ムアラニ", "エミリエ", "ディシア", "シロネン"], "水・草・炎の反応と耐性低下を組む。", "Combines Hydro-Dendro-Pyro reactions and RES shred.", "结合水草火反应与减抗。"),
+    plan(["ディシア", "雷電将軍", "シュヴルーズ", "ベネット"], "炎・雷限定の過負荷と攻撃支援を組む。", "Builds Pyro-Electro-only Overload with ATK support.", "以火雷限定超载体系组合攻击辅助。"),
+  ]),
+  "genshin:ティナリ": batch14Options("genshin", "ティナリ", "https://game8.jp/genshin/466622", mainDps, [
+    plan(["ティナリ", "八重神子", "ナヒーダ", "鍾離"], "草・雷反応、草付着、耐久を組む激化主軸。", "A Quicken core with Dendro-Electro reactions, Dendro application, and sustain.", "以草雷反应、草元素附着与生存位组成的激化核心队。"),
+    plan(["ティナリ", "フィッシュル", "旅人（草）", "綺良々"], "雷副火力、草共鳴、シールドを組む所持対応案。", "A roster-friendly option with Electro sub-DPS, Dendro Resonance, and shielding.", "结合雷系副C、草元素共鸣与护盾的持有适配方案。"),
+  ]),
+  "zzz:狛野真斗": batch14Options("zzz", "狛野真斗", "https://game8.jp/zenless/695655", t("命破", "Rupture", "命破"), [
+    plan(["狛野真斗", "リュシア", "橘福福"], "命破主力へエーテル支援と撃破を組み合わせる。", "Combines Ether support and stun for the Rupture carry.", "为命破主C组合以太辅助与击破。"),
+    plan(["狛野真斗", "ライト", "オルペウス&「鬼火」"], "炎属性の主力・撃破・追加火力を組む。", "Pairs Fire carry, stun, and added damage.", "组合火系主C、击破与追加输出。"),
+    plan(["狛野真斗", "潘引壺", "ルーシー"], "防護と炎支援を組む所持対応案。", "A roster-friendly option with Defense and Fire support.", "结合防护与火元素辅助的持有适配方案。"),
+  ]),
+  "zzz:朱鳶": batch14Options("zzz", "朱鳶", "https://game8.jp/zenless/609201", mainDps, [
+    plan(["アストラ", "青衣", "朱鳶"], "全体支援と撃破をエーテル主力の強化散弾へつなぐ。", "Links team support and stun to the Ether carry's enhanced shells.", "将全队辅助与击破衔接到以太主C的强化霰弹。"),
+    plan(["アンビー", "ニコ", "朱鳶"], "撃破とエーテル支援で強化散弾の火力窓を作る。", "Creates enhanced-shell damage windows through stun and Ether support.", "以击破与以太辅助创造强化霰弹的输出窗口。"),
+  ]),
+  "zzz:照": batch14Options("zzz", "照", "https://game8.jp/zenless/682685", support, [
+    plan(["照", "葉瞬光", "ダイアリン"], "支援・主力・撃破を組み、エーテルベールと連携を支える。", "Combines support, carry, and stun to support Ether Veil and chain actions.", "组合辅助、主C与击破，支撑以太帷幕与连携。"),
+    plan(["照", "カリン", "ライカン"], "物理主力と氷撃破を組み合わせる。", "Pairs a Physical carry with Ice stun.", "结合物理主C与冰系击破。"),
+    plan(["照", "ピュロイス", "プルクラ"], "エーテル主力に控え撃破を組む。", "Pairs an Ether carry with off-field stun.", "为以太主C搭配后台击破。"),
+  ]),
+  "zzz:千夏": batch14Options("zzz", "千夏", "https://game8.jp/zenless/754094", support, [
+    plan(["千夏", "アリア", "南宮羽"], "エーテル異常と撃破を支援でつなぐ。", "Uses support to connect Ether Anomaly and stun.", "以辅助衔接以太异常与击破。"),
+    plan(["千夏", "葉瞬光", "ダイアリン"], "主力と物理撃破へ支援を渡す。", "Provides support to a carry and Physical stun agent.", "为主C与物理击破角色提供辅助。"),
+    plan(["千夏", "ビビアン", "アリス"], "異常2名の蓄積と支援を重ねる。", "Stacks two Anomaly agents' buildup with support.", "叠加双异常角色的积累与辅助。"),
+  ]),
+  "zzz:浅羽悠真": batch14Options("zzz", "浅羽悠真", "https://game8.jp/zenless/651182", mainDps, [
+    plan(["浅羽悠真", "「シード」", "「トリガー」"], "電気主力へ電気追加火力とオフフィールド撃破を組む。", "Pairs Electric added damage and off-field stun for the Electric carry.", "为电系主C组合电系追加输出与后台击破。"),
+    plan(["千夏", "青衣", "浅羽悠真"], "支援と電気撃破を組み、強化攻撃の火力窓を作る。", "Combines support and Electric stun to create enhanced-attack damage windows.", "结合辅助与电系击破，创造强化攻击的输出窗口。"),
+    plan(["浅羽悠真", "アンビー", "ニコ"], "撃破とエーテル支援を組む所持対応案。", "A roster-friendly option with stun and Ether support.", "结合击破与以太辅助的持有适配方案。"),
+  ]),
+  "zzz:南宮羽": batch14Options("zzz", "南宮羽", "https://game8.jp/zenless/758209", anomaly, [
+    plan(["アリア", "南宮羽", "千夏"], "エーテル異常・撃破・支援を組み合わせる。", "Combines Ether Anomaly, stun, and support.", "组合以太异常、击破与辅助。"),
+    plan(["星見雅", "南宮羽", "浮波柚葉"], "氷異常主力へ異常蓄積と支援を重ねる。", "Stacks Anomaly buildup and support for the Ice Anomaly carry.", "为冰系异常主C叠加异常积累与辅助。"),
+    plan(["南宮羽", "ルーシー", "パイパー"], "撃破、炎支援、物理異常を組む代替案。", "An alternative with stun, Fire support, and Physical Anomaly.", "结合击破、火元素辅助与物理异常的替代方案。"),
+  ]),
+  "hsr:刃": batch14Options("hsr", "刃", "https://game8.jp/houkaistarrail/526502", mainDps, [
+    plan(["刃", "サンデー", "トリビー", "ヒアンシー"], "行動支援・全体支援・回復を重ね、刃のHP消費型の追加攻撃を安定させる。", "Stacks advance, team support, and healing to stabilize Blade's HP-consuming follow-ups.", "叠加拉条、全队辅助与治疗，稳定刃的生命消耗型追加攻击。"),
+    plan(["鏡流", "刃", "トリビー", "ヒアンシー"], "HP変動型の2アタッカーを、全体支援と回復で支える。", "Supports two HP-fluctuation damage dealers with team buffs and healing.", "以全队增益与治疗支撑两名生命波动型输出。"),
+    plan(["刃", "ブローニャ", "ルアン・メェイ", "リンクス"], "行動順支援・耐性貫通・回復を組み合わせる代替案。", "An alternative combining advance, RES PEN, and healing.", "结合拉条、减抗与治疗的替代方案。"),
+  ]),
+  "hsr:青雀": batch14Options("hsr", "青雀", "https://game8.jp/houkaistarrail/524679", mainDps, [
+    plan(["青雀", "サフェル", "サンデー", "丹恒・騰荒"], "追加火力と行動支援で強化通常攻撃の手数を確保する。", "Uses added damage and advance to secure more enhanced Basic Attacks.", "以追加输出与拉条保证更多强化普攻。"),
+    plan(["青雀", "停雲", "記憶主人公", "リンクス"], "EP支援・記憶支援・回復を組み合わせる所持対応案。", "A roster-friendly option with Energy, Remembrance support, and healing.", "结合能量、记忆辅助与治疗的持有适配方案。"),
+  ]),
+  "hsr:雪衣": batch14Options("hsr", "雪衣", "https://game8.jp/houkaistarrail/573091", t("撃破・主力", "Break DPS", "击破主C"), [
+    plan(["雪衣", "ルアン・メェイ", "帰忘の流離人", "霊砂"], "弱点撃破効率・超撃破・回復を重ね、削靭と追加攻撃を支える。", "Stacks Break Efficiency, Super Break, and healing to support toughness damage and follow-ups.", "叠加击破效率、超击破与治疗，支撑削韧与追加攻击。"),
+    plan(["雪衣", "三月なのか（巡狩）", "開拓者（調和）", "ギャラガー"], "超撃破と耐久を組む入手対応の撃破編成。", "An accessible Break team with Super Break and sustain.", "兼具超击破与生存的易获取击破队。"),
+  ]),
+  "hsr:素裳": batch14Options("hsr", "素裳", "https://game8.jp/houkaistarrail/524676", mainDps, [
+    plan(["素裳", "ロビン", "サンデー", "丹恒・騰荒"], "行動支援と耐久を組み、物理単体火力の行動回数を高める。", "Combines advance and sustain to raise a Physical single-target carry's action count.", "结合拉条与生存位，提高物理单体主C的行动次数。"),
+    plan(["素裳", "停雲", "記憶主人公", "ギャラガー"], "EP支援・記憶支援・回復を使う代替案。", "An alternative using Energy, Remembrance support, and healing.", "使用能量、记忆辅助与治疗的替代方案。"),
+  ]),
+  "hsr:丹恒": batch14Options("hsr", "丹恒", "https://game8.jp/houkaistarrail/524694", mainDps, [
+    plan(["丹恒", "ロビン", "サンデー", "丹恒・騰荒"], "行動支援と耐久を風単体主力へ集約する。", "Focuses advance and sustain on the Wind single-target carry.", "将拉条与生存位集中给风系单体主C。"),
+    plan(["丹恒", "停雲", "記憶主人公", "ギャラガー"], "EP支援・記憶支援・回復を組む所持対応案。", "A roster-friendly option with Energy, Remembrance support, and healing.", "结合能量、记忆辅助与治疗的持有适配方案。"),
+  ]),
+  "hsr:丹恒・騰荒": batch14Options("hsr", "丹恒・騰荒", "https://game8.jp/houkaistarrail/709109", t("耐久・支援", "Sustain & support", "生存与辅助"), [
+    plan(["ファイノン", "サンデー", "ケリュドラ", "丹恒・騰荒"], "変身型主力へ行動支援・追加火力・バリアを組み合わせる。", "Combines advance, added damage, and shields for the transforming carry.", "为变身主C组合拉条、追加输出与护盾。"),
+    plan(["姫子・旅立ち", "サンデー", "花火", "丹恒・騰荒"], "範囲主力へ行動順支援と耐久を組む。", "Pairs action-order support and sustain with an AoE carry.", "为范围主C搭配行动顺序辅助与生存位。"),
+    plan(["アーチャー", "ルアン・メェイ", "記憶主人公", "丹恒・騰荒"], "単体火力に耐性貫通・記憶支援・バリアを添える。", "Adds RES PEN, Remembrance support, and shields to single-target damage.", "为单体输出补充减抗、记忆辅助与护盾。"),
+  ]),
+  // 第16バッチ：HSR 4名・原神 16名の実名推奨PT。
+"genshin:バーバラ": batch16Options("genshin", "バーバラ", "https://game8.jp/genshin/561391", t("回復・水付着", "Healing & Hydro application", "治疗与水元素附着"), [
+    plan(["バーバラ", "ニィロウ", "ナヒーダ", "白朮"], "開花で高い火力を誇る編成。バーバラは熟知振りがおすすめ。", "A Bloom team with high damage output; building Barbara with Elemental Mastery is recommended.", "绽放反应队伍,输出较高;芭芭拉建议堆元素精通。"),
+    plan(["バーバラ", "ナヒーダ", "行秋", "久岐忍"], "超開花反応編成で編成コストが低く、星4のみでも組める。", "A Hyperbloom team that is low-cost and can be built with 4-star characters only.", "超绽放反应队伍,组队成本低,仅用4星角色也能组建。"),
+    plan(["バーバラ", "神里綾華", "楓原万葉", "申鶴"], "凍結編成で氷の火力に特化し、バーバラは凍結のサポート重視で使う。", "A Freeze team specialized in Cryo damage; Barbara is used mainly to support the Freeze setup.", "冻结队伍,专注冰元素输出;芭芭拉主要用于辅助冻结体系。"),
+  ]),
+
+  "genshin:ファルザン": batch16Options("genshin", "ファルザン", "https://game8.jp/genshin/560292", t("支援", "Support", "辅助"), [
+    plan(["ファルザン", "放浪者", "ベネット", "鍾離"], "放浪者パでよく使われる編成。ファルザンやベネットのバフ、鍾離のシールドによる敵の元素耐性デバフなど、放浪者の火力を上げるためのサポート効果が満載。", "A common Wanderer team; Faruzan and Bennett buffs plus Zhongli shield and elemental RES shred are packed with support effects to boost Wanderer damage.", "散兵队常见编成;法尔赞与班尼特的增益加上钟离护盾附带的元素抗性降低,为散兵的输出提供全面辅助。"),
+    plan(["ファルザン", "魈", "アルベド", "鍾離"], "風2岩2で共鳴を発動した編成。魈はHPが減るため回復も捨てているため、シールド耐久が重要。", "A team activating Anemo/Geo resonance (2+2); since Xiao loses HP and healing is skipped, shield durability is important.", "风2岩2共鸣编成;魈会减少生命值且放弃了治疗,因此护盾的耐久度很重要。"),
+    plan(["ファルザン", "鹿野院平蔵", "香菱", "ベネット"], "風2炎2で共鳴を発動した編成。平蔵枠は放浪者などでも代用可能。", "A team activating Anemo/Pyro resonance (2+2); the Heizou slot can also be replaced by characters like Wanderer.", "风2火2共鸣编成;鹿野院平藏的位置也可以用散兵等角色替代。"),
+  ]),
+
+  "genshin:フレミネ": batch16Options("genshin", "フレミネ", "https://game8.jp/genshin/560152", t("主力", "Main DPS", "主C"), [
+    plan(["フレミネ", "フィッシュル", "行秋", "ミカ"], "氷砕き+超電導編成でフレミネの強みを活かす。星4のみで組める。", "A Shatter and Superconduct team that leverages Freminet strengths; can be built with 4-star characters only.", "碎冰+超导编成,发挥菲米尼的优势;仅用4星角色也能组建。"),
+    plan(["フレミネ", "行秋", "ナヒーダ", "久岐忍"], "超電導+超開花編成で物理火力と超開花を組み合わせる。フレミネは超開花を邪魔せず戦える。", "A Superconduct and Hyperbloom team combining Physical damage with Hyperbloom; Freminet can fight without disrupting Hyperbloom.", "超导+超绽放编成,结合物理输出与超绽放;菲米尼可以在不干扰超绽放的情况下作战。"),
+    plan(["フレミネ", "楓原万葉", "申鶴", "珊瑚宮心海"], "物理を捨てた氷元素型編成。圧力ランク0で戦う必要がある。", "A Cryo-focused team that forgoes Physical damage; requires fighting at Pressure Rank 0.", "放弃物理伤害的冰元素专精编成;需要在压力等级0下作战。"),
+  ]),
+
+  "genshin:ミカ": batch16Options("genshin", "ミカ", "https://game8.jp/genshin/560161", t("支援", "Support", "辅助"), [
+    plan(["ミカ", "エウルア", "雷電将軍", "夜蘭"], "氷砕き+超電導編成1で物理火力を大きく伸ばす。雷電で要求チャージが下がるのが良い。", "Shatter and Superconduct team 1 that greatly boosts Physical damage; Raiden Shogun helps lower Energy Recharge requirements.", "碎冰+超导编成1,大幅提升物理伤害;雷电将军能降低对充能的需求,效果不错。"),
+    plan(["ミカ", "フレミネ", "フィッシュル", "行秋"], "氷砕き+超電導編成2で物理火力の強みを活かす。星4のみで組める。", "Shatter and Superconduct team 2 that leverages Physical damage strengths; can be built with 4-star characters only.", "碎冰+超导编成2,发挥物理伤害优势;仅用4星角色也能组建。"),
+    plan(["ミカ", "放浪者", "ファルザン", "ベネット"], "放浪者キャリー編成でミカの攻撃速度バフを活かす。ミカは無凸でも使いやすい。", "A Wanderer carry team that uses Mika attack speed buff; Mika is easy to use even without Constellations.", "散兵核心编成,利用米卡的攻速增益;米卡即使不满命也很好用。"),
+  ]),
+
+  "genshin:モナ": batch16Options("genshin", "モナ", "https://game8.jp/genshin/559926", t("支援", "Support", "辅助"), [
+    plan(["モナ", "スカーク", "フリーナ", "エスコフィエ"], "エスコフィエ入り凍結反応編成。凍結中はモナのバフの時間が伸びる性質を利用し、水共鳴のHP上限UPでフリーナの火力も上昇する。", "A Freeze team featuring Escoffier; takes advantage of Mona buff duration extending during Freeze, and Hydro resonance HP boost also raises Furina damage.", "带埃斯科菲耶的冻结反应编成;利用冻结状态下莫娜增益持续时间延长的特性,水元素共鸣提升的生命值上限也能提高芙宁娜的伤害。"),
+    plan(["モナ", "ドゥリン", "シロネン", "スクロース"], "ドゥリンの火力をサポートする蒸発編成。モナで水元素を付着させる。", "A Vaporize team that supports Dahlia damage; Mona applies Hydro to enable the reaction.", "辅助达利亚输出的蒸发编成;由莫娜附着水元素。"),
+    plan(["モナ", "アイノ", "イネファ", "スクロース"], "月感電反応編成。モナの2凸で熟知を配るが、バフが腐る点には注意。", "A Lunar-Charged team; Mona Constellation 2 distributes Elemental Mastery, but be careful that her buff can go to waste.", "月感电反应编成;莫娜的2命可以分配元素精通,但要注意增益可能会被浪费。"),
+  ]),
+
+  "genshin:ヨォーヨ": batch16Options("genshin", "ヨォーヨ", "https://game8.jp/genshin/560288", t("回復・支援", "Healing & Support", "治疗辅助"), [
+    plan(["ヨォーヨ", "珊瑚宮心海", "ニィロウ", "ラウマ"], "ニィロウ入り豊穣開花反応編成。開花反応の自傷ダメージをヨォーヨのスキル・爆発で回復し、ラウマの固有天賦で月兆初照時に開花反応で会心が発生する。", "A Nilou-based Bountiful Bloom team; Yoyo skill and burst heal the self-inflicted Bloom damage, and Raum passive triggers Crits on Bloom reactions when the Moonsign first lights up.", "带妮露的丰饶绽放编成;用瑶瑶的元素战技和爆发治疗绽放反应造成的自伤,劳玛的固有天赋在月兆初照时使绽放反应触发暴击。"),
+    plan(["ヨォーヨ", "ヌヴィレット", "イネファ", "ナヒーダ"], "水アタッカー採用の感電・超開花反応編成。感電・月感電反応と超開花反応を同時に起こし、イネファが感電を月感電反応に変化させる。", "An Electro-Charged and Hyperbloom team using a Hydro main DPS; triggers Electro-Charged/Lunar-Charged and Hyperbloom simultaneously, with Ineffa converting Electro-Charged into Lunar-Charged.", "采用水系主C的感电+超绽放编成;同时触发感电・月感电反应与超绽放反应,伊涅芙将感电转化为月感电反应。"),
+    plan(["ヨォーヨ", "クロリンデ", "フィッシュル", "スクロース"], "激化反応+雷共鳴編成。雷元素メインアタッカーの激化反応編成で、フィッシュル・スクロースの「魔導秘儀」で与ダメ・熟知がアップする。", "An Aggravate and Electro resonance team; an Aggravate setup led by an Electro main DPS, boosted by Fischl and Sucrose Arcane elemental buffs to damage and Elemental Mastery.", "激化反应+雷元素共鸣编成;以雷元素主C为核心的激化反应队伍,菲谢尔与砂糖的奥秘效果可以提升伤害与元素精通。"),
+  ]),
+
+  "genshin:ラウマ": batch16Options("genshin", "ラウマ", "https://game8.jp/genshin/720295", t("支援", "Support", "辅助"), [
+    plan(["ラウマ", "ネフェル", "コロンビーナ", "ニィロウ"], "ネフェル入り月開花反応編成。月開花反応で火力を出すネフェルと相性抜群で、草露を集めるため水元素キャラを編成し月開花を起こすことが必須。", "A Lunar Bloom team with Nefer; pairs excellently with Nefer who deals damage via Lunar Bloom, and requires a Hydro character to gather Dendro Cores to trigger Lunar Bloom.", "带奈芙尔的月绽放反应编成;与依靠月绽放输出的奈芙尔配合极佳,需要编入水元素角色收集草原核以触发月绽放。"),
+    plan(["ラウマ", "珊瑚宮心海", "ナヒーダ", "ニィロウ"], "ニィロウ入り開花反応編成。純粋な開花反応編成で、ニィロウのバフ発動のため水/草元素キャラのみで編成し、ヒーラーで被ダメに対応する。", "A pure Bloom team with Nilou; built only from Hydro/Dendro characters to trigger Nilou buff, with a healer to handle incoming damage.", "带妮露的纯绽放反应编成;为触发妮露的增益,仅使用水/草元素角色组队,并搭配治疗者应对受到的伤害。"),
+    plan(["ラウマ", "ヌヴィレット", "コロンビーナ", "イネファ"], "月感電・超開花反応編成。水元素キャラをメインアタッカーとして月感電反応と超開花反応を発生させ、ラウマは草・水元素耐性を下げ水アタッカーと超開花双方の火力向上に寄与する。", "A Lunar-Charged and Hyperbloom team; uses a Hydro main DPS to trigger both Lunar-Charged and Hyperbloom, with Raum lowering Dendro/Hydro RES to boost damage for both the Hydro attacker and Hyperbloom.", "月感电+超绽放反应编成;以水元素角色作为主C,同时触发月感电反应与超绽放反应,劳玛降低草・水元素抗性,为水系主C与超绽放双方提升伤害。"),
+  ]),
+
+  "genshin:リサ": batch16Options("genshin", "リサ", "https://game8.jp/genshin/561393", t("支援", "Support", "辅助"), [
+    plan(["リサ", "アルハイゼン", "ナヒーダ", "久岐忍"], "激化編成1（メイン草）。激化による大ダメージを狙い、アルハイゼンが主火力、ナヒーダとリサが反応起点を担う。", "Aggravate team 1 (Dendro main); aims for big Aggravate damage with Alhaitham as main DPS while Nahida and Lisa serve as reaction triggers.", "激化编成1(草主C);追求激化反应的高额伤害,艾尔海森为主要输出,纳西妲与丽莎负责触发反应。"),
+    plan(["リサ", "刻晴", "ナヒーダ", "白朮"], "激化編成2（メイン雷）。刻晴がメイン火力枠、白朮がヒーラー兼シールド役を務める。", "Aggravate team 2 (Electro main); Keqing serves as the main damage dealer while Baizhu acts as healer and shield provider.", "激化编成2(雷主C);刻晴担任主要输出,白术兼任治疗与护盾角色。"),
+    plan(["リサ", "フィッシュル", "旅人（草）", "ディオナ"], "初心者激化編成。星4キャラのみで組める初心者向け激化反応編成。", "A beginner Aggravate team built entirely with 4-star characters, friendly for new players.", "新手激化编成;完全用4星角色组成,适合新手玩家。"),
+  ]),
+
+  "genshin:リネ": batch16Options("genshin", "リネ", "https://game8.jp/genshin/558841", t("主力", "Main DPS", "主C"), [
+    plan(["リネ", "香菱", "楓原万葉", "ベネット"], "火力面重視編成。炎×3でリネの固有天賦（与ダメアップ）が60%から100%に上昇し、モチーフ武器の火力効果も最大化する。", "A damage-focused team; with three Pyro characters, Lyney passive damage boost rises from 60% to 100%, maximizing his signature weapon effect too.", "偏重输出的编成;三火配置使林尼的固有天赋(伤害加成)从60%提升到100%,同时最大化专武的效果。"),
+    plan(["リネ", "フリーナ", "楓原万葉", "ベネット"], "フリーナ入り蒸発編成。固有天賦の最大化は狙わず、フリーナと万葉のダメバフで補いつつ蒸発反応も狙う高火力編成。", "A Vaporize team with Furina; does not maximize the passive but compensates with Furina and Kazuha damage buffs while also aiming for Vaporize, making it a high-damage team.", "带芙宁娜的蒸发编成;不追求固有天赋最大化,而是靠芙宁娜与万叶的伤害加成弥补,同时兼顾蒸发反应,属于高输出编成。"),
+    plan(["リネ", "ディシア", "鍾離", "ベネット"], "耐久面重視編成。シールドと防御補助で耐久を高め、回避が苦手な人向け。", "A durability-focused team; boosts survivability with shields and defensive support, suited for players who struggle with dodging.", "偏重耐久的编成;通过护盾与防御辅助提升生存能力,适合不擅长闪避的玩家。"),
+  ]),
+
+  "genshin:リネット": batch16Options("genshin", "リネット", "https://game8.jp/genshin/560155", t("支援", "Support", "辅助"), [
+    plan(["リネット", "タルタリヤ", "香菱", "ベネット"], "蒸発編成。単体戦・複数戦どちらでも活躍し、香菱とタルタリヤの火力割合が半々で蒸発反応の高い継続火力を実現する万能編成。", "A Vaporize team effective against both single targets and groups; Xiangling and Tartaglia split the damage roughly evenly, achieving strong sustained Vaporize damage in a versatile team.", "蒸发编成;单体与多目标战斗均可胜任,香菱与达达利亚的输出占比各半,实现蒸发反应带来的高持续伤害,是一套万能编成。"),
+    plan(["リネット", "ヌヴィレット", "タルタリヤ", "白朮"], "水元素共鳴編成。ヌヴィレットの火力を引き出す編成で、タルタリヤは表に出さなくてもよい役割分担でヌヴィレットをメインアタッカーとして活かす。", "A Hydro resonance team designed to bring out Neuvillette damage; Tartaglia does not need to be on-field, letting Neuvillette function as the main DPS.", "水元素共鸣编成;旨在发挥那维莱特的输出,达达利亚可以不用上场,让那维莱特担任主要输出。"),
+    plan(["リネット", "神里綾華", "申鶴", "珊瑚宮心海"], "凍結編成。綾華の育成が進んでいることが重要で、申鶴によって氷パでも火力が出る。", "A Freeze team where having a well-built Ayaka is important; Shenhe helps the Cryo team deal solid damage.", "冻结编成;需要绫华培养到位,申鹤能让冰系队伍也打出不错的伤害。"),
+  ]),
+
+  "genshin:レイラ": batch16Options("genshin", "レイラ", "https://game8.jp/genshin/483607", t("支援", "Support", "辅助"), [
+    plan(["レイラ", "胡桃", "行秋", "夜蘭"], "蒸発・溶解反応を狙う編成としてシールドと耐久を担う。", "A team aiming for Vaporize and Melt reactions, where Layla provides shielding and survivability.", "旨在触发蒸发与融化反应的编成,由蕾伊拉提供护盾与生存保障。"),
+    plan(["レイラ", "ヌヴィレット", "ジン", "フリーナ"], "凍結編成としてシールドと耐久を担う。", "A Freeze team where Layla provides shielding and survivability.", "冻结编成中由蕾伊拉提供护盾与生存保障。"),
+    plan(["レイラ", "甘雨", "モナ", "ウェンティ"], "凍結編成としてシールドと耐久を担う。", "A Freeze team where Layla provides shielding and survivability.", "冻结编成中由蕾伊拉提供护盾与生存保障。"),
+  ]),
+
+  "genshin:マーヴィカ": batch16Options("genshin", "マーヴィカ", "https://game8.jp/genshin/662568", t("主力", "Main DPS", "主C"), [
+    plan(["マーヴィカ", "フリーナ", "楓原万葉", "シロネン"], "蒸発反応編成（メインアタッカー運用）。マーヴィカを主力火力に、フリーナが水元素で蒸発反応を起点化し、楓原万葉が火元素ダメージを強化、シロネンが火力補助とヒーラーを兼務する。", "A Vaporize team (main DPS build); Mavuika serves as the main damage dealer, Furina triggers Vaporize with Hydro, Kazuha boosts Pyro damage, and Xilonen doubles as damage support and healer.", "蒸发反应编成(主C运用);玛薇卡担任主要输出,芙宁娜通过水元素触发蒸发反应,枫原万叶强化火元素伤害,希诺宁兼任输出辅助与治疗。"),
+    plan(["マーヴィカ", "シトラリ", "楓原万葉", "シロネン"], "溶解反応編成（メインアタッカー運用）。シトラリが氷元素で溶解反応を発動しマーヴィカの炎ダメージを増幅する。シトラリは元素反応起点と火力補助を兼ねる。", "A Melt team (main DPS build); Citlali triggers Melt with Cryo to amplify Mavuika Pyro damage, serving as both reaction trigger and damage support.", "融化反应编成(主C运用);希特拉莉用冰元素触发融化反应以增幅玛薇卡的火元素伤害,同时兼任元素反应起点与输出辅助。"),
+    plan(["マーヴィカ", "ムアラニ", "楓原万葉", "シロネン"], "サブサポート運用（ナタキャラ2人編成）。ムアラニをメインアタッカー、マーヴィカをサポート役に配置する。マーヴィカ以外にナタキャラを編成することが重要で、元素爆発の回転率が向上する。", "A sub-support build (a two-Natlan-character team); Mualani is the main DPS while Mavuika is placed in a support role. Including another Natlan character besides Mavuika is important, improving burst uptime.", "副辅助运用(纳塔双角色编成);玛拉妮担任主要输出,玛薇卡则作为辅助角色。除玛薇卡外再编入一名纳塔角色很重要,可以提高元素爆发的循环效率。"),
+  ]),
+
+  "genshin:ムアラニ": batch16Options("genshin", "ムアラニ", "https://game8.jp/genshin/636238", t("主力", "Main DPS", "主C"), [
+    plan(["ムアラニ", "エミリエ", "ディシア", "鍾離"], "燃焼蒸発編成。蒸発反応で火力アップを目指す。", "A Burning and Vaporize team aiming to boost damage through the Vaporize reaction.", "燃烧+蒸发编成;通过蒸发反应提升伤害。"),
+    plan(["ムアラニ", "フリーナ", "楓原万葉", "シグウィン"], "水元素特化編成。水元素共鳴を活かし、HP上限が火力に繋がる特性を最大限引き出す。", "A Hydro-focused team leveraging Hydro resonance to fully bring out the trait where HP cap converts into damage.", "水元素专精编成;利用水元素共鸣,最大限度发挥生命值上限转化为伤害的特性。"),
+    plan(["ムアラニ", "ディシア", "キャンディス", "鍾離"], "蒸発+水元素共鳴編成。蒸発反応と水元素共鳴の両立を狙い、キャンディスはムアラニの通常攻撃ダメージアップを狙える。", "A Vaporize and Hydro resonance team combining both effects; Candace can further boost Mualani Normal Attack damage.", "蒸发+水元素共鸣编成;兼顾两者效果,坎蒂丝还能提升玛拉妮的普通攻击伤害。"),
+  ]),
+
+  "genshin:フリンズ": batch16Options("genshin", "フリンズ", "https://game8.jp/genshin/724086", t("主力", "Main DPS", "主C"), [
+    plan(["フリンズ", "コロンビーナ", "スクロース", "イネファ"], "イネファ入り月感電反応編成。イネファと併用で月兆満照を狙い火力を大幅アップし、コロンビーナの固有天賦で月感電反応の攻撃回数を確率で追加する。", "A Lunar-Charged team with Ineffa; pairing with Ineffa aims for full Moonsign to greatly boost damage, and Columbina passive can add extra Lunar-Charged hits by chance.", "带伊涅芙的月感电反应编成;搭配伊涅芙争取月兆满照以大幅提升伤害,哥伦比娅的固有天赋有概率为月感电反应增加额外攻击次数。"),
+    plan(["フリンズ", "フィッシュル", "コロンビーナ", "スクロース"], "魔導秘儀を発動した月感電反応編成。イネファなしの場合、フィッシュルの魔導秘儀で熟知バフをかけ、月兆レベルを満照にして火力を強化する。フリンズ以外は星4キャラで構成可能。", "A Lunar-Charged team using the Arcane elemental buff; without Ineffa, Fischl Arcane buff grants Elemental Mastery and pushes the Moonsign to full to boost damage. Everyone besides Flins can be a 4-star character.", "发动奥秘增益的月感电反应编成;在没有伊涅芙的情况下,通过菲谢尔的奥秘效果提供元素精通增益,并将月兆等级提升至满照以强化伤害。除弗林斯外均可使用4星角色。"),
+  ]),
+
+  "genshin:ヤフォダ": batch16Options("genshin", "ヤフォダ", "https://game8.jp/genshin/748057", t("支援", "Support", "辅助"), [
+    plan(["ヤフォダ", "フリンズ", "コロンビーナ", "イネファ"], "月感電反応編成。月感電を軸とした編成でヤフォダのバフが活かせ、月兆満照状態を実現し、完凸効果で全員が会心バフを受けられる。", "A Lunar-Charged team; centers on Lunar-Charged where Yaffoda buffs shine, achieving full Moonsign so everyone gains a Crit buff at Constellation 6.", "月感电反应编成;以月感电为核心,能充分发挥雅弗妲的增益,达成月兆满照状态,满命效果下全员都能获得暴击增益。"),
+    plan(["ヤフォダ", "ネフェル", "コロンビーナ", "ラウマ"], "月開花反応編成。月開花を軸とした編成でヤフォダのバフが活かせ、全4人を月兆キャラで統一し完凸時会心バフを全員に発動できる。", "A Lunar Bloom team; centers on Lunar Bloom where Yaffoda buffs shine, with all four members being Moonsign characters so the Constellation 6 Crit buff applies to everyone.", "月绽放反应编成;以月绽放为核心,能充分发挥雅弗妲的增益,四人全部为月兆角色,满命时暴击增益可施加给全员。"),
+  ]),
+
+  "genshin:リオセスリ": batch16Options("genshin", "リオセスリ", "https://game8.jp/genshin/539460", t("主力", "Main DPS", "主C"), [
+    plan(["リオセスリ", "マーヴィカ", "エミリエ", "ベネット"], "燃焼+溶解反応編成。リオセスリとエミリエが火力枠、マーヴィカが元素反応起点と火力補助、ベネットが火力補助とヒーラーを担う。", "A Burning and Melt team; Lauma and Emilie serve as damage dealers, Mavuika triggers reactions and provides damage support, and Bennett offers damage support and healing.", "燃烧+融化反应编成;劳玛与艾梅莉埃担任输出,玛薇卡负责触发元素反应并提供输出辅助,班尼特提供输出辅助与治疗。"),
+    plan(["リオセスリ", "フリーナ", "楓原万葉", "シャルロット"], "凍結反応編成。リオセスリが火力枠、フリーナが元素反応起点と火力補助、楓原万葉が火力補助、シャルロットがヒーラーを担う。", "A Freeze team; Lauma is the damage dealer, Furina triggers reactions and provides damage support, Kazuha offers damage support, and Charlotte serves as healer.", "冻结反应编成;劳玛担任输出,芙宁娜负责触发元素反应并提供输出辅助,枫原万叶提供输出辅助,夏洛蒂担任治疗。"),
+    plan(["リオセスリ", "申鶴", "楓原万葉", "シロネン"], "キャリー編成。全てサポーター構成で火力を集約する。", "A carry team; the rest of the team is composed entirely of supports to concentrate damage on Lauma.", "核心输出编成;其余全部由辅助角色组成,以集中输出。"),
+  ]),
+
+  "hsr:不死途": batch16Options("hsr", "不死途", "https://game8.jp/houkaistarrail/756950", t("主力", "Main DPS", "主C"), [
+    plan(["不死途", "千冶・刃", "トリビー", "ヒアンシー"], "互いに支援性能を持つアタッカー2枚で火力を高め合う。", "Two attackers with mutual support capabilities boost each other damage.", "两名兼具辅助能力的攻击手互相提升伤害。"),
+    plan(["不死途", "サンデー", "トリビー", "丹恒・騰荒"], "行動支援と全体支援を主力へ集約する。", "Concentrates action advance and team-wide support onto the main DPS.", "将行动支援与全队辅助集中赋予主力。"),
+  ]),
+
+  "hsr:乱破": batch16Options("hsr", "乱破", "https://game8.jp/houkaistarrail/635340", t("撃破・主力", "Break & Main DPS", "击破主C"), [
+    plan(["乱破", "帰忘の流離人", "ダリア", "霊砂"], "超撃破を軸に虚数の全体撃破火力を伸ばす。", "Centers on Super Break to boost Imaginary AoE Break damage.", "以超击破为核心,提升虚数属性的全队击破伤害。"),
+    plan(["乱破", "ペラ", "開拓者（調和）", "ギャラガー"], "防御低下と超撃破支援を星4中心で組む。", "Built mainly with 4-star characters, focusing on DEF reduction and Super Break support.", "以4星角色为主,围绕降防与超击破支援组队。"),
+  ]),
+
+  "hsr:椒丘": batch16Options("hsr", "椒丘", "https://game8.jp/houkaistarrail/613886", t("デバフ", "Debuff", "减益"), [
+    plan(["椒丘", "黄泉", "千冶・刃", "アベンチュリン"], "焼尽の被ダメージ上昇を黄泉の火力へ乗せる。", "Stacks the Burn vulnerability increase onto Acheron damage.", "将灼烧引起的受伤加深叠加到黄泉的伤害上。"),
+    plan(["椒丘", "セイバー", "ギルガメッシュ", "フォフォ"], "単体主力へデバフと回復を添える。", "Adds debuffs and healing support to a single-target main DPS.", "为单体主力附加减益与治疗支援。"),
+  ]),
+
+  "hsr:爻光": batch16Options("hsr", "爻光", "https://game8.jp/houkaistarrail/754019", t("支援", "Support", "辅助"), [
+    plan(["爻光", "火花", "銀狼Lv.999", "フォフォ"], "アッハタイムの強制発動で愉悦キャラの火力とEPを補う。", "Forces Aha Moment to trigger, supplementing Remembrance characters damage and Energy.", "强制触发啊哈时刻,为愉悦命途角色补充伤害与能量。"),
+    plan(["爻光", "緋英", "開拓者（愉悦）", "フォフォ"], "愉悦編成を手持ちで組む案。", "A Joy-path team built with characters commonly on hand.", "用常见持有角色组建的愉悦命途编成方案。"),
+    plan(["爻光", "アーチャー", "花火", "丹恒・騰荒"], "単体主力へ行動支援と耐久を組み合わせる。", "Combines action advance support and survivability for a single-target main DPS.", "为单体主力提供行动支援与生存能力。"),
+  ]),
+  // 第15バッチ（2026-09-05）。旧 server/batch15Parties.ts からリテラルのまま移設し、共通出典だけ付与した（設計書 D5）。
+  "hsr:御空": [{"id":"batch15-hsr-御空-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"丹恒・飲月","en":"丹恒・飲月","zh-CN":"丹恒・飲月"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"御空","en":"御空","zh-CN":"御空"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"花火","en":"花火","zh-CN":"花火"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"羅刹","en":"羅刹","zh-CN":"羅刹"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/526440","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-御空-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"Dr.レイシオ","en":"Dr.レイシオ","zh-CN":"Dr.レイシオ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"御空","en":"御空","zh-CN":"御空"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ペラ","en":"ペラ","zh-CN":"ペラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アベンチュリン","en":"アベンチュリン","zh-CN":"アベンチュリン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/526440","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-御空-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"青雀","en":"青雀","zh-CN":"青雀"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"御空","en":"御空","zh-CN":"御空"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"リンクス","en":"リンクス","zh-CN":"リンクス"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/526440","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:三月なのか": [{"id":"batch15-hsr-三月なのか-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"彦卿","en":"彦卿","zh-CN":"彦卿"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"三月なのか","en":"三月なのか","zh-CN":"三月なのか"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ギャラガー","en":"ギャラガー","zh-CN":"ギャラガー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524695","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-三月なのか-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"クラーラ","en":"クラーラ","zh-CN":"クラーラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"三月なのか","en":"三月なのか","zh-CN":"三月なのか"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ロビン","en":"ロビン","zh-CN":"ロビン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"リンクス","en":"リンクス","zh-CN":"リンクス"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524695","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-三月なのか-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"丹恒","en":"丹恒","zh-CN":"丹恒"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"三月なのか","en":"三月なのか","zh-CN":"三月なのか"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"アスター","en":"アスター","zh-CN":"アスター"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ナターシャ","en":"ナターシャ","zh-CN":"ナターシャ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524695","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:長夜月": [{"id":"batch15-hsr-長夜月-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"長夜月","en":"長夜月","zh-CN":"長夜月"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ロビン・夏空の歌","en":"ロビン・夏空の歌","zh-CN":"ロビン・夏空の歌"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"キュレネ","en":"キュレネ","zh-CN":"キュレネ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ヒアンシー","en":"ヒアンシー","zh-CN":"ヒアンシー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/708951","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-長夜月-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"長夜月","en":"長夜月","zh-CN":"長夜月"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"キュレネ","en":"キュレネ","zh-CN":"キュレネ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"サンデー","en":"サンデー","zh-CN":"サンデー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ヒアンシー","en":"ヒアンシー","zh-CN":"ヒアンシー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/708951","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-長夜月-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"長夜月","en":"長夜月","zh-CN":"長夜月"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"記憶主人公","en":"記憶主人公","zh-CN":"記憶主人公"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"トリビー","en":"トリビー","zh-CN":"トリビー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フォフォ","en":"フォフォ","zh-CN":"フォフォ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/708951","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:停雲": [{"id":"batch15-hsr-停雲-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"景元","en":"景元","zh-CN":"景元"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"サンデー","en":"サンデー","zh-CN":"サンデー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"符玄","en":"符玄","zh-CN":"符玄"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524678","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-停雲-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"アルジェンティ","en":"アルジェンティ","zh-CN":"アルジェンティ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"花火","en":"花火","zh-CN":"花火"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フォフォ","en":"フォフォ","zh-CN":"フォフォ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524678","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-停雲-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"丹恒","en":"丹恒","zh-CN":"丹恒"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"アスター","en":"アスター","zh-CN":"アスター"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ギャラガー","en":"ギャラガー","zh-CN":"ギャラガー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524678","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:白露": [{"id":"batch15-hsr-白露-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"刃","en":"刃","zh-CN":"刃"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ブローニャ","en":"ブローニャ","zh-CN":"ブローニャ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"記憶主人公","en":"記憶主人公","zh-CN":"記憶主人公"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"白露","en":"白露","zh-CN":"白露"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/523995","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-白露-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"姫子","en":"姫子","zh-CN":"姫子"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ヘルタ","en":"ヘルタ","zh-CN":"ヘルタ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アスター","en":"アスター","zh-CN":"アスター"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"白露","en":"白露","zh-CN":"白露"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/523995","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-白露-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"彦卿","en":"彦卿","zh-CN":"彦卿"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ペラ","en":"ペラ","zh-CN":"ペラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"白露","en":"白露","zh-CN":"白露"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/523995","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:緋英": [{"id":"batch15-hsr-緋英-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"緋英","en":"緋英","zh-CN":"緋英"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"愉悦主人公","en":"愉悦主人公","zh-CN":"愉悦主人公"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"爻光","en":"爻光","zh-CN":"爻光"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"パール","en":"パール","zh-CN":"パール"},"role":{"ja":"耐久サポート","en":"Sustain support","zh-CN":"生存辅助"}}],"synergy":[{"ja":"愉悦サポーターを重ね、パールの爆笑の褒美で緋英のEPと火力を支える愉悦編成。Game8の緋英ガイド（2026-09-29更新）が耐久枠にパールを掲載し、GameWithのパールガイドも同じ編成を掲載している。","en":"An Elation team stacking supports, where Pearl's Certified Banger feeds Evanescia's Energy and damage. Game8's Evanescia guide (updated 2026-09-29) lists Pearl in the sustain slot, and GameWith's Pearl guide lists the same team.","zh-CN":"叠加欢愉辅助，由真珠的好评赏赐支撑绯英的能量与输出。Game8绯英指南（2026-09-29更新）将真珠列为生存位，GameWith真珠指南也收录同一阵容。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.6","dataAsOf":"2026-09-29","updatedAt":"2026-09-29","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/756941","communitySources":[{"label":{"ja":"Game8 緋英の遺物と評価・パーティ編成","en":"Game8 Evanescia relic, rating and team guide","zh-CN":"Game8 绯英遗器·评价·配队指南"},"url":"https://game8.jp/houkaistarrail/756941","checkedAt":"2026-09-29","note":{"ja":"更新日付き（2026-09-29）。おすすめパーティの耐久枠にパールを掲載。","en":"Dated 2026-09-29. Lists Pearl in the sustain slot of the recommended team.","zh-CN":"更新日期2026-09-29。推荐队伍的生存位收录真珠。"},"status":"crossChecked"},{"label":{"ja":"GameWith パールの評価と遺物・光円錐ビルド","en":"GameWith Pearl rating and build guide","zh-CN":"GameWith 真珠评价·遗器·光锥指南"},"url":"https://gamewith.jp/houkaistarrail/article/show/572184","checkedAt":"2026-09-29","note":{"ja":"パール／緋英／愉悦主人公／爻光の編成を掲載（2026-09-28確認）。","en":"Lists the Pearl / Evanescia / Elation Trailblazer / Yaoguang team (checked 2026-09-28).","zh-CN":"收录真珠／绯英／欢愉主角／爻光阵容（2026-09-28确认）。"},"status":"crossChecked"}]},{"id":"batch15-hsr-緋英-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"緋英","en":"緋英","zh-CN":"緋英"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"爻光","en":"爻光","zh-CN":"爻光"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ロビン・夏空の歌","en":"ロビン・夏空の歌","zh-CN":"ロビン・夏空の歌"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フォフォ","en":"フォフォ","zh-CN":"フォフォ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/756941","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-緋英-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"緋英","en":"緋英","zh-CN":"緋英"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"愉悦主人公","en":"愉悦主人公","zh-CN":"愉悦主人公"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"花火","en":"花火","zh-CN":"花火"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フォフォ","en":"フォフォ","zh-CN":"フォフォ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/756941","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:彦卿": [{"id":"batch15-hsr-彦卿-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"彦卿","en":"彦卿","zh-CN":"彦卿"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"サンデー","en":"サンデー","zh-CN":"サンデー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ケリュドラ","en":"ケリュドラ","zh-CN":"ケリュドラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"丹恒・騰荒","en":"丹恒・騰荒","zh-CN":"丹恒・騰荒"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524675","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-彦卿-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"彦卿","en":"彦卿","zh-CN":"彦卿"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ロビン","en":"ロビン","zh-CN":"ロビン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ペラ","en":"ペラ","zh-CN":"ペラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アベンチュリン","en":"アベンチュリン","zh-CN":"アベンチュリン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524675","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-彦卿-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"彦卿","en":"彦卿","zh-CN":"彦卿"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"停雲","en":"停雲","zh-CN":"停雲"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"三月なのか","en":"三月なのか","zh-CN":"三月なのか"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ギャラガー","en":"ギャラガー","zh-CN":"ギャラガー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524675","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "hsr:姫子": [{"id":"batch15-hsr-姫子-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"姫子","en":"姫子","zh-CN":"姫子"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"姫子・旅立ち","en":"姫子・旅立ち","zh-CN":"姫子・旅立ち"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"トリビー","en":"トリビー","zh-CN":"トリビー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フォフォ","en":"フォフォ","zh-CN":"フォフォ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524693","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-姫子-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"姫子","en":"姫子","zh-CN":"姫子"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"帰忘の流離人","en":"帰忘の流離人","zh-CN":"帰忘の流離人"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ダリア","en":"ダリア","zh-CN":"ダリア"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"霊砂","en":"霊砂","zh-CN":"霊砂"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524693","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]},{"id":"batch15-hsr-姫子-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"姫子","en":"姫子","zh-CN":"姫子"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ヘルタ","en":"ヘルタ","zh-CN":"ヘルタ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アスター","en":"アスター","zh-CN":"アスター"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ギャラガー","en":"ギャラガー","zh-CN":"ギャラガー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"4.5","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/houkaistarrail/524693","communitySources":[{"label":{"ja":"HoYoLAB由来の4.4編成議論（Reddit公開投稿）","en":"HoYoLAB-derived 4.4 team discussion (public Reddit post)","zh-CN":"来自HoYoLAB的4.4配队讨论（Reddit公开帖）"},"url":"https://www.reddit.com/r/HonkaiStarRail/comments/1vmdw4d/here_is_the_strongest_teams_in_version_44_by/","checkedAt":"2026-08-25","note":{"ja":"主ガイドの構成傾向と照合し、代替枠の検討にのみ使用。","en":"Checked against the primary guide and used only to assess alternatives.","zh-CN":"已与主指南交叉核对，仅用于评估替代位。"},"status":"crossChecked"}]}],
+  "genshin:ディルック": [{"id":"batch15-genshin-ディルック-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ディルック","en":"ディルック","zh-CN":"ディルック"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"フリーナ","en":"フリーナ","zh-CN":"フリーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"閑雲","en":"閑雲","zh-CN":"閑雲"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352605","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ディルック-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ディルック","en":"ディルック","zh-CN":"ディルック"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"夜蘭","en":"夜蘭","zh-CN":"夜蘭"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"行秋","en":"行秋","zh-CN":"行秋"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352605","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ディルック-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ディルック","en":"ディルック","zh-CN":"ディルック"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ガイア","en":"ガイア","zh-CN":"ガイア"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"スクロース","en":"スクロース","zh-CN":"スクロース"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352605","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ドゥリン": [{"id":"batch15-genshin-ドゥリン-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ドゥリン","en":"ドゥリン","zh-CN":"ドゥリン"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ムアラニ","en":"ムアラニ","zh-CN":"ムアラニ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"シロネン","en":"シロネン","zh-CN":"シロネン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"シグウィン","en":"シグウィン","zh-CN":"シグウィン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707122","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ドゥリン-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ドゥリン","en":"ドゥリン","zh-CN":"ドゥリン"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"キィニチ","en":"キィニチ","zh-CN":"キィニチ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"エミリエ","en":"エミリエ","zh-CN":"エミリエ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707122","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ドゥリン-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ドゥリン","en":"ドゥリン","zh-CN":"ドゥリン"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"クロリンデ","en":"クロリンデ","zh-CN":"クロリンデ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"シュヴルーズ","en":"シュヴルーズ","zh-CN":"シュヴルーズ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707122","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:トーマ": [{"id":"batch15-genshin-トーマ-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"リオセスリ","en":"リオセスリ","zh-CN":"リオセスリ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"エミリエ","en":"エミリエ","zh-CN":"エミリエ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"トーマ","en":"トーマ","zh-CN":"トーマ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/395527","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-トーマ-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"神里綾人","en":"神里綾人","zh-CN":"神里綾人"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"トーマ","en":"トーマ","zh-CN":"トーマ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"白朮","en":"白朮","zh-CN":"白朮"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/395527","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-トーマ-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"宵宮","en":"宵宮","zh-CN":"宵宮"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"夜蘭","en":"夜蘭","zh-CN":"夜蘭"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"雲菫","en":"雲菫","zh-CN":"雲菫"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"トーマ","en":"トーマ","zh-CN":"トーマ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/395527","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ドリー": [{"id":"batch15-genshin-ドリー-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"セノ","en":"セノ","zh-CN":"セノ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フリーナ","en":"フリーナ","zh-CN":"フリーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ドリー","en":"ドリー","zh-CN":"ドリー"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/466770","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ドリー-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"エウルア","en":"エウルア","zh-CN":"エウルア"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"雷電将軍","en":"雷電将軍","zh-CN":"雷電将軍"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ロサリア","en":"ロサリア","zh-CN":"ロサリア"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ドリー","en":"ドリー","zh-CN":"ドリー"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/466770","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ドリー-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"リサ","en":"リサ","zh-CN":"リサ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"旅人","en":"旅人","zh-CN":"旅人"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"行秋","en":"行秋","zh-CN":"行秋"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ドリー","en":"ドリー","zh-CN":"ドリー"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/466770","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ナヴィア": [{"id":"batch15-genshin-ナヴィア-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ナヴィア","en":"ナヴィア","zh-CN":"ナヴィア"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"フリーナ","en":"フリーナ","zh-CN":"フリーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"シロネン","en":"シロネン","zh-CN":"シロネン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/539458","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ナヴィア-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ナヴィア","en":"ナヴィア","zh-CN":"ナヴィア"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ドゥリン","en":"ドゥリン","zh-CN":"ドゥリン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"シロネン","en":"シロネン","zh-CN":"シロネン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/539458","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ナヴィア-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ナヴィア","en":"ナヴィア","zh-CN":"ナヴィア"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"凝光","en":"凝光","zh-CN":"凝光"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"香菱","en":"香菱","zh-CN":"香菱"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ベネット","en":"ベネット","zh-CN":"ベネット"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/539458","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ニィロウ": [{"id":"batch15-genshin-ニィロウ-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ニィロウ","en":"ニィロウ","zh-CN":"ニィロウ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ラウマ","en":"ラウマ","zh-CN":"ラウマ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"珊瑚宮心海","en":"珊瑚宮心海","zh-CN":"珊瑚宮心海"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/468761","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ニィロウ-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ニィロウ","en":"ニィロウ","zh-CN":"ニィロウ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"コレイ","en":"コレイ","zh-CN":"コレイ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"バーバラ","en":"バーバラ","zh-CN":"バーバラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/468761","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ニィロウ-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ニィロウ","en":"ニィロウ","zh-CN":"ニィロウ"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"旅人","en":"旅人","zh-CN":"旅人"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ヨォーヨ","en":"ヨォーヨ","zh-CN":"ヨォーヨ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"行秋","en":"行秋","zh-CN":"行秋"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/468761","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ネフェル": [{"id":"batch15-genshin-ネフェル-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ネフェル","en":"ネフェル","zh-CN":"ネフェル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ラウマ","en":"ラウマ","zh-CN":"ラウマ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"コロンビーナ","en":"コロンビーナ","zh-CN":"コロンビーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ニィロウ","en":"ニィロウ","zh-CN":"ニィロウ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707118","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ネフェル-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ネフェル","en":"ネフェル","zh-CN":"ネフェル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"コロンビーナ","en":"コロンビーナ","zh-CN":"コロンビーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"珊瑚宮心海","en":"珊瑚宮心海","zh-CN":"珊瑚宮心海"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707118","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ネフェル-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ネフェル","en":"ネフェル","zh-CN":"ネフェル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ナヒーダ","en":"ナヒーダ","zh-CN":"ナヒーダ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"行秋","en":"行秋","zh-CN":"行秋"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"白朮","en":"白朮","zh-CN":"白朮"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/707118","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "genshin:ノエル": [{"id":"batch15-genshin-ノエル-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"ノエル","en":"ノエル","zh-CN":"ノエル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"フリーナ","en":"フリーナ","zh-CN":"フリーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ゴロー","en":"ゴロー","zh-CN":"ゴロー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"夜蘭","en":"夜蘭","zh-CN":"夜蘭"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352610","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ノエル-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"ノエル","en":"ノエル","zh-CN":"ノエル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"シロネン","en":"シロネン","zh-CN":"シロネン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"フリーナ","en":"フリーナ","zh-CN":"フリーナ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"夜蘭","en":"夜蘭","zh-CN":"夜蘭"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352610","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]},{"id":"batch15-genshin-ノエル-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"ノエル","en":"ノエル","zh-CN":"ノエル"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ゴロー","en":"ゴロー","zh-CN":"ゴロー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"雲菫","en":"雲菫","zh-CN":"雲菫"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アルベド","en":"アルベド","zh-CN":"アルベド"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"7.0","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/genshin/352610","communitySources":[{"label":{"ja":"Game8原神ガイドの公開Xアカウント","en":"Game8 Genshin public X account","zh-CN":"Game8原神公开X账号"},"url":"https://x.com/G8_Genshin","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、環境更新・代替編成の確認に使用。","en":"Used with the dated primary guide to monitor meta updates and alternatives.","zh-CN":"与带更新日期的主指南结合，用于确认环境更新和替代配队。"},"status":"crossChecked"}]}],
+  "zzz:猫又": [{"id":"batch15-zzz-猫又-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"千夏","en":"千夏","zh-CN":"千夏"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"猫又","en":"猫又","zh-CN":"猫又"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ノルムー","en":"ノルムー","zh-CN":"ノルムー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/607805","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-猫又-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"アストラ","en":"アストラ","zh-CN":"アストラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"猫又","en":"猫又","zh-CN":"猫又"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"プルクラ","en":"プルクラ","zh-CN":"プルクラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/607805","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-猫又-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"アンビー","en":"アンビー","zh-CN":"アンビー"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ニコ","en":"ニコ","zh-CN":"ニコ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"猫又","en":"猫又","zh-CN":"猫又"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/607805","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]}],
+  "zzz:盤岳": [{"id":"batch15-zzz-盤岳-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"リュシア","en":"リュシア","zh-CN":"リュシア"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"盤岳","en":"盤岳","zh-CN":"盤岳"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ダイアリン","en":"ダイアリン","zh-CN":"ダイアリン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/723895","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-盤岳-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"盤岳","en":"盤岳","zh-CN":"盤岳"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ライト","en":"ライト","zh-CN":"ライト"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"オルペウス&「鬼火」","en":"オルペウス&「鬼火」","zh-CN":"オルペウス&「鬼火」"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/723895","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-盤岳-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"盤岳","en":"盤岳","zh-CN":"盤岳"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"潘引壺","en":"潘引壺","zh-CN":"潘引壺"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"プルクラ","en":"プルクラ","zh-CN":"プルクラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/723895","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]}],
+  "zzz:葉瞬光": [{"id":"batch15-zzz-葉瞬光-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"千夏","en":"千夏","zh-CN":"千夏"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"葉瞬光","en":"葉瞬光","zh-CN":"葉瞬光"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"ダイアリン","en":"ダイアリン","zh-CN":"ダイアリン"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682698","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-葉瞬光-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"葉瞬光","en":"葉瞬光","zh-CN":"葉瞬光"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"橘福福","en":"橘福福","zh-CN":"橘福福"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"「トリガー」","en":"「トリガー」","zh-CN":"「トリガー」"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682698","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-葉瞬光-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"葉瞬光","en":"葉瞬光","zh-CN":"葉瞬光"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}},{"name":{"ja":"照","en":"照","zh-CN":"照"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"ニコ","en":"ニコ","zh-CN":"ニコ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682698","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]}],
+  "zzz:潘引壺": [{"id":"batch15-zzz-潘引壺-1","rank":1,"title":{"ja":"現行推奨","en":"Current recommendation","zh-CN":"当前推荐"},"members":[{"name":{"ja":"儀玄","en":"儀玄","zh-CN":"儀玄"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"橘福福","en":"橘福福","zh-CN":"橘福福"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"潘引壺","en":"潘引壺","zh-CN":"潘引壺"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682680","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-潘引壺-2","rank":2,"title":{"ja":"代替編成","en":"Alternative","zh-CN":"替代阵容"},"members":[{"name":{"ja":"儀玄","en":"儀玄","zh-CN":"儀玄"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"アストラ","en":"アストラ","zh-CN":"アストラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"潘引壺","en":"潘引壺","zh-CN":"潘引壺"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682680","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]},{"id":"batch15-zzz-潘引壺-3","rank":3,"title":{"ja":"所持対応","en":"Accessible option","zh-CN":"持有适配"},"members":[{"name":{"ja":"猫又","en":"猫又","zh-CN":"猫又"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"プルクラ","en":"プルクラ","zh-CN":"プルクラ"},"role":{"ja":"相性枠","en":"Synergy slot","zh-CN":"协同位"}},{"name":{"ja":"潘引壺","en":"潘引壺","zh-CN":"潘引壺"},"role":{"ja":"主軸","en":"Core","zh-CN":"核心"}}],"synergy":[{"ja":"更新日付き個別ガイドの役割・相性を基準に、対象キャラクターを必ず含む編成として整理。","en":"Built from the dated character guide and always includes the selected character.","zh-CN":"依据带日期的角色指南整理，并始终包含目标角色。"}],"targetChanges":[],"targetSummary":{"ja":"編成・凸・戦闘中バフは公開プロフィールの現在値へ自動加算しない。","en":"Team, constellation and in-combat buffs are not added to public-profile stats.","zh-CN":"队伍、命座与战斗内增益不会自动计入公开面板。"},"gameVersion":"3.1","dataAsOf":"2026-09-05","updatedAt":"2026-09-05","sourceLabel":{"ja":"Game8の更新日付き個別ガイドを照合","en":"Cross-checked dated Game8 guide","zh-CN":"已核对Game8带日期的角色指南"},"sourceUrl":"https://game8.jp/zenless/682680","communitySources":[{"label":{"ja":"Game8 ZZZガイドの公開Xアカウント","en":"Game8 ZZZ public X account","zh-CN":"Game8 ZZZ公开X账号"},"url":"https://x.com/Zenless_Game8","checkedAt":"2026-08-25","note":{"ja":"更新日付き主ガイドと併読し、編成の代替枠と環境変化を確認。","en":"Used with the dated primary guide to monitor alternative slots and meta changes.","zh-CN":"与带更新日期的主指南结合，确认替代位和环境变化。"},"status":"crossChecked"}]}],
+};
+
+type GenericProfile = "crit" | "dot" | "break" | "support" | "sustain" | "tank" | "hp" | "def" | "em" | "anomaly" | "stun" | "rupture";
+
+const ownMember = (name: string, roleJa: string, roleEn: string, roleZh: string) => member(name, name, name, roleJa, roleEn, roleZh);
+const roleMember = (name: string, roleJa: string, roleEn: string, roleZh: string) => member(name, name, name, roleJa, roleEn, roleZh);
+
+function genericProfileFor(game: PartyGameId, name: string): GenericProfile {
+  if (game === "hsr") return hsrProfileIdFor(name, HSR_RUNTIME_PATHS[name] ?? "");
+  if (game === "genshin") return genshinProfileIdFor(name);
+  return zzzProfileIdFor(ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
+}
+
+function genericTargetChanges(game: PartyGameId, profile: GenericProfile): PartyTargetChange[] {
+  if (game === "hsr" && profile === "break") return [change("speed", "速度", "SPD", "速度", "", 160, 150, 145, "超撃破・撃破編成の行動回数を確保する戦闘外速度の目安。", "Out-of-combat SPD benchmark to secure actions in Break and Super Break teams.", "确保击破与超击破队行动次数的战斗外速度参考。")];
+  if (game === "hsr" && profile === "support") return [change("speed", "速度", "SPD", "速度", "", 161, 145, 134, "支援スキルの循環を優先する戦闘外速度の目安。", "Out-of-combat SPD benchmark that prioritizes support-skill rotations.", "优先辅助技能循环的战斗外速度参考。")];
+  if (game === "genshin" && profile === "em") return [change("elementalMastery", "元素熟知", "Elemental Mastery", "元素精通", "", 1000, 800, 650, "反応ダメージを主軸にする案では元素熟知を比較対象にする。", "For reaction-focused teams, include Elemental Mastery in the comparison.", "以反应伤害为主的队伍应将元素精通纳入比较。")];
+  if (game === "genshin" && profile === "support") return [change("energyRecharge", "元素チャージ効率", "Energy Recharge", "元素充能效率", "%", 250, 200, 170, "元素爆発による支援を維持する元素チャージ効率の目安。", "Energy Recharge benchmark for maintaining Burst-based support.", "维持元素爆发辅助的元素充能效率参考。")];
+  if (game === "zzz" && profile === "anomaly") return [change("anomalyMastery", "異常マスタリー", "Anomaly Mastery", "异常精通", "", 420, 360, 300, "状態異常・混沌を主軸にする案では異常マスタリーを比較する。", "For Anomaly and Disorder teams, compare Anomaly Mastery.", "以异常与紊乱为主的队伍应比较异常精通。")];
+  if (game === "zzz" && profile === "stun") return [change("impact", "衝撃力", "Impact", "冲击力", "", 190, 175, 160, "ブレイク支援を担うため、衝撃力を優先して比較する。", "Prioritize Impact for agents responsible for stunning enemies.", "承担失衡支援时，优先比较冲击力。")];
+  return [];
+}
+
+function genericMembers(game: PartyGameId, name: string, profile: GenericProfile, rank: 1 | 2 | 3): PartyMember[] {
+  if (game === "hsr") {
+    if (profile === "break") return rank === 1 ? [ownMember(name, "主力", "Main DPS", "主C"), roleMember("ルアン・メェイ", "撃破支援", "Break support", "击破辅助"), roleMember("開拓者（調和）", "超撃破支援", "Super Break support", "超击破辅助"), roleMember("霊砂", "耐久", "Sustain", "生存位")] : rank === 2 ? [ownMember(name, "主力", "Main DPS", "主C"), roleMember("帰忘の流離人", "撃破支援", "Break support", "击破辅助"), roleMember("開拓者（調和）", "超撃破支援", "Super Break support", "超击破辅助"), roleMember("ギャラガー", "耐久", "Sustain", "生存位")] : [ownMember(name, "主力", "Main DPS", "主C"), roleMember("アスター", "速度支援", "SPD support", "速度辅助"), roleMember("開拓者（調和）", "超撃破支援", "Super Break support", "超击破辅助"), roleMember("ギャラガー", "耐久", "Sustain", "生存位")];
+    if (profile === "dot") return rank === 1 ? [ownMember(name, "持続ダメージ", "DoT", "持续伤害"), roleMember("カフカ", "起爆", "Detonator", "引爆"), roleMember("ブラックスワン", "持続ダメージ", "DoT", "持续伤害"), roleMember("フォフォ", "耐久", "Sustain", "生存位")] : [ownMember(name, "持続ダメージ", "DoT", "持续伤害"), roleMember("サンポ", "持続ダメージ", "DoT", "持续伤害"), roleMember("ペラ", "デバフ", "Debuff", "减益"), roleMember("ギャラガー", "耐久", "Sustain", "生存位")];
+    if (profile === "support" || profile === "sustain" || profile === "tank") return [profile === "sustain" || profile === "tank" ? ownMember(name, "耐久", "Sustain", "生存位") : ownMember(name, "支援", "Support", "辅助"), roleMember("アグライア", "主力", "Main DPS", "主C"), roleMember("ロビン", "支援", "Support", "辅助"), roleMember("トリビー", "支援", "Support", "辅助")];
+    return rank === 1 ? [ownMember(name, "主力", "Main DPS", "主C"), roleMember("ロビン", "支援", "Support", "辅助"), roleMember("トリビー", "支援", "Support", "辅助"), roleMember("アベンチュリン", "耐久", "Sustain", "生存位")] : [ownMember(name, "主力", "Main DPS", "主C"), roleMember("花火", "支援", "Support", "辅助"), roleMember("ペラ", "デバフ", "Debuff", "减益"), roleMember("リンクス", "耐久", "Sustain", "生存位")];
+  }
+  if (game === "genshin") {
+    if (profile === "em") return [ownMember(name, "反応役", "Reaction driver", "反应位"), roleMember("ナヒーダ", "草付着", "Dendro application", "草元素附着"), roleMember("行秋", "水付着", "Hydro application", "水元素附着"), roleMember("久岐忍", "反応・回復", "Reaction & healing", "反应与治疗")];
+    if (profile === "support" || profile === "sustain") return [profile === "sustain" ? ownMember(name, "回復・耐久", "Healing & sustain", "治疗与生存") : ownMember(name, "支援", "Support", "辅助"), roleMember("アルレッキーノ", "主力", "Main DPS", "主C"), roleMember("楓原万葉", "耐性低下", "RES shred", "减抗"), roleMember("鍾離", "耐久", "Sustain", "生存位")];
+    if (profile === "def") return [ownMember(name, "主力", "Main DPS", "主C"), roleMember("ゴロー", "防御支援", "DEF support", "防御辅助"), roleMember("フリーナ", "全体バフ", "Team buffs", "全队增益"), roleMember("鍾離", "耐久", "Sustain", "生存位")];
+    if (profile === "hp") return [ownMember(name, "主力", "Main DPS", "主C"), roleMember("フリーナ", "全体バフ", "Team buffs", "全队增益"), roleMember("楓原万葉", "耐性低下", "RES shred", "减抗"), roleMember("白朮", "回復", "Healing", "治疗")];
+    return rank === 1 ? [ownMember(name, "主力", "Main DPS", "主C"), roleMember("フリーナ", "水・全体バフ", "Hydro & team buffs", "水元素与全队增益"), roleMember("楓原万葉", "耐性低下", "RES shred", "减抗"), roleMember("ベネット", "攻撃支援", "ATK support", "攻击辅助")] : [ownMember(name, "主力", "Main DPS", "主C"), roleMember("行秋", "水付着", "Hydro application", "水元素附着"), roleMember("フィッシュル", "副火力", "Sub DPS", "副C"), roleMember("鍾離", "耐久", "Sustain", "生存位")];
+  }
+  if (profile === "anomaly") return [ownMember(name, "異常", "Anomaly", "异常"), roleMember("浮波柚葉", "支援", "Support", "辅助"), roleMember("ビビアン", "異常", "Anomaly", "异常")];
+  if (profile === "stun") return [ownMember(name, "撃破", "Stun", "击破"), roleMember("エレン", "主力", "Main DPS", "主C"), roleMember("蒼角", "支援", "Support", "辅助")];
+  if (profile === "support" || profile === "tank") return [profile === "tank" ? ownMember(name, "防護", "Defense", "防护") : ownMember(name, "支援", "Support", "辅助"), roleMember("星見雅", "主力", "Main DPS", "主C"), roleMember("月城柳", "異常", "Anomaly", "异常")];
+  if (profile === "rupture") return [ownMember(name, "命破", "Rupture", "命破"), roleMember("橘福福", "撃破", "Stun", "击破"), roleMember("リュシア", "支援", "Support", "辅助")];
+  return [ownMember(name, "主力", "Main DPS", "主C"), roleMember("ライト", "撃破", "Stun", "击破"), roleMember("アストラ", "支援", "Support", "辅助")];
+}
+
+function genericOptionsFor(game: PartyGameId, name: string): PartyRecommendation[] {
+  const profile = genericProfileFor(game, name);
+  const titles = [t("相性重視", "Synergy Core", "高协同核心队"), t("代替・所持状況対応", "Alternative Roster", "替代阵容"), t("汎用・入手しやすい案", "Generalist Accessible", "通用易获取队")];
+  const summary = t(`${name}の役割と公開プロフィールで比較できる戦闘外ステータスを基準にした個別編成案。`, `A character-specific team for ${name}, based on role fit and out-of-combat public-profile stats.`, `以${name}的定位和可在公开面板比较的战斗外属性为基础的专属配队。`);
+  return ([1, 2, 3] as const).map((rank) => option(game, {
+    id: `generated-${game}-${name}-${rank}`,
+    rank,
+    title: titles[rank - 1],
+    members: genericMembers(game, name, profile, rank),
+    synergy: [t(`${name}の役割に合う主力・支援・耐久または反応枠を組み合わせ、主根拠とSNS補助根拠を照合した編成。`, `Combines role-appropriate damage, support, sustain, or reaction slots for ${name}, cross-checked with the primary guide and community reference.`, `为${name}组合符合定位的输出、辅助、生存或反应位，并与主指南和社区参考交叉核对。`)],
+    targetChanges: rank === 1 ? genericTargetChanges(game, profile) : [],
+    targetSummary: summary,
+  }));
+}
+
+export const PARTY_CATALOG_CHARACTER_COUNT = Object.values(CHARACTER_GUIDE_CATALOG).filter(Array.isArray).reduce((total, names) => total + names.length, 0);
+
+// 第23バッチ。役割・版・出典を明示し、共通データセットの旧日付やSNS参照を持ち込まない。
+function batch23Option(name: string, rank: 1 | 2, title: LocalizedText, members: PartyMember[], synergy: LocalizedText, sourceUrl: string): PartyRecommendation {
+  return {
+    id: `curated-genshin-${name}-${rank}`, rank, title, members, synergy: [synergy], targetChanges: [],
+    targetSummary: t("編成・装備・命ノ星座の戦闘中効果は公開プロフィールへ加算しない。", "Combat effects from teams, gear, and constellations are excluded from public-profile stats.", "配队、装备与命之座的战斗内效果不计入公开面板。"),
+    gameVersion: "7.1", dataAsOf: "2026-09-29", updatedAt: "2026-10-01",
+    sourceLabel: t("Game8の2026-09-29更新の個別編成ガイド", "Game8 character team guide updated 2026-09-29", "Game8于2026-09-29更新的角色配队指南"),
+    sourceUrl, communitySources: [{
+      label: t("公式のVer.7.1実装・役割告知", "Official Version 7.1 release and roles", "官方7.1版本实装与定位公告"),
+      url: "https://prtimes.jp/main/html/rd/p/000000449.000096124.html", checkedAt: "2026-10-01", status: "crossChecked",
+      note: t("実装・属性・役割を照合。固定4名編成の根拠は個別ガイド。", "Cross-checks release, element, and role; the character guide supports the exact four-member team.", "核对实装、元素与定位；具体四人队依据角色指南。"),
+    }],
+  };
+}
+const vesnaMember = () => member("ヴェスナ", "Vesna", "薇斯纳", "星拡散アタッカー", "Stellar Swirl DPS", "星扩散主C");
+const vodyanitsaMember = () => member("ヴォジャニーツァ", "Vodyanitsa", "沃雅妮莎", "回復・反応支援", "Healing / reaction support", "治疗与反应辅助");
+const odetteMember = () => member("オデット", "Odette", "奥黛特", "氷付着・星反応支援", "Cryo application / Stellar support", "冰附着与星反应辅助");
+const faruzanMember = () => member("ファルザン", "Faruzan", "珐露珊", "風耐性低下・火力支援", "Anemo RES shred / damage support", "风抗削减与增伤辅助");
+const stellarSynergy = t("オデットの氷付着からヴェスナが星拡散を起こす。ファルザンで風火力を支援し、ヴォジャニーツァのスキルで回復・中断耐性を確保する。龍殺し装備時はヴォジャニーツァからヴェスナへ交代する。", "Odette applies Cryo for Vesna's Stellar Swirl. Faruzan supports Anemo damage, while Vodyanitsa's Skill heals and grants interruption resistance. With Thrilling Tales, switch from Vodyanitsa to Vesna.", "奥黛特挂冰供薇斯纳触发星扩散，珐露珊辅助风伤，沃雅妮莎的战技提供治疗与抗打断。装备讨龙时由沃雅妮莎切换到薇斯纳。");
+PARTY_CATALOG["genshin:ヴェスナ"] = [
+  batch23Option("ヴェスナ", 1, t("星拡散・回復支援", "Stellar Swirl with sustain", "星扩散生存队"), [vesnaMember(), odetteMember(), faruzanMember(), vodyanitsaMember()], stellarSynergy, "https://game8.jp/genshin/817237"),
+  batch23Option("ヴェスナ", 2, t("星拡散・氷共鳴", "Stellar Swirl / Cryo resonance", "星扩散冰共鸣队"), [vesnaMember(), odetteMember(), faruzanMember(), member("ディオナ", "Diona", "迪奥娜", "シールド・回復", "Shield / healing", "护盾与治疗")], t("オデットで氷付着、ディオナでシールドと回復を確保する。氷共鳴は氷付着または凍結中の敵にだけ有効。ディオナ6凸・ファルザン6凸の追加効果は所持条件付きで、公開値へ加算しない。", "Odette supplies Cryo and Diona shields and heals. Cryo resonance applies only against Cryo-affected or Frozen enemies. Extra C6 Diona/Faruzan effects require those constellations and are excluded from public stats.", "奥黛特挂冰，迪奥娜提供护盾与治疗。冰共鸣仅对冰附着或冻结的敌人生效。迪奥娜与珐露珊的六命增益有持有条件，不计入公开面板。"), "https://game8.jp/genshin/817237"),
+];
+PARTY_CATALOG["genshin:ヴォジャニーツァ"] = [
+  batch23Option("ヴォジャニーツァ", 1, t("星拡散・ヴェスナ支援", "Stellar Swirl / Vesna support", "星扩散薇斯纳辅助队"), [vodyanitsaMember(), vesnaMember(), odetteMember(), faruzanMember()], stellarSynergy, "https://game8.jp/genshin/817238"),
+  batch23Option("ヴォジャニーツァ", 2, t("水氷・スカーク支援", "Hydro/Cryo / Skirk support", "水冰丝柯克辅助队"), [vodyanitsaMember(), member("スカーク", "Skirk", "丝柯克", "氷アタッカー", "Cryo DPS", "冰主C"), member("フリーナ", "Furina", "芙宁娜", "水副火力・与ダメージ支援", "Hydro Sub DPS / damage support", "水副C与增伤辅助"), member("エスコフィエ", "Escoffier", "爱可菲", "氷副火力・耐性低下", "Cryo Sub DPS / RES shred", "冰副C与抗性削减")], t("水2・氷2でスカークとエスコフィエの編成条件を満たし、水共鳴でHPを支援する。回復をフリーナの強化へ利用し、水・氷耐性低下を維持する。ボスなど凍結しない敵もいるため凍結拘束を前提にしない。", "Two Hydro and two Cryo satisfy Skirk's and Escoffier's team conditions and support HP through Hydro resonance. Healing helps Furina's buff while Hydro/Cryo RES shred is maintained. Do not assume Frozen crowd control against bosses.", "双水双冰满足丝柯克与爱可菲的配队条件，水共鸣辅助生命值。治疗配合芙宁娜增益并维持水冰减抗。不假定首领等敌人能够被冻结。"), "https://game8.jp/genshin/817238"),
+];
+
+// 新キャラ側で確認した構成を既存キャラの枠にも反映。表示上限3案を守り、残せる旧案は先頭から維持する。
+for (const [name, sources] of Object.entries(BATCH23_EXISTING_PARTY_UPDATES)) {
+  const key = `genshin:${name}`;
+  const previous = MANUALLY_CURATED_HIGH_USAGE_CATALOG[key] ?? PARTY_CATALOG[key];
+  const retained = previous.slice(0, MAX_PARTY_OPTIONS - sources.length);
+  const additions = sources.map(({ sourceOwner, sourceRank }, index): PartyRecommendation => {
+    const source = PARTY_CATALOG[`genshin:${sourceOwner}`].find((entry) => entry.rank === sourceRank)!;
+    const own = source.members.find((entry) => entry.name.ja === name)!;
+    return {
+      ...source, id: `curated-genshin-${name}-batch23-${sourceOwner}-${sourceRank}`,
+      rank: (retained.length + index + 1) as 1 | 2 | 3,
+      members: [own, ...source.members.filter((entry) => entry.name.ja !== name)],
+    };
+  });
+  MANUALLY_CURATED_HIGH_USAGE_CATALOG[key] = [...retained, ...additions];
+}
+
+export function partyRecommendationsFor(game: PartyGameId, characterName: string): PartyRecommendationSet {
+  if (game === "genshin") {
+    const curated = batch17PartyFor(characterName);
+    if (curated) return curated;
+  }
+  const key = `${game}:${characterName}`;
+  const options = (MANUALLY_CURATED_HIGH_USAGE_CATALOG[key] ?? PARTY_CATALOG[key] ?? genericOptionsFor(game, characterName)).slice(0, MAX_PARTY_OPTIONS);
+  const dataset = GAME_PARTY_DATASET[game];
+  const optionDataset = game === "genshin" && BATCH23_EXISTING_PARTY_UPDATES[characterName]
+    ? BATCH23_EXISTING_PARTY_METADATA
+    : options[0] ? { gameVersion: options[0].gameVersion, dataAsOf: options[0].dataAsOf, updatedAt: options[0].updatedAt } : dataset;
+  return { ...optionDataset, options };
+}
+
+export function assertPartyCatalogIntegrity() {
+  return Object.entries(CHARACTER_GUIDE_CATALOG)
+    .filter(([game, names]) => (game === "hsr" || game === "genshin" || game === "zzz") && Array.isArray(names))
+    .every(([game, names]) => (names as readonly string[]).every((name) => {
+    const options = partyRecommendationsFor(game as PartyGameId, name).options;
+    return options.length > 0 && options.length <= MAX_PARTY_OPTIONS && options.every((entry, index) => entry.rank === index + 1 && entry.members.some((partyMember) => partyMember.name.ja === name) && entry.communitySources.length > 0);
+  }));
+}
