@@ -27,12 +27,12 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計694件（旧形式686・共有8）で、IDが重複しない", () => {
-    expect(TEAM_STORE.teams).toHaveLength(694);
-    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(686);
+  it("合計693件（旧形式678・共有15）で、IDが重複しない", () => {
+    expect(TEAM_STORE.teams).toHaveLength(693);
+    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(678);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
-    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(694);
+    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(693);
   });
 
   it("旧形式の全編成で起点キャラがメンバーにいて、目標補正9件が起点メンバーへ移っている", () => {

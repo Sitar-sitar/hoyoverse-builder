@@ -102,7 +102,7 @@ describe("第3バッチの凸・推奨PT・履歴", () => {
       const parties = partyRecommendationsFor(game, name);
       expect(parties.options).toHaveLength(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === name))).toBe(true);
-      expect(parties.updatedAt).toBe("2026-08-26");
+      expect(parties.updatedAt).toBe(["黄泉", "サンデー"].includes(name) ? "2026-10-03" : "2026-08-26");
       expect(guideMetadataFor(game, name).updatedAt).toBe("2026-08-26");
     });
     const acheron = partyRecommendationsFor("hsr", "黄泉");

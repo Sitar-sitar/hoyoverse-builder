@@ -7,7 +7,7 @@ vi.mock("../db", () => ({ recordLookupAnalyticsEvent: mocks.analytics }));
 import { normalizeMihomoPayload } from "../buildAdvisor";
 import { catalogSourceIdFor } from "../characterConstellations";
 import { appRouter } from "../routers";
-import { BATCH24_TEAMS } from "./batch24Teams";
+import { BATCH25_TEAMS } from "./batch25Teams";
 import { CHARACTER_PARTIES } from "./characterParties";
 import { INITIAL_PARTY_REFS } from "./initialRefs";
 import { PARTY_LINK_RECORDS } from "./linkRecords";
@@ -15,14 +15,14 @@ import { rosterKey, teamStoreIssues, uncoveredLinks } from "./linkStatus";
 import { partyRecommendationsFor } from "./resolve";
 import { TEAM_STORE } from "./teamStore";
 
-const owners = ["パール", "アベンチュリン・波と戯れる夏", "緋英", "火花", "爻光", "不死途", "千冶・刃", "ヒアンシー", "ロビン・夏空の歌"];
+const owners = ["千冶・刃", "姫子・旅立ち", "不死途", "トリビー", "黄泉", "サフェル", "ヴェルト", "フォフォ", "ロビン・夏空の歌", "サンデー", "丹恒・騰荒", "ルアン・メェイ"];
 let nextIp = 1;
 const caller = () => appRouter.createCaller({
-  req: { headers: {}, socket: { remoteAddress: `203.0.113.${nextIp++}` } },
+  req: { headers: {}, socket: { remoteAddress: `203.0.114.${nextIp++}` } },
   res: { getHeader: () => undefined, setHeader: () => {} }, user: null,
 } as never);
 
-describe("第24バッチ共有化の最終API応答", () => {
+describe("第25バッチ共有化の最終API応答", () => {
   it.each(owners)("%sのUID経路・図鑑・履歴が一致し、公開現在値を変更しない", async (name) => {
     const values = [
       { field: "hp", name: "HP", value: 3000, percent: false },
@@ -40,7 +40,7 @@ describe("第24バッチ共有化の最終API応答", () => {
     const originalStats = structuredClone(result.characters[0]!.allStats);
     mocks.lookup.mockResolvedValue(result);
     const api = caller();
-    const uid = await api.build.lookup({ game: "hsr", uid: `80000000${owners.indexOf(name)}` });
+    const uid = await api.build.lookup({ game: "hsr", uid: String(800100000 + owners.indexOf(name)) });
     const reference = await api.build.reference({ game: "hsr", name });
     const character = uid.characters[0]!;
     expect(character.identity.sourceId).toBe(catalogSourceIdFor("hsr", name));
@@ -55,31 +55,41 @@ describe("第24バッチ共有化の最終API応答", () => {
     const history = await api.build.guideHistory();
     const entry = history.characters.find((item) => item.game === "hsr" && item.name === name)!;
     expect(entry.updatedAt).toBe("2026-10-03");
-    expect(entry.events.some((event) => event.title.includes("第24バッチ"))).toBe(true);
+    expect(entry.events.some((event) => event.title.includes("第25バッチ"))).toBe(true);
     expect(entry.events[0]!.changes).toContain("ビルド・装備・凸・公開現在値は変更しない");
   });
 
-  it("緋英の重複を1マスタへ統合し、旧3案の除外を初期参照から追跡できる", () => {
-    const p2 = BATCH24_TEAMS[1]!;
-    expect(TEAM_STORE.teams.filter((team) => rosterKey("hsr", team.members) === rosterKey("hsr", p2.members))).toHaveLength(1);
-    expect(partyRecommendationsFor("hsr", "緋英").options.map((option) => option.id)).toEqual([`${p2.id}@緋英`]);
-    expect(INITIAL_PARTY_REFS["hsr:緋英"]).toEqual(["batch15-hsr-緋英-1", "batch15-hsr-緋英-2", "batch15-hsr-緋英-3"]);
-    const record = PARTY_LINK_RECORDS.find((entry) => entry.batch === 24 && entry.owner === "緋英")!;
-    expect(record.removed).toEqual(INITIAL_PARTY_REFS["hsr:緋英"]);
-    expect(record.added).toEqual([p2.id]);
+  it("千冶・刃と不死途の同構成を1マスタへ統合し、初期参照と過去記録を維持する", () => {
+    const team = BATCH25_TEAMS[0]!;
+    expect(TEAM_STORE.teams.filter((entry) => rosterKey("hsr", entry.members) === rosterKey("hsr", team.members))).toHaveLength(1);
+    expect(INITIAL_PARTY_REFS["hsr:千冶・刃"]).toEqual(["curated-hsr-千冶・刃-1", "curated-hsr-千冶・刃-2", "curated-hsr-千冶・刃-3"]);
+    expect(PARTY_LINK_RECORDS.find((r) => r.batch === 24 && r.owner === "千冶・刃")!.removed).toEqual(["curated-hsr-千冶・刃-3"]);
+    expect(PARTY_LINK_RECORDS.find((r) => r.batch === 25 && r.owner === "千冶・刃")!.removed).toEqual(["curated-hsr-千冶・刃-1", "curated-hsr-千冶・刃-2"]);
     expect(teamStoreIssues()).toEqual([]);
+    expect(uncoveredLinks()).toEqual([]);
   });
 
-  it("採用しない参加者にも再確認できる見送りを残し、通常アベンチュリン・銀狼へ混入しない", () => {
-    const a2 = BATCH24_TEAMS[3]!;
-    for (const name of ["爻光", "ヒアンシー"]) {
+  it("出典の異なる回復・支援枠を混同せず、数値補正を追加しない", () => {
+    expect(BATCH25_TEAMS[3]!.members.map((m) => m.name.ja)).toEqual(["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"]);
+    expect(BATCH25_TEAMS[3]!.sourceUrl).toBe("https://gamewith.jp/houkaistarrail/article/show/561096");
+    expect(BATCH25_TEAMS[3]!.communitySources[0]!.status).toBe("watching");
+    expect(BATCH25_TEAMS[4]!.members.map((m) => m.name.ja)).toEqual(["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"]);
+    for (const team of BATCH25_TEAMS) for (const lang of ["ja", "en", "zh-CN"] as const) {
+      expect(team.synergy[0]![lang]).toBeTruthy();
+      expect(team.members.every((m) => Boolean(m.role[lang]))).toBe(true);
+      expect(team.members.every((m) => !m.targetChanges?.length)).toBe(true);
+    }
+  });
+
+  it("3枠から外す案に根拠を残し、通常形態と別ゲームへ混入しない", () => {
+    for (const name of ["姫子・旅立ち", "ヒアンシー", "フォフォ", "ロビン・夏空の歌"]) {
       const entry = CHARACTER_PARTIES[`hsr:${name}`]!;
-      expect(entry.refs?.some((ref) => ref.team === a2.id)).toBe(false);
-      expect(entry.skipped).toContainEqual(expect.objectContaining({ team: a2.id, checkedAt: "2026-10-03" }));
+      expect(entry.refs!.length).toBeLessThanOrEqual(3);
+      expect(entry.skipped!.some((skip) => skip.team.includes("-b25-") && skip.checkedAt === "2026-10-03" && skip.sourceUrl.startsWith("https://"))).toBe(true);
     }
-    expect(uncoveredLinks()).toEqual([]);
-    for (const name of ["アベンチュリン", "銀狼"]) {
-      expect(partyRecommendationsFor("hsr", name).options.some((option) => option.id.includes("-b24-"))).toBe(false);
+    for (const name of ["刃", "姫子", "ロビン", "丹恒", "アベンチュリン"]) {
+      expect(partyRecommendationsFor("hsr", name).options.some((option) => option.id.includes("-b25-"))).toBe(false);
     }
+    expect(partyRecommendationsFor("genshin", "雷電将軍").options.some((option) => option.id.includes("-b25-"))).toBe(false);
   });
 });

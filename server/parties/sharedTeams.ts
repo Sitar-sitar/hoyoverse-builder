@@ -1,4 +1,5 @@
 import { t, member } from "./text";
+import { BATCH25_TEAMS } from "./batch25Teams";
 import { BATCH24_TEAMS } from "./batch24Teams";
 import type { LocalizedText, PartyMember, Team } from "./types";
 
@@ -25,6 +26,7 @@ const stellarSynergy = t("オデットの氷付着からヴェスナが星拡散
 /** 他キャラから参照できる編成の正本（D4）。第24バッチ以降の編成はすべてここへ書く。 */
 export const SHARED_TEAMS: Team[] = [
   ...BATCH24_TEAMS,
+  ...BATCH25_TEAMS,
   batch23Team("ヴェスナ", 1, t("星拡散・回復支援", "Stellar Swirl with sustain", "星扩散生存队"), [vesnaMember(), odetteMember(), faruzanMember(), vodyanitsaMember()], stellarSynergy, "https://game8.jp/genshin/817237"),
   batch23Team("ヴェスナ", 2, t("星拡散・氷共鳴", "Stellar Swirl / Cryo resonance", "星扩散冰共鸣队"), [vesnaMember(), odetteMember(), faruzanMember(), member("ディオナ", "Diona", "迪奥娜", "シールド・回復", "Shield / healing", "护盾与治疗")], t("オデットで氷付着、ディオナでシールドと回復を確保する。氷共鳴は氷付着または凍結中の敵にだけ有効。ディオナ6凸・ファルザン6凸の追加効果は所持条件付きで、公開値へ加算しない。", "Odette supplies Cryo and Diona shields and heals. Cryo resonance applies only against Cryo-affected or Frozen enemies. Extra C6 Diona/Faruzan effects require those constellations and are excluded from public stats.", "奥黛特挂冰，迪奥娜提供护盾与治疗。冰共鸣仅对冰附着或冻结的敌人生效。迪奥娜与珐露珊的六命增益有持有条件，不计入公开面板。"), "https://game8.jp/genshin/817237"),
   batch23Team("ヴォジャニーツァ", 1, t("星拡散・ヴェスナ支援", "Stellar Swirl / Vesna support", "星扩散薇斯纳辅助队"), [vodyanitsaMember(), vesnaMember(), odetteMember(), faruzanMember()], stellarSynergy, "https://game8.jp/genshin/817238"),

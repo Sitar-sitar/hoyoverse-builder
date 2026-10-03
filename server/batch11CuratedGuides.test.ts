@@ -57,7 +57,7 @@ describe("第11バッチ20名の個別ガイド", () => {
       expect(parties.options.length).toBeLessThanOrEqual(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "ヒアンシー" ? "2026-10-03" : "2026-08-27");
+      expect(parties.updatedAt).toBe(["ヒアンシー", "トリビー", "フォフォ"].includes(displayName) ? "2026-10-03" : "2026-08-27");
       expect(guideMetadataFor(game, displayName).updatedAt).toBe("2026-08-27");
     });
     expect(partyRecommendationsFor("hsr", "ファイノン").options[0]?.members.map((member) => member.name.ja)).toEqual(["ファイノン", "ケリュドラ", "サンデー", "丹恒・騰荒"]);

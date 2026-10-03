@@ -41,7 +41,7 @@ describe("全キャラクター更新台帳", () => {
       genshin: { total: 111, reviewed: 111, pending: 0 },
       zzz: { total: 59, reviewed: 59, pending: 0 },
     });
-    expect(ledger.nextBatch.id).toBe(25);
+    expect(ledger.nextBatch.id).toBe(26);
     expect(new Set(ledger.entries.map((entry) => `${entry.game}:${entry.name}`)).size).toBe(ledger.total);
     expect(ledger.nextBatch.names).toEqual([]);
   });

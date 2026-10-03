@@ -18,7 +18,7 @@ import { MAX_PARTY_OPTIONS, type CharacterPartyEntry, type PartyGameId, type Par
 /** 共有編成の batch の下限（D10）。ゲートはすべての共有編成にかけ、batch では絞らない。 */
 export const LINK_GATE_FROM_BATCH = 23;
 /** 旧形式編成の件数上限（A4）。旧形式を削除したら下げる。 */
-export const LEGACY_TEAM_LIMIT = 686;
+export const LEGACY_TEAM_LIMIT = 678;
 /** 共有編成で使わない汎用役割（D13）。 */
 export const GENERIC_ROLE_LABELS: ReadonlySet<string> = new Set(["主力・副火力", "支援・反応", "耐久・補助", "相性枠", "反応・火力支援"]);
 /** バックログ報告の対象にする起点キャラの所属バッチの下限。 */
