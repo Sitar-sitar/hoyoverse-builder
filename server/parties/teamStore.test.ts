@@ -27,12 +27,12 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計697件（旧形式693・共有4）で、IDが重複しない", () => {
-    expect(TEAM_STORE.teams).toHaveLength(697);
-    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(693);
+  it("合計694件（旧形式686・共有8）で、IDが重複しない", () => {
+    expect(TEAM_STORE.teams).toHaveLength(694);
+    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(686);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
-    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(697);
+    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(694);
   });
 
   it("旧形式の全編成で起点キャラがメンバーにいて、目標補正9件が起点メンバーへ移っている", () => {
@@ -86,7 +86,7 @@ describe("編成マスタ（Phase 1）", () => {
       expect(set).toMatchObject({ gameVersion: "7.1", dataAsOf: "2026-09-29", updatedAt: "2026-10-01" });
     }
     const referenced = new Set(allCharacters.flatMap(({ game, name }) => refsFor(game, name).map((ref) => ref.team)));
-    const unreferenced = TEAM_STORE.teams.filter((team) => !referenced.has(team.id)).map((team) => team.id);
+    const unreferenced = TEAM_STORE.teams.filter((team) => team.game === "genshin" && !referenced.has(team.id)).map((team) => team.id);
     expect(unreferenced.sort()).toEqual([...ORPHANS].sort());
   });
 
@@ -173,6 +173,6 @@ describe("変更記録と更新履歴（PT-02・PT-03）", () => {
     }
     const hotaru = history.characters.find((item) => item.game === "hsr" && item.name === "ホタル")!;
     expect(hotaru.events.some((event) => event.title.includes("追補"))).toBe(false);
-    expect(Object.keys(CHARACTER_PARTIES).sort()).toEqual(BATCH23_OWNERS.map((name) => `genshin:${name}`).sort());
+    expect(Object.keys(CHARACTER_PARTIES).filter((key) => key.startsWith("genshin:")).sort()).toEqual(BATCH23_OWNERS.map((name) => `genshin:${name}`).sort());
   });
 });

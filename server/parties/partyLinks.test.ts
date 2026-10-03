@@ -83,42 +83,41 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
   });
 
   it("旧形式の編成を後続バッチで共有化すると、参加者全員の記録が揃うまで失敗する（PT-04）", () => {
-    const legacy = TEAM_STORE.byId.get("curated-hsr-パール-1")!;
-    // 共有化では注記を視点非依存へ書き換える（旧形式のままだと D14 で止まる）。
-    expect(teamStoreIssues({ store: buildTeamStore([...TEAM_STORE.teams.filter((team) => team.id !== legacy.id), { ...legacy, id: "team-hsr-パール-b25-1", shared: true, batch: 25, sourceBatch: 21 }]) }).some((issue) => issue.startsWith("D14"))).toBe(true);
-    const converted: Team = { ...legacy, id: "team-hsr-パール-b25-1", shared: true, batch: 25, sourceBatch: 21, targetSummary: text("編成・遺物・星魂の戦闘中効果は公開プロフィールへ加算しない。") };
-    const store = buildTeamStore([...TEAM_STORE.teams.filter((team) => team.id !== legacy.id), converted]);
+    // 実データの共有化済みキャラに依存しない反例。初期参照にある旧IDと別の構成を使う。
+    const legacy: Team = { ...TEAM_STORE.byId.get("curated-hsr-爻光-3")!,
+      members: ["爻光", "火花", "パール", "フォフォ"].map((name) => ({ name: text(name), role: text("支援") })),
+      targetSummary: text("爻光の公開値は変更しない。") };
+    const converted: Team = { ...legacy, id: "team-hsr-爻光-b25-1", shared: true, batch: 25, sourceBatch: 16,
+      targetSummary: text("編成・遺物・星魂の戦闘中効果は公開プロフィールへ加算しない。") };
+    const base = TEAM_STORE.teams.filter((team) => team.id !== legacy.id);
+    expect(teamStoreIssues({ store: buildTeamStore([...base, { ...converted, targetSummary: legacy.targetSummary }]) }).some((issue) => issue.startsWith("D14"))).toBe(true);
+    const store = buildTeamStore([...base, converted]);
     const batches = { ...PARTY_LINK_BATCHES, 25: { ...B24, batch: 25 } };
-    const pending = uncoveredLinks({ store, batches });
-    expect(owners(pending)).toEqual(["火花", "爻光"].sort());
-    // 起点の共有化も参照IDの変更なので、旧IDの除外と新IDの採用を記録する（PT-06）。
-    expect(teamStoreIssues({ store, batches }).some((issue) => issue.startsWith("B7/E2"))).toBe(true);
-
-    // 火花は参照（＋変更記録）、爻光は見送り。
+    expect(owners(uncoveredLinks({ store, batches }))).toEqual(["火花", "パール", "フォフォ"].sort());
+    expect(teamStoreIssues({ store, batches }).some((issue) => issue.startsWith("B2"))).toBe(true);
     const sparkleRefs = refsFor("hsr", "火花");
-    const kept = sparkleRefs.slice(0, 2);
     const dropped = sparkleRefs.slice(2).map((ref) => ref.team);
-    const parties: Record<string, CharacterPartyEntry> = {
-      ...CHARACTER_PARTIES,
-      "hsr:火花": { refs: [...kept, { team: converted.id }] },
-      "hsr:爻光": { skipped: [{ team: converted.id, reason: "爻光の個別ガイドの編成節に記載なし", sourceUrl: "https://example.com/yaoguang", checkedAt: "2026-10-20" }] },
+    const skip = { team: converted.id, reason: "個別ガイドの編成節に記載なし", sourceUrl: "https://example.com/team", checkedAt: "2026-10-20" };
+    const parties: Record<string, CharacterPartyEntry> = { ...CHARACTER_PARTIES,
+      "hsr:爻光": { ...CHARACTER_PARTIES["hsr:爻光"], refs: [...refsFor("hsr", "爻光").slice(0, 2), { team: converted.id }] },
+      "hsr:火花": { refs: [...sparkleRefs.slice(0, 2), { team: converted.id }], skipped: [{ ...skip, team: dropped[0]! }] },
+      "hsr:パール": { ...CHARACTER_PARTIES["hsr:パール"], skipped: [skip] },
+      "hsr:フォフォ": { skipped: [skip] },
     };
     const records: PartyLinkRecord[] = [...PARTY_LINK_RECORDS,
-      { batch: 25, game: "hsr", owner: "パール", added: [converted.id], removed: [legacy.id] },
+      { batch: 25, game: "hsr", owner: "爻光", added: [converted.id], removed: [legacy.id] },
       { batch: 25, game: "hsr", owner: "火花", added: [converted.id], removed: dropped }];
+    expect(teamStoreIssues({ store, batches, parties }).some((issue) => issue.startsWith("B7/E2"))).toBe(true);
     expect(uncoveredLinks({ store, batches, parties, records })).toEqual([]);
     expect(teamStoreIssues({ store, batches, parties, records })).toEqual([]);
-
-    // 元の精査バッチを batch に入れると D10 違反。
-    const asOld = buildTeamStore([...TEAM_STORE.teams.filter((team) => team.id !== legacy.id), { ...converted, batch: 21, sourceBatch: undefined }]);
-    expect(teamStoreIssues({ store: asOld, batches }).some((issue) => issue.startsWith("D10"))).toBe(true);
+    expect(teamStoreIssues({ store: buildTeamStore([...base, { ...converted, batch: 16, sourceBatch: undefined }]), batches }).some((issue) => issue.startsWith("D10"))).toBe(true);
   });
 
-  it("共有化していない旧形式のバックログは報告だけ（38件）", () => {
+  it("共有化していない旧形式のバックログは報告だけ（29件）", () => {
     const backlog = backlogLinks();
-    expect(backlog).toHaveLength(38);
+    expect(backlog).toHaveLength(29);
     const byOrigin = Object.fromEntries([...new Set(backlog.map((entry) => entry.origin))].map((origin) => [origin, backlog.filter((entry) => entry.origin === origin).length]));
-    expect(byOrigin).toEqual({ 千冶・刃: 8, 姫子・旅立ち: 8, ロビン・夏空の歌: 7, クラレッタ: 6, アベンチュリン・波と戯れる夏: 6, パール: 3 });
+    expect(byOrigin).toEqual({ 千冶・刃: 8, 姫子・旅立ち: 8, ロビン・夏空の歌: 7, クラレッタ: 6 });
   });
 });
 
