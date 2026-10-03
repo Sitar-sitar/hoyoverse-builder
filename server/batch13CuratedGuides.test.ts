@@ -94,7 +94,7 @@ describe("第13バッチ20名の個別ガイド", () => {
       expect(parties.options.length).toBeLessThanOrEqual(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "スカーク" ? "2026-10-01" : "2026-08-27");
+      expect(parties.updatedAt).toBe(displayName === "火花" ? "2026-10-03" : displayName === "スカーク" ? "2026-10-01" : "2026-08-27");
       expect(guideMetadataFor(game, displayName).updatedAt).toBe("2026-08-27");
     });
     expect(partyRecommendationsFor("hsr", "雲璃").options[0]?.members.map((member) => member.name.ja)).toEqual(["雲璃", "サンデー", "ロビン", "丹恒・騰荒"]);

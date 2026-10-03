@@ -61,9 +61,9 @@ describe("図鑑の凸データ（R8 の再現テスト）", () => {
 
 describe("第18バッチで追加した HSR 3名", () => {
   const added = [
-    { name: "千冶・刃", sourceId: "1507", path: "Warlock", firstEidolon: "死するまで、この身は成らず", partyNames: [["千冶・刃", "不死途", "トリビー", "ヒアンシー"], ["千冶・刃", "黄泉", "サフェル", "ヒアンシー"], ["千冶・刃", "姫子・旅立ち", "ヴェルト", "フォフォ"]] },
+    { name: "千冶・刃", sourceId: "1507", path: "Warlock", firstEidolon: "死するまで、この身は成らず", partyNames: [["千冶・刃", "不死途", "トリビー", "ヒアンシー"], ["千冶・刃", "黄泉", "サフェル", "ヒアンシー"], ["千冶・刃", "アベンチュリン・波と戯れる夏", "不死途", "ヒアンシー"]] },
     { name: "姫子・旅立ち", sourceId: "1510", path: "Mage", firstEidolon: "道と呼ばれるものこそ開拓", partyNames: [["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"], ["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"], ["姫子・旅立ち", "開拓者（記憶）", "ルアン・メェイ", "フォフォ"]] },
-    { name: "ロビン・夏空の歌", sourceId: "1512", path: "Memory", firstEidolon: "群れを離れた夏の鳥", partyNames: [["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], ["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], ["ロビン・夏空の歌", "セイバー", "ギルガメッシュ", "フォフォ"]] },
+    { name: "ロビン・夏空の歌", sourceId: "1512", path: "Memory", firstEidolon: "群れを離れた夏の鳥", partyNames: [["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], ["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], ["ロビン・夏空の歌", "アベンチュリン・波と戯れる夏", "爻光", "ヒアンシー"]] },
   ] as const;
 
   it.each(added)("$name は第18バッチの精査済みとして、個別ガイド・出典の実名PT・確認済みIDの6段階星魂を返す", ({ name, sourceId, path, firstEidolon, partyNames }) => {
@@ -181,8 +181,11 @@ describe("第21バッチ", () => {
       expect(option.targetChanges).toEqual([]);
       // 共通データセットの Ver.4.4 表記・4.4編成議論の出典を持ち込まず、役割は位置ではなく明示する。
       expect(option.gameVersion).toBe("4.6");
-      expect(option.communitySources.map((source) => source.url)).toEqual(["https://game8.jp/houkaistarrail/759885", "https://gamewith.jp/houkaistarrail/article/show/572184"]);
-      expect(option.members.map((member) => member.role.ja)).toEqual(["耐久サポート", "主力", "支援", "支援"]);
+      expect(option.communitySources.map((source) => source.url)).toEqual(["https://game8.jp/houkaistarrail/759885"]);
+      expect(option.sourceUrl).toBe("https://gamewith.jp/houkaistarrail/article/show/572184");
+      expect(option.members[0]?.role.ja).toBe("回復・愉悦支援");
+      expect(option.members[1]?.role.ja).toContain("愉悦アタッカー");
+      expect(option.members[3]?.role.ja).toBe("愉悦支援・アッハタイム促進");
     });
     const constellations = reference!.constellations;
     expect(constellations.dataStatus).toBe("curated");

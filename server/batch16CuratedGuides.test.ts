@@ -145,8 +145,8 @@ describe("第16バッチ20名の個別ガイド", () => {
       expect(parties.options.every((option) => option.members[0]?.name.ja === displayName)).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
       expect(parties.options.every((option) => option.members.length === 4)).toBe(true);
-      expect(parties.options.every((option) => option.communitySources.every((source) => source.checkedAt === (displayName === "ファルザン" && option.rank > 1 ? "2026-10-01" : BATCH16_DATE)))).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "ファルザン" ? "2026-10-01" : BATCH16_DATE);
+      expect(parties.options.every((option) => option.communitySources.every((source) => source.checkedAt === (option.id.startsWith("team-hsr-") ? "2026-10-03" : displayName === "ファルザン" && option.rank > 1 ? "2026-10-01" : BATCH16_DATE)))).toBe(true);
+      expect(parties.updatedAt).toBe(["不死途", "爻光"].includes(displayName) ? "2026-10-03" : displayName === "ファルザン" ? "2026-10-01" : BATCH16_DATE);
       expect(guideMetadataFor(game, displayName).updatedAt).toBe(BATCH16_DATE);
     });
     // 出典が4名固定の第3案を示さないキャラクターは案を創作せず2案で確定する。
