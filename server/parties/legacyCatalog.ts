@@ -609,18 +609,8 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["ジェパード", "黄泉", "椒丘", "ペラ"], "虚無2名のデバフで黄泉の必殺技回転を早め、全体バリアで耐久を確保する。", "Two Nihility debuffers speed up Acheron's Ultimate while team shields provide sustain.", "以两名虚无的减益加快黄泉终结技循环，并以全队护盾保证生存。"),
     plan(["ジェパード", "姫子・旅立ち", "トリビー", "ヴェルト"], "姫子・旅立ちの支援スキル連携をヴェルトとトリビーで回し、全体バリアで耐久を担う（Game8 の編成例）。", "Welt and Tribbie drive Himeko • Departure's assist-skill rotation while Gepard's team shields provide sustain (Game8 example).", "由瓦尔特与缇宝推动姬子·启程的支援技能循环，杰帕德以全队护盾承担生存（Game8 配队示例）。"),
   ]),
-  // 第18バッチ（2026-09-11）でカタログへ追加した HSR 3名。出典の実名編成だけを登録（docs/batch-18-research-notes.md 区分2）。
-  // 千冶・刃は案1が Game8・案2〜3が GameWith、姫子・旅立ちは案1〜2が Game8（案1は GameWith も同一）・案3が GameWith、ロビン・夏空の歌は案1が Game8・案2〜3が GameWith。
-  "hsr:千冶・刃": batch18Options("hsr", "千冶・刃", "https://gamewith.jp/houkaistarrail/article/show/553897", t("サブアタッカー・デバフ", "Sub DPS & debuff", "副C与减益"), [
-    plan(["千冶・刃", "不死途", "トリビー", "ヒアンシー"], "不死途と防御デバフを相互に活かすWアタッカー編成。トリビーの支援とヒアンシーの回復で2人の火力を支える。", "A dual-DPS team where Mortenax Blade and Ashveil share debuffs, backed by Tribbie's support and Hyacine's healing.", "不死途与千冶·刃互相利用减益的双输出队，由缇宝辅助与风堇治疗支撑两人输出。"),
-    plan(["千冶・刃", "黄泉", "サフェル", "ヒアンシー"], "虚無2名で黄泉の必殺技回転を早め、千冶・刃のデバフと追加攻撃扱いの必殺技を重ねる。", "Two Nihility units speed up Acheron's Ultimate while Mortenax Blade layers debuffs and Ultimate follow-up synergy.", "以两名虚无加快黄泉终结技循环，并叠加千冶·刃的减益与终结技追击联动。"),
-    plan(["千冶・刃", "姫子・旅立ち", "ヴェルト", "フォフォ"], "姫子・旅立ちの殲滅型をヴェルトの支援スキルで回し、千冶・刃の全体デバフで範囲火力を伸ばす。", "Welt drives Himeko • Departure's Annihilation form while Mortenax Blade's team-wide debuffs raise AoE damage.", "以瓦尔特的支援技能推动姬子·启程的歼灭形态，并以千冶·刃的全体减益提升群攻输出。"),
-  ]),
-  "hsr:姫子・旅立ち": batch18Options("hsr", "姫子・旅立ち", "https://game8.jp/houkaistarrail/784730", mainDps, [
-    plan(["姫子・旅立ち", "ロビン・夏空の歌", "ヴェルト", "フォフォ"], "ヴェルトで支援スキルを発動する殲滅編成。防御無視と防御低下を重ねて敵の防御力をほぼ無視する。", "An Annihilation team where Welt triggers assist skills, stacking DEF ignore and DEF reduction to nearly bypass enemy DEF.", "由瓦尔特发动支援技能的歼灭队，叠加无视防御与减防，几乎无视敌人防御力。"),
-    plan(["姫子・旅立ち", "サンデー", "ロビン・夏空の歌", "丹恒・騰荒"], "手数とEP回復が多い裁決編成。必殺技の回転率を高める。", "A Judgment team with many actions and high Energy gain that raises Ultimate uptime.", "行动次数与能量回复较多的裁决队，提高终结技循环率。"),
-    plan(["姫子・旅立ち", "開拓者（記憶）", "ルアン・メェイ", "フォフォ"], "記憶開拓者の支援スキルとルアン・メェイの支援で組む、微課金向けのハイパーキャリー編成。", "A budget hypercarry team using Remembrance Trailblazer's assist skill and Ruan Mei's support.", "利用记忆开拓者支援技能与阮·梅辅助的低氪超载队。"),
-  ]),
+  // 第18バッチの夏ロビン。案1はGame8、案2〜3はGameWith（docs/batch-18-research-notes.md 区分2）。
+  // 千冶・刃と姫子・旅立ちの旧全案は第25バッチの共有マスタへ移行。
   "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
     plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),
     plan(["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], "単体の不死途と全体の千冶・刃を並べ、単体・複数の両方に対応する。", "Pairs single-target Ashveil with AoE Mortenax Blade to handle both single and multiple enemies.", "并列擅长单体的不死途与擅长群攻的千冶·刃，同时应对单体与多目标。"),
@@ -1127,10 +1117,6 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["リオセスリ", "申鶴", "楓原万葉", "シロネン"], "キャリー編成。全てサポーター構成で火力を集約する。", "A carry team; the rest of the team is composed entirely of supports to concentrate damage on Lauma.", "核心输出编成;其余全部由辅助角色组成,以集中输出。"),
   ]),
 
-  "hsr:不死途": batch16Options("hsr", "不死途", "https://game8.jp/houkaistarrail/756950", t("主力", "Main DPS", "主C"), [
-    plan(["不死途", "千冶・刃", "トリビー", "ヒアンシー"], "互いに支援性能を持つアタッカー2枚で火力を高め合う。", "Two attackers with mutual support capabilities boost each other damage.", "两名兼具辅助能力的攻击手互相提升伤害。"),
-    plan(["不死途", "サンデー", "トリビー", "丹恒・騰荒"], "行動支援と全体支援を主力へ集約する。", "Concentrates action advance and team-wide support onto the main DPS.", "将行动支援与全队辅助集中赋予主力。"),
-  ]),
 
   "hsr:乱破": batch16Options("hsr", "乱破", "https://game8.jp/houkaistarrail/635340", t("撃破・主力", "Break & Main DPS", "击破主C"), [
     plan(["乱破", "帰忘の流離人", "ダリア", "霊砂"], "超撃破を軸に虚数の全体撃破火力を伸ばす。", "Centers on Super Break to boost Imaginary AoE Break damage.", "以超击破为核心,提升虚数属性的全队击破伤害。"),

@@ -6,6 +6,14 @@ import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
  * PARTY_LINK_RECORDS は追記専用。過去の行を書き換えない・消さない。参照を入れ替えるときは新しいバッチの行を足す。
  */
 export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = {
+  25: {
+    batch:25, date:'2026-10-03T13:00:00+09:00', updatedAt:'2026-10-03',
+    sourceNote:'推奨PTのみ個別ガイド本文を再確認し、出典ごとの構成差を区別して共有化',
+    title:'第25バッチ：千冶・刃・姫子・旅立ち・不死途の編成を共有化',
+    summary:(name,record)=>`${name}の推奨PTに共有編成を${record.added.length}案反映し、旧参照を${record.removed.length}案整理しました。`,
+    changes:['旧3起点8案を共有7編成へ統合','参加者の参照と3枠制限による見送りを記録','出典の回復役・支援役の違いを明記','ビルド・装備・凸・公開現在値は変更しない'],
+    rationale:'千冶・刃と不死途の同じ4名構成を統合し、関連キャラからも共有データを参照するため。',
+  },
   24: {
     batch: 24, date: "2026-10-03T12:00:00+09:00", updatedAt: "2026-10-03",
     sourceNote: "推奨PTのみGameWith・Game8の個別編成本文を再照合して共有化",
@@ -48,6 +56,19 @@ export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   {"batch":24,"game":"hsr","owner":"千冶・刃","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-1"],"removed":["curated-hsr-千冶・刃-3"]},
   {"batch":24,"game":"hsr","owner":"ヒアンシー","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-1"],"removed":["curated-hsr-ヒアンシー-3"]},
   {"batch":24,"game":"hsr","owner":"ロビン・夏空の歌","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-2"],"removed":["curated-hsr-ロビン・夏空の歌-3"]},
+  // 第25バッチ。過去の記録は追記専用として保持。
+  {"batch":25,"game":"hsr","owner":"千冶・刃","added":["team-hsr-千冶・刃-b25-1","team-hsr-千冶・刃-b25-2"],"removed":["curated-hsr-千冶・刃-1","curated-hsr-千冶・刃-2"]},
+  {"batch":25,"game":"hsr","owner":"姫子・旅立ち","added":["team-hsr-姫子・旅立ち-b25-1","team-hsr-姫子・旅立ち-b25-2","team-hsr-姫子・旅立ち-b25-3"],"removed":["curated-hsr-姫子・旅立ち-1","curated-hsr-姫子・旅立ち-2","curated-hsr-姫子・旅立ち-3"]},
+  {"batch":25,"game":"hsr","owner":"不死途","added":["team-hsr-千冶・刃-b25-1","team-hsr-不死途-b25-1"],"removed":["curated-hsr-不死途-1","curated-hsr-不死途-2"]},
+  {"batch":25,"game":"hsr","owner":"トリビー","added":["team-hsr-千冶・刃-b25-1","team-hsr-不死途-b25-1"],"removed":["curated-hsr-トリビー-2","curated-hsr-トリビー-3"]},
+  {"batch":25,"game":"hsr","owner":"黄泉","added":["team-hsr-千冶・刃-b25-2"],"removed":["curated-hsr-黄泉-2"]},
+  {"batch":25,"game":"hsr","owner":"サフェル","added":["team-hsr-千冶・刃-b25-2"],"removed":["curated-hsr-サフェル-2"]},
+  {"batch":25,"game":"hsr","owner":"ヴェルト","added":["team-hsr-千冶・刃-b25-3","team-hsr-姫子・旅立ち-b25-1"],"removed":["curated-hsr-ヴェルト-2","curated-hsr-ヴェルト-3"]},
+  {"batch":25,"game":"hsr","owner":"フォフォ","added":["team-hsr-千冶・刃-b25-3","team-hsr-姫子・旅立ち-b25-1"],"removed":[]},
+  {"batch":25,"game":"hsr","owner":"ロビン・夏空の歌","added":["team-hsr-姫子・旅立ち-b25-1"],"removed":["curated-hsr-ロビン・夏空の歌-2"]},
+  {"batch":25,"game":"hsr","owner":"サンデー","added":["team-hsr-姫子・旅立ち-b25-2","team-hsr-不死途-b25-1"],"removed":["curated-hsr-サンデー-2","curated-hsr-サンデー-3"]},
+  {"batch":25,"game":"hsr","owner":"丹恒・騰荒","added":["team-hsr-姫子・旅立ち-b25-2","team-hsr-不死途-b25-1"],"removed":["curated-hsr-丹恒・騰荒-2","curated-hsr-丹恒・騰荒-3"]},
+  {"batch":25,"game":"hsr","owner":"ルアン・メェイ","added":["team-hsr-姫子・旅立ち-b25-3"],"removed":["curated-hsr-ルアン・メェイ-3"]},
 ];
 
 export type LinkRecordEntry = { def: PartyLinkBatch; record: PartyLinkRecord };

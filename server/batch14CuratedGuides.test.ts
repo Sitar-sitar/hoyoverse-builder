@@ -86,7 +86,7 @@ describe("第14バッチ20名の個別ガイド", () => {
       expect(parties.options.length).toBeLessThanOrEqual(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "ディオナ" ? "2026-10-01" : "2026-08-27");
+      expect(parties.updatedAt).toBe(displayName === "丹恒・騰荒" ? "2026-10-03" : displayName === "ディオナ" ? "2026-10-01" : "2026-08-27");
       expect(guideMetadataFor(game, displayName).updatedAt).toBe("2026-08-27");
     });
     expect(partyRecommendationsFor("hsr", "刃").options[0]?.members.map((member) => member.name.ja)).toEqual(["刃", "サンデー", "トリビー", "ヒアンシー"]);

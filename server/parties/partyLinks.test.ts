@@ -102,7 +102,7 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
       "hsr:爻光": { ...CHARACTER_PARTIES["hsr:爻光"], refs: [...refsFor("hsr", "爻光").slice(0, 2), { team: converted.id }] },
       "hsr:火花": { refs: [...sparkleRefs.slice(0, 2), { team: converted.id }], skipped: [{ ...skip, team: dropped[0]! }] },
       "hsr:パール": { ...CHARACTER_PARTIES["hsr:パール"], skipped: [skip] },
-      "hsr:フォフォ": { skipped: [skip] },
+      "hsr:フォフォ": { ...CHARACTER_PARTIES["hsr:フォフォ"], skipped: [...(CHARACTER_PARTIES["hsr:フォフォ"]?.skipped ?? []), skip] },
     };
     const records: PartyLinkRecord[] = [...PARTY_LINK_RECORDS,
       { batch: 25, game: "hsr", owner: "爻光", added: [converted.id], removed: [legacy.id] },
@@ -113,11 +113,11 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
     expect(teamStoreIssues({ store: buildTeamStore([...base, { ...converted, batch: 16, sourceBatch: undefined }]), batches }).some((issue) => issue.startsWith("D10"))).toBe(true);
   });
 
-  it("共有化していない旧形式のバックログは報告だけ（29件）", () => {
+  it("共有化していない旧形式のバックログは報告だけ（13件）", () => {
     const backlog = backlogLinks();
-    expect(backlog).toHaveLength(29);
+    expect(backlog).toHaveLength(13);
     const byOrigin = Object.fromEntries([...new Set(backlog.map((entry) => entry.origin))].map((origin) => [origin, backlog.filter((entry) => entry.origin === origin).length]));
-    expect(byOrigin).toEqual({ 千冶・刃: 8, 姫子・旅立ち: 8, ロビン・夏空の歌: 7, クラレッタ: 6 });
+    expect(byOrigin).toEqual({ ロビン・夏空の歌: 7, クラレッタ: 6 });
   });
 });
 
