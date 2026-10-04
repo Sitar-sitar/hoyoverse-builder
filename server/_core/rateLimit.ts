@@ -70,8 +70,31 @@ export function createRateLimiter(rule: RateLimitRule, maxEntries = DEFAULT_MAX_
  */
 let warnedAboutMissingRealIp = false;
 
+export function validateClientIpConfiguration() {
+  const mode = process.env.CLIENT_IP_SOURCE ?? "auto";
+  if (!["auto", "socket", "railway", "northflank"].includes(mode)) throw new Error("Invalid CLIENT_IP_SOURCE");
+  if (mode === "northflank" && !/^[1-5]$/.test(process.env.NORTHFLANK_TRUSTED_PROXY_HOPS ?? "")) throw new Error("NORTHFLANK_TRUSTED_PROXY_HOPS must be 1..5");
+  return mode;
+}
+let northflankFallbacks = 0;
+export function clientIpDiagnostics() { return { northflankFallbacks }; }
+function normalizedIp(ip: string): string {
+  const mapped = /^::ffff:(\d+\.\d+\.\d+\.\d+)$/i.exec(ip);
+  return mapped && net.isIP(mapped[1]) === 4 ? mapped[1] : ip.toLowerCase();
+}
+
 export function clientIpFromRequest(req: Request): string {
-  if (process.env.RAILWAY_PROJECT_ID) {
+  const mode = validateClientIpConfiguration();
+  if (mode === "northflank") {
+    const header = req.headers["x-forwarded-for"];
+    const ips = typeof header === "string" ? header.split(",").map(ip => ip.trim()) : [];
+    const hops = Number(process.env.NORTHFLANK_TRUSTED_PROXY_HOPS);
+    if (ips.length >= hops && ips.every(ip => net.isIP(ip) > 0)) return normalizedIp(ips[ips.length - hops]);
+    northflankFallbacks++;
+    if (northflankFallbacks === 1) console.warn("[RateLimit] Invalid Northflank forwarded IP; using socket address");
+    return normalizedIp(req.socket?.remoteAddress ?? "unknown");
+  }
+  if (mode === "railway" || (mode === "auto" && process.env.RAILWAY_PROJECT_ID)) {
     const header = req.headers["x-real-ip"];
     const candidate = (Array.isArray(header) ? header[0] : header ?? "").trim();
     if (net.isIP(candidate) > 0) return candidate;
@@ -87,6 +110,7 @@ export function clientIpFromRequest(req: Request): string {
 /** テスト専用。`X-Real-IP` 欠落の警告が1回だけであることを検査するために状態を戻す。 */
 export function resetClientIpWarningForTests() {
   warnedAboutMissingRealIp = false;
+  northflankFallbacks = 0;
 }
 
 /**

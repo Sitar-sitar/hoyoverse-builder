@@ -1,4 +1,6 @@
 import "dotenv/config";
+import { booleanSetting, maintenanceMiddleware } from "./migrationRuntime";
+import { validateClientIpConfiguration } from "./rateLimit";
 import compression from "compression";
 import express, { type Express } from "express";
 import { createServer } from "http";
@@ -85,12 +87,16 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 }
 
 async function startServer() {
+  booleanSetting("API_MAINTENANCE");
+  booleanSetting("API_MIGRATION_PREVIEW");
+  validateClientIpConfiguration();
   const app = express();
   const server = createServer(app);
   const apiOnly = process.env.API_ONLY === "true";
 
   app.disable("x-powered-by");
   configureCors(app);
+  app.use(maintenanceMiddleware);
   // CORS の後・本文解析の前に置く。濫用時に不要な本文解析をしない。
   configureNonTrpcApiRateLimit(app);
 
@@ -100,7 +106,7 @@ async function startServer() {
   applyBodyParsers(app);
 
   app.get("/api/health", (_req, res) => {
-    res.status(200).json({ ok: true, service: "hoyoverse-builder-api" });
+    res.status(200).json({ ok: true, service: "hoyoverse-builder-api", revision: process.env.APP_REVISION ?? process.env.RAILWAY_GIT_COMMIT_SHA ?? null, maintenance: booleanSetting("API_MAINTENANCE"), migrationPreview: booleanSetting("API_MIGRATION_PREVIEW") });
   });
 
   // GitHub App administrator login must be available on the public Railway API
@@ -146,16 +152,19 @@ async function startServer() {
     });
   }
 
-  const preferredPort = parseInt(process.env.PORT || "3000");
-  const port = await findAvailablePort(preferredPort);
+  const portText = process.env.PORT ?? "3000";
+  if (!/^\d+$/.test(portText) || Number(portText) < 1 || Number(portText) > 65535) throw new Error("Invalid PORT");
+  const preferredPort = Number(portText);
+  const port = process.env.NODE_ENV === "production" || apiOnly ? preferredPort : await findAvailablePort(preferredPort);
 
   if (port !== preferredPort) {
     console.log(`Port ${preferredPort} is busy, using port ${port} instead`);
   }
 
+  server.on("error", () => { console.error("[Server] Unable to listen on configured port"); process.exitCode = 1; });
   server.listen(port, "0.0.0.0", () => {
     console.log(`Server running on http://0.0.0.0:${port}/`);
   });
 }
 
-startServer().catch(console.error);
+startServer().catch(error => { console.error(error); process.exitCode = 1; });
