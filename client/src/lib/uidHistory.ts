@@ -1,8 +1,9 @@
+import { scopedStorageKey } from "@/lib/migrationPage";
 export type UidGame = "hsr" | "genshin" | "zzz";
 
 type UidStore = Partial<Record<UidGame, string>>;
 
-const STORAGE_KEY = "stellar-atelier.uid-history.v1";
+const STORAGE_KEY = scopedStorageKey("stellar-atelier.uid-history.v1");
 
 export function isValidUidForGame(game: UidGame, uid: string) {
   return game === "zzz" ? /^\d{8,10}$/.test(uid) : /^\d{9,10}$/.test(uid);

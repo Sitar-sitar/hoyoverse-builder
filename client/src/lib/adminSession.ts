@@ -1,4 +1,5 @@
-const ADMIN_SESSION_STORAGE_KEY = "hoyoverse-admin-session";
+import { scopedStorageKey } from "@/lib/migrationPage";
+const ADMIN_SESSION_STORAGE_KEY = scopedStorageKey("hoyoverse-admin-session");
 const ADMIN_EXCHANGE_FRAGMENT_KEY = "admin_exchange_code";
 
 export function getAdminBearerToken() {

@@ -1,3 +1,4 @@
+import { isNextPages, scopedStorageKey } from "@/lib/migrationPage";
 import { startLogin } from "@/const";
 import { clearAdminBearerToken } from "@/lib/adminSession";
 import { trpc } from "@/lib/trpc";
@@ -40,11 +41,11 @@ export function useAuth(options?: UseAuthOptions) {
       }
       throw error;
     } finally {
-      // Remove both the production Safari Bearer fallback and the legacy Preview
-      // token. The backend also clears the HttpOnly session cookie when present.
+      // Clear this base's Bearer token. Only the legacy base owns the Manus
+      // fallback; the backend clears its own HttpOnly session cookie.
       clearAdminBearerToken();
       try {
-        sessionStorage.removeItem("manus-cookie");
+        if (!isNextPages) sessionStorage.removeItem("manus-cookie");
       } catch {}
       utils.auth.me.setData(undefined, null);
       await utils.auth.me.invalidate();
@@ -56,7 +57,7 @@ export function useAuth(options?: UseAuthOptions) {
     // failure (blocked site data, private mode quota) must not stop rendering.
     try {
       localStorage.setItem(
-        "manus-runtime-user-info",
+        scopedStorageKey("manus-runtime-user-info"),
         JSON.stringify(meQuery.data)
       );
     } catch {
