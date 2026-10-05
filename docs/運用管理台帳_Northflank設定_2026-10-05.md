@@ -268,3 +268,10 @@ Pages公開時に必要なActions変数:
 - 2026-10-05 18:36 JST、Run ID d8cc2b88-6c09-4183-95ce-e12fa9cb13b9、15秒、Success、connection_ok=1、exit code 0。CAファイル指定/rejectUnauthorized=trueでDB接続成功。共通image nervous-respect-4354、revision 1dae093。
 - Overview再取得で初期CMD SETUP_PENDING_DB_CHECKとCD OFFを確認。schema migrationは今回も実行していない。前回の認証拒否はURL再設定後に解消したが、秘密値の具体的差分は取得・記録していない。
 - APIは既存Combined imageのまま。APIとshared jobの同digest運用への変更・実行確認は残る。
+### 2026-10-05 共通image APIの追加時にFree上限を確認
+
+- ChromeでDeployment serviceの新規作成画面を確認。Service limit reached、Free projectは2 servicesまでとの表示。既存Combined APIと共通Buildで枠を使用しており、3つ目のDeployment APIは追加不可。新規作成・課金・削除は実行していない。
+- 既存Combined APIのOverviewにはimage source変更操作がなく、公式の変更手順はDeployment serviceが対象。Combinedの直接変換や公開URL維持は確認できていない。未確認のAPI操作で変換しない。
+- 追加可能になった場合の準備済み構成: 共通Build nervous-respect-4354を固定、manifest sha256:c68e06f4a2aea12d83081c257864d17e7527cb052fe25e69e2ad505f7898e9d6、0.2 vCPU/512 MB/1 replica、HTTP 3000、readiness/liveness /api/health、CI/CD OFF、maintenance/preview維持。環境変数とCA secretは既存APIから引き継ぎ、秘密値は文書に記録しない。
+- 有料枠で既存APIを維持して追加するか、無料枠内の構成を再検討するかは利用者判断待ち。無料案で既存APIの削除・再作成が必要になった場合は、環境変数/secret移管、URL/OAuth/Pages参照更新、復旧手順を準備してから別途承認を得る。現行APIとDBは維持、同digestゲートは未達。
+- 参照: https://northflank.com/docs/v1/application/run/change-deployment-source
