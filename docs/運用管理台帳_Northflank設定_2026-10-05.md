@@ -209,7 +209,7 @@ Pages公開時に必要なActions変数:
 
 ## 7. 次回確認・運用変更チェックリスト
 
-- [x] 利用者が通常DBユーザーのパスワード変更SQL成功を確認し、API/job/Workbenchの3か所の更新完了を報告。秘密値は非記録。更新後の実DB接続・旧資格情報の拒否は別途未確認。
+- [x] 利用者が通常DBユーザーのパスワード変更SQL成功を確認し、API/job/Workbenchの3か所の更新完了を報告。秘密値は非記録。更新後の実DB接続はWorkbench/API/jobで確認済み（下記履歴参照）。旧資格情報の拒否は未確認。
 - [x] Migration jobのCDをOFFに変更。CIもOFF、手動job。新buildの自動deploy停止を確認。
 - [ ] APIとjobの同image digest運用、または設計との差分の採否を確定する。
 - [x] Northflank LBをPC/4G・偽装prefixで実測。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1を利用者がUpdate & restart。稼働podの2項目だけを確認済み。
@@ -240,3 +240,9 @@ Pages公開時に必要なActions変数:
 - IP設定反映後のhealthはHTTP 200、revision=61942f527925b07af43850b15dd501c871c40d19、maintenance=true、migrationPreview=true。
 
 - 2026-10-05: 利用者が資格情報変更と3接続先更新を完了。更新後API health HTTP 200、revision=61942f5、maintenance=true、migrationPreview=true。healthのみではDB認証成功を証明しない。
+
+### 2026-10-05 資格情報更新後の接続確認
+
+- Workbenchは利用者が再接続後SELECT 1成功を確認。API podは利用者画面でconnection_ok=1を確認。
+- Chromeでmigration jobのCMDを一時的なmysql2のSELECT 1へ変更し手動実行。CAファイルを指定しrejectUnauthorized=true。2026-10-05 12:16 JST、Run ID bf18a162-b652-41ff-9042-c48141cd948f、connection_ok=1、exit code 0、Success（17秒）を確認。build defiant-road-707、revision 61942f5。
+- 実行後CMDをnode node_modules/drizzle-kit/bin.cjs migrateへ復元保存し、Overviewから再確認。CI/CD OFFを維持。今回schema migrationは実行していない。旧資格情報拒否とAPI/job同image digestは未確認。
