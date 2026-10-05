@@ -257,3 +257,8 @@ Pages公開時に必要なActions変数:
 - 新jobのDATABASE_URL、DATABASE_SSL_CA_FILE、CA secret fileは未登録。利用者にNorthflank画面で既存jobと同じ3項目を登録するよう依頼。秘密値はチャット/文書へ送らない。
 - APIは既存Combined serviceのまま。新job接続確認、API側の共通image利用構成（既存URL/設定維持方法）の確定、両方同digestの実行証跡が残る。新Build作成を同digestゲート達成とは扱わない。既存API/jobのCI/CD OFF、保守/previewを維持。
 - 仕様参照: https://www.northflank.ai/docs/v1/application/run/change-deployment-source / https://northflank.com/docs/v1/application/run/run-an-image-once-or-on-a-schedule
+### 2026-10-05 新shared jobの接続テスト（認証拒否）
+
+- 利用者の設定更新報告後、Chromeでnervous-respect-4354を使うmysql2 SELECT 1を実行。2026-10-05 18:30 JST、Run ID 8fed3719-4965-429c-929f-cd635a877f7a、19秒、Failed、exit code 1、DB_CHECK_FAILED:ER_ACCESS_DENIED_ERROR。
+- DATABASE_URLの処理とCAファイル読み込みを通過しDB認証で拒否。具体的な原因（資格情報、接続先、ユーザーhost制限等）は未確定。既存jobの接続成功を新jobの成功とは扱わない。
+- テストCMDから初期CMD node -e 'console.log("SETUP_PENDING_DB_CHECK")'へ復元保存・再確認、CD OFF。migration実行なし。利用者へ成功済み既存jobのDATABASE_URLを新jobへ完全コピーして照合するよう依頼。秘密値非記録。
