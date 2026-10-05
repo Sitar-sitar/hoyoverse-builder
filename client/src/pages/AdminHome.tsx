@@ -125,7 +125,7 @@ export default function AdminHome() {
                 <AdminMetric label="TODAY LOOKUPS" value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={`本日（JST）の照会数 / 累計 ${analyticsQuery.data?.totalLookups ?? "—"}`} />
                 <AdminMetric label="CACHE HIT RATE" value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail="外部API負荷の抑制率" />
                 <AdminMetric label="OPEN FEEDBACK" value={feedbackQuery.data ? unresolvedFeedback : "—"} detail="未解決・対応中フィードバック" />
-                <AdminMetric label="API STATUS" value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail="Railway API health check" />
+                <AdminMetric label="API STATUS" value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail="API health check" />
               </div>
               {recentDays.length > 0 && (
                 <div className="mt-6 border border-stone-300 bg-stone-50/50 p-5">
@@ -179,7 +179,7 @@ export default function AdminHome() {
 
             {(analyticsQuery.error || feedbackQuery.error) && (
               <section className="mx-auto mt-8 max-w-5xl border-l-2 border-rose-700 pl-4 text-sm text-rose-800">
-                管理データの一部を取得できませんでした。RailwayのDATABASE_URLと管理者環境変数を確認してください。
+                管理データの一部を取得できませんでした。APIのDB接続設定と管理者設定を確認してください。
               </section>
             )}
           </>

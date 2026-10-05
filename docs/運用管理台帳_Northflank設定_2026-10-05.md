@@ -302,3 +302,22 @@ Pages公開時に必要なActions変数:
 - shared JobのExternal imageに登録済み認証を選択。digestだけのimage pathでは検証が進まず、API画面で確認済みのregistry.northflank.com/hoyoverse-builder/hoyoverse-api:busy-treasure-6759を指定するとImage is accessible / Private imageを確認。Update後、Job Overviewの同タグ・認証参照を再取得確認。
 - Run 74bcfe55-8312-416d-8851-6186a9483be4、23:18 JST、17秒、Success。Run限定のmysql2 SELECT 1でconnection_ok=1、exit code 0、CA/rejectUnauthorized=trueによるTLS接続を確認。schema migrationは実行していない。通常CMDはSETUP_PENDING_DB_CHECKのまま。
 - APIと同じビルドタグからJobを起動できた。現在は起動時のタグ解決であり、Jobの実際のmanifest digestとの照合・digest固定は未確認。設計の同digestゲートは未達として維持。新サービス作成・課金・API変更なし。
+
+### 2026-10-05 23:51 JST 公開候補の検証開始
+
+- 利用者はRailway無料期間終了を報告。本番公開までの作業を承認。実取得ではRailway API/MySQLは稼働中であり、最終コピー前に旧APIの書き込み停止が必要。
+- 型検査、全76ファイル547テスト、公開ゲート/診断helperの9テストを再実行してpass。新Pages preview build成功、localhost:5178/hoyoverse-builder/app/で起動。
+- API公開候補 whole-vest-8887（14827548505f270b1f7c603c3739d11e8b6ea1e1）build成功。manifest sha256:c383734ddc2b3c469cece86c3a9339359307bf136e1632220aebed772a94d4f5。
+- shared Jobを同ビルドタグへ更新し、Run fb1582a9-c3a1-4c87-ae75-cc7036b3741c（23:33 JST、19秒）で接続とrevision一致、6テーブル89行、migration 7件を確認。全行内容の旧DBとの照合と実manifest一致は未完了。通常準備CMDを維持、今回migrationなし。
+- pre-release-20261005 snapshotを23:37 JSTに作成、58秒で成功、6GB。既存復元点も維持。
+- APIをwhole-vest-8887へ手動deploy。health revision 1482754、maintenance=trueを確認後、検証用にAPI_MAINTENANCE=false、API_MIGRATION_PREVIEW=trueを維持、CORS_ORIGINS=https://sitar-sitar.github.io,http://localhost:5178、ADMIN_FRONTEND_URL=http://localhost:5178/hoyoverse-builder/appへ変更してUpdate & restart。healthで反映を確認。CI/CD OFFは維持。
+- Chromeの新base図鑑で256/256、HSR86キャラ、推奨ビルドの実API応答表示を確認。GitHubログインの実検証へ着手。
+- 一時設定は本番切替前にCORSを公開originのみ、ADMIN_FRONTEND_URLを公開app URLへ戻す。preview正式解除、最終停止コピー、全行/objects照合、main反映とforward公開、公開後観察は未完了。Phase 55は進行中。
+- Job環境変数全体のCLI取得は秘密値を含み得るため自動承認レビューで拒否。取得していない。DB確認は既存runtime内で環境変数参照により実施し、秘密値を出力・記録しない。
+
+### 2026-10-05 23:58 JST 実ブラウザとmigration確認
+
+- ChromeでGitHub OAuthの開始→callback→新baseの管理画面への復帰、Sitar-sitar管理者ログイン、DB集計75件/表示設定の読込成功を確認。認証情報は取得・記録しない。
+- 新baseから検証DBのE-2設定を切替を開放から現行へ保存（23:53 JST）。APIのRestart service実行後、再読込でも保存値と管理者ログインを保持。検証後は切替を開放へ復帰保存。テストによりupdatedAt/auth状態は旧DBと異なるため、正式公開前に最終停止コピーで再同期する。
+- 同ビルドタグwhole-vest-8887のshared JobでRun限定CMD node node_modules/drizzle-kit/bin.cjs migrateを実行。Run 72d10794-495b-4fbd-a02f-eed8de329a02、27秒、Success。logsにmigrations applied successfullyとexit code 0を確認。履歴件数・objectsの再照合は別途必要で、ログだけをno-opの完全な証明とは扱わない。
+- 管理画面に残るRailway固有のhealth/設定確認表記をAPI一般表記へ修正。型検査pass。修正は現在稼働中1482754にはまだ含まれない。
