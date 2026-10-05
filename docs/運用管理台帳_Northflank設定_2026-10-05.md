@@ -351,3 +351,11 @@ Pages公開時に必要なActions変数:
 - Run 96cc048c-3265-4cdc-970b-7d0d5d27a72cでdigest固定イメージがアクセス可能・起動成功。CA検証を有効にしたSELECT 1のみの接続確認でconnection_ok=1、上記revision、exit code 0を取得（00:28:49 JST）。実行限定CMDであり、通常のSETUP_PENDING_DB_CHECKコマンドは維持。DB変更・migrationなし。
 - 現在の公開候補についてAPIの生成manifestとJobの実行digest参照が一致。最終main SHAのリリース時には、その新buildのmanifestでJobを再固定し再検証する。全行最終同期・公開・24時間観察は未実施。
 - PR #106のhead 54c16b43238648b2ef35799a2be7a241cd9d8697に対するvalidateチェックSUCCESSを確認。main未反映。
+### 2026-10-06 06:39 JST DB制約・既定照合順序の確認
+
+- digest固定Job Run 7a5d3f96-f7d5-43bf-adc1-892fb649f40a（06:36:35 JST、exit 0）と旧MySQL consoleの同一SQLで構造比較。table_constraints 8項目のSHA256 cb35906173c55233f0e912d49972a3dd16d97d28db154f3ca7dac46a4d6795d6、key_constraints 8項目 a80b16e0d490dce51ba23726134501a5289cbff11972af7b3b62869df0231c94 は一致。FOREIGN KEY rulesとCHECK constraintsは両方0件。集約切り詰めなし。
+- DB既定値に差分を検出。旧はutf8mb4 / utf8mb4_0900_ai_ci、新はutf8mb4 / utf8mb4_general_ci。既存テーブル属性の一致とは別に、将来のDDLの既定値が異なることを確認した。
+- SHOW GRANTSの出力は秘密値/ユーザー名を保存せず、接続先DBへのALL PRIVILEGES有無だけで判定。最初の判定正規表現にエスケープ誤りがありfalseと出たため、接続先schemaへのGRANT文のprefixを直接照合する検査へ修正。Run 0a316e78-052f-4523-9dab-c0b904bd7fde（06:37:46 JST、exit 0）でdatabase_all_privileges=trueを確認。最初のfalseは実権限不足の証拠ではない。
+- Run 927e3d03-2e08-4ae9-bdb8-98d58e6dfec6（06:38:37 JST、exit 0）で新DBにALTER DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ciを実施し、SELECTで旧DBと同じ既定値を確認。既存table/columnや行の変換は行わない。必要時は元のutf8mb4_general_ciへ既定値だけ戻せる。
+- AUTO_INCREMENT次値はmigration 8、feedback 1、auth/displayはnullが一致。analyticsは旧76/新79、usersは旧24/新25で不一致。検証時の新DB書き込み後の状態として記録し、最終停止コピー後に旧DB値と全行を再照合する。最終同期PASSとは扱わない。
+- 最新PR head 1f0f9611d234467e5b697e0630dac5f02d4b5dc7のvalidate SUCCESSを再取得確認。API healthは1482754 / maintenance=false / migrationPreview=trueを維持。旧API停止・最終copy・本番公開は未実施。
