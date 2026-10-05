@@ -262,3 +262,9 @@ Pages公開時に必要なActions変数:
 - 利用者の設定更新報告後、Chromeでnervous-respect-4354を使うmysql2 SELECT 1を実行。2026-10-05 18:30 JST、Run ID 8fed3719-4965-429c-929f-cd635a877f7a、19秒、Failed、exit code 1、DB_CHECK_FAILED:ER_ACCESS_DENIED_ERROR。
 - DATABASE_URLの処理とCAファイル読み込みを通過しDB認証で拒否。具体的な原因（資格情報、接続先、ユーザーhost制限等）は未確定。既存jobの接続成功を新jobの成功とは扱わない。
 - テストCMDから初期CMD node -e 'console.log("SETUP_PENDING_DB_CHECK")'へ復元保存・再確認、CD OFF。migration実行なし。利用者へ成功済み既存jobのDATABASE_URLを新jobへ完全コピーして照合するよう依頼。秘密値非記録。
+### 2026-10-05 新shared jobの再テスト成功
+
+- 利用者が成功済み既存jobからDATABASE_URLをコピーし保存したと報告。Chromeで今回RunだけCMDをmysql2 SELECT 1へ上書きし、通常設定は変更せず再実行。
+- 2026-10-05 18:36 JST、Run ID d8cc2b88-6c09-4183-95ce-e12fa9cb13b9、15秒、Success、connection_ok=1、exit code 0。CAファイル指定/rejectUnauthorized=trueでDB接続成功。共通image nervous-respect-4354、revision 1dae093。
+- Overview再取得で初期CMD SETUP_PENDING_DB_CHECKとCD OFFを確認。schema migrationは今回も実行していない。前回の認証拒否はURL再設定後に解消したが、秘密値の具体的差分は取得・記録していない。
+- APIは既存Combined imageのまま。APIとshared jobの同digest運用への変更・実行確認は残る。
