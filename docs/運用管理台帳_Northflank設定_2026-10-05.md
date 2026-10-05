@@ -275,3 +275,11 @@ Pages公開時に必要なActions変数:
 - 追加可能になった場合の準備済み構成: 共通Build nervous-respect-4354を固定、manifest sha256:c68e06f4a2aea12d83081c257864d17e7527cb052fe25e69e2ad505f7898e9d6、0.2 vCPU/512 MB/1 replica、HTTP 3000、readiness/liveness /api/health、CI/CD OFF、maintenance/preview維持。環境変数とCA secretは既存APIから引き継ぎ、秘密値は文書に記録しない。
 - 有料枠で既存APIを維持して追加するか、無料枠内の構成を再検討するかは利用者判断待ち。無料案で既存APIの削除・再作成が必要になった場合は、環境変数/secret移管、URL/OAuth/Pages参照更新、復旧手順を準備してから別途承認を得る。現行APIとDBは維持、同digestゲートは未達。
 - 参照: https://northflank.com/docs/v1/application/run/change-deployment-source
+### 2026-10-05 無料枠維持案の調査
+
+- 利用者が無料枠維持を選択。既存APIの削除・課金は行わない。
+- Chromeでshared jobのEdit image sourceを確認。Northflank内部参照は共通Buildのみ候補、Combined APIは候補に出ない。一方External imageの編集画面は利用可能であり、前記の「既存job source変更不可」という一般化を訂正する。少なくともこのjobでは内部/外部参照の編集UIが存在する。保存はしていない。
+- APIのPull Docker image画面でregistry.northflank.com/hoyoverse-builder/hoyoverse-api:busy-treasure-6759を確認。APIを維持しJobを同イメージの外部参照に変更する案を検討。実運用はmanifest digestで固定し、更新時もAPI/jobを揃える。
+- 上記URLをshared jobの編集フォームへ入力して検証。private imageのcredentials要求、Update disabled。既存credentialsはなくAdd new credentialのみ。認証連携を作成してから、同digest確認とSELECT 1再実行が必要。現在のJob sourceは変更していない。
+- Registry > Pullのみの専用role hoyoverse-image-pullのフォームを準備したが、ブラウザ操作中にDetachedとなり保存未実施。role/token/registry integrationの作成完了とは扱わない。秘密値非取得・非記録。API URL/環境変数は維持。
+- 公式参照: https://northflank.com/docs/v1/application/build/pull-images-from-Northflank
