@@ -321,3 +321,24 @@ Pages公開時に必要なActions変数:
 - 新baseから検証DBのE-2設定を切替を開放から現行へ保存（23:53 JST）。APIのRestart service実行後、再読込でも保存値と管理者ログインを保持。検証後は切替を開放へ復帰保存。テストによりupdatedAt/auth状態は旧DBと異なるため、正式公開前に最終停止コピーで再同期する。
 - 同ビルドタグwhole-vest-8887のshared JobでRun限定CMD node node_modules/drizzle-kit/bin.cjs migrateを実行。Run 72d10794-495b-4fbd-a02f-eed8de329a02、27秒、Success。logsにmigrations applied successfullyとexit code 0を確認。履歴件数・objectsの再照合は別途必要で、ログだけをno-opの完全な証明とは扱わない。
 - 管理画面に残るRailway固有のhealth/設定確認表記をAPI一般表記へ修正。型検査pass。修正は現在稼働中1482754にはまだ含まれない。
+
+### 2026-10-06 00:02 JST 全行ハッシュの比較
+
+- 同一SQL方式で各テーブルの全列をJSON_ARRAYへ正規化（UTC）、行SHA256をソートして集約SHA256を取得。行数×64と集約長を照合して切り詰めなしを確認。元の行内容・個人データは取得/記録しない。
+- 新DB Run 3541fbe5-3bd1-435c-a5b4-aa8a1e26ceda、17秒、Success、exit 0、revision 1482754。旧DBは接続済みRailwayコンソール内で同じSQLを実行。
+- migration 7行の全内容ハッシュ一致（7fda7686ccd4068be41bd61af2dd5c267f264093e2b80732652dc539932b4097）。同イメージmigration実行後も履歴不変を確認。
+- analytics 75行の全内容ハッシュ一致（da058dbe2f891045c1ce658baf66049fb5d01f91d82d03740ce4e724ae55df55）。feedback 0行のハッシュも一致。
+- auth exchange 1行、users 1行、display settings 5行は不一致。今回のOAuth/表示設定保存で実際に更新したテーブルであり、最終停止コピー前の試験環境の差分として保持。これを完全一致と扱わない。正式公開前に全テーブルとDB構造を最終データで再照合する。
+
+### 2026-10-06 00:04 JST 旧APIの自動再デプロイ停止
+
+- Railway旧API Settings > SourceのAuto deploys when pushed to GitHubをDisable。保存後Auto deploy is disabled / Enableボタンを再取得確認。
+- GitHub mainソース、稼働deployment、API URL、DB/volumeを維持。これにより移行PRのmain反映時の旧API自動build/再起動を防止。旧APIの現在の書き込み受付停止はまだ実施していない。
+
+### 2026-10-06 00:10 JST DB構造と実UIDの受入
+
+- 旧新DBの構造ハッシュ一致: columns 36項目 edad243bd3b485b7b944359737695c8788aec0fb12323f4c524cf9533c11b23b、indexes 12項目 2fb5a939de7da0345a4d4fbb745ed295211f846d15628fed93162cf7c154987b、tables 6項目 6a8a874cb68dc8943c0c93dd368dcfb602ace031a798e3ee4a0b99546d239f90。列型/default/null/charset/collation/生成式、索引の構成/可視性、table type/engine/collation/row format/create optionsを含む。AUTO_INCREMENT次値、制約定義と最終停止時点の再取得は別途必要。
+- view/trigger/routine/eventの可視件数は双方0。旧側rootで取得。新側は通常ユーザーによるinformation_schema参照であり、完全な権限可視性の証明は別途確認する。新側Run 68d6304a-3ea8-4113-8aad-76c270cf9c24、Success/exit 0。
+- 利用者が今回提供した公開UIDでChromeの新baseから実照会。HSR7名、原神12名、ZZZ6名を表示し、装備・現在値/推定値・推奨・凸・PT表示を確認。UID/プロフィール名は記録しない。ゲーム内との数値独立照合や公開後の再確認は別ゲート。
+- 管理者ログアウト後、admin再読込でGitHubログイン要求を確認。ログアウト前のセッション保持と合わせてOAuth→reload→logoutを確認。別GitHub非管理者アカウント・third-party cookie遮断の実試験は未実施。
+- Job Eventsでwhole-vest-8887のpull成功、image size 188455590 bytesを確認。イベントには解決済みmanifest digestが表示されず、実digest照合は未達のまま。
