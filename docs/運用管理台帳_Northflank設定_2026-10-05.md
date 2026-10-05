@@ -342,3 +342,12 @@ Pages公開時に必要なActions変数:
 - 利用者が今回提供した公開UIDでChromeの新baseから実照会。HSR7名、原神12名、ZZZ6名を表示し、装備・現在値/推定値・推奨・凸・PT表示を確認。UID/プロフィール名は記録しない。ゲーム内との数値独立照合や公開後の再確認は別ゲート。
 - 管理者ログアウト後、admin再読込でGitHubログイン要求を確認。ログアウト前のセッション保持と合わせてOAuth→reload→logoutを確認。別GitHub非管理者アカウント・third-party cookie遮断の実試験は未実施。
 - Job Eventsでwhole-vest-8887のpull成功、image size 188455590 bytesを確認。イベントには解決済みmanifest digestが表示されず、実digest照合は未達のまま。
+
+### 2026-10-06 00:29 JST APIと移行Jobのmanifest固定
+
+- APIのデプロイ済みbuild whole-vest-8887の完了ログを再取得し、exporting/pushing manifestが sha256:c383734ddc2b3c469cece86c3a9339359307bf136e1632220aebed772a94d4f5 であることを確認。revisionは14827548505f270b1f7c603c3739d11e8b6ea1e1。
+- Jobの画面によるdigest指定保存が進まない問題に対し、公式deployment APIのimagePathがdigest指定を受け付けることを確認。既存CLI認証を用い、shared Jobを registry.northflank.com/hoyoverse-builder/hoyoverse-api@sha256:c383734ddc2b3c469cece86c3a9339359307bf136e1632220aebed772a94d4f5 へ更新。再取得結果もdigest参照であり、タグの起動時解決から変更済み。
+- scoped role hoyoverse-db-verificationに、hoyoverse-builder限定のJobs / General / Read・Updateだけを追加し、Role updatedを確認。その他の追加権限なし。秘密値の取得権限は追加しない。登録済みregistry credential hoyoverse-image-pullをID参照し、トークン値は取得しない。切替作業終了後に追加した2権限を取り除く。
+- Run 96cc048c-3265-4cdc-970b-7d0d5d27a72cでdigest固定イメージがアクセス可能・起動成功。CA検証を有効にしたSELECT 1のみの接続確認でconnection_ok=1、上記revision、exit code 0を取得（00:28:49 JST）。実行限定CMDであり、通常のSETUP_PENDING_DB_CHECKコマンドは維持。DB変更・migrationなし。
+- 現在の公開候補についてAPIの生成manifestとJobの実行digest参照が一致。最終main SHAのリリース時には、その新buildのmanifestでJobを再固定し再検証する。全行最終同期・公開・24時間観察は未実施。
+- PR #106のhead 54c16b43238648b2ef35799a2be7a241cd9d8697に対するvalidateチェックSUCCESSを確認。main未反映。
