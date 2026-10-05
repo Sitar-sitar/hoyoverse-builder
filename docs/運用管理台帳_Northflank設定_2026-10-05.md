@@ -209,7 +209,7 @@ Pages公開時に必要なActions変数:
 
 ## 7. 次回確認・運用変更チェックリスト
 
-- [ ] DB資格情報のrotationを利用者が実施し、API/job/ローカル接続を揃える（過去スクリーンショットへの資格情報の写り込みへの対応）。値を記録しない。
+- [x] 利用者が通常DBユーザーのパスワード変更SQL成功を確認し、API/job/Workbenchの3か所の更新完了を報告。秘密値は非記録。更新後の実DB接続・旧資格情報の拒否は別途未確認。
 - [x] Migration jobのCDをOFFに変更。CIもOFF、手動job。新buildの自動deploy停止を確認。
 - [ ] APIとjobの同image digest運用、または設計との差分の採否を確定する。
 - [x] Northflank LBをPC/4G・偽装prefixで実測。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1を利用者がUpdate & restart。稼働podの2項目だけを確認済み。
@@ -238,3 +238,5 @@ Pages公開時に必要なActions変数:
 - GitHub Actions変数3件を登録・再取得確認: HOYOVERSE_PAGES_MODE=legacy、旧API URL=Railway、新API URL=Northflank。parallelへはまだ切り替えていない。
 
 - IP設定反映後のhealthはHTTP 200、revision=61942f527925b07af43850b15dd501c871c40d19、maintenance=true、migrationPreview=true。
+
+- 2026-10-05: 利用者が資格情報変更と3接続先更新を完了。更新後API health HTTP 200、revision=61942f5、maintenance=true、migrationPreview=true。healthのみではDB認証成功を証明しない。
