@@ -246,3 +246,14 @@ Pages公開時に必要なActions変数:
 - Workbenchは利用者が再接続後SELECT 1成功を確認。API podは利用者画面でconnection_ok=1を確認。
 - Chromeでmigration jobのCMDを一時的なmysql2のSELECT 1へ変更し手動実行。CAファイルを指定しrejectUnauthorized=true。2026-10-05 12:16 JST、Run ID bf18a162-b652-41ff-9042-c48141cd948f、connection_ok=1、exit code 0、Success（17秒）を確認。build defiant-road-707、revision 61942f5。
 - 実行後CMDをnode node_modules/drizzle-kit/bin.cjs migrateへ復元保存し、Overviewから再確認。CI/CD OFFを維持。今回schema migrationは実行していない。旧資格情報拒否とAPI/job同image digestは未確認。
+
+### 2026-10-05 image digest照合と共通Build準備
+
+- Chromeのビルドログで既存API busy-treasure-6759のmanifestを確認: sha256:a3fc0e5f3748db65321e5d4d5289c44845dd8d40449e1d5b4de92f7910f09919。
+- 既存job defiant-road-707: sha256:3fef057c0e49d7fc894b143bb370f1dd8065f817385b4778e85710a2c613ae51。同じ61942f5 revisionだが別image。設計の同digestゲートは未達。
+- 公式仕様は既存jobのimage source変更不可。共通Build service hoyoverse-release-buildをDefault/US Centralで作成。repositoryは既存、Dockerfile.northflank、context /、CI OFF、External triggers、build rulesなし、4 vCPU/16 GB/16 GB。runtime/DB secretsなし。
+- 手動build nervous-respect-4354成功。対象Git SHA/APP_REVISION=1dae093ae41ff34bd24a20a03b53336b478eb034。manifest sha256:c68e06f4a2aea12d83081c257864d17e7527cb052fe25e69e2ad505f7898e9d6。将来build時は引数APP_REVISIONも対象SHAへ合わせる。
+- 手動job hoyoverse-db-migrate-sharedを作成、共通Buildのnervous-respect-4354を固定。CD OFF、scheduleなし、Run on image change Never、retry 0、time limit 600、0.1 vCPU/256 MB/1 GB。初期CMDはnode -e 'console.log("SETUP_PENDING_DB_CHECK")'。実行なし。
+- 新jobのDATABASE_URL、DATABASE_SSL_CA_FILE、CA secret fileは未登録。利用者にNorthflank画面で既存jobと同じ3項目を登録するよう依頼。秘密値はチャット/文書へ送らない。
+- APIは既存Combined serviceのまま。新job接続確認、API側の共通image利用構成（既存URL/設定維持方法）の確定、両方同digestの実行証跡が残る。新Build作成を同digestゲート達成とは扱わない。既存API/jobのCI/CD OFF、保守/previewを維持。
+- 仕様参照: https://www.northflank.ai/docs/v1/application/run/change-deployment-source / https://northflank.com/docs/v1/application/run/run-an-image-once-or-on-a-schedule
