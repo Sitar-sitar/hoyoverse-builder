@@ -283,3 +283,10 @@ Pages公開時に必要なActions変数:
 - 上記URLをshared jobの編集フォームへ入力して検証。private imageのcredentials要求、Update disabled。既存credentialsはなくAdd new credentialのみ。認証連携を作成してから、同digest確認とSELECT 1再実行が必要。現在のJob sourceは変更していない。
 - Registry > Pullのみの専用role hoyoverse-image-pullのフォームを準備したが、ブラウザ操作中にDetachedとなり保存未実施。role/token/registry integrationの作成完了とは扱わない。秘密値非取得・非記録。API URL/環境変数は維持。
 - 公式参照: https://northflank.com/docs/v1/application/build/pull-images-from-Northflank
+### 2026-10-05 Registry Pullロール割り当てとトークン発行
+
+- 利用者がhoyoverse-image-pullロールを作成。対象hoyoverse-builder、Registry Pullのみ。利用者の明示承認後、ChromeでSitar-sitarへ割り当て、Members 1名を確認。
+- 利用者の「登録して」に基づき、API token hoyoverse-image-pullを発行。専用role、7日間、Active、期限2026-10-12 19:15 JST、Last used Neverを画面で確認。秘密値は記録しない。
+- レジストリ登録フォームをCustom container registry / https://registry.northflank.com / hoyoverse-builder限定で準備。画面取得結果のトークンが伏字だったため実値として利用できず、登録完了なし。使えない入力値は除去した。Confirm後の実値再表示は未確認。
+- 同条件の修正用追加token hoyoverse-image-pull-registryの発行を試みたが、自動承認レビューが追加発行の明示承認不足として拒否。追加tokenは未発行。未使用の最初のtoken失効と再発行について利用者承認を依頼する。
+- API/job sourceは未変更。共通manifest digestゲート未達、レジストリ認証の登録・image検証・SELECT 1が残る。課金・サービス削除なし。
