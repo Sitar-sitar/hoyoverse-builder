@@ -296,3 +296,9 @@ Pages公開時に必要なActions変数:
 - API token hoyoverse-image-pull-registryを同じ専用role・7日間で発行。Save your API token画面が開いた状態。秘密値は取得・記録しない。
 - Copy token操作後、ブラウザ操作ツールの貼り付けはvirtual clipboard has no data to pasteで失敗。実トークンの転記を利用者へ依頼する。登録フォームはCustom container registry、https://registry.northflank.com、Sitar-sitar、hoyoverse-builder限定まで準備。password欄は空、認証連携登録は未完了。
 - トークン表示画面はConfirmしていない。利用者がCopy token→password/token欄へ貼り付け→Add registryを実行後に登録確認を再開する。API/job source未変更、同digestゲート未達。
+### 2026-10-05 23:18 JST Registry認証登録とAPIビルド参照の接続確認
+
+- 利用者がtoken keyを更新しregistry credentialsを登録したと報告。Chromeの一覧でhoyoverse-image-pull（Custom container registry）を確認。秘密値は取得・記録しない。
+- shared JobのExternal imageに登録済み認証を選択。digestだけのimage pathでは検証が進まず、API画面で確認済みのregistry.northflank.com/hoyoverse-builder/hoyoverse-api:busy-treasure-6759を指定するとImage is accessible / Private imageを確認。Update後、Job Overviewの同タグ・認証参照を再取得確認。
+- Run 74bcfe55-8312-416d-8851-6186a9483be4、23:18 JST、17秒、Success。Run限定のmysql2 SELECT 1でconnection_ok=1、exit code 0、CA/rejectUnauthorized=trueによるTLS接続を確認。schema migrationは実行していない。通常CMDはSETUP_PENDING_DB_CHECKのまま。
+- APIと同じビルドタグからJobを起動できた。現在は起動時のタグ解決であり、Jobの実際のmanifest digestとの照合・digest固定は未確認。設計の同digestゲートは未達として維持。新サービス作成・課金・API変更なし。
