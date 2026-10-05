@@ -65,8 +65,8 @@ APIの左メニュー **Environment** で確認・変更する。秘密値をス
 | PORT | 3000 | 設定記録・HTTP probe |
 | API_MIGRATION_PREVIEW | true | health応答で確認 |
 | API_MAINTENANCE | true | health応答で確認。通常RPC/OAuthは保守停止中 |
-| CLIENT_IP_SOURCE | socket | 一時診断設定。正式公開前にLB測定が必要 |
-| NORTHFLANK_TRUSTED_PROXY_HOPS | 未確定 | 推測値を登録しない |
+| CLIENT_IP_SOURCE | northflank | 2026-10-05 Update & restart後の稼働podで確認 |
+| NORTHFLANK_TRUSTED_PROXY_HOPS | 1 | PC/4G・偽装prefix実測後、稼働podで確認 |
 | CORS_ORIGINS | https://sitar-sitar.github.io | 設定記録。Pagesのpathは含めない |
 | DATABASE_URL | 内部MySQL接続URL、秘密値 | 登録済み。実値は本書へ保存しない |
 | DATABASE_SSL_CA_FILE | /secrets/mysql-ca.pem | TLS CA検証接続を確認 |
@@ -212,7 +212,7 @@ Pages公開時に必要なActions変数:
 - [ ] DB資格情報のrotationを利用者が実施し、API/job/ローカル接続を揃える（過去スクリーンショットへの資格情報の写り込みへの対応）。値を記録しない。
 - [x] Migration jobのCDをOFFに変更。CIもOFF、手動job。新buildの自動deploy停止を確認。
 - [ ] APIとjobの同image digest運用、または設計との差分の採否を確定する。
-- [ ] Northflank LBのX-Forwarded-Forホップを実測し、CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1へ変更し保存結果を確認する。第二回線と偽装prefix試験は完了。
+- [x] Northflank LBをPC/4G・偽装prefixで実測。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1を利用者がUpdate & restart。稼働podの2項目だけを確認済み。
 - [ ] 定期backupの初回成功を確認する。
 - [ ] 両APIの公開予定revision、CORS、preview flagを確認する。
 - [ ] 公開検証時に限りNFのAPI_MAINTENANCE=false、API_MIGRATION_PREVIEW=trueへ変更し、RPC/OAuthを確認する。通常のAPI/job CI/CDはOFFのまま管理する。
@@ -232,7 +232,9 @@ Pages公開時に必要なActions変数:
 - APIとmigration jobのCI/CDはOFF/OFF。jobのCDをONからOFFへ変更し、Continuous deployment offを確認。
 - 保守・preview・socketモードを維持し、同じ61942f5 imageへ一時診断CMDを設定。health GETだけを対象に、実IPを保存せずプロセス内HMAC比較を実施（通常ログへの出力なし）。
 - 同一回線でbaseline 2回、XFF単一偽装、複数偽装、X-Real-IP偽装の5要求が200。baseline XFFは1要素。偽装XFFは維持され、その右端へbaselineと同じ接続元が追加された。socketは要求間で変動。X-Real-IPは偽装値が届くため採用しない。
-- 第二測定でPC baselineとモバイル回線のXFFが各1要素かつ異なるHMAC値であることを確認。利用者の4G画面でもhealthのok/revision/maintenance/previewを確認。偽装prefixは信頼しない右端1ホップを採用する。設定はCLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1。環境変数画面のContinueは秘密情報全体の表示リスクで自動承認拒否、利用者へ2項目の変更を依頼中。保存完了は未確認。
+- 第二測定でPC baselineとモバイル回線のXFFが各1要素かつ異なるHMAC値であることを確認。利用者の4G画面でもhealthのok/revision/maintenance/previewを確認。偽装prefixは信頼しない右端1ホップを採用する。設定はCLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1。環境変数画面のContinueは秘密情報全体の表示リスクで自動承認拒否、利用者が2項目をUpdate & restart。再起動後のpodで非秘密の2項目だけを出力し反映を確認。
 - 診断後、Docker runtime modeをDefault configurationへ戻して保存。秘密値・IP・HMAC値は台帳に記録しない。
 
 - GitHub Actions変数3件を登録・再取得確認: HOYOVERSE_PAGES_MODE=legacy、旧API URL=Railway、新API URL=Northflank。parallelへはまだ切り替えていない。
+
+- IP設定反映後のhealthはHTTP 200、revision=61942f527925b07af43850b15dd501c871c40d19、maintenance=true、migrationPreview=true。
