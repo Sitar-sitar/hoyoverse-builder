@@ -359,3 +359,11 @@ Pages公開時に必要なActions変数:
 - Run 927e3d03-2e08-4ae9-bdb8-98d58e6dfec6（06:38:37 JST、exit 0）で新DBにALTER DATABASE CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ciを実施し、SELECTで旧DBと同じ既定値を確認。既存table/columnや行の変換は行わない。必要時は元のutf8mb4_general_ciへ既定値だけ戻せる。
 - AUTO_INCREMENT次値はmigration 8、feedback 1、auth/displayはnullが一致。analyticsは旧76/新79、usersは旧24/新25で不一致。検証時の新DB書き込み後の状態として記録し、最終停止コピー後に旧DB値と全行を再照合する。最終同期PASSとは扱わない。
 - 最新PR head 1f0f9611d234467e5b697e0630dac5f02d4b5dc7のvalidate SUCCESSを再取得確認。API healthは1482754 / maintenance=false / migrationPreview=trueを維持。旧API停止・最終copy・本番公開は未実施。
+### 2026-10-06 07:01 JST 管理操作・Recreate・レート制限・Cookie遮断
+
+- 新baseの管理者として検証用feedbackを1件保存し、対応状況を未対応から対応中へ更新。API再起動後とRecreate再起動後の全ページ再読込で同じ1件と対応中を確認。非管理者のpreview POSTは403 / FORBIDDEN、追加行なし。検証行は最終停止コピーで旧DBの内容へ置換する。
+- 06:44の通常再起動では旧Podと新Podの稼働重複を検出。設計§5.5に合わせてPod rollout strategyをRecreateへ変更・保存・再取得確認。06:50:43に旧Pod f94d7c8c7-rl956が停止/0へ縮小、06:50:44に新Pod 74685f67b5-8vflpへ拡大、06:50:55にコンテナ起動をEventsで確認。以後1 instance、2/2 passing、再起動0。切替中は一時的なno healthy upstreamを観測した。12秒はコンテナ起動までの間隔であり、受付停止時間全体の測定値ではない。
+- Runtimeは0.2 vCPU / 512 MB / 1 GB、CI/CD OFF、revision 14827548505f270b1f7c603c3739d11e8b6ea1e1、maintenance=false / migrationPreview=trueを維持。Recreateは本番更新時にも短い受付停止を伴う。
+- global rate limiterを読み取り専用auth.meの121件batchで検証。最初は背景通信込みで119成功/2制限。アプリタブを別サイトへ移して隔離し、60秒待機後の再測定で120成功/1 TOO_MANY_REQUESTS、HTTP 207、Retry-After 60を確認。制限中health 200 / OPTIONS 204、時間経過後auth.me 200を確認。個別UID/IP/feedbackの全境界や旧新性能比較は未完了。
+- Chrome設定ページは操作ツールのURL制限で開けず、利用者がサードパーティCookieのブロック設定済みと手動確認。その条件で実Chromeのログアウト→GitHubログイン→管理者Sitar-sitar表示→admin/feedback直接再読込が成功、保存済み対応中1件を確認。設定自体をツールで独立確認したとは扱わない。ローカル新baseの実API試験であり、公開Pagesや別GitHub非管理者アカウントの試験は別途必要。
+- PR #106 head c70e28bdcab06cd5b18dda851e6094520b5ac277のvalidate SUCCESSを確認。main反映、公開parallel、最終停止コピー、forward公開と24時間観察は未実施。
