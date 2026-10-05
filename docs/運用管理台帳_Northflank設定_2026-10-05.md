@@ -290,3 +290,9 @@ Pages公開時に必要なActions変数:
 - レジストリ登録フォームをCustom container registry / https://registry.northflank.com / hoyoverse-builder限定で準備。画面取得結果のトークンが伏字だったため実値として利用できず、登録完了なし。使えない入力値は除去した。Confirm後の実値再表示は未確認。
 - 同条件の修正用追加token hoyoverse-image-pull-registryの発行を試みたが、自動承認レビューが追加発行の明示承認不足として拒否。追加tokenは未発行。未使用の最初のtoken失効と再発行について利用者承認を依頼する。
 - API/job sourceは未変更。共通manifest digestゲート未達、レジストリ認証の登録・image検証・SELECT 1が残る。課金・サービス削除なし。
+### 2026-10-05 承認後のトークン再発行
+
+- 利用者の明示承認後、最初のAPI token hoyoverse-image-pullをRevokeし、token全体のRevoked表示を確認（key行のActive表示とは区別）。
+- API token hoyoverse-image-pull-registryを同じ専用role・7日間で発行。Save your API token画面が開いた状態。秘密値は取得・記録しない。
+- Copy token操作後、ブラウザ操作ツールの貼り付けはvirtual clipboard has no data to pasteで失敗。実トークンの転記を利用者へ依頼する。登録フォームはCustom container registry、https://registry.northflank.com、Sitar-sitar、hoyoverse-builder限定まで準備。password欄は空、認証連携登録は未完了。
+- トークン表示画面はConfirmしていない。利用者がCopy token→password/token欄へ貼り付け→Add registryを実行後に登録確認を再開する。API/job source未変更、同digestゲート未達。
