@@ -399,3 +399,11 @@ Pages公開時に必要なActions変数:
 - 管理画面の再読込でE-2「現行」（22:42保存）が保持され、feedback #0001の「対応中」状態と本文も保持されることを確認。保存・API再起動・再読込の公開受入試験は成功。
 - 22:44 JSTにE-2を変更前の「切替を開放」へ復帰し、再読込で保持を確認。他の表示設定は変更していない。検証用feedback #0001を「完了」とし、再読込後も保存状態を確認。前回の表示変更承認待ちは解消した。
 - 残ゲートは24時間観察（22:26 JSTからの欠落なし実測）、platformログ/保存の継続確認、公開後backupの復元検証。Phase 55は公開後観察中であり、まだ移行全体の完了とはしない。
+
+## P1修正リリース（2026-10-07確認）
+
+- PR #107 / release b5374e384beaf638bbf996c46e1411fb65be027f。API build noisy-sound-1006。
+- API/shared Job image manifest: sha256:29202fcd49f540f7b85ca9eaadbdce1ebb914bd31ed99169d819f7631423f414。Jobイメージaccessible・保存後digest一致、Run未実施。
+- Pages workflow 37482574349再実行成功。health同SHA/通常受付/2 probes/0 restarts、3ゲームRPC、本番本文制限・バッチ上限・CORS/圧縮、Chrome公開画面確認PASS。
+- P1修正詳細は[仕様・検証記録](修正設計書_P1セキュリティ修正_2026-10-06.md)。DB/schema/秘密値の変更なし。
+- 観察releaseは更新された。旧5514d27の観察をb5374e3の24時間実測に合算してPASSとしない。公開後backup復元試験も継続ゲート。

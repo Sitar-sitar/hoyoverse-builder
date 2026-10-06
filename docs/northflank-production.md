@@ -1,6 +1,6 @@
 # Northflank本番運用ガイド
 
-更新日: 2026-10-06。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
+更新日: 2026-10-07。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
 
 ## 現行構成
 
@@ -13,7 +13,7 @@
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
 | Migration | hoyoverse-db-migrate-shared、APIと同じimage manifestへ固定、manual / CD OFF |
-| 正式revision | 5514d27ad17fe0b8978b7c2cc76f04e207ed3d40（2026-10-06公開） |
+| 正式revision | b5374e384beaf638bbf996c46e1411fb65be027f（P1修正公開、2026-10-07確認） |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin |
@@ -49,3 +49,5 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 | IP処理のRailway識別、旧revision環境変数fallback | 旧環境互換コード。現行NFの実測設定とは分離 |
 
 旧Railway API/MySQLは期限切れでOffline。DB/volumeと旧callbackは保持する。課金・削除は実施していない。受付再開後はNF DBが正本で、Pages変数だけを旧URLへ戻しても安全なrollbackにはならない。逆コピー・全行照合・旧API再開が必要であり未検証。廃止は観察・復元ゲートと別の利用者判断による。
+
+P1修正の配備・検証は[修正記録](修正設計書_P1セキュリティ修正_2026-10-06.md)を参照。API/Job manifestは29202fcd49f540f7b85ca9eaadbdce1ebb914bd31ed99169d819f7631423f414。旧revisionの観察期間は新revisionの24時間実測として扱わない。
