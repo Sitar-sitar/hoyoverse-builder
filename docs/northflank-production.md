@@ -65,3 +65,5 @@ GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間�
 監視と運用記録だけの公開ではAPI/Pagesを再配信しない（merge commitに `[skip ci]` を付け、pushによるPages配信をスキップする）。PRの通常検証は実施し、merge後に監視workflowを明示dispatchして動作確認する。アプリコード更新の公開時にはこのskipを使わず、通常の同SHA配信ゲートを通す。
 
 仕様参考: [GitHub schedule制限](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。無料構成で追加Addonを作らない。
+
+初回公開証跡: PR #108 / merge ef85c05 / workflow state active。2026-10-07 08:11 JST 手動 [Run 37545139817](https://github.com/Sitar-sitar/hoyoverse-builder/actions/runs/37545139817) は成功し、取得artifactで全health条件一致。最初のschedule自動実行は記録時点で未確認。

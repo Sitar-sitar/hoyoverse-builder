@@ -419,3 +419,5 @@ Pages公開時に必要なActions変数:
 - 結論: 公開後Native dumpの保存・独立復元・全行/構造照合PASS。既存Disk snapshot post-forward-production-20261006自体の復元はNOT_TESTEDのまま。A14のbackup保存/復元機能はNative方式で検証し、24時間観察・platform/永続化確認は別ゲートとして継続する。
 - 証拠: visualizations/2026/10/04/01a106f9-fe00-7eb0-a669-54669f3a0498/native-restore-verification-20261007.json と northflank-native-backup-completed.png。
 - health観察は07:46/07:51/07:56 JSTの3回正常、間隔300.6秒。プロセスPID 37996は稼働中。24時間合格ではない。
+
+- 2026-10-07 08:11 JST GitHub外部監視公開: PR #108（505927b → main ef85c05）を通常CI成功後merge。556 tests + monitor9件、型/API/Pages build PASS。アプリコードは変更せずmerge pushを[skip ci]で配信スキップ、本番API/Pages release b5374e3を維持。Monitor workflow id376906810 state active、初回手動Run37545139817 Success、artifact取得でHTTP200/revision一致/maintenance=false/preview=false/CORS一致を確認。ローカルPID37996も継続。schedule最初の自動runはまだ未確認、24時間観察PASSではない。PC停止による欠測・GitHub遅延がある場合は完了予定を延長し、実測記録で判定する。
