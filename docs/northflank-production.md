@@ -53,3 +53,15 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 P1修正の配備・検証は[修正記録](修正設計書_P1セキュリティ修正_2026-10-06.md)を参照。API/Job manifestは29202fcd49f540f7b85ca9eaadbdce1ebb914bd31ed99169d819f7631423f414。旧revisionの観察期間は新revisionの24時間実測として扱わない。
 
 2026-10-07更新: 公開後バックアップ post-publication-local-restore-20261007（Native dump/gzip）を取得し、独立したローカルMySQL 9.7.2へ復元。6テーブル104行、全CREATE TABLE/INSERT文が再dumpと完全一致。Native dumpの復元試験PASS。Disk snapshotの復元はNOT_TESTEDで区別する。詳細は管理台帳の2026-10-07節。移行全体は修正版b5374e3の24時間観察とplatform/永続化の継続確認が完了するまで未完了。
+
+## PCに依存しない外部監視（2026-10-07追加）
+
+GitHub Actions `Monitor Northflank production`（`.github/workflows/monitor-production.yml`）は公開API `/api/health` をUTC毎時2分から5分間隔で読み取り、手動実行も可能。Node 22、contents readのみ、timeout 3分。DB・OAuth・Registryの秘密情報は不要。HTTP 200、ok=true、本番revision、maintenance=false、migrationPreview=false、Pages OriginへのCORSを全て検証する。異常はrun失敗としてActionsの通知設定に従って通知される。
+
+結果は秘密値・応答本文を含まない `production-health-<runId>-<attempt>` artifactとして7日保存する。期待revisionは現在の公開API `b5374e384beaf638bbf996c46e1411fb65be027f`。次回API公開時にはRepository variable `HOYOVERSE_MONITOR_REVISION`を公開SHAへ更新し、手動runで一致を確認する。新たなmain commitや監視コードのSHAを本番APIのSHAとは扱わない。
+
+GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間隔を検証する。schedule設定/初回PASSだけでは24時間連続観察PASSとしない。PC停止中の欠測は健康判定と別に記録する。公開リポジトリの60日無活動でscheduleが無効になる制限もある。機械が停止してもNorthflankの内部probesは稼働するが、外部応答の連続証明を代替しない。
+
+監視と運用記録だけの公開ではAPI/Pagesを再配信しない（merge commitに `[skip ci]` を付け、pushによるPages配信をスキップする）。PRの通常検証は実施し、merge後に監視workflowを明示dispatchして動作確認する。アプリコード更新の公開時にはこのskipを使わず、通常の同SHA配信ゲートを通す。
+
+仕様参考: [GitHub schedule制限](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。無料構成で追加Addonを作らない。

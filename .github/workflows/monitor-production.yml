@@ -1,0 +1,35 @@
+name: Monitor Northflank production
+
+on:
+  schedule:
+    - cron: '2-57/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: northflank-production-monitor
+  cancel-in-progress: false
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Verify production health
+        env:
+          HOYOVERSE_MONITOR_REVISION: ${{ vars.HOYOVERSE_MONITOR_REVISION }}
+        run: node scripts/monitor-production.mjs
+      - name: Retain sanitized observation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-health-${{ github.run_id }}-${{ github.run_attempt }}
+          path: production-health.json
+          if-no-files-found: error
+          retention-days: 7
