@@ -374,3 +374,12 @@ Pages公開時に必要なActions変数:
 - Railway画面はTrial expired / Limited Access。旧MySQL consoleに稼働terminalなし、BackupsはNo Backups。mysql-volumeは存在する。課金、再デプロイ、DB/volume削除は行わない。最終dump取得不可のため一時再開か既存dumpへの復旧の利用者判断を依頼。既存dump取得後の差分消失が不明であり、最終データ一致PASSとしない。
 - lookupの121件global試験とは別に21件batchを測定し18成功/3制限、ただしcached=0。cache前提の合格にしない。順次HSRはキャッシュ1〜6件200、7件目429 / Retry-After 56。原神1件目cold後2〜4件cached200、5件目の通信切断で測定終了（exit 1）。ZZZ/IP21件目/偽装/個別回復は今回未検証。切断後NFは同じ74685f67b5-8vflp、再起動0、2/2 passing、health200であり原因未確定。
 - migrationPreview.test.tsの重複it importと未使用describeを整理、関連14テストpass。Pages/IP診断9テストpass。公開前レビューを別文書へ保存。旧APIの更新・parallel公開・final copyは未実施。
+
+### 2026-10-06 17:19 JST lookup制限の順次境界・回復
+
+- 新APIの候補revision14827548505f270b1f7c603c3739d11e8b6ea1e1、maintenance=false / migrationPreview=trueを再取得。旧RailwayのAPI/MySQLは依然Offline、active deploymentなし、DB volumeあり。最終データの方針回答待ち。
+- 提供された公開3UIDを非認証POST本文で順次照会。HTTP接続再利用を避け、測定全体の経過秒を記録。HSR 1〜6回200（初回cold、続く5回cache hit）、7回目429 / Retry-After 49。原神1〜6回200（初回cold、続く5回cache hit）、7〜8回目429 / Retry-After 54。ZZZ 1〜5回200（初回cold、続く4回cache hit）、6回目を全体21件目に配置して429 / Retry-After 38。ZZZはUID別上限6の内側で拒否され、直前の全体20件目は200だったためIP別20/min境界と区別できる。拒否されたUID要求もIP側の件数に含む。
+- 境界測定は23.68秒以内、成功17件・制限4件、成功のうちcache hit14件/cold3件。大量のlive上流batchは使わず、キャッシュ命中を各応答で確認した。UID/プロフィール/レスポンス本文は記録しない。
+- 制限後、予約アドレスによるX-Forwarded-For / X-Real-IP偽装付き同じ照会も429。追加の別回線独立試験とは区別する。61秒待機後の同じZZZ照会は200 / success=trueへ回復。今回の測定コマンドはexit 0。
+- 未認証display.adminSettingsは403 / FORBIDDEN。別GitHubアカウントの拒否を確認したとは扱わない。
+- A07全体は未完了。global/lookupの実境界と回復は追加確認できたが、feedback 5/10minの実境界・回復、異種procedure混在batchの公開受入は残る。公開SHAでの再確認も別ゲート。
