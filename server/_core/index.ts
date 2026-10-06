@@ -6,7 +6,7 @@ import express, { type Express } from "express";
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import { applyBodyParsers } from "./bodyLimits";
+import { applyBodyParsers, REQUEST_BODY_LIMIT_BYTES, TRPC_MAX_BATCH_SIZE } from "./bodyLimits";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
@@ -125,6 +125,8 @@ async function startServer() {
     "/api/trpc",
     createExpressMiddleware({
       router: appRouter,
+      maxBodySize: REQUEST_BODY_LIMIT_BYTES,
+      maxBatchSize: TRPC_MAX_BATCH_SIZE,
       createContext,
       // query を POST でも受け付ける。クライアントの httpBatchLink が methodOverride: "POST" を使うため
       // UID が GET の URL へ載らなくなる（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 42）。
