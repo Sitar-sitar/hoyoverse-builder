@@ -367,3 +367,10 @@ Pages公開時に必要なActions変数:
 - global rate limiterを読み取り専用auth.meの121件batchで検証。最初は背景通信込みで119成功/2制限。アプリタブを別サイトへ移して隔離し、60秒待機後の再測定で120成功/1 TOO_MANY_REQUESTS、HTTP 207、Retry-After 60を確認。制限中health 200 / OPTIONS 204、時間経過後auth.me 200を確認。個別UID/IP/feedbackの全境界や旧新性能比較は未完了。
 - Chrome設定ページは操作ツールのURL制限で開けず、利用者がサードパーティCookieのブロック設定済みと手動確認。その条件で実Chromeのログアウト→GitHubログイン→管理者Sitar-sitar表示→admin/feedback直接再読込が成功、保存済み対応中1件を確認。設定自体をツールで独立確認したとは扱わない。ローカル新baseの実API試験であり、公開Pagesや別GitHub非管理者アカウントの試験は別途必要。
 - PR #106 head c70e28bdcab06cd5b18dda851e6094520b5ac277のvalidate SUCCESSを確認。main反映、公開parallel、最終停止コピー、forward公開と24時間観察は未実施。
+
+### 2026-10-06 17:10 JST Railway期限切れ・公開前確認
+
+- 07:02時点のconnectorでは旧API/MySQLとも1台Onlineだったが、17:10の再取得では両方Offline・active deploymentなし・pending workなし。旧health 404、新health 200。経過中の停止時刻は未観測。両DB/APIが常時稼働したとの連続観測はない。
+- Railway画面はTrial expired / Limited Access。旧MySQL consoleに稼働terminalなし、BackupsはNo Backups。mysql-volumeは存在する。課金、再デプロイ、DB/volume削除は行わない。最終dump取得不可のため一時再開か既存dumpへの復旧の利用者判断を依頼。既存dump取得後の差分消失が不明であり、最終データ一致PASSとしない。
+- lookupの121件global試験とは別に21件batchを測定し18成功/3制限、ただしcached=0。cache前提の合格にしない。順次HSRはキャッシュ1〜6件200、7件目429 / Retry-After 56。原神1件目cold後2〜4件cached200、5件目の通信切断で測定終了（exit 1）。ZZZ/IP21件目/偽装/個別回復は今回未検証。切断後NFは同じ74685f67b5-8vflp、再起動0、2/2 passing、health200であり原因未確定。
+- migrationPreview.test.tsの重複it importと未使用describeを整理、関連14テストpass。Pages/IP診断9テストpass。公開前レビューを別文書へ保存。旧APIの更新・parallel公開・final copyは未実施。
