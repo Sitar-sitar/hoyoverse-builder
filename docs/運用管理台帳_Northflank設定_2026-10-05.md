@@ -411,4 +411,3 @@ Pages公開時に必要なActions変数:
 - 22:26 JST live healthは正常。NF画面でmain/1 instance/2 probes passing/0 restartsを確認。Phase 55は公開後観察中で、まだクローズしない。
 
 - 2026-10-06 22:30 JST: post-forward-production-20261006（Disk、6.00 GB、MySQL 9.7.2）を公開後DBから取得。22:29:48–22:30:39、51秒、Completed。新backupのRestoreは未実施であり、取得成功だけを復元試験PASSとしない。
-
