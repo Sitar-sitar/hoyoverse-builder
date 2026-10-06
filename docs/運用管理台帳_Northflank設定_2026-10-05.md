@@ -4,7 +4,7 @@
 - 記録日: 2026-10-05（Asia/Tokyo）
 - 記録範囲: 本チャットで設定したNorthflank、関連GitHub App、バックアップ、Pages準備。
 - 根拠: 利用者が提示した設定画面・ログ・Workbench結果と、本チャットの設定確認記録。保存時に管理画面を再取得したものではない。変更後は該当行と更新履歴を更新する。
-- 状態: 2026-10-06本番公開済み。既存dump採用復旧・forward切替済み。24時間観察・公開後backup復元は未完了。
+- 状態: 本番公開・P1修正反映済み。2026-10-07に公開後Native dumpのローカル復元/全行照合PASS。24時間観察・platform/永続化確認は未完了。Disk snapshot復元は未検証。
 - 役割: 本書は設定と運用状況の管理記録。仕様正本は[段階移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)、進捗は[実装ログ Phase 55](実装ログ.md)。
 
 パスワード、接続URLの実値、OAuth secret、session secret、token、証明書本文、DB行データは保存しない。秘密値はNorthflankのEnvironment / Secret設定で管理する。
@@ -407,3 +407,15 @@ Pages公開時に必要なActions変数:
 - Pages workflow 37482574349再実行成功。health同SHA/通常受付/2 probes/0 restarts、3ゲームRPC、本番本文制限・バッチ上限・CORS/圧縮、Chrome公開画面確認PASS。
 - P1修正詳細は[仕様・検証記録](修正設計書_P1セキュリティ修正_2026-10-06.md)。DB/schema/秘密値の変更なし。
 - 観察releaseは更新された。旧5514d27の観察をb5374e3の24時間実測に合算してPASSとしない。公開後backup復元試験も継続ゲート。
+
+### 2026-10-07 公開後ネイティブバックアップの無料復元検証
+
+- 利用者は無料方式を優先。Northflankの無料Addon 1個上限は維持し、有料プラン・追加Addonを使用していない。
+- post-publication-local-restore-20261007 をNative backup (dump)/gzipで作成。07:54:39–07:55:39 JST、Completed、3.09 KB、MySQL 9.7.2。ログexit 0。データはtransaction内でdumpされ、本番DBのRestoreは実施していない。
+- ダウンロードした実バックアップを展開（10,833 bytes、SHA256 17447c7426eccea31dc249fe1a3ad3eaa8e197f583d277d90790fc3d294f83cc）。取得後に内容を編集せず、ローカル127.0.0.1:43307の独立MySQL 9.7.2へ復元した。
+- 公式ZIPのMD5 657957207455a6a5b072f0d6cd1900a9 とOracle America, Inc.のAuthenticode Validを確認。Windowsサービスは登録していない。検証後にmysqladmin shutdownで停止し、実PID消失を確認。
+- 復元先から同versionのmysqldumpで再dumpし、全6 CREATE TABLE文・全6 INSERT文を改行のみ統一して文字列完全一致。テーブル定義（全列/index/制約/engine/collation/AUTO_INCREMENT）と全行値の一致を確認。件数は104行（migration 7、短命認証交換コード2、analytics 87、表示設定6、feedback 1、users 1）。公開後の追加行を含むため旧88行と区別する。
+- view/routine/trigger/eventは元dump・復元DBとも0件。migration履歴も全行比較に含む。秘密値・各行本文は文書/証拠JSONに保存していない。バックアップ本体は非公開のダウンロード先に保持。
+- 結論: 公開後Native dumpの保存・独立復元・全行/構造照合PASS。既存Disk snapshot post-forward-production-20261006自体の復元はNOT_TESTEDのまま。A14のbackup保存/復元機能はNative方式で検証し、24時間観察・platform/永続化確認は別ゲートとして継続する。
+- 証拠: visualizations/2026/10/04/01a106f9-fe00-7eb0-a669-54669f3a0498/native-restore-verification-20261007.json と northflank-native-backup-completed.png。
+- health観察は07:46/07:51/07:56 JSTの3回正常、間隔300.6秒。プロセスPID 37996は稼働中。24時間合格ではない。

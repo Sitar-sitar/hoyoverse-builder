@@ -51,3 +51,5 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 旧Railway API/MySQLは期限切れでOffline。DB/volumeと旧callbackは保持する。課金・削除は実施していない。受付再開後はNF DBが正本で、Pages変数だけを旧URLへ戻しても安全なrollbackにはならない。逆コピー・全行照合・旧API再開が必要であり未検証。廃止は観察・復元ゲートと別の利用者判断による。
 
 P1修正の配備・検証は[修正記録](修正設計書_P1セキュリティ修正_2026-10-06.md)を参照。API/Job manifestは29202fcd49f540f7b85ca9eaadbdce1ebb914bd31ed99169d819f7631423f414。旧revisionの観察期間は新revisionの24時間実測として扱わない。
+
+2026-10-07更新: 公開後バックアップ post-publication-local-restore-20261007（Native dump/gzip）を取得し、独立したローカルMySQL 9.7.2へ復元。6テーブル104行、全CREATE TABLE/INSERT文が再dumpと完全一致。Native dumpの復元試験PASS。Disk snapshotの復元はNOT_TESTEDで区別する。詳細は管理台帳の2026-10-07節。移行全体は修正版b5374e3の24時間観察とplatform/永続化の継続確認が完了するまで未完了。
