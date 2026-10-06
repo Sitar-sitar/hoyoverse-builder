@@ -67,7 +67,7 @@ afterAll(() => {
 });
 
 describe("レート制限の除外", () => {
-  it("/api/health は何回叩いても 429 にならない（Railway のヘルスチェック）", async () => {
+  it("/api/health は何回叩いても 429 にならない（配備環境のヘルスチェック）", async () => {
     for (let i = 0; i < 150; i++) {
       const res = await send("GET", "/api/health");
       expect(res.status).toBe(200);

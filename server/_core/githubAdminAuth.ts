@@ -424,7 +424,7 @@ export function registerGitHubAdminAuthRoutes(app: Express) {
 
       // Keep the existing HttpOnly cookie for same-browser compatibility, but
       // also mint a one-time exchange code for Safari/ITP environments where
-      // cross-site cookies from railway.app cannot be sent back by github.io.
+      // cross-site cookies from the API origin cannot be sent back by github.io.
       const sessionToken = await createAdminSessionToken(githubUser);
       const cookieOptions = getSessionCookieOptions(req);
       res.cookie(COOKIE_NAME, sessionToken, { ...cookieOptions, maxAge: ADMIN_SESSION_TTL_MS });

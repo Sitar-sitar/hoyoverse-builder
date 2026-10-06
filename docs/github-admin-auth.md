@@ -1,57 +1,37 @@
 # GitHub App 管理者認証
 
-最終更新: 2026-09-05
+最終更新: 2026-10-06。[本番運用ガイド](northflank-production.md)を構成の入口とする。
 
-## 構成
+## 認証フロー
 
-管理画面は GitHub App のユーザー認証を使い、GitHub の numeric user ID を `ADMIN_GITHUB_IDS` と照合します。管理APIは既存の `adminProcedure` でも同じ Allowlist を再確認します。
+本番管理画面は /app/admin、/app/admin/feedback、/app/admin/display。GitHub numeric user IDをADMIN_GITHUB_IDSと照合し、管理APIのadminProcedureでもallowlistを確認する。
 
-認証フロー:
+1. PagesからNorthflankの /api/auth/github へ遷移。OAuth stateを期限10分のHttpOnly / Secure / SameSite=Lax Cookieへ保存する。
+2. GitHub callbackでstateと管理者IDを検証し、DBの管理者情報を更新する。GitHub Client SecretとGitHub access tokenはバックエンドだけで扱う。
+3. 期限2分・単回使用の交換コードを生成し、ハッシュをadmin_auth_exchange_codesへ保存する。Pages復帰URLのfragment admin_exchange_codeで返す。
+4. フロントエンドはアプリ要求前にfragmentからコードを取り除き、POST /api/auth/github/exchangeで消費する。アプリBearer tokenの期限は1時間。Pages baseで分離したsessionStorageへ保存し、管理API要求のAuthorizationに使用する。
+5. 従来のアプリsession Cookieも期限12時間、HttpOnly / Secure / SameSite=Noneで発行する。Cookieが利用可能な環境の互換経路として保持する。
 
-1. GitHub Pages の `/admin` または `/admin/feedback` から Railway の `/api/auth/github` へ遷移する。
-2. Railway が OAuth `state` を生成し、HttpOnly の一時 Cookie に保存する。
-3. GitHub App の認可画面へ遷移する。
-4. `/api/auth/github/callback` で `state` を検証し、認可コードを GitHub の user access token に交換する。
-5. GitHub `/user` から numeric user ID を取得し、`ADMIN_GITHUB_IDS` と照合する。
-6. 許可されたユーザーだけを `users` テーブルへ `role=admin` として保存し、12時間のアプリケーションセッションを発行する。
-7. 以後の tRPC リクエストでもセッション署名、期限、GitHub ID Allowlist、`role=admin` を確認する。
+第三者Cookie遮断時はBearer経路で認証する。公開Chromeで遮断条件のOAuth確認を実施済みだが、全ブラウザの受入済みとはしない。sessionStorageが使えない場合は利用可能なCookie経路に依存する。ログアウトは当該ブラウザのBearer保存とCookieを消去する操作で、全端末tokenの一括失効ではない。
 
-GitHub access token はブラウザへ返さず、ユーザー情報取得後にサーバー側で破棄します。
+## GitHub App / Northflank設定
 
-## GitHub App 設定
+Callback URL: https://http--hoyoverse-api--s48krvgv8tjs.code.run/api/auth/github/callback
 
-GitHub の Developer settings で GitHub App を作成し、Web flow を利用します。
+APIのRuntime Environmentへ設定する。秘密値はNorthflank画面で直接登録し、チャット・Gitへ貼らない。
 
-- Callback URL: `https://hoyoverse-builder-api-production.up.railway.app/api/auth/github/callback`
-- 管理者判定にリポジトリ権限は使いません。GitHub App に不要な Repository permissions を与えないでください。
-- 管理者の numeric user ID は GitHub API の `id` を使用し、変更可能なログイン名やメールアドレスは判定に使用しません。
+| 変数 | 内容 |
+| --- | --- |
+| GITHUB_APP_CLIENT_ID / GITHUB_APP_CLIENT_SECRET | GitHub App資格情報 |
+| ADMIN_GITHUB_IDS | 管理者numeric user IDのallowlist |
+| ADMIN_SESSION_SECRET | アプリsession署名用秘密値 |
+| ADMIN_FRONTEND_URL | https://sitar-sitar.github.io/hoyoverse-builder/app |
+| GITHUB_APP_CALLBACK_URL | 上記Northflank callback |
+| DATABASE_URL | 内部MySQL接続URL |
+| DATABASE_SSL_CA_FILE | /secrets/mysql-ca.pem、実行時CAファイルを配置 |
+| NODE_ENV / API_ONLY | production / true |
+| CORS_ORIGINS | https://sitar-sitar.github.io |
 
-## Railway 環境変数
+IP識別・受付フラグ・revisionは[環境変数例](../.env.api.example)と[設定台帳](運用管理台帳_Northflank設定_2026-10-05.md)を参照する。資格情報更新は実行中APIへ反映するためUpdate & restartを使用し、healthとOAuthを確認する。
 
-```env
-API_ONLY=true
-CORS_ORIGINS=https://sitar-sitar.github.io
-DATABASE_URL=<Railway MySQL URL>
-
-GITHUB_APP_CLIENT_ID=<GitHub App Client ID>
-GITHUB_APP_CLIENT_SECRET=<GitHub App Client Secret>
-GITHUB_APP_CALLBACK_URL=https://hoyoverse-builder-api-production.up.railway.app/api/auth/github/callback
-ADMIN_GITHUB_IDS=12345678,87654321
-ADMIN_SESSION_SECRET=<32文字以上のランダム値>
-ADMIN_FRONTEND_URL=https://sitar-sitar.github.io/hoyoverse-builder
-```
-
-`ADMIN_GITHUB_IDS` はカンマまたは空白区切りで複数指定できます。Allowlist からIDを削除すると、既存セッションのJWTが期限内でも次回APIアクセス時に拒否されます。
-
-## 管理画面
-
-- `/admin`: 管理者ポータル。検索数、キャッシュヒット率、未解決フィードバック、API状態を表示。
-- `/admin/feedback`: 既存の翻訳フィードバック管理と検索Analytics。
-
-## セキュリティ上の前提
-
-- GitHub Client Secret と `ADMIN_SESSION_SECRET` はRailway環境変数だけに保存する。
-- GitHub numeric user ID のAllowlistをサーバー側で管理する。
-- OAuth `state` を一時Cookieと照合する。
-- セッションCookieは HttpOnly / Secure / SameSite=None とし、GitHub PagesからRailway APIへのcredential付きtRPC通信に使う。
-- 管理APIはフロント側表示制御だけに依存せず、`adminProcedure`で必ず拒否する。
+旧Railway callbackは保持中。廃止判断前に削除しない。過去の[ログイン検証記録](admin-login-verification.md)は当時の証拠で、現行手順は本書による。

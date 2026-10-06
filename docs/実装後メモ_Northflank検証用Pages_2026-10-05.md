@@ -1,5 +1,7 @@
 # Northflank検証用Pages 実装後メモ（2026-10-05）
 
+> 本書は表記された記録日時の検証証拠です。Railway・未公開などの記載は当時の状態を示します。現行のNorthflank構成・受付状態は[本番運用ガイド](northflank-production.md)と[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)を参照してください。
+
 正本: [段階移行設計書 §5.6〜5.9](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)。Phase 55進行中。基準commit 61942f527925b07af43850b15dd501c871c40d19。本変更はローカル実装、未commit/未push/未公開。
 
 ## 実装
