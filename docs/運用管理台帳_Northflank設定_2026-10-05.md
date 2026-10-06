@@ -383,3 +383,9 @@ Pages公開時に必要なActions変数:
 - 制限後、予約アドレスによるX-Forwarded-For / X-Real-IP偽装付き同じ照会も429。追加の別回線独立試験とは区別する。61秒待機後の同じZZZ照会は200 / success=trueへ回復。今回の測定コマンドはexit 0。
 - 未認証display.adminSettingsは403 / FORBIDDEN。別GitHubアカウントの拒否を確認したとは扱わない。
 - A07全体は未完了。global/lookupの実境界と回復は追加確認できたが、feedback 5/10minの実境界・回復、異種procedure混在batchの公開受入は残る。公開SHAでの再確認も別ゲート。
+
+## 2026-10-06 17:56 JST 既存dump復旧の採用
+
+- 利用者が移行開始後のデータ更新なしを申告し、既存dumpから続行を指定。旧DB最終hash一致は未検証。採用元railway-rehearsal-20261004（Upload import、10.95 KB、Completed）。
+- 復元前のNF検証DBをpre-adopted-restore-20261006へ退避。Disk 6.00 GB、48秒、17:55 JST作成・完了。APIをPause serviceで停止、0/0、Instances 0 scaled to zeroを確認。
+- 正本§9.1の復旧経路を適用。Restore・採用元照合・main実SHA配信・公開受入は未完了。

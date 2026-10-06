@@ -335,6 +335,20 @@ rollbackでは旧rootのアプリを復元し、新baseの既知routeを旧base�
 
 U01〜U08が未解決、またはA01〜A09/A15の一つでもNOT_TESTEDなら最終コピーを開始しない。health200、CI green、無料枠の存在だけを切替の合格条件にしない。
 
+### 9.1 Railway期限切れ時の既存dump採用経路（2026-10-06利用者指定）
+
+利用者は「移行開始してからデータ更新はしていないので、2で続行」と指定し、既存dumpによる復旧を選択した。この経路は旧Railwayが停止し最終dumpを取得できない場合だけ、通常の最終同期経路に優先する。旧DBの最終内容を独立検証したという意味ではなく、更新なしは利用者申告として扱う。
+
+1. 採用元をNorthflank保存済みUpload import `railway-rehearsal-20261004`（2026-10-04、10,949 bytes、初回6表89行）へ固定する。現在のNF検証データを別snapshotへ退避し、成功を確認する。
+2. NF APIを0 instanceへ完全停止、migration Jobの実行なしを確認。旧API/MySQLの停止状態とvolume保持を再確認し、課金再開や削除はしない。対象addon `hoyoverse-mysql`だけへ採用dumpをRestoreする。
+3. 復元結果を採用dumpの初回件数・全列・構造・migration履歴と照合する。認証交換コードの無効化は照合後に行う。migrationをAPIと同digestのJobで実行し、履歴が増えないことを確認する。
+4. mainの実SHAからAPIをbuild/deployし、Jobを同manifestへ固定。正式CORS/ADMIN_FRONTEND_URL/callbackとpreview=falseを揃え、API/Pagesの実SHA照合を維持してforwardを公開する。失敗した公開物は既存artifactと置換しない。
+5. 公開3ゲーム、OAuth/reload/logout、非管理者拒否、feedback/表示設定の永続化を実機で確認し、24時間観察と復元試験を完了するまで移行全体を完了扱いしない。
+
+旧環境が必要なA08の新旧同release性能比較、A11の停止済み旧DBとの最終hash比較、A15のlive parallel、A04のlive旧新往復は実施不能としてNOT_TESTEDを維持する。A10/A11の実行経路だけを、停止確認＋採用artifactとの照合へ置き換える。A09の逆復元は既存の利用者明示例外を継続する。これらをPASSへ読み替えず、今回の復旧経路の公開可否と通常移行ゲートの充足を分けて記録する。それ以外の実行可能なセキュリティ・機能・backup・実SHAゲートは維持する。
+
+復元失敗時はAPI停止とbackup保全を維持し、同じ採用元からやり直す。正式受付後はNFを正本とし、古いRailwayへURLだけ戻さない。旧Railway再開には別途費用合意と最新NFデータの互換復元が必要となる。
+
 ## 10. リスク・ロールバック
 
 ### 10.1 NF正規受付再開前（新本番正本への書き込み無し）
@@ -390,3 +404,5 @@ UID照会・ログインだけでもDB更新が起きるため、Pages公開失�
 | --- | --- |
 | 2026-10-03 | 新規作成。並行検証、全DB停止点、最終copy、環境別IP判定、OAuth callback併存、Pages/CI接続先一元化、データ保全を伴う逆copy、利用者別冊との担当境界を定義。実アカウント/DB/LB未確認のためドラフト。 |
 | 2026-10-03 | 利用者の追加指示を反映。同じPages内の旧URL/新app URLを並行公開し、正常性確認後に旧URLを転送化する方式へ変更。公開previewの書き込み制限、保存key分離、parallel/forward/rollback、route転送と404の安全条件を追加。 |
+
+| 2026-10-06 | 利用者指定の既存dump復旧経路§9.1を追記。更新なしの申告と独立照合を分離し、旧環境依存の実施不能条件はNOT_TESTEDを維持。 |
