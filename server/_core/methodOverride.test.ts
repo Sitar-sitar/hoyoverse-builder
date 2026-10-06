@@ -8,7 +8,7 @@ import path from "node:path";
  * クライアントの httpBatchLink が methodOverride: "POST" を使うため、query が POST で届く。
  * これは createExpressMiddleware の allowMethodOverride がなければ 405 になり、
  * ミドルウェアの設定でしか再現しないため index.ts を実際に起動して検査する。
- * 既存の GET 経路（CI の Railway 疎通確認）が壊れていないことも同時に見る。
+ * 既存の GET 経路（CI の API 疎通確認）が壊れていないことも同時に見る。
  */
 
 const ROOT = path.resolve(import.meta.dirname, "..", "..");
@@ -95,7 +95,7 @@ describe("query の POST 受付（allowMethodOverride）", () => {
     expect(pathname).not.toContain("input=");
   });
 
-  it("既存の GET 経路も引き続き 200 を返す（CI の Railway 疎通確認を壊さない）", async () => {
+  it("既存の GET 経路も引き続き 200 を返す（CI の API 疎通確認を壊さない）", async () => {
     const res = await send("GET", "/api/trpc/build.guideHistory");
     expect(res.status).toBe(200);
     expect(res.body).toContain('"result"');

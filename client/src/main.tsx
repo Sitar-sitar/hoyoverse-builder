@@ -50,6 +50,7 @@ const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
       url: trpcUrl,
+      maxItems: 20, // Keep batches within the server resource limit.
       transformer: superjson,
       // query も POST で送る。UID は利用者のゲームアカウント識別子であり、GET のクエリ文字列に載せると
       // CDN・プロキシ・アクセスログ・ブラウザ履歴へ残るため（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 42）。

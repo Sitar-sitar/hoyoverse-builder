@@ -9,6 +9,21 @@ import express, { type Express, type NextFunction, type Request, type Response }
  * 設計: docs/修正設計書_リクエストボディ上限の縮小_2026-09-10.md
  */
 export const REQUEST_BODY_LIMIT = "256kb";
+export const REQUEST_BODY_LIMIT_BYTES = 256 * 1024;
+export const TRPC_MAX_BATCH_SIZE = 20;
+
+/** Reject unused body formats before either Express or tRPC parses them. */
+export function requireTrpcJson(req: Request, res: Response, next: NextFunction) {
+  if (req.method === "GET" || req.method === "HEAD" || req.method === "OPTIONS") {
+    next();
+    return;
+  }
+  if (!req.is("application/json")) {
+    res.status(415).json({ error: "unsupported_media_type" });
+    return;
+  }
+  next();
+}
 
 /** 上限超過が JSON で返るべきパス。tRPC クライアントは JSON 以外をパースできない。 */
 const JSON_ERROR_PREFIX = "/api";
@@ -22,6 +37,7 @@ function isPayloadTooLarge(err: unknown): boolean {
  * `index.ts` は末尾で startServer() を実行しテストから import できないため、ここへ切り出している。
  */
 export function applyBodyParsers(app: Express) {
+  app.use("/api/trpc", requireTrpcJson);
   app.use(express.json({ limit: REQUEST_BODY_LIMIT }));
   app.use(express.urlencoded({ limit: REQUEST_BODY_LIMIT, extended: true }));
 

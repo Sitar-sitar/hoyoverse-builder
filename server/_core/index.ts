@@ -6,7 +6,7 @@ import express, { type Express } from "express";
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
-import { applyBodyParsers } from "./bodyLimits";
+import { applyBodyParsers, REQUEST_BODY_LIMIT_BYTES, TRPC_MAX_BATCH_SIZE } from "./bodyLimits";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
 import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
@@ -48,7 +48,7 @@ function configureCors(app: Express) {
  * 非 tRPC の `/api` に対する粗い IP 上限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(B)）。
  * `/api/trpc` はここでは扱わない。Express から通常 JSON の 429 を返すと httpBatchLink が期待する
  * バッチ形式を壊すため、tRPC の上限は tRPC middleware の中で TRPCError として返す。
- * `/api/health` は Railway のヘルスチェック（railway.toml の healthcheckPath）なので除外する。
+ * `/api/health` は 配備環境のヘルスチェックなので除外する。
  * OPTIONS は configureCors が 204 で返すためここへは来ないが、並び替えに備えて明示的に外す。
  */
 const nonTrpcApiLimiter = createRateLimiter({ windowMs: 60_000, max: 120 });
@@ -109,7 +109,7 @@ async function startServer() {
     res.status(200).json({ ok: true, service: "hoyoverse-builder-api", revision: process.env.APP_REVISION ?? process.env.RAILWAY_GIT_COMMIT_SHA ?? null, maintenance: booleanSetting("API_MAINTENANCE"), migrationPreview: booleanSetting("API_MIGRATION_PREVIEW") });
   });
 
-  // GitHub App administrator login must be available on the public Railway API
+  // GitHub App administrator login must be available on the public API
   // because the production frontend is hosted separately on GitHub Pages.
   registerGitHubAdminAuthRoutes(app);
 
@@ -125,6 +125,8 @@ async function startServer() {
     "/api/trpc",
     createExpressMiddleware({
       router: appRouter,
+      maxBodySize: REQUEST_BODY_LIMIT_BYTES,
+      maxBatchSize: TRPC_MAX_BATCH_SIZE,
       createContext,
       // query を POST でも受け付ける。クライアントの httpBatchLink が methodOverride: "POST" を使うため
       // UID が GET の URL へ載らなくなる（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 42）。

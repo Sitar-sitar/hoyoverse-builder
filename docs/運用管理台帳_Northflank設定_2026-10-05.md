@@ -4,7 +4,7 @@
 - 記録日: 2026-10-05（Asia/Tokyo）
 - 記録範囲: 本チャットで設定したNorthflank、関連GitHub App、バックアップ、Pages準備。
 - 根拠: 利用者が提示した設定画面・ログ・Workbench結果と、本チャットの設定確認記録。保存時に管理画面を再取得したものではない。変更後は該当行と更新履歴を更新する。
-- 状態: 検証環境準備中。新Pagesはローカル実装済み・未公開。Railwayからの最終コピー・本番切替は未実施。
+- 状態: 2026-10-06本番公開済み。既存dump採用復旧・forward切替済み。24時間観察・公開後backup復元は未完了。
 - 役割: 本書は設定と運用状況の管理記録。仕様正本は[段階移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)、進捗は[実装ログ Phase 55](実装ログ.md)。
 
 パスワード、接続URLの実値、OAuth secret、session secret、token、証明書本文、DB行データは保存しない。秘密値はNorthflankのEnvironment / Secret設定で管理する。
@@ -20,17 +20,17 @@
 | プラン表示 | Free |
 | API Service ID | hoyoverse-api |
 | MySQL Addon ID | hoyoverse-mysql |
-| Migration Job ID | hoyoverse-db-migrate |
+| Migration Job ID | hoyoverse-db-migrate-shared（旧Jobは履歴として保持） |
 | GitHub repository | Sitar-sitar/hoyoverse-builder |
-| 対象branch | codex/northflank-migration |
-| 稼働API / jobの確認済みrevision | 61942f527925b07af43850b15dd501c871c40d19 |
+| 対象branch | main（文書整理はcodex/northflank-migration） |
+| 稼働API / jobの確認済みrevision | 5514d27ad17fe0b8978b7c2cc76f04e207ed3d40 |
 
 管理画面:
 
 - [Project](https://app.northflank.com/t/sitar-sitars-team/project/hoyoverse-builder)
 - [API](https://app.northflank.com/t/sitar-sitars-team/project/hoyoverse-builder/services/hoyoverse-api)
 - [MySQL](https://app.northflank.com/t/sitar-sitars-team/project/hoyoverse-builder/addons/hoyoverse-mysql)
-- [Migration job](https://app.northflank.com/t/sitar-sitars-team/project/hoyoverse-builder/jobs/hoyoverse-db-migrate)
+- [Migration job](https://app.northflank.com/t/sitar-sitars-team/project/hoyoverse-builder/jobs/hoyoverse-db-migrate-shared)
 
 画面上部に支払方法の期限警告が表示されていた。支払方法の更新実施は未確認。
 
@@ -44,7 +44,7 @@
 | Dockerfile location | /Dockerfile.northflank | 設定記録 |
 | APP_REVISION build argument | 上記40桁revision | image内のhealth revisionで確認 |
 | Docker runtime | Dockerfileの標準ENTRYPOINT / CMD | dist/index.jsを実行 |
-| API build | busy-treasure-6759、成功 / Deployed | Overview画面 |
+| API build | tall-coat-5679、成功 / Deployed | Overview画面 |
 | Build resources | nf-compute-400-16（4 vCPU / 16 GB / 16 GB storage） | Overview画面 |
 | Runtime resources | nf-compute-20（0.2 shared vCPU / 512 MB / 1 GB storage） | 256 MBから変更、Overview画面 |
 | Instances | 1 | Running 1/1 |
@@ -63,8 +63,8 @@ APIの左メニュー **Environment** で確認・変更する。秘密値をス
 | NODE_ENV | production | 設定記録 |
 | API_ONLY | true | 設定記録 |
 | PORT | 3000 | 設定記録・HTTP probe |
-| API_MIGRATION_PREVIEW | true | health応答で確認 |
-| API_MAINTENANCE | true | health応答で確認。通常RPC/OAuthは保守停止中 |
+| API_MIGRATION_PREVIEW | false | health応答で確認 |
+| API_MAINTENANCE | false | 正式受付再開後healthで確認 |
 | CLIENT_IP_SOURCE | northflank | 2026-10-05 Update & restart後の稼働podで確認 |
 | NORTHFLANK_TRUSTED_PROXY_HOPS | 1 | PC/4G・偽装prefix実測後、稼働podで確認 |
 | CORS_ORIGINS | https://sitar-sitar.github.io | 設定記録。Pagesのpathは含めない |
@@ -74,7 +74,7 @@ APIの左メニュー **Environment** で確認・変更する。秘密値をス
 | GITHUB_APP_CLIENT_SECRET | 既存GitHub Appのsecret | 登録済み。値は非掲載 |
 | ADMIN_GITHUB_IDS | 既存管理者allowlist | 登録済み。値は非掲載 |
 | ADMIN_SESSION_SECRET | 新しいsecret（32文字以上） | 登録確認記録。値は非掲載 |
-| ADMIN_FRONTEND_URL | https://sitar-sitar.github.io/hoyoverse-builder/app | 設定記録。検証用ページへの復帰先 |
+| ADMIN_FRONTEND_URL | https://sitar-sitar.github.io/hoyoverse-builder/app | 設定記録。正式ページへの復帰先 |
 | GITHUB_APP_CALLBACK_URL | https://http--hoyoverse-api--s48krvgv8tjs.code.run/api/auth/github/callback | 設定記録 |
 
 DATABASE_URLの形式は `mysql://<user>:<password>@<internal-host>:3306/<database>`。Northflankの `MYSQL_CONNECTOR_URI`（`server=...` 形式）はそのままDATABASE_URLとして使わない。資格情報に予約文字があればURLエンコードする。実際のユーザー名・host・database・passwordはMySQLの **Connection details** で確認する。
@@ -109,9 +109,9 @@ health画面で2/2 passing、再起動0を確認。各数値はチャットの�
 {
   "ok": true,
   "service": "hoyoverse-builder-api",
-  "revision": "61942f527925b07af43850b15dd501c871c40d19",
-  "maintenance": true,
-  "migrationPreview": true
+  "revision": "5514d27ad17fe0b8978b7c2cc76f04e207ed3d40",
+  "maintenance": false,
+  "migrationPreview": false
 }
 ```
 
@@ -129,9 +129,9 @@ health画面で2/2 passing、再起動0を確認。各数値はチャットの�
 | TLS | 有効 |
 | 状態 | Running |
 | 接続先 | API/jobから内部host。ユーザーのローカル確認はCLI port-forward |
-| 練習restore | Railway由来の固定dumpを復元済み |
+| 採用restore | railway-rehearsal-20261004を2026-10-06に正式復旧（利用者承認） |
 | migration | 成功、再実行成功、履歴7件 |
-| 照合 | 6テーブル、計89行、各テーブルの期待件数/実件数/全列一致件数が一致 |
+| 復元直後の照合 | 6テーブル89行、全行hash/DB objects一致。短命交換コード無効化後88行。公開後件数は変動する |
 
 確認対象テーブル: `__drizzle_migrations`、`admin_auth_exchange_codes`、`lookup_analytics_events`、`site_display_settings`、`translation_feedback`、`users`。行内容は本書へ掲載しない。
 
@@ -141,39 +141,19 @@ Railway側はMySQL9.4。9.7.2→9.4の逆復元試験は期限を理由とする
 
 ## 4. Migration job
 
-| 項目 | 設定 / 状態 | 注意 |
-| --- | --- | --- |
-| 種類 | repositoryから独立buildするmanual job | Link build serviceに候補が出なかったため |
-| Repository / Branch | APIと同じrepository / codex/northflank-migration | 確認済みrevisionは61942f5 |
-| Dockerfile / context | /Dockerfile.northflank / / | 設定記録 |
-| Build | defiant-road-707、Success | Build logs画面 |
-| Build resources | nf-compute-400-16 | job Summary画面 |
-| Runtime resources | nf-compute-10（0.1 shared vCPU / 256 MB / 1 GB storage） | job Summary画面 |
-| Docker runtime mode | Custom command | job Summary画面 |
-| Command | node node_modules/drizzle-kit/bin.cjs migrate | job Summary画面 |
-| Schedule | manual（定期実行なし） | 設定記録 |
-| 最大実行時間 | 600秒 | Run metadata画面 |
-| CI | OFF | job Observe画面 |
-| CD | OFF | 2026-10-05 Chromeで変更し、Continuous deployment offを確認 |
-| Runtime環境変数 | DATABASE_URL / DATABASE_SSL_CA_FILEをAPIと同じ接続先へ設定 | 実値非掲載 |
-| Runtime secret file | /secrets/mysql-ca.pem | job側にも個別配置 |
-| APIとの同image digest | 未確認 | 同branch/Dockerfileでも同digestとは限らない |
+現行は **hoyoverse-db-migrate-shared**。APIと同じmanifest sha256:6285fc568d30a1e3be70e82b0b3438a3fc6d4d002e94f3b25df36b327f0554ceへ固定したmanual Job。0.1 shared vCPU / 256 MB / 1 GB、最大600秒、retry 0、CD OFF。DATABASE_URLとDATABASE_SSL_CA_FILE、実行時CAファイルをAPIと同じ接続先へ設定する。秘密値は非掲載。
 
-実行履歴:
+保存コマンドは準備確認用のSETUP_PENDING_DB_CHECK出力。migrationはRun commandへ pnpm exec drizzle-kit migrate を個別指定する。2026-10-06 20:45:38 JSTのRun 278a9d0d-f83b-49ad-b6cc-cd2b88322a6dは58秒、exit 0。前後6テーブルの件数/hash一致でno-opを確認した。
 
-| Run suffix | 結果 | 確認内容 |
-| --- | --- | --- |
-| 6ac27ac5684032835d51da01 | Failed | `/secrets/mysql-ca.pem` が実行時に無くENOENT。Runtime fileへ配置して修正 |
-| 6ac27b48684032835d51da08 | Success / Finished | migrations applied successfully |
-| 6ac27bbd684032835d51da0f | Success / Finished | 再実行も成功 |
+旧hoyoverse-db-migrateは独立buildの履歴として保持。初期RunはCA未配置でFailed、配置後migrationと再実行に成功した。旧Jobを現行リリースのmigration先として使用しない。
 
-schemaを変更するjobなので、再実行前には対象addon・DB接続先・revision・backup・migration差分を確認する。同じmigrationが再実行成功した事実を、将来のmigrationすべての安全性と読み替えない。
+再実行前に対象addon・接続先・revision・backup・migration差分を確認する。過去のno-op成功を将来のmigrationの安全性と読み替えない。
 
 ## 5. Backup
 
 | 項目 | 設定 / 状態 |
 | --- | --- |
-| 手動backup | pre-migration-20261005、作成成功（画面記録: 2026-10-05 00:51 JST） |
+| 最新公開後backup | post-forward-production-20261006、6 GB、22:29:48–22:30:39 JST、51秒、Completed。Restore未実施 |
 | 定期backup type | Snapshot |
 | Repeat | Weekly |
 | Day / Hour / Minute | Sun / 18 / 00（UTC） |
@@ -195,13 +175,13 @@ MySQL左メニュー **Backups** で実際のrestore pointを確認、**Backup s
 | App Homepage | 既存値を維持（変更していない） |
 | Webhook / Setup URL | 本移行では変更対象外、現値の再確認なし |
 | 旧Pages | https://sitar-sitar.github.io/hoyoverse-builder/ |
-| 新Pages予定 | https://sitar-sitar.github.io/hoyoverse-builder/app/ |
-| 新Pages実装 | f3b7994へcommit、移行branchへ保存。公開未実施 |
-| GitHub Actions移行変数 | 2026-10-05に下記3変数を登録・再取得確認。MODE=legacy |
+| 正式Pages | https://sitar-sitar.github.io/hoyoverse-builder/app/ |
+| 新Pages実装 | main 5514d27、2026-10-06 20:57 JST forward公開成功 |
+| GitHub Actions移行変数 | 下記3変数を保持。2026-10-06 MODE=forwardで公開成功 |
 
 Pages公開時に必要なActions変数:
 
-- `HOYOVERSE_PAGES_MODE`: 準備時legacy、両API受入後parallel。forward/rollbackは対応する切替工程でのみ使用。
+- `HOYOVERSE_PAGES_MODE`: 現行forward。legacy/parallel/rollbackは移行互換モード。
 - `HOYOVERSE_API_BASE_URL`: 旧RailwayのHTTPS origin。
 - `HOYOVERSE_NORTHFLANK_API_BASE_URL`: 上記NorthflankのHTTPS origin。
 
@@ -211,13 +191,13 @@ Pages公開時に必要なActions変数:
 
 - [x] 利用者が通常DBユーザーのパスワード変更SQL成功を確認し、API/job/Workbenchの3か所の更新完了を報告。秘密値は非記録。更新後の実DB接続はWorkbench/API/jobで確認済み（下記履歴参照）。旧資格情報の拒否は未確認。
 - [x] Migration jobのCDをOFFに変更。CIもOFF、手動job。新buildの自動deploy停止を確認。
-- [ ] APIとjobの同image digest運用、または設計との差分の採否を確定する。
+- [x] shared Jobを正式APIと同じmanifest digestへ固定し、Run成功を確認。
 - [x] Northflank LBをPC/4G・偽装prefixで実測。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1を利用者がUpdate & restart。稼働podの2項目だけを確認済み。
 - [ ] 定期backupの初回成功を確認する。
-- [ ] 両APIの公開予定revision、CORS、preview flagを確認する。
-- [ ] 公開検証時に限りNFのAPI_MAINTENANCE=false、API_MIGRATION_PREVIEW=trueへ変更し、RPC/OAuthを確認する。通常のAPI/job CI/CDはOFFのまま管理する。
-- [ ] 新Pages公開後、実ブラウザOAuth・UID照会・管理変更・非管理者書き込み停止・新旧保存状態分離を受入する。
-- [ ] 最終停止コピー・全行hash/DB objects照合・正規受付再開・forwardは別工程として実施記録を残す。
+- [x] 正式NF API/Pagesの同main SHA、CORS、通常受付フラグを確認。旧APIは期限切れOffline。
+- [x] NFのmaintenance=false / migrationPreview=falseで正式RPC/OAuth受付を確認。API CI/CD OFF、Job CD OFF。
+- [x] 正式PagesのUID/OAuth/管理保存・再起動保持・未認証管理API拒否を確認。旧新並行試験全項目のPASSとはしない。
+- [x] 利用者承認の既存dump採用復旧、全行hash/DB objects照合、正規受付再開、forwardを記録。旧DB最終照合はNOT_TESTED。
 
 設定変更時は、対象service/addon/job、変更前後の非秘密値、時刻、実行者、backup、revision、確認結果を更新履歴に追記する。秘密値は「更新済み / 未確認」のみ記録する。
 
@@ -389,3 +369,33 @@ Pages公開時に必要なActions変数:
 - 利用者が移行開始後のデータ更新なしを申告し、既存dumpから続行を指定。旧DB最終hash一致は未検証。採用元railway-rehearsal-20261004（Upload import、10.95 KB、Completed）。
 - 復元前のNF検証DBをpre-adopted-restore-20261006へ退避。Disk 6.00 GB、48秒、17:55 JST作成・完了。APIをPause serviceで停止、0/0、Instances 0 scaled to zeroを確認。
 - 正本§9.1の復旧経路を適用。Restore・採用元照合・main実SHA配信・公開受入は未完了。
+
+## 2026-10-06 復旧実行・main稼働確認
+
+- 採用dump railway-rehearsal-20261004 のRestoreは17:59:30–18:00:38 JST、1分07秒で成功。退避snapshotを保持し、旧Railway DB/volumeは変更していない。
+- 復元直後は6テーブル89行。全行SHA256、36列、12索引、8テーブル制約、8キー制約を照合。view/trigger/routine/event/FK/CHECKは0件。稼働旧DBとの最終一致はNOT_TESTEDであり、利用者の更新なし申告に基づく既存dump採用である。
+- PR #106をmainへマージ。正式リビジョン5514d27ad17fe0b8978b7c2cc76f04e207ed3d40、API build tall-coat-5679、manifest sha256:6285fc568d30a1e3be70e82b0b3438a3fc6d4d002e94f3b25df36b327f0554ce。Jobも同じmanifestへ固定した。
+- Jobの初回複合コマンドは引数解釈で失敗し、DB変更なし。単独 pnpm exec drizzle-kit migrate へ修正し、20:45:38 JSTのRun 278a9d0d-f83b-49ad-b6cc-cd2b88322a6d は58秒・exit 0。前後6テーブルの件数/hashが一致し、migrationのno-opを確認した。
+- 自動承認レビューがDB照合順序変更と交換コード削除を拒否したため、利用者から2変更の明示承認を取得。20:48 JSTにDB既定照合順序をutf8mb4_0900_ai_ciへ復元し、短命交換コード1件を無効化。削除前hash一致、削除件数1、変更後既定照合順序を確認。期待件数は計88行となる。
+- APIを1 instanceで再開し、healthで正式mainリビジョン、maintenance=true、migrationPreview=falseを確認。CORSはhttps://sitar-sitar.github.io、ADMIN_FRONTEND_URLはhttps://sitar-sitar.github.io/hoyoverse-builder/app。CI/CDはOFF。
+- 続いてmaintenance=falseをUpdate & restartで保存。再起動後health確認、forward公開、公開機能確認、24時間観察は進行中。Phase 55はクローズしない。
+
+## 2026-10-06 22:26 JST 公開完了・受入検証状況
+
+- Pages workflow 37459695253は20:57 JSTに成功（deploy終了11:57:01 UTC）。HOYOVERSE_PAGES_MODE=forward、API/Pagesとも5514d27ad17fe0b8978b7c2cc76f04e207ed3d40。health maintenance=false/migrationPreview=false、CORS検査・RPC・テスト・型チェックを通過した。
+- 旧7ルートの転送HTMLは対応app routeのcanonicalと一致し、旧app module scriptを含まない。ブラウザでも旧root→appおよび旧charactersのquery/fragment破棄を確認。app/indexはnoindexなし、配信JSはNF URLあり・旧Railway URLなし。
+- 公開Pagesの実UID照会はHSR8件、GI12件、ZZZ6件、装備/ステータス表示成功。GitHub logout→login→reload保持成功。未認証feedback.listは403（誤ったfeedback.adminListの404は認可検証の証拠に含めない）。
+- 公開feedback #0001「Northflank本番移行・保存確認」を保存し、対応中への変更とreload保持を確認。実際の翻訳依頼ではない運用検証記録。
+- 表示設定E-2を一時変更する確定操作は、全閲覧者への影響について個別承認なしとして自動承認レビューが拒否。変更は未適用。利用者へ一時変更・計画再起動・元への復帰の承認を依頼中。再開後も公開設定は「切替を開放」である。
+- 20:58 JST開始のhealth collectorは2件のみ記録後に停止。20:58/21:03は正常だが空白時間は連続観察PASSに含めない。22:26 JSTから別JSONLで再開。24時間経過だけで合格にせず、全sample・gap・platform crash/OOM・IP fallback・保存/復元証拠を確認する。
+- 22:26 JST live healthは正常。NF画面でmain/1 instance/2 probes passing/0 restartsを確認。Phase 55は公開後観察中で、まだクローズしない。
+
+- 2026-10-06 22:30 JST: post-forward-production-20261006（Disk、6.00 GB、MySQL 9.7.2）を公開後DBから取得。22:29:48–22:30:39、51秒、Completed。新backupのRestoreは未実施であり、取得成功だけを復元試験PASSとしない。
+
+## 2026-10-06 22:44 JST 承認済み公開保存・再起動試験
+
+- 利用者が公開表示設定の一時変更・API再起動・元への復帰を明示承認。22:42 JSTにE-2のみ「現行」へ公開保存し、APIのRestart serviceを実施。
+- 旧Pod hoyoverse-api-5d9dfc978c-qdbfx がTerminated、新Pod hoyoverse-api-66f76b8c6f-87bkq がRunningを確認。再起動中のno healthy upstreamは計画停止として記録し、22:43 JSTにhealth正常、正式main SHA・maintenance=false・migrationPreview=falseを再確認。
+- 管理画面の再読込でE-2「現行」（22:42保存）が保持され、feedback #0001の「対応中」状態と本文も保持されることを確認。保存・API再起動・再読込の公開受入試験は成功。
+- 22:44 JSTにE-2を変更前の「切替を開放」へ復帰し、再読込で保持を確認。他の表示設定は変更していない。検証用feedback #0001を「完了」とし、再読込後も保存状態を確認。前回の表示変更承認待ちは解消した。
+- 残ゲートは24時間観察（22:26 JSTからの欠落なし実測）、platformログ/保存の継続確認、公開後backupの復元検証。Phase 55は公開後観察中であり、まだ移行全体の完了とはしない。

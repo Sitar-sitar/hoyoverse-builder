@@ -187,7 +187,7 @@ export default function DisplaySettingsAdmin() {
 
             {adminQuery.isError && !adminQuery.data && (
               <p role="alert" className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">
-                公開中の設定を取得できませんでした。RailwayのDATABASE_URLを確認し、再読み込みしてください。取得できるまで公開操作はできません。
+                公開中の設定を取得できませんでした。APIのデータベース接続設定を確認し、再読み込みしてください。取得できるまで公開操作はできません。
               </p>
             )}
 

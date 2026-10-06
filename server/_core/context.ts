@@ -14,7 +14,7 @@ export async function createContext(
   let user: User | null = null;
 
   // GitHub App administrator sessions are supported in both the full-stack
-  // runtime and the API-only Railway deployment.
+  // runtime and the API-only deployment.
   try {
     user = await authenticateGitHubAdminRequest(opts.req);
   } catch {
@@ -22,7 +22,7 @@ export async function createContext(
   }
 
   // Preserve the legacy Manus session flow only for the original full-stack
-  // runtime. The public Railway API does not load the Manus SDK.
+  // runtime. The public API does not load the Manus SDK.
   if (!user && process.env.API_ONLY !== "true") {
     const { sdk } = await import("./sdk");
     try {
