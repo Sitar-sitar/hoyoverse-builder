@@ -389,3 +389,26 @@ Pages公開時に必要なActions変数:
 - 利用者が移行開始後のデータ更新なしを申告し、既存dumpから続行を指定。旧DB最終hash一致は未検証。採用元railway-rehearsal-20261004（Upload import、10.95 KB、Completed）。
 - 復元前のNF検証DBをpre-adopted-restore-20261006へ退避。Disk 6.00 GB、48秒、17:55 JST作成・完了。APIをPause serviceで停止、0/0、Instances 0 scaled to zeroを確認。
 - 正本§9.1の復旧経路を適用。Restore・採用元照合・main実SHA配信・公開受入は未完了。
+
+## 2026-10-06 復旧実行・main稼働確認
+
+- 採用dump railway-rehearsal-20261004 のRestoreは17:59:30–18:00:38 JST、1分07秒で成功。退避snapshotを保持し、旧Railway DB/volumeは変更していない。
+- 復元直後は6テーブル89行。全行SHA256、36列、12索引、8テーブル制約、8キー制約を照合。view/trigger/routine/event/FK/CHECKは0件。稼働旧DBとの最終一致はNOT_TESTEDであり、利用者の更新なし申告に基づく既存dump採用である。
+- PR #106をmainへマージ。正式リビジョン5514d27ad17fe0b8978b7c2cc76f04e207ed3d40、API build tall-coat-5679、manifest sha256:6285fc568d30a1e3be70e82b0b3438a3fc6d4d002e94f3b25df36b327f0554ce。Jobも同じmanifestへ固定した。
+- Jobの初回複合コマンドは引数解釈で失敗し、DB変更なし。単独 pnpm exec drizzle-kit migrate へ修正し、20:45:38 JSTのRun 278a9d0d-f83b-49ad-b6cc-cd2b88322a6d は58秒・exit 0。前後6テーブルの件数/hashが一致し、migrationのno-opを確認した。
+- 自動承認レビューがDB照合順序変更と交換コード削除を拒否したため、利用者から2変更の明示承認を取得。20:48 JSTにDB既定照合順序をutf8mb4_0900_ai_ciへ復元し、短命交換コード1件を無効化。削除前hash一致、削除件数1、変更後既定照合順序を確認。期待件数は計88行となる。
+- APIを1 instanceで再開し、healthで正式mainリビジョン、maintenance=true、migrationPreview=falseを確認。CORSはhttps://sitar-sitar.github.io、ADMIN_FRONTEND_URLはhttps://sitar-sitar.github.io/hoyoverse-builder/app。CI/CDはOFF。
+- 続いてmaintenance=falseをUpdate & restartで保存。再起動後health確認、forward公開、公開機能確認、24時間観察は進行中。Phase 55はクローズしない。
+
+## 2026-10-06 22:26 JST 公開完了・受入検証状況
+
+- Pages workflow 37459695253は20:57 JSTに成功（deploy終了11:57:01 UTC）。HOYOVERSE_PAGES_MODE=forward、API/Pagesとも5514d27ad17fe0b8978b7c2cc76f04e207ed3d40。health maintenance=false/migrationPreview=false、CORS検査・RPC・テスト・型チェックを通過した。
+- 旧7ルートの転送HTMLは対応app routeのcanonicalと一致し、旧app module scriptを含まない。ブラウザでも旧root→appおよび旧charactersのquery/fragment破棄を確認。app/indexはnoindexなし、配信JSはNF URLあり・旧Railway URLなし。
+- 公開Pagesの実UID照会はHSR8件、GI12件、ZZZ6件、装備/ステータス表示成功。GitHub logout→login→reload保持成功。未認証feedback.listは403（誤ったfeedback.adminListの404は認可検証の証拠に含めない）。
+- 公開feedback #0001「Northflank本番移行・保存確認」を保存し、対応中への変更とreload保持を確認。実際の翻訳依頼ではない運用検証記録。
+- 表示設定E-2を一時変更する確定操作は、全閲覧者への影響について個別承認なしとして自動承認レビューが拒否。変更は未適用。利用者へ一時変更・計画再起動・元への復帰の承認を依頼中。再開後も公開設定は「切替を開放」である。
+- 20:58 JST開始のhealth collectorは2件のみ記録後に停止。20:58/21:03は正常だが空白時間は連続観察PASSに含めない。22:26 JSTから別JSONLで再開。24時間経過だけで合格にせず、全sample・gap・platform crash/OOM・IP fallback・保存/復元証拠を確認する。
+- 22:26 JST live healthは正常。NF画面でmain/1 instance/2 probes passing/0 restartsを確認。Phase 55は公開後観察中で、まだクローズしない。
+
+- 2026-10-06 22:30 JST: post-forward-production-20261006（Disk、6.00 GB、MySQL 9.7.2）を公開後DBから取得。22:29:48–22:30:39、51秒、Completed。新backupのRestoreは未実施であり、取得成功だけを復元試験PASSとしない。
+

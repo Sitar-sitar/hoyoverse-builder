@@ -39,3 +39,13 @@
 
 - R01の採用判断は解決: 更新なしの申告に基づき選択肢2、既存dump採用を明示指定。正本§9.1へ反映。旧最終DBとの独立照合はNOT_TESTEDを維持する。
 - R02は旧環境依存試験をNOT_TESTEDとして復旧経路を分離。実行可能な公開受入・実SHA・backup・データ検証は維持し、実施前の正式受付Goとは扱わない。
+
+## 2026-10-06 22:26 JST 公開完了・受入検証状況
+
+- Pages workflow 37459695253は20:57 JSTに成功（deploy終了11:57:01 UTC）。HOYOVERSE_PAGES_MODE=forward、API/Pagesとも5514d27ad17fe0b8978b7c2cc76f04e207ed3d40。health maintenance=false/migrationPreview=false、CORS検査・RPC・テスト・型チェックを通過した。
+- 旧7ルートの転送HTMLは対応app routeのcanonicalと一致し、旧app module scriptを含まない。ブラウザでも旧root→appおよび旧charactersのquery/fragment破棄を確認。app/indexはnoindexなし、配信JSはNF URLあり・旧Railway URLなし。
+- 公開Pagesの実UID照会はHSR8件、GI12件、ZZZ6件、装備/ステータス表示成功。GitHub logout→login→reload保持成功。未認証feedback.listは403（誤ったfeedback.adminListの404は認可検証の証拠に含めない）。
+- 公開feedback #0001「Northflank本番移行・保存確認」を保存し、対応中への変更とreload保持を確認。実際の翻訳依頼ではない運用検証記録。
+- 表示設定E-2を一時変更する確定操作は、全閲覧者への影響について個別承認なしとして自動承認レビューが拒否。変更は未適用。利用者へ一時変更・計画再起動・元への復帰の承認を依頼中。再開後も公開設定は「切替を開放」である。
+- 20:58 JST開始のhealth collectorは2件のみ記録後に停止。20:58/21:03は正常だが空白時間は連続観察PASSに含めない。22:26 JSTから別JSONLで再開。24時間経過だけで合格にせず、全sample・gap・platform crash/OOM・IP fallback・保存/復元証拠を確認する。
+- 22:26 JST live healthは正常。NF画面でmain/1 instance/2 probes passing/0 restartsを確認。Phase 55は公開後観察中で、まだクローズしない。
