@@ -1,4 +1,5 @@
-export const LOGIN_RETURN_PATH_KEY = "starrail-build-advisor.login-return-path";
+import { scopedStorageKey } from "@/lib/migrationPage";
+export const LOGIN_RETURN_PATH_KEY = scopedStorageKey("starrail-build-advisor.login-return-path");
 export const ADMIN_LOGIN_RETURN_PATH = "/admin/feedback";
 export const ADMIN_DISPLAY_RETURN_PATH = "/admin/display";
 export const ADMIN_LOGIN_RETURN_PATHS = ["/admin", ADMIN_LOGIN_RETURN_PATH, ADMIN_DISPLAY_RETURN_PATH] as const;

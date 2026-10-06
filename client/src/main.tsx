@@ -13,6 +13,7 @@ import {
 } from "./lib/adminSession";
 import { safeTrpcFetch } from "./lib/safeTrpcFetch";
 import "./index.css";
+import { isNextPages } from "./lib/migrationPage";
 
 const queryClient = new QueryClient();
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
@@ -60,6 +61,8 @@ const trpcClient = trpc.createClient({
         // token before React renders, so cross-site cookies are not required.
         const adminToken = getAdminBearerToken();
         if (adminToken) return { Authorization: `Bearer ${adminToken}` };
+
+        if (isNextPages) return {};
 
         // Keep the legacy preview fallback for non-production Manus runtimes.
         try {

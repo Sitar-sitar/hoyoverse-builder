@@ -1,3 +1,4 @@
+import { booleanSetting, previewAdmin } from "./_core/migrationRuntime";
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -104,13 +105,13 @@ export const appRouter = router({
         enforceRateLimit(ctx, lookupUidLimiter, `lookup:uid:${input.game}:${rateLimitKeyForUid(input.uid)}`, LOOKUP_TOO_MANY_REQUESTS);
         return next();
       })
-      .query(async ({ input }) => {
+      .query(async ({ input, ctx }) => {
         const result = await lookupGameBuild(input.game, input.uid);
         // 匿名のベストエフォート記録。照会の成否も応答時間も左右させない。
         // await を外すだけだと reject 時に unhandledRejection になるため、必ず catch を付けて捨てる。
         // timeout は付けない（待たない以上は無意味で、DB 側の接続も解放されない）。
         // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 46-1
-        void recordLookupAnalyticsEvent(input.game, result.cached)
+        if (!booleanSetting("API_MIGRATION_PREVIEW") || previewAdmin(ctx)) void recordLookupAnalyticsEvent(input.game, result.cached)
           .catch(error => console.error("[Analytics] Failed to record lookup:", error));
         return result;
       }),
@@ -163,6 +164,7 @@ export const appRouter = router({
         notes: z.string().trim().max(2000).optional(),
       }))
       .use(({ ctx, next }) => {
+        if (booleanSetting("API_MIGRATION_PREVIEW") && !previewAdmin(ctx)) throw new TRPCError({ code: "FORBIDDEN", message: "Migration preview: please use the current site." });
         enforceRateLimit(ctx, feedbackIpLimiter, `feedback:ip:${clientIpFromRequest(ctx.req)}`, FEEDBACK_TOO_MANY_REQUESTS);
         return next();
       })

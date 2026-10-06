@@ -75,6 +75,8 @@ function Router() {
   );
 }
 
+import MigrationPreviewBanner from "@/components/MigrationPreviewBanner";
+
 function App() {
   const routerBase = import.meta.env.BASE_URL === "/"
     ? undefined
@@ -88,6 +90,7 @@ function App() {
             <ThemeGate>
               <TooltipProvider>
                 <Toaster />
+                <MigrationPreviewBanner />
                 <DisplayPreviewBanner />
                 <Router />
                 <PublicCatalogShortcut />

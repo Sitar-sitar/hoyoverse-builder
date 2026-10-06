@@ -13,10 +13,11 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     name: Build HoYoverse Builder
     runs-on: ubuntu-latest
     steps:
@@ -37,74 +38,21 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Test Pages migration modes
+        run: node --test scripts/pages.test.mjs
+
       - name: Type check
         run: pnpm check
 
       - name: Build API
         run: pnpm build:api
 
-      - name: Verify Railway API
+      - name: Build and verify Pages artifact
         env:
-          API_BASE_URL: https://hoyoverse-builder-api-production.up.railway.app
-        run: |
-          set -euo pipefail
-          headers="$(mktemp)"
-          health="$(mktemp)"
-          trpc="$(mktemp)"
-          curl -fsS --retry 5 --retry-all-errors --retry-delay 2 \
-            -H "Origin: https://sitar-sitar.github.io" \
-            -D "$headers" \
-            "$API_BASE_URL/api/health" \
-            -o "$health"
-          grep -q '"ok":true' "$health"
-          grep -qi '^access-control-allow-origin: https://sitar-sitar.github.io' "$headers"
-          curl -fsS --retry 5 --retry-all-errors --retry-delay 2 \
-            -H "Origin: https://sitar-sitar.github.io" \
-            "$API_BASE_URL/api/trpc/build.guideHistory" \
-            -o "$trpc"
-          grep -q '"result"' "$trpc"
-
-      - name: Build frontend
-        env:
-          VITE_API_BASE_URL: ${{ vars.HOYOVERSE_API_BASE_URL || 'https://hoyoverse-builder-api-production.up.railway.app' }}
-        run: pnpm exec vite build --config vite.pages.config.ts
-
-      - name: Prepare Pages artifact
-        run: |
-          set -euo pipefail
-
-          # GitHub Pages does not provide SPA history fallback for nested paths.
-          # Publish index.html at every known client-side route so direct links and
-          # OAuth redirects such as /admin work without a Pages 404.
-          for route in characters updates feedback admin admin/feedback admin/display; do
-            mkdir -p "dist/public/$route"
-            cp dist/public/index.html "dist/public/$route/index.html"
-          done
-
-          cp dist/public/index.html dist/public/404.html
-
-      - name: Verify every client-side route is published
-        run: |
-          set -euo pipefail
-
-          # ルートを足したのに上の列挙を更新し忘れると、直接アクセスが Pages の 404 を経由する。
-          # App.tsx の Route から一覧を取り、対応するディレクトリがあることを確かめる。
-          # `/` は index.html 自身、`/404` は 404.html で足りるため対象外。
-          missing=0
-          routes="$(grep -oE 'path=\{"[^"]+"\}' client/src/App.tsx | sed -E 's/path=\{"(.*)"\}/\1/')"
-          for route in $routes; do
-            case "$route" in
-              /|/404) continue ;;
-            esac
-            if [ ! -f "dist/public${route}/index.html" ]; then
-              echo "missing Pages directory for client-side route: $route"
-              missing=1
-            fi
-          done
-          if [ "$missing" -ne 0 ]; then
-            echo "Add the route to the 'for route in ...' list in the Prepare Pages artifact step."
-            exit 1
-          fi
+          HOYOVERSE_PAGES_MODE: ${{ vars.HOYOVERSE_PAGES_MODE }}
+          HOYOVERSE_API_BASE_URL: ${{ vars.HOYOVERSE_API_BASE_URL }}
+          HOYOVERSE_NORTHFLANK_API_BASE_URL: ${{ vars.HOYOVERSE_NORTHFLANK_API_BASE_URL }}
+        run: node scripts/pages.mjs --verify
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
@@ -112,7 +60,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: dist/public
+          path: dist/pages-artifact
 
   deploy:
     environment:

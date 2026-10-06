@@ -1,3 +1,5 @@
+import { useAuth } from "@/_core/hooks/useAuth";
+import { canSubmitPreviewFeedback, isMigrationPreview, LEGACY_SITE_URL, migrationNotice } from "@/lib/migrationPage";
 import { Button } from "@/components/ui/button";
 import { LANGUAGE_LABELS, useLanguage } from "@/contexts/LanguageContext";
 import { trpc } from "@/lib/trpc";
@@ -5,7 +7,18 @@ import React, { FormEvent, useState } from "react";
 
 type FeedbackType = "mistranslation" | "improvement" | "other";
 
-export default function TranslationFeedbackForm({ pagePath }: { pagePath: "/" | "/updates" }) {
+type FeedbackFormProps = { pagePath: "/" | "/updates" };
+
+export default function TranslationFeedbackForm(props: FeedbackFormProps) {
+  return isMigrationPreview ? <PreviewFeedbackForm {...props} /> : <FeedbackFormContent {...props} canSubmit />;
+}
+
+function PreviewFeedbackForm(props: FeedbackFormProps) {
+  const { user } = useAuth();
+  return <FeedbackFormContent {...props} canSubmit={canSubmitPreviewFeedback(true, user?.role)} />;
+}
+
+function FeedbackFormContent({ pagePath, canSubmit }: FeedbackFormProps & { canSubmit: boolean }) {
   const { language, t } = useLanguage();
   const [feedbackType, setFeedbackType] = useState<FeedbackType>("mistranslation");
   const [originalText, setOriginalText] = useState("");
@@ -17,6 +30,7 @@ export default function TranslationFeedbackForm({ pagePath }: { pagePath: "/" | 
 
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (!canSubmit) return;
     if (suggestedText.trim().length < 3) {
       setStatus("idle");
       setValidationMessage(t("feedbackRequired"));
@@ -46,6 +60,7 @@ export default function TranslationFeedbackForm({ pagePath }: { pagePath: "/" | 
     {validationMessage && <p role="alert" className="mt-3 text-sm text-rose-700">{validationMessage}</p>}
     {status === "success" && <p role="status" className="mt-3 text-sm text-emerald-800">{t("feedbackSent")}</p>}
     {status === "error" && <p role="alert" className="mt-3 text-sm text-rose-700">{t("feedbackFailed")}</p>}
-    <div className="mt-6"><Button type="submit" disabled={submitFeedback.isPending} className="min-h-11 rounded-none bg-stone-900 px-5 text-stone-50 hover:bg-amber-900">{submitFeedback.isPending ? t("sendingFeedback") : t("sendFeedback")}</Button></div>
+    {!canSubmit && <p role="status" className="mt-4 text-sm"><a href={`${LEGACY_SITE_URL}feedback/`} className="underline">{migrationNotice[language]}</a></p>}
+    <div className="mt-6"><Button type="submit" disabled={!canSubmit || submitFeedback.isPending} className="min-h-11 rounded-none bg-stone-900 px-5 text-stone-50 hover:bg-amber-900">{submitFeedback.isPending ? t("sendingFeedback") : t("sendFeedback")}</Button></div>
   </form>;
 }

@@ -1,3 +1,4 @@
+import { scopedStorageKey } from "@/lib/migrationPage";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import {
@@ -16,8 +17,8 @@ import React, { createContext, useCallback, useContext, useEffect, useMemo, useS
  * 表示バリアントの解決（設計: docs/実装設計書_表示デザインの管理画面切替_2026-09-13.md §4.2.3・§4.2.4）。
  */
 
-export const DISPLAY_CACHE_STORAGE_KEY = "hb.displaySettings.v1";
-export const DISPLAY_PREVIEW_STORAGE_KEY = "hb.displayPreview.v1";
+export const DISPLAY_CACHE_STORAGE_KEY = scopedStorageKey("hb.displaySettings.v1");
+export const DISPLAY_PREVIEW_STORAGE_KEY = scopedStorageKey("hb.displayPreview.v1");
 /** 前回値が無い初回訪問だけ、公開値の取得をこの時間まで待つ（§10 Q2）。 */
 export const DISPLAY_INITIAL_WAIT_MS = 600;
 export const DISPLAY_REFETCH_INTERVAL_MS = 60_000;
