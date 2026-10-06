@@ -29,6 +29,9 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Test production monitor
+        run: node --test scripts/monitor-production.test.mjs
+
       - name: Type check
         run: pnpm check
 
