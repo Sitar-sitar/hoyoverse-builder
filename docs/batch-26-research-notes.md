@@ -36,4 +36,11 @@ Game8英語版ギャラガー記事は取得時402。本文を確認した扱い
 
 ## 検証・公開
 
-最終図鑑APIの新3案と旧補正の排除、共有編成のキャラ別順位・採否の独立性をテスト。全回帰・型・ビルド・golden差分・三言語画面・正式API/Pagesの反映は結果確定後に追記する。実UID照会は未実施で、図鑑の確認と区別する。
+- 全79ファイル・558テスト、Pages移行5テスト、型検査、API/Pagesビルド、PR CI PASS。lockfileどおりの依存で検証。最終図鑑APIの新3案・旧補正の排除と、同じ共有編成のキャラ別順位・採否の独立性を回帰テストへ追加。
+- golden比較: 他255キャラのPT・最終reference、全ガイド/装備/星魂/ID不変。ホタルのPT以外のreferenceも不変。過去イベント不変、連動漏れ0件。
+- 実装 `0383f5d`、PR #109、公開main `c1ddc89e62c4222c451a1d01c27a176394db3be6`。Northflank build `near-system-8501`、APP_REVISIONとbuild commit一致。22:01 JSTの正式APIで新3案/版4.6/更新日/補正なしを検証し、関連5キャラのPTは変更前と完全一致。
+- health HTTP200、通常受付、CORS PASS。新Pod `hoyoverse-api-5db967df64-f4gtb` は2/2 probes passing、0 restarts。DB migrationなし。
+- Pages run [37624723348](https://github.com/Sitar-sitar/hoyoverse-builder/actions/runs/37624723348) の再実行成功。初回はAPI旧revisionのため一致ゲートで停止し、新API配備後に同じmain SHAで配信成功。
+- 公開ChromeでJA/EN/ZHそれぞれ3案・条件文・日付を確認、browser error 0件。画面証拠は `C:/Users/loudn/.codex/visualizations/2026/10/07/01a1165a-6ed0-7d92-94d4-a546a07c9f45/firefly-public.png`。
+- 監視変数 `HOYOVERSE_MONITOR_REVISION` を公開SHAへ更新。[監視run 37625250064](https://github.com/Sitar-sitar/hoyoverse-builder/actions/runs/37625250064)成功。旧b5374e3の24時間観察をこのreleaseの観察PASSへ換算しない。
+- 実UID照会は未実施。設計Phase 3 UIとPhase 55全体は未完了。shared migration Jobは今回実行・更新せず旧P1イメージのまま。次にmigrationする際は新APIと同digestへの固定を先に確認する。
