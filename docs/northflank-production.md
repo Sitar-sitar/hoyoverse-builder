@@ -12,8 +12,8 @@
 | API service | hoyoverse-api、Dockerfile.northflank、main、CI/CD OFF、1 instance、Recreate |
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
-| Migration | hoyoverse-db-migrate-shared、APIと同じimage manifestへ固定、manual / CD OFF |
-| 正式revision | b5374e384beaf638bbf996c46e1411fb65be027f（P1修正公開、2026-10-07確認） |
+| Migration | hoyoverse-db-migrate-shared、manual / CD OFF。現保存imageは旧P1版。次のmigration実行前にAPIと同manifestへ固定する |
+| 正式revision | c1ddc89e62c4222c451a1d01c27a176394db3be6（ホタルPT更新、2026-10-07確認、build near-system-8501） |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin |
