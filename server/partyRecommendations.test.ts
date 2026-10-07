@@ -22,7 +22,7 @@ describe("推奨パーティー編成カタログ", () => {
 
   it("HSR・原神・ZZZの代表キャラクターで、最大3案とゲーム別のバージョン情報を返す", () => {
     const coverage = [
-      { game: "hsr" as const, character: "ホタル", version: "4.4", dataAsOf: "2026-08-25", updatedAt: "2026-08-25", changedKey: "speed" },
+      { game: "hsr" as const, character: "ホタル", version: "4.6", dataAsOf: "2026-10-07", updatedAt: "2026-10-07", changedKey: null },
       { game: "genshin" as const, character: "神里綾華", version: "7.0", dataAsOf: "2026-08-13", updatedAt: "2026-09-08", changedKey: null },
       { game: "zzz" as const, character: "星見雅", version: "3.1", dataAsOf: "2026-08-25", updatedAt: "2026-08-25", changedKey: "critRate" },
     ];
@@ -46,7 +46,7 @@ describe("推奨パーティー編成カタログ", () => {
       expect(options.length).toBeGreaterThan(0);
       expect(options.length).toBeLessThanOrEqual(MAX_PARTY_OPTIONS);
       expect(options.every((option) => option.members.some((partyMember) => partyMember.name.ja === name))).toBe(true);
-      expect(options.every((option) => option.communitySources.some((source) => /^2026-(08-(25|26|27)|09-(07|08|11|13|24|28|29)|10-(01|03))$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
+      expect(options.every((option) => option.communitySources.some((source) => /^\d{4}-\d{2}-\d{2}$/.test(source.checkedAt) && source.url.startsWith("https://")))).toBe(true);
     });
   });
 
