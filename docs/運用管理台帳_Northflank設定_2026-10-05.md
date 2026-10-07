@@ -4,7 +4,7 @@
 - 記録日: 2026-10-05（Asia/Tokyo）
 - 記録範囲: 本チャットで設定したNorthflank、関連GitHub App、バックアップ、Pages準備。
 - 根拠: 利用者が提示した設定画面・ログ・Workbench結果と、本チャットの設定確認記録。保存時に管理画面を再取得したものではない。変更後は該当行と更新履歴を更新する。
-- 状態: 本番公開・P1修正反映済み。2026-10-07に公開後Native dumpのローカル復元/全行照合PASS。24時間観察・platform/永続化確認は未完了。Disk snapshot復元は未検証。
+- 状態: 移行・本番公開完了（2026-10-08、明示例外あり）。Native dump復元PASS、現行本番正常。24時間連続観察は未達、利用者指定で追加実施免除。Disk snapshot復元は未検証。
 - 役割: 本書は設定と運用状況の管理記録。仕様正本は[段階移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)、進捗は[実装ログ Phase 55](実装ログ.md)。
 
 パスワード、接続URLの実値、OAuth secret、session secret、token、証明書本文、DB行データは保存しない。秘密値はNorthflankのEnvironment / Secret設定で管理する。
@@ -419,3 +419,7 @@ Pages公開時に必要なActions変数:
 - 結論: 公開後Native dumpの保存・独立復元・全行/構造照合PASS。既存Disk snapshot post-forward-production-20261006自体の復元はNOT_TESTEDのまま。A14のbackup保存/復元機能はNative方式で検証し、24時間観察・platform/永続化確認は別ゲートとして継続する。
 - 証拠: visualizations/2026/10/04/01a106f9-fe00-7eb0-a669-54669f3a0498/native-restore-verification-20261007.json と northflank-native-backup-completed.png。
 - health観察は07:46/07:51/07:56 JSTの3回正常、間隔300.6秒。プロセスPID 37996は稼働中。24時間合格ではない。
+
+## 2026-10-08 最終判定
+
+[完了判定](移行完了判定_Northflank_2026-10-08.md)を採用。ローカル33回/GitHub7回成功、欠測とrelease変更を明記。現行c1ddc89/1 instance/2 probes/0 restarts、管理者再認証・既存表示7項目・feedback1件完了の保持を確認。観測workflow disabled_manually、翌朝automation PAUSED、ローカルプロセス不在。追加長期観測なし。旧環境は削除せず保持。

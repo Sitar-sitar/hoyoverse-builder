@@ -65,3 +65,7 @@ GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間�
 監視と運用記録だけの公開ではAPI/Pagesを再配信しない（merge commitに `[skip ci]` を付け、pushによるPages配信をスキップする）。PRの通常検証は実施し、merge後に監視workflowを明示dispatchして動作確認する。アプリコード更新の公開時にはこのskipを使わず、通常の同SHA配信ゲートを通す。
 
 仕様参考: [GitHub schedule制限](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。無料構成で追加Addonを作らない。
+
+## 2026-10-08 観測終了と移行完了
+
+利用者指定で既存観測により判定。[完了判定](移行完了判定_Northflank_2026-10-08.md)参照。24時間連続観察は未達・追加免除を保持し、Phase55は本番運用継続Goで完了。GitHub monitorはdisabled_manually、翌朝確認automationはPAUSED。追加観測は行わず内部probesを維持。旧Railway廃止は別途指示後。
