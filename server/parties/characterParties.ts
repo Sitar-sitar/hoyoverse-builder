@@ -7,6 +7,7 @@ import type { CharacterPartyEntry } from "./types";
  * 以後の参照変更は自分起点を含め linkRecords.ts の PARTY_LINK_RECORDS に追記する。
  */
 export const CHARACTER_PARTIES: Record<string, CharacterPartyEntry> = {
+  "hsr:ホタル": { refs: [{"team":"team-hsr-ホタル-b26-1"},{"team":"team-hsr-ホタル-b26-2"},{"team":"team-hsr-ホタル-b26-3"}] },
   // 第23バッチ追補（2026-10-01）。旧・第23バッチ専用の既存PT追補定数と専用ループの置き換え。表示IDは互換のため固定（D7）。
   "genshin:ファルザン": { refs: [
     { team: "curated-genshin-ファルザン-1" },
@@ -51,5 +52,7 @@ export const CHARACTER_PARTIES: Record<string, CharacterPartyEntry> = {
   "hsr:フォフォ": {"refs":[{"team":"curated-hsr-フォフォ-1"},{"team":"team-hsr-千冶・刃-b25-3"},{"team":"team-hsr-姫子・旅立ち-b25-1"}],"skipped":[{"team":"team-hsr-姫子・旅立ち-b25-3","reason":"回復とEP支援を確認。既存の愉悦案を保持し、殲滅のWアタッカー案と夏ロビン案を優先するため、裁決・記憶主人公案は3枠制限で見送る。","sourceUrl":"https://game8.jp/houkaistarrail/556584","checkedAt":"2026-10-03"}]},
   "hsr:サンデー": {"refs":[{"team":"curated-hsr-サンデー-1"},{"team":"team-hsr-姫子・旅立ち-b25-2"},{"team":"team-hsr-不死途-b25-1"}]},
   "hsr:丹恒・騰荒": {"refs":[{"team":"curated-hsr-丹恒・騰荒-1"},{"team":"team-hsr-姫子・旅立ち-b25-2"},{"team":"team-hsr-不死途-b25-1"}]},
-  "hsr:ルアン・メェイ": {"refs":[{"team":"curated-hsr-ルアン・メェイ-1"},{"team":"curated-hsr-ルアン・メェイ-2"},{"team":"team-hsr-姫子・旅立ち-b25-3"}]},
+  "hsr:ルアン・メェイ": {"refs":[{"team":"curated-hsr-ルアン・メェイ-1"},{"team":"curated-hsr-ルアン・メェイ-2"},{"team":"team-hsr-姫子・旅立ち-b25-3"}],"skipped":[{"team":"team-hsr-ホタル-b26-3","reason":"本人ガイドのホタル・流離人・ダリア案を第1枠に維持し、乱破案と姫子・旅立ち案を保持。ホタル側の代替支援案は今回のホタルのみ更新の範囲で追加表示を見送る。","sourceUrl":"https://game8.jp/houkaistarrail/573084","checkedAt":"2026-10-07"}]},
+  "hsr:ギャラガー": {"skipped":[{"team":"team-hsr-ホタル-b26-3","reason":"ホタル側の代替編成として相性を確認したが、今回は利用者指定のホタルのみ更新。既存のダリア・流離人案、黄泉案、巡狩三月案の3枠を保持し、ギャラガー側の入れ替えは別途精査する。","sourceUrl":"https://gamewith.jp/houkaistarrail/article/show/434009","checkedAt":"2026-10-07"}]},
+  "hsr:帰忘の流離人": {"skipped":[{"team":"team-hsr-ホタル-b26-2","reason":"ホタル側の耐久なし案として相性を確認したが、今回はホタルのみ更新。既存の霊砂入りホタル案、ブートヒル案、姫子案を維持し、本人側の3枠入れ替えを見送る。","sourceUrl":"https://game8.jp/houkaistarrail/643244","checkedAt":"2026-10-07"}]},
 };

@@ -27,12 +27,12 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計693件（旧形式678・共有15）で、IDが重複しない", () => {
-    expect(TEAM_STORE.teams).toHaveLength(693);
+  it("合計696件（旧形式678・共有18）で、IDが重複しない", () => {
+    expect(TEAM_STORE.teams).toHaveLength(696);
     expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(678);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
-    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(693);
+    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(696);
   });
 
   it("旧形式の全編成で起点キャラがメンバーにいて、目標補正9件が起点メンバーへ移っている", () => {
@@ -50,8 +50,8 @@ describe("編成マスタ（Phase 1）", () => {
     expect(LEGACY_PARTY_KEYS.filter((key) => !catalogKeys.has(key))).toEqual([]);
   });
 
-  it("明示参照の無いキャラは保存順の現行IDを既定参照する", () => {
-    expect(refsFor("hsr", "ホタル").map((ref) => ref.team)).toEqual(["firefly-superbreak", "firefly-fugue", "firefly-accessible"]);
+  it("ホタルは明示参照、未指定キャラは保存順の現行IDを既定参照する", () => {
+    expect(refsFor("hsr", "ホタル").map((ref) => ref.team)).toEqual(["team-hsr-ホタル-b26-1","team-hsr-ホタル-b26-2","team-hsr-ホタル-b26-3"]);
     expect(refsFor("genshin", "ヴェスナ").map((ref) => ref.team)).toEqual(["curated-genshin-ヴェスナ-1", "curated-genshin-ヴェスナ-2"]);
     expect(refsFor("hsr", "存在しない名前")).toEqual([]);
   });
@@ -123,10 +123,10 @@ describe("変更記録と更新履歴（PT-02・PT-03）", () => {
   const batches = { ...PARTY_LINK_BATCHES, 24: { ...PARTY_LINK_BATCHES[23]!, batch: 24, date: "2026-10-20T12:00:00+09:00", updatedAt: "2026-10-20", title: "第24バッチ追補" } };
   const eventsFor = (records: readonly PartyLinkRecord[]) => linkRecordsFor("genshin", "ファルザン", records, batches).map((entry) => linkEventFor("genshin", "ファルザン", entry));
 
-  it("移行時の記録件数はファルザン2案・ディオナ1案・ホタル0件", () => {
+  it("第23バッチ記録を維持し、ホタルだけ第26バッチに3案を追加", () => {
     expect(linkRecordsFor("genshin", "ファルザン").map(({ record }) => record.added.length)).toEqual([2]);
     expect(linkRecordsFor("genshin", "ディオナ").map(({ record }) => record.added.length)).toEqual([1]);
-    expect(linkRecordsFor("hsr", "ホタル")).toEqual([]);
+    expect(linkRecordsFor("hsr", "ホタル").map(({ record }) => [record.batch, record.added.length, record.removed.length])).toEqual([[26, 3, 3]]);
   });
 
   it("参照を一部・全部差し替えても第23バッチのイベントは変わらず、第24バッチのイベントだけが増える", () => {

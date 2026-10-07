@@ -6,6 +6,14 @@ import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
  * PARTY_LINK_RECORDS は追記専用。過去の行を書き換えない・消さない。参照を入れ替えるときは新しいバッチの行を足す。
  */
 export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = {
+  26: {
+    batch: 26, date: "2026-10-07T21:45:00+09:00", updatedAt: "2026-10-07",
+    sourceNote: "ホタルの推奨PTのみ2026-10-07に再確認",
+    title: "ホタルの推奨PTを更新",
+    summary: (name, record) => name + "の推奨PTを耐久あり・耐久なし・代替支援の" + record.added.length + "案へ更新しました。",
+    changes: ["ダリア・帰忘の流離人を含む現行編成を登録", "耐久なし編成の使用条件を明記", "旧PT用の速度補正を新編成へ流用しない", "他キャラの表示PT・ビルド・装備・星魂・公開現在値は変更しない"],
+    rationale: "Phase 55の例外として、古いホタルの推奨PTだけを更新するため。",
+  },
   25: {
     batch:25, date:'2026-10-03T13:00:00+09:00', updatedAt:'2026-10-03',
     sourceNote:'推奨PTのみ個別ガイド本文を再確認し、出典ごとの構成差を区別して共有化',
@@ -56,6 +64,7 @@ export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   {"batch":24,"game":"hsr","owner":"千冶・刃","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-1"],"removed":["curated-hsr-千冶・刃-3"]},
   {"batch":24,"game":"hsr","owner":"ヒアンシー","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-1"],"removed":["curated-hsr-ヒアンシー-3"]},
   {"batch":24,"game":"hsr","owner":"ロビン・夏空の歌","added":["team-hsr-アベンチュリン・波と戯れる夏-b24-2"],"removed":["curated-hsr-ロビン・夏空の歌-3"]},
+  { batch: 26, game: "hsr", owner: "ホタル", added: ["team-hsr-ホタル-b26-1","team-hsr-ホタル-b26-2","team-hsr-ホタル-b26-3"], removed: ["firefly-superbreak", "firefly-fugue", "firefly-accessible"] },
   // 第25バッチ。過去の記録は追記専用として保持。
   {"batch":25,"game":"hsr","owner":"千冶・刃","added":["team-hsr-千冶・刃-b25-1","team-hsr-千冶・刃-b25-2"],"removed":["curated-hsr-千冶・刃-1","curated-hsr-千冶・刃-2"]},
   {"batch":25,"game":"hsr","owner":"姫子・旅立ち","added":["team-hsr-姫子・旅立ち-b25-1","team-hsr-姫子・旅立ち-b25-2","team-hsr-姫子・旅立ち-b25-3"],"removed":["curated-hsr-姫子・旅立ち-1","curated-hsr-姫子・旅立ち-2","curated-hsr-姫子・旅立ち-3"]},
