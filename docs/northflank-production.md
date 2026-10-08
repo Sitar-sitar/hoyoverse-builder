@@ -73,10 +73,14 @@ GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間�
 
 ## Phase 56 配備契約（2026-10-08）
 
-APP_REVISIONは固定値から動的NF_GIT_SHA参照へ変更した。runtime側に同キーの上書きはない。手動buildのimage内revisionとhealth・build commitの一致を確認する。APIのCI/CDはOFFを維持する。runtime NF_DEPLOYMENT_SHAの直接照合は未実施のため、自動配備ONの受入は未確定。
+APP_REVISIONは固定値から動的NF_GIT_SHA参照へ変更した。runtime側に同キーの上書きはない。手動buildのimage内revisionとhealth・build commitの一致を確認する。APIのCI/CDは2026-10-08にONへ変更。runtime NF_DEPLOYMENT_SHAとAPP_REVISION・公開a41823fの一致を対象2変数だけの判定で確認した。次の実アプリ更新による自動build→同SHA Pages公開は未検証。
 
 forward Pagesは生成前に同SHAのhealth/CORS/通常受付を最大10分待つ。各HTTPは最大5秒、再試行間隔10秒。既存pages.mjs --verifyを保持し、artifact公開直前は単発でSHAを再検査する。不一致・検査失敗なら旧Pagesを保持する。初回の小数timeout不具合はPR #113で整数化し、回帰を追加した。
 
 shared migration Jobは固定registry digest、manual、Run on image change=Never。Phase 56はDB変更がなくJobは実行しない。次にschema変更を行うときはAPIと同digestへ揃える専用の停止・backup・migration手順が必要。内部probesを継続し、停止済みのGitHub monitor/automationを再開しない。
 
 切戻しはAPI CI/CDを停止した状態で直前imageと対応Pagesを戻す、またはrevert PRを同SHAで再ビルド・配備する。Northflank DBを復元しない。旧Railway URLへの切替だけで復旧した扱いにしない。
+
+### 自動配備設定ON（2026-10-08）
+
+最新build loyal-cats-2016 / a41823fを確認後、CIとCDをONへ変更し再取得で両方1を確認。既存pod xgm5s / probes 2/2 / restart 0を維持。main追随、commit ignore flags有効、migration Job manual/Neverを保持する。ダミー更新は行わず、次の許可済みアプリ更新で自動配備全経路を受入する。設定ONと全経路受入済みを混同しない。
