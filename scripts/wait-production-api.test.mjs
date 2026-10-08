@@ -73,5 +73,13 @@ test("response after deadline cannot succeed", () =>
     }),
     /deadline/
   ));
+test("fractional monotonic clock still supplies an integer HTTP timeout", () => {
+  let time = 0;
+  return run([health()], {
+    checkOnce: true,
+    timeoutMs: 5000,
+    now: () => (time += 0.125),
+  });
+});
 test("validates expected SHA before requests", () =>
   assert.rejects(run([health()], { revision: "short" }), /full SHA/));
