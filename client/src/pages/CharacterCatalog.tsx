@@ -1,4 +1,5 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import PartyAppearances from "@/components/PartyAppearances";
 import SiteHeader from "@/components/SiteHeader";
 import CatalogShelf, { SHELF_SECTION_IDS, shelfBatchOptions, shelfEntries, type ShelfSort, type ShelfStatusFilter } from "@/components/variants/CatalogShelf";
 import PartyFormation, { type FormationOption } from "@/components/variants/PartyFormation";
@@ -378,6 +379,7 @@ export default function CharacterCatalog() {
           ))}
         </div>
         )}
+        <PartyAppearances appearances={reference.partyAppearances} language={language} />
       </section>
 
       <section id={SHELF_SECTION_IDS[3]} className="scroll-mt-20">

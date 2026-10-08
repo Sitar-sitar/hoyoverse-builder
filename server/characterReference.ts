@@ -5,6 +5,7 @@ import { catalogSourceIdFor, constellationProfileFor, constellationProfileForCat
 import { characterUpdateLedger, ledgerEntryFor } from "./characterUpdateLedger";
 import { genshinGuide, zzzGuide } from "./gameProviders";
 import { partyRecommendationsFor } from "./partyRecommendations";
+import { partyAppearancesFor } from "./parties/appearances";
 import { resolveCharacterIdentity } from "./characterIdentity";
 
 export type CharacterReferenceCatalogEntry = {
@@ -21,6 +22,7 @@ export type CharacterReference = {
   batch: number | null;
   guide: GuideDefinition;
   partyRecommendations: ReturnType<typeof partyRecommendationsFor>;
+  partyAppearances: ReturnType<typeof partyAppearancesFor>;
   constellations: ReturnType<typeof constellationProfileFor>;
 };
 
@@ -93,6 +95,7 @@ export function characterReferenceFor(game: CatalogGameId, name: string): Charac
     batch: ledgerEntry?.batch ?? null,
     guide,
     partyRecommendations,
+    partyAppearances: partyAppearancesFor(game, name),
     constellations,
   };
 }
