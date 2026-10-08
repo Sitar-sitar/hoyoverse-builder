@@ -32,6 +32,9 @@ jobs:
       - name: Test production monitor
         run: node --test scripts/monitor-production.test.mjs
 
+      - name: Test Pages release gates
+        run: node --test scripts/pages.test.mjs scripts/wait-production-api.test.mjs scripts/verify-party-appearances.test.mjs
+
       - name: Type check
         run: pnpm check
 
