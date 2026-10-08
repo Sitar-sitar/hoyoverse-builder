@@ -25,7 +25,7 @@ export async function waitProductionApi({
       response = await fetcher(url, {
         headers: { Origin: origin },
         signal: AbortSignal.timeout(
-          Math.min(5000, Math.max(1, timeoutMs - (now() - start)))
+          Math.min(5000, Math.max(1, Math.floor(timeoutMs - (now() - start))))
         ),
       });
     } catch {
