@@ -1,6 +1,6 @@
 # Northflank本番運用ガイド
 
-更新日: 2026-10-07。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
+更新日: 2026-10-08。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
 
 ## 現行構成
 
@@ -13,7 +13,7 @@
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
 | Migration | hoyoverse-db-migrate-shared、manual / CD OFF。現保存imageは旧P1版。次のmigration実行前にAPIと同manifestへ固定する |
-| 正式revision | c1ddc89e62c4222c451a1d01c27a176394db3be6（ホタルPT更新、2026-10-07確認、build near-system-8501） |
+| 正式revision | a41823fe7686fc8f395d71236b5aeaefedaf8fc2（Phase 56、2026-10-08確認、build loyal-cats-2016） |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin |
@@ -26,12 +26,12 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 ## 次のリリース
 
 1. PRでテスト・型検査・APIビルドを確認し、対象main SHAを確定する。
-2. Northflankで対象mainをビルドする。APP_REVISION build argumentをその40桁SHAへ揃え、成功したimageをAPIへ配備する。
+2. Northflankで対象mainをビルドする。APP_REVISION build argumentは動的参照 ${NF_GIT_SHA} を維持し、imageへ対象40桁SHAが取り込まれることを確認し、成功したimageをAPIへ配備する。
 3. migrationが必要なら事前backup・差分・停止範囲を確認する。shared JobをAPIと同じmanifest digestへ固定し、Run commandを個別指定する。現在の保存コマンドは準備確認用で、Run開始だけではmigrationにならない。既存migration適用コマンドは pnpm exec drizzle-kit migrate。本番Restoreを通常リリースへ混ぜない。
 4. healthのSHA、通常受付フラグ、DB/TLS、CORS、RPC、probesを確認する。
 5. Pages workflowを対象mainで実行し、forward生成・同SHAゲート・公開画面を確認する。API準備前にworkflowが失敗した場合は、API準備後に再実行する。
 
-文書だけのmain更新でもPagesのSHAゲートは変わる。公開後観察中の文書整理は移行ブランチで保存し、次のAPI/Pages同SHAリリースで反映する。
+文書だけの記録はPR CIを通し、mainのmerge commitに [skip ci] を付ける。Northflank側も同flagのignoreを有効化済み。アプリ更新とskip付き文書記録を同じpushに混ぜない。公開release SHAと文書記録SHAを分ける。
 
 ## 残っている受入作業
 
@@ -69,3 +69,14 @@ GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間�
 ## 2026-10-08 観測終了と移行完了
 
 利用者指定で既存観測により判定。[完了判定](移行完了判定_Northflank_2026-10-08.md)参照。24時間連続観察は未達・追加免除を保持し、Phase55は本番運用継続Goで完了。GitHub monitorはdisabled_manually、翌朝確認automationはPAUSED。追加観測は行わず内部probesを維持。旧Railway廃止は別途指示後。
+
+
+## Phase 56 配備契約（2026-10-08）
+
+APP_REVISIONは固定値から動的NF_GIT_SHA参照へ変更した。runtime側に同キーの上書きはない。手動buildのimage内revisionとhealth・build commitの一致を確認する。APIのCI/CDはOFFを維持する。runtime NF_DEPLOYMENT_SHAの直接照合は未実施のため、自動配備ONの受入は未確定。
+
+forward Pagesは生成前に同SHAのhealth/CORS/通常受付を最大10分待つ。各HTTPは最大5秒、再試行間隔10秒。既存pages.mjs --verifyを保持し、artifact公開直前は単発でSHAを再検査する。不一致・検査失敗なら旧Pagesを保持する。初回の小数timeout不具合はPR #113で整数化し、回帰を追加した。
+
+shared migration Jobは固定registry digest、manual、Run on image change=Never。Phase 56はDB変更がなくJobは実行しない。次にschema変更を行うときはAPIと同digestへ揃える専用の停止・backup・migration手順が必要。内部probesを継続し、停止済みのGitHub monitor/automationを再開しない。
+
+切戻しはAPI CI/CDを停止した状態で直前imageと対応Pagesを戻す、またはrevert PRを同SHAで再ビルド・配備する。Northflank DBを復元しない。旧Railway URLへの切替だけで復旧した扱いにしない。
