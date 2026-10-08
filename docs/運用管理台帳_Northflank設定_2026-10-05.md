@@ -433,3 +433,5 @@ Pages公開時に必要なActions変数:
 - migration Jobは固定image/manual/Run on image change Never。DB変更・Restore・Job実行・Railway撤去・監視再開はなし。Phase55の追加観測免除を保持。
 - 保護画面の広い状態取得で秘密値がツール出力へ表示された。値は文書・証拠JSON・Gitへ保存せず、以後は対象メタデータだけの取得へ限定した。
 - 正本・レビュー・索引・運用revisionを同期。文書だけの最終PRは通常CIを通し、merge subject [skip ci]で公開アプリSHAを保持する。
+
+- 自動配備追補: 対象runtime SHA一致を確認後、API CI/CDをONに変更し保存状態を再取得。最新build loyal-cats-2016 / a41823f、同pod xgm5s、2/2 probes、0 restartsを維持。次の実更新の自動配備全経路はNOT_TESTED。migration Job/DB/監視は変更なし。
