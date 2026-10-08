@@ -9,11 +9,11 @@
 | Pages | https://sitar-sitar.github.io/hoyoverse-builder/app/ |
 | 旧Pages入口 | 既知7ルートから対応appルートへ転送 |
 | API | https://http--hoyoverse-api--s48krvgv8tjs.code.run |
-| API service | hoyoverse-api、Dockerfile.northflank、main、CI/CD OFF、1 instance、Recreate |
+| API service | hoyoverse-api、Dockerfile.northflank、main、CI/CD ON、1 instance、Recreate |
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
 | Migration | hoyoverse-db-migrate-shared、manual / CD OFF。現保存imageは旧P1版。次のmigration実行前にAPIと同manifestへ固定する |
-| 正式revision | a41823fe7686fc8f395d71236b5aeaefedaf8fc2（Phase 56、2026-10-08確認、build loyal-cats-2016） |
+| 正式revision | 94a362710eb3de3e3e3966f65f0f7187d786f1e2（認証情報更新後、2026-10-08確認、build watery-fold-6164） |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin |
@@ -84,3 +84,7 @@ shared migration Jobは固定registry digest、manual、Run on image change=Neve
 ### 自動配備設定ON（2026-10-08）
 
 最新build loyal-cats-2016 / a41823fを確認後、CIとCDをONへ変更し再取得で両方1を確認。既存pod xgm5s / probes 2/2 / restart 0を維持。main追随、commit ignore flags有効、migration Job manual/Neverを保持する。ダミー更新は行わず、次の許可済みアプリ更新で自動配備全経路を受入する。設定ONと全経路受入済みを混同しない。
+
+### 認証情報更新後の現行状態（2026-10-08）
+
+GitHub App secret・管理session鍵・DB通常ユーザーpasswordを利用者が更新。新旧DB一時併用でAPI/shared Job/Workbenchを更新後、旧passwordを破棄し再接続・管理再ログイン確認完了。秘密値は記録しない。API/Pagesは94a3627で同期（Pages run37762389403）。Jobは実行せず接続設定更新のみ。詳細は管理台帳・実装ログの完了記録。

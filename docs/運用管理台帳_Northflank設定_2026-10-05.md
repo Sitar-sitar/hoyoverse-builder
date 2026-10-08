@@ -435,3 +435,13 @@ Pages公開時に必要なActions変数:
 - 正本・レビュー・索引・運用revisionを同期。文書だけの最終PRは通常CIを通し、merge subject [skip ci]で公開アプリSHAを保持する。
 
 - 自動配備追補: 対象runtime SHA一致を確認後、API CI/CDをONに変更し保存状態を再取得。最新build loyal-cats-2016 / a41823f、同pod xgm5s、2/2 probes、0 restartsを維持。次の実更新の自動配備全経路はNOT_TESTED。migration Job/DB/監視は変更なし。
+
+### 2026-10-08 認証情報更新 — 完了
+
+- GitHub App client secret: 利用者が新規発行・API保存・再ログイン・旧secret削除・削除後再ログインを確認。
+- ADMIN_SESSION_SECRET: 利用者が新規ランダム鍵へ更新。API正常復帰と再ログイン成功を確認。
+- DB通常ユーザー: 初回RETAIN CURRENT PASSWORDは1227で拒否され変更なし。管理者接続で対象ユーザーを明示し新旧一時併用へ変更。新パスワードでWorkbench再接続成功、migration shared Job/APIのDATABASE_URL更新を利用者が実施。管理ログイン成功後にDISCARD OLD PASSWORD成功。最終Workbench再接続SELECT 1と管理再ログインを利用者が確認した。DB名・ユーザー名・秘密値を文書へ記録しない。
+- API保存後503から復帰し、health/SHA/CORS/通常受付PASS。現行公開API/Pages SHAは94a362710eb3de3e3e3966f65f0f7187d786f1e2、build watery-fold-6164、Pages run37762389403成功。アプリコードはa41823fと同一（間の差分は文書のみ）。
+- 認証情報の更新は利用者操作、秘密値は受領/保存しない。Jobは固定image/manual/Neverを維持し実行していないため、更新後のJob実DB接続はNOT_TESTED。次回実行前の接続確認とAPI同digestへの固定は別ゲート。
+- API CI/CD ON。次の実アプリ更新で自動build→同SHA Pages公開全経路を検証する。今回の設定更新後Pagesは明示dispatchであり、自動配備全経路合格とは扱わない。
+- DB確認用loopback port-forwardは終了時に停止する。秘密値を含むSQLタブ/履歴の保存・clipboard・ローカル資格情報の残存は利用者側で整理する。旧パスワード拒否の直接テストは未実施だがDISCARD成功を確認済み。
