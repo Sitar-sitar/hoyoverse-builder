@@ -423,3 +423,13 @@ Pages公開時に必要なActions変数:
 ## 2026-10-08 最終判定
 
 [完了判定](移行完了判定_Northflank_2026-10-08.md)を採用。ローカル33回/GitHub7回成功、欠測とrelease変更を明記。現行c1ddc89/1 instance/2 probes/0 restarts、管理者再認証・既存表示7項目・feedback1件完了の保持を確認。観測workflow disabled_manually、翌朝automation PAUSED、ローカルプロセス不在。追加長期観測なし。旧環境は削除せず保持。
+
+## 2026-10-08 現行Phase 56配備（過去のsnapshotを更新する現行記録）
+
+- PR #112・#113をマージ。最終公開API/Pages SHA: a41823fe7686fc8f395d71236b5aeaefedaf8fc2。Northflank build loyal-cats-2016、Pages run 37728425150成功（生成前待機と公開直前単発検査ともPASS）。
+- 全580 Vitest・24 node:test・型検査・API/forward build・strict party-links PASS。公開256名を04:45:31 UTCに検証し、既存reference/constellations完全一致、9名11カード、未知名404、CORS正常。
+- Chromeで0/1/3件、自分起点、三言語、375pxでoverflowなし、出典のキーボード操作、console error 0、旧7入口転送を確認。全4variantは統合回帰、公開は既存catalog legacy / PT formationで検証。
+- 動的APP_REVISIONは4ce87aa→b8d062d→a41823fの手動buildで確認。runtime上書き無し、skip設定有効。CI/CDはOFFを保持。runtime NF_DEPLOYMENT_SHA直接照合は承認待ちで未実施、ON後の自動配備はNOT_TESTED。機能公開Goと自動化の未達を分離する。
+- migration Jobは固定image/manual/Run on image change Never。DB変更・Restore・Job実行・Railway撤去・監視再開はなし。Phase55の追加観測免除を保持。
+- 保護画面の広い状態取得で秘密値がツール出力へ表示された。値は文書・証拠JSON・Gitへ保存せず、以後は対象メタデータだけの取得へ限定した。
+- 正本・レビュー・索引・運用revisionを同期。文書だけの最終PRは通常CIを通し、merge subject [skip ci]で公開アプリSHAを保持する。
