@@ -1,6 +1,6 @@
 # Northflank本番運用ガイド
 
-更新日: 2026-10-08。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
+更新日: 2026-10-09。詳細・実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ Phase 55](実装ログ.md)、仕様は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)を参照する。
 
 ## 現行構成
 
@@ -13,7 +13,7 @@
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
 | Migration | hoyoverse-db-migrate-shared、manual / CD OFF。現保存imageは旧P1版。次のmigration実行前にAPIと同manifestへ固定する |
-| 正式revision | 94a362710eb3de3e3e3966f65f0f7187d786f1e2（認証情報更新後、2026-10-08確認、build watery-fold-6164） |
+| 正式revision | 機能受入: 597e13322bf34b76e9642ee61b6773665f09e2bf（Phase 57）。文書を含む後続リリースはAPI healthとGitHub Pages deploymentの同一main SHAを正とする |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin |
@@ -31,7 +31,7 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 4. healthのSHA、通常受付フラグ、DB/TLS、CORS、RPC、probesを確認する。
 5. Pages workflowを対象mainで実行し、forward生成・同SHAゲート・公開画面を確認する。API準備前にworkflowが失敗した場合は、API準備後に再実行する。
 
-文書だけの記録はPR CIを通し、mainのmerge commitに [skip ci] を付ける。Northflank側も同flagのignoreを有効化済み。アプリ更新とskip付き文書記録を同じpushに混ぜない。公開release SHAと文書記録SHAを分ける。
+文書だけの更新も通常PRのCIと同SHA自動配備ゲートを通す。2026-10-09開始時に、skip付き文書コミット413f96dがAPIへ配備されPagesは94a3627のままと実測した。ignore設定だけを根拠に再配備が起きないとは保証しない。最終main、API health、Pages deploymentを照合する。
 
 ## 残っている受入作業
 
@@ -62,7 +62,7 @@ GitHub Actions `Monitor Northflank production`（`.github/workflows/monitor-prod
 
 GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間隔を検証する。schedule設定/初回PASSだけでは24時間連続観察PASSとしない。PC停止中の欠測は健康判定と別に記録する。公開リポジトリの60日無活動でscheduleが無効になる制限もある。機械が停止してもNorthflankの内部probesは稼働するが、外部応答の連続証明を代替しない。
 
-監視と運用記録だけの公開ではAPI/Pagesを再配信しない（merge commitに `[skip ci]` を付け、pushによるPages配信をスキップする）。PRの通常検証は実施し、merge後に監視workflowを明示dispatchして動作確認する。アプリコード更新の公開時にはこのskipを使わず、通常の同SHA配信ゲートを通す。
+監視と運用記録の更新もAPI/Pagesのrevision差が生じないよう通常の同SHA配信ゲートを通す。PRの通常検証は実施し、merge後に監視workflowを明示dispatchして動作確認する。アプリコード更新の公開時にはこのskipを使わず、通常の同SHA配信ゲートを通す。
 
 仕様参考: [GitHub schedule制限](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。無料構成で追加Addonを作らない。
 
@@ -73,7 +73,7 @@ GitHub scheduleは開始遅延・欠測があり、実測時刻から監視間�
 
 ## Phase 56 配備契約（2026-10-08）
 
-APP_REVISIONは固定値から動的NF_GIT_SHA参照へ変更した。runtime側に同キーの上書きはない。手動buildのimage内revisionとhealth・build commitの一致を確認する。APIのCI/CDは2026-10-08にONへ変更。runtime NF_DEPLOYMENT_SHAとAPP_REVISION・公開a41823fの一致を対象2変数だけの判定で確認した。次の実アプリ更新による自動build→同SHA Pages公開は未検証。
+APP_REVISIONは固定値から動的NF_GIT_SHA参照へ変更した。runtime側に同キーの上書きはない。手動buildのimage内revisionとhealth・build commitの一致を確認する。APIのCI/CDは2026-10-08にONへ変更。runtime NF_DEPLOYMENT_SHAとAPP_REVISION・公開a41823fの一致を対象2変数だけの判定で確認した。Phase 57で通常main更新による自動build→同SHA Pages公開を受入済み。
 
 forward Pagesは生成前に同SHAのhealth/CORS/通常受付を最大10分待つ。各HTTPは最大5秒、再試行間隔10秒。既存pages.mjs --verifyを保持し、artifact公開直前は単発でSHAを再検査する。不一致・検査失敗なら旧Pagesを保持する。初回の小数timeout不具合はPR #113で整数化し、回帰を追加した。
 
@@ -88,3 +88,10 @@ shared migration Jobは固定registry digest、manual、Run on image change=Neve
 ### 認証情報更新後の現行状態（2026-10-08）
 
 GitHub App secret・管理session鍵・DB通常ユーザーpasswordを利用者が更新。新旧DB一時併用でAPI/shared Job/Workbenchを更新後、旧passwordを破棄し再接続・管理再ログイン確認完了。秘密値は記録しない。API/Pagesは94a3627で同期（Pages run37762389403）。Jobは実行せず接続設定更新のみ。詳細は管理台帳・実装ログの完了記録。
+
+
+## Phase 57自動配備の実測
+
+2026-10-09 Phase 57本番受入完了。PR #117をmain `597e13322bf34b76e9642ee61b6773665f09e2bf`へマージ。Northflank自動build `gusty-coat-8154`、pod `hoyoverse-api-c8d45ddcb-cx6wc` Running・probes 2/2・restarts 0。Pages push run `37933279077`／deployment `6961246301`成功、API/Pages同SHA。全256名の公開reference・履歴・カタログが検証済み実装と完全一致し、比較前後のhealthも同SHA。Chromeで対象2名の三言語・関連別欄・更新履歴を確認。
+
+手動build・deploy・Pages dispatchは不要だった。APIはRecreate中に一時503となり約3分以内に新SHAで正常化した。監視再開・24時間観察、Job実DB接続は本フェーズの完了条件に含めず、過去の監視revisionを現在の受入証拠として使わない。
