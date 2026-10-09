@@ -27,9 +27,9 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計696件（旧形式678・共有18）で、IDが重複しない", () => {
+  it("合計696件（旧形式672・共有24）で、IDが重複しない", () => {
     expect(TEAM_STORE.teams).toHaveLength(696);
-    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(678);
+    expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(672);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
     expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(696);
