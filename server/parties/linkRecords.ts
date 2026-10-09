@@ -6,6 +6,7 @@ import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
  * PARTY_LINK_RECORDS は追記専用。過去の行を書き換えない・消さない。参照を入れ替えるときは新しいバッチの行を足す。
  */
 export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = {
+  27: {batch:27,date:"2026-10-09T21:44:00+09:00",updatedAt:"2026-10-09",sourceNote:"推奨PTのみ現行の個別編成本文を照合",title:"第27バッチ：夏ロビン・クラレッタの編成を共有化",summary:(name,record)=>`${name}の共有PTを${record.added.length}案反映しました。`,changes:["残り2起点の旧6案を共有化", "本人ガイドに一致する関連キャラへ参照を追加", "出典の構成差とポテンシャル解放条件を明記", "ビルド・装備・凸・公開現在値は変更しない"],rationale:"旧PTバックログを解消し、関連キャラも同じ共有データを参照するため。"},
   26: {
     batch: 26, date: "2026-10-07T21:45:00+09:00", updatedAt: "2026-10-07",
     sourceNote: "ホタルの推奨PTのみ2026-10-07に再確認",
@@ -78,6 +79,13 @@ export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   {"batch":25,"game":"hsr","owner":"サンデー","added":["team-hsr-姫子・旅立ち-b25-2","team-hsr-不死途-b25-1"],"removed":["curated-hsr-サンデー-2","curated-hsr-サンデー-3"]},
   {"batch":25,"game":"hsr","owner":"丹恒・騰荒","added":["team-hsr-姫子・旅立ち-b25-2","team-hsr-不死途-b25-1"],"removed":["curated-hsr-丹恒・騰荒-2","curated-hsr-丹恒・騰荒-3"]},
   {"batch":25,"game":"hsr","owner":"ルアン・メェイ","added":["team-hsr-姫子・旅立ち-b25-3"],"removed":["curated-hsr-ルアン・メェイ-3"]},
+  // 第27バッチ。既存記録を保持して末尾へ追記。
+  {"batch":27,"game":"hsr","owner":"セイバー","added":["team-hsr-ロビン・夏空の歌-b27-2"],"removed":["curated-hsr-セイバー-3"]},
+  {"batch":27,"game":"hsr","owner":"ギルガメッシュ","added":["team-hsr-ロビン・夏空の歌-b27-2"],"removed":["curated-hsr-ギルガメッシュ-3"]},
+  {"batch":27,"game":"hsr","owner":"アグライア","added":["team-hsr-ロビン・夏空の歌-b27-3"],"removed":["curated-hsr-アグライア-3"]},
+  {"batch":27,"game":"zzz","owner":"クレタ","added":["team-zzz-クラレッタ-b27-2"],"removed":["curated-zzz-クレタ-3"]},
+  {"batch":27,"game":"hsr","owner":"ロビン・夏空の歌","added":["team-hsr-ロビン・夏空の歌-b27-1","team-hsr-ロビン・夏空の歌-b27-2","team-hsr-ロビン・夏空の歌-b27-3"],"removed":["curated-hsr-ロビン・夏空の歌-1","team-hsr-姫子・旅立ち-b25-1","team-hsr-アベンチュリン・波と戯れる夏-b24-2"]},
+  {"batch":27,"game":"zzz","owner":"クラレッタ","added":["team-zzz-クラレッタ-b27-1","team-zzz-クラレッタ-b27-2","team-zzz-クラレッタ-b27-3"],"removed":["curated-zzz-クラレッタ-1","curated-zzz-クラレッタ-2","curated-zzz-クラレッタ-3"]},
 ];
 
 export type LinkRecordEntry = { def: PartyLinkBatch; record: PartyLinkRecord };

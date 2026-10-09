@@ -113,11 +113,11 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
     expect(teamStoreIssues({ store: buildTeamStore([...base, { ...converted, batch: 16, sourceBatch: undefined }]), batches }).some((issue) => issue.startsWith("D10"))).toBe(true);
   });
 
-  it("共有化していない旧形式のバックログは報告だけ（13件）", () => {
+  it("共有化していない旧形式のバックログは報告だけ（第27バッチ後は0件）", () => {
     const backlog = backlogLinks();
-    expect(backlog).toHaveLength(13);
+    expect(backlog).toHaveLength(0);
     const byOrigin = Object.fromEntries([...new Set(backlog.map((entry) => entry.origin))].map((origin) => [origin, backlog.filter((entry) => entry.origin === origin).length]));
-    expect(byOrigin).toEqual({ ロビン・夏空の歌: 7, クラレッタ: 6 });
+    expect(byOrigin).toEqual({});
   });
 });
 

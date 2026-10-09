@@ -1,3 +1,4 @@
+import { BATCH27_TEAMS } from "./batch27Teams";
 import { t, member } from "./text";
 import { BATCH26_TEAMS } from "./batch26Teams";
 import { BATCH25_TEAMS } from "./batch25Teams";
@@ -26,6 +27,7 @@ const stellarSynergy = t("オデットの氷付着からヴェスナが星拡散
 
 /** 他キャラから参照できる編成の正本（D4）。第24バッチ以降の編成はすべてここへ書く。 */
 export const SHARED_TEAMS: Team[] = [
+  ...BATCH27_TEAMS,
   ...BATCH24_TEAMS,
   ...BATCH25_TEAMS,
   ...BATCH26_TEAMS,

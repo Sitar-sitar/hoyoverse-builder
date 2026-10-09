@@ -90,7 +90,7 @@ describe("第8バッチの凸と推奨PT", () => {
       expect(parties.options).toHaveLength(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe(displayName === "ヴェルト" ? "2026-10-03" : "2026-08-26");
+      expect(parties.updatedAt).toBe(["ギルガメッシュ"].includes(displayName) ? "2026-10-09" : displayName === "ヴェルト" ? "2026-10-03" : "2026-08-26");
       expect(guideMetadataFor(game, displayName).updatedAt).toBe("2026-08-26");
     });
     const history = guideUpdateHistory();

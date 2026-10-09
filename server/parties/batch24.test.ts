@@ -54,7 +54,7 @@ describe("第24バッチ共有化の最終API応答", () => {
     expect(character.partyRecommendations.options.every((option) => option.targetChanges.length === 0)).toBe(true);
     const history = await api.build.guideHistory();
     const entry = history.characters.find((item) => item.game === "hsr" && item.name === name)!;
-    expect(entry.updatedAt).toBe("2026-10-03");
+    expect(entry.updatedAt).toBe(name === "ロビン・夏空の歌" ? "2026-10-09" : "2026-10-03");
     expect(entry.events.some((event) => event.title.includes("第24バッチ"))).toBe(true);
     expect(entry.events[0]!.changes).toContain("ビルド・装備・凸・公開現在値は変更しない");
   });

@@ -426,13 +426,7 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["宵宮", "夜蘭", "雲菫", "鍾離"], "水付着・通常攻撃支援・護盾で単体主力の連射を保つ。", "Uses Hydro application, Normal Attack support, and a shield to preserve single-target attack strings.", "以挂水、普攻辅助与护盾维持单体主C连射。"),
     plan(["宵宮", "八重神子", "フィッシュル", "シュヴルーズ"], "炎・雷限定の過負荷で、遠距離通常攻撃と控え雷火力を組み合わせる。", "A Pyro-Electro-only Overload team combining ranged Normal Attacks with off-field Electro damage.", "火雷限定超载队，结合远程普攻与后台雷伤。"),
   ]),
-  // 第19バッチ（2026-09-13）: クラレッタ。Game8 の3案はいずれも実名で、案1・案2 は GameWith とも一致する。
-  // 役割ラベルは鋭御＝防御力参照の主力として mainDps を選ぶ。
-  "zzz:クラレッタ": batch19Options("zzz", "クラレッタ", "https://game8.jp/zenless/814551", mainDps, [
-    plan(["クラレッタ", "ノルムー", "リナ"], "攻撃力以外のバフを重ねられる理想編成。防御力参照のクラレッタと噛み合う。", "The ideal team stacking buffs other than ATK, which suits DEF-scaling Clarette.", "以攻击力以外的增益为主的理想队伍，契合依赖防御力的克拉蕾塔。"),
-    plan(["クラレッタ", "クレタ", "リナ"], "恒常S級だけで組む代替案。鋭御を支援できるクレタと貫通支援を合わせる。", "A standard-banner alternative pairing Caesar-style Armorer support with PEN assistance.", "仅用常驻S级角色的替代方案，将锐御辅助与穿透辅助结合。"),
-    plan(["クラレッタ", "アンビー", "ニコ"], "入手しやすいメンバーで組む初心者向けの電気案。", "A beginner-friendly Electric team built from easily obtained members.", "由易获取成员组成的新手向电气队。"),
-  ]),
+  // 第19バッチのクラレッタ3案は第27バッチの共有マスタへ移行。
   "zzz:シーザー": batch6Options("zzz", "シーザー", "https://game8.co/games/Zenless-Zone-Zero/archives/464303", t("防護", "Defense", "防护"), [
     plan(["シーザー", "エレン", "蒼角"], "防護支援でエレンの通常攻撃を守り、氷支援とブレイクで直撃火力を伸ばす。", "Defense support protects Ellen's attacks while Ice support and stun improve direct-damage windows.", "防护辅助保护艾莲的攻击，并以冰系辅助和失衡强化直伤窗口。"),
     plan(["シーザー", "ビビアン", "月城柳"], "防護で異常主力の行動を守り、エーテル・電気の混沌を継続する。", "Protects Anomaly rotations while sustaining Ether-Electric Disorder.", "以防护保障异常循环，并维持以太、电气紊乱。"),
@@ -609,13 +603,8 @@ const MANUALLY_CURATED_HIGH_USAGE_CATALOG: Record<string, PartyRecommendation[]>
     plan(["ジェパード", "黄泉", "椒丘", "ペラ"], "虚無2名のデバフで黄泉の必殺技回転を早め、全体バリアで耐久を確保する。", "Two Nihility debuffers speed up Acheron's Ultimate while team shields provide sustain.", "以两名虚无的减益加快黄泉终结技循环，并以全队护盾保证生存。"),
     plan(["ジェパード", "姫子・旅立ち", "トリビー", "ヴェルト"], "姫子・旅立ちの支援スキル連携をヴェルトとトリビーで回し、全体バリアで耐久を担う（Game8 の編成例）。", "Welt and Tribbie drive Himeko • Departure's assist-skill rotation while Gepard's team shields provide sustain (Game8 example).", "由瓦尔特与缇宝推动姬子·启程的支援技能循环，杰帕德以全队护盾承担生存（Game8 配队示例）。"),
   ]),
-  // 第18バッチの夏ロビン。案1はGame8、案2〜3はGameWith（docs/batch-18-research-notes.md 区分2）。
+  // 第18バッチの夏ロビンは第27バッチで現行ガイドに照合し共有化。
   // 千冶・刃と姫子・旅立ちの旧全案は第25バッチの共有マスタへ移行。
-  "hsr:ロビン・夏空の歌": batch18Options("hsr", "ロビン・夏空の歌", "https://gamewith.jp/houkaistarrail/article/show/565891", support, [
-    plan(["ロビン・夏空の歌", "長夜月", "キュレネ", "ヒアンシー"], "長夜月をハイパーキャリーに据える記憶編成。精霊スキルで味方のEPと行動順を支える。", "A Remembrance hypercarry team built around Evernight, supported by memosprite Energy and action advance.", "以长夜月为超载核心的记忆队，以忆灵技能支撑队友能量与行动提前。"),
-    plan(["ロビン・夏空の歌", "不死途", "千冶・刃", "ヒアンシー"], "単体の不死途と全体の千冶・刃を並べ、単体・複数の両方に対応する。", "Pairs single-target Ashveil with AoE Mortenax Blade to handle both single and multiple enemies.", "并列擅长单体的不死途与擅长群攻的千冶·刃，同时应对单体与多目标。"),
-    plan(["ロビン・夏空の歌", "セイバー", "ギルガメッシュ", "フォフォ"], "ギルガメッシュとセイバーを組み、セイバーの火力と必殺技の回転を大きく上げる。", "Combines Gilgamesh with Saber to greatly raise Saber's damage and Ultimate uptime.", "组合吉尔伽美什与Saber，大幅提升Saber的输出与终结技循环。"),
-  ]),
   "hsr:セイバー": batch10Options("hsr", "セイバー", "https://game8.jp/houkaistarrail/686759", mainDps, [
     plan(["セイバー", "サンデー", "トリビー", "丹恒・騰荒"], "行動順・必殺技回転・全体支援を重ね、必殺技主体の火力窓を作る。", "Stacks action advance, Ultimate rotation, and team support for Saber’s damage window.", "叠加拉条、终结技循环与全队辅助，创造以终结技为核心的输出窗口。"),
     plan(["ギルガメッシュ", "セイバー", "千冶・刃", "フォフォ"], "EP支援と耐久を組み、必殺技を連続して使う構成。", "Combines Energy support and sustain for repeated Ultimate use.", "结合能量辅助与生存，支持连续施放终结技。"),
