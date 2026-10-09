@@ -4,7 +4,7 @@
 
 集計の正本は [`server/characterUpdateLedger.ts`](../server/characterUpdateLedger.ts)。本ファイルはその要約であり、値が食い違う場合はコード側を正とする。
 
-2026-10-09: [第27バッチ](batch-27-research-notes.md)はPhase 57のPTのみ共有化。夏ロビン・クラレッタの6起点案を共有し、関連4名の本人ガイド一致案を採用。PTと履歴変更は計6名、共有未処理0、旧形式backlog0。個別精査元バッチ、reviewed/pending人数、全256名のビルド・装備・数値目標・凸は不変。次回採番28。実装・検証済み、公開受入前。
+2026-10-09: [第27バッチ](batch-27-research-notes.md)はPhase 57のPTのみ共有化。夏ロビン・クラレッタの6起点案を共有し、関連4名の本人ガイド一致案を採用。PTと履歴変更は計6名、共有未処理0、旧形式backlog0。個別精査元バッチ、reviewed/pending人数、全256名のビルド・装備・数値目標・凸は不変。次回採番28。実装・本番受入完了（PR #117、API/Pages 597e133）。
 
 2026-10-07: [第26バッチ](batch-26-research-notes.md)はPhase 55の例外としてホタルの推奨PTだけを更新。全256名のreviewed/pending人数は不変。PT変更記録の採番により次回バッチは27。公開・検証証跡は実装ログへ記録する。
 
