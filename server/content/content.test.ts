@@ -4,7 +4,7 @@ import { indexCatalog, japaneseText, textRef } from "./catalog";
 import { exportCandidates, readiness, reportCoverage, sourceIssues, translationState } from "./coverage";
 import { sourceHash } from "./hash";
 import { parseCatalog } from "./schema";
-import { baselineDigests, collectBaseline } from "../../scripts/content/baseline";
+import { baselineDigests, baselineMatches, collectBaseline } from "../../scripts/content/baseline";
 import { readFileSync } from "node:fs";
 
 const source = (overrides: Partial<SourceText> = {}): SourceText => ({
@@ -132,6 +132,10 @@ describe("strict structure and coverage", () => {
 });
 
 describe("Japanese API baseline", () => {
+  it("accepts Git CRLF conversion but not a changed digest", () => {
+    expect(baselineMatches('{"digest":"a"}\r\n', '{"digest":"a"}\n')).toBe(true);
+    expect(baselineMatches('{"digest":"b"}\r\n', '{"digest":"a"}\n')).toBe(false);
+  });
   it("matches every catalog/reference/UID guide/constellation/team appearance and history digest", () => {
     const baseline = JSON.parse(readFileSync("content/coverage/baseline.v1.json", "utf8"));
     expect(baselineDigests()).toEqual(baseline);

@@ -58,18 +58,23 @@ export function baselineDigests(data = collectBaseline()) {
   };
 }
 
+/** Git's Windows CRLF conversion must not invalidate the data digests. */
+export function baselineMatches(saved: string, current: string) {
+  return saved.replace(/\r\n?/g, "\n") === current.replace(/\r\n?/g, "\n");
+}
+
 export function baselineMain(args: string[]) {
   if (args.length !== 1 || !["snapshot", "compare"].includes(args[0]!)) throw new Error("Usage: content:baseline snapshot|compare");
   const target = resolve("content/coverage/baseline.v1.json");
   const current = JSON.stringify(baselineDigests(), null, 2) + "\n";
   if (args[0] === "snapshot") {
     if (existsSync(target)) {
-      if (readFileSync(target, "utf8") !== current) throw new Error("Baseline exists and differs; never overwrite it automatically");
+      if (!baselineMatches(readFileSync(target, "utf8"), current)) throw new Error("Baseline exists and differs; never overwrite it automatically");
     } else {
       mkdirSync(dirname(target), { recursive: true });
       writeFileSync(target, current, "utf8");
     }
-  } else if (!existsSync(target) || readFileSync(target, "utf8") !== current) {
+  } else if (!existsSync(target) || !baselineMatches(readFileSync(target, "utf8"), current)) {
     throw new Error("Japanese API baseline differs or is missing");
   }
   console.log(`content baseline: ${args[0]} passed; ${collectBaseline().characters.length} characters`);
