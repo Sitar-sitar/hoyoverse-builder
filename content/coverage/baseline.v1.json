@@ -1,0 +1,1293 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "dbd66e80141d4c4922bf95eaa413420ae692d679",
+  "characterCount": 256,
+  "unresolved": [],
+  "sections": {
+    "catalog": "5c2821927eefcd52ffe52aea4af370c5a12e52e3b0ef60242805cb5564307523",
+    "ledger": "b1f171ddb21ec5f0a95162bd99dccbdc96ec4696e7eb00e0d2755ce55d05ab1e",
+    "history": "003a54280aa5f1c5b114036737e26ad57b439a4195885c41cfbd89c9bd06b9eb"
+  },
+  "characters": {
+    "hsr:1305": {
+      "reference": "6f288acac28e4ba84907fac31013ea01ff20519af414a2592f39123560b7ac63",
+      "guide": "de17741258637cf33a404c9cdf06bc6d22faa9add13dd16fe55204351a11c838",
+      "constellations": "f4993ead07663393ef24dea1ed2bf12836933477c8b87ac6b2ed85392b54741c"
+    },
+    "hsr:1015": {
+      "reference": "9508e7c67c574a1de8af066f43cb483005c5dfca7c999aac96a8a190b6716b77",
+      "guide": "b8e18f2839d9da345de8557078ac91fe60141821b28a8ff8389a563a8b5784e8",
+      "constellations": "39af832bae2111579bdfcaf6649e0a04f311f3060960a7f0a83f4e0c4a6c56f5"
+    },
+    "hsr:1008": {
+      "reference": "fdb43e274eeca9ef3a11784a31a1050345cbb71edeb3d5657d1ffaf3740146c4",
+      "guide": "dd352539f723ad7f0527c8eebb0e1f9006c06e58ffd6c8c27f0c54344ea8811a",
+      "constellations": "473b3248ec2c18a277cf7a7184b36daa941bcb57178c39c618001170e0ccd000"
+    },
+    "hsr:1402": {
+      "reference": "d71aa4deb8fc3c081414f4eb0a7ef90005bd1ea87f5d6a6709ba8fcd472c91a7",
+      "guide": "d85a9cf18fae7e4fff92e0e7ea8a2ac04fe6772748fb22ca63c23ea8adb723a5",
+      "constellations": "2e540200f3da638ae1bcafa3cc4b92c814f0302cd12715943b9e648be94f0885"
+    },
+    "hsr:1009": {
+      "reference": "67ffca31d291ba3aba950a361235d5844b821cd265014ec15ab548368c594def",
+      "guide": "7c6e45b94a7693009d817a69d47a8b0881af4c0a808f65eba583b7e5a6ecf0c1",
+      "constellations": "820f4fe54f05244cb8c46dfebffa9e559287b90dd442ba89ed7628e1fdcc9219"
+    },
+    "hsr:1405": {
+      "reference": "03cf1fded6c9ca9e6ef19bba9f9f0b402346763b64ae09c822364b342b25cb50",
+      "guide": "00204475e399e82c17c069701d563fbd21c00dede127d7e2277c7ba725c1de78",
+      "constellations": "b691357b4cefb651bb40ce1abe48a414071fdf0affa46462d64cf8176523cf2a"
+    },
+    "hsr:1304": {
+      "reference": "43587bfb1991174416bdf1373c8befcf45ccf01977cdf2c94d5cddc4d1eb2a95",
+      "guide": "b59398d654306c3677814e32a409f0647d74628855f2c0021d4cf9b707ff7e12",
+      "constellations": "d273da036362d89e71e5613aa8b16c0c997a9b29151f7d7d129ad594e6568170"
+    },
+    "hsr:1513": {
+      "reference": "34cf39219e90f85b5c23345901f10541c53edfa66c4c54bf18ff8e6192a1c3ef",
+      "guide": "1f0ac10213f8c415785640faea8ee28a81becc7e2d0e3f577d2c5fe50552c9be",
+      "constellations": "1bd208e838a65edd7dd9cf9845ad2ef792878f221a0bb6fa663f75e9a56336cc"
+    },
+    "hsr:1302": {
+      "reference": "00b3bd62157859ed67930754ad9c7146ea7004728620c5b9773365a448ee212c",
+      "guide": "3f44ea52cde37708b6a838f51726cfb92a0bfa5f50b9807432398650b4ad682a",
+      "constellations": "e1520ff1557fea3227f358ef3641fd4bee2109579fbd24e50717d28598d1fc50"
+    },
+    "hsr:1004": {
+      "reference": "70b951f778c5e6b9f0f34d2c072a24ca10ef9a4710175f7399a8004ec4575b2a",
+      "guide": "193f3a5c9f1fc1d0311e3f023a7ac310705d9c68d5e28a6b800787f845122343",
+      "constellations": "10f35e3e1ee432863804296137d914bd90baebcd1b5010e18dbcf7faee9d4aa8"
+    },
+    "hsr:1005": {
+      "reference": "61dea0e701b8c320b3543200e159aab9c72e1b5641d739422209ff4f9361c6d5",
+      "guide": "6b0f46e8005b1b7f62643c67789c952e6dc261e6102be9db74730898f37adddc",
+      "constellations": "e2e8c30d26f0252a343db8c1f06ec3defcda31cfd20c59293cc8b94de7331699"
+    },
+    "hsr:1407": {
+      "reference": "90f5f0e008a2bc5424ebd37086fbadf08d3e9f8c5ea1d122747ffb96dc5743c1",
+      "guide": "6f2b48b3177e1c05f262918bcb3487fe16828700dda2180fc5bc154d698ceb06",
+      "constellations": "dfc7a460253cce3d75ab3c2668cee6f58e8d68be0d8b09357af131a395720012"
+    },
+    "hsr:1301": {
+      "reference": "08a2a69eaadb03e369a89f08a9e96f2451d1871f036c0ec0c5ea13813da3004c",
+      "guide": "f91b28126c07233440eef787ccd322d7d4036db73eec387f23f08fc018bf3ac0",
+      "constellations": "85102cb83dc91fa4f3317412d04261481d44f10a0b94e9bfdf62f9235a89fc98"
+    },
+    "hsr:1415": {
+      "reference": "71b11c250f9758c29794e0a44a0193b9fe6cf4ffb3a1b539fd0f750850210dcd",
+      "guide": "33ee9ef5a41658316a6f498447d888d716d665b06bd12912366ffa719f890d8e",
+      "constellations": "e4400a78966f87b86ba28875319dab4540e4d630b8b65522ea991d7903b96ae2"
+    },
+    "hsr:1509": {
+      "reference": "ea8494de2a3c116bddfd4211f2977be2ee62a658db4d7eb8b3d324571a86531b",
+      "guide": "383b9d37d1f8a4e639e3fc7794486a2549e1555e79dba63918c6936f28dceb16",
+      "constellations": "5a6ddc63edd5a69405fb9a5971a6efa63cc7da168c666932e3f1350768b50a56"
+    },
+    "hsr:1107": {
+      "reference": "d9e3b595526b88218b2e0b456d92b8571154500fcae733978648dd8d98726cac",
+      "guide": "05847aece83f265310a1e2ad1262c8891d9b8a60b8ad7d0c7de5a7199aefce29",
+      "constellations": "4dc6d925b1fa1f3619d9261d840ef739970a8d6267d3eaab6209ade68c7ad9bd"
+    },
+    "hsr:1412": {
+      "reference": "0edd2308ea853ca3805149343b4f608c55a154f225c2800de907c4b313d6c3f1",
+      "guide": "c6012a9d133f3bda909c92f9b3380a0d80c7da81c61a9a31e8b11ea48f45406a",
+      "constellations": "dd784b6f8e5ab064b7b5c1b9541b8069e304d88c3198610e686d7d181ee880ed"
+    },
+    "hsr:1406": {
+      "reference": "d0e694ffa71814ed103d2e6e83fe8550a9fa89859a1e77c6a3c55aced5ceafcc",
+      "guide": "608cff146a44ccc9ff0b4465c3c7921fc024efffd231f3ea0816d9c36354da05",
+      "constellations": "d5edaef98b090a366041faa8db05d01bf91ce184441496db71b9c179386c2d4a"
+    },
+    "hsr:1313": {
+      "reference": "2fd7c23ed3be263f77a81e2196def23e5a3996c5f43a544a74c49d1c14ef27af",
+      "guide": "a735311f50d4592d43b89c6459cfeeea2fae63a7f255b0cdf11d0a74e53dac9f",
+      "constellations": "92592e84ed470312b0ff4065453195e1d6890ea5c37e4a3ce55bdc705780dbd7"
+    },
+    "hsr:1108": {
+      "reference": "f7ed31424387474b888b09bc370c8ba721eefa99c01a7e6aa002d5f8a5bceb4f",
+      "guide": "1320c1204f859e99f1c9177f74060fef3cf6952f3286b3c151a9aef9b05af2d2",
+      "constellations": "22050b7a34bce3e922be97c4032e6a74ad23251e1f6236a01b0d9d2c91ceca94"
+    },
+    "hsr:1314": {
+      "reference": "53c83af2560d45a93cfb15e7f8faa0560acf8c54bada34fcd10fde7bf9f1a878",
+      "guide": "3099ecc9acf5d88e515d64e5f163fe1d5dba246d9234420add8874c48c44ca04",
+      "constellations": "8a34ae619848003a2e6291988f6ce17dc91b11f3297919287da8d6e55c2bc3ff"
+    },
+    "hsr:1104": {
+      "reference": "3bb9c12cf98aeda4255fec5074236b95ccd6825bd9410922ca64846f65e7c360",
+      "guide": "73ec4532438162ff8c2112f7f4b77fcae3efe4a69475cf5c5fb3f30f3a564192",
+      "constellations": "c9a8562bae642c152bfef9d001bf9962b4000af5c116e48f5fe80a73d0ea1174"
+    },
+    "hsr:1014": {
+      "reference": "88dfd3065c6aa77a33698512bbcf389693e62d03f3c4f7cec61d97913a382527",
+      "guide": "7070156b5e69d3fd8585073ef0c601d474193dc9f87808e11c9ea0ca35ca1ae6",
+      "constellations": "db407fe881ef610f8ea11186c3695162b98adfcaf76564585b04e6e031e9648c"
+    },
+    "hsr:1410": {
+      "reference": "51476c1e694074466a3b25181e9b0ae7668da528b1c584a40a4730872675068d",
+      "guide": "37fe0660cf0caa80ffca65237a363cb3879368d9c0f85311bfe99cf407b4c4c9",
+      "constellations": "ce9c17a57bd597c83f20faeeeab106d95e5c183cdfa201a2d27d01ce48a16024"
+    },
+    "hsr:1103": {
+      "reference": "c72a5aa33a93c8a566983f60994a331f3c5d3c48fae4be9da8fc03884f1c438e",
+      "guide": "fd3c3ed204be3558d7297f2fcd2af060caf96ae34c4cfbe17e212b2a3264a7f9",
+      "constellations": "2969ed310ff31eafa4744784597f40ff28d45ea62351244e852d2d60c9f0b290"
+    },
+    "hsr:1102": {
+      "reference": "9cb793ee074856604318d8880a9bfc4664bb185dbd5d80ff1b30149336d9cfcd",
+      "guide": "36dc2acb72dccd5ae2e6b681f4ddc73f3c882ac68a31d8e69733def12cf49cfe",
+      "constellations": "368055dbfd3c01f87ffa6f18657423fbc25eae0adc35955cb6f9165a313093f3"
+    },
+    "hsr:1321": {
+      "reference": "392aad80b49f0a9775a864186b8244241b82f2c5592c0af9389845e2e3fbf842",
+      "guide": "7d09fa852526e343b2d8ed887287f03147168e3ee3ce7e9f126979e59a53a47d",
+      "constellations": "522730aa9085993429918a3a53079f127079af0e1792f5d9b2f667ac1cf65d82"
+    },
+    "hsr:1112": {
+      "reference": "a9e8cf729675c4d34d0000e202ad50508c2fb83758ae185aa5512d02dfc350d9",
+      "guide": "7b9fbb601b5414c5cf073682e9bf6a55e8474ac81f2fed89f2cca2d094994e44",
+      "constellations": "d5be5a4e2597d18fc88404eca825b74b5cff5edfb72f1d57a7856e9814ebe15d"
+    },
+    "hsr:1403": {
+      "reference": "cb4d49c6155f9bf9f8801a031d6f2b3c29476c103c111959c3f2a558c3bb410a",
+      "guide": "5b8b6429d198a709ac162d7a50ec07c223693053c5b7ef818934f3128a6e01c6",
+      "constellations": "24e37e328a94c879d817fb9b0a2f1a6d8d009770e6252b1d7a36c7922a821577"
+    },
+    "hsr:1105": {
+      "reference": "61e19aeceb3584d1b86f2549047f27c47147703cd7c3d23e2fa2683952068fe5",
+      "guide": "776f72a84c633b3cbf04403ef78bbfbedde59dd33ccb2b1cb6f8a08b6a5dcc39",
+      "constellations": "4b42684033c82a442df9e77159909f9d61b708e99ede42eb3e5df2e9b7ffbf41"
+    },
+    "hsr:1503": {
+      "reference": "8e1d3ce3aff0d2f1874fcbf2071c8b689385f0c7ba7fc4726d5ca2396d47967f",
+      "guide": "b91a4897899ea5508b572823780e22ff41e9046c34ae7f0473ddbe27b0ef2d86",
+      "constellations": "174dc3ad01af9ee8af8ebdeed9d56d50a38b0dcd60860137da8f4bcf30748500"
+    },
+    "hsr:1409": {
+      "reference": "d14f10f82085ef54e9de6da4996a1eafc1bf4258b7046175139557a0d3edb5f1",
+      "guide": "edff747b56b980563e7ef5777d38de0e492147d2db259560135e92f4a7b9d1e6",
+      "constellations": "562c44011c14700e51999c359ef37709a863ff3c2394aa9fabd213afa0276fad"
+    },
+    "hsr:1408": {
+      "reference": "025611fd2db4aa64bc29d89c1a5c5d172b9a49ccad131fffb3ea9602cebcc60c",
+      "guide": "3b442e5dfa560c3f96c7f45352c1e762856304ba04c1a01bddca05866ea4fb99",
+      "constellations": "7ddcdebd1c952588a31b0e89b27c557a627af84db885a6d552d01a10f3336f64"
+    },
+    "hsr:1315": {
+      "reference": "0744b0767f4071fe5dbd22faf888913a0a340acc5457996197790fb93f69844f",
+      "guide": "a968e5ba3980c2d0b8eded869849ac30c1db22e19d458e512b2092302744700f",
+      "constellations": "386adf7cb6585d3537b03d73c322c36b7832dd0e66ad5a6e4bb8a4bb4db2f8c3"
+    },
+    "hsr:1217": {
+      "reference": "4459c8260c6beb91e277ca98bc02da8a32b9387657c3770b843a18c2af97b66e",
+      "guide": "7a729a305f51cec33983a786c934286ec8173dc66217d64ca83aae2e4d430a69",
+      "constellations": "b73dcefd4d0c4b32546d30621c4aaaeb9def558c5e084ee0edb848d7ec3de942"
+    },
+    "hsr:1109": {
+      "reference": "66940e557c331a68b9cc0689b1b79d95eb941b6ef24548913414fdf7b6faab32",
+      "guide": "4e51676f829e0d86d59c558cbc26942d7869ca01bd3bb14432e6e29aea51fab7",
+      "constellations": "f2a4293e9393ded7805d66ee8fd627bcb924857d7b137a168995d394992c7206"
+    },
+    "hsr:1307": {
+      "reference": "13c0ddd0a9671bd375dec0a0160e990c5d917791780e94228684d08f7211518d",
+      "guide": "3f2eda8f12decb99138299e47cbb62a95d8b4bc3d393c01f269791f50e8153c4",
+      "constellations": "940a6a88bf3eddc278a655aafb73a7fde9a473a1aaa2f3c055f64b5fd1c1917e"
+    },
+    "hsr:1101": {
+      "reference": "3f21dc062fbdfb510f0ac68f0cd94d297de8aaeef146266a1bd33a064db91d47",
+      "guide": "04066671571bf9ddbbd7e8630b2ce2ddabd6dcd0102b313e8bcf20c35fc6a8b4",
+      "constellations": "319e5a14b4458e931ea871652e839bf837e9e1e69311f160c50fdc6305607ccc"
+    },
+    "hsr:1106": {
+      "reference": "a841897e54beb948bf6cf24c3e63a6cafd5d3cc22fd449933f6a2f8322c1c088",
+      "guide": "4400b8e190c386af4393e4472c915c05a685d0bc537b3a05468de3510e44c70b",
+      "constellations": "bd6a609cfedae57abaf9c1b2540608ec875375347e844ccb77a861ab560c5e27"
+    },
+    "hsr:1013": {
+      "reference": "6ab208f18d59a5f294e7f6ea38421911aa1126f7dff3adce3bd613fcaddea7b6",
+      "guide": "163340c567988c56d686d104a3312defe513bd0f86d5a8ec418a11f91b58424d",
+      "constellations": "91f5ebb46394d72d61d8255c201fb2a0ad2707eacf5d74c4f21867488cff8bab"
+    },
+    "hsr:1310": {
+      "reference": "20357519ff1c41af2eeff5bbd371c5068932161ccf211d747188e5dba16835c6",
+      "guide": "f423e536f47ae3dcd73134d46b1ddf067fd62cf233aef2660d402dd196f3dd74",
+      "constellations": "842b4db3f7f7e969a120e2845f9380546a55e1e6418b003e0dbfd942841912cc"
+    },
+    "hsr:1401": {
+      "reference": "5cf7df37257c303dd92d4af745a3797ca5fdc02eeea9c98c5c4c046da6f66dee",
+      "guide": "0822c3728d9087d72110d813374ab729425bd3980ced4f96d215ede2ab12757c",
+      "constellations": "b186103aa84300fd0a9a30529a682707333352003a8e3f68022120cac4ebf3e6"
+    },
+    "hsr:1312": {
+      "reference": "001346fcb50427801c6c79fa5d0a22d7a0d009806fe9281c23aa0315607abced",
+      "guide": "1ba2f7203fb6366f4a3de4a02eadaf4f9ca1b01e96340ccd4b9454b5c5f11593",
+      "constellations": "2328ff5016884bef4555b7d2d7e574189374c0f34745d0d1fdcae2ca3b880da4"
+    },
+    "hsr:1404": {
+      "reference": "a6c60e471d111b03eef5433d8dc75367e7aa5f232241933721b77431869a1aeb",
+      "guide": "8f972f3894e6b47fb8e4918551878713992edc19d3ad0703145e2cf7e888d481",
+      "constellations": "d6272b892989767eb776b9b8121abd2d311a4b8cd2d2afc4768bebeed276ed4c"
+    },
+    "hsr:1223": {
+      "reference": "9ef7ddf0f2faed261c7bb0677e9a8c8b70ad3d9c805a197f7a549e295f2227fb",
+      "guide": "d7eb8127c1d5e57556fb581b7d9d908aa91621d84bf9826e4bc0686004308813",
+      "constellations": "6dcde3b4a12921395547348ce0e5eac77eedbd0c7392b68f067fc2e05cf8ac8f"
+    },
+    "hsr:1110": {
+      "reference": "781dae223a768161e60ccb6fb36bf161ba1ce4ec204c64477df15595a023be7d",
+      "guide": "b2fdbb5629b4a686963800b57fb3c54dd16dc53e63cae7354405ba022d9f3ac9",
+      "constellations": "439334d0b90e4be856ac67566b7c74a8a3736cb92845e558a8ab24d0c2603344"
+    },
+    "hsr:1303": {
+      "reference": "b95781e7f499c39d54d188840025ed4791322c77c19644efec507a42fa2e8a18",
+      "guide": "0347a725688420bbd03c73c1258b899b4ceb6949740d0542f2d13ded056e11e3",
+      "constellations": "0cbd041d05453d29bbfd57c7f68577444d93ea7ed67a06b4c6c27d12f2325be5"
+    },
+    "hsr:1111": {
+      "reference": "53759b84ba564ff7dcf3297fbe2ab3f558ceed4acc6c56e6ecf3bc079a091c0d",
+      "guide": "e844b9410205e04f81b61a22bec476c4a4d731726a785a80a7168f070c2ac336",
+      "constellations": "9c115880d421ef1598433c013dbdd9e215b3ef9c04de3e5deadc5a3fa289abe0"
+    },
+    "hsr:1309": {
+      "reference": "21ea0d48b7efcd6548946dd654d7bf759ec30f9af89e34db835774459240e8e7",
+      "guide": "b73ad5ede6268c3bb4ab471d1ba0cf35f3bd3cb25756c5ae07e97525e79d0bcb",
+      "constellations": "adc074eea1e63015f0cd5fc56804858c33d6efc74da12ddd3eba0a69e5a92c9d"
+    },
+    "hsr:1512": {
+      "reference": "9f737d3b76f6ea09ba81bb92958018b60874ca33557561f0d0aea001426ff272",
+      "guide": "8465b2c6908789375eebdfc2f4603909bcdb2a4289b14cf0576e8f0877617982",
+      "constellations": "d717ac17b8e11fc1f2854c36bdb2a69a7449879260decfc1d26a62197e565622"
+    },
+    "hsr:1221": {
+      "reference": "93579fa4a178f490a3efd66ed10df0afadbeee03d6c8b5d1032dfc9eb113d2f4",
+      "guide": "f91ac85a8d8d76e241e4b721a379ceab9a39370c55444d05af9bedd609d13ef9",
+      "constellations": "9ee15eb68dc529a1212f43bf26cf3b00977f40e57f9da80281387bf9ca2bc619"
+    },
+    "hsr:1508": {
+      "reference": "4f71b7f449deedf33ba638bfb0e7d461937d34698e9832d5fbcda1ae6384984e",
+      "guide": "29c6660b9047a0291163997ad8321834c317bb6231472ebc6a7cc9bf6fa7cd3f",
+      "constellations": "68d122ab1426bd7b3fa2d909c0fb403469a94385dd35d37495be8159332265b1"
+    },
+    "hsr:1308": {
+      "reference": "eb038a00bfb436223e086a2d0d4a041c7f6005e4eeda1291e47b9a03b3c10661",
+      "guide": "6dcbad1dfccca0e048f69da15aba282dd21a21098c17f0af8b2daee84590ee14",
+      "constellations": "8d574b4cfa7a12533332e528bb35713e10f1c40465258a75f9f05e499cb8eb27"
+    },
+    "hsr:1501": {
+      "reference": "34fee59cb219e8799bec0e98ed2313f400c8e58713ccab2d4bbcdc84ea7e6a63",
+      "guide": "545ab4480e37aaa14626bd693690ac0c771f5866784828eb7231bf2e03456548",
+      "constellations": "44f57fab05c1f349dba5bf0f5025325d12ad3b3613ca9c3db1ad06eb4e391b07"
+    },
+    "hsr:1306": {
+      "reference": "c5545087a292f965ceaa0158959aeed9fd8bd4ad1e2690a471021bb9ccbe6ffd",
+      "guide": "899c5b8a36c737941c23889c5beb97ed427d92449e7708c351c8815d63f54a7e",
+      "constellations": "cbc1e700127a25896b744cb494835afd5041680fc846a81649e90be47682e87a"
+    },
+    "hsr:1215": {
+      "reference": "4f7a346412ba51b12e2239b82a8577979971ae0cc72dcdd55c362bbb90672127",
+      "guide": "8cd6921cfa7be21dbf4670a5f23aba6e7a594a1f8e85b8b916ad03187dd985ec",
+      "constellations": "925f2375241dd4b50f462c995bda2a980fe5924c715f204381e584777f5464db"
+    },
+    "hsr:1225": {
+      "reference": "d260799e4ea104a0042a9c0d98580116600edd0b437a66e42ec111b843ef80e6",
+      "guide": "0439c55f3eabfc937d1ff192cfffed4da93e19efefa272c5e6a11d5482238dac",
+      "constellations": "ae644d054456fbd43ec30eae07c35801c595f12c5110b94945ace43ea23db3b8"
+    },
+    "hsr:1212": {
+      "reference": "5322b0a61238e0354f288d773c73703d757622fee0e4b0b496fafab5610775aa",
+      "guide": "e5a21a9b40a8d63fe213be2afc79d83eabe043ce9d58605bb2f0586beb8b5407",
+      "constellations": "2e050d7b50387d4220683e58ebe4d8486326bd14ecc54692d9e97bac1114cb25"
+    },
+    "hsr:1006": {
+      "reference": "b82cba4b8949859cd2b4416bdb198380e52f4347e8b6f5bb99e1faf36675daaf",
+      "guide": "2e8c1670f93dee523f5803554cffb2c0abf8684388dae3ce389e2a3f718a73a4",
+      "constellations": "35444c0547e1ababddd52ee99adfafb9fb8915cee3d17d13d8006dda8fc45231"
+    },
+    "hsr:1204": {
+      "reference": "7f724bfe5d0bccdc326f7c9ea554cb984ed7e87065d59062c57a280e10780162",
+      "guide": "283af978649d06dc77d787b4adcf81e11700f9894387b1cf4f086596ad3b7489",
+      "constellations": "5072afd859078bd2f8972ef7d4208837e48bcbf876c1aace02e8f3f3968d58aa"
+    },
+    "hsr:1210": {
+      "reference": "6fbc8746e53dc445171fcecafe3afa68d67b22790276db1ebaa217c96dcfa49c",
+      "guide": "c8837dd011b4ad42e283b4060acf7db411e944942a2cdb1ec19dd38636deeac4",
+      "constellations": "45195badf2449c76ec6a7342ac8a282f90a5cc18e43ad358d9bbef383ff91aef"
+    },
+    "hsr:1207": {
+      "reference": "e484f0c41eaa862cb1e34d0eafc3eeb83c47b27855eb4923d7cbc17fb08c389e",
+      "guide": "23baefafdc63b47c97b7732a17c232556a61f78d672e857593e5bae47026683e",
+      "constellations": "72a3b05ca67bf91281852b8ad16495634e5d5621dff5fc5d38f7c738eec486d8"
+    },
+    "hsr:1001": {
+      "reference": "74278fe715eeca88a087bcb34ae8a79443a0cc83c315fff3af3317326d78ab72",
+      "guide": "7cef566286b6d0fed523b67e1a8d704858b0c7b8e61c42bcca45c0bbce291969",
+      "constellations": "d5eb3b1f16f38f81143e30b5b071ca5bfe88b2df133d32872e50338df9344c1b"
+    },
+    "hsr:1205": {
+      "reference": "d00b59bbe5624d07194df580c36691a5877905a919eec3dfc775641a6404a802",
+      "guide": "a4457f92bd0d0f682d4ed0cf324451e591ba7dfcfdce6c03891dcfea418e0be0",
+      "constellations": "5c303d6a174ec42798bcdb2414bd4fc3245b55ef5a2d35a11f702f1f5889e358"
+    },
+    "hsr:1201": {
+      "reference": "78a8add15dcbc5b253fc519f0853be07e84f336ed1cf2c3cf44f3a7e451db73e",
+      "guide": "fbfc640f95283c5cc7a84009e2be7e3b436e3f8276764bb02d8f473b4751ddcd",
+      "constellations": "a55f66dd7e777171369d056855a16609a2aaf88fac7612001c7678ebe6ddb142"
+    },
+    "hsr:1214": {
+      "reference": "2bcb9ced874dc4d0fbfba7d97727aa4febfd8bc89aa166c117df44f9c6070a7f",
+      "guide": "96514ea68e5569afa44e15e7c381b2dd48258794913aabd1c879359148719bfe",
+      "constellations": "52423f7c05e50bd5ad56b217932ae8ed61ebb8097485b1df138e87a53bebfc7d"
+    },
+    "hsr:1507": {
+      "reference": "bd9cf3158e5b1b6676d766efd65d1df17865f616cda1009815a180ce8c467c2e",
+      "guide": "36ad2ed2232ed87e36c82186d03c9b08740c883a140f4d088e47832091c108f7",
+      "constellations": "01c77fa6a410088c37023eba6c7ab336226b7abb22e209b535089ca8d6714b91"
+    },
+    "hsr:1206": {
+      "reference": "2b1c7e7965cf0a3c2434b6a59d8d13ee478883e131bdcfb765cbbbd971d27dd9",
+      "guide": "9221c63a922d234590ad6eefadb9841c92ee3df6eaeb662616493c51e6018ce7",
+      "constellations": "76839ad5a533612ad8bb97b348bd88fa20e7e1bef980bf6065486d50c42bc5a2"
+    },
+    "hsr:1002": {
+      "reference": "559a2b3109ce9bac46e32eaddbd0b0f228c1276e520e7d3e011de0a3f53bfade",
+      "guide": "2310908aea3d42d607b7f9856df1ec71d0628fb8dd3c3e89012fa78f42bf9ac9",
+      "constellations": "6cab7edae985bad640836c081d3c95583802b3418546b8c55461e4c413373afa"
+    },
+    "hsr:1213": {
+      "reference": "212f68608bdc6df202978d9053fb26f8926e4e00fbf4b653478de44246cc0d30",
+      "guide": "26715d0eaab592d15833e7520800d8767a02a94357c4d3c3d2fd3d83ecd604f5",
+      "constellations": "bae858ba494b19e4603aa351b33a79d18b0600e7ff87f51e73cbb356a5993f95"
+    },
+    "hsr:1414": {
+      "reference": "b5d66b2218b07baf1f3de6bbc423ca40ad2670018234df6145128f524f6b81fd",
+      "guide": "943608833b0864c807fe4f6d517b835f3e8642884c498e6476d93986f0a36f83",
+      "constellations": "91f0887020b18a2b4ce2f0ca1907e61562eb53f01fa18b4f504614c9275c4a14"
+    },
+    "hsr:1413": {
+      "reference": "3b17c2c1fc7fbaec9c687142019ec5c5dcd8c1b021958b28749b363fbef802c8",
+      "guide": "fbe41984b48caf361a9382486911a50250612488dd0ae642c8490c63f263b67d",
+      "constellations": "60b09f5be7c9ef0cda01041b9241a46028902fd3e4310a4afc97e336aefa69ca"
+    },
+    "hsr:1202": {
+      "reference": "f8ec0c0a7985ceb60d1a8746a792f0d468dc50ce7f3be4b6c5203739cef1dd76",
+      "guide": "227fbf2a44597010343b659a0fe54baba8118475a2526f1dcbd5df0d92708934",
+      "constellations": "6cc5c5022081ef840767540535a0a50a4e52957cbc6a7015b9b9d2f88daaaacc"
+    },
+    "hsr:1211": {
+      "reference": "4c95071faf1b3b164f2eeb6ce4d4ec406de82186c90d0313a069a0a0d9320325",
+      "guide": "52abad18459f0d98f9b602e5a90c3cfcd14e6150a03c7cbd2ff1a8d5a23d5af2",
+      "constellations": "ec1b9eb589d6903a44a979aa01851ebc19b037a600d2279b19dde896edcf5898"
+    },
+    "hsr:1505": {
+      "reference": "15c6952d11e7b48549d7e2f7d9a2fb41f3f9e4c992397bf22913b842dcd17734",
+      "guide": "9467bee1da9087e6c529aab0045b59b725d7f0b29c2f5475b6118e679c6fa92b",
+      "constellations": "f0bb44c7668ac21ec11b5da2361933b9e5714b769c07f2baca6a3341c43e1c60"
+    },
+    "hsr:1220": {
+      "reference": "357b1a08720c1bd6f67beac3031ed29a128f837f5048fb7997573c769f097e11",
+      "guide": "f21dfc4a0bb67695d83d5adb2ab6e556fa36486feed409ada4c37ef9e6a410aa",
+      "constellations": "14a3c6200e5ef3db0b82438d4267991e4580fb0108042e7e7e7dba2ea0891c1e"
+    },
+    "hsr:1209": {
+      "reference": "9f4d1efbe531c360e86b6a2938f82095866d0d50650cf723a8b7d8f235e5e834",
+      "guide": "b7f43e633aa8a2881d44dbc4c8284a2a5e3fbddae363d59b1dd48dcfba6b6c73",
+      "constellations": "609e91159c7d7f4a5e1fd28fcc1c79983507d9ec6afaf9e07da2738eee4d8c84"
+    },
+    "hsr:1003": {
+      "reference": "60624679d97d8a35f517586a7d6e9c79485aa0e19482d46c2740b2e3a5aeacfc",
+      "guide": "c6d8aa532c5a3895d61722f7cce986de6c960f2200006616c13b4f5fe4b4d6d4",
+      "constellations": "b82a625d65ad713a77cf897604f6769a666f0ec8740081a9ca227b5b52b0ced0"
+    },
+    "hsr:1510": {
+      "reference": "373a2b26a992ff150d0f1cdedab243c6edf67e96edc3ad0d588283219e08c98d",
+      "guide": "473257e6ed95811ee73ec31f68c78b284593331c31ecf45584282162554bca6f",
+      "constellations": "3871a02e873f7d9f67d3a31d7e8d06e91faaa534f72d065427488737206a89d7"
+    },
+    "hsr:1504": {
+      "reference": "51092bfdf522df47c43b04281399f37468ff4b44ffe32eac1338e3b06f3190be",
+      "guide": "33c0354a857332386fea8d53a32b8322081f8b29785ac803d54bf9146050923f",
+      "constellations": "fba95ce4f5f07f3eccb4a1dd44ffd88ea41c9ab763919e6e3fc809c4a0247906"
+    },
+    "hsr:1208": {
+      "reference": "0e9a277796bfdd5c9767b1599e39d750265b639df8379a46c5f65f3b1da1e253",
+      "guide": "6d4fba5a9442f2cbf8f59dc07af7027aeb5e4d645c5f9134820d90ca1d61f252",
+      "constellations": "3df35815cd020c958d5420912215abf965e6440583f5d9e44c55ba67062f76f9"
+    },
+    "hsr:1203": {
+      "reference": "846a9ed51099254e15255f9b25582af2d59260b42588b38fbd5f2bf1a26f8d2b",
+      "guide": "649a55758c0f09c01a30f4e2990dd2bf5e8b491c37ff4804d4a3dec78bb18564",
+      "constellations": "b9acd784cc95a75b9b7891021efe9468b9c32960378fda38baf172612d8a6af3"
+    },
+    "hsr:1317": {
+      "reference": "a072be77609f9f882445ee6ab78f72474e6b395a3e8fdb494fea94000141923b",
+      "guide": "cdc57691468027a49fe46b1b17ac12f3db7e4c43836ecee0cfab907d68ce2144",
+      "constellations": "5288343e2c32e3782788e613f27772ca005a9629081c92d17601f088002a98b5"
+    },
+    "hsr:1222": {
+      "reference": "c0e574ef2c42cf9ec46c53cadd475ebfb42b52aa07b430e1730ea9b477addf32",
+      "guide": "a8781bca0496e5d6b38adabad464e572951724c9a4c52df95916da092e79b1a8",
+      "constellations": "b1707ddac33b4a9d4361a9c0bf3cfc34a1d29e867998163d5c2677ec77e40c4b"
+    },
+    "hsr:1218": {
+      "reference": "74bbb3ea5b5ae8440c485957b974a6eb84ca934d51431a03c2e45719a489344f",
+      "guide": "3b6ba50b6aa13c44fd6e1d7946f6bf35b2825943f14edbd9868421198dd423a7",
+      "constellations": "2baffc6c45b4f41c6a03e805df74abee5b3a833bf17e17b93733428c9afbbc5f"
+    },
+    "hsr:1502": {
+      "reference": "ee6e8b9c67b92d62484698e340647fe5d6a2eb92e9fc7933674af34782ee90b7",
+      "guide": "56eb91a33b058c540ddaeaa909930d518a0e6f69a6d669fc2ba56a7bd378571b",
+      "constellations": "89d94f30768c7428382ad539a6eeb3d3ca891cdc985f5c4aa09f9e4ff9acce86"
+    },
+    "genshin:10000062": {
+      "reference": "2ee9c328b019f3d1ff21aee46226595ce8dfd9debcf601d6d7bfec52b45e1cc2",
+      "guide": "626582cbf56b7ed4f6dca99e11b34f2223190c14cb511d6499b10a247782733b",
+      "constellations": "484469fdd14bb29b98ed3df861adf366b3a004a9d76c25c40ae90b383000161f"
+    },
+    "genshin:10000121": {
+      "reference": "1aa5b8056c2b83d69c0cedfbe507a7fb9061fc4bfdd032ec5b64f987f4ea0525",
+      "guide": "7a31537aae5267a8b7e3d37601e036cf0360cab66d4797972342c2f22d745ed0",
+      "constellations": "84957e807fa7caf8d93def8a33ee0c8c08d20a8b404bb782ebec805725fe7487"
+    },
+    "genshin:10000078": {
+      "reference": "a4d90c61db25da3fb71146d4ab35e7e85d23d052885339b9c6a631204ba3bfcd",
+      "guide": "6061bf890ed47098b550ecfae8f625943a4939812b714f69721756a5e8413efb",
+      "constellations": "4e468bbc5049cdcaeacc293e0dc7281a2fee373f114ee5f42004c3088fcac2e0"
+    },
+    "genshin:10000038": {
+      "reference": "363bd792b0f25a4c5afeead8e5967e6d17a2e652ccf15d03bc1b185c94697357",
+      "guide": "4a347b56dfc63be55860d981fc79fa4011bef28c08ef86fe8d52eb26a09c1a2d",
+      "constellations": "ab8b611292d3bda42f9388aad6e684b04d4c9d02215d97b7983834166e8a1248"
+    },
+    "genshin:10000096": {
+      "reference": "bb182dc319c4dbaf2ab10999fd12433cec644ea02308e4ad9936e62794b8bbd7",
+      "guide": "6111bc1752c009eec5b1288805a90834defebcf7b3a8861ecc07a885a0c3741b",
+      "constellations": "1ce605f48b2e9f8f5f10316d34a6878edd72685c26f547dbd5daa5795ac51b41"
+    },
+    "genshin:10000021": {
+      "reference": "1b68b65084c4e7d314ba84d34b2b83e9b3d3753c0b184294b31f2f6be86d0cc9",
+      "guide": "4fb08d18e4a3e1678e763ab9a65ec698d67ce8adfc19b12b980d0a2ced6a2de7",
+      "constellations": "cbde5dfae071045f6962827f09611bfed33ca50e43ac88906b27e528417dbd89"
+    },
+    "genshin:10000110": {
+      "reference": "853565fef3649a39b6f956f50afece4cb72a36ff70df66123bfec7903fd6f982",
+      "guide": "5f523b20e4318d3fbec826b8512b6dc849be34acb2b97b7963aacd986f317a39",
+      "constellations": "63e35ebc429ca5422964e20290fd5df5a1f73a48f4b186772451aaabf197a6c9"
+    },
+    "genshin:10000116": {
+      "reference": "94609ac5176ed2d19385eb10232efd4a806fdaa51871c921ef4eb89b6297b398",
+      "guide": "a43d59897a772a8a215dc521873af96a4ff38d2c9f5c301d16e9ce56348ff953",
+      "constellations": "24361c4b6c5c80c5b39273942fb56091d8c670adb127be417e8c381036b39b0e"
+    },
+    "genshin:10000113": {
+      "reference": "126010f1683f308cc3295f29a57890b6b399a991571abbd8f233e9f000e14470",
+      "guide": "221558a1822ddd5462f5ee326408603980bfca1e36f942e86a34c2b12bc773c2",
+      "constellations": "2eed9d4a1c1b5561c15dd266ddb8d068fae0e7197fee2b6cacb0d520629b4f3f"
+    },
+    "genshin:10000111": {
+      "reference": "0d3c783015e2e8308a8fc2b9a1d42989a8d10c042c6aad4e641bf3420de2861b",
+      "guide": "fc41f61e4c91bdb31ad3a4f22cfbc4a63171f1d3acb23111533debd445f83fd6",
+      "constellations": "f5af1b279c78950636bf1c0d689cd415248264d3a7059084427552e70759e73f"
+    },
+    "genshin:10000143": {
+      "reference": "0800e10c5f7fd9cd8bbb42f999ddc4a4dcf95c036e954e7375e8d48e688d52cf",
+      "guide": "169d44e52281226317b8d67985496cf5e29c60c99410cfef1815f50f4520b0c6",
+      "constellations": "dad0abe2b69a5a63d052bf8865783b6d025fe940eeadb6f35a522d30272f8006"
+    },
+    "genshin:10000140": {
+      "reference": "84a43a97ea9713bd3890510bef3281b162477b6a3e04648021ea7ce9e1a36f9f",
+      "guide": "a551180b5d792025dfc139a6fec9b980adec0d99caf1122c8f464d0ec2dda622",
+      "constellations": "c6ed6a64712e8502e4d081d48823ce9f3acf54dacf903754f469b2bada1ffe66"
+    },
+    "genshin:10000022": {
+      "reference": "aef220a38b9d631944834a861f0bae7ac0dfea58ab5e13c51c5695bc78afa761",
+      "guide": "423cd00ff11e1b165d58bb846c8500bc90ab4d5c2b8e4809b65dbe2d5d685cc9",
+      "constellations": "0e6de3c486b99f7c7c74ccf3f98c287ede2d244cdbe1838ebe80b70c089bf64f"
+    },
+    "genshin:10000051": {
+      "reference": "8b00182b0951f52f3168dfda4c01745c8e58b9ef2662659b92034caf000a8688",
+      "guide": "58afa1eeb5898513f1696796af179034221b5bfd55e5e1cf590b5351deca6d4f",
+      "constellations": "8ff0dcf9aa053d6d0bd78d65b68bbbcc44b87a97df75e15629662528a80ca826"
+    },
+    "genshin:10000112": {
+      "reference": "d1c4b95d0afa4569bf896035b0e8108db3d1cffbe9b2d925ba3843ddf79fd956",
+      "guide": "b4d8206f7d912eb930905c8b949b4f30c2e351fac9e0f740f6c62051ab613107",
+      "constellations": "bddd10dd37d968e157b58e788dd8ae06c6e7150aff2f1df57842ba1ff12711e1"
+    },
+    "genshin:10000099": {
+      "reference": "e80f01b96494cf6a0e2b3b0107734f060acb7f9293980111d7b9073430b32e98",
+      "guide": "7d83ecd2eff92d35b4d5d5c02d73855330fdfe84f628ddbfd21960b1f702984d",
+      "constellations": "dd833bcaded959fc4ccc3ba32a5e81270021f7ed1fd725f1467070282681f6d2"
+    },
+    "genshin:10000105": {
+      "reference": "1cd07ad628e3b4dd42b00a00146eaabe2709512b08306d2c090726c70de140a4",
+      "guide": "ed79b0ad6412a6974c9d600a265f22b057a6e6ce5e86f72a7f8cba02a6909ffd",
+      "constellations": "00a34d00dcfa12289fc461076c19c89f1e1277323cb6c669274f74bcddb95b6d"
+    },
+    "genshin:10000081": {
+      "reference": "3e6c9ddbdee266bae256328c8e50d81e8f64e34d687a06c272cb2cce003c38d1",
+      "guide": "2c1eacd02efd6cbd9d4ab7e0ac1d0b2619860909c77159ab1bd1ddeda2a2d092",
+      "constellations": "96ed9aa7a598f08f70736f823dcc99911b4e8935038431777060b6f8d45822c9"
+    },
+    "genshin:10000015": {
+      "reference": "d74ec4cb4ca049e56dff64561095a3f72a9a351a1d780c1187b9312349607947",
+      "guide": "2a2b04a2c32136dd23a039d9e6aaed31a6d67819f0f40ef51e9ec2bb75c6fb82",
+      "constellations": "cafd42a40a2f0a218f307b5a157fd7b91861228199846b301a9004eab96e4c00"
+    },
+    "genshin:10000100": {
+      "reference": "4d5766002644a2f5dfd79ba92473410632a84907802b0d9b780f42711a483cc5",
+      "guide": "312c4289f94dfe11813954c82fdfef37c2bb5ccfef9747c612667e7c5fa11e52",
+      "constellations": "b9a402878b29ec5e62e085ec000d9d89f233cf07b0107492c0824e2c447e9a1f"
+    },
+    "genshin:10000101": {
+      "reference": "d6cfeb88809a65e4982f3f35011eff9b6d165bddfa92d334bd69b8791a68d44f",
+      "guide": "1ad643a52be15393e94060f7913512a86a75eef7362ae33dbda627daf5a84a5f",
+      "constellations": "1f6eab38d2c343b9538c00bc5b6ad1692e43af3ccf07d57372fec7a279d92319"
+    },
+    "genshin:10000072": {
+      "reference": "1ff9b08de34637f8da79b8351c91ba841aa724d5eb05697695d4fc1d56421519",
+      "guide": "a668b1f6151d8ba8ef25029a2d04c6f078666df75d2d8c2ed7fc522f6c7ddc2b",
+      "constellations": "34c642e77fc2ea4bf22b213b94f8633d7e1b75ea7e75627320a9708fb41aedd1"
+    },
+    "genshin:10000029": {
+      "reference": "0fd6cf435ed4e64ac8d3ba2a1bf930b04c335af6c6ff6ff3a4c9edb03695077b",
+      "guide": "0361f5f8877a0396535d99f43ca72ec84e919a91652c00f0ee410f63b81cda66",
+      "constellations": "b1049dcdb14ad4d61166349959503d2dbe53d69aeda7fc477790a0d5ba0d7e43"
+    },
+    "genshin:10000098": {
+      "reference": "8649dcf081ecb8230c33c298eaa0d4ac0c27ded7d601daca771dc1d8087205c6",
+      "guide": "fa078815f95d9ecf198c5e8091d1aae59ac7f025a96921a8455076220d81b6a0",
+      "constellations": "aca9de051efb2bd7b0a1653af04d9aa2091352586d61ed97243d22a65e2014f2"
+    },
+    "genshin:10000067": {
+      "reference": "49db498e266124b1ae576ffcf6fa254b4c966f2425c07098cb6e4d0a3a6f962e",
+      "guide": "622664d03d98566f46220d7e293735d05e348fdb9f066678d8967d6599939d4c",
+      "constellations": "40aa53eaed6c3bd209c06320170ab7ceb3b5487f2a5c825742fe38bd0a4bf045"
+    },
+    "genshin:10000055": {
+      "reference": "af0befdd1838e49f63ad6f3fb26acbd5d3adb30bca328a521040f923070f3022",
+      "guide": "b0bbb1bd53466ffb2fdef9e3b4012a58e843a5ec094041dcc5f193b75885abf1",
+      "constellations": "9b3f87d1bcfc945926729d64b68a6a306259eb00759f876634b0dd439a704a18"
+    },
+    "genshin:10000125": {
+      "reference": "d55407c9b4bc937068a5115c67e3313e571b5f08f8ea4767b188f65591550d2a",
+      "guide": "9fb98fbe32f094357089fc7fbdeb16fa56117e6c864702d620e2c1cdb6cce09a",
+      "constellations": "1cff254d16066f8e569531ac3e07513300c1800097f31f79cfe3fb85c36b90ad"
+    },
+    "genshin:10000095": {
+      "reference": "c98d0534266f2f92d82c1e24cde52ded9125dc88d85d90653f95cc5a464bf346",
+      "guide": "461e4764cf981db8bc54ed53b0dac8f3cc17dae7836c28d87bb52ebd1dfc9a90",
+      "constellations": "36fc5b0c61f5322f2cdde8122fc2a188e77f63e8f14afabb772e0209ffc3f237"
+    },
+    "genshin:10000107": {
+      "reference": "ba33561c8e1d0004c98f8953ce0573ec1f241c6e8e4ddcee5f52db14fb032f59",
+      "guide": "ed5dca99c4de6cedb001c3892a6eff38d81692abee5d8c9d582561fca9572670",
+      "constellations": "436ee39fe7057b4ab717a887f140ae9ef53ce03a2e4f4e92f238ec48c25375ab"
+    },
+    "genshin:10000088": {
+      "reference": "bda1a5fc71e2afc35a363fe187d43d5cb2f62a3e183bd622c36de45ff9958041",
+      "guide": "3354f548870e5e74445f6eed3a263dea64cfb2c281ff97c37fb2886f26eeb988",
+      "constellations": "a28f8f2220055147cee2394dc16693daa091ce2d25882fedb413c3b99d5f8fa0"
+    },
+    "genshin:10000090": {
+      "reference": "5f34fac3c60a04d4f47ee4d82c7232c0ee0e552e135731c8657a930bf39a5271",
+      "guide": "24eb95ba181972238a4a0c76596ac791909a049b8371aa79153d82e4377340ff",
+      "constellations": "050e8c89bfd99153788d5ea7d005fd030e118d1a72d8d16d1d2e336cddcb825d"
+    },
+    "genshin:10000103": {
+      "reference": "47907fb859827e0735b90fe8c3bc31717ccd9a15fef9ded56c0f4a6de4f2aee3",
+      "guide": "17bcb554da6ce9db5d87f98bee1d945d9b2242b588bcae52bc2f38aa83d2b538",
+      "constellations": "7bfb7cca536cf8ea9d56b2a18b26b806f510931258ae7570ab9ffafe3e000114"
+    },
+    "genshin:10000003": {
+      "reference": "92cd482739a13a2d3055dbb8d23378347d541be99d6c436c4d9c021797488921",
+      "guide": "d6f31fddea5aecd7cea4ab17706d9bb0247487a9d2c960d5cc8d88664f4ba556",
+      "constellations": "30d79ebd64ff31d7807e72423615ce2a0772cfd3986ccee4659c23f00c248674"
+    },
+    "genshin:10000114": {
+      "reference": "52a6982e0003b54942f69dc25c0dd0bbfc0564244622cebbf986899da2d48fb1",
+      "guide": "48f452fd47babc4c40a6f2840661f21e9cdbbb1689bd7998edd6efb234e73f5c",
+      "constellations": "4c43f74a9b136d3f25f3c1c9f9b7b88f21858b47c1015de5e9bc5a14f0b56ecf"
+    },
+    "genshin:10000043": {
+      "reference": "f63c68277830d8a5b4f5e7a5374cc48d481c42fc36bf0140587bf3ef6abc319a",
+      "guide": "8fac530234c7c18a2e18c8ffd29e27f291e4b3dac3502f32c025a827f5d88450",
+      "constellations": "40b863944ba87a594def680d37c0f82bee0fc42223fe8b3c8432223f990e0120"
+    },
+    "genshin:10000097": {
+      "reference": "d8a5beca19c3d5888528311e5bcb9c012da31867b5cce528539b05258a4a4a9c",
+      "guide": "ea2b24bf59302982992cd726e1962f4e2a0835467d0a0f257fbcc105fe92b2d6",
+      "constellations": "2a1c664950a6aeec240863de3b0b84ac8d335b5b91e768abc56c32b840a62a9b"
+    },
+    "genshin:10000071": {
+      "reference": "7c2b6af6acbf1016eee9bfdb7be1b886924f6d04024fd87386c15f69559469b1",
+      "guide": "4dd9f27e9bb00fd4adc1d52c2e79ff99967cad554fc4032d7f54603f2666a506",
+      "constellations": "84e7b5552963154f1d4898e15092abfd077b00816231d23cbfde5891285420c6"
+    },
+    "genshin:10000115": {
+      "reference": "30d760eca7349d39c8f87b255b7dc29bd7dc2655e4505f98b257bc106099153d",
+      "guide": "5b7ffffa98557efb65cf7907e0320befd0c6562c1db39937f7b1ee5bf235c2df",
+      "constellations": "258237ff5720ae551d1256367c8739429b8deac036ff71e1d8b85ef432b2ed08"
+    },
+    "genshin:10000033": {
+      "reference": "d957c3b1663dfba3af4420d33cae2be93b2243d717c9766fc975fc90fafab93d",
+      "guide": "3bfcf105930a9d7ad04f659bbfc3bc97ce5ec43dc1d5288f93d2ee3f38340246",
+      "constellations": "40cc3976ace5f25fa83977d653ab44008e1e7213ad6898adae22e4201d4f7e97"
+    },
+    "genshin:10000104": {
+      "reference": "5bba692c26b62b1e8d223cbe0bd3ab563e6ab7ad724f1e78e2cec041d6f4707a",
+      "guide": "f35f3e1da95ecec8be67f9bcff2cbc151921c51ca50352ce2ee78fdce0eb3d7a",
+      "constellations": "6e5af9b19efedda4532f75631ad8c1e4d2df24f1e142e68eadbfb9c75b1f3fd1"
+    },
+    "genshin:10000039": {
+      "reference": "02e81831427a2de2a11ff486a187bc294bb920a3b125f8db4601aebda9f04f5b",
+      "guide": "7d475b12f23236f6b80d0803c088b85d114dcc5e81511d4aec47a12b5904ea8d",
+      "constellations": "271b0c2fba173cecbaca5670f1e93ca46d650593f89f4a502619ecb28aee9fe1"
+    },
+    "genshin:10000079": {
+      "reference": "be27589d9fe9df39097fe0052103ec6ec53ee94c0e142a8391acb2254356bc19",
+      "guide": "254ed093f8cc5fce7c947131d483136ac05bcc7f62e9c12cf6fa3b4104e34bd6",
+      "constellations": "8772b74d617816f883194d1ed4a7ba0f9f2e76aa8ee32d8eb3c2d299c25f6075"
+    },
+    "genshin:10000069": {
+      "reference": "e5edd4d609ae3e634fe41084858e4f3e0e93de17f342d4472e0e62f7bb4e084a",
+      "guide": "4dfc407d5bcd97363925889d176dd0a34151dac37c08b94775aca117eecf31a0",
+      "constellations": "00fe73bd88b64e72e2817fb2372098851bb5d8ce13c5b7f866852eb272256a10"
+    },
+    "genshin:10000016": {
+      "reference": "2fbc56ac7247ecc0b8bc303290a01c01d58dc9ba4f0e23548e37cb9cd275b0ad",
+      "guide": "96dc7a079003af34e6627d17d08337abaeb2097af48091840a7c037fb28e6d5b",
+      "constellations": "74d350bef3e6dc89d9a5c8cc9b9efbc24d4f46bb004bcdfed272b1f84e40a52c"
+    },
+    "genshin:10000123": {
+      "reference": "9bb8fc99fcf3e6b7ffce70a52683dd962525584329c6182989ca917d55d42510",
+      "guide": "3aba293c7a9a539491733c14156dc4589b572e2cc6b4c0f4d8c53333649c2ebe",
+      "constellations": "8d07d94840cb8787a8ed35321928b6e86fa5f49368762d603c18aa9a4668981e"
+    },
+    "genshin:10000050": {
+      "reference": "c624198d493f0e659bfcce3ef7c95758ef665ebce29573a96e89f351f61cfc2e",
+      "guide": "fb0f0f51d2a5b866f3bf622d995299918168527e23476f609e80712d45750394",
+      "constellations": "f38ee10a5ea36790f0233dc06716a6388e8f4ae32e0bd8db0537bff944f0f11d"
+    },
+    "genshin:10000068": {
+      "reference": "97cf6bd8e61a4404e24a5b68d644a216daef6ae299eff55e669267af05f19fb0",
+      "guide": "2b9e5015bc024ffd1c92a7154293397c7f9c22cfe0e1a67007c27c105e0dbb2b",
+      "constellations": "9d234a2e062d3eaa09da3d6c60ca8f77871d1ae70372b9cc36cbe0d9686e05a9"
+    },
+    "genshin:10000091": {
+      "reference": "4ee4acce794fd98a975694761599114dce3bc7de21f8e95db07dbac116fc22f1",
+      "guide": "5a57680093d31f0003472015f0f5f99e54b1dbb30d51b6a5eae51754f373d9cd",
+      "constellations": "a959670683c95756b00e89c19e952bb1e0ae6a2266eccfc06e532a8d1507ebad"
+    },
+    "genshin:10000073": {
+      "reference": "b5fb3971a51f86a5a483f761c89ebd1ec201c3ee8f33aaf0b84be329054fe5e0",
+      "guide": "7166bc81f9c9405caf2fb9dd86b5b40d1df09bb27961216ff778a05e3f0c8541",
+      "constellations": "069c25ccaf6a2f814c8a310faff46bf95c1cbc287cd4086c9e1f5f7ca1c849d6"
+    },
+    "genshin:10000070": {
+      "reference": "be5412b5ed98fe55d31626d228c63a9c3bd821591c00c6c7b7b5c8504b6f7224",
+      "guide": "5c48af2c77434b3c052d7a7cddb60cfd9915141cb9ee4e8b8c98684d8442288e",
+      "constellations": "46af235c0a7fbb0e80d0f0b5225291c6b1ac94c44e268a7c2272e57bddbfb3f3"
+    },
+    "genshin:10000087": {
+      "reference": "c894bdd2948e43e4cbe1fc2a0dfc40bb75d96428fec11ab111a02c5cf0e6785f",
+      "guide": "987f08e7190833fe9e3039003843b3ef6151e3469d5cee148435833c06204f67",
+      "constellations": "d3669bbe2faa333f0689aaaac82c3b5a9dc9eb7ec041891e87cda58ceb607589"
+    },
+    "genshin:10000122": {
+      "reference": "15a600c9df16aa1367a80757464f180edd9a3864095dcfd8154995bd7dddb3d7",
+      "guide": "7d2fddcdbde18e487293502b68b190c2d6dfcfc238dfbe50798e145298341b3b",
+      "constellations": "cb613329428ec36af1787be39c740e86453ab22affb552e2f027f4ae23c83010"
+    },
+    "genshin:10000034": {
+      "reference": "933121b92c61aed9923c603536b608929e343fbeab3d2704719c6c5185e7774c",
+      "guide": "93b6c22850e26b5124af65e7d4c48d5c1b3b83c8e44f8a70b6b000eac826b5be",
+      "constellations": "f97beebaa33619d0508aca1e7f4cb28c155ed84d4ce6aabb85e1dde8c36be963"
+    },
+    "genshin:10000014": {
+      "reference": "5c0b94b427e286667a6d108e666ee4a20f4d6effe04af60e1eb1444e3a05f4b7",
+      "guide": "0470d6e55e42f63b6f8b68b813de70dd1d91979c29bf6d1d02b2e29f751b66fd",
+      "constellations": "cd85667c9e4cbece3f828e6907e485d3b8a396043df2b7f4e53b8a7067c7cc74"
+    },
+    "genshin:10000076": {
+      "reference": "56880490ee57c6d5622709ab03b0b14dadac7a05c8f41b8c619af334d282c4a5",
+      "guide": "8956ef21c809636572e4d04281fc092111a9407cf10808ab5dd6f0be59a74b1c",
+      "constellations": "2ae29bd19a64a2fbfeb79b7ce80c21cd1db310b9d605cf4a16e03c3750385e83"
+    },
+    "genshin:10000031": {
+      "reference": "295d191b97e0fcc2ab4cead2e62fcaa929e9ca853ba939a30d61bd9bf16dcc6c",
+      "guide": "ad772fa5a4f4d390af6dca947d4d456933aa97664fe1a3e7831d9fbf6f2264a6",
+      "constellations": "8233897253da4677b856060edd228b27c0879fd23ec8b00f4e074a6f2fc03124"
+    },
+    "genshin:10000089": {
+      "reference": "34f532000bb1f2b3b87b34650c4f50b2af07b1b948f324062644b7e2c055390b",
+      "guide": "b1ce3d809456b49a22bf82d1b4aacb98665f47b21377fcf8586dca45bf1b8425",
+      "constellations": "d744c00d0e46d071af093af5736fbcea254606d6952773ee215da9d0760384d7"
+    },
+    "genshin:10000120": {
+      "reference": "b8c152ca645cce84fdc5d8605b975b77b1d1a344683528161aae164750443f92",
+      "guide": "c3e771856f98fd1b71da3a6fb560e3e1af33935c498a0907a712ce41235defa3",
+      "constellations": "2225a819105dbb4fe97d63dd8257f922cbda93624289ea9ebd601bea5428a2d9"
+    },
+    "genshin:10000085": {
+      "reference": "553d9cdeea6bd512308b13f64701cf4124dd7b66c2aba9c8b4e1f1f00bdf712f",
+      "guide": "4e8f17d73919ba48ff6620b19fd817d4d4cf3c138150fa27b0cc7ae5a633e3ce",
+      "constellations": "5c001ea02ea30f691222f0c9d3a25368b99fc49e9316e7bf70ef5a7838a43565"
+    },
+    "genshin:10000032": {
+      "reference": "b586715f56cbfbc9dc448f4912a4de1c380ae0ff86c688a9af9db9de00ff3f8d",
+      "guide": "aefb1bea80070d5de1e743127c11be90acbf5845b98edb6bc2cddd76db494c96",
+      "constellations": "48c57656489a15f8adb3214b680fed1ee14a589f2bda3cbc2ca1a5c45ee4d108"
+    },
+    "genshin:10000106": {
+      "reference": "b369f81a9d0ab990f5c315874808977a805edeb58c0baa2ad4e12e4cfd1d2f4a",
+      "guide": "2f171fac79f92e67b37240e7fa843ba40da7e6e329407d33afe1206a022deb3f",
+      "constellations": "9de9c5ebc9103daa143e12b297e980633a856b35a7e8234e7822dd15255ca2d9"
+    },
+    "genshin:10000080": {
+      "reference": "6907aac5d3f687fb5f5449f211a30d113d1b906047ed18a2913c6d088b5aad8f",
+      "guide": "a6380151d1db8db7094336603bbd843b35ab133e275f5f74f58f009b3cb9c8b8",
+      "constellations": "4f9e78b0b62700435b5de85034da07fbe8a69f33e8dea11766c6fab5c6974247"
+    },
+    "genshin:10000102": {
+      "reference": "38376c5553734ff1420e23aa39578c0960c711bd30f0778e11efac07c56e46e7",
+      "guide": "d380da57d81d6b6d1bd8ad1c27191cdb8c2a14ceb78681ed465b98113d4e78e2",
+      "constellations": "5719ac8a822cea3b3d4cfc3fbe62acdcb1fd063910b0e2eeb2ff16c748dfdff5"
+    },
+    "genshin:10000041": {
+      "reference": "45e24b9d36a83d55ba4c4e4d2b57e8ae43cfc2be5814ff1a9ca1d25bc1a9ef0b",
+      "guide": "767a577a41f8934e74e684b267d745158c0c98e5a55d50aa2dd35228aec90bfe",
+      "constellations": "e5484842c617d3cbc312a7ab31c8ec1fa448f421f1df4e4057eb81586a1c130e"
+    },
+    "genshin:10000124": {
+      "reference": "f9948e2f933e0044c4687cdf180db937c44310ba13f3db946115f3033a764b00",
+      "guide": "2a77d76951ffc1eb793da668e5a50335ea947123433d4f84f7a44b841c62380c",
+      "constellations": "9934e8855d302a9093c45c2c9925879181d02a6d00ee26958318e6f6dd03d403"
+    },
+    "genshin:10000077": {
+      "reference": "6a15ddab85283dacac66ee77513fdb2179179de2141ee2c93b4993adb9a2039f",
+      "guide": "833b17aa67c16f366f8a678858834c68e0eaeb030967b594d12c72fb22fd88d4",
+      "constellations": "f92c81119e99719ba9135805a0b83076327c3a346f3248dc3d178dedf1100070"
+    },
+    "genshin:10000119": {
+      "reference": "88e8e8445b6ff3ce4cdb29e4fa5486f58084914821d5c1f3a24fdcb14dec85df",
+      "guide": "4fd8dc3b68767c5224db9616d3c26208a024e6fd78c2b2a0b1f9cf596da725de",
+      "constellations": "97d01c6dd03c07c6ed6fc3c9587313117404380f6976a94fb85f5b8ae97eff79"
+    },
+    "genshin:10000086": {
+      "reference": "4bfbc6ee892a80d203496f75f910fe8b12c14e231e77ab8f90fdd859688f78c4",
+      "guide": "00d042c2234b90ed96904ed0510599cb2d1d5225470b3052438719ef1bd59913",
+      "constellations": "8959d110fc2da7c9c896c70a34c0abf741f64884b032f796937ad8d2cf531503"
+    },
+    "genshin:10000006": {
+      "reference": "f5b2a8a633a53b9b9c6edb29efc2bc0f43173447de7c16a42b9912e8c917d009",
+      "guide": "0ac794c4abd91af81f1bc09eedfec4d473a941691ff5ac956403d700f5adc866",
+      "constellations": "a5288a5328615c1c2e1e9455e20eb36b4abc50e0e7ae970276299cc2a67003b6"
+    },
+    "genshin:10000084": {
+      "reference": "0686dc2eb0e89c4479594bfa77b4a38aff8e34369b8377586986ab08bdb6f3bb",
+      "guide": "996c39bc6f9f560bd30c7e9039b90aa45bd05d235010df5b303222f6b7bd2ad4",
+      "constellations": "ca1b7d3d085a7a1173576708f6b075398ad9ce54a7172961a0dcbf127806a26d"
+    },
+    "genshin:10000083": {
+      "reference": "9cd5079bda45ded45e51efbee9d4e7028eec037fdd61781443bde46e60115d63",
+      "guide": "c621c941c01d51c57a707888ba33caeeb51bc2103d91480804a20b32492c42f0",
+      "constellations": "d2703b9c078c6eef9e492d838b1101e2c1d4998a27b3574e8c5069006a5685ac"
+    },
+    "genshin:10000074": {
+      "reference": "27cbcfadd5d5ec2bca83f304cd8d9046ae82136dc2e6d9945085b9c4818ee79a",
+      "guide": "a078bf4a2268c47505d93a02f8933057e5adc32f603ae88b4fe56a6b0dcd2f48",
+      "constellations": "8aa5888ec3e6ca5c517be0b56643e42572d249f15d29c40407169fc607546cff"
+    },
+    "genshin:10000020": {
+      "reference": "66e4c6eac9730d5e4c9ea723cca40af4280bcc72f3b82349c98657901bc70b70",
+      "guide": "268d1fe43e116dbe9986617f94b972c195271a03ed292acb18fecf62ff6b18fd",
+      "constellations": "4a65e80729f0a35894b721689d5e8a27584ae73317fde96668a0a1f7ae6b654a"
+    },
+    "genshin:10000045": {
+      "reference": "150aedb5424a548de5bf902037e1c301b7e7638e41268a5336227b03d8bca4ed",
+      "guide": "6957c74ca16e45ad4c4f30590cb27eae5fc75c4651801c1c3005454ed8472ef8",
+      "constellations": "a46be7a80d1dcbd2e0a2c4a8013ad646d2b9e0132f5a0fc9b4f8029931114272"
+    },
+    "genshin:10000064": {
+      "reference": "8da7144919a62aa80daace5d533b0062b48a8173846cffdc6336272af70fc54b",
+      "guide": "5d21340c6dfadcb6ff1c5171780770a48ceb2b2b9ddf7f9d40a065f6c39627e4",
+      "constellations": "edfb3ab1772253c7e1c7ca930c1c6ed8ac08dc313251b5f18ebeaa47f83cd5b3"
+    },
+    "genshin:10000048": {
+      "reference": "e8efc07a85acee7dbdb6cd47c746e0b4316b17d00ae692789544aa12e6e06b1e",
+      "guide": "5ebf53c6082f18707a5fb6bf635f70346e0e9db289b5b7753eef904b18ab2a2c",
+      "constellations": "cc83aebe0744f6ed16887f6a498bb60ccdb1cc95c886eb12d1a4b0b66427aa69"
+    },
+    "genshin:10000092": {
+      "reference": "30f43739dbc42df275d9a573ab38481cb6d31f881e6898a055df9aa28f1fbef9",
+      "guide": "61a2281b0e5f3b922ccdaef73e78debbeded5623c45430b20a4fb6c41c8ab79c",
+      "constellations": "4be0025ae79d2274d21595ec4ecbf1cf332b9c4a692de282cf4a3b3541001778"
+    },
+    "genshin:10000037": {
+      "reference": "fee1a5dc9cbf1f40b90cd00056d3dccb8fb196bfa1bde9c88aa00cc53f527d10",
+      "guide": "1c69192ea7542d5f9fa8ac45ba85b57643deac1dfdfb48557e2fbcf267de563a",
+      "constellations": "9333b075624c661212ba9fc5227a39f3055ffa695a7650aa3dc0c064a4c5f957"
+    },
+    "genshin:10000093": {
+      "reference": "c1fe3cd29bc110af7a384cc3142059ddc2cd10e232de6b23e1f30d82c8c424b3",
+      "guide": "4a90b71dd4d3a6408629bf6fb3970dc047b8df2829487ed1685b18fe213b223f",
+      "constellations": "b7b6d1d11703694fa2fb734abd706167b855408c5f34a07bcf90f61a47ae367a"
+    },
+    "genshin:10000065": {
+      "reference": "2e43c5bfce8388a71f032e4eadd9fbe0f978704c3b81ef8759dcb471982e6a41",
+      "guide": "cc9109a02eafcbf099c47d7e681290777c8f618702315b6f91c0a51a50a7207c",
+      "constellations": "0b09d4525b4c07066ced9957efad2a3bb11ef15f571fe24682dda872172f49cd"
+    },
+    "genshin:10000027": {
+      "reference": "c8b5ac8ee6b1189bb663ca0e69ec8824eac109eafb7d1c2da4ab39a03835191f",
+      "guide": "e995b6eccdbc5058f43b869999bf3f777fa815b6705ce00d3875c1ea84d7419d",
+      "constellations": "cbff404f4da6bddb23e4aac70b0bb90faa369e3818d0b7435dfb8bd4893c42ea"
+    },
+    "genshin:10000056": {
+      "reference": "2357a3eb402493ca4752689f28edced98143cd021a045078b118b0e856ceb73a",
+      "guide": "4dc9e200743ea69b939d17b8568dbe9541aa76ed5ecf57c9b9d6c0a10d392cd7",
+      "constellations": "fd84a5000108b42bfe77d840a9394a44ad3a9f889c7104a4a2e9b6c31f7bdf21"
+    },
+    "genshin:10000046": {
+      "reference": "aae1d9c42a1e5291a4fbaef9d5c209032bd07800dd0a6e1267d023997c498d43",
+      "guide": "09fd6e83a38835608d02463177c2fd837724b44f87648111777983ef5644feab",
+      "constellations": "a3121f2130601bb33df697c944dd481acd18ea1457155b4b3fa1b3d145cd7c3b"
+    },
+    "genshin:10000057": {
+      "reference": "70f3390d48ef6366277b80ab9e8db5fc5c1f2bfa950987b53c0d7ce45fd44d97",
+      "guide": "e43279bbe10bea98aca2716864e3d36e2eedd01153fc80aee5c4b7954f089d33",
+      "constellations": "1489084bc5e5044e032ac21369d0b685ebad78ddcc8d088ce86ed0990f5f31d1"
+    },
+    "genshin:10000025": {
+      "reference": "7fc816342bbb7a455d01900e5894300b7f770adb312ad0fdcc3bbaeb07a85c85",
+      "guide": "83f09b35c6156d59aea3edf5848f642da19dc9970c6131adda1cb33f11c68534",
+      "constellations": "d84b37211bc922c0c9b468d5af2cc79eb7058ee4f9ddfdfb88fcec0e55afe0a5"
+    },
+    "genshin:10000023": {
+      "reference": "0931c5b636561e2f94de2fb63d91a192222eefd08ca68142af37412fff2aa964",
+      "guide": "8b3d5433532f6e9fb31021a643fca1e6b0ed1c9429e3d4c921687ec3c53ff177",
+      "constellations": "4aeddcbcfe295c31282ff1bbcfc134bfe2706701456b107d53e09705a5eb0f1d"
+    },
+    "genshin:10000042": {
+      "reference": "91d6864652f95bda1d7ec6bc5fbff6fd2028d2f891b41372634b2363c61f3161",
+      "guide": "a9b62bb74f1e4963a4c9f6de86ff5a8d49b7f5c34d073c4ae27a3242f69dcdc6",
+      "constellations": "504cb08bc42b92a5ba885abdb1628dc260c7912b1591e138747cdada3ef75252"
+    },
+    "genshin:10000054": {
+      "reference": "5392a0e4713b688c7d10d70afea9004498b8aa8deb3df79033e05fe3e059502f",
+      "guide": "7024f61020f072a519a40aee9b992ca72bcb59b45006890b9280eab239e7fe6e",
+      "constellations": "c3bd4333f55332feb1c6a9e7110d8b1230303cbfa7b3037daf75e31e7c73815f"
+    },
+    "genshin:10000059": {
+      "reference": "2136e8d3c7d07e6876b3be73c58d25bfa3551c903541c87b4f5c9dcbbf207a69",
+      "guide": "67737de94466a389d5399a1fe08bc9e5fdf6b35018040e3b81faaaab32609fee",
+      "constellations": "42d4468ff6175c7c802790120165ad81882bc0e45f9dad8efd4b1f05ed32e679"
+    },
+    "genshin:10000035": {
+      "reference": "735c09933f30da37d0c8f307ba82104a7c470b7f4261ebf99c3ac661b1fed89b",
+      "guide": "1cd86465ef986f04e9ac8c0320326d645408f71143c31c9c1e067b588b982f20",
+      "constellations": "c97e62554fea412aac2ef00a8d3a72c6f9c27d7dedd0bb4d51660953d85dec44"
+    },
+    "genshin:10000036": {
+      "reference": "a1d27e0692c5b447d71d51c1a8a8b594e756f3facb24bb1a84c34ae1debc537b",
+      "guide": "fb09bf9b11cf9de7317143cf6c7f879d150f9d5fec3466c47836a9cee9b37c36",
+      "constellations": "5485bd48bd0a33acbb0187c98fcb629713b1c7262e710a2376604b99d1b7266b"
+    },
+    "genshin:10000049": {
+      "reference": "f46b6ab8ff892760cd34aa9cd8b3df59c66dce61398a41dd0f44a901dba05dd9",
+      "guide": "900a6104adf0b921074ae8c73bbe6c2d3afd5f585d3b870362617422cca0506a",
+      "constellations": "670659e02534e7055d5934c216e3052fec94835eb87941ee8f3d89f964395788"
+    },
+    "genshin:10000030": {
+      "reference": "50d0b3c8cec054956abd435d292f829c8ec8f0735a2d168fcc1cb16eaf53e7ed",
+      "guide": "6da6ec87a370cf8919d207a45f71e90a4566567dbda20ffcfb09c1c37d19e820",
+      "constellations": "1a22f18765a5ba36f227e0cbb9fff424185fdd79c05110fde6edf52bc7c725c7"
+    },
+    "genshin:10000063": {
+      "reference": "503dbc5e5d20cd28bf86e4361b2ba38644cb8b00270aebb8703da75c5c2d62c4",
+      "guide": "84f81e1f254862b3858fae0f5db097b60356c70fd2c5dbad5e404ea226966fc0",
+      "constellations": "cfeb56f3a42974e5cb914b0a8900b8001fcc3a6c1ebbb5f6e7541fc61fd23020"
+    },
+    "genshin:10000002": {
+      "reference": "3316f33033b177c603374e342ab12ab3271b2b7ed99e8ba6d18429fcb518a37d",
+      "guide": "7c023c976e1362d9b87ddd8b88f6374123b3b2b11995293f752d22f0c7c9978d",
+      "constellations": "7bd6cd2af12da96769d4b1c24ea097bd8f092e9f1b6c68f779cd8731ae4ace4a"
+    },
+    "genshin:10000066": {
+      "reference": "bdbb59204ab0bdbf3328110df19ab6bf56e2eafa057504cbcdb72d194c748865",
+      "guide": "970f2cdc7f1206266d092f0723d957f44d56b0a7ebd2e747f9067dcc1ea9a0a8",
+      "constellations": "f3e79cbfb85826efd665f3ae02c8256b69b3eff568404e15738ea4336e15f544"
+    },
+    "genshin:10000044": {
+      "reference": "19392e8206cf4f165f165c39a3514cf501769dd65af688a17e70fa5b803358eb",
+      "guide": "12133fc999261614843e23cd132271bda8a55d09c1f0e57bf5fcbbb916d6daa1",
+      "constellations": "6b895fd5018c029a458f06cf986ded7b60e8f7c43d2d770849b8e676a56b7fe2"
+    },
+    "genshin:10000094": {
+      "reference": "27aad62bd19b0e6a87d8fe79c9405a6746cfcaa7258f945649368d998de603d7",
+      "guide": "42d12c0d16f461a41cb0babad234574503cc6831905639e1494dddd45b7aaea6",
+      "constellations": "5358552021372a84470cf259aa3b7f75d492f3e388f9271acfe608450358d8a7"
+    },
+    "genshin:10000053": {
+      "reference": "1205d8876b8b0d1b27e6b1641c5c010da1458f2bcbebfc248266c7c5f500c1c8",
+      "guide": "e0e086667e69e57a8b8814eecffb471cfcdd90106f29422eb315f3a13aa3aa77",
+      "constellations": "76b131025f76f6c94719462af4057222c9651a053ed1626c4ab17370df90f824"
+    },
+    "genshin:10000082": {
+      "reference": "04cdd73e47a6733ecd0b2dd99e50a7297b78aed56b3c4906f854c57e3d9e683a",
+      "guide": "bd9d35900a8d282600773d18e6f8ab20cfca87ac32d55165885c0d0b514943ce",
+      "constellations": "d963836f852a8726e461486fbcbd14610ff11106fd519c0231c9c6562deb2e96"
+    },
+    "genshin:10000058": {
+      "reference": "a0d850cdbb1c91fc5e224779c34b291cb2523e6dbffb59447d2e73344f4112d4",
+      "guide": "182c5e87fd0d58bd52a7f7fbf411431b1ee763a72b4ce8bf331982505cbbb82c",
+      "constellations": "cfc63aa4e7e271e1680a12d490fb3331bae758307d02eaf332e877b68ef070c3"
+    },
+    "genshin:10000047": {
+      "reference": "b193f96aa027058cac69308c3fa6776ef3773e3a9ab1643069ce5d0bf1c79080",
+      "guide": "4698f0454d45651ae3a00b6d7450813d46f590e3fcbd075c7f002baf7411f607",
+      "constellations": "9530c6445f6eb7570c43c429e3070789f7f813ea0b40fd6220b04dea351f1b3a"
+    },
+    "genshin:10000075": {
+      "reference": "653ce821429c0838042af2a995f678c31bb7ce9220b2ed8208953c4a5af8629f",
+      "guide": "1a831b38549dfbcebf34856245ab73d31c29039c951ba02c370c1398ef6bde14",
+      "constellations": "218ab1576aa9dcbbb294ed3e5752289a892ac00300a22a736b3afde8790889a7"
+    },
+    "genshin:10000024": {
+      "reference": "50813079877931b9bb0205ea2e39e036c164c0f8c016528fa3f128680500370f",
+      "guide": "a36a617f3f4b6c8e84513420c0ee481b8e128b57ecdc7591e39a10fc23aacfbf",
+      "constellations": "34326af522f4ed233f647958053e8a2919e24f3a3c2ea1b986bb23b3ec4d6160"
+    },
+    "genshin:10000109": {
+      "reference": "5d3d17cd168a67d7c456e8b385a18550aaa487bce97e529a9fd8e8268d661961",
+      "guide": "106988f9a480f014995dc74bba101617c2f25599c8549d919e7f996555c4897a",
+      "constellations": "3c82aaae3831a7ac3286570a691399fe913e357512b3e613fd514dbb23e555d7"
+    },
+    "genshin:10000060": {
+      "reference": "ff504ed05860432f4764bc79d7620d0acccb67ad1ce7f1e4e2ad80c7a8106c84",
+      "guide": "0f14bc022a10bcfbf345c85c2c805e2e4a9391df81df54ef10c3ab51497decbd",
+      "constellations": "813239f355f388bcf793ce4cf1ed06ef325ee2e0e4dfba51a708c43cbf75773e"
+    },
+    "genshin:10000052": {
+      "reference": "8ee4e5b2f69ec8b7c0896917e8b961113bef8a4935b51bfde53bbe6d690dba2f",
+      "guide": "44017306dbb89017fd558017209dfa010c9310295974c17e0fb0134ef6387189",
+      "constellations": "98f263cb0975ffe8f864a95fa72f01baf33a5bf6d8f068c0a29e467b1e2ba501"
+    },
+    "genshin:10000108": {
+      "reference": "57c8cc9700a9df191cce732f66c316fb762c9021f288e552185a4e8829d14589",
+      "guide": "51f9f3988bd7375c82506e2077c363b852321e8837557cd2d1fd59ff986efbcc",
+      "constellations": "a7c0ca624894760282797138270ab92c9c47bafc73f225c195db25f1de6e1576"
+    },
+    "genshin:10000005": {
+      "reference": "8dec140f616e0bb63e5bc4664992ded12245d8528180e1800ec1a9b402a3ec29",
+      "guide": "7948d1e75b53c51c13af0d17a29c480cc67b857bf3168718753edf3d96b090fb",
+      "constellations": "35524e263aa80391fd754d661adb2c9d483942a9263c92badc30d3e7a8d6c47b"
+    },
+    "genshin:10000061": {
+      "reference": "ffd39f5772ee23bfc4c7d3f662c3a4b39022e1d4f7f763297521535c51019aba",
+      "guide": "f2361bc66a0844b69a632eb8f8b632f43740d38a99419f1b4d41165e1e2c8f0f",
+      "constellations": "5ab133f10c88b68dc21c08d2680d396b89684896d7bc4bf6765e3adaf8150c85"
+    },
+    "genshin:10000026": {
+      "reference": "34f3ef539cf6ab72516e850a59e0602f2f92d23b4bc81e7ab3abf5106a11a887",
+      "guide": "e135c13224c791bf15d4c2f87ca22f2492544efc0aa46b265c8ed3af77b0a626",
+      "constellations": "29533057cd449dff6713b3d22fe0d41704c17842eb91f741aafe240b9fda9723"
+    },
+    "zzz:1041": {
+      "reference": "b1411bf43205c5462f70fd7cbfb9c5717990aff79ae278b6e12fd4c84ce0739c",
+      "guide": "50f602cf88495c5fc2a64b225d0500252d61e2377be75e6ce19d4979f5010830",
+      "constellations": "f55c18d31293492da684f5e15f0e5ca9204a41027bb4a4280fac3407422bf7ff"
+    },
+    "zzz:1461": {
+      "reference": "2f75fe9e10e335b63f89eaecfd4b627503823bde7bae88528c49505f54e076d4",
+      "guide": "081e5f7c7f3c71ab5aaa6ea882c269df3ffb3b64f4e1c1ccc5330a895a5af1ff",
+      "constellations": "ea0c6c89cf89899f82879c47ee9b41cdab0de7c593ea9e57c216380518a245a9"
+    },
+    "zzz:1361": {
+      "reference": "e8332e135e89d87a0effec1321e45758becb32d14ad037a46955e486c9636ba4",
+      "guide": "38b211f5e308986d1527782351397ad232e59a976975e051ff9cc704f6b24611",
+      "constellations": "ae1baf2414b56dc492686afb6b619ae12998ffd4ccf5785157d16888752a0a30"
+    },
+    "zzz:1381": {
+      "reference": "105351dc8fdca931bc93ce38812866156bad13b37ad221f71c4d5fea8688aa20",
+      "guide": "5f0bb6c761ccdb17173363a1a625f97c73d425f06fb3591d9e32fd488cdd0eff",
+      "constellations": "9cbefe1b12bc14c2e6878e2921d333d98e646d9add40a8f73bfc85990f6356af"
+    },
+    "zzz:1311": {
+      "reference": "98519226763401c4ffaf3483e3c87dfce3c32807902125473adeacf5b8a73ed8",
+      "guide": "14f7d19932e0bb432a91f5420f2daf696f79904ae5a6322e6421a3c8cfafb87a",
+      "constellations": "dd7088a700b8f21c4c2b6ca684e9845e64cd8f0f7aaa8a917358584782e173b2"
+    },
+    "zzz:1501": {
+      "reference": "5a355d5cd710804cf5d47f4ac6544b23b1d9c092475f2c23515bbb62822b0810",
+      "guide": "9525c0f46e24227ffa82517eee43ee914193232b10ba648e76c09cc18ad13533",
+      "constellations": "31f1db3e29fd4f0e6f0f78dc327af205daae268e193e042a484017009fedf0aa"
+    },
+    "zzz:1401": {
+      "reference": "6e9aeb00907b84f5f0ca10c35fa28c143fdd78fd5bfdb95dbc4151f4cf0dd0ec",
+      "guide": "f2215642a75ea8536f1977ae2688b170b4e6ed015cf021d22e9390f8638762d0",
+      "constellations": "d019e6c4c1b0e2122b660f9db43b5c03de0dc1563755c45ca4f84894c97642e6"
+    },
+    "zzz:1111": {
+      "reference": "b9e2bd2a0644adf0aa438fe052a1756d844b2e18d3554b72829fb17427da9de6",
+      "guide": "1ac3d1f7b329b350493cf9fbe49e28cd25a3b8c2468de62cb5c38ff3027adab9",
+      "constellations": "296793746a04a1e0c080462662da9daa7d8caec80385fde0cd57ca13618fca6c"
+    },
+    "zzz:1011": {
+      "reference": "151a397b40ac264513adaeea3c2a89e6478eaaebf1afd9823dfee86b2e8a01f8",
+      "guide": "e5a580997a6b1c244b102a4aff8de42316e56607f698c35646c298a9243b82ed",
+      "constellations": "e5cbcbaad4bc420b75741b17ef2da814f57e81dae72ecd21f106722c252cb6e8"
+    },
+    "zzz:1321": {
+      "reference": "a5e77cc2d6ea52cab5ec0600e10d76c4aed6c57de48b452254392e122150ce6a",
+      "guide": "2da495678aa7a7a3574680c80c784dce8eda61ea6cbf94b559de5a3fdfd2c5f8",
+      "constellations": "e7fd3c2da46ac3c028169aaa87e30457c50d2c31555f72193e4bf62454984297"
+    },
+    "zzz:1051": {
+      "reference": "e4a6da72bbbc1e212340854a8663c9f1c8007e2324e30c21eff77cba2b2bec43",
+      "guide": "d968340e71b8e13fd3c7696947d9de05f59a6188e80e64479cc7cc3b03306d90",
+      "constellations": "3121d63a6ae0e4683f55316ae1370bf9c12229551fe77c525fb756110354191c"
+    },
+    "zzz:1561": {
+      "reference": "92b21375d996c38216f4a792e0e78acf28ad895386991c3a15b38537b9860c88",
+      "guide": "78a688b684e70d5a0158a32b0bb484e4a76bf9a27a028fd101bc88551f868678",
+      "constellations": "d9abefe9746d61d0420368d1ecb59f13f7525831f07c8ccff2ad9a8c093d580c"
+    },
+    "zzz:1191": {
+      "reference": "57441d9489c6862b0575ba329c66833e8d010842e82bc6acb595fd08479c46eb",
+      "guide": "0c01de32f072cf068bff6739b0cb43da3f0a1e5de7447d2124133615bd302618",
+      "constellations": "73cf7288db594e002e4fe64fb826ec3a0650b3987a837c543cfd651ddb0bdb0a"
+    },
+    "zzz:1301": {
+      "reference": "9f26577a7ce5b0e6b10db0a8bfc9f4633b71d0d5d40533392965fedaf620d275",
+      "guide": "bb197abc5029355ad9beb1bcd747992bd4596488f1157f95a6fa1bbf4c445f27",
+      "constellations": "e50c4e3a55c70b7481bfb1623f22eb4136862904ab8031a5f4fa75aa7d30f8b3"
+    },
+    "zzz:1061": {
+      "reference": "3e4af1c40226af0ba31411dc3c98b24fc55ecac29d94d12854aa59a45d315d86",
+      "guide": "e2378ff75ff3c6426f221caa11d4d6f55ebd6be3c23773f30baf8bb36997998d",
+      "constellations": "60387ecd523bf6a9ad4c578c53e75534071175dddfef7b6632947a267aee9adb"
+    },
+    "zzz:1181": {
+      "reference": "46fc38fc4f792f3f5c565292660e2ec107072d42df2db04238ae089c32b684ce",
+      "guide": "8a9662e0c5ff0f972f72b624aff50872f87a04a949a590da39ced15f6e3b3680",
+      "constellations": "a7d68f2b13e633c937e4a05c51d33a4a7650af185824b100b69c3e358b9b76dc"
+    },
+    "zzz:1611": {
+      "reference": "ab41746dc3e2bf8069a18f8584a32fe9a14c2ff14fa63ff7b120f7afe79bcb61",
+      "guide": "8551b7a51707064a86dbdf1234184d7c14d6542640f69de7e79b3cf4c16e4196",
+      "constellations": "b41ddc6ee680e3283fd3e1e4633256aab113e95949848d07554f20f38c546255"
+    },
+    "zzz:1101": {
+      "reference": "44afb637ca284835a6244a2870095aec78cf3caed2db5c43e23259832427c87f",
+      "guide": "60b5ef0a7c049c50b5b4d05b70141a94049935345c9e61f775f680218f89f978",
+      "constellations": "ef6cb377453904ee6abb8dd8c535bb64b5d3a93de5796e20d9b0da4698edb883"
+    },
+    "zzz:1071": {
+      "reference": "8066e93155adada047ab31418cdc066afcd92fb58fa329b7cc7a854b31943ef4",
+      "guide": "8737296469484e4120f452e2a93725253434a2fc7db55e631690c2677fcc1ec4",
+      "constellations": "80c9893643fa051ff9d3351eeb86c3013c2a7d58ba7ce9db85a63cae6cc87038"
+    },
+    "zzz:1521": {
+      "reference": "dce9a8583fd4da2f43e7fcef793f6c9d373d963356dc5b9b284c2419a98ddd50",
+      "guide": "e5c99a9c202ba2954f5a185c50108afa54722df3062e00f9ae4b4dc2f6dcd107",
+      "constellations": "13b003c5e0cb09e8312d1d481e06b0f85a906e22e7a30604a817cb6861992d1e"
+    },
+    "zzz:1261": {
+      "reference": "5abbb63aae743f23b6feae9020a00e6645690d61ff8b5a487f049dc675ce727f",
+      "guide": "1e7c561d737b17846360ba74fd400423d9bb1bc11966609f03dfdfe69d00c5c8",
+      "constellations": "4ee4bd3d6ea91ab4b863bdfcb6190f57accfae75d1f642216a9dad9301b5f3cf"
+    },
+    "zzz:1591": {
+      "reference": "f984011e0bfb148400aae8b90f9e2816fa4c2c0085ea4f3e540d3256d2e6a524",
+      "guide": "078d584ee0bd26176824607197030c336159a65f65470943f8b7a979289b951c",
+      "constellations": "852a64a0fcf7a43c8c71c4175116554dbf03abfd24ab849f086cbcbc2b232f33"
+    },
+    "zzz:1531": {
+      "reference": "39b8de0706e7d8cb9ce7b39fbcab3f06016a2fa2705be7ca1ed784421670f55c",
+      "guide": "c4376fc47e3ce63b1b63c8813cbefa569f3ba4963de9874b1f2a386fcc62df80",
+      "constellations": "c917a40e187cff0c2008c75e30b71c918c010b89facd10c5a42cda832e516fc7"
+    },
+    "zzz:1271": {
+      "reference": "aa12c709e444ad0f0ce75d3f15508b16c777f871e898e47235e51534980b891d",
+      "guide": "9059fe68ee3ac5bfcdf34740fb4818e8dd8e556b385d7fe28e880c8bcdcb79eb",
+      "constellations": "a4f7da82e4def13680f160b416ede5bacebd30981b3ff1478986e3d75ac6770d"
+    },
+    "zzz:1481": {
+      "reference": "f4c8e4690e6f243ac9ffd5e6d61199ab8c1d03102e1a2cc970f2e9d1f7bbcd73",
+      "guide": "94b82a5e4b8aa9d6d17d54aef40a6adb47b10707f910119be094f37e653ad15b",
+      "constellations": "d47dcb01566df6eec7fdf8824358a1aaca8cc34c82bb2f529b749ca04f61d8e3"
+    },
+    "zzz:1031": {
+      "reference": "2bc96c43abbfefa1140ec2303dc17dd54433702f543d28e63d2ad3073d44718f",
+      "guide": "edcb94c7c87a53a3b2199a4298961a7f2f87ec663e9bee50e4095af4b2399389",
+      "constellations": "5d2419566f18a44cd4517cbe6db4d597ce976d1c61a95b59002c8b5dcbeaa073"
+    },
+    "zzz:1571": {
+      "reference": "2ad7c8e391c5dffbcecaed7075b7f1bb0851471326e7df402b176ad9f5e909a2",
+      "guide": "c9f9bffe723ca7cd6b5f3af85ecbd13e3c30269f30121a40f43c92c740f8b1e6",
+      "constellations": "5ad57e803194810c84b564ac24cbd77145bd56c8ecc36c974b1aa142464acb15"
+    },
+    "zzz:1171": {
+      "reference": "33eb6969b6f66d7984bc332bb9cdf7003d268cdab8ccc2c90ad453ec6b3e4526",
+      "guide": "4864afc3cdbea638fd857b024bffc4a10556d65c09db31872cf878911ec9d3ff",
+      "constellations": "f8f9207117ff98caf2cc169b18c333cb27f9613646090499a17813ded12e3a94"
+    },
+    "zzz:1281": {
+      "reference": "83f8910e02c574176e287e0afdfa003e172fa146de68739e17291e0c315b01f8",
+      "guide": "cf5401de76cea1894b62a3b9eba611632b9c0f76e3c95d0d21aa1c6262a17fba",
+      "constellations": "2106551b79f8a3dae472ea7a31e8d5173efa70391ddf6a12732ce605c1435a59"
+    },
+    "zzz:1331": {
+      "reference": "f2da292ff7ffd0f9c6f58cddd899087be436990d65f4aefe5ee927c42679455a",
+      "guide": "96a73bf776b7aacb56df2512ce8e72a405ab5b233e17b4bd8aa17729bf1fee03",
+      "constellations": "049eb797ef0d7780558f3b2782a97de84718eedd2fa1e24a57b4fe987860ed1b"
+    },
+    "zzz:1291": {
+      "reference": "06c0414831ca9495377d7d561fa6fc5d3ba6a86a5e3284fbcdc7f28be6f98843",
+      "guide": "c35bdbe2501b73597d696ba4f8fa20596b98628ced88e3b5dced34aa7f925575",
+      "constellations": "3f9ce23b0f087e89dd3662f8cfc19f562d96cc4faf9e902a2978202167d53d23"
+    },
+    "zzz:1551": {
+      "reference": "3846ed67deac23e9c9d63f3a12884a7fd80b5f8e6b06b4bde5668bd50aa47400",
+      "guide": "a9eb918f692fbafafcc5fff226dc8c131d8b8dca107b0dbe576e93c20df7adb6",
+      "constellations": "d089207fed62aae6c7f8e58ca7d163a7c15c478bfcb8e891b4e98891ec2f61d6"
+    },
+    "zzz:1081": {
+      "reference": "40975458bf2421e0cfc481b49e8a00beda67341fe50cb67fa11cd3e18d7880ad",
+      "guide": "5606566c5f46bb15be33c53d20a2429ad4413b0c37730682249b2f5dffbf48a9",
+      "constellations": "ebbe6327ec8c19b381a641cf5ebb15076fa5a808baca3f7c68883aabfe685374"
+    },
+    "zzz:1351": {
+      "reference": "5bd15b1adefedcd717f6bdcdb72074a9199bd82285b17eadfdf48baf7f087f9c",
+      "guide": "e58062edca088aaa5889c2b020e831c2c473a765adf2bb434aa366dc3a04c7a1",
+      "constellations": "894488427e21353826a2a88c7954a0cdfa582b939f63d13ca0eddf9f9447eda3"
+    },
+    "zzz:1541": {
+      "reference": "55bf0e706ab5b6f692ac24dfbd3611fd14efc00179b0e63f18dffb36eaee2886",
+      "guide": "ca51ed1d9c85fcf178e82024dc682c62090f204259ec20373647cc2d8fb26491",
+      "constellations": "6330b34bffdc121fbc9e940922c20fe02bd176fda39d4318225f4ce4f9d7c2e5"
+    },
+    "zzz:1121": {
+      "reference": "720607df2071a0554b98e1905dedb6ea06e5666384c89d607c6645d6b5f9da5c",
+      "guide": "56e8982b1ea7efa3d7877b88de09293a1e3785dd3625d4636f9253bb76d186f1",
+      "constellations": "335b247d05456585f65f6ff3a3312c429e58b2c9eae51af97cfb0288cfb43906"
+    },
+    "zzz:1141": {
+      "reference": "07055db4292529091fea6791ac9de88f09d34ba697692b41faa268dc3a6dfe13",
+      "guide": "7f0e2cb2e209ccb23d4616ad1e796dfcbd02cafa6812353a54f86e66f6373877",
+      "constellations": "cce5d0fedd862c1eaa4ce9c3e3ffb95e0cca94bcd7102866785c4f3f49d85d0c"
+    },
+    "zzz:1161": {
+      "reference": "f268ad090b99aed766917702945966c185e42733877e478280c856694500cc8f",
+      "guide": "86a74f8e4817a8302579069c0b6daf3d8ce2c9e9aa685cd891b1d4ba2cc8be41",
+      "constellations": "5cc4f90ef9b182f5b8dfc8a9571b4d2e1a4360e1dbfbc3a8f78db6331e9b7e26"
+    },
+    "zzz:1211": {
+      "reference": "c3e60ee48a757ff47bab0ccd661771675c4476efe9be15f0c9bc960f12d01a84",
+      "guide": "49b2ec29f67c8c24fcca525b42ec141e8e1cbc5a802fe45da789941f6d5edc83",
+      "constellations": "cbc123c8819fd7c627aa408f46b260246fd26dcf2028077d5bfb9b3b483adaa4"
+    },
+    "zzz:1451": {
+      "reference": "9ac4ac44dd42e13374e0144ed5ce15432009c9fc2c64925721d4c6debe268abf",
+      "guide": "18bb2cecfd9a2e40d59467202e386c602b77d28fa1ed3f0d2fc12bd5663720c4",
+      "constellations": "481afb4f33d095bf14d4bd28688abd7d0d59b9411ca925cd9f3a0b7e6514da88"
+    },
+    "zzz:1151": {
+      "reference": "b8553f6e5473f82aa24bcf6a74f66374f914c5db5a13d17df0920a5f0846b603",
+      "guide": "223cd2399a3cccd72cc9506538e16339c80ecbfe6dfb319439a37df590655c25",
+      "constellations": "23cfceedfd1f8aa3a6af2491cdd678fb85161b16c9b60f14865f0f270f68d399"
+    },
+    "zzz:1581": {
+      "reference": "f7ea2eeb52de3b5733418af9e14e76af4f3e36a8af6bfa85185fe7b6e894298b",
+      "guide": "a09b2f1d7a0f1c60bb6f14d9c19ffb51d5260ae2ed6a19ee68bf060c0731cd49",
+      "constellations": "9d41e61a0d0fb98b740ad0a9ceef707de565b9e37c63d9fb70154ecc563e2935"
+    },
+    "zzz:1371": {
+      "reference": "95b9880062dc2ef7efbf0f17422bb9aa6b9ca16a0e851b4da5100a79322e79d3",
+      "guide": "e2c49a6f4448b38bc0edb6ffed2ca39015ee083cd445e488e03cfe33e1f68f86",
+      "constellations": "b97fa44c1a6b35a6b23b713f4573b308b8d04af6a62af4d160a3e9e7e2036031"
+    },
+    "zzz:1391": {
+      "reference": "64f8abb7744b766febdac636d04d2cb66f8d5937012ab30899b745cebc68ccae",
+      "guide": "cc4f75173818ad556e06fb76db70ccbeb9d517acc7c3d24fb2a57afa8116546a",
+      "constellations": "79fd3ca6702ab3396cd162d317c4bd17febd57f52912a9e291812f3ff1146a95"
+    },
+    "zzz:1221": {
+      "reference": "a4ac83e40a05e6788eed1314a7a129529825c865f90ef40728b6138de753e363",
+      "guide": "75b2862b65a1c5797a800d721bf5c975613a523dbfb555b8d643ca42dd863e35",
+      "constellations": "f7159ecd138c13ca3053c27bd767a593f6c8ea9198fc744ba2b28981f498dec6"
+    },
+    "zzz:1441": {
+      "reference": "c30a78ba1f00544c0aaf9d2a8563a31b8d7efbcf0d09557c034f53ee65e8e8e2",
+      "guide": "7e1d60c42fc49fdbd428f34dba0fb25b085c6c25e2ba4666344d235d2078f001",
+      "constellations": "8b0420256468d8f3e319ad3299598e58505113837a7667194b814d2c541d3821"
+    },
+    "zzz:1241": {
+      "reference": "4b7078173a2d8a8bace6b3b60015091e42eb61188d6d8b069001e9e94fb98e06",
+      "guide": "cef37a162db4aaba2bec65c893b38a6ad1fb7ff2c50d9e984d5ec12e4f0380a7",
+      "constellations": "d9c3c4d271d660248f336a22a0376c8c53878e7bb092be64524c7ac332560a06"
+    },
+    "zzz:1341": {
+      "reference": "d063da5428db076288fb90329b80f49a3da0863ee1ab0cd366e4707cbb873d26",
+      "guide": "a319850323349a0a67a35cbd59a38d21a6d59220b91b1990898bcb5653655482",
+      "constellations": "21edc720403ce0cee79c6cdd3b0c89ba8d8ed86b8db66af91ca5939f54a6f24f"
+    },
+    "zzz:1091": {
+      "reference": "5121561ccaa327f621fdd59c8ca92455908a0d1c6778b677b26b35ce44c546e6",
+      "guide": "f5a7da1ae707daee47c691fa7eca2e27ee69e83a20c1f1e44ebca31288543c54",
+      "constellations": "c97989fdf4c8afbf67642ebb62c30b0e9756132f64245cc1e93f361d436015e1"
+    },
+    "zzz:1251": {
+      "reference": "2c0ff8aa441fe3dafac36e99b6f7ed832ad47eae22989fcec64ab49027e15caf",
+      "guide": "2b9e4e1029d368545b876973eace2e4e7c1f739ad129d68e65a0b9aa3161deae",
+      "constellations": "06ee338e47c1410d27566259caa564eeb6aa06cc9a88d78d45d9c555dfc960cf"
+    },
+    "zzz:1491": {
+      "reference": "3a8d0e163ed4ef3b19d7c141f9046be74f3f4888c5888b3edbcefd42d066c622",
+      "guide": "53f73d81e49b5a1c3d8b3d70e17539012efefa962710ca14367cf4a58a6350dc",
+      "constellations": "bb2037c1277b333020b9fe091c5d91fe82f8bfd5cd1a51fd653fd3cf5d99b40e"
+    },
+    "zzz:1201": {
+      "reference": "23e2d84fb41cf2c5179a94326965e652fe735076b80d8b99e88f5a0542b5492b",
+      "guide": "5eb376ec63f2f04f0f9edc5d6f02fc4b4e4eb6ba5b2d367038fa84ba230ebf28",
+      "constellations": "394800ed1cd28dbfbad5a6a0c137c82a7a21ccb8724f9252873f1ee69dccd5af"
+    },
+    "zzz:1131": {
+      "reference": "1b9dde0fbda1939c51111866c459b437e3ac0b50f23faba3775b2746e366dc66",
+      "guide": "b6c9bb8618270ba73770d6d28c17b683f4cc739945cd62feaf51fe45c55bd5a6",
+      "constellations": "f2abb10eb8ca85110fec53e4cdb151d35cf0efdb387468976a7c3f0834ffd3e4"
+    },
+    "zzz:1511": {
+      "reference": "0d12e8586fd2995213593458157f3e0afb0d6216938f6ec30f93f22208f8dc99",
+      "guide": "21214d93a916f0277d5e81ce7652a33985e9b72cda464d736c99a01be56e5cbd",
+      "constellations": "ad70ee95a43176f604d0b42670f57f251b8d22f7a4167cea1d78e740a4f625a9"
+    },
+    "zzz:1021": {
+      "reference": "7a1c65d27c6da2a8a1bb54849dbb785d5672ff0a2881fe060e0c3ba29f36071a",
+      "guide": "0d4333fe9d4a203a5d9d5f0729fc0eb97b3f4e0a987adaa79e0b446c81c34d6b",
+      "constellations": "413a1864143ee89636f3fd3f5336d85745541dc338f54dc7a539d873eb41707c"
+    },
+    "zzz:1471": {
+      "reference": "a9710cfe40058887a63385b3d67e2447643b13411ce4bed7cedfc9c9fa6e1d59",
+      "guide": "38a242eaf0055c4e9ffe7c4fbde29114855c7087b13fa95c20054331e27dcb3f",
+      "constellations": "2a4409ba8b1058658111cd354bda47c2249fbf866d91f6a3dd52290a80aca2d8"
+    },
+    "zzz:1411": {
+      "reference": "45715a215020d50e1e518362bb1266274f79ffea97b5c0f156c1a23c18c49feb",
+      "guide": "ccc8d2ce713ae161a2de849996c5e46f65cb85b910faf9e83ef0e30c3defe149",
+      "constellations": "ec3d63a1810c252a0cac0529d2f71bb20fba42387efdbae020be4c31c5850a0f"
+    },
+    "zzz:1431": {
+      "reference": "d33bc873248869cf6dfef8eed58eabc0dc424ddcd6bdc6a6c564fa744e04e483",
+      "guide": "77a9df54e9bb19730627813fc1076b6c2b69faccd277e26451b5ed1d9c970ab6",
+      "constellations": "269e6820bceddae273f7e265775f8f99a566d1bffa628b64bd3359a37c7baaff"
+    },
+    "zzz:1421": {
+      "reference": "f69317da578f0f86e1cd47a5bda30b2d5175c6bb28da569366f5b09c5a144542",
+      "guide": "357e278bf538d08035ea29016d6398d833e3757c489fb5e2c45c3629bdc19505",
+      "constellations": "592ebc13336311a7e1f1db776dfdb6768be411ca9846b78b403c845305211e57"
+    }
+  }
+}
