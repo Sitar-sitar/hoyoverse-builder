@@ -45,7 +45,7 @@ vi.mock("@/lib/trpc", () => ({
 const catalogData = { total: 5, reviewed: 5, games: { hsr: [{}, {}], genshin: [{}], zzz: [{}, {}] } };
 const renderHome = (url = "/") => {
   window.history.replaceState({}, "", url);
-  return render(<LanguageProvider><Home /></LanguageProvider>);
+  return render(<LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}><Home /></LanguageProvider>);
 };
 const submit = () => fireEvent.click(screen.getByRole("button", { name: "照会する" }));
 const portal = () => screen.getByTestId("top-portal");
@@ -177,7 +177,7 @@ describe("表示キー topPortal の分岐", () => {
     const view = renderHome("/?game=genshin&uid=800000001");
     fireEvent.change(screen.getByRole("textbox"), { target: { value: "800000009" } });
     mocks.variants = {};
-    view.rerender(<LanguageProvider><Home /></LanguageProvider>);
+    view.rerender(<LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}><Home /></LanguageProvider>);
     expect((screen.getByRole("textbox") as HTMLInputElement).value).toBe("800000009");
     expect(screen.queryByTestId("top-portal")).toBeNull();
   });

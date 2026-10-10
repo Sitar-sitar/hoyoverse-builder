@@ -79,6 +79,7 @@ export default function AdminHome() {
         <section className="mx-auto max-w-5xl">
           <p className="detail-mono text-[10px] text-amber-800">GITHUB APP AUTHENTICATED</p>
           <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">管理者ポータル</h1>
+          {isAdmin && <Link href="/admin/languages" className="mt-5 inline-flex border border-stone-300 px-4 py-3 text-sm text-stone-700 hover:bg-stone-200">公開言語の設定</Link>}
           <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">
             検索利用状況、翻訳フィードバック、API状態を確認します。管理操作はGitHub App認証とサーバー側Allowlistで保護されています。
           </p>

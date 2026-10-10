@@ -88,7 +88,7 @@ describe("優先強化項目の画面統合", () => {
   });
 
   it("保存済みUIDやURLのUIDだけでは照会せず、照会ボタン実行後に優先強化カードを描画する", () => {
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     expect(mocks.queryEnabled).toEqual([false]);
     expect(screen.queryByRole("heading", { name: "優先して強化する項目" })).toBeNull();
     expect(screen.getByRole("link", { name: "管理者" }).getAttribute("href")).toBe("/admin/feedback");
@@ -102,14 +102,14 @@ describe("優先強化項目の画面統合", () => {
   });
 
   it("IDと派生実装の識別情報を詳細画面へ表示する", () => {
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
     expect(screen.getByText("SOURCE ID / zzz:eren")).toBeTruthy();
     expect(screen.getByText("エレン（別実装）とは別実装として識別しています。")).toBeTruthy();
   });
 
   it("凸データが未収集のキャラクターには、効果を推測せず収集中表示を出す", () => {
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
     expect(screen.getByRole("heading", { name: "凸効果・目標補正" })).toBeTruthy();
     expect(screen.getByText("このキャラクターの凸効果データは収集中です。表示対象は10キャラクター単位で検証・適用します。")).toBeTruthy();
@@ -118,7 +118,7 @@ describe("優先強化項目の画面統合", () => {
   it("星見雅M2では解放済み効果を既定表示し、未解放効果を折り畳み、会心率目標を再計算する", () => {
     activeLookupResult = lookupWithMiyabiMindscape();
     window.history.replaceState({}, "", "/?game=zzz&uid=1300000001&character=miyabi");
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
 
     expect(screen.getByText("解放済み / 心象映画 1")).toBeTruthy();
@@ -136,7 +136,7 @@ describe("優先強化項目の画面統合", () => {
   });
 
   it("ゲーム切替だけでは照会を開始しない", () => {
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "GI" }));
     expect(mocks.queryEnabled.at(-1)).toBe(false);
     expect(screen.queryByRole("heading", { name: "公開キャラクター" })).toBeNull();
@@ -147,7 +147,7 @@ describe("優先強化項目の画面統合", () => {
     activeLookupResult.characters[0].comparisons = [];
     activeLookupResult.characters[0].recommendations = [];
     activeLookupResult.characters[0].guide.targets = [];
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
     expect(screen.getByText("このキャラクターには比較可能な固定目標値が登録されていません。推奨ビルドと主ステータスを確認してください。")).toBeTruthy();
     expect(screen.queryByText(/すべて目標水準に到達しています/)).toBeNull();
@@ -155,7 +155,7 @@ describe("優先強化項目の画面統合", () => {
 
   it("保存済みの英語設定で、優先強化提案と装備アクションを英語表示する", () => {
     window.localStorage.setItem("starrail-build-advisor.language", "en");
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "Search" }));
     expect(screen.getByRole("heading", { name: "Priority Upgrades" })).toBeTruthy();
     expect(screen.getByText("EQUIPMENT ACTION / Change Main Stat")).toBeTruthy();
@@ -163,7 +163,7 @@ describe("優先強化項目の画面統合", () => {
   });
 
   it("最大3案の推奨編成に対応バージョンを表示し、選択した案の目標補正を比較表へ反映する", () => {
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
     expect(screen.getByRole("heading", { name: "おすすめPT編成" })).toBeTruthy();
     expect(screen.getByText("対応バージョン 3.1")).toBeTruthy();
@@ -181,7 +181,7 @@ describe("優先強化項目の画面統合", () => {
   ])("$gameでもPlan選択後に対応バージョンと編成別目標を表示する", ({ game, version, change }) => {
     activeLookupResult = lookupWithPartySelection(version, change);
     window.history.replaceState({}, "", `/?game=${game}&uid=123456789&character=test`);
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "照会する" }));
     expect(screen.getByText(`対応バージョン ${version}`)).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: /PLAN 02/ }));
@@ -207,7 +207,7 @@ describe("優先強化項目の画面統合", () => {
     for (const [language, heading, reason, forbidden] of expectations) {
       cleanup();
       window.localStorage.setItem("starrail-build-advisor.language", language);
-      render(createElement(LanguageProvider, null, createElement(Home)));
+      render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
       fireEvent.click(screen.getByRole("button", { name: language === "ja" ? "照会する" : language === "en" ? "Search" : "查询" }));
       // 部位ラベルが選択中の言語になる（日本語の「全部位」を英語画面へ出さない）。
       expect(screen.getByText(heading)).toBeTruthy();
@@ -225,7 +225,7 @@ describe("優先強化項目の画面統合", () => {
 
     cleanup();
     window.localStorage.setItem("starrail-build-advisor.language", "en");
-    render(createElement(LanguageProvider, null, createElement(Home)));
+    render(createElement(LanguageProvider, { enabledLanguages: ["ja", "en", "zh-CN"] }, createElement(Home)));
     fireEvent.click(screen.getByRole("button", { name: "Search" }));
     expect(screen.getByText("IV：会心ダメ")).toBeTruthy();
     expect(screen.getByText("IV is currently HP%. Replacing it with a 会心ダメ main-stat piece is the most direct way to close this gap.")).toBeTruthy();

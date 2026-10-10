@@ -13,6 +13,7 @@ export const ROUTES = [
   "admin",
   "admin/feedback",
   "admin/display",
+  "admin/languages",
 ];
 const origin = "https://sitar-sitar.github.io";
 const root = fileURLToPath(new URL("../", import.meta.url));
