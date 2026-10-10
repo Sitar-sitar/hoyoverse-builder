@@ -1,4 +1,5 @@
 import { booleanSetting, previewAdmin } from "./_core/migrationRuntime";
+import { languageSettingsRouter } from "./languageSettings";
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -117,6 +118,7 @@ export const appRouter = router({
       }),
   }),
 
+  languages: languageSettingsRouter,
   display: router({
     // 公開用。例外を投げず、取得できないときは全キー legacy を返す。照会分析は記録しない。
     settings: publicProcedure.query(() => readPublicDisplaySettings()),

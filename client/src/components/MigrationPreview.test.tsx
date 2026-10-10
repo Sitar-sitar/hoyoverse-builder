@@ -40,7 +40,7 @@ describe("preview UI", () => {
     language => {
       localStorage.setItem("starrail-build-advisor.language", language);
       render(
-        <LanguageProvider>
+        <LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}>
           <MigrationPreviewBanner />
         </LanguageProvider>
       );
@@ -53,7 +53,7 @@ describe("preview UI", () => {
   it("disables anonymous posting and guards even a directly submitted form", () => {
     localStorage.setItem("starrail-build-advisor.language", "en");
     render(
-      <LanguageProvider>
+      <LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}>
         <TranslationFeedbackForm pagePath="/" />
       </LanguageProvider>
     );
@@ -70,7 +70,7 @@ describe("preview UI", () => {
     state.role = "admin";
     localStorage.setItem("starrail-build-advisor.language", "en");
     render(
-      <LanguageProvider>
+      <LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}>
         <TranslationFeedbackForm pagePath="/" />
       </LanguageProvider>
     );
@@ -83,7 +83,7 @@ describe("preview UI", () => {
   it("removes the notice outside preview", () => {
     state.preview = false;
     render(
-      <LanguageProvider>
+      <LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}>
         <MigrationPreviewBanner />
       </LanguageProvider>
     );

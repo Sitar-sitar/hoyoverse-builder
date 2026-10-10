@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-export type AppLanguage = "ja" | "en" | "zh-CN";
+import { DEFAULT_ENABLED_LANGUAGES, normalizeEnabledLanguages, type AppLanguage } from "@shared/languages";
+export type { AppLanguage } from "@shared/languages";
 
 const STORAGE_KEY = "starrail-build-advisor.language";
 
@@ -128,6 +129,7 @@ export type TranslationKey = keyof typeof copy.ja;
 
 type LanguageContextValue = {
   language: AppLanguage;
+  enabledLanguages: AppLanguage[];
   setLanguage: (language: AppLanguage) => void;
   t: (key: TranslationKey) => string;
 };
@@ -135,17 +137,27 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function storedLanguage(): AppLanguage {
-  const value = typeof window === "undefined" ? null : window.localStorage.getItem(STORAGE_KEY);
-  return value === "en" || value === "zh-CN" || value === "ja" ? value : "ja";
+  try {
+    const value = typeof window === "undefined" ? null : window.localStorage.getItem(STORAGE_KEY);
+    return value === "en" || value === "zh-CN" || value === "ja" ? value : "ja";
+  } catch { return "ja"; }
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<AppLanguage>(storedLanguage);
+export function LanguageProvider({ children, enabledLanguages: enabled = DEFAULT_ENABLED_LANGUAGES, settingsPending = false }: { children: React.ReactNode; enabledLanguages?: AppLanguage[]; settingsPending?: boolean }) {
+  const enabledLanguages = normalizeEnabledLanguages(enabled);
+  const [selectedLanguage, setSelectedLanguage] = useState<AppLanguage>(storedLanguage);
+  const language = enabledLanguages.includes(selectedLanguage) ? selectedLanguage : "ja";
+  const setLanguage = (next: AppLanguage) => {
+    if (enabledLanguages.includes(next)) setSelectedLanguage(next);
+  };
   useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, language);
     document.documentElement.lang = language;
-  }, [language]);
-  return <LanguageContext.Provider value={{ language, setLanguage, t: (key) => copy[language][key] }}>{children}</LanguageContext.Provider>;
+    // 取得中は日本語で描くが、公開値が確定するまで利用者の選択を消さない。
+    if (settingsPending) return;
+    setSelectedLanguage(language);
+    try { window.localStorage.setItem(STORAGE_KEY, language); } catch { /* 表示は続ける。 */ }
+  }, [language, settingsPending]);
+  return <LanguageContext.Provider value={{ language, enabledLanguages, setLanguage, t: (key) => copy[language][key] }}>{children}</LanguageContext.Provider>;
 }
 
 export function useLanguage() {

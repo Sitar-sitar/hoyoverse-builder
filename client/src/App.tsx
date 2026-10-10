@@ -10,7 +10,7 @@ import DisplayPreviewBanner from "./components/DisplayPreviewBanner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PublicCatalogShortcut from "./components/PublicCatalogShortcut";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { LanguageProvider } from "./contexts/LanguageContext";
+import PublishedLanguageProvider from "./contexts/PublishedLanguageProvider";
 import { DisplaySettingsProvider, useDisplaySettings, useDisplayVariant } from "./contexts/DisplaySettingsContext";
 
 // 画面はルート単位で遅延読み込みする（設計: docs/修正設計書_Pagesのルート単位コード分割_2026-09-10.md）。
@@ -22,6 +22,7 @@ const TranslationFeedback = lazy(() => import("./pages/TranslationFeedback"));
 const AdminHome = lazy(() => import("./pages/AdminHome"));
 const FeedbackAdmin = lazy(() => import("./pages/FeedbackAdmin"));
 const DisplaySettingsAdmin = lazy(() => import("./pages/DisplaySettingsAdmin"));
+const LanguageSettingsAdmin = lazy(() => import("./pages/LanguageSettingsAdmin"));
 
 /** テーマを切り替えられる公開画面（案 E-2）。管理画面と 404 はライト固定。 */
 export const THEME_SWITCHABLE_PATHS = ["/", "/characters", "/updates", "/feedback"] as const;
@@ -68,6 +69,7 @@ function Router() {
         <Route path={"/admin"} component={AdminHome} />
         <Route path={"/admin/feedback"} component={FeedbackAdmin} />
         <Route path={"/admin/display"} component={DisplaySettingsAdmin} />
+        <Route path={"/admin/languages"} component={LanguageSettingsAdmin} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
@@ -84,7 +86,7 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <LanguageProvider>
+      <PublishedLanguageProvider>
         <DisplaySettingsProvider>
           <WouterRouter base={routerBase}>
             <ThemeGate>
@@ -99,7 +101,7 @@ function App() {
             </ThemeGate>
           </WouterRouter>
         </DisplaySettingsProvider>
-      </LanguageProvider>
+      </PublishedLanguageProvider>
     </ErrorBoundary>
   );
 }

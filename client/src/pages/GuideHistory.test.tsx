@@ -27,7 +27,7 @@ describe("更新履歴の多言語表示", () => {
   beforeEach(() => window.localStorage.setItem("starrail-build-advisor.language", "en"));
 
   it("保存済みの英語設定を復元し、中国語へ切り替える", () => {
-    render(<LanguageProvider><GuideHistory /></LanguageProvider>);
+    render(<LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}><GuideHistory /></LanguageProvider>);
     expect(screen.getByRole("heading", { name: "Update History" })).toBeTruthy();
     expect(screen.getByRole("heading", { name: "Site-wide Changes" })).toBeTruthy();
     expect(screen.getByRole("heading", { name: "Individual Update Coverage" })).toBeTruthy();

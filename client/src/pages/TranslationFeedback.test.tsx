@@ -26,7 +26,7 @@ describe("翻訳フィードバック画面", () => {
   });
 
   it("保存済み言語で表示し、中国語への切替と匿名送信を行える", () => {
-    render(<LanguageProvider><TranslationFeedback /></LanguageProvider>);
+    render(<LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}><TranslationFeedback /></LanguageProvider>);
     expect(screen.getByRole("heading", { name: "Help Improve Translations" })).toBeTruthy();
     expect(screen.getByText("Do not enter personal, account, or UID information.")).toBeTruthy();
 
@@ -47,7 +47,7 @@ describe("翻訳フィードバック画面", () => {
 
   it("更新履歴からの報告を対象画面として保存する", () => {
     window.history.replaceState({}, "", "/feedback?source=/updates");
-    render(<LanguageProvider><TranslationFeedback /></LanguageProvider>);
+    render(<LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}><TranslationFeedback /></LanguageProvider>);
     fireEvent.change(screen.getByLabelText("Suggested wording"), { target: { value: "Make this label clearer." } });
     fireEvent.click(screen.getByRole("button", { name: "Send feedback" }));
     expect(mocks.mutate).toHaveBeenCalledWith(expect.objectContaining({ pagePath: "/updates" }), expect.any(Object));

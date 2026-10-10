@@ -109,7 +109,7 @@ function open(language = "ja") {
   window.localStorage.setItem("starrail-build-advisor.language", language);
   window.history.replaceState({}, "", "/characters?game=zzz&character=エレン");
   return render(
-    <LanguageProvider>
+    <LanguageProvider enabledLanguages={["ja", "en", "zh-CN"]}>
       <CharacterCatalog />
     </LanguageProvider>
   );
