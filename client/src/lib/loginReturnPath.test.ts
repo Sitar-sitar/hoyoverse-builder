@@ -17,6 +17,11 @@ describe("管理者ログイン後の復帰先", () => {
     expect(consumeLoginReturnPath()).toBe("/admin/display");
   });
 
+  it("公開言語の管理画面を復帰先として保存する", () => {
+    saveLoginReturnPath("/admin/languages");
+    expect(consumeLoginReturnPath()).toBe("/admin/languages");
+  });
+
   it("外部URLや任意の内部パスは復帰先として受け付けない", () => {
     saveLoginReturnPath("https://example.com" as string);
     expect(sessionStorage.getItem(LOGIN_RETURN_PATH_KEY)).toBeNull();
