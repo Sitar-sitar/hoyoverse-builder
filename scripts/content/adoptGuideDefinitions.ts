@@ -5,13 +5,30 @@ import { pathToFileURL } from "node:url";
 import type { GuideAuthoringRecord } from "../../shared/content/guideAuthoring";
 import type { SourceText, TextRef } from "../../shared/content/types";
 import { renderSources } from "./adopt";
+import type { BoundTextRef } from "../../shared/content/teamAuthoring";
 
 export function decodeGuideDefinitions(
   text: string,
   moduleName: string,
   registries: Record<
     string,
-    { game: GuideAuthoringRecord["game"]; kind: "name" | "sourceId" }
+    {
+      game: GuideAuthoringRecord["game"];
+      kind: GuideAuthoringRecord["lookupKind"];
+      factory?: { headline: TextRef; context: TextRef };
+      normalize?: (
+        raw: any,
+        name: string,
+        context: {
+          constant: (name: string) => any;
+          template: (
+            ja: string,
+            placeholders: SourceText["placeholders"],
+            variables: Record<string, string | number>
+          ) => BoundTextRef;
+        }
+      ) => any;
+    }
   >
 ) {
   const ast = ts.createSourceFile(
@@ -222,9 +239,34 @@ export function decodeGuideDefinitions(
     edits.push({
       start: declaration.initializer.getStart(ast),
       end: declaration.initializer.end,
-      value: `projectGuideRegistry(guideRecords, ${JSON.stringify(registry)})`,
+      value: policy.factory
+        ? `projectGuideProfileRegistry(guideRecords, ${JSON.stringify(registry)}) as ${declaration.type?.getText(ast)}`
+        : `projectGuideRegistry(guideRecords, ${JSON.stringify(registry)})`,
     });
-    for (const [lookupKey, raw] of Object.entries(dictionary)) {
+    for (const [lookupKey, original] of Object.entries(dictionary)) {
+      const raw = policy.normalize
+        ? policy.normalize(original, lookupKey, {
+            constant: name => {
+              const expression = constants.get(name);
+              if (!expression) throw new Error("Missing guide constant");
+              return value(expression);
+            },
+            template: (ja, placeholders, variables) => {
+              const existing = sources.find(
+                source =>
+                  source.ja === ja &&
+                  JSON.stringify(source.placeholders) ===
+                    JSON.stringify(placeholders)
+              );
+              const textRef = existing
+                ? { kind: "textRef" as const, id: existing.id }
+                : ref(ja, `${policy.game} ${registry}: typed guide template`);
+              if (!existing)
+                sources[sources.length - 1].placeholders = placeholders;
+              return { ...textRef, variables };
+            },
+          })
+        : original;
       if (
         Object.keys(raw).some(
           key =>
@@ -336,7 +378,7 @@ export function decodeGuideDefinitions(
             policy.kind === "sourceId"
               ? `${policy.game}:${lookupKey}`
               : `legacy:${policy.game}:${guideId}`,
-          headline: refs.headline,
+          headline: refs.headline ?? policy.factory?.headline,
           equipmentRecommendations,
           mainStatPreferences,
           targetDefinitions,
@@ -345,6 +387,19 @@ export function decodeGuideDefinitions(
         },
         equipmentLegacy,
         mainStatLegacy,
+        ...(policy.factory
+          ? {
+              factory: {
+                context: policy.factory.context,
+                headlineBindings: { v0: "name" as const, v1: "label" as const },
+                contextBindings: { v0: "name" as const },
+                label: ref(
+                  "個別ビルド方針",
+                  `${policy.game} ${guideId}: generated guide label`
+                ),
+              },
+            }
+          : {}),
         metadata: Object.fromEntries(
           Object.entries(raw).filter(([key]) =>
             ["dataAsOf", "updatedAt", "profileId"].includes(key)
@@ -391,6 +446,93 @@ if (
         ZZZ_CHARACTER_GUIDES: { game: "zzz", kind: "name" },
       },
     },
+    batch17: {
+      path: "server/batch17Guides.ts",
+      registries: {
+        SPECS: {
+          game: "genshin",
+          kind: "name",
+          normalize: (spec, name, context) => {
+            if (
+              Object.keys(spec).some(
+                key =>
+                  ![
+                    "headline",
+                    "relicSet",
+                    "stats",
+                    "sourceId",
+                    "context",
+                    "targets",
+                  ].includes(key)
+              ) ||
+              !Array.isArray(spec.stats) ||
+              spec.stats.length !== 3 ||
+              !Number.isInteger(spec.sourceId)
+            )
+              throw new Error("Invalid batch17 guide spec");
+            const reference = (suffix: string): TextRef => ({
+              kind: "textRef",
+              id: `guide.legacy.batch17Guides.${suffix}`,
+            });
+            return {
+              headline: spec.headline,
+              relicSet: spec.relicSet,
+              planarSet: reference("b00060"),
+              mainStats: spec.stats.map((value: unknown, index: number) => ({
+                slot: reference(["b00061", "b00062", "b00063"][index]),
+                value,
+              })),
+              targets: spec.targets ?? [],
+              targetContext:
+                spec.context ??
+                context.template(
+                  "{v0}専用：主ガイドに固定の戦闘外到達値がないため、数値閾値は推測で登録しない。武器・編成・命ノ星座・戦闘中効果は現在値へ加算しない。",
+                  { v0: "string" },
+                  { v0: name }
+                ),
+              dataAsOf:
+                context.constant("BATCH17_GUIDE_DATA_AS_OF")[name] ??
+                "2026-08-13",
+              updatedAt: context.constant("BATCH17_DATE"),
+              sourceLabel: context.template(
+                "Game8の更新日付き{v0}個別ビルド・命ノ星座・PTガイドを照合（https://game8.jp/genshin/{v1}）",
+                { v0: "string", v1: "number" },
+                { v0: name, v1: spec.sourceId }
+              ),
+              profileId: `curated:batch17:genshin:${name}`,
+            };
+          },
+        },
+      },
+    },
+    profiles: {
+      path: "server/individualGuides.ts",
+      registries: Object.fromEntries(
+        (
+          [
+            ["HSR_PROFILES", "hsr", "b00002"],
+            ["GI_PROFILES", "genshin", "b00003"],
+            ["ZZZ_PROFILES", "zzz", "b00004"],
+          ] as const
+        ).map(([registry, game, context]) => [
+          registry,
+          {
+            game,
+            kind: "profile" as const,
+            factory: {
+              headline: {
+                kind: "textRef" as const,
+                id: "guide.legacy.individualGuides_templates.b00001" as const,
+              },
+              context: {
+                kind: "textRef" as const,
+                id: `guide.legacy.individualGuides_templates.${context}` as const,
+              },
+            },
+          },
+        ])
+      ),
+    },
   };
   const target = targets[module];
   if (
@@ -398,7 +540,9 @@ if (
     process.argv.length > 4 ||
     (process.argv[3] !== undefined && process.argv[3] !== "--write")
   )
-    throw new Error("Usage: adopt-guide-definitions hsr|providers [--write]");
+    throw new Error(
+      "Usage: adopt-guide-definitions hsr|providers|profiles|batch17 [--write]"
+    );
   const moduleName = `guideDefinitions_${module}`;
   const output = `content/${moduleName}.ts`;
   if (existsSync(resolve(output)))
@@ -432,7 +576,7 @@ if (
     );
     writeFileSync(
       resolve(target.path),
-      `import {records as guideRecords} from "../content/${moduleName}";\nimport {projectGuideRegistry} from "./content/guides";\n` +
+      `import {records as guideRecords} from "../content/${moduleName}";\nimport {${module === "profiles" ? "projectGuideProfileRegistry, projectGeneratedGuide" : "projectGuideRegistry"}} from "./content/guides";\n` +
         result.migrated
     );
   }

@@ -4,6 +4,8 @@ import { guideRefs } from "../../shared/content/walk";
 import { canonicalSources, canonicalTranslations } from "../../content/catalog";
 import { createLegacyTexts } from "./legacyTexts";
 import { validateGuides } from "../../content/guides";
+import type { TextRef } from "../../shared/content/types";
+import type { BoundTextRef } from "../../shared/content/teamAuthoring";
 
 const texts = createLegacyTexts(
   canonicalSources,
@@ -11,9 +13,12 @@ const texts = createLegacyTexts(
   canonicalTranslations["zh-CN"]
 );
 const knownSources = new Set(canonicalSources.map(source => source.id));
+const ja = (ref: TextRef) => texts.ja(ref.id, (ref as BoundTextRef).variables);
 
 /** Preserve the previous serialization order as well as all calculation values. */
-export function projectGuide(record: GuideAuthoringRecord): GuideDefinition {
+function projectGuideProjection(
+  record: GuideAuthoringRecord
+): Omit<GuideDefinition, "headline"> & { headline?: string } {
   const content = record.content;
   for (const ref of guideRefs(content)) {
     if (!knownSources.has(ref.id))
@@ -41,8 +46,8 @@ export function projectGuide(record: GuideAuthoringRecord): GuideDefinition {
     throw new Error("Guide projection array shape differs");
   const mainStats = content.mainStatPreferences.map((stat, index) =>
     ordered(record.legacyShape.mainStatFields[index], {
-      slot: texts.ja(stat.slotLabel.id),
-      value: texts.ja(stat.value.id),
+      slot: ja(stat.slotLabel),
+      value: ja(stat.value),
     })
   );
   const targets = content.targetDefinitions.map((target, index) => {
@@ -53,7 +58,7 @@ export function projectGuide(record: GuideAuthoringRecord): GuideDefinition {
       throw new Error("Invalid guide target values");
     return ordered(record.legacyShape.targetFields[index], {
       key: target.key,
-      label: texts.ja(target.label.id),
+      label: ja(target.label),
       unit: target.unit,
       targets: ordered(record.legacyShape.tierFields[index], {
         厳選: target.strict,
@@ -63,19 +68,73 @@ export function projectGuide(record: GuideAuthoringRecord): GuideDefinition {
     });
   });
   return ordered(record.legacyShape.fields, {
-    headline: texts.ja(content.headline.id),
-    relicSet: texts.ja(content.equipmentRecommendations[0].description.id),
-    planarSet: texts.ja(content.equipmentRecommendations[1].description.id),
+    ...(record.factory ? {} : { headline: ja(content.headline) }),
+    relicSet: ja(content.equipmentRecommendations[0].description),
+    planarSet: ja(content.equipmentRecommendations[1].description),
     mainStats,
     targets,
     ...(content.targetContext
-      ? { targetContext: texts.ja(content.targetContext.id) }
+      ? { targetContext: ja(content.targetContext) }
       : {}),
     ...(content.sourceLabels.length
-      ? { sourceLabel: texts.ja(content.sourceLabels[0].id) }
+      ? { sourceLabel: ja(content.sourceLabels[0]) }
       : {}),
     ...record.metadata,
-  }) as GuideDefinition;
+  }) as Omit<GuideDefinition, "headline"> & { headline?: string };
+}
+
+export function projectGuide(record: GuideAuthoringRecord): GuideDefinition {
+  if (record.factory)
+    throw new Error("Guide factory needs a generated owner binding");
+  return projectGuideProjection(record) as GuideDefinition;
+}
+export function projectGuideProfile(
+  record: GuideAuthoringRecord
+): Omit<GuideDefinition, "headline"> {
+  if (!record.factory) throw new Error("Missing guide factory");
+  return projectGuideProjection(record);
+}
+
+export function projectGuideProfileRegistry(
+  records: GuideAuthoringRecord[],
+  registry: string
+): Record<string, Omit<GuideDefinition, "headline">> {
+  validateGuides(records);
+  return Object.fromEntries(
+    records
+      .filter(record => record.lookupKey.startsWith(`${registry}:`))
+      .map(record => {
+        if (!record.factory) throw new Error("Missing guide factory");
+        return [
+          record.lookupKey.slice(registry.length + 1),
+          projectGuideProfile(record),
+        ];
+      })
+  );
+}
+
+export function projectGeneratedGuide(
+  records: GuideAuthoringRecord[],
+  registry: string,
+  profileId: string,
+  name: string
+): GuideDefinition {
+  const record = records.find(
+    record => record.lookupKey === `${registry}:${profileId}`
+  );
+  if (!record?.factory) throw new Error("Unknown guide factory profile");
+  const profile = projectGuideProfile(record);
+  return {
+    ...profile,
+    profileId,
+    headline: texts.ja(record.content.headline.id, {
+      v0: name,
+      v1: texts.ja(record.factory.label.id),
+    }),
+    targetContext:
+      profile.targetContext ??
+      texts.ja(record.factory.context.id, { v0: name }),
+  };
 }
 
 export function projectGuideRegistry(

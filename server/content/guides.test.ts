@@ -3,27 +3,34 @@ import {
   guideRecords,
   guideSections,
   validateGuides,
+  validateGuideProfiles,
 } from "../../content/guides";
-import { projectGuide, projectGuideRegistry } from "./guides";
+import {
+  projectGuide,
+  projectGuideProfile,
+  projectGuideRegistry,
+  projectGeneratedGuide,
+} from "./guides";
+import { records as profiles } from "../../content/guideDefinitions_profiles";
+import profileBaseline from "../../content/coverage/guideProfiles.baseline.json";
 import { decodeGuideDefinitions } from "../../scripts/content/adoptGuideDefinitions";
 
 describe("guide authoring migration", () => {
   it("registers every migrated definition and preserves projection fields", () => {
-    expect(guideRecords).toHaveLength(232);
+    expect(guideRecords).toHaveLength(281);
     expect(
       guideSections().filter(section => section.visibility === "active")
-    ).toHaveLength(232);
+    ).toHaveLength(281);
     expect(
       guideSections().filter(section => section.visibility === "planned")
-    ).toHaveLength(928);
+    ).toHaveLength(1124);
     for (const record of guideRecords) {
-      expect(Object.keys(projectGuide(record))).toEqual(
-        record.legacyShape.fields
-      );
+      const projected = record.factory
+        ? projectGuideProfile(record)
+        : projectGuide(record);
+      expect(Object.keys(projected)).toEqual(record.legacyShape.fields);
       expect(
-        projectGuide(record).targets.map(target =>
-          Object.values(target.targets)
-        )
+        projected.targets.map(target => Object.values(target.targets))
       ).toEqual(
         record.content.targetDefinitions.map(target => [
           target.strict,
@@ -32,6 +39,39 @@ describe("guide authoring migration", () => {
         ])
       );
     }
+  });
+  it("preserves every generated profile against independent old implementation fixtures", () => {
+    expect(profiles).toHaveLength(21);
+    expect(() => projectGuide(profiles[0])).toThrow();
+    expect(profileBaseline).toHaveLength(63);
+    for (const entry of profileBaseline)
+      expect(
+        JSON.stringify(
+          projectGeneratedGuide(
+            profiles,
+            entry.registry,
+            entry.profileId,
+            entry.name
+          )
+        )
+      ).toBe(JSON.stringify(entry.guide));
+    expect(() =>
+      projectGeneratedGuide(profiles, "HSR_PROFILES", "unknown", "name")
+    ).toThrow();
+    const broken = structuredClone(profiles[0]);
+    broken.factory!.contextBindings.v0 = "wrong" as "name";
+    expect(() => validateGuides([broken])).toThrow();
+    const missing = structuredClone(profiles[0]);
+    delete missing.factory;
+    expect(() => validateGuides([missing])).toThrow();
+    expect(() => validateGuideProfiles(profiles.slice(1))).toThrow();
+    const wrongVariable = structuredClone(
+      guideRecords.find(record => record.lookupKey.startsWith("SPECS:"))!
+    );
+    Object.assign(wrongVariable.content.sourceLabels[0], {
+      variables: { v0: "name", v1: "not a number" },
+    });
+    expect(() => validateGuides([wrongVariable])).toThrow();
   });
   it("rejects new unclassified fields, omitted fields, missing text and malformed numbers", () => {
     const mutate = (change: (value: (typeof guideRecords)[number]) => void) => {

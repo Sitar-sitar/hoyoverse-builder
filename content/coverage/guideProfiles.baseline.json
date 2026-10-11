@@ -1,0 +1,3479 @@
+[
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "crit",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく火力向け遺物",
+      "planarSet": "会心・行動回数に合うオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 攻撃力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 143,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 60,
+            "妥協": 45
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "crit",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく火力向け遺物",
+      "planarSet": "会心・行動回数に合うオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 攻撃力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 143,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 60,
+            "妥協": 45
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "crit",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく火力向け遺物",
+      "planarSet": "会心・行動回数に合うオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 攻撃力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 143,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 60,
+            "妥協": 45
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "dot",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく持続ダメージ向け遺物",
+      "planarSet": "速度・攻撃力向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "効果命中 / 攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "effectHitRate",
+          "label": "効果命中",
+          "unit": "%",
+          "targets": {
+            "厳選": 120,
+            "目標": 90,
+            "妥協": 67
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 147,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 75,
+            "妥協": 60
+          }
+        }
+      ],
+      "profileId": "dot",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "dot",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく持続ダメージ向け遺物",
+      "planarSet": "速度・攻撃力向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "効果命中 / 攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "effectHitRate",
+          "label": "効果命中",
+          "unit": "%",
+          "targets": {
+            "厳選": 120,
+            "目標": 90,
+            "妥協": 67
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 147,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 75,
+            "妥協": 60
+          }
+        }
+      ],
+      "profileId": "dot",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "dot",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく持続ダメージ向け遺物",
+      "planarSet": "速度・攻撃力向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "効果命中 / 攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "effectHitRate",
+          "label": "効果命中",
+          "unit": "%",
+          "targets": {
+            "厳選": 120,
+            "目標": 90,
+            "妥協": 67
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 147,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 75,
+            "妥協": 60
+          }
+        }
+      ],
+      "profileId": "dot",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "break",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく撃破向け遺物",
+      "planarSet": "撃破特効・速度向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "撃破特効"
+        }
+      ],
+      "targets": [
+        {
+          "key": "breakEffect",
+          "label": "撃破特効",
+          "unit": "%",
+          "targets": {
+            "厳選": 300,
+            "目標": 240,
+            "妥協": 180
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 150,
+            "妥協": 145
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 60,
+            "目標": 45,
+            "妥協": 30
+          }
+        }
+      ],
+      "profileId": "break",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "break",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく撃破向け遺物",
+      "planarSet": "撃破特効・速度向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "撃破特効"
+        }
+      ],
+      "targets": [
+        {
+          "key": "breakEffect",
+          "label": "撃破特効",
+          "unit": "%",
+          "targets": {
+            "厳選": 300,
+            "目標": 240,
+            "妥協": 180
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 150,
+            "妥協": 145
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 60,
+            "目標": 45,
+            "妥協": 30
+          }
+        }
+      ],
+      "profileId": "break",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "break",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく撃破向け遺物",
+      "planarSet": "撃破特効・速度向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "攻撃力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "撃破特効"
+        }
+      ],
+      "targets": [
+        {
+          "key": "breakEffect",
+          "label": "撃破特効",
+          "unit": "%",
+          "targets": {
+            "厳選": 300,
+            "目標": 240,
+            "妥協": 180
+          }
+        },
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 150,
+            "妥協": 145
+          }
+        },
+        {
+          "key": "attackPercent",
+          "label": "攻撃力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 60,
+            "目標": 45,
+            "妥協": 30
+          }
+        }
+      ],
+      "profileId": "break",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "support",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 161,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 32,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "support",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 161,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 32,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "support",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 161,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 32,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "sustain",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく耐久・回復向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "治癒量 / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "sustain",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく耐久・回復向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "治癒量 / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "sustain",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく耐久・回復向け遺物",
+      "planarSet": "速度・耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "治癒量 / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 160,
+            "目標": 145,
+            "妥協": 134
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "tank",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づくバリア・防護向け遺物",
+      "planarSet": "耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率 / 防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 150,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 70,
+            "妥協": 50
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "tank",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づくバリア・防護向け遺物",
+      "planarSet": "耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率 / 防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 150,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 70,
+            "妥協": 50
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "tank",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づくバリア・防護向け遺物",
+      "planarSet": "耐久向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力% / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "EP回復効率 / 防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "speed",
+          "label": "速度",
+          "unit": "",
+          "targets": {
+            "厳選": 150,
+            "目標": 134,
+            "妥協": 120
+          }
+        },
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 90,
+            "目標": 70,
+            "妥協": 50
+          }
+        },
+        {
+          "key": "effectRes",
+          "label": "効果抵抗",
+          "unit": "%",
+          "targets": {
+            "厳選": 45,
+            "目標": 30,
+            "妥協": 20
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "hp",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存火力向け遺物",
+      "planarSet": "HP・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / HP%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "HP%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 65,
+            "目標": 50,
+            "妥協": 35
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "hp",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存火力向け遺物",
+      "planarSet": "HP・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / HP%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "HP%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 65,
+            "目標": 50,
+            "妥協": 35
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "hp",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存火力向け遺物",
+      "planarSet": "HP・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / HP%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "HP%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 170,
+            "妥協": 140
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 65,
+            "目標": 50,
+            "妥協": 35
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "def",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御依存向け遺物",
+      "planarSet": "防御・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 防御力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 100,
+            "目標": 80,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 65,
+            "妥協": 55
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 180,
+            "目標": 150,
+            "妥協": 120
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "def",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御依存向け遺物",
+      "planarSet": "防御・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 防御力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 100,
+            "目標": 80,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 65,
+            "妥協": 55
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 180,
+            "目標": 150,
+            "妥協": 120
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "HSR_PROFILES",
+    "profileId": "def",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御依存向け遺物",
+      "planarSet": "防御・会心向けオーナメント",
+      "mainStats": [
+        {
+          "slot": "胴体",
+          "value": "会心率 / 会心ダメ"
+        },
+        {
+          "slot": "脚部",
+          "value": "速度 / 防御力%"
+        },
+        {
+          "slot": "次元界オーブ",
+          "value": "防御力%"
+        },
+        {
+          "slot": "連結縄",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defPercent",
+          "label": "防御力%",
+          "unit": "%",
+          "targets": {
+            "厳選": 100,
+            "目標": 80,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 75,
+            "目標": 65,
+            "妥協": 55
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメ",
+          "unit": "%",
+          "targets": {
+            "厳選": 180,
+            "目標": 150,
+            "妥協": 120
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "crit",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく会心火力向け聖遺物",
+      "planarSet": "編成・武器に応じて元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "攻撃力% / 元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 160,
+            "目標": 130,
+            "妥協": 115
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "crit",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく会心火力向け聖遺物",
+      "planarSet": "編成・武器に応じて元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "攻撃力% / 元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 160,
+            "目標": 130,
+            "妥協": 115
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "crit",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく会心火力向け聖遺物",
+      "planarSet": "編成・武器に応じて元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "攻撃力% / 元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 85,
+            "目標": 75,
+            "妥協": 65
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 160,
+            "目標": 130,
+            "妥協": 115
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "hp",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 32000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "hp",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 32000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "hp",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づくHP依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 元素ダメージ"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 32000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "hp",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "def",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "防御力%"
+        },
+        {
+          "slot": "杯",
+          "value": "岩元素ダメージ / 防御力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defense",
+          "label": "防御力",
+          "unit": "",
+          "targets": {
+            "厳選": 2800,
+            "目標": 2400,
+            "妥協": 2000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "def",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "防御力%"
+        },
+        {
+          "slot": "杯",
+          "value": "岩元素ダメージ / 防御力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defense",
+          "label": "防御力",
+          "unit": "",
+          "targets": {
+            "厳選": 2800,
+            "目標": 2400,
+            "妥協": 2000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "def",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力依存向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を調整",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "防御力%"
+        },
+        {
+          "slot": "杯",
+          "value": "岩元素ダメージ / 防御力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 会心ダメージ"
+        }
+      ],
+      "targets": [
+        {
+          "key": "defense",
+          "label": "防御力",
+          "unit": "",
+          "targets": {
+            "厳選": 2800,
+            "目標": 2400,
+            "妥協": 2000
+          }
+        },
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "def",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "em",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく元素反応向け聖遺物",
+      "planarSet": "元素熟知・元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "冠",
+          "value": "元素熟知"
+        }
+      ],
+      "targets": [
+        {
+          "key": "elementalMastery",
+          "label": "元素熟知",
+          "unit": "",
+          "targets": {
+            "厳選": 1000,
+            "目標": 800,
+            "妥協": 650
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 190,
+            "目標": 160,
+            "妥協": 140
+          }
+        }
+      ],
+      "profileId": "em",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "em",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく元素反応向け聖遺物",
+      "planarSet": "元素熟知・元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "冠",
+          "value": "元素熟知"
+        }
+      ],
+      "targets": [
+        {
+          "key": "elementalMastery",
+          "label": "元素熟知",
+          "unit": "",
+          "targets": {
+            "厳選": 1000,
+            "目標": 800,
+            "妥協": 650
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 190,
+            "目標": 160,
+            "妥協": 140
+          }
+        }
+      ],
+      "profileId": "em",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "em",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく元素反応向け聖遺物",
+      "planarSet": "元素熟知・元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "杯",
+          "value": "元素熟知"
+        },
+        {
+          "slot": "冠",
+          "value": "元素熟知"
+        }
+      ],
+      "targets": [
+        {
+          "key": "elementalMastery",
+          "label": "元素熟知",
+          "unit": "",
+          "targets": {
+            "厳選": 1000,
+            "目標": 800,
+            "妥協": 650
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 190,
+            "目標": 160,
+            "妥協": 140
+          }
+        }
+      ],
+      "profileId": "em",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "support",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け聖遺物",
+      "planarSet": "元素爆発の循環と必要耐久を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 攻撃力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 250,
+            "目標": 200,
+            "妥協": 170
+          }
+        },
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 35000,
+            "目標": 28000,
+            "妥協": 23000
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "support",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け聖遺物",
+      "planarSet": "元素爆発の循環と必要耐久を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 攻撃力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 250,
+            "目標": 200,
+            "妥協": 170
+          }
+        },
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 35000,
+            "目標": 28000,
+            "妥協": 23000
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "support",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向け聖遺物",
+      "planarSet": "元素爆発の循環と必要耐久を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP% / 攻撃力%"
+        },
+        {
+          "slot": "冠",
+          "value": "会心率 / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 250,
+            "目標": 200,
+            "妥協": 170
+          }
+        },
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 35000,
+            "目標": 28000,
+            "妥協": 23000
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "sustain",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく回復・耐久向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP%"
+        },
+        {
+          "slot": "冠",
+          "value": "HP% / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 30000
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "sustain",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく回復・耐久向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP%"
+        },
+        {
+          "slot": "冠",
+          "value": "HP% / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 30000
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "GI_PROFILES",
+    "profileId": "sustain",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく回復・耐久向け聖遺物",
+      "planarSet": "元素爆発を使う場合は元素チャージ効率を優先",
+      "mainStats": [
+        {
+          "slot": "時計",
+          "value": "HP% / 元素チャージ効率"
+        },
+        {
+          "slot": "杯",
+          "value": "HP%"
+        },
+        {
+          "slot": "冠",
+          "value": "HP% / 与える治癒効果"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hp",
+          "label": "HP",
+          "unit": "",
+          "targets": {
+            "厳選": 45000,
+            "目標": 38000,
+            "妥協": 30000
+          }
+        },
+        {
+          "key": "energyRecharge",
+          "label": "元素チャージ効率",
+          "unit": "%",
+          "targets": {
+            "厳選": 220,
+            "目標": 180,
+            "妥協": 150
+          }
+        }
+      ],
+      "profileId": "sustain",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "crit",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく直撃火力向けドライバディスク",
+      "planarSet": "戦闘外会心率を起点に条件付き補正を加味",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "crit",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく直撃火力向けドライバディスク",
+      "planarSet": "戦闘外会心率を起点に条件付き補正を加味",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "crit",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく直撃火力向けドライバディスク",
+      "planarSet": "戦闘外会心率を起点に条件付き補正を加味",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "crit",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "anomaly",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく状態異常向けドライバディスク",
+      "planarSet": "異常マスタリーと攻撃力を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "異常マスタリー"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "異常掌握 / 異常マスタリー"
+        }
+      ],
+      "targets": [
+        {
+          "key": "anomalyMastery",
+          "label": "異常マスタリー",
+          "unit": "",
+          "targets": {
+            "厳選": 420,
+            "目標": 360,
+            "妥協": 300
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "anomaly",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "anomaly",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく状態異常向けドライバディスク",
+      "planarSet": "異常マスタリーと攻撃力を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "異常マスタリー"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "異常掌握 / 異常マスタリー"
+        }
+      ],
+      "targets": [
+        {
+          "key": "anomalyMastery",
+          "label": "異常マスタリー",
+          "unit": "",
+          "targets": {
+            "厳選": 420,
+            "目標": 360,
+            "妥協": 300
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "anomaly",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "anomaly",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく状態異常向けドライバディスク",
+      "planarSet": "異常マスタリーと攻撃力を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "異常マスタリー"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "異常掌握 / 異常マスタリー"
+        }
+      ],
+      "targets": [
+        {
+          "key": "anomalyMastery",
+          "label": "異常マスタリー",
+          "unit": "",
+          "targets": {
+            "厳選": 420,
+            "目標": 360,
+            "妥協": 300
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3000,
+            "目標": 2700,
+            "妥協": 2400
+          }
+        }
+      ],
+      "profileId": "anomaly",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "stun",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づくブレイク支援向けドライバディスク",
+      "planarSet": "衝撃力を優先し、必要な行動回数を確保",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 攻撃力%"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "衝撃力"
+        }
+      ],
+      "targets": [
+        {
+          "key": "impact",
+          "label": "衝撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 190,
+            "目標": 175,
+            "妥協": 160
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2600,
+            "目標": 2300,
+            "妥協": 2000
+          }
+        }
+      ],
+      "profileId": "stun",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "stun",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づくブレイク支援向けドライバディスク",
+      "planarSet": "衝撃力を優先し、必要な行動回数を確保",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 攻撃力%"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "衝撃力"
+        }
+      ],
+      "targets": [
+        {
+          "key": "impact",
+          "label": "衝撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 190,
+            "目標": 175,
+            "妥協": 160
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2600,
+            "目標": 2300,
+            "妥協": 2000
+          }
+        }
+      ],
+      "profileId": "stun",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "stun",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づくブレイク支援向けドライバディスク",
+      "planarSet": "衝撃力を優先し、必要な行動回数を確保",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 攻撃力%"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 攻撃力%"
+        },
+        {
+          "slot": "VI",
+          "value": "衝撃力"
+        }
+      ],
+      "targets": [
+        {
+          "key": "impact",
+          "label": "衝撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 190,
+            "目標": 175,
+            "妥協": 160
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2600,
+            "目標": 2300,
+            "妥協": 2000
+          }
+        }
+      ],
+      "profileId": "stun",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "support",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向けドライバディスク",
+      "planarSet": "バフ条件に必要な固有ステータスを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "V",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "エネルギー自動回復"
+        }
+      ],
+      "targets": [
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3600,
+            "目標": 3200,
+            "妥協": 2800
+          }
+        },
+        {
+          "key": "energyRegen",
+          "label": "エネルギー自動回復",
+          "unit": "",
+          "targets": {
+            "厳選": 1.8,
+            "目標": 1.2,
+            "妥協": 0.8
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "support",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向けドライバディスク",
+      "planarSet": "バフ条件に必要な固有ステータスを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "V",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "エネルギー自動回復"
+        }
+      ],
+      "targets": [
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3600,
+            "目標": 3200,
+            "妥協": 2800
+          }
+        },
+        {
+          "key": "energyRegen",
+          "label": "エネルギー自動回復",
+          "unit": "",
+          "targets": {
+            "厳選": 1.8,
+            "目標": 1.2,
+            "妥協": 0.8
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "support",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく支援向けドライバディスク",
+      "planarSet": "バフ条件に必要な固有ステータスを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "V",
+          "value": "攻撃力% / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "エネルギー自動回復"
+        }
+      ],
+      "targets": [
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 3600,
+            "目標": 3200,
+            "妥協": 2800
+          }
+        },
+        {
+          "key": "energyRegen",
+          "label": "エネルギー自動回復",
+          "unit": "",
+          "targets": {
+            "厳選": 1.8,
+            "目標": 1.2,
+            "妥協": 0.8
+          }
+        }
+      ],
+      "profileId": "support",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "tank",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防護向けドライバディスク",
+      "planarSet": "HP・防御力・固有バフ条件を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "V",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 55,
+            "目標": 40,
+            "妥協": 30
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2400,
+            "目標": 2100,
+            "妥協": 1800
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "tank",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防護向けドライバディスク",
+      "planarSet": "HP・防御力・固有バフ条件を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "V",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 55,
+            "目標": 40,
+            "妥協": 30
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2400,
+            "目標": 2100,
+            "妥協": 1800
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "tank",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防護向けドライバディスク",
+      "planarSet": "HP・防御力・固有バフ条件を優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "V",
+          "value": "HP% / 防御力%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 55,
+            "目標": 40,
+            "妥協": 30
+          }
+        },
+        {
+          "key": "attack",
+          "label": "攻撃力",
+          "unit": "",
+          "targets": {
+            "厳選": 2400,
+            "目標": 2100,
+            "妥協": 1800
+          }
+        }
+      ],
+      "profileId": "tank",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "rupture",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく命破向けドライバディスク",
+      "planarSet": "HP・会心・固有スケーリングを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "rupture",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "fixture-owner用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "rupture",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく命破向けドライバディスク",
+      "planarSet": "HP・会心・固有スケーリングを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "rupture",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "確認名用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "rupture",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく命破向けドライバディスク",
+      "planarSet": "HP・会心・固有スケーリングを優先",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / HP%"
+        },
+        {
+          "slot": "VI",
+          "value": "HP% / 攻撃力%"
+        }
+      ],
+      "targets": [
+        {
+          "key": "critRate",
+          "label": "会心率",
+          "unit": "%",
+          "targets": {
+            "厳選": 80,
+            "目標": 70,
+            "妥協": 60
+          }
+        },
+        {
+          "key": "critDmg",
+          "label": "会心ダメージ",
+          "unit": "%",
+          "targets": {
+            "厳選": 200,
+            "目標": 160,
+            "妥協": 130
+          }
+        },
+        {
+          "key": "hpPercent",
+          "label": "HP%",
+          "unit": "%",
+          "targets": {
+            "厳選": 50,
+            "目標": 35,
+            "妥協": 25
+          }
+        }
+      ],
+      "profileId": "rupture",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。",
+      "targetContext": "用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "def",
+    "name": "fixture-owner",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力スケーリング向けドライバディスク",
+      "planarSet": "防御力を主軸に、会心は個別ガイドで補う",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [],
+      "targetContext": "鋭御の共通ガイドです。防御力でスキルダメージが伸びる特性のため、防御力を主軸にします。役割共通の数値目標は、出典で裏づけた根拠が無いため推測で登録していません。個別ガイドが登録されるとそちらが優先されます。",
+      "profileId": "def",
+      "headline": "fixture-ownerの個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "def",
+    "name": "確認名",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力スケーリング向けドライバディスク",
+      "planarSet": "防御力を主軸に、会心は個別ガイドで補う",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [],
+      "targetContext": "鋭御の共通ガイドです。防御力でスキルダメージが伸びる特性のため、防御力を主軸にします。役割共通の数値目標は、出典で裏づけた根拠が無いため推測で登録していません。個別ガイドが登録されるとそちらが優先されます。",
+      "profileId": "def",
+      "headline": "確認名の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。"
+    }
+  },
+  {
+    "registry": "ZZZ_PROFILES",
+    "profileId": "def",
+    "name": "",
+    "guide": {
+      "relicSet": "公開ビルドに基づく防御力スケーリング向けドライバディスク",
+      "planarSet": "防御力を主軸に、会心は個別ガイドで補う",
+      "mainStats": [
+        {
+          "slot": "IV",
+          "value": "会心率 / 会心ダメージ"
+        },
+        {
+          "slot": "V",
+          "value": "属性ダメージ / 貫通率"
+        },
+        {
+          "slot": "VI",
+          "value": "防御力%"
+        }
+      ],
+      "targets": [],
+      "targetContext": "鋭御の共通ガイドです。防御力でスキルダメージが伸びる特性のため、防御力を主軸にします。役割共通の数値目標は、出典で裏づけた根拠が無いため推測で登録していません。個別ガイドが登録されるとそちらが優先されます。",
+      "profileId": "def",
+      "headline": "の個別ビルド方針を軸に、公開プロフィールで比較できる有効ステータスを整える。"
+    }
+  }
+]
