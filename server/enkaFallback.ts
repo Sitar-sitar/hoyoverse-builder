@@ -1,3 +1,4 @@
+import { errorMessage } from "./content/errors";
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/enkaFallback_providerComparison";
 const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
@@ -507,11 +508,11 @@ export function isEnkaResultComplete(data: LookupData): boolean {
   return data.characters.every((character) => character.statsStatus !== "unavailable");
 }
 
-const ENKA_NOT_FOUND_MESSAGE = "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。";
-const ENKA_TOO_MANY_REQUESTS_MESSAGE = "照会が集中しています。数分後に再度お試しください。";
-const ENKA_UPSTREAM_DOWN_MESSAGE = "外部データサービスが一時的に応答していません。数分後に再度お試しください。";
-const ENKA_UPSTREAM_BAD_MESSAGE = "外部データサービスから正常な応答を取得できませんでした。数分後に再度お試しください。";
-const ENKA_UNREACHABLE_MESSAGE = "公開データサービスへ接続できませんでした。数分後に再度お試しください。";
+const ENKA_NOT_FOUND_MESSAGE = errorMessage("public.hsrNotFound");
+const ENKA_TOO_MANY_REQUESTS_MESSAGE = errorMessage("public.busy");
+const ENKA_UPSTREAM_DOWN_MESSAGE = errorMessage("public.serviceUnavailable");
+const ENKA_UPSTREAM_BAD_MESSAGE = errorMessage("public.enkaBadResponse");
+const ENKA_UNREACHABLE_MESSAGE = errorMessage("public.enkaUnreachable");
 
 /** HTTP status からエラー種別を決める。文言は MiHoMo 経路（server/buildAdvisor.ts）と揃える。 */
 function enkaStatusError(status: number): TRPCError {

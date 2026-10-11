@@ -25,6 +25,61 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "ログアウト",
     "zh-CN": "ログアウト"
   },
+  "ui.errors.admin.analyticsUnavailable": {
+    "ja": "Unable to load lookup analytics",
+    "en": "Unable to load lookup analytics",
+    "zh-CN": "Unable to load lookup analytics"
+  },
+  "ui.errors.admin.displayLoadFailed": {
+    "ja": "Unable to load display settings",
+    "en": "Unable to load display settings",
+    "zh-CN": "Unable to load display settings"
+  },
+  "ui.errors.admin.displaySaveFailed": {
+    "ja": "Unable to save display settings",
+    "en": "Unable to save display settings",
+    "zh-CN": "Unable to save display settings"
+  },
+  "ui.errors.admin.feedbackNotFound": {
+    "ja": "Feedback not found",
+    "en": "Feedback not found",
+    "zh-CN": "Feedback not found"
+  },
+  "ui.errors.admin.feedbackSaveFailed": {
+    "ja": "Unable to save feedback",
+    "en": "Unable to save feedback",
+    "zh-CN": "Unable to save feedback"
+  },
+  "ui.errors.admin.feedbackUnavailable": {
+    "ja": "Unable to load feedback",
+    "en": "Unable to load feedback",
+    "zh-CN": "Unable to load feedback"
+  },
+  "ui.errors.admin.feedbackUpdateFailed": {
+    "ja": "Unable to update feedback",
+    "en": "Unable to update feedback",
+    "zh-CN": "Unable to update feedback"
+  },
+  "ui.errors.admin.languageLoadFailed": {
+    "ja": "言語設定を取得できませんでした。",
+    "en": "言語設定を取得できませんでした。",
+    "zh-CN": "言語設定を取得できませんでした。"
+  },
+  "ui.errors.admin.languageSaveFailed": {
+    "ja": "言語設定を保存できませんでした。",
+    "en": "言語設定を保存できませんでした。",
+    "zh-CN": "言語設定を保存できませんでした。"
+  },
+  "ui.errors.admin.loginRequired": {
+    "ja": "Please login (10001)",
+    "en": "Please login (10001)",
+    "zh-CN": "Please login (10001)"
+  },
+  "ui.errors.admin.permissionRequired": {
+    "ja": "You do not have required permission (10002)",
+    "en": "You do not have required permission (10002)",
+    "zh-CN": "You do not have required permission (10002)"
+  },
   "ui.pages_AdminHome_brand1.literal1": {
     "ja": "ADMIN / CONTROL CENTER",
     "en": "ADMIN / CONTROL CENTER",
@@ -602,3 +657,4 @@ export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> =
     "v1": "string"
   }
 };
+export const UI_ERROR_FALLBACK = "Unable to load feedback";

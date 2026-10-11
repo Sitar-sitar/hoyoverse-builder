@@ -1,3 +1,4 @@
+import { errorMessage } from "./content/errors";
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/gameProviders_providerComparison";
 const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
@@ -79,7 +80,7 @@ function ttlFromPayload(payload: unknown): number {
 
 function apiError(status: number, message: string): TRPCError {
   if (status === 404) return new TRPCError({ code: "NOT_FOUND", message });
-  if (status === 429) return new TRPCError({ code: "TOO_MANY_REQUESTS", message: "照会が集中しています。数分後に再度お試しください。" });
+  if (status === 429) return new TRPCError({ code: "TOO_MANY_REQUESTS", message: errorMessage("public.busy") });
   return new TRPCError({ code: "BAD_GATEWAY", message });
 }
 
@@ -95,16 +96,16 @@ async function fetchJson(url: string): Promise<unknown> {
     const contentType = response.headers.get("content-type") ?? "";
     const payload = contentType.includes("application/json") ? JSON.parse(raw || "{}") : {};
     if (!response.ok) {
-      const detail = text(asRecord(payload).message ?? asRecord(payload).detail, "公開プロフィールを取得できませんでした。");
+      const detail = text(asRecord(payload).message ?? asRecord(payload).detail, errorMessage("public.profileUnavailable"));
       throw apiError(response.status, detail);
     }
     if (!contentType.includes("application/json")) {
-      throw apiError(502, "外部データサービスが一時的に応答していません。数分後に再度お試しください。");
+      throw apiError(502, errorMessage("public.serviceUnavailable"));
     }
     return payload;
   } catch (error) {
     if (error instanceof TRPCError) throw error;
-    throw new TRPCError({ code: "BAD_GATEWAY", message: "外部データサービスへ接続できませんでした。少し時間を置いて再試行してください。", cause: error });
+    throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.unreachable"), cause: error });
   } finally {
     clearTimeout(timeout);
   }
@@ -137,7 +138,7 @@ export function createTimedLoader<T>(label: string, load: () => Promise<T>) {
 
   const failure = () => lastError ?? new TRPCError({
     code: "BAD_GATEWAY",
-    message: "外部データサービスが一時的に応答していません。数分後に再度お試しください。",
+    message: errorMessage("public.serviceUnavailable"),
   });
 
   return async (): Promise<T> => {
@@ -581,7 +582,7 @@ async function lookupWithCache(uid: string, cache: UidResponseCache<NormalizedBu
   if (pending) return pending;
   const request = loader().then(async (payload) => {
     const normalized = await normalize(payload);
-    if (!normalized.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: "公開中のキャラクターが見つかりません。ゲーム内のプロフィール公開設定をご確認ください。" });
+    if (!normalized.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: errorMessage("public.profileNotFound") });
     const expiresAt = cache.set(uid, normalized, ttlFromPayload(payload));
     return { ...normalized, cached: false, fetchedAt: new Date().toISOString(), cacheExpiresAt: new Date(expiresAt).toISOString() };
   }).finally(() => inFlight.delete(uid));

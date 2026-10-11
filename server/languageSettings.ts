@@ -1,3 +1,4 @@
+import { errorMessage } from "./content/errors";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
 import { APP_LANGUAGES, LANGUAGE_SETTINGS_KEY, normalizeEnabledLanguages, type AppLanguage } from "@shared/languages";
@@ -29,7 +30,7 @@ export const languageSettingsRouter = router({
       const report = reportCoverage(contentRepository(), "public");
       return { ...settings, preparation: { mode: "preparation", unavailableSources: report.sourceCount } };
     }
-    catch { throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "言語設定を取得できませんでした。" }); }
+    catch { throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.languageLoadFailed") }); }
   }),
   publish: adminProcedure.input(z.object({
     enabledLanguages: z.array(z.enum(APP_LANGUAGES)).min(1).max(3)
@@ -44,7 +45,7 @@ export const languageSettingsRouter = router({
     try {
       await upsertDisplaySettings([{ key: LANGUAGE_SETTINGS_KEY, variant: JSON.stringify(enabledLanguages) }]);
     } catch {
-      throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "言語設定を保存できませんでした。" });
+      throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.languageSaveFailed") });
     }
     return { enabledLanguages };
   }),

@@ -1,3 +1,4 @@
+import { errorMessage } from "./content/errors";
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/buildAdvisor_providerComparison";
 const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
@@ -610,23 +611,23 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
       ? JSON.parse(rawBody || "{}")
       : {};
     if (!response.ok || !contentType.toLowerCase().includes("application/json") || asRecord(payload).detail) {
-      const detail = text(asRecord(payload).detail, "データを取得できませんでした。");
+      const detail = text(asRecord(payload).detail, errorMessage("public.mihomoUnavailable"));
       const message = response.status === 429
-        ? "照会が集中しています。数分後に再度お試しください。"
+        ? errorMessage("public.busy")
         : response.status >= 500 || !contentType.toLowerCase().includes("application/json")
-          ? "外部データサービスが一時的に応答していません。数分後に再度お試しください。"
+          ? errorMessage("public.serviceUnavailable")
           : detail;
       throw new TRPCError({ code: response.status === 404 ? "NOT_FOUND" : "BAD_GATEWAY", message });
     }
     const normalized = normalizeMihomoPayload(payload);
     if (!normalized.characters.length) {
-      throw new TRPCError({ code: "NOT_FOUND", message: "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。" });
+      throw new TRPCError({ code: "NOT_FOUND", message: errorMessage("public.hsrNotFound") });
     }
     // 最終ステータスを1名も作れない応答は「不完全な主取得元」として扱い、Enka フォールバックへ回す。
     // これを成功として返すと、静的データから最終値を算出できる Enka が一度も試されないまま
     // 全員「未取得」の結果が TTL 中キャッシュされてしまう（Enka 側の isEnkaResultComplete と同じ考え方）。
     if (normalized.characters.every((character) => character.statsStatus === "unavailable")) {
-      throw new TRPCError({ code: "BAD_GATEWAY", message: "最終ステータスを取得できませんでした。少し時間を置いて再試行してください。" });
+      throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.finalUnavailable") });
     }
     const withSource = { ...normalized, dataSource: "MiHoMo" as const };
     const fetchedAt = new Date().toISOString();
@@ -638,7 +639,7 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
     return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
-    throw new TRPCError({ code: "BAD_GATEWAY", message: "外部データサービスへ接続できませんでした。少し時間を置いて再試行してください。", cause: error });
+    throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.unreachable"), cause: error });
   } finally {
     clearTimeout(timeout);
   }

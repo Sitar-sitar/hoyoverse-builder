@@ -1,3 +1,4 @@
+import { uiErrorText } from "@/content/errors";
 import {uiFormat} from "@/content/ui";
 import { uiText as resolveUiText } from "@/content/ui";
 import { uiDictionary } from "@/content/ui";
@@ -422,7 +423,7 @@ export default function CharacterCatalog() {
             )}
 
             {referenceQuery.error && (
-              <div className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">{referenceQuery.error.message}</div>
+              <div className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">{uiErrorText(referenceQuery.error)}</div>
             )}
 
             {detail}

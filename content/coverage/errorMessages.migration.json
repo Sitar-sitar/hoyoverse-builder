@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "errorMessages-v1",
+  "records": [
+    {
+      "path": "server/buildAdvisor.ts",
+      "inputDigest": "6e76a3d49437de76b424083026fdad301a38dfc4dfcc3caf57251a74f64fae3d",
+      "outputDigest": "77167cd49a9517a7c22573cd3ec06a6b2789a9c7b65640cb1c8ad49f01fa0b58",
+      "mapping": [
+        {
+          "start": 26860,
+          "end": 26877,
+          "code": "public.mihomoUnavailable",
+          "oldText": "データを取得できませんでした。"
+        },
+        {
+          "start": 26938,
+          "end": 26965,
+          "code": "public.busy",
+          "oldText": "照会が集中しています。数分後に再度お試しください。"
+        },
+        {
+          "start": 27072,
+          "end": 27111,
+          "code": "public.serviceUnavailable",
+          "oldText": "外部データサービスが一時的に応答していません。数分後に再度お試しください。"
+        },
+        {
+          "start": 27398,
+          "end": 27439,
+          "code": "public.hsrNotFound",
+          "oldText": "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。"
+        },
+        {
+          "start": 27794,
+          "end": 27833,
+          "code": "public.finalUnavailable",
+          "oldText": "最終ステータスを取得できませんでした。少し時間を置いて再試行してください。"
+        },
+        {
+          "start": 28529,
+          "end": 28570,
+          "code": "public.unreachable",
+          "oldText": "外部データサービスへ接続できませんでした。少し時間を置いて再試行してください。"
+        }
+      ]
+    },
+    {
+      "path": "server/gameProviders.ts",
+      "inputDigest": "956131f02512c04086996d4ce798cfc14f0128fe04d14461191801c403b1df25",
+      "outputDigest": "1d3aa8b6b24ea4455497a4c448dc14b39912ed4cf084137e9fed7e807de7b20d",
+      "mapping": [
+        {
+          "start": 3976,
+          "end": 4003,
+          "code": "public.busy",
+          "oldText": "照会が集中しています。数分後に再度お試しください。"
+        },
+        {
+          "start": 4718,
+          "end": 4740,
+          "code": "public.profileUnavailable",
+          "oldText": "公開プロフィールを取得できませんでした。"
+        },
+        {
+          "start": 4879,
+          "end": 4918,
+          "code": "public.serviceUnavailable",
+          "oldText": "外部データサービスが一時的に応答していません。数分後に再度お試しください。"
+        },
+        {
+          "start": 5077,
+          "end": 5118,
+          "code": "public.unreachable",
+          "oldText": "外部データサービスへ接続できませんでした。少し時間を置いて再試行してください。"
+        },
+        {
+          "start": 6272,
+          "end": 6311,
+          "code": "public.serviceUnavailable",
+          "oldText": "外部データサービスが一時的に応答していません。数分後に再度お試しください。"
+        },
+        {
+          "start": 38301,
+          "end": 38346,
+          "code": "public.profileNotFound",
+          "oldText": "公開中のキャラクターが見つかりません。ゲーム内のプロフィール公開設定をご確認ください。"
+        }
+      ]
+    },
+    {
+      "path": "server/enkaFallback.ts",
+      "inputDigest": "b48f70848dfb04797751d64732ecd8917c6023b1e8ce843f475164495a911dbb",
+      "outputDigest": "0e5ad4330d72f1f9afe9ed5907ab20033069f037991143d79e569aab94b81fb4",
+      "mapping": [
+        {
+          "start": 28577,
+          "end": 28618,
+          "code": "public.hsrNotFound",
+          "oldText": "公開中のキャラクターが見つかりません。ゲーム内の巡星ビザ設定をご確認ください。"
+        },
+        {
+          "start": 28660,
+          "end": 28687,
+          "code": "public.busy",
+          "oldText": "照会が集中しています。数分後に再度お試しください。"
+        },
+        {
+          "start": 28725,
+          "end": 28764,
+          "code": "public.serviceUnavailable",
+          "oldText": "外部データサービスが一時的に応答していません。数分後に再度お試しください。"
+        },
+        {
+          "start": 28801,
+          "end": 28845,
+          "code": "public.enkaBadResponse",
+          "oldText": "外部データサービスから正常な応答を取得できませんでした。数分後に再度お試しください。"
+        },
+        {
+          "start": 28881,
+          "end": 28918,
+          "code": "public.enkaUnreachable",
+          "oldText": "公開データサービスへ接続できませんでした。数分後に再度お試しください。"
+        }
+      ]
+    },
+    {
+      "path": "server/_core/trpc.ts",
+      "inputDigest": "d0b90f71e6d2e775207e01e54e2bc17461356c8554f7fafbf519fd442eca356c",
+      "outputDigest": "d4bda250a494c7fababa3ecf1debb7bc38e62c11a86816bf2a959fe516f005e9",
+      "mapping": [
+        {
+          "start": 1309,
+          "end": 1344,
+          "code": "public.globalRateLimited",
+          "oldText": "リクエストが集中しています。しばらく待ってから再度お試しください。"
+        }
+      ]
+    },
+    {
+      "path": "server/routers.ts",
+      "inputDigest": "bfe043ccfa8719d16f6ab66b6b16b97223f9bf2e5c2427ef2d5df9ed0b80d73f",
+      "outputDigest": "e0eb74ec3f1d1652a1e72e0d631367ec240dd262f3f6413c350a0276be652285",
+      "mapping": [
+        {
+          "start": 1770,
+          "end": 1797,
+          "code": "public.busy",
+          "oldText": "照会が集中しています。数分後に再度お試しください。"
+        },
+        {
+          "start": 5079,
+          "end": 5099,
+          "code": "public.catalogNotFound",
+          "oldText": "キャラクターが図鑑に見つかりません。"
+        },
+        {
+          "start": 5306,
+          "end": 5330,
+          "code": "public.uidInvalid",
+          "oldText": "UIDは8〜10桁の数字で入力してください。"
+        },
+        {
+          "start": 5497,
+          "end": 5527,
+          "code": "public.uidForGameInvalid",
+          "oldText": "このゲームのUIDは9〜10桁の数字で入力してください。"
+        },
+        {
+          "start": 7074,
+          "end": 7107,
+          "code": "admin.displayLoadFailed",
+          "oldText": "Unable to load display settings"
+        },
+        {
+          "start": 7473,
+          "end": 7506,
+          "code": "admin.displaySaveFailed",
+          "oldText": "Unable to save display settings"
+        },
+        {
+          "start": 8101,
+          "end": 8134,
+          "code": "admin.analyticsUnavailable",
+          "oldText": "Unable to load lookup analytics"
+        },
+        {
+          "start": 9636,
+          "end": 9661,
+          "code": "admin.feedbackSaveFailed",
+          "oldText": "Unable to save feedback"
+        },
+        {
+          "start": 9974,
+          "end": 9999,
+          "code": "admin.feedbackUnavailable",
+          "oldText": "Unable to load feedback"
+        },
+        {
+          "start": 10389,
+          "end": 10409,
+          "code": "admin.feedbackNotFound",
+          "oldText": "Feedback not found"
+        },
+        {
+          "start": 10697,
+          "end": 10724,
+          "code": "admin.feedbackUpdateFailed",
+          "oldText": "Unable to update feedback"
+        }
+      ]
+    },
+    {
+      "path": "server/languageSettings.ts",
+      "inputDigest": "017e84e8943ad10815772b44387d18e41324fc51a722ded02e09682fd6ef0e58",
+      "outputDigest": "879fac4642d084509774878461d619baa3fbd77c5ef0b11b07a18f1b72ffc4cc",
+      "mapping": [
+        {
+          "start": 1766,
+          "end": 1784,
+          "code": "admin.languageLoadFailed",
+          "oldText": "言語設定を取得できませんでした。"
+        },
+        {
+          "start": 2684,
+          "end": 2702,
+          "code": "admin.languageSaveFailed",
+          "oldText": "言語設定を保存できませんでした。"
+        }
+      ]
+    }
+  ]
+}
