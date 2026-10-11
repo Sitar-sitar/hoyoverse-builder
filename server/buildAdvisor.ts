@@ -1,3 +1,6 @@
+import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
+import {sources as guideTemplateSources} from "../content/ja/guides/buildAdvisor_templates";
+const _guideTemplates=createGuideTemplateTexts(guideTemplateSources,{},{});
 import { createLegacyTexts } from "./content/legacyTexts";
 import { sources as _sources } from "../content/ja/guides/buildAdvisor";
 import { records as _en } from "../content/translations/en/buildAdvisor";
@@ -125,7 +128,7 @@ export function priorityRecommendations(comparisons: StatComparison[]): Priority
         target,
         deficit,
         priority,
-        rationale: `目標 ${target}${comparison.unit} まで${deficitText(deficit, comparison.unit)}`,
+        rationale: _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00001",{v0:target,v1:comparison.unit,v2:deficitText(deficit, comparison.unit)}),
       };
     })
     .sort((left, right) => (right.deficit / Math.max(right.target, 1)) - (left.deficit / Math.max(left.target, 1)))
@@ -205,7 +208,7 @@ export function equipmentActionsFor(guide: GuideDefinition, relics: RelicForActi
       return [{
         recommendationKey: recommendation.key, statLabel: recommendation.label, action: "サブステータスを厳選",
         slot: ALL_SLOTS_LABEL, slotScope: "any", equippedName: null, currentMain: null, desiredStat,
-        reason: `ガイドの主ステータスは別の役割で埋まっています。部位は問わないので、${desiredStat}のサブステータスが付く装備を優先して厳選します。`,
+        reason: _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00002",{v0:desiredStat}),
       }];
     }
 
@@ -219,8 +222,8 @@ export function equipmentActionsFor(guide: GuideDefinition, relics: RelicForActi
       recommendationKey: recommendation.key, statLabel: recommendation.label, action, slot, slotScope: "specific",
       equippedName: equipped?.name ?? null, currentMain, desiredStat,
       reason: mainMatches
-        ? `${slot}の主ステータスは${currentMain}です。${desiredStat}のサブステータスが付く個体を優先して厳選します。`
-        : `${slot}${currentMain ? `は現在${currentMain}` : ""}です。${desiredStat}を主ステータスにした${equipped?.name ?? "装備"}へ変更すると不足分を補いやすくなります。`,
+        ? _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00003",{v0:slot,v1:String(currentMain),v2:desiredStat})
+        : _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00004",{v0:slot,v1:currentMain ? `は現在${currentMain}` : "",v2:desiredStat,v3:equipped?.name ?? "装備"}),
     }];
   });
 }
@@ -588,7 +591,7 @@ export function guideFor(name: string, path: string, identity?: Pick<CharacterId
   const individualGuide = bySourceId ?? (identity?.variantOf ? undefined : GUIDE_OVERRIDES[name]);
   if (individualGuide) {
     const sourceDataAsOf = ({ "セーバル": "2026-08-21", "ゼーレ": "2026-08-21", "ナターシャ": "2026-08-21", "ファイノン": "2026-05-31", "フォフォ": "2026-08-19" } as Record<string, string>)[name];
-    return withGuideMetadata("hsr", { ...individualGuide, dataAsOf: sourceDataAsOf ?? individualGuide.dataAsOf, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。編成・光円錐・戦闘中バフによる変動分は含みません。` }, name);
+    return withGuideMetadata("hsr", { ...individualGuide, dataAsOf: sourceDataAsOf ?? individualGuide.dataAsOf, targetContext: individualGuide.targetContext ?? _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00005",{v0:name}) }, name);
   }
   return withGuideMetadata("hsr", generatedHsrGuide(name, path), name);
 }

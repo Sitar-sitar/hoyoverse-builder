@@ -1,3 +1,6 @@
+import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
+import {sources as guideTemplateSources} from "../content/ja/guides/gameProviders_templates";
+const _guideTemplates=createGuideTemplateTexts(guideTemplateSources,{},{});
 import { createLegacyTexts } from "./content/legacyTexts";
 import { sources as _sources } from "../content/ja/guides/gameProviders";
 import { records as _en } from "../content/translations/en/gameProviders";
@@ -365,7 +368,7 @@ export function genshinGuide(name: string, identity?: CharacterIdentity): GuideD
     return withGuideMetadata("genshin", { ...addition[1].guide }, name);
   }
   const individualGuide = batch17GuideFor(name) ?? GI_GUIDE_OVERRIDES[name];
-  if (individualGuide) return withGuideMetadata("genshin", { ...individualGuide, targetContext: individualGuide.targetContext ?? `${name}専用の有効ステータス目標です。武器・編成・元素反応・戦闘中バフにより必要値は変動します。` }, name);
+  if (individualGuide) return withGuideMetadata("genshin", { ...individualGuide, targetContext: individualGuide.targetContext ?? _guideTemplates.ja("guide.legacy.gameProviders_templates.b00001",{v0:name}) }, name);
   return withGuideMetadata("genshin", generatedGenshinGuide(name), name);
 }
 

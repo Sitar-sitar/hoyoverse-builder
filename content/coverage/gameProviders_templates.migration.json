@@ -1,0 +1,10 @@
+[
+  {
+    "id": "guide.legacy.gameProviders_templates.b00001",
+    "field": "targetContext",
+    "originalStart": 100059,
+    "bindings": {
+      "v0": "name"
+    }
+  }
+]

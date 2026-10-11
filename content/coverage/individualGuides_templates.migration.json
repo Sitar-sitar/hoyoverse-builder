@@ -1,0 +1,35 @@
+[
+  {
+    "id": "guide.legacy.individualGuides_templates.b00001",
+    "field": "headline",
+    "originalStart": 14937,
+    "bindings": {
+      "v0": "name",
+      "v1": "label"
+    }
+  },
+  {
+    "id": "guide.legacy.individualGuides_templates.b00002",
+    "field": "targetContext",
+    "originalStart": 15222,
+    "bindings": {
+      "v0": "name"
+    }
+  },
+  {
+    "id": "guide.legacy.individualGuides_templates.b00003",
+    "field": "targetContext",
+    "originalStart": 15498,
+    "bindings": {
+      "v0": "name"
+    }
+  },
+  {
+    "id": "guide.legacy.individualGuides_templates.b00004",
+    "field": "targetContext",
+    "originalStart": 15895,
+    "bindings": {
+      "v0": "name"
+    }
+  }
+]

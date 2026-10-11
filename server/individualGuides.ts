@@ -1,3 +1,6 @@
+import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
+import {sources as guideTemplateSources} from "../content/ja/guides/individualGuides_templates";
+const _guideTemplates=createGuideTemplateTexts(guideTemplateSources,{},{});
 import { createLegacyTexts } from "./content/legacyTexts";
 import { sources as _sources } from "../content/ja/guides/individualGuides";
 import { records as _en } from "../content/translations/en/individualGuides";
@@ -76,22 +79,22 @@ export function zzzProfileIdFor(profession: string): ZzzProfileId {
 }
 
 function copyProfile(name: string, profileId: string, profile: Omit<GuideDefinition, "headline">, label: string): GuideDefinition {
-  return { ...profile, profileId, headline: `${name}の${label}を軸に、公開プロフィールで比較できる有効ステータスを整える。` };
+  return { ...profile, profileId, headline: _guideTemplates.ja("guide.legacy.individualGuides_templates.b00001",{v0:name,v1:label}) };
 }
 
 export function generatedHsrGuide(name: string, path: string): GuideDefinition {
   const profileId = hsrProfileIdFor(name, path);
-  return { ...copyProfile(name, profileId, HSR_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ガイドを、公開プロフィールと比較可能な戦闘外ステータスへ整理した目安です。` };
+  return { ...copyProfile(name, profileId, HSR_PROFILES[profileId], "個別ビルド方針"), targetContext: _guideTemplates.ja("guide.legacy.individualGuides_templates.b00002",{v0:name}) };
 }
 
 export function generatedGenshinGuide(name: string): GuideDefinition {
   const profileId = genshinProfileIdFor(name);
-  return { ...copyProfile(name, profileId, GI_PROFILES[profileId], "個別ビルド方針"), targetContext: `${name}用の現行公開ビルドを、武器・編成・元素反応による変動を除いた比較目安として整理しています。` };
+  return { ...copyProfile(name, profileId, GI_PROFILES[profileId], "個別ビルド方針"), targetContext: _guideTemplates.ja("guide.legacy.individualGuides_templates.b00003",{v0:name}) };
 }
 
 export function generatedZzzGuide(name: string, profession: string): GuideDefinition {
   const profileId = zzzProfileIdFor(profession);
   const profile = ZZZ_PROFILES[profileId];
   // プロファイル固有の説明（目標を置かない理由など）があれば、共通文で上書きしない。
-  return { ...copyProfile(name, profileId, profile, "個別ビルド方針"), targetContext: profile.targetContext ?? `${name}用の現行公開ビルドを、推定最終ステータスと比較できる戦闘外目安として整理しています。` };
+  return { ...copyProfile(name, profileId, profile, "個別ビルド方針"), targetContext: profile.targetContext ?? _guideTemplates.ja("guide.legacy.individualGuides_templates.b00004",{v0:name}) };
 }
