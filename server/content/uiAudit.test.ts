@@ -83,4 +83,26 @@ describe("UI bypass inventory", () => {
     expect(result.filter(item => item.text === "Ready")).toHaveLength(1);
     expect(result.some(item => item.text === "Imported copy")).toBe(true);
   });
+  it("tracks displayed state updates and lazy initializers without conflating hidden or shadowed setters", () => {
+    const code =
+      'function Panel(){const [label,setLabel]=React.useState(()=>"Initial");const [hidden,setHidden]=useState("");function click(){setLabel("Ready");setLabel(previous=>previous+" Updated");setHidden("Internal route");}function other(setLabel){setLabel("Shadowed internal");}return <button onClick={click}>{label}</button>}';
+    const texts = auditUiText(code, "fixture.tsx").map(item => item.text);
+    expect(texts).toContain("Initial");
+    expect(texts).toContain("Ready");
+    expect(texts).toContain(" Updated");
+    expect(texts).not.toContain("Internal route");
+    expect(texts).not.toContain("Shadowed internal");
+    expect(
+      auditUiText(
+        'function Panel(){const [label,setLabel]=useState("");function click(){setLabel("Ready");}return <button onClick={click}>{label}</button>}',
+        "fixture.tsx"
+      ).map(item => item.text)
+    ).toContain("Ready");
+    expect(
+      auditUiText(
+        'function Panel(){const [label,setLabel]=useState(uiText("ui.initial"));function click(){setLabel(uiText("ui.updated"));}return <b>{label}</b>}',
+        "fixture.tsx"
+      )
+    ).toEqual([]);
+  });
 });

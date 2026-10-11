@@ -31,6 +31,34 @@ export function displayTextNodes(
   const result = new Set<ts.Node>();
   const active = new Set<ts.Node>();
   const definitions = new Map<ts.SourceFile, Map<string, ts.Node[]>>();
+  const stateUpdates = new Map<ts.BindingElement, ts.Expression[]>();
+  function stateValues(binding: ts.BindingElement, call: ts.CallExpression) {
+    const cached = stateUpdates.get(binding);
+    if (cached) return cached;
+    const values: ts.Expression[] = [...call.arguments.slice(0, 1)];
+    stateUpdates.set(binding, values);
+    const pattern = binding.parent;
+    if (!ts.isArrayBindingPattern(pattern)) return values;
+    const setter = pattern.elements[1];
+    if (
+      !setter ||
+      !ts.isBindingElement(setter) ||
+      !ts.isIdentifier(setter.name)
+    )
+      return values;
+    function visit(node: ts.Node) {
+      if (
+        ts.isCallExpression(node) &&
+        ts.isIdentifier(node.expression) &&
+        declaration(node.expression) === setter &&
+        node.arguments[0]
+      )
+        values.push(node.arguments[0]);
+      ts.forEachChild(node, visit);
+    }
+    visit(binding.getSourceFile());
+    return values;
+  }
   function index(source: ts.SourceFile) {
     const cached = definitions.get(source);
     if (cached) return cached;
@@ -141,11 +169,15 @@ export function displayTextNodes(
           if (
             index === 0 &&
             ts.isCallExpression(owner.initializer) &&
-            ts.isIdentifier(owner.initializer.expression) &&
-            owner.initializer.expression.text === "useState"
+            ((ts.isIdentifier(owner.initializer.expression) &&
+              owner.initializer.expression.text === "useState") ||
+              (ts.isPropertyAccessExpression(owner.initializer.expression) &&
+                ts.isIdentifier(owner.initializer.expression.expression) &&
+                owner.initializer.expression.expression.text === "React" &&
+                owner.initializer.expression.name.text === "useState"))
           ) {
-            const initial = owner.initializer.arguments[0];
-            return initial ? [initial] : [node];
+            const state = stateValues(declared, owner.initializer);
+            return state.length ? state : [node];
           }
           const selected = property(
             owner.initializer,
@@ -295,6 +327,10 @@ export function displayTextNodes(
     if (active.has(node)) return;
     active.add(node);
     try {
+      if (ts.isArrowFunction(node) || ts.isFunctionExpression(node)) {
+        returns(node.body, environment);
+        return;
+      }
       if (
         ts.isJsxElement(node) ||
         ts.isJsxSelfClosingElement(node) ||
