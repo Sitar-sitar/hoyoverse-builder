@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { selectPresentation } from "@/content/presentation";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { trpc } from "@/lib/trpc";
@@ -154,7 +155,7 @@ export default function Home() {
   const primarySetLabel = t(game === "hsr" ? "relics" : game === "genshin" ? "artifacts" : "driveDiscs");
   const validUid = isValidUidForGame(game, uid);
   const query = trpc.build.lookup.useQuery({ game, uid: lookupUid || "0" }, { enabled: Boolean(lookupUid), retry: false, staleTime: 60_000 });
-  const characters = (query.data?.characters ?? []) as Character[];
+  const characters = useMemo(() => (query.data?.characters ?? []).map(character => selectPresentation(character)!) as Character[], [query.data?.characters]);
   const selected = useMemo(() => characters.find((character) => character.id === selectedId) ?? characters[0], [characters, selectedId]);
   const selectedParty = selected?.partyRecommendations?.options.find((option) => option.id === selectedPartyId) ?? selected?.partyRecommendations?.options[0];
   const combinedTargetChanges = useMemo(() => [...(selectedParty?.targetChanges ?? []), ...(selected?.constellations?.activeTargetChanges ?? [])], [selected?.constellations?.activeTargetChanges, selectedParty?.targetChanges]);

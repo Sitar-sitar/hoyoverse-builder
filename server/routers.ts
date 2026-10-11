@@ -1,5 +1,6 @@
 import { booleanSetting, previewAdmin } from "./_core/migrationRuntime";
 import { languageSettingsRouter } from "./languageSettings";
+import { withLookupPresentation, withPresentation } from "./content/presentation";
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -92,7 +93,7 @@ export const appRouter = router({
         if (!result) {
           throw new TRPCError({ code: "NOT_FOUND", message: "キャラクターが図鑑に見つかりません。" });
         }
-        return result;
+        return withPresentation(result);
       }),
     lookup: publicProcedure
       .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), uid: z.string().trim().regex(/^\d{8,10}$/, "UIDは8〜10桁の数字で入力してください。") }).superRefine(({ game, uid }, ctx) => {
@@ -114,7 +115,7 @@ export const appRouter = router({
         // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 46-1
         if (!booleanSetting("API_MIGRATION_PREVIEW") || previewAdmin(ctx)) void recordLookupAnalyticsEvent(input.game, result.cached)
           .catch(error => console.error("[Analytics] Failed to record lookup:", error));
-        return result;
+        return withLookupPresentation(result);
       }),
   }),
 

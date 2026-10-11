@@ -1,4 +1,5 @@
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { selectPresentation } from "@/content/presentation";
 import PartyAppearances from "@/components/PartyAppearances";
 import SiteHeader from "@/components/SiteHeader";
 import CatalogShelf, { SHELF_SECTION_IDS, shelfBatchOptions, shelfEntries, type ShelfSort, type ShelfStatusFilter } from "@/components/variants/CatalogShelf";
@@ -272,7 +273,7 @@ export default function CharacterCatalog() {
     { game, name: selectedName || "-" },
     { enabled: Boolean(selectedName), staleTime: 10 * 60_000 },
   );
-  const reference = referenceQuery.data;
+  const reference = selectPresentation(referenceQuery.data);
 
   const detail = reference ? (
     <div className="space-y-8">
