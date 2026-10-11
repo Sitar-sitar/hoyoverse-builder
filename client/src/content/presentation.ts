@@ -4,7 +4,9 @@ import type { PresentationDTO } from "@shared/content/presentation";
 export function validPresentation(value: unknown): value is PresentationDTO {
   if (!value || typeof value !== "object") return false;
   const dto = value as PresentationDTO;
+  const statuses=["registered","notCollected","notApplicable"];
   return dto.schemaVersion === 1 && dto.language === "ja" && dto.contentRevision === CONTENT_MANIFEST.contentRevision &&
+    (dto.identityKey===null||typeof dto.identityKey==="string") && Boolean(dto.information) && statuses.includes(dto.information.introduction) && statuses.includes(dto.information.skills) &&
     Boolean(dto.display) && typeof dto.display === "object" && !Array.isArray(dto.display);
 }
 /** Numeric inputs stay in the legacy model; only display strings are projected. */

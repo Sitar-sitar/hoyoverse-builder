@@ -1,11 +1,22 @@
 import { describe, expect, it, vi } from "vitest";
 import { collectBaseline } from "../../scripts/content/baseline";
-import { withCatalogPresentation, withHistoryPresentation, withLookupPresentation, withPresentation } from "./presentation";
+import { withCatalogPresentation, withHistoryPresentation, withLookupPresentation, withPresentation,characterInformationFor } from "./presentation";
+import {characterRecords} from "../../content/characters";
 import { characterReferenceCatalog } from "../characterReference";
 import { guideUpdateHistory } from "../guideUpdateHistory";
-import { selectPresentation } from "../../client/src/content/presentation";
+import { selectPresentation,validPresentation } from "../../client/src/content/presentation";
 
 describe("Japanese presentation DTO boundary", () => {
+  it("derives information states from authoring records and rejects unknown DTO states",()=>{
+    const record=structuredClone(characterRecords[0]!);
+    record.introduction={status:"registered",evidence:"fixture",data:[record.name]};
+    record.skills={status:"notApplicable",reason:"fixture only",evidence:"fixture"};
+    expect(characterInformationFor(record.identityKey,[record])).toEqual({introduction:"registered",skills:"notApplicable"});
+    expect(characterInformationFor("unknown",[record])).toEqual({introduction:"notCollected",skills:"notCollected"});
+    const result=withPresentation({name:"fixture"},record.identityKey);
+    expect(validPresentation({...result.presentation,information:{introduction:"unknown",skills:"notCollected"}})).toBe(false);
+    expect(validPresentation({...result.presentation,information:null})).toBe(false);
+  });
   it("preserves catalog/history caches, identities and counts with Japanese display DTOs", () => {
     for (const [value, project] of [[characterReferenceCatalog(), withCatalogPresentation], [guideUpdateHistory(), withHistoryPresentation]] as const) {
       const original = JSON.stringify(value);

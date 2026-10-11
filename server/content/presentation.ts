@@ -1,6 +1,11 @@
 import type { PresentationDTO } from "../../shared/content/presentation";
 import { contentManifest } from "./repository";
 import { catalogSourceIdFor } from "../characterConstellations";
+import {characterRecords,type OrderedCharacterContent} from "../../content/characters";
+export function characterInformationFor(identityKey:string|null,records:OrderedCharacterContent[]=characterRecords):PresentationDTO["information"] {
+  const character=records.find(record=>record.identityKey===identityKey);
+  return {introduction:character?.introduction.status??"notCollected",skills:character?.skills.status??"notCollected"};
+}
 
 let revision: string | undefined;
 function japanese(value: unknown): unknown {
@@ -21,7 +26,7 @@ function project<T extends object>(value: T, selectedFields: readonly string[], 
   const display = Object.fromEntries(selectedFields.filter(field => field in record).map(field => [field, japanese(record[field])]));
   return { ...value, presentation: {
     schemaVersion: 1, contentRevision: revision ??= contentManifest().contentRevision, language: "ja", identityKey,
-    information: { introduction: "notCollected", skills: "notCollected" }, display,
+    information: characterInformationFor(identityKey), display,
   } };
 }
 export function withPresentation<T extends object>(value: T, identityKey: string | null = null) {

@@ -1,8 +1,4 @@
-import { createLegacyTexts } from "../content/legacyTexts";
-import { sources as _sources } from "../../content/ja/guides/parties_linkRecords";
-import { records as _en } from "../../content/translations/en/parties_linkRecords";
-import { records as _zh } from "../../content/translations/zh-CN/parties_linkRecords";
-const _content = createLegacyTexts(_sources, _en, _zh);
+import {projectLinkHistory} from "../content/linkHistory";
 import type { GuideUpdateEvent } from "../guideUpdateHistory";
 import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
 
@@ -10,43 +6,7 @@ import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
  * 参照の変更記録と、そこから作る更新履歴（§4.7）。
  * PARTY_LINK_RECORDS は追記専用。過去の行を書き換えない・消さない。参照を入れ替えるときは新しいバッチの行を足す。
  */
-export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = {
-  27: {batch:27,date:"2026-10-09T21:44:00+09:00",updatedAt:"2026-10-09",sourceNote:_content.ja("guide.legacy.parties_linkRecords.b00001"),title:_content.ja("guide.legacy.parties_linkRecords.b00002"),summary:(name,record)=>_content.ja("guide.legacy.parties_linkRecords.b00003", {v0: name, v1: record.added.length}),changes:[_content.ja("guide.legacy.parties_linkRecords.b00004"), _content.ja("guide.legacy.parties_linkRecords.b00005"), _content.ja("guide.legacy.parties_linkRecords.b00006"), _content.ja("guide.legacy.parties_linkRecords.b00007")],rationale:_content.ja("guide.legacy.parties_linkRecords.b00008")},
-  26: {
-    batch: 26, date: "2026-10-07T21:45:00+09:00", updatedAt: "2026-10-07",
-    sourceNote: _content.ja("guide.legacy.parties_linkRecords.b00009"),
-    title: _content.ja("guide.legacy.parties_linkRecords.b00010"),
-    summary: (name, record) => _content.ja("guide.legacy.parties_linkRecords.b00011", {v0: name, v1: record.added.length}),
-    changes: [_content.ja("guide.legacy.parties_linkRecords.b00012"), _content.ja("guide.legacy.parties_linkRecords.b00013"), _content.ja("guide.legacy.parties_linkRecords.b00014"), _content.ja("guide.legacy.parties_linkRecords.b00015")],
-    rationale: _content.ja("guide.legacy.parties_linkRecords.b00016"),
-  },
-  25: {
-    batch:25, date:'2026-10-03T13:00:00+09:00', updatedAt:'2026-10-03',
-    sourceNote:_content.ja("guide.legacy.parties_linkRecords.b00017"),
-    title:_content.ja("guide.legacy.parties_linkRecords.b00018"),
-    summary:(name,record)=>_content.ja("guide.legacy.parties_linkRecords.b00019", {v0: name, v1: record.added.length, v2: record.removed.length}),
-    changes:[_content.ja("guide.legacy.parties_linkRecords.b00020"),_content.ja("guide.legacy.parties_linkRecords.b00021"),_content.ja("guide.legacy.parties_linkRecords.b00022"),_content.ja("guide.legacy.parties_linkRecords.b00023")],
-    rationale:_content.ja("guide.legacy.parties_linkRecords.b00024"),
-  },
-  24: {
-    batch: 24, date: "2026-10-03T12:00:00+09:00", updatedAt: "2026-10-03",
-    sourceNote: _content.ja("guide.legacy.parties_linkRecords.b00025"),
-    title: _content.ja("guide.legacy.parties_linkRecords.b00026"),
-    summary: (name, record) => _content.ja("guide.legacy.parties_linkRecords.b00027", {v0: name, v1: record.added.length, v2: record.removed.length}),
-    changes: [_content.ja("guide.legacy.parties_linkRecords.b00028"), _content.ja("guide.legacy.parties_linkRecords.b00029"), _content.ja("guide.legacy.parties_linkRecords.b00030"), _content.ja("guide.legacy.parties_linkRecords.b00031")],
-    rationale: _content.ja("guide.legacy.parties_linkRecords.b00032"),
-  },
-  23: {
-    batch: 23,
-    date: "2026-10-01T19:23:00+09:00",
-    updatedAt: "2026-10-01",
-    sourceNote: _content.ja("guide.legacy.parties_linkRecords.b00033"),
-    title: _content.ja("guide.legacy.parties_linkRecords.b00034"),
-    summary: (name, record) => _content.ja("guide.legacy.parties_linkRecords.b00035", {v0: name, v1: record.added.length}),
-    changes: [_content.ja("guide.legacy.parties_linkRecords.b00036"), _content.ja("guide.legacy.parties_linkRecords.b00037"), _content.ja("guide.legacy.parties_linkRecords.b00038")],
-    rationale: _content.ja("guide.legacy.parties_linkRecords.b00039"),
-  },
-};
+export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = projectLinkHistory();
 
 export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   { batch: 23, game: "genshin", owner: "ファルザン",
