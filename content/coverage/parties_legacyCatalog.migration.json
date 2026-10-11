@@ -1,0 +1,5277 @@
+[
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00001",
+    "field": "localized call",
+    "originalStart": 1518
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00002",
+    "field": "localized call",
+    "originalStart": 1691
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00003",
+    "field": "localized call",
+    "originalStart": 1838
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00004",
+    "field": "localized call",
+    "originalStart": 2086
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00005",
+    "field": "localized call",
+    "originalStart": 2356
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00006",
+    "field": "localized call",
+    "originalStart": 2554
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00007",
+    "field": "localized call",
+    "originalStart": 2694
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00008",
+    "field": "localized call",
+    "originalStart": 2884
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00009",
+    "field": "localized call",
+    "originalStart": 3027
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00010",
+    "field": "localized call",
+    "originalStart": 3749
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00011",
+    "field": "member name",
+    "originalStart": 3813
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00012",
+    "field": "member role",
+    "originalStart": 3837
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00013",
+    "field": "member name",
+    "originalStart": 3869
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00014",
+    "field": "member role",
+    "originalStart": 3899
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00015",
+    "field": "member name",
+    "originalStart": 3940
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00016",
+    "field": "member role",
+    "originalStart": 3987
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00017",
+    "field": "member name",
+    "originalStart": 4036
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00018",
+    "field": "member role",
+    "originalStart": 4059
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00019",
+    "field": "localized call",
+    "originalStart": 4095
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00020",
+    "field": "localized call",
+    "originalStart": 4505
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00021",
+    "field": "localized call",
+    "originalStart": 4712
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00022",
+    "field": "member name",
+    "originalStart": 4783
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00023",
+    "field": "member role",
+    "originalStart": 4807
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00024",
+    "field": "member name",
+    "originalStart": 4839
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00025",
+    "field": "member role",
+    "originalStart": 4865
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00026",
+    "field": "member name",
+    "originalStart": 4906
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00027",
+    "field": "member role",
+    "originalStart": 4953
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00028",
+    "field": "member name",
+    "originalStart": 5002
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00029",
+    "field": "member role",
+    "originalStart": 5031
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00030",
+    "field": "localized call",
+    "originalStart": 5067
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00031",
+    "field": "localized call",
+    "originalStart": 5481
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00032",
+    "field": "localized call",
+    "originalStart": 5699
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00033",
+    "field": "member name",
+    "originalStart": 5771
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00034",
+    "field": "member role",
+    "originalStart": 5795
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00035",
+    "field": "member name",
+    "originalStart": 5827
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00036",
+    "field": "member role",
+    "originalStart": 5850
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00037",
+    "field": "member name",
+    "originalStart": 5889
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00038",
+    "field": "member role",
+    "originalStart": 5936
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00039",
+    "field": "member name",
+    "originalStart": 5985
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00040",
+    "field": "member role",
+    "originalStart": 6014
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00041",
+    "field": "localized call",
+    "originalStart": 6050
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00042",
+    "field": "localized call",
+    "originalStart": 6462
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00043",
+    "field": "localized call",
+    "originalStart": 6684
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00044",
+    "field": "member name",
+    "originalStart": 6747
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00045",
+    "field": "member role",
+    "originalStart": 6770
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00046",
+    "field": "member name",
+    "originalStart": 6802
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00047",
+    "field": "member role",
+    "originalStart": 6839
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00048",
+    "field": "member name",
+    "originalStart": 6871
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00049",
+    "field": "member role",
+    "originalStart": 6894
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00050",
+    "field": "member name",
+    "originalStart": 6925
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00051",
+    "field": "member role",
+    "originalStart": 6956
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00052",
+    "field": "localized call",
+    "originalStart": 6992
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00053",
+    "field": "localized call",
+    "originalStart": 7188
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00054",
+    "field": "localized call",
+    "originalStart": 7415
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00055",
+    "field": "member name",
+    "originalStart": 7487
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00056",
+    "field": "member role",
+    "originalStart": 7510
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00057",
+    "field": "member name",
+    "originalStart": 7542
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00058",
+    "field": "member role",
+    "originalStart": 7586
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00059",
+    "field": "member name",
+    "originalStart": 7618
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00060",
+    "field": "member role",
+    "originalStart": 7669
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00061",
+    "field": "member name",
+    "originalStart": 7700
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00062",
+    "field": "member role",
+    "originalStart": 7727
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00063",
+    "field": "localized call",
+    "originalStart": 7763
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00064",
+    "field": "localized call",
+    "originalStart": 8200
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00065",
+    "field": "localized call",
+    "originalStart": 8403
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00066",
+    "field": "member name",
+    "originalStart": 8470
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00067",
+    "field": "member role",
+    "originalStart": 8493
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00068",
+    "field": "member name",
+    "originalStart": 8525
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00069",
+    "field": "member role",
+    "originalStart": 8545
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00070",
+    "field": "member name",
+    "originalStart": 8577
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00071",
+    "field": "member role",
+    "originalStart": 8602
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00072",
+    "field": "member name",
+    "originalStart": 8633
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00073",
+    "field": "member role",
+    "originalStart": 8657
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00074",
+    "field": "localized call",
+    "originalStart": 8693
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00075",
+    "field": "localized call",
+    "originalStart": 8880
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00076",
+    "field": "localized call",
+    "originalStart": 9108
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00077",
+    "field": "member name",
+    "originalStart": 9179
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00078",
+    "field": "member role",
+    "originalStart": 9213
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00079",
+    "field": "member name",
+    "originalStart": 9245
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00080",
+    "field": "member role",
+    "originalStart": 9267
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00081",
+    "field": "member name",
+    "originalStart": 9306
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00082",
+    "field": "member role",
+    "originalStart": 9342
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00083",
+    "field": "member name",
+    "originalStart": 9377
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00084",
+    "field": "member role",
+    "originalStart": 9417
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00085",
+    "field": "localized call",
+    "originalStart": 9467
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00086",
+    "field": "localized call",
+    "originalStart": 9885
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00087",
+    "field": "localized call",
+    "originalStart": 10109
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00088",
+    "field": "member name",
+    "originalStart": 10158
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00089",
+    "field": "member role",
+    "originalStart": 10192
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00090",
+    "field": "member name",
+    "originalStart": 10224
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00091",
+    "field": "member role",
+    "originalStart": 10246
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00092",
+    "field": "member name",
+    "originalStart": 10285
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00093",
+    "field": "member role",
+    "originalStart": 10312
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00094",
+    "field": "member name",
+    "originalStart": 10352
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00095",
+    "field": "member role",
+    "originalStart": 10376
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00096",
+    "field": "localized call",
+    "originalStart": 10412
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00097",
+    "field": "localized call",
+    "originalStart": 10789
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00098",
+    "field": "localized call",
+    "originalStart": 11006
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00099",
+    "field": "member name",
+    "originalStart": 11074
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00100",
+    "field": "member role",
+    "originalStart": 11108
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00101",
+    "field": "member name",
+    "originalStart": 11140
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00102",
+    "field": "member role",
+    "originalStart": 11165
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00103",
+    "field": "member name",
+    "originalStart": 11205
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00104",
+    "field": "member role",
+    "originalStart": 11241
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00105",
+    "field": "member name",
+    "originalStart": 11276
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00106",
+    "field": "member role",
+    "originalStart": 11299
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00107",
+    "field": "localized call",
+    "originalStart": 11347
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00108",
+    "field": "localized call",
+    "originalStart": 11737
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00109",
+    "field": "localized call",
+    "originalStart": 11957
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00110",
+    "field": "member name",
+    "originalStart": 12020
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00111",
+    "field": "member role",
+    "originalStart": 12053
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00112",
+    "field": "member name",
+    "originalStart": 12085
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00113",
+    "field": "member role",
+    "originalStart": 12105
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00114",
+    "field": "member name",
+    "originalStart": 12149
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00115",
+    "field": "member role",
+    "originalStart": 12176
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00116",
+    "field": "member name",
+    "originalStart": 12208
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00117",
+    "field": "member role",
+    "originalStart": 12234
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00118",
+    "field": "localized call",
+    "originalStart": 12277
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00119",
+    "field": "localized call",
+    "originalStart": 12699
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00120",
+    "field": "localized call",
+    "originalStart": 12950
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00121",
+    "field": "member name",
+    "originalStart": 13016
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00122",
+    "field": "member role",
+    "originalStart": 13049
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00123",
+    "field": "member name",
+    "originalStart": 13081
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00124",
+    "field": "member role",
+    "originalStart": 13111
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00125",
+    "field": "member name",
+    "originalStart": 13146
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00126",
+    "field": "member role",
+    "originalStart": 13173
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00127",
+    "field": "member name",
+    "originalStart": 13205
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00128",
+    "field": "member role",
+    "originalStart": 13231
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00129",
+    "field": "localized call",
+    "originalStart": 13274
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00130",
+    "field": "localized call",
+    "originalStart": 13479
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00131",
+    "field": "localized call",
+    "originalStart": 13700
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00132",
+    "field": "member name",
+    "originalStart": 13757
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00133",
+    "field": "member role",
+    "originalStart": 13790
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00134",
+    "field": "member name",
+    "originalStart": 13822
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00135",
+    "field": "member role",
+    "originalStart": 13849
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00136",
+    "field": "member name",
+    "originalStart": 13890
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00137",
+    "field": "member role",
+    "originalStart": 13916
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00138",
+    "field": "member name",
+    "originalStart": 13955
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00139",
+    "field": "member role",
+    "originalStart": 13991
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00140",
+    "field": "localized call",
+    "originalStart": 14030
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00141",
+    "field": "localized call",
+    "originalStart": 14416
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00142",
+    "field": "localized call",
+    "originalStart": 14618
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00143",
+    "field": "member name",
+    "originalStart": 14678
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00144",
+    "field": "member role",
+    "originalStart": 14700
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00145",
+    "field": "member name",
+    "originalStart": 14732
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00146",
+    "field": "member role",
+    "originalStart": 14761
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00147",
+    "field": "member name",
+    "originalStart": 14789
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00148",
+    "field": "member role",
+    "originalStart": 14812
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00149",
+    "field": "localized call",
+    "originalStart": 14854
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00150",
+    "field": "localized call",
+    "originalStart": 15054
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00151",
+    "field": "localized call",
+    "originalStart": 15231
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00152",
+    "field": "member name",
+    "originalStart": 15295
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00153",
+    "field": "member role",
+    "originalStart": 15317
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00154",
+    "field": "member name",
+    "originalStart": 15349
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00155",
+    "field": "member role",
+    "originalStart": 15373
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00156",
+    "field": "member name",
+    "originalStart": 15401
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00157",
+    "field": "member role",
+    "originalStart": 15425
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00158",
+    "field": "localized call",
+    "originalStart": 15460
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00159",
+    "field": "localized call",
+    "originalStart": 15665
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00160",
+    "field": "localized call",
+    "originalStart": 15890
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00161",
+    "field": "member name",
+    "originalStart": 15955
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00162",
+    "field": "member role",
+    "originalStart": 15977
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00163",
+    "field": "member name",
+    "originalStart": 16009
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00164",
+    "field": "member role",
+    "originalStart": 16031
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00165",
+    "field": "member name",
+    "originalStart": 16059
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00166",
+    "field": "member role",
+    "originalStart": 16082
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00167",
+    "field": "localized call",
+    "originalStart": 16124
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00168",
+    "field": "localized call",
+    "originalStart": 16314
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00169",
+    "field": "localized call",
+    "originalStart": 16557
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00170",
+    "field": "member name",
+    "originalStart": 16619
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00171",
+    "field": "member role",
+    "originalStart": 16651
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00172",
+    "field": "member name",
+    "originalStart": 16683
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00173",
+    "field": "member role",
+    "originalStart": 16717
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00174",
+    "field": "member name",
+    "originalStart": 16748
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00175",
+    "field": "member role",
+    "originalStart": 16783
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00176",
+    "field": "localized call",
+    "originalStart": 16818
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00177",
+    "field": "localized call",
+    "originalStart": 17238
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00178",
+    "field": "localized call",
+    "originalStart": 17454
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00179",
+    "field": "member name",
+    "originalStart": 17519
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00180",
+    "field": "member role",
+    "originalStart": 17551
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00181",
+    "field": "member name",
+    "originalStart": 17583
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00182",
+    "field": "member role",
+    "originalStart": 17605
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00183",
+    "field": "member name",
+    "originalStart": 17633
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00184",
+    "field": "member role",
+    "originalStart": 17656
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00185",
+    "field": "localized call",
+    "originalStart": 17698
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00186",
+    "field": "localized call",
+    "originalStart": 18086
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00187",
+    "field": "localized call",
+    "originalStart": 18293
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00188",
+    "field": "member name",
+    "originalStart": 18358
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00189",
+    "field": "member role",
+    "originalStart": 18390
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00190",
+    "field": "member name",
+    "originalStart": 18422
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00191",
+    "field": "member role",
+    "originalStart": 18446
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00192",
+    "field": "member name",
+    "originalStart": 18474
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00193",
+    "field": "member role",
+    "originalStart": 18496
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00194",
+    "field": "localized call",
+    "originalStart": 18531
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00195",
+    "field": "localized call",
+    "originalStart": 18911
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00196",
+    "field": "localized call",
+    "originalStart": 19760
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00197",
+    "field": "localized call",
+    "originalStart": 19806
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00198",
+    "field": "localized call",
+    "originalStart": 19852
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00199",
+    "field": "localized call",
+    "originalStart": 20671
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00200",
+    "field": "localized call",
+    "originalStart": 20986
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00201",
+    "field": "localized call",
+    "originalStart": 21030
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00202",
+    "field": "localized call",
+    "originalStart": 21073
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00203",
+    "field": "localized call",
+    "originalStart": 23218
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00204",
+    "field": "localized call",
+    "originalStart": 23391
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00205",
+    "field": "localized call",
+    "originalStart": 23584
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00206",
+    "field": "localized call",
+    "originalStart": 23729
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00207",
+    "field": "localized call",
+    "originalStart": 35818
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00208",
+    "field": "localized call",
+    "originalStart": 39444
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00209",
+    "field": "localized call",
+    "originalStart": 41927
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00210",
+    "field": "localized call",
+    "originalStart": 44614
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00211",
+    "field": "localized call",
+    "originalStart": 49729
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00212",
+    "field": "localized call",
+    "originalStart": 60024
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00213",
+    "field": "localized call",
+    "originalStart": 60710
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00214",
+    "field": "localized call",
+    "originalStart": 63807
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00215",
+    "field": "localized call",
+    "originalStart": 65219
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00216",
+    "field": "localized call",
+    "originalStart": 72503
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00217",
+    "field": "localized call",
+    "originalStart": 73967
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00218",
+    "field": "localized call",
+    "originalStart": 77510
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00219",
+    "field": "localized call",
+    "originalStart": 81609
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00220",
+    "field": "localized call",
+    "originalStart": 82283
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00221",
+    "field": "localized call",
+    "originalStart": 84262
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00222",
+    "field": "localized call",
+    "originalStart": 85564
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00223",
+    "field": "localized call",
+    "originalStart": 86922
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00224",
+    "field": "localized call",
+    "originalStart": 87763
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00225",
+    "field": "localized call",
+    "originalStart": 89287
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00226",
+    "field": "localized call",
+    "originalStart": 91333
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00227",
+    "field": "localized call",
+    "originalStart": 95641
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00228",
+    "field": "localized call",
+    "originalStart": 96119
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00229",
+    "field": "localized call",
+    "originalStart": 97332
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00230",
+    "field": "localized call",
+    "originalStart": 97649
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00231",
+    "field": "localized call",
+    "originalStart": 98255
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00232",
+    "field": "localized call",
+    "originalStart": 98842
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00233",
+    "field": "localized call",
+    "originalStart": 99428
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00234",
+    "field": "localized call",
+    "originalStart": 101148
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00235",
+    "field": "localized call",
+    "originalStart": 102637
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00236",
+    "field": "localized call",
+    "originalStart": 103007
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00237",
+    "field": "localized call",
+    "originalStart": 106350
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00238",
+    "field": "localized call",
+    "originalStart": 107012
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00239",
+    "field": "localized call",
+    "originalStart": 108736
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00240",
+    "field": "localized call",
+    "originalStart": 109767
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00241",
+    "field": "localized call",
+    "originalStart": 110349
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00242",
+    "field": "localized call",
+    "originalStart": 111489
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00243",
+    "field": "localized call",
+    "originalStart": 113361
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00244",
+    "field": "localized call",
+    "originalStart": 113839
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00245",
+    "field": "localized call",
+    "originalStart": 116366
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00246",
+    "field": "localized call",
+    "originalStart": 117585
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00247",
+    "field": "localized call",
+    "originalStart": 118801
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00248",
+    "field": "localized call",
+    "originalStart": 120057
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00249",
+    "field": "localized call",
+    "originalStart": 121958
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00250",
+    "field": "localized call",
+    "originalStart": 122508
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00251",
+    "field": "localized call",
+    "originalStart": 123096
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00252",
+    "field": "localized call",
+    "originalStart": 124209
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00253",
+    "field": "localized call",
+    "originalStart": 124765
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00254",
+    "field": "localized call",
+    "originalStart": 126605
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00255",
+    "field": "localized call",
+    "originalStart": 128428
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00256",
+    "field": "localized call",
+    "originalStart": 129053
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00257",
+    "field": "localized call",
+    "originalStart": 130124
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00258",
+    "field": "localized call",
+    "originalStart": 134137
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00259",
+    "field": "localized call",
+    "originalStart": 135488
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00260",
+    "field": "localized call",
+    "originalStart": 136161
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00261",
+    "field": "localized call",
+    "originalStart": 136910
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00262",
+    "field": "localized call",
+    "originalStart": 137842
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00263",
+    "field": "localized call",
+    "originalStart": 138647
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00264",
+    "field": "localized call",
+    "originalStart": 139479
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00265",
+    "field": "localized call",
+    "originalStart": 140373
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00266",
+    "field": "localized call",
+    "originalStart": 141589
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00267",
+    "field": "localized call",
+    "originalStart": 142771
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00268",
+    "field": "localized call",
+    "originalStart": 143632
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00269",
+    "field": "localized call",
+    "originalStart": 144652
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00270",
+    "field": "localized call",
+    "originalStart": 145683
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00271",
+    "field": "localized call",
+    "originalStart": 146320
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00272",
+    "field": "localized call",
+    "originalStart": 147598
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00273",
+    "field": "localized call",
+    "originalStart": 148410
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00274",
+    "field": "localized call",
+    "originalStart": 149326
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00275",
+    "field": "localized call",
+    "originalStart": 150115
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00276",
+    "field": "localized call",
+    "originalStart": 151116
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00277",
+    "field": "localized call",
+    "originalStart": 151589
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00278",
+    "field": "localized call",
+    "originalStart": 152015
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00279",
+    "field": "title",
+    "originalStart": 152698
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00280",
+    "field": "name",
+    "originalStart": 152776
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00281",
+    "field": "role",
+    "originalStart": 152827
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00282",
+    "field": "name",
+    "originalStart": 152883
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00283",
+    "field": "role",
+    "originalStart": 152925
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00284",
+    "field": "name",
+    "originalStart": 152971
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00285",
+    "field": "role",
+    "originalStart": 153013
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00286",
+    "field": "name",
+    "originalStart": 153069
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00287",
+    "field": "role",
+    "originalStart": 153111
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00288",
+    "field": "localized paragraph",
+    "originalStart": 153171
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00289",
+    "field": "targetSummary",
+    "originalStart": 153381
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00290",
+    "field": "sourceLabel",
+    "originalStart": 153625
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00291",
+    "field": "label",
+    "originalStart": 153802
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00292",
+    "field": "note",
+    "originalStart": 154087
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00293",
+    "field": "title",
+    "originalStart": 154301
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00294",
+    "field": "name",
+    "originalStart": 154368
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00295",
+    "field": "role",
+    "originalStart": 154425
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00296",
+    "field": "name",
+    "originalStart": 154481
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00297",
+    "field": "role",
+    "originalStart": 154523
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00298",
+    "field": "name",
+    "originalStart": 154569
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00299",
+    "field": "role",
+    "originalStart": 154611
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00300",
+    "field": "name",
+    "originalStart": 154667
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00301",
+    "field": "role",
+    "originalStart": 154724
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00302",
+    "field": "localized paragraph",
+    "originalStart": 154784
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00303",
+    "field": "targetSummary",
+    "originalStart": 154994
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00304",
+    "field": "sourceLabel",
+    "originalStart": 155238
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00305",
+    "field": "label",
+    "originalStart": 155415
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00306",
+    "field": "note",
+    "originalStart": 155700
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00307",
+    "field": "title",
+    "originalStart": 155914
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00308",
+    "field": "name",
+    "originalStart": 155987
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00309",
+    "field": "role",
+    "originalStart": 156029
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00310",
+    "field": "name",
+    "originalStart": 156085
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00311",
+    "field": "role",
+    "originalStart": 156127
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00312",
+    "field": "name",
+    "originalStart": 156173
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00313",
+    "field": "role",
+    "originalStart": 156215
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00314",
+    "field": "name",
+    "originalStart": 156271
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00315",
+    "field": "role",
+    "originalStart": 156319
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00316",
+    "field": "localized paragraph",
+    "originalStart": 156379
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00317",
+    "field": "targetSummary",
+    "originalStart": 156589
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00318",
+    "field": "sourceLabel",
+    "originalStart": 156833
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00319",
+    "field": "label",
+    "originalStart": 157010
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00320",
+    "field": "note",
+    "originalStart": 157295
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00321",
+    "field": "title",
+    "originalStart": 157531
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00322",
+    "field": "name",
+    "originalStart": 157609
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00323",
+    "field": "role",
+    "originalStart": 157651
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00324",
+    "field": "name",
+    "originalStart": 157707
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00325",
+    "field": "role",
+    "originalStart": 157758
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00326",
+    "field": "name",
+    "originalStart": 157804
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00327",
+    "field": "role",
+    "originalStart": 157846
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00328",
+    "field": "name",
+    "originalStart": 157902
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00329",
+    "field": "role",
+    "originalStart": 157953
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00330",
+    "field": "localized paragraph",
+    "originalStart": 158013
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00331",
+    "field": "targetSummary",
+    "originalStart": 158223
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00332",
+    "field": "sourceLabel",
+    "originalStart": 158467
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00333",
+    "field": "label",
+    "originalStart": 158644
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00334",
+    "field": "note",
+    "originalStart": 158929
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00335",
+    "field": "title",
+    "originalStart": 159146
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00336",
+    "field": "name",
+    "originalStart": 159213
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00337",
+    "field": "role",
+    "originalStart": 159261
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00338",
+    "field": "name",
+    "originalStart": 159317
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00339",
+    "field": "role",
+    "originalStart": 159368
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00340",
+    "field": "name",
+    "originalStart": 159414
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00341",
+    "field": "role",
+    "originalStart": 159459
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00342",
+    "field": "name",
+    "originalStart": 159515
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00343",
+    "field": "role",
+    "originalStart": 159563
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00344",
+    "field": "localized paragraph",
+    "originalStart": 159623
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00345",
+    "field": "targetSummary",
+    "originalStart": 159833
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00346",
+    "field": "sourceLabel",
+    "originalStart": 160077
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00347",
+    "field": "label",
+    "originalStart": 160254
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00348",
+    "field": "note",
+    "originalStart": 160539
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00349",
+    "field": "title",
+    "originalStart": 160756
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00350",
+    "field": "name",
+    "originalStart": 160829
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00351",
+    "field": "role",
+    "originalStart": 160871
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00352",
+    "field": "name",
+    "originalStart": 160927
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00353",
+    "field": "role",
+    "originalStart": 160978
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00354",
+    "field": "name",
+    "originalStart": 161024
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00355",
+    "field": "role",
+    "originalStart": 161072
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00356",
+    "field": "name",
+    "originalStart": 161128
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00357",
+    "field": "role",
+    "originalStart": 161179
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00358",
+    "field": "localized paragraph",
+    "originalStart": 161239
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00359",
+    "field": "targetSummary",
+    "originalStart": 161449
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00360",
+    "field": "sourceLabel",
+    "originalStart": 161693
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00361",
+    "field": "label",
+    "originalStart": 161870
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00362",
+    "field": "note",
+    "originalStart": 162155
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00363",
+    "field": "title",
+    "originalStart": 162387
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00364",
+    "field": "name",
+    "originalStart": 162465
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00365",
+    "field": "role",
+    "originalStart": 162510
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00366",
+    "field": "name",
+    "originalStart": 162556
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00367",
+    "field": "role",
+    "originalStart": 162616
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00368",
+    "field": "name",
+    "originalStart": 162672
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00369",
+    "field": "role",
+    "originalStart": 162720
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00370",
+    "field": "name",
+    "originalStart": 162776
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00371",
+    "field": "role",
+    "originalStart": 162827
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00372",
+    "field": "localized paragraph",
+    "originalStart": 162887
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00373",
+    "field": "targetSummary",
+    "originalStart": 163097
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00374",
+    "field": "sourceLabel",
+    "originalStart": 163341
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00375",
+    "field": "label",
+    "originalStart": 163518
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00376",
+    "field": "note",
+    "originalStart": 163803
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00377",
+    "field": "title",
+    "originalStart": 164018
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00378",
+    "field": "name",
+    "originalStart": 164085
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00379",
+    "field": "role",
+    "originalStart": 164130
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00380",
+    "field": "name",
+    "originalStart": 164176
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00381",
+    "field": "role",
+    "originalStart": 164224
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00382",
+    "field": "name",
+    "originalStart": 164280
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00383",
+    "field": "role",
+    "originalStart": 164328
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00384",
+    "field": "name",
+    "originalStart": 164384
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00385",
+    "field": "role",
+    "originalStart": 164435
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00386",
+    "field": "localized paragraph",
+    "originalStart": 164495
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00387",
+    "field": "targetSummary",
+    "originalStart": 164705
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00388",
+    "field": "sourceLabel",
+    "originalStart": 164949
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00389",
+    "field": "label",
+    "originalStart": 165126
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00390",
+    "field": "note",
+    "originalStart": 165411
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00391",
+    "field": "title",
+    "originalStart": 165626
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00392",
+    "field": "name",
+    "originalStart": 165699
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00393",
+    "field": "role",
+    "originalStart": 165744
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00394",
+    "field": "name",
+    "originalStart": 165790
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00395",
+    "field": "role",
+    "originalStart": 165841
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00396",
+    "field": "name",
+    "originalStart": 165897
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00397",
+    "field": "role",
+    "originalStart": 165945
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00398",
+    "field": "name",
+    "originalStart": 166001
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00399",
+    "field": "role",
+    "originalStart": 166049
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00400",
+    "field": "localized paragraph",
+    "originalStart": 166109
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00401",
+    "field": "targetSummary",
+    "originalStart": 166319
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00402",
+    "field": "sourceLabel",
+    "originalStart": 166563
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00403",
+    "field": "label",
+    "originalStart": 166740
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00404",
+    "field": "note",
+    "originalStart": 167025
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00405",
+    "field": "title",
+    "originalStart": 167255
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00406",
+    "field": "name",
+    "originalStart": 167333
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00407",
+    "field": "role",
+    "originalStart": 167375
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00408",
+    "field": "name",
+    "originalStart": 167431
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00409",
+    "field": "role",
+    "originalStart": 167473
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00410",
+    "field": "name",
+    "originalStart": 167519
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00411",
+    "field": "role",
+    "originalStart": 167567
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00412",
+    "field": "name",
+    "originalStart": 167623
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00413",
+    "field": "role",
+    "originalStart": 167665
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00414",
+    "field": "localized paragraph",
+    "originalStart": 167725
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00415",
+    "field": "targetSummary",
+    "originalStart": 167935
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00416",
+    "field": "sourceLabel",
+    "originalStart": 168179
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00417",
+    "field": "label",
+    "originalStart": 168356
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00418",
+    "field": "note",
+    "originalStart": 168641
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00419",
+    "field": "title",
+    "originalStart": 168855
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00420",
+    "field": "name",
+    "originalStart": 168922
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00421",
+    "field": "role",
+    "originalStart": 168979
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00422",
+    "field": "name",
+    "originalStart": 169035
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00423",
+    "field": "role",
+    "originalStart": 169077
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00424",
+    "field": "name",
+    "originalStart": 169123
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00425",
+    "field": "role",
+    "originalStart": 169165
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00426",
+    "field": "name",
+    "originalStart": 169221
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00427",
+    "field": "role",
+    "originalStart": 169269
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00428",
+    "field": "localized paragraph",
+    "originalStart": 169329
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00429",
+    "field": "targetSummary",
+    "originalStart": 169539
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00430",
+    "field": "sourceLabel",
+    "originalStart": 169783
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00431",
+    "field": "label",
+    "originalStart": 169960
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00432",
+    "field": "note",
+    "originalStart": 170245
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00433",
+    "field": "title",
+    "originalStart": 170459
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00434",
+    "field": "name",
+    "originalStart": 170532
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00435",
+    "field": "role",
+    "originalStart": 170574
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00436",
+    "field": "name",
+    "originalStart": 170630
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00437",
+    "field": "role",
+    "originalStart": 170672
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00438",
+    "field": "name",
+    "originalStart": 170718
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00439",
+    "field": "role",
+    "originalStart": 170766
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00440",
+    "field": "name",
+    "originalStart": 170822
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00441",
+    "field": "role",
+    "originalStart": 170873
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00442",
+    "field": "localized paragraph",
+    "originalStart": 170933
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00443",
+    "field": "targetSummary",
+    "originalStart": 171143
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00444",
+    "field": "sourceLabel",
+    "originalStart": 171387
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00445",
+    "field": "label",
+    "originalStart": 171564
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00446",
+    "field": "note",
+    "originalStart": 171849
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00447",
+    "field": "title",
+    "originalStart": 172079
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00448",
+    "field": "name",
+    "originalStart": 172157
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00449",
+    "field": "role",
+    "originalStart": 172196
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00450",
+    "field": "name",
+    "originalStart": 172252
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00451",
+    "field": "role",
+    "originalStart": 172303
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00452",
+    "field": "name",
+    "originalStart": 172359
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00453",
+    "field": "role",
+    "originalStart": 172410
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00454",
+    "field": "name",
+    "originalStart": 172466
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00455",
+    "field": "role",
+    "originalStart": 172508
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00456",
+    "field": "localized paragraph",
+    "originalStart": 172558
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00457",
+    "field": "targetSummary",
+    "originalStart": 172768
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00458",
+    "field": "sourceLabel",
+    "originalStart": 173012
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00459",
+    "field": "label",
+    "originalStart": 173189
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00460",
+    "field": "note",
+    "originalStart": 173474
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00461",
+    "field": "title",
+    "originalStart": 173688
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00462",
+    "field": "name",
+    "originalStart": 173755
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00463",
+    "field": "role",
+    "originalStart": 173797
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00464",
+    "field": "name",
+    "originalStart": 173853
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00465",
+    "field": "role",
+    "originalStart": 173898
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00466",
+    "field": "name",
+    "originalStart": 173954
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00467",
+    "field": "role",
+    "originalStart": 174002
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00468",
+    "field": "name",
+    "originalStart": 174058
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00469",
+    "field": "role",
+    "originalStart": 174100
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00470",
+    "field": "localized paragraph",
+    "originalStart": 174150
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00471",
+    "field": "targetSummary",
+    "originalStart": 174360
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00472",
+    "field": "sourceLabel",
+    "originalStart": 174604
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00473",
+    "field": "label",
+    "originalStart": 174781
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00474",
+    "field": "note",
+    "originalStart": 175066
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00475",
+    "field": "title",
+    "originalStart": 175280
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00476",
+    "field": "name",
+    "originalStart": 175353
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00477",
+    "field": "role",
+    "originalStart": 175395
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00478",
+    "field": "name",
+    "originalStart": 175451
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00479",
+    "field": "role",
+    "originalStart": 175493
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00480",
+    "field": "name",
+    "originalStart": 175549
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00481",
+    "field": "role",
+    "originalStart": 175591
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00482",
+    "field": "name",
+    "originalStart": 175647
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00483",
+    "field": "role",
+    "originalStart": 175689
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00484",
+    "field": "localized paragraph",
+    "originalStart": 175739
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00485",
+    "field": "targetSummary",
+    "originalStart": 175949
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00486",
+    "field": "sourceLabel",
+    "originalStart": 176193
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00487",
+    "field": "label",
+    "originalStart": 176370
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00488",
+    "field": "note",
+    "originalStart": 176655
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00489",
+    "field": "title",
+    "originalStart": 176885
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00490",
+    "field": "name",
+    "originalStart": 176963
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00491",
+    "field": "role",
+    "originalStart": 177005
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00492",
+    "field": "name",
+    "originalStart": 177051
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00493",
+    "field": "role",
+    "originalStart": 177099
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00494",
+    "field": "name",
+    "originalStart": 177155
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00495",
+    "field": "role",
+    "originalStart": 177206
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00496",
+    "field": "name",
+    "originalStart": 177262
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00497",
+    "field": "role",
+    "originalStart": 177313
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00498",
+    "field": "localized paragraph",
+    "originalStart": 177373
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00499",
+    "field": "targetSummary",
+    "originalStart": 177583
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00500",
+    "field": "sourceLabel",
+    "originalStart": 177827
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00501",
+    "field": "label",
+    "originalStart": 178004
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00502",
+    "field": "note",
+    "originalStart": 178289
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00503",
+    "field": "title",
+    "originalStart": 178503
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00504",
+    "field": "name",
+    "originalStart": 178570
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00505",
+    "field": "role",
+    "originalStart": 178612
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00506",
+    "field": "name",
+    "originalStart": 178658
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00507",
+    "field": "role",
+    "originalStart": 178703
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00508",
+    "field": "name",
+    "originalStart": 178759
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00509",
+    "field": "role",
+    "originalStart": 178801
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00510",
+    "field": "name",
+    "originalStart": 178857
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00511",
+    "field": "role",
+    "originalStart": 178914
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00512",
+    "field": "localized paragraph",
+    "originalStart": 178974
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00513",
+    "field": "targetSummary",
+    "originalStart": 179184
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00514",
+    "field": "sourceLabel",
+    "originalStart": 179428
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00515",
+    "field": "label",
+    "originalStart": 179605
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00516",
+    "field": "note",
+    "originalStart": 179890
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00517",
+    "field": "title",
+    "originalStart": 180104
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00518",
+    "field": "name",
+    "originalStart": 180177
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00519",
+    "field": "role",
+    "originalStart": 180219
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00520",
+    "field": "name",
+    "originalStart": 180265
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00521",
+    "field": "role",
+    "originalStart": 180307
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00522",
+    "field": "name",
+    "originalStart": 180363
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00523",
+    "field": "role",
+    "originalStart": 180414
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00524",
+    "field": "name",
+    "originalStart": 180470
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00525",
+    "field": "role",
+    "originalStart": 180521
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00526",
+    "field": "localized paragraph",
+    "originalStart": 180581
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00527",
+    "field": "targetSummary",
+    "originalStart": 180791
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00528",
+    "field": "sourceLabel",
+    "originalStart": 181035
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00529",
+    "field": "label",
+    "originalStart": 181212
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00530",
+    "field": "note",
+    "originalStart": 181497
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00531",
+    "field": "title",
+    "originalStart": 181727
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00532",
+    "field": "name",
+    "originalStart": 181805
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00533",
+    "field": "role",
+    "originalStart": 181847
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00534",
+    "field": "name",
+    "originalStart": 181893
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00535",
+    "field": "role",
+    "originalStart": 181947
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00536",
+    "field": "name",
+    "originalStart": 182003
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00537",
+    "field": "role",
+    "originalStart": 182051
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00538",
+    "field": "name",
+    "originalStart": 182107
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00539",
+    "field": "role",
+    "originalStart": 182155
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00540",
+    "field": "localized paragraph",
+    "originalStart": 182215
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00541",
+    "field": "targetSummary",
+    "originalStart": 182425
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00542",
+    "field": "sourceLabel",
+    "originalStart": 182669
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00543",
+    "field": "label",
+    "originalStart": 182846
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00544",
+    "field": "note",
+    "originalStart": 183131
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00545",
+    "field": "title",
+    "originalStart": 183345
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00546",
+    "field": "name",
+    "originalStart": 183412
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00547",
+    "field": "role",
+    "originalStart": 183454
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00548",
+    "field": "name",
+    "originalStart": 183500
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00549",
+    "field": "role",
+    "originalStart": 183554
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00550",
+    "field": "name",
+    "originalStart": 183610
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00551",
+    "field": "role",
+    "originalStart": 183655
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00552",
+    "field": "name",
+    "originalStart": 183711
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00553",
+    "field": "role",
+    "originalStart": 183753
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00554",
+    "field": "localized paragraph",
+    "originalStart": 183813
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00555",
+    "field": "targetSummary",
+    "originalStart": 184023
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00556",
+    "field": "sourceLabel",
+    "originalStart": 184267
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00557",
+    "field": "label",
+    "originalStart": 184444
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00558",
+    "field": "note",
+    "originalStart": 184729
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00559",
+    "field": "title",
+    "originalStart": 184943
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00560",
+    "field": "name",
+    "originalStart": 185016
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00561",
+    "field": "role",
+    "originalStart": 185058
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00562",
+    "field": "name",
+    "originalStart": 185104
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00563",
+    "field": "role",
+    "originalStart": 185149
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00564",
+    "field": "name",
+    "originalStart": 185205
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00565",
+    "field": "role",
+    "originalStart": 185253
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00566",
+    "field": "name",
+    "originalStart": 185309
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00567",
+    "field": "role",
+    "originalStart": 185360
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00568",
+    "field": "localized paragraph",
+    "originalStart": 185420
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00569",
+    "field": "targetSummary",
+    "originalStart": 185630
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00570",
+    "field": "sourceLabel",
+    "originalStart": 185874
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00571",
+    "field": "label",
+    "originalStart": 186051
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00572",
+    "field": "note",
+    "originalStart": 186336
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00573",
+    "field": "title",
+    "originalStart": 186580
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00574",
+    "field": "name",
+    "originalStart": 186658
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00575",
+    "field": "role",
+    "originalStart": 186709
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00576",
+    "field": "name",
+    "originalStart": 186755
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00577",
+    "field": "role",
+    "originalStart": 186803
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00578",
+    "field": "name",
+    "originalStart": 186859
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00579",
+    "field": "role",
+    "originalStart": 186901
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00580",
+    "field": "name",
+    "originalStart": 186957
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00581",
+    "field": "role",
+    "originalStart": 187005
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00582",
+    "field": "localized paragraph",
+    "originalStart": 187065
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00583",
+    "field": "targetSummary",
+    "originalStart": 187275
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00584",
+    "field": "sourceLabel",
+    "originalStart": 187519
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00585",
+    "field": "label",
+    "originalStart": 187689
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00586",
+    "field": "note",
+    "originalStart": 187844
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00587",
+    "field": "title",
+    "originalStart": 188081
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00588",
+    "field": "name",
+    "originalStart": 188148
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00589",
+    "field": "role",
+    "originalStart": 188199
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00590",
+    "field": "name",
+    "originalStart": 188245
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00591",
+    "field": "role",
+    "originalStart": 188287
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00592",
+    "field": "name",
+    "originalStart": 188343
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00593",
+    "field": "role",
+    "originalStart": 188385
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00594",
+    "field": "name",
+    "originalStart": 188441
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00595",
+    "field": "role",
+    "originalStart": 188489
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00596",
+    "field": "localized paragraph",
+    "originalStart": 188549
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00597",
+    "field": "targetSummary",
+    "originalStart": 188759
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00598",
+    "field": "sourceLabel",
+    "originalStart": 189003
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00599",
+    "field": "label",
+    "originalStart": 189173
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00600",
+    "field": "note",
+    "originalStart": 189328
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00601",
+    "field": "title",
+    "originalStart": 189565
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00602",
+    "field": "name",
+    "originalStart": 189638
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00603",
+    "field": "role",
+    "originalStart": 189689
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00604",
+    "field": "name",
+    "originalStart": 189735
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00605",
+    "field": "role",
+    "originalStart": 189780
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00606",
+    "field": "name",
+    "originalStart": 189836
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00607",
+    "field": "role",
+    "originalStart": 189887
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00608",
+    "field": "name",
+    "originalStart": 189943
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00609",
+    "field": "role",
+    "originalStart": 189991
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00610",
+    "field": "localized paragraph",
+    "originalStart": 190051
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00611",
+    "field": "targetSummary",
+    "originalStart": 190261
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00612",
+    "field": "sourceLabel",
+    "originalStart": 190505
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00613",
+    "field": "label",
+    "originalStart": 190675
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00614",
+    "field": "note",
+    "originalStart": 190830
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00615",
+    "field": "title",
+    "originalStart": 191088
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00616",
+    "field": "name",
+    "originalStart": 191166
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00617",
+    "field": "role",
+    "originalStart": 191214
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00618",
+    "field": "name",
+    "originalStart": 191260
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00619",
+    "field": "role",
+    "originalStart": 191308
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00620",
+    "field": "name",
+    "originalStart": 191364
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00621",
+    "field": "role",
+    "originalStart": 191412
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00622",
+    "field": "name",
+    "originalStart": 191468
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00623",
+    "field": "role",
+    "originalStart": 191519
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00624",
+    "field": "localized paragraph",
+    "originalStart": 191579
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00625",
+    "field": "targetSummary",
+    "originalStart": 191789
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00626",
+    "field": "sourceLabel",
+    "originalStart": 192033
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00627",
+    "field": "label",
+    "originalStart": 192203
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00628",
+    "field": "note",
+    "originalStart": 192358
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00629",
+    "field": "title",
+    "originalStart": 192594
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00630",
+    "field": "name",
+    "originalStart": 192661
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00631",
+    "field": "role",
+    "originalStart": 192709
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00632",
+    "field": "name",
+    "originalStart": 192755
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00633",
+    "field": "role",
+    "originalStart": 192803
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00634",
+    "field": "name",
+    "originalStart": 192859
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00635",
+    "field": "role",
+    "originalStart": 192907
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00636",
+    "field": "name",
+    "originalStart": 192963
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00637",
+    "field": "role",
+    "originalStart": 193011
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00638",
+    "field": "localized paragraph",
+    "originalStart": 193071
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00639",
+    "field": "targetSummary",
+    "originalStart": 193281
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00640",
+    "field": "sourceLabel",
+    "originalStart": 193525
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00641",
+    "field": "label",
+    "originalStart": 193695
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00642",
+    "field": "note",
+    "originalStart": 193850
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00643",
+    "field": "title",
+    "originalStart": 194086
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00644",
+    "field": "name",
+    "originalStart": 194159
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00645",
+    "field": "role",
+    "originalStart": 194207
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00646",
+    "field": "name",
+    "originalStart": 194253
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00647",
+    "field": "role",
+    "originalStart": 194304
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00648",
+    "field": "name",
+    "originalStart": 194360
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00649",
+    "field": "role",
+    "originalStart": 194414
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00650",
+    "field": "name",
+    "originalStart": 194470
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00651",
+    "field": "role",
+    "originalStart": 194518
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00652",
+    "field": "localized paragraph",
+    "originalStart": 194578
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00653",
+    "field": "targetSummary",
+    "originalStart": 194788
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00654",
+    "field": "sourceLabel",
+    "originalStart": 195032
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00655",
+    "field": "label",
+    "originalStart": 195202
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00656",
+    "field": "note",
+    "originalStart": 195357
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00657",
+    "field": "title",
+    "originalStart": 195613
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00658",
+    "field": "name",
+    "originalStart": 195691
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00659",
+    "field": "role",
+    "originalStart": 195742
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00660",
+    "field": "name",
+    "originalStart": 195798
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00661",
+    "field": "role",
+    "originalStart": 195846
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00662",
+    "field": "name",
+    "originalStart": 195902
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00663",
+    "field": "role",
+    "originalStart": 195947
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00664",
+    "field": "name",
+    "originalStart": 195993
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00665",
+    "field": "role",
+    "originalStart": 196041
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00666",
+    "field": "localized paragraph",
+    "originalStart": 196101
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00667",
+    "field": "targetSummary",
+    "originalStart": 196311
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00668",
+    "field": "sourceLabel",
+    "originalStart": 196555
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00669",
+    "field": "label",
+    "originalStart": 196725
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00670",
+    "field": "note",
+    "originalStart": 196880
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00671",
+    "field": "title",
+    "originalStart": 197115
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00672",
+    "field": "name",
+    "originalStart": 197182
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00673",
+    "field": "role",
+    "originalStart": 197230
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00674",
+    "field": "name",
+    "originalStart": 197286
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00675",
+    "field": "role",
+    "originalStart": 197334
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00676",
+    "field": "name",
+    "originalStart": 197390
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00677",
+    "field": "role",
+    "originalStart": 197435
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00678",
+    "field": "name",
+    "originalStart": 197481
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00679",
+    "field": "role",
+    "originalStart": 197523
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00680",
+    "field": "localized paragraph",
+    "originalStart": 197583
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00681",
+    "field": "targetSummary",
+    "originalStart": 197793
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00682",
+    "field": "sourceLabel",
+    "originalStart": 198037
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00683",
+    "field": "label",
+    "originalStart": 198207
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00684",
+    "field": "note",
+    "originalStart": 198362
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00685",
+    "field": "title",
+    "originalStart": 198597
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00686",
+    "field": "name",
+    "originalStart": 198670
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00687",
+    "field": "role",
+    "originalStart": 198712
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00688",
+    "field": "name",
+    "originalStart": 198768
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00689",
+    "field": "role",
+    "originalStart": 198810
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00690",
+    "field": "name",
+    "originalStart": 198866
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00691",
+    "field": "role",
+    "originalStart": 198908
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00692",
+    "field": "name",
+    "originalStart": 198964
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00693",
+    "field": "role",
+    "originalStart": 199009
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00694",
+    "field": "localized paragraph",
+    "originalStart": 199059
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00695",
+    "field": "targetSummary",
+    "originalStart": 199269
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00696",
+    "field": "sourceLabel",
+    "originalStart": 199513
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00697",
+    "field": "label",
+    "originalStart": 199683
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00698",
+    "field": "note",
+    "originalStart": 199838
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00699",
+    "field": "title",
+    "originalStart": 200094
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00700",
+    "field": "name",
+    "originalStart": 200172
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00701",
+    "field": "role",
+    "originalStart": 200214
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00702",
+    "field": "name",
+    "originalStart": 200270
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00703",
+    "field": "role",
+    "originalStart": 200318
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00704",
+    "field": "name",
+    "originalStart": 200374
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00705",
+    "field": "role",
+    "originalStart": 200422
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00706",
+    "field": "name",
+    "originalStart": 200478
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00707",
+    "field": "role",
+    "originalStart": 200523
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00708",
+    "field": "localized paragraph",
+    "originalStart": 200573
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00709",
+    "field": "targetSummary",
+    "originalStart": 200783
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00710",
+    "field": "sourceLabel",
+    "originalStart": 201027
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00711",
+    "field": "label",
+    "originalStart": 201197
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00712",
+    "field": "note",
+    "originalStart": 201352
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00713",
+    "field": "title",
+    "originalStart": 201587
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00714",
+    "field": "name",
+    "originalStart": 201654
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00715",
+    "field": "role",
+    "originalStart": 201702
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00716",
+    "field": "name",
+    "originalStart": 201758
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00717",
+    "field": "role",
+    "originalStart": 201806
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00718",
+    "field": "name",
+    "originalStart": 201862
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00719",
+    "field": "role",
+    "originalStart": 201910
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00720",
+    "field": "name",
+    "originalStart": 201966
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00721",
+    "field": "role",
+    "originalStart": 202011
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00722",
+    "field": "localized paragraph",
+    "originalStart": 202061
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00723",
+    "field": "targetSummary",
+    "originalStart": 202271
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00724",
+    "field": "sourceLabel",
+    "originalStart": 202515
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00725",
+    "field": "label",
+    "originalStart": 202685
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00726",
+    "field": "note",
+    "originalStart": 202840
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00727",
+    "field": "title",
+    "originalStart": 203075
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00728",
+    "field": "name",
+    "originalStart": 203148
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00729",
+    "field": "role",
+    "originalStart": 203190
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00730",
+    "field": "name",
+    "originalStart": 203246
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00731",
+    "field": "role",
+    "originalStart": 203288
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00732",
+    "field": "name",
+    "originalStart": 203344
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00733",
+    "field": "role",
+    "originalStart": 203386
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00734",
+    "field": "name",
+    "originalStart": 203442
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00735",
+    "field": "role",
+    "originalStart": 203487
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00736",
+    "field": "localized paragraph",
+    "originalStart": 203537
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00737",
+    "field": "targetSummary",
+    "originalStart": 203747
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00738",
+    "field": "sourceLabel",
+    "originalStart": 203991
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00739",
+    "field": "label",
+    "originalStart": 204161
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00740",
+    "field": "note",
+    "originalStart": 204316
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00741",
+    "field": "title",
+    "originalStart": 204574
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00742",
+    "field": "name",
+    "originalStart": 204652
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00743",
+    "field": "role",
+    "originalStart": 204700
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00744",
+    "field": "name",
+    "originalStart": 204746
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00745",
+    "field": "role",
+    "originalStart": 204794
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00746",
+    "field": "name",
+    "originalStart": 204850
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00747",
+    "field": "role",
+    "originalStart": 204898
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00748",
+    "field": "name",
+    "originalStart": 204954
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00749",
+    "field": "role",
+    "originalStart": 205002
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00750",
+    "field": "localized paragraph",
+    "originalStart": 205062
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00751",
+    "field": "targetSummary",
+    "originalStart": 205272
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00752",
+    "field": "sourceLabel",
+    "originalStart": 205516
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00753",
+    "field": "label",
+    "originalStart": 205686
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00754",
+    "field": "note",
+    "originalStart": 205841
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00755",
+    "field": "title",
+    "originalStart": 206077
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00756",
+    "field": "name",
+    "originalStart": 206144
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00757",
+    "field": "role",
+    "originalStart": 206192
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00758",
+    "field": "name",
+    "originalStart": 206238
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00759",
+    "field": "role",
+    "originalStart": 206286
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00760",
+    "field": "name",
+    "originalStart": 206342
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00761",
+    "field": "role",
+    "originalStart": 206390
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00762",
+    "field": "name",
+    "originalStart": 206446
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00763",
+    "field": "role",
+    "originalStart": 206494
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00764",
+    "field": "localized paragraph",
+    "originalStart": 206554
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00765",
+    "field": "targetSummary",
+    "originalStart": 206764
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00766",
+    "field": "sourceLabel",
+    "originalStart": 207008
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00767",
+    "field": "label",
+    "originalStart": 207178
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00768",
+    "field": "note",
+    "originalStart": 207333
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00769",
+    "field": "title",
+    "originalStart": 207569
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00770",
+    "field": "name",
+    "originalStart": 207642
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00771",
+    "field": "role",
+    "originalStart": 207690
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00772",
+    "field": "name",
+    "originalStart": 207736
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00773",
+    "field": "role",
+    "originalStart": 207778
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00774",
+    "field": "name",
+    "originalStart": 207834
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00775",
+    "field": "role",
+    "originalStart": 207876
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00776",
+    "field": "name",
+    "originalStart": 207932
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00777",
+    "field": "role",
+    "originalStart": 207980
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00778",
+    "field": "localized paragraph",
+    "originalStart": 208040
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00779",
+    "field": "targetSummary",
+    "originalStart": 208250
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00780",
+    "field": "sourceLabel",
+    "originalStart": 208494
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00781",
+    "field": "label",
+    "originalStart": 208664
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00782",
+    "field": "note",
+    "originalStart": 208819
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00783",
+    "field": "title",
+    "originalStart": 209077
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00784",
+    "field": "name",
+    "originalStart": 209155
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00785",
+    "field": "role",
+    "originalStart": 209203
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00786",
+    "field": "name",
+    "originalStart": 209249
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00787",
+    "field": "role",
+    "originalStart": 209297
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00788",
+    "field": "name",
+    "originalStart": 209353
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00789",
+    "field": "role",
+    "originalStart": 209398
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00790",
+    "field": "name",
+    "originalStart": 209454
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00791",
+    "field": "role",
+    "originalStart": 209505
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00792",
+    "field": "localized paragraph",
+    "originalStart": 209565
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00793",
+    "field": "targetSummary",
+    "originalStart": 209775
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00794",
+    "field": "sourceLabel",
+    "originalStart": 210019
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00795",
+    "field": "label",
+    "originalStart": 210189
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00796",
+    "field": "note",
+    "originalStart": 210344
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00797",
+    "field": "title",
+    "originalStart": 210580
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00798",
+    "field": "name",
+    "originalStart": 210647
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00799",
+    "field": "role",
+    "originalStart": 210695
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00800",
+    "field": "name",
+    "originalStart": 210741
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00801",
+    "field": "role",
+    "originalStart": 210789
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00802",
+    "field": "name",
+    "originalStart": 210845
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00803",
+    "field": "role",
+    "originalStart": 210890
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00804",
+    "field": "name",
+    "originalStart": 210946
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00805",
+    "field": "role",
+    "originalStart": 210994
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00806",
+    "field": "localized paragraph",
+    "originalStart": 211054
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00807",
+    "field": "targetSummary",
+    "originalStart": 211264
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00808",
+    "field": "sourceLabel",
+    "originalStart": 211508
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00809",
+    "field": "label",
+    "originalStart": 211678
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00810",
+    "field": "note",
+    "originalStart": 211833
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00811",
+    "field": "title",
+    "originalStart": 212069
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00812",
+    "field": "name",
+    "originalStart": 212142
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00813",
+    "field": "role",
+    "originalStart": 212190
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00814",
+    "field": "name",
+    "originalStart": 212236
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00815",
+    "field": "role",
+    "originalStart": 212278
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00816",
+    "field": "name",
+    "originalStart": 212334
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00817",
+    "field": "role",
+    "originalStart": 212382
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00818",
+    "field": "name",
+    "originalStart": 212438
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00819",
+    "field": "role",
+    "originalStart": 212480
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00820",
+    "field": "localized paragraph",
+    "originalStart": 212540
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00821",
+    "field": "targetSummary",
+    "originalStart": 212750
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00822",
+    "field": "sourceLabel",
+    "originalStart": 212994
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00823",
+    "field": "label",
+    "originalStart": 213164
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00824",
+    "field": "note",
+    "originalStart": 213319
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00825",
+    "field": "title",
+    "originalStart": 213577
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00826",
+    "field": "name",
+    "originalStart": 213655
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00827",
+    "field": "role",
+    "originalStart": 213703
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00828",
+    "field": "name",
+    "originalStart": 213749
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00829",
+    "field": "role",
+    "originalStart": 213794
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00830",
+    "field": "name",
+    "originalStart": 213850
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00831",
+    "field": "role",
+    "originalStart": 213904
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00832",
+    "field": "name",
+    "originalStart": 213960
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00833",
+    "field": "role",
+    "originalStart": 214008
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00834",
+    "field": "localized paragraph",
+    "originalStart": 214068
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00835",
+    "field": "targetSummary",
+    "originalStart": 214278
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00836",
+    "field": "sourceLabel",
+    "originalStart": 214522
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00837",
+    "field": "label",
+    "originalStart": 214692
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00838",
+    "field": "note",
+    "originalStart": 214847
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00839",
+    "field": "title",
+    "originalStart": 215083
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00840",
+    "field": "name",
+    "originalStart": 215150
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00841",
+    "field": "role",
+    "originalStart": 215198
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00842",
+    "field": "name",
+    "originalStart": 215244
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00843",
+    "field": "role",
+    "originalStart": 215292
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00844",
+    "field": "name",
+    "originalStart": 215348
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00845",
+    "field": "role",
+    "originalStart": 215402
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00846",
+    "field": "name",
+    "originalStart": 215458
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00847",
+    "field": "role",
+    "originalStart": 215509
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00848",
+    "field": "localized paragraph",
+    "originalStart": 215569
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00849",
+    "field": "targetSummary",
+    "originalStart": 215779
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00850",
+    "field": "sourceLabel",
+    "originalStart": 216023
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00851",
+    "field": "label",
+    "originalStart": 216193
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00852",
+    "field": "note",
+    "originalStart": 216348
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00853",
+    "field": "title",
+    "originalStart": 216584
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00854",
+    "field": "name",
+    "originalStart": 216657
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00855",
+    "field": "role",
+    "originalStart": 216705
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00856",
+    "field": "name",
+    "originalStart": 216751
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00857",
+    "field": "role",
+    "originalStart": 216799
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00858",
+    "field": "name",
+    "originalStart": 216855
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00859",
+    "field": "role",
+    "originalStart": 216897
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00860",
+    "field": "name",
+    "originalStart": 216953
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00861",
+    "field": "role",
+    "originalStart": 216995
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00862",
+    "field": "localized paragraph",
+    "originalStart": 217055
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00863",
+    "field": "targetSummary",
+    "originalStart": 217265
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00864",
+    "field": "sourceLabel",
+    "originalStart": 217509
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00865",
+    "field": "label",
+    "originalStart": 217679
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00866",
+    "field": "note",
+    "originalStart": 217834
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00867",
+    "field": "title",
+    "originalStart": 218090
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00868",
+    "field": "name",
+    "originalStart": 218168
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00869",
+    "field": "role",
+    "originalStart": 218213
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00870",
+    "field": "name",
+    "originalStart": 218259
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00871",
+    "field": "role",
+    "originalStart": 218307
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00872",
+    "field": "name",
+    "originalStart": 218363
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00873",
+    "field": "role",
+    "originalStart": 218408
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00874",
+    "field": "name",
+    "originalStart": 218464
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00875",
+    "field": "role",
+    "originalStart": 218506
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00876",
+    "field": "localized paragraph",
+    "originalStart": 218566
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00877",
+    "field": "targetSummary",
+    "originalStart": 218776
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00878",
+    "field": "sourceLabel",
+    "originalStart": 219020
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00879",
+    "field": "label",
+    "originalStart": 219190
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00880",
+    "field": "note",
+    "originalStart": 219345
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00881",
+    "field": "title",
+    "originalStart": 219580
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00882",
+    "field": "name",
+    "originalStart": 219647
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00883",
+    "field": "role",
+    "originalStart": 219692
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00884",
+    "field": "name",
+    "originalStart": 219738
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00885",
+    "field": "role",
+    "originalStart": 219786
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00886",
+    "field": "name",
+    "originalStart": 219842
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00887",
+    "field": "role",
+    "originalStart": 219890
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00888",
+    "field": "name",
+    "originalStart": 219946
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00889",
+    "field": "role",
+    "originalStart": 219988
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00890",
+    "field": "localized paragraph",
+    "originalStart": 220048
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00891",
+    "field": "targetSummary",
+    "originalStart": 220258
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00892",
+    "field": "sourceLabel",
+    "originalStart": 220502
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00893",
+    "field": "label",
+    "originalStart": 220672
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00894",
+    "field": "note",
+    "originalStart": 220827
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00895",
+    "field": "title",
+    "originalStart": 221062
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00896",
+    "field": "name",
+    "originalStart": 221135
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00897",
+    "field": "role",
+    "originalStart": 221180
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00898",
+    "field": "name",
+    "originalStart": 221226
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00899",
+    "field": "role",
+    "originalStart": 221271
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00900",
+    "field": "name",
+    "originalStart": 221327
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00901",
+    "field": "role",
+    "originalStart": 221369
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00902",
+    "field": "name",
+    "originalStart": 221425
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00903",
+    "field": "role",
+    "originalStart": 221473
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00904",
+    "field": "localized paragraph",
+    "originalStart": 221533
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00905",
+    "field": "targetSummary",
+    "originalStart": 221743
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00906",
+    "field": "sourceLabel",
+    "originalStart": 221987
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00907",
+    "field": "label",
+    "originalStart": 222157
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00908",
+    "field": "note",
+    "originalStart": 222312
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00909",
+    "field": "title",
+    "originalStart": 222558
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00910",
+    "field": "name",
+    "originalStart": 222636
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00911",
+    "field": "role",
+    "originalStart": 222678
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00912",
+    "field": "name",
+    "originalStart": 222734
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00913",
+    "field": "role",
+    "originalStart": 222776
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00914",
+    "field": "name",
+    "originalStart": 222822
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00915",
+    "field": "role",
+    "originalStart": 222870
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00916",
+    "field": "localized paragraph",
+    "originalStart": 222930
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00917",
+    "field": "targetSummary",
+    "originalStart": 223140
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00918",
+    "field": "sourceLabel",
+    "originalStart": 223384
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00919",
+    "field": "label",
+    "originalStart": 223554
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00920",
+    "field": "note",
+    "originalStart": 223712
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00921",
+    "field": "title",
+    "originalStart": 223943
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00922",
+    "field": "name",
+    "originalStart": 224010
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00923",
+    "field": "role",
+    "originalStart": 224058
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00924",
+    "field": "name",
+    "originalStart": 224114
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00925",
+    "field": "role",
+    "originalStart": 224156
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00926",
+    "field": "name",
+    "originalStart": 224202
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00927",
+    "field": "role",
+    "originalStart": 224250
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00928",
+    "field": "localized paragraph",
+    "originalStart": 224310
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00929",
+    "field": "targetSummary",
+    "originalStart": 224520
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00930",
+    "field": "sourceLabel",
+    "originalStart": 224764
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00931",
+    "field": "label",
+    "originalStart": 224934
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00932",
+    "field": "note",
+    "originalStart": 225092
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00933",
+    "field": "title",
+    "originalStart": 225323
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00934",
+    "field": "name",
+    "originalStart": 225396
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00935",
+    "field": "role",
+    "originalStart": 225444
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00936",
+    "field": "name",
+    "originalStart": 225500
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00937",
+    "field": "role",
+    "originalStart": 225542
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00938",
+    "field": "name",
+    "originalStart": 225598
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00939",
+    "field": "role",
+    "originalStart": 225640
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00940",
+    "field": "localized paragraph",
+    "originalStart": 225690
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00941",
+    "field": "targetSummary",
+    "originalStart": 225900
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00942",
+    "field": "sourceLabel",
+    "originalStart": 226144
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00943",
+    "field": "label",
+    "originalStart": 226314
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00944",
+    "field": "note",
+    "originalStart": 226472
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00945",
+    "field": "title",
+    "originalStart": 226719
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00946",
+    "field": "name",
+    "originalStart": 226797
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00947",
+    "field": "role",
+    "originalStart": 226845
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00948",
+    "field": "name",
+    "originalStart": 226901
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00949",
+    "field": "role",
+    "originalStart": 226943
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00950",
+    "field": "name",
+    "originalStart": 226989
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00951",
+    "field": "role",
+    "originalStart": 227040
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00952",
+    "field": "localized paragraph",
+    "originalStart": 227100
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00953",
+    "field": "targetSummary",
+    "originalStart": 227310
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00954",
+    "field": "sourceLabel",
+    "originalStart": 227554
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00955",
+    "field": "label",
+    "originalStart": 227724
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00956",
+    "field": "note",
+    "originalStart": 227882
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00957",
+    "field": "title",
+    "originalStart": 228113
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00958",
+    "field": "name",
+    "originalStart": 228180
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00959",
+    "field": "role",
+    "originalStart": 228222
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00960",
+    "field": "name",
+    "originalStart": 228268
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00961",
+    "field": "role",
+    "originalStart": 228313
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00962",
+    "field": "name",
+    "originalStart": 228369
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00963",
+    "field": "role",
+    "originalStart": 228435
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00964",
+    "field": "localized paragraph",
+    "originalStart": 228495
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00965",
+    "field": "targetSummary",
+    "originalStart": 228705
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00966",
+    "field": "sourceLabel",
+    "originalStart": 228949
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00967",
+    "field": "label",
+    "originalStart": 229119
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00968",
+    "field": "note",
+    "originalStart": 229277
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00969",
+    "field": "title",
+    "originalStart": 229508
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00970",
+    "field": "name",
+    "originalStart": 229581
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00971",
+    "field": "role",
+    "originalStart": 229623
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00972",
+    "field": "name",
+    "originalStart": 229669
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00973",
+    "field": "role",
+    "originalStart": 229714
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00974",
+    "field": "name",
+    "originalStart": 229770
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00975",
+    "field": "role",
+    "originalStart": 229818
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00976",
+    "field": "localized paragraph",
+    "originalStart": 229878
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00977",
+    "field": "targetSummary",
+    "originalStart": 230088
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00978",
+    "field": "sourceLabel",
+    "originalStart": 230332
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00979",
+    "field": "label",
+    "originalStart": 230502
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00980",
+    "field": "note",
+    "originalStart": 230660
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00981",
+    "field": "title",
+    "originalStart": 230909
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00982",
+    "field": "name",
+    "originalStart": 230987
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00983",
+    "field": "role",
+    "originalStart": 231029
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00984",
+    "field": "name",
+    "originalStart": 231085
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00985",
+    "field": "role",
+    "originalStart": 231130
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00986",
+    "field": "name",
+    "originalStart": 231176
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00987",
+    "field": "role",
+    "originalStart": 231227
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00988",
+    "field": "localized paragraph",
+    "originalStart": 231287
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00989",
+    "field": "targetSummary",
+    "originalStart": 231497
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00990",
+    "field": "sourceLabel",
+    "originalStart": 231741
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00991",
+    "field": "label",
+    "originalStart": 231911
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00992",
+    "field": "note",
+    "originalStart": 232069
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00993",
+    "field": "title",
+    "originalStart": 232301
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00994",
+    "field": "name",
+    "originalStart": 232368
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00995",
+    "field": "role",
+    "originalStart": 232413
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00996",
+    "field": "name",
+    "originalStart": 232459
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00997",
+    "field": "role",
+    "originalStart": 232504
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00998",
+    "field": "name",
+    "originalStart": 232560
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b00999",
+    "field": "role",
+    "originalStart": 232614
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01000",
+    "field": "localized paragraph",
+    "originalStart": 232674
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01001",
+    "field": "targetSummary",
+    "originalStart": 232884
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01002",
+    "field": "sourceLabel",
+    "originalStart": 233128
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01003",
+    "field": "label",
+    "originalStart": 233298
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01004",
+    "field": "note",
+    "originalStart": 233456
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01005",
+    "field": "title",
+    "originalStart": 233688
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01006",
+    "field": "name",
+    "originalStart": 233761
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01007",
+    "field": "role",
+    "originalStart": 233806
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01008",
+    "field": "name",
+    "originalStart": 233852
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01009",
+    "field": "role",
+    "originalStart": 233891
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01010",
+    "field": "name",
+    "originalStart": 233947
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01011",
+    "field": "role",
+    "originalStart": 233989
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01012",
+    "field": "localized paragraph",
+    "originalStart": 234049
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01013",
+    "field": "targetSummary",
+    "originalStart": 234259
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01014",
+    "field": "sourceLabel",
+    "originalStart": 234503
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01015",
+    "field": "label",
+    "originalStart": 234673
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01016",
+    "field": "note",
+    "originalStart": 234831
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01017",
+    "field": "title",
+    "originalStart": 235080
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01018",
+    "field": "name",
+    "originalStart": 235158
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01019",
+    "field": "role",
+    "originalStart": 235200
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01020",
+    "field": "name",
+    "originalStart": 235256
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01021",
+    "field": "role",
+    "originalStart": 235301
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01022",
+    "field": "name",
+    "originalStart": 235357
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01023",
+    "field": "role",
+    "originalStart": 235402
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01024",
+    "field": "localized paragraph",
+    "originalStart": 235452
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01025",
+    "field": "targetSummary",
+    "originalStart": 235662
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01026",
+    "field": "sourceLabel",
+    "originalStart": 235906
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01027",
+    "field": "label",
+    "originalStart": 236076
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01028",
+    "field": "note",
+    "originalStart": 236234
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01029",
+    "field": "title",
+    "originalStart": 236466
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01030",
+    "field": "name",
+    "originalStart": 236533
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01031",
+    "field": "role",
+    "originalStart": 236575
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01032",
+    "field": "name",
+    "originalStart": 236631
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01033",
+    "field": "role",
+    "originalStart": 236679
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01034",
+    "field": "name",
+    "originalStart": 236735
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01035",
+    "field": "role",
+    "originalStart": 236780
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01036",
+    "field": "localized paragraph",
+    "originalStart": 236830
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01037",
+    "field": "targetSummary",
+    "originalStart": 237040
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01038",
+    "field": "sourceLabel",
+    "originalStart": 237284
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01039",
+    "field": "label",
+    "originalStart": 237454
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01040",
+    "field": "note",
+    "originalStart": 237612
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01041",
+    "field": "title",
+    "originalStart": 237844
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01042",
+    "field": "name",
+    "originalStart": 237917
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01043",
+    "field": "role",
+    "originalStart": 237959
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01044",
+    "field": "name",
+    "originalStart": 238015
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01045",
+    "field": "role",
+    "originalStart": 238063
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01046",
+    "field": "name",
+    "originalStart": 238119
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01047",
+    "field": "role",
+    "originalStart": 238164
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01048",
+    "field": "localized paragraph",
+    "originalStart": 238214
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01049",
+    "field": "targetSummary",
+    "originalStart": 238424
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01050",
+    "field": "sourceLabel",
+    "originalStart": 238668
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01051",
+    "field": "label",
+    "originalStart": 238838
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01052",
+    "field": "note",
+    "originalStart": 238996
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01053",
+    "field": "localized call",
+    "originalStart": 245966
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01054",
+    "field": "localized call",
+    "originalStart": 246003
+  },
+  {
+    "id": "guide.legacy.parties_legacyCatalog.b01055",
+    "field": "localized call",
+    "originalStart": 246049
+  }
+]

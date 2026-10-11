@@ -7,6 +7,7 @@
     "content:baseline": "tsx scripts/content/baseline.ts",
     "content:migrate": "tsx scripts/content/migrate.ts",
     "content:adopt": "tsx scripts/content/adopt.ts",
+    "content:catalog-index": "tsx scripts/content/catalogIndex.ts",
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
     "build": "vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "build:api": "esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",

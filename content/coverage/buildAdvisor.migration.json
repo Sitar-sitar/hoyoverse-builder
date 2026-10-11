@@ -1,0 +1,7997 @@
+[
+  {
+    "id": "guide.legacy.buildAdvisor.b00001",
+    "field": "label",
+    "originalStart": 11508
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00002",
+    "field": "label",
+    "originalStart": 11599
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00003",
+    "field": "label",
+    "originalStart": 11692
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00004",
+    "field": "label",
+    "originalStart": 11790
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00005",
+    "field": "label",
+    "originalStart": 11937
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00006",
+    "field": "label",
+    "originalStart": 12031
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00007",
+    "field": "label",
+    "originalStart": 12125
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00008",
+    "field": "label",
+    "originalStart": 12275
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00009",
+    "field": "label",
+    "originalStart": 12368
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00010",
+    "field": "label",
+    "originalStart": 12466
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00011",
+    "field": "label",
+    "originalStart": 12609
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00012",
+    "field": "label",
+    "originalStart": 12707
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00013",
+    "field": "label",
+    "originalStart": 12805
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00014",
+    "field": "slot",
+    "originalStart": 13060
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00015",
+    "field": "value",
+    "originalStart": 13073
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00016",
+    "field": "slot",
+    "originalStart": 13097
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00017",
+    "field": "value",
+    "originalStart": 13110
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00018",
+    "field": "slot",
+    "originalStart": 13133
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00019",
+    "field": "value",
+    "originalStart": 13150
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00020",
+    "field": "slot",
+    "originalStart": 13170
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00021",
+    "field": "value",
+    "originalStart": 13184
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00022",
+    "field": "slot",
+    "originalStart": 13398
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00023",
+    "field": "value",
+    "originalStart": 13411
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00024",
+    "field": "slot",
+    "originalStart": 13435
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00025",
+    "field": "value",
+    "originalStart": 13448
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00026",
+    "field": "slot",
+    "originalStart": 13464
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00027",
+    "field": "value",
+    "originalStart": 13481
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00028",
+    "field": "slot",
+    "originalStart": 13505
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00029",
+    "field": "value",
+    "originalStart": 13519
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00030",
+    "field": "headline",
+    "originalStart": 13635
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00031",
+    "field": "relicSet",
+    "originalStart": 13677
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00032",
+    "field": "planarSet",
+    "originalStart": 13706
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00033",
+    "field": "slot",
+    "originalStart": 13751
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00034",
+    "field": "value",
+    "originalStart": 13764
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00035",
+    "field": "slot",
+    "originalStart": 13789
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00036",
+    "field": "value",
+    "originalStart": 13802
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00037",
+    "field": "slot",
+    "originalStart": 13825
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00038",
+    "field": "value",
+    "originalStart": 13842
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00039",
+    "field": "slot",
+    "originalStart": 13867
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00040",
+    "field": "value",
+    "originalStart": 13881
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00041",
+    "field": "targetContext",
+    "originalStart": 13948
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00042",
+    "field": "sourceLabel",
+    "originalStart": 14098
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00043",
+    "field": "headline",
+    "originalStart": 14170
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00044",
+    "field": "relicSet",
+    "originalStart": 14216
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00045",
+    "field": "planarSet",
+    "originalStart": 14246
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00046",
+    "field": "slot",
+    "originalStart": 14296
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00047",
+    "field": "value",
+    "originalStart": 14309
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00048",
+    "field": "slot",
+    "originalStart": 14334
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00049",
+    "field": "value",
+    "originalStart": 14347
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00050",
+    "field": "slot",
+    "originalStart": 14370
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00051",
+    "field": "value",
+    "originalStart": 14387
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00052",
+    "field": "slot",
+    "originalStart": 14415
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00053",
+    "field": "value",
+    "originalStart": 14429
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00054",
+    "field": "headline",
+    "originalStart": 14506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00055",
+    "field": "relicSet",
+    "originalStart": 14549
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00056",
+    "field": "planarSet",
+    "originalStart": 14603
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00057",
+    "field": "slot",
+    "originalStart": 14648
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00058",
+    "field": "value",
+    "originalStart": 14661
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00059",
+    "field": "slot",
+    "originalStart": 14686
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00060",
+    "field": "value",
+    "originalStart": 14699
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00061",
+    "field": "slot",
+    "originalStart": 14722
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00062",
+    "field": "value",
+    "originalStart": 14739
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00063",
+    "field": "slot",
+    "originalStart": 14770
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00064",
+    "field": "value",
+    "originalStart": 14784
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00065",
+    "field": "label",
+    "originalStart": 14858
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00066",
+    "field": "label",
+    "originalStart": 14952
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00067",
+    "field": "label",
+    "originalStart": 15050
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00068",
+    "field": "relicSet",
+    "originalStart": 15149
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00069",
+    "field": "planarSet",
+    "originalStart": 15200
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00070",
+    "field": "slot",
+    "originalStart": 15245
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00071",
+    "field": "value",
+    "originalStart": 15258
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00072",
+    "field": "slot",
+    "originalStart": 15280
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00073",
+    "field": "value",
+    "originalStart": 15293
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00074",
+    "field": "slot",
+    "originalStart": 15307
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00075",
+    "field": "value",
+    "originalStart": 15324
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00076",
+    "field": "slot",
+    "originalStart": 15350
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00077",
+    "field": "value",
+    "originalStart": 15364
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00078",
+    "field": "label",
+    "originalStart": 15409
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00079",
+    "field": "label",
+    "originalStart": 15491
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00080",
+    "field": "label",
+    "originalStart": 15573
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00081",
+    "field": "headline",
+    "originalStart": 15676
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00082",
+    "field": "targetContext",
+    "originalStart": 15728
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00083",
+    "field": "sourceLabel",
+    "originalStart": 15880
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00084",
+    "field": "relicSet",
+    "originalStart": 15931
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00085",
+    "field": "planarSet",
+    "originalStart": 15957
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00086",
+    "field": "slot",
+    "originalStart": 15990
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00087",
+    "field": "value",
+    "originalStart": 16003
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00088",
+    "field": "slot",
+    "originalStart": 16019
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00089",
+    "field": "value",
+    "originalStart": 16032
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00090",
+    "field": "slot",
+    "originalStart": 16052
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00091",
+    "field": "value",
+    "originalStart": 16069
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00092",
+    "field": "slot",
+    "originalStart": 16094
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00093",
+    "field": "value",
+    "originalStart": 16108
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00094",
+    "field": "label",
+    "originalStart": 16153
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00095",
+    "field": "label",
+    "originalStart": 16232
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00096",
+    "field": "label",
+    "originalStart": 16317
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00097",
+    "field": "headline",
+    "originalStart": 16423
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00098",
+    "field": "targetContext",
+    "originalStart": 16487
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00099",
+    "field": "sourceLabel",
+    "originalStart": 16628
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00100",
+    "field": "relicSet",
+    "originalStart": 16684
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00101",
+    "field": "planarSet",
+    "originalStart": 16735
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00102",
+    "field": "slot",
+    "originalStart": 16783
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00103",
+    "field": "value",
+    "originalStart": 16796
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00104",
+    "field": "slot",
+    "originalStart": 16812
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00105",
+    "field": "value",
+    "originalStart": 16825
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00106",
+    "field": "slot",
+    "originalStart": 16839
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00107",
+    "field": "value",
+    "originalStart": 16856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00108",
+    "field": "slot",
+    "originalStart": 16878
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00109",
+    "field": "value",
+    "originalStart": 16892
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00110",
+    "field": "label",
+    "originalStart": 16937
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00111",
+    "field": "label",
+    "originalStart": 17019
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00112",
+    "field": "label",
+    "originalStart": 17101
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00113",
+    "field": "headline",
+    "originalStart": 17205
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00114",
+    "field": "targetContext",
+    "originalStart": 17259
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00115",
+    "field": "sourceLabel",
+    "originalStart": 17389
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00116",
+    "field": "relicSet",
+    "originalStart": 17439
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00117",
+    "field": "planarSet",
+    "originalStart": 17492
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00118",
+    "field": "slot",
+    "originalStart": 17537
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00119",
+    "field": "value",
+    "originalStart": 17550
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00120",
+    "field": "slot",
+    "originalStart": 17565
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00121",
+    "field": "value",
+    "originalStart": 17578
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00122",
+    "field": "slot",
+    "originalStart": 17592
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00123",
+    "field": "value",
+    "originalStart": 17609
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00124",
+    "field": "slot",
+    "originalStart": 17624
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00125",
+    "field": "value",
+    "originalStart": 17638
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00126",
+    "field": "label",
+    "originalStart": 17689
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00127",
+    "field": "label",
+    "originalStart": 17771
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00128",
+    "field": "label",
+    "originalStart": 17853
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00129",
+    "field": "headline",
+    "originalStart": 17955
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00130",
+    "field": "targetContext",
+    "originalStart": 18013
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00131",
+    "field": "sourceLabel",
+    "originalStart": 18140
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00132",
+    "field": "relicSet",
+    "originalStart": 18190
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00133",
+    "field": "planarSet",
+    "originalStart": 18216
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00134",
+    "field": "slot",
+    "originalStart": 18256
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00135",
+    "field": "value",
+    "originalStart": 18269
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00136",
+    "field": "slot",
+    "originalStart": 18291
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00137",
+    "field": "value",
+    "originalStart": 18304
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00138",
+    "field": "slot",
+    "originalStart": 18325
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00139",
+    "field": "value",
+    "originalStart": 18342
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00140",
+    "field": "slot",
+    "originalStart": 18368
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00141",
+    "field": "value",
+    "originalStart": 18382
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00142",
+    "field": "label",
+    "originalStart": 18437
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00143",
+    "field": "label",
+    "originalStart": 18516
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00144",
+    "field": "label",
+    "originalStart": 18597
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00145",
+    "field": "label",
+    "originalStart": 18683
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00146",
+    "field": "headline",
+    "originalStart": 18785
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00147",
+    "field": "targetContext",
+    "originalStart": 18856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00148",
+    "field": "sourceLabel",
+    "originalStart": 19007
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00149",
+    "field": "relicSet",
+    "originalStart": 19069
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00150",
+    "field": "planarSet",
+    "originalStart": 19110
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00151",
+    "field": "slot",
+    "originalStart": 19161
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00152",
+    "field": "value",
+    "originalStart": 19174
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00153",
+    "field": "slot",
+    "originalStart": 19190
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00154",
+    "field": "value",
+    "originalStart": 19203
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00155",
+    "field": "slot",
+    "originalStart": 19224
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00156",
+    "field": "value",
+    "originalStart": 19241
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00157",
+    "field": "slot",
+    "originalStart": 19260
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00158",
+    "field": "value",
+    "originalStart": 19274
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00159",
+    "field": "label",
+    "originalStart": 19320
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00160",
+    "field": "label",
+    "originalStart": 19399
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00161",
+    "field": "label",
+    "originalStart": 19480
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00162",
+    "field": "label",
+    "originalStart": 19566
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00163",
+    "field": "headline",
+    "originalStart": 19671
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00164",
+    "field": "targetContext",
+    "originalStart": 19737
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00165",
+    "field": "sourceLabel",
+    "originalStart": 19868
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00166",
+    "field": "headline",
+    "originalStart": 19988
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00167",
+    "field": "relicSet",
+    "originalStart": 20031
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00168",
+    "field": "planarSet",
+    "originalStart": 20070
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00169",
+    "field": "slot",
+    "originalStart": 20115
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00170",
+    "field": "value",
+    "originalStart": 20128
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00171",
+    "field": "slot",
+    "originalStart": 20152
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00172",
+    "field": "value",
+    "originalStart": 20165
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00173",
+    "field": "slot",
+    "originalStart": 20181
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00174",
+    "field": "value",
+    "originalStart": 20198
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00175",
+    "field": "slot",
+    "originalStart": 20222
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00176",
+    "field": "value",
+    "originalStart": 20236
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00177",
+    "field": "headline",
+    "originalStart": 20319
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00178",
+    "field": "relicSet",
+    "originalStart": 20357
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00179",
+    "field": "planarSet",
+    "originalStart": 20387
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00180",
+    "field": "slot",
+    "originalStart": 20437
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00181",
+    "field": "value",
+    "originalStart": 20450
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00182",
+    "field": "slot",
+    "originalStart": 20475
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00183",
+    "field": "value",
+    "originalStart": 20488
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00184",
+    "field": "slot",
+    "originalStart": 20504
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00185",
+    "field": "value",
+    "originalStart": 20521
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00186",
+    "field": "slot",
+    "originalStart": 20541
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00187",
+    "field": "value",
+    "originalStart": 20555
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00188",
+    "field": "headline",
+    "originalStart": 20632
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00189",
+    "field": "relicSet",
+    "originalStart": 20673
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00190",
+    "field": "planarSet",
+    "originalStart": 20725
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00191",
+    "field": "slot",
+    "originalStart": 20770
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00192",
+    "field": "value",
+    "originalStart": 20783
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00193",
+    "field": "slot",
+    "originalStart": 20806
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00194",
+    "field": "value",
+    "originalStart": 20819
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00195",
+    "field": "slot",
+    "originalStart": 20835
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00196",
+    "field": "value",
+    "originalStart": 20852
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00197",
+    "field": "slot",
+    "originalStart": 20869
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00198",
+    "field": "value",
+    "originalStart": 20883
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00199",
+    "field": "headline",
+    "originalStart": 20966
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00200",
+    "field": "relicSet",
+    "originalStart": 21008
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00201",
+    "field": "planarSet",
+    "originalStart": 21039
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00202",
+    "field": "slot",
+    "originalStart": 21084
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00203",
+    "field": "value",
+    "originalStart": 21097
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00204",
+    "field": "slot",
+    "originalStart": 21115
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00205",
+    "field": "value",
+    "originalStart": 21128
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00206",
+    "field": "slot",
+    "originalStart": 21144
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00207",
+    "field": "value",
+    "originalStart": 21161
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00208",
+    "field": "slot",
+    "originalStart": 21179
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00209",
+    "field": "value",
+    "originalStart": 21193
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00210",
+    "field": "label",
+    "originalStart": 21266
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00211",
+    "field": "label",
+    "originalStart": 21365
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00212",
+    "field": "label",
+    "originalStart": 21463
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00213",
+    "field": "headline",
+    "originalStart": 21602
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00214",
+    "field": "relicSet",
+    "originalStart": 21664
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00215",
+    "field": "planarSet",
+    "originalStart": 21690
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00216",
+    "field": "slot",
+    "originalStart": 21726
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00217",
+    "field": "value",
+    "originalStart": 21739
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00218",
+    "field": "slot",
+    "originalStart": 21763
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00219",
+    "field": "value",
+    "originalStart": 21776
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00220",
+    "field": "slot",
+    "originalStart": 21799
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00221",
+    "field": "value",
+    "originalStart": 21816
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00222",
+    "field": "slot",
+    "originalStart": 21844
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00223",
+    "field": "value",
+    "originalStart": 21858
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00224",
+    "field": "label",
+    "originalStart": 21905
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00225",
+    "field": "label",
+    "originalStart": 21993
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00226",
+    "field": "label",
+    "originalStart": 22084
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00227",
+    "field": "label",
+    "originalStart": 22175
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00228",
+    "field": "targetContext",
+    "originalStart": 22255
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00229",
+    "field": "sourceLabel",
+    "originalStart": 22428
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00230",
+    "field": "headline",
+    "originalStart": 22651
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00231",
+    "field": "relicSet",
+    "originalStart": 22727
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00232",
+    "field": "planarSet",
+    "originalStart": 22756
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00233",
+    "field": "slot",
+    "originalStart": 22811
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00234",
+    "field": "value",
+    "originalStart": 22824
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00235",
+    "field": "slot",
+    "originalStart": 22846
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00236",
+    "field": "value",
+    "originalStart": 22859
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00237",
+    "field": "slot",
+    "originalStart": 22880
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00238",
+    "field": "value",
+    "originalStart": 22897
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00239",
+    "field": "slot",
+    "originalStart": 22923
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00240",
+    "field": "value",
+    "originalStart": 22937
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00241",
+    "field": "label",
+    "originalStart": 22983
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00242",
+    "field": "label",
+    "originalStart": 23062
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00243",
+    "field": "label",
+    "originalStart": 23143
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00244",
+    "field": "label",
+    "originalStart": 23229
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00245",
+    "field": "label",
+    "originalStart": 23308
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00246",
+    "field": "targetContext",
+    "originalStart": 23408
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00247",
+    "field": "sourceLabel",
+    "originalStart": 23539
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00248",
+    "field": "headline",
+    "originalStart": 23884
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00249",
+    "field": "relicSet",
+    "originalStart": 23923
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00250",
+    "field": "planarSet",
+    "originalStart": 23948
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00251",
+    "field": "slot",
+    "originalStart": 23987
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00252",
+    "field": "value",
+    "originalStart": 24000
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00253",
+    "field": "slot",
+    "originalStart": 24024
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00254",
+    "field": "value",
+    "originalStart": 24037
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00255",
+    "field": "slot",
+    "originalStart": 24053
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00256",
+    "field": "value",
+    "originalStart": 24070
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00257",
+    "field": "slot",
+    "originalStart": 24097
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00258",
+    "field": "value",
+    "originalStart": 24111
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00259",
+    "field": "label",
+    "originalStart": 24157
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00260",
+    "field": "label",
+    "originalStart": 24245
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00261",
+    "field": "label",
+    "originalStart": 24335
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00262",
+    "field": "label",
+    "originalStart": 24426
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00263",
+    "field": "headline",
+    "originalStart": 24516
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00264",
+    "field": "relicSet",
+    "originalStart": 24571
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00265",
+    "field": "planarSet",
+    "originalStart": 24598
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00266",
+    "field": "slot",
+    "originalStart": 24632
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00267",
+    "field": "value",
+    "originalStart": 24645
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00268",
+    "field": "slot",
+    "originalStart": 24669
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00269",
+    "field": "value",
+    "originalStart": 24682
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00270",
+    "field": "slot",
+    "originalStart": 24698
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00271",
+    "field": "value",
+    "originalStart": 24715
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00272",
+    "field": "slot",
+    "originalStart": 24737
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00273",
+    "field": "value",
+    "originalStart": 24751
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00274",
+    "field": "label",
+    "originalStart": 24801
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00275",
+    "field": "label",
+    "originalStart": 24891
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00276",
+    "field": "label",
+    "originalStart": 24981
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00277",
+    "field": "label",
+    "originalStart": 25069
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00278",
+    "field": "targetContext",
+    "originalStart": 25149
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00279",
+    "field": "sourceLabel",
+    "originalStart": 25310
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00280",
+    "field": "headline",
+    "originalStart": 25375
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00281",
+    "field": "relicSet",
+    "originalStart": 25431
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00282",
+    "field": "planarSet",
+    "originalStart": 25480
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00283",
+    "field": "slot",
+    "originalStart": 25514
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00284",
+    "field": "value",
+    "originalStart": 25527
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00285",
+    "field": "slot",
+    "originalStart": 25551
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00286",
+    "field": "value",
+    "originalStart": 25564
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00287",
+    "field": "slot",
+    "originalStart": 25580
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00288",
+    "field": "value",
+    "originalStart": 25597
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00289",
+    "field": "slot",
+    "originalStart": 25621
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00290",
+    "field": "value",
+    "originalStart": 25635
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00291",
+    "field": "label",
+    "originalStart": 25685
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00292",
+    "field": "label",
+    "originalStart": 25775
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00293",
+    "field": "label",
+    "originalStart": 25866
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00294",
+    "field": "targetContext",
+    "originalStart": 25946
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00295",
+    "field": "sourceLabel",
+    "originalStart": 26089
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00296",
+    "field": "label",
+    "originalStart": 26236
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00297",
+    "field": "label",
+    "originalStart": 26326
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00298",
+    "field": "label",
+    "originalStart": 26417
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00299",
+    "field": "headline",
+    "originalStart": 26589
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00300",
+    "field": "relicSet",
+    "originalStart": 26629
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00301",
+    "field": "planarSet",
+    "originalStart": 26668
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00302",
+    "field": "slot",
+    "originalStart": 26701
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00303",
+    "field": "value",
+    "originalStart": 26714
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00304",
+    "field": "slot",
+    "originalStart": 26731
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00305",
+    "field": "value",
+    "originalStart": 26744
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00306",
+    "field": "slot",
+    "originalStart": 26760
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00307",
+    "field": "value",
+    "originalStart": 26777
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00308",
+    "field": "slot",
+    "originalStart": 26794
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00309",
+    "field": "value",
+    "originalStart": 26808
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00310",
+    "field": "headline",
+    "originalStart": 26881
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00311",
+    "field": "relicSet",
+    "originalStart": 26919
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00312",
+    "field": "planarSet",
+    "originalStart": 26945
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00313",
+    "field": "slot",
+    "originalStart": 26981
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00314",
+    "field": "value",
+    "originalStart": 26994
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00315",
+    "field": "slot",
+    "originalStart": 27025
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00316",
+    "field": "value",
+    "originalStart": 27038
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00317",
+    "field": "slot",
+    "originalStart": 27061
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00318",
+    "field": "value",
+    "originalStart": 27078
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00319",
+    "field": "slot",
+    "originalStart": 27096
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00320",
+    "field": "value",
+    "originalStart": 27110
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00321",
+    "field": "label",
+    "originalStart": 27154
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00322",
+    "field": "label",
+    "originalStart": 27246
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00323",
+    "field": "label",
+    "originalStart": 27337
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00324",
+    "field": "headline",
+    "originalStart": 27528
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00325",
+    "field": "relicSet",
+    "originalStart": 27568
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00326",
+    "field": "planarSet",
+    "originalStart": 27617
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00327",
+    "field": "slot",
+    "originalStart": 27651
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00328",
+    "field": "value",
+    "originalStart": 27664
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00329",
+    "field": "slot",
+    "originalStart": 27687
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00330",
+    "field": "value",
+    "originalStart": 27700
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00331",
+    "field": "slot",
+    "originalStart": 27716
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00332",
+    "field": "value",
+    "originalStart": 27733
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00333",
+    "field": "slot",
+    "originalStart": 27750
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00334",
+    "field": "value",
+    "originalStart": 27764
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00335",
+    "field": "label",
+    "originalStart": 27814
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00336",
+    "field": "label",
+    "originalStart": 27904
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00337",
+    "field": "label",
+    "originalStart": 27995
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00338",
+    "field": "headline",
+    "originalStart": 28087
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00339",
+    "field": "relicSet",
+    "originalStart": 28144
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00340",
+    "field": "planarSet",
+    "originalStart": 28169
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00341",
+    "field": "slot",
+    "originalStart": 28208
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00342",
+    "field": "value",
+    "originalStart": 28221
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00343",
+    "field": "slot",
+    "originalStart": 28239
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00344",
+    "field": "value",
+    "originalStart": 28252
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00345",
+    "field": "slot",
+    "originalStart": 28269
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00346",
+    "field": "value",
+    "originalStart": 28286
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00347",
+    "field": "slot",
+    "originalStart": 28314
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00348",
+    "field": "value",
+    "originalStart": 28328
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00349",
+    "field": "label",
+    "originalStart": 28374
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00350",
+    "field": "label",
+    "originalStart": 28462
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00351",
+    "field": "label",
+    "originalStart": 28549
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00352",
+    "field": "targetContext",
+    "originalStart": 28633
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00353",
+    "field": "sourceLabel",
+    "originalStart": 28787
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00354",
+    "field": "headline",
+    "originalStart": 28842
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00355",
+    "field": "relicSet",
+    "originalStart": 28904
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00356",
+    "field": "planarSet",
+    "originalStart": 28929
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00357",
+    "field": "slot",
+    "originalStart": 28963
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00358",
+    "field": "value",
+    "originalStart": 28976
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00359",
+    "field": "slot",
+    "originalStart": 29000
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00360",
+    "field": "value",
+    "originalStart": 29013
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00361",
+    "field": "slot",
+    "originalStart": 29029
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00362",
+    "field": "value",
+    "originalStart": 29046
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00363",
+    "field": "slot",
+    "originalStart": 29067
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00364",
+    "field": "value",
+    "originalStart": 29081
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00365",
+    "field": "label",
+    "originalStart": 29128
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00366",
+    "field": "label",
+    "originalStart": 29216
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00367",
+    "field": "label",
+    "originalStart": 29306
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00368",
+    "field": "targetContext",
+    "originalStart": 29386
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00369",
+    "field": "sourceLabel",
+    "originalStart": 29502
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00370",
+    "field": "headline",
+    "originalStart": 29557
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00371",
+    "field": "relicSet",
+    "originalStart": 29625
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00372",
+    "field": "planarSet",
+    "originalStart": 29667
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00373",
+    "field": "slot",
+    "originalStart": 29706
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00374",
+    "field": "value",
+    "originalStart": 29719
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00375",
+    "field": "slot",
+    "originalStart": 29736
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00376",
+    "field": "value",
+    "originalStart": 29749
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00377",
+    "field": "slot",
+    "originalStart": 29765
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00378",
+    "field": "value",
+    "originalStart": 29782
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00379",
+    "field": "slot",
+    "originalStart": 29803
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00380",
+    "field": "value",
+    "originalStart": 29817
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00381",
+    "field": "label",
+    "originalStart": 29864
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00382",
+    "field": "label",
+    "originalStart": 29953
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00383",
+    "field": "label",
+    "originalStart": 30043
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00384",
+    "field": "label",
+    "originalStart": 30131
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00385",
+    "field": "targetContext",
+    "originalStart": 30215
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00386",
+    "field": "sourceLabel",
+    "originalStart": 30357
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00387",
+    "field": "headline",
+    "originalStart": 30409
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00388",
+    "field": "relicSet",
+    "originalStart": 30461
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00389",
+    "field": "planarSet",
+    "originalStart": 30488
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00390",
+    "field": "slot",
+    "originalStart": 30527
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00391",
+    "field": "value",
+    "originalStart": 30540
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00392",
+    "field": "slot",
+    "originalStart": 30564
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00393",
+    "field": "value",
+    "originalStart": 30577
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00394",
+    "field": "slot",
+    "originalStart": 30600
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00395",
+    "field": "value",
+    "originalStart": 30617
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00396",
+    "field": "slot",
+    "originalStart": 30645
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00397",
+    "field": "value",
+    "originalStart": 30659
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00398",
+    "field": "label",
+    "originalStart": 30706
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00399",
+    "field": "label",
+    "originalStart": 30794
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00400",
+    "field": "label",
+    "originalStart": 30885
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00401",
+    "field": "label",
+    "originalStart": 30976
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00402",
+    "field": "targetContext",
+    "originalStart": 31056
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00403",
+    "field": "sourceLabel",
+    "originalStart": 31180
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00404",
+    "field": "headline",
+    "originalStart": 31321
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00405",
+    "field": "relicSet",
+    "originalStart": 31389
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00406",
+    "field": "planarSet",
+    "originalStart": 31440
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00407",
+    "field": "slot",
+    "originalStart": 31474
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00408",
+    "field": "value",
+    "originalStart": 31487
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00409",
+    "field": "slot",
+    "originalStart": 31511
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00410",
+    "field": "value",
+    "originalStart": 31524
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00411",
+    "field": "slot",
+    "originalStart": 31540
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00412",
+    "field": "value",
+    "originalStart": 31557
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00413",
+    "field": "slot",
+    "originalStart": 31575
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00414",
+    "field": "value",
+    "originalStart": 31589
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00415",
+    "field": "label",
+    "originalStart": 31648
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00416",
+    "field": "label",
+    "originalStart": 31738
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00417",
+    "field": "label",
+    "originalStart": 31826
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00418",
+    "field": "targetContext",
+    "originalStart": 31910
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00419",
+    "field": "sourceLabel",
+    "originalStart": 32079
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00420",
+    "field": "headline",
+    "originalStart": 32140
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00421",
+    "field": "relicSet",
+    "originalStart": 32183
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00422",
+    "field": "planarSet",
+    "originalStart": 32231
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00423",
+    "field": "slot",
+    "originalStart": 32266
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00424",
+    "field": "value",
+    "originalStart": 32279
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00425",
+    "field": "slot",
+    "originalStart": 32297
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00426",
+    "field": "value",
+    "originalStart": 32310
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00427",
+    "field": "slot",
+    "originalStart": 32326
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00428",
+    "field": "value",
+    "originalStart": 32343
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00429",
+    "field": "slot",
+    "originalStart": 32370
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00430",
+    "field": "value",
+    "originalStart": 32384
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00431",
+    "field": "label",
+    "originalStart": 32438
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00432",
+    "field": "label",
+    "originalStart": 32528
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00433",
+    "field": "label",
+    "originalStart": 32619
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00434",
+    "field": "headline",
+    "originalStart": 32712
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00435",
+    "field": "relicSet",
+    "originalStart": 32758
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00436",
+    "field": "planarSet",
+    "originalStart": 32783
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00437",
+    "field": "slot",
+    "originalStart": 32816
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00438",
+    "field": "value",
+    "originalStart": 32829
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00439",
+    "field": "slot",
+    "originalStart": 32847
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00440",
+    "field": "value",
+    "originalStart": 32860
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00441",
+    "field": "slot",
+    "originalStart": 32876
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00442",
+    "field": "value",
+    "originalStart": 32893
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00443",
+    "field": "slot",
+    "originalStart": 32921
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00444",
+    "field": "value",
+    "originalStart": 32935
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00445",
+    "field": "label",
+    "originalStart": 32987
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00446",
+    "field": "label",
+    "originalStart": 33077
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00447",
+    "field": "label",
+    "originalStart": 33172
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00448",
+    "field": "headline",
+    "originalStart": 33262
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00449",
+    "field": "relicSet",
+    "originalStart": 33325
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00450",
+    "field": "planarSet",
+    "originalStart": 33359
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00451",
+    "field": "slot",
+    "originalStart": 33405
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00452",
+    "field": "value",
+    "originalStart": 33418
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00453",
+    "field": "slot",
+    "originalStart": 33436
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00454",
+    "field": "value",
+    "originalStart": 33449
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00455",
+    "field": "slot",
+    "originalStart": 33465
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00456",
+    "field": "value",
+    "originalStart": 33482
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00457",
+    "field": "slot",
+    "originalStart": 33506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00458",
+    "field": "value",
+    "originalStart": 33520
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00459",
+    "field": "label",
+    "originalStart": 33568
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00460",
+    "field": "label",
+    "originalStart": 33658
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00461",
+    "field": "label",
+    "originalStart": 33749
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00462",
+    "field": "targetContext",
+    "originalStart": 33829
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00463",
+    "field": "sourceLabel",
+    "originalStart": 34000
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00464",
+    "field": "headline",
+    "originalStart": 34061
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00465",
+    "field": "relicSet",
+    "originalStart": 34119
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00466",
+    "field": "planarSet",
+    "originalStart": 34168
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00467",
+    "field": "slot",
+    "originalStart": 34203
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00468",
+    "field": "value",
+    "originalStart": 34216
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00469",
+    "field": "slot",
+    "originalStart": 34234
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00470",
+    "field": "value",
+    "originalStart": 34247
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00471",
+    "field": "slot",
+    "originalStart": 34265
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00472",
+    "field": "value",
+    "originalStart": 34282
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00473",
+    "field": "slot",
+    "originalStart": 34300
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00474",
+    "field": "value",
+    "originalStart": 34314
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00475",
+    "field": "label",
+    "originalStart": 34359
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00476",
+    "field": "label",
+    "originalStart": 34450
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00477",
+    "field": "targetContext",
+    "originalStart": 34530
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00478",
+    "field": "sourceLabel",
+    "originalStart": 34657
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00479",
+    "field": "headline",
+    "originalStart": 34713
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00480",
+    "field": "relicSet",
+    "originalStart": 34754
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00481",
+    "field": "planarSet",
+    "originalStart": 34800
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00482",
+    "field": "slot",
+    "originalStart": 34839
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00483",
+    "field": "value",
+    "originalStart": 34852
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00484",
+    "field": "slot",
+    "originalStart": 34876
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00485",
+    "field": "value",
+    "originalStart": 34889
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00486",
+    "field": "slot",
+    "originalStart": 34907
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00487",
+    "field": "value",
+    "originalStart": 34924
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00488",
+    "field": "slot",
+    "originalStart": 34953
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00489",
+    "field": "value",
+    "originalStart": 34967
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00490",
+    "field": "label",
+    "originalStart": 35014
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00491",
+    "field": "label",
+    "originalStart": 35102
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00492",
+    "field": "label",
+    "originalStart": 35200
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00493",
+    "field": "headline",
+    "originalStart": 35291
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00494",
+    "field": "relicSet",
+    "originalStart": 35333
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00495",
+    "field": "planarSet",
+    "originalStart": 35362
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00496",
+    "field": "slot",
+    "originalStart": 35396
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00497",
+    "field": "value",
+    "originalStart": 35409
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00498",
+    "field": "slot",
+    "originalStart": 35433
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00499",
+    "field": "value",
+    "originalStart": 35446
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00500",
+    "field": "slot",
+    "originalStart": 35462
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00501",
+    "field": "value",
+    "originalStart": 35479
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00502",
+    "field": "slot",
+    "originalStart": 35501
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00503",
+    "field": "value",
+    "originalStart": 35515
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00504",
+    "field": "label",
+    "originalStart": 35562
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00505",
+    "field": "label",
+    "originalStart": 35650
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00506",
+    "field": "label",
+    "originalStart": 35740
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00507",
+    "field": "label",
+    "originalStart": 35835
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00508",
+    "field": "headline",
+    "originalStart": 35928
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00509",
+    "field": "relicSet",
+    "originalStart": 35973
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00510",
+    "field": "planarSet",
+    "originalStart": 36002
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00511",
+    "field": "slot",
+    "originalStart": 36036
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00512",
+    "field": "value",
+    "originalStart": 36049
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00513",
+    "field": "slot",
+    "originalStart": 36073
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00514",
+    "field": "value",
+    "originalStart": 36086
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00515",
+    "field": "slot",
+    "originalStart": 36109
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00516",
+    "field": "value",
+    "originalStart": 36126
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00517",
+    "field": "slot",
+    "originalStart": 36147
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00518",
+    "field": "value",
+    "originalStart": 36161
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00519",
+    "field": "label",
+    "originalStart": 36208
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00520",
+    "field": "label",
+    "originalStart": 36296
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00521",
+    "field": "label",
+    "originalStart": 36386
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00522",
+    "field": "label",
+    "originalStart": 36481
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00523",
+    "field": "headline",
+    "originalStart": 36615
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00524",
+    "field": "relicSet",
+    "originalStart": 36670
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00525",
+    "field": "planarSet",
+    "originalStart": 36713
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00526",
+    "field": "slot",
+    "originalStart": 36762
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00527",
+    "field": "value",
+    "originalStart": 36775
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00528",
+    "field": "slot",
+    "originalStart": 36799
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00529",
+    "field": "value",
+    "originalStart": 36812
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00530",
+    "field": "slot",
+    "originalStart": 36835
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00531",
+    "field": "value",
+    "originalStart": 36852
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00532",
+    "field": "slot",
+    "originalStart": 36870
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00533",
+    "field": "value",
+    "originalStart": 36884
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00534",
+    "field": "label",
+    "originalStart": 36930
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00535",
+    "field": "label",
+    "originalStart": 37021
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00536",
+    "field": "label",
+    "originalStart": 37112
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00537",
+    "field": "targetContext",
+    "originalStart": 37192
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00538",
+    "field": "sourceLabel",
+    "originalStart": 37341
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00539",
+    "field": "headline",
+    "originalStart": 37406
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00540",
+    "field": "relicSet",
+    "originalStart": 37477
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00541",
+    "field": "planarSet",
+    "originalStart": 37506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00542",
+    "field": "slot",
+    "originalStart": 37558
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00543",
+    "field": "value",
+    "originalStart": 37571
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00544",
+    "field": "slot",
+    "originalStart": 37595
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00545",
+    "field": "value",
+    "originalStart": 37608
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00546",
+    "field": "slot",
+    "originalStart": 37624
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00547",
+    "field": "value",
+    "originalStart": 37641
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00548",
+    "field": "slot",
+    "originalStart": 37669
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00549",
+    "field": "value",
+    "originalStart": 37683
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00550",
+    "field": "label",
+    "originalStart": 37730
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00551",
+    "field": "label",
+    "originalStart": 37818
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00552",
+    "field": "label",
+    "originalStart": 37909
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00553",
+    "field": "label",
+    "originalStart": 38000
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00554",
+    "field": "targetContext",
+    "originalStart": 38080
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00555",
+    "field": "sourceLabel",
+    "originalStart": 38228
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00556",
+    "field": "headline",
+    "originalStart": 38288
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00557",
+    "field": "relicSet",
+    "originalStart": 38354
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00558",
+    "field": "planarSet",
+    "originalStart": 38403
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00559",
+    "field": "slot",
+    "originalStart": 38449
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00560",
+    "field": "value",
+    "originalStart": 38462
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00561",
+    "field": "slot",
+    "originalStart": 38480
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00562",
+    "field": "value",
+    "originalStart": 38493
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00563",
+    "field": "slot",
+    "originalStart": 38509
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00564",
+    "field": "value",
+    "originalStart": 38526
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00565",
+    "field": "slot",
+    "originalStart": 38550
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00566",
+    "field": "value",
+    "originalStart": 38564
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00567",
+    "field": "label",
+    "originalStart": 38612
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00568",
+    "field": "label",
+    "originalStart": 38702
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00569",
+    "field": "label",
+    "originalStart": 38793
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00570",
+    "field": "targetContext",
+    "originalStart": 38873
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00571",
+    "field": "sourceLabel",
+    "originalStart": 39036
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00572",
+    "field": "headline",
+    "originalStart": 39099
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00573",
+    "field": "relicSet",
+    "originalStart": 39180
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00574",
+    "field": "planarSet",
+    "originalStart": 39219
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00575",
+    "field": "slot",
+    "originalStart": 39272
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00576",
+    "field": "value",
+    "originalStart": 39285
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00577",
+    "field": "slot",
+    "originalStart": 39309
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00578",
+    "field": "value",
+    "originalStart": 39322
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00579",
+    "field": "slot",
+    "originalStart": 39345
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00580",
+    "field": "value",
+    "originalStart": 39362
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00581",
+    "field": "slot",
+    "originalStart": 39391
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00582",
+    "field": "value",
+    "originalStart": 39405
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00583",
+    "field": "label",
+    "originalStart": 39452
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00584",
+    "field": "label",
+    "originalStart": 39540
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00585",
+    "field": "label",
+    "originalStart": 39631
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00586",
+    "field": "label",
+    "originalStart": 39722
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00587",
+    "field": "targetContext",
+    "originalStart": 39802
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00588",
+    "field": "sourceLabel",
+    "originalStart": 39962
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00589",
+    "field": "headline",
+    "originalStart": 40068
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00590",
+    "field": "relicSet",
+    "originalStart": 40145
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00591",
+    "field": "planarSet",
+    "originalStart": 40187
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00592",
+    "field": "slot",
+    "originalStart": 40239
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00593",
+    "field": "value",
+    "originalStart": 40252
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00594",
+    "field": "slot",
+    "originalStart": 40276
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00595",
+    "field": "value",
+    "originalStart": 40289
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00596",
+    "field": "slot",
+    "originalStart": 40305
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00597",
+    "field": "value",
+    "originalStart": 40322
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00598",
+    "field": "slot",
+    "originalStart": 40351
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00599",
+    "field": "value",
+    "originalStart": 40365
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00600",
+    "field": "label",
+    "originalStart": 40412
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00601",
+    "field": "label",
+    "originalStart": 40500
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00602",
+    "field": "label",
+    "originalStart": 40591
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00603",
+    "field": "label",
+    "originalStart": 40682
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00604",
+    "field": "targetContext",
+    "originalStart": 40762
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00605",
+    "field": "sourceLabel",
+    "originalStart": 40919
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00606",
+    "field": "headline",
+    "originalStart": 40980
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00607",
+    "field": "relicSet",
+    "originalStart": 41042
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00608",
+    "field": "planarSet",
+    "originalStart": 41067
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00609",
+    "field": "slot",
+    "originalStart": 41118
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00610",
+    "field": "value",
+    "originalStart": 41131
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00611",
+    "field": "slot",
+    "originalStart": 41156
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00612",
+    "field": "value",
+    "originalStart": 41169
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00613",
+    "field": "slot",
+    "originalStart": 41185
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00614",
+    "field": "value",
+    "originalStart": 41202
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00615",
+    "field": "slot",
+    "originalStart": 41230
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00616",
+    "field": "value",
+    "originalStart": 41244
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00617",
+    "field": "label",
+    "originalStart": 41297
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00618",
+    "field": "label",
+    "originalStart": 41392
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00619",
+    "field": "label",
+    "originalStart": 41480
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00620",
+    "field": "label",
+    "originalStart": 41580
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00621",
+    "field": "targetContext",
+    "originalStart": 41669
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00622",
+    "field": "sourceLabel",
+    "originalStart": 41916
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00623",
+    "field": "headline",
+    "originalStart": 41981
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00624",
+    "field": "relicSet",
+    "originalStart": 42045
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00625",
+    "field": "planarSet",
+    "originalStart": 42070
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00626",
+    "field": "slot",
+    "originalStart": 42117
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00627",
+    "field": "value",
+    "originalStart": 42130
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00628",
+    "field": "slot",
+    "originalStart": 42148
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00629",
+    "field": "value",
+    "originalStart": 42161
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00630",
+    "field": "slot",
+    "originalStart": 42177
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00631",
+    "field": "value",
+    "originalStart": 42194
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00632",
+    "field": "slot",
+    "originalStart": 42222
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00633",
+    "field": "value",
+    "originalStart": 42236
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00634",
+    "field": "label",
+    "originalStart": 42288
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00635",
+    "field": "label",
+    "originalStart": 42379
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00636",
+    "field": "label",
+    "originalStart": 42470
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00637",
+    "field": "label",
+    "originalStart": 42554
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00638",
+    "field": "targetContext",
+    "originalStart": 42637
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00639",
+    "field": "sourceLabel",
+    "originalStart": 42796
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00640",
+    "field": "headline",
+    "originalStart": 42856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00641",
+    "field": "relicSet",
+    "originalStart": 42938
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00642",
+    "field": "planarSet",
+    "originalStart": 42976
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00643",
+    "field": "slot",
+    "originalStart": 43028
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00644",
+    "field": "value",
+    "originalStart": 43041
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00645",
+    "field": "slot",
+    "originalStart": 43059
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00646",
+    "field": "value",
+    "originalStart": 43072
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00647",
+    "field": "slot",
+    "originalStart": 43094
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00648",
+    "field": "value",
+    "originalStart": 43111
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00649",
+    "field": "slot",
+    "originalStart": 43138
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00650",
+    "field": "value",
+    "originalStart": 43152
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00651",
+    "field": "label",
+    "originalStart": 43192
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00652",
+    "field": "label",
+    "originalStart": 43285
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00653",
+    "field": "label",
+    "originalStart": 43373
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00654",
+    "field": "label",
+    "originalStart": 43463
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00655",
+    "field": "targetContext",
+    "originalStart": 43541
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00656",
+    "field": "sourceLabel",
+    "originalStart": 43681
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00657",
+    "field": "headline",
+    "originalStart": 43785
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00658",
+    "field": "relicSet",
+    "originalStart": 43856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00659",
+    "field": "planarSet",
+    "originalStart": 43885
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00660",
+    "field": "slot",
+    "originalStart": 43917
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00661",
+    "field": "value",
+    "originalStart": 43930
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00662",
+    "field": "slot",
+    "originalStart": 43948
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00663",
+    "field": "value",
+    "originalStart": 43961
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00664",
+    "field": "slot",
+    "originalStart": 43977
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00665",
+    "field": "value",
+    "originalStart": 43994
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00666",
+    "field": "slot",
+    "originalStart": 44018
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00667",
+    "field": "value",
+    "originalStart": 44032
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00668",
+    "field": "label",
+    "originalStart": 44080
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00669",
+    "field": "label",
+    "originalStart": 44170
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00670",
+    "field": "label",
+    "originalStart": 44261
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00671",
+    "field": "targetContext",
+    "originalStart": 44341
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00672",
+    "field": "sourceLabel",
+    "originalStart": 44512
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00673",
+    "field": "headline",
+    "originalStart": 44573
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00674",
+    "field": "relicSet",
+    "originalStart": 44627
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00675",
+    "field": "planarSet",
+    "originalStart": 44678
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00676",
+    "field": "slot",
+    "originalStart": 44713
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00677",
+    "field": "value",
+    "originalStart": 44726
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00678",
+    "field": "slot",
+    "originalStart": 44744
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00679",
+    "field": "value",
+    "originalStart": 44757
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00680",
+    "field": "slot",
+    "originalStart": 44773
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00681",
+    "field": "value",
+    "originalStart": 44790
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00682",
+    "field": "slot",
+    "originalStart": 44812
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00683",
+    "field": "value",
+    "originalStart": 44826
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00684",
+    "field": "label",
+    "originalStart": 44880
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00685",
+    "field": "label",
+    "originalStart": 44967
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00686",
+    "field": "targetContext",
+    "originalStart": 45047
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00687",
+    "field": "sourceLabel",
+    "originalStart": 45238
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00688",
+    "field": "headline",
+    "originalStart": 45298
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00689",
+    "field": "relicSet",
+    "originalStart": 45365
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00690",
+    "field": "planarSet",
+    "originalStart": 45403
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00691",
+    "field": "slot",
+    "originalStart": 45435
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00692",
+    "field": "value",
+    "originalStart": 45448
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00693",
+    "field": "slot",
+    "originalStart": 45465
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00694",
+    "field": "value",
+    "originalStart": 45478
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00695",
+    "field": "slot",
+    "originalStart": 45494
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00696",
+    "field": "value",
+    "originalStart": 45511
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00697",
+    "field": "slot",
+    "originalStart": 45528
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00698",
+    "field": "value",
+    "originalStart": 45542
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00699",
+    "field": "label",
+    "originalStart": 45591
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00700",
+    "field": "label",
+    "originalStart": 45683
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00701",
+    "field": "label",
+    "originalStart": 45774
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00702",
+    "field": "label",
+    "originalStart": 45865
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00703",
+    "field": "targetContext",
+    "originalStart": 45945
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00704",
+    "field": "sourceLabel",
+    "originalStart": 46098
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00705",
+    "field": "headline",
+    "originalStart": 46158
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00706",
+    "field": "relicSet",
+    "originalStart": 46213
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00707",
+    "field": "planarSet",
+    "originalStart": 46260
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00708",
+    "field": "slot",
+    "originalStart": 46299
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00709",
+    "field": "value",
+    "originalStart": 46312
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00710",
+    "field": "slot",
+    "originalStart": 46329
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00711",
+    "field": "value",
+    "originalStart": 46342
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00712",
+    "field": "slot",
+    "originalStart": 46358
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00713",
+    "field": "value",
+    "originalStart": 46375
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00714",
+    "field": "slot",
+    "originalStart": 46393
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00715",
+    "field": "value",
+    "originalStart": 46407
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00716",
+    "field": "label",
+    "originalStart": 46461
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00717",
+    "field": "label",
+    "originalStart": 46552
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00718",
+    "field": "targetContext",
+    "originalStart": 46632
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00719",
+    "field": "sourceLabel",
+    "originalStart": 46778
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00720",
+    "field": "headline",
+    "originalStart": 46883
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00721",
+    "field": "relicSet",
+    "originalStart": 46953
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00722",
+    "field": "planarSet",
+    "originalStart": 46981
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00723",
+    "field": "slot",
+    "originalStart": 47015
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00724",
+    "field": "value",
+    "originalStart": 47028
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00725",
+    "field": "slot",
+    "originalStart": 47045
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00726",
+    "field": "value",
+    "originalStart": 47058
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00727",
+    "field": "slot",
+    "originalStart": 47076
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00728",
+    "field": "value",
+    "originalStart": 47093
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00729",
+    "field": "slot",
+    "originalStart": 47115
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00730",
+    "field": "value",
+    "originalStart": 47129
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00731",
+    "field": "label",
+    "originalStart": 47176
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00732",
+    "field": "label",
+    "originalStart": 47266
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00733",
+    "field": "label",
+    "originalStart": 47357
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00734",
+    "field": "targetContext",
+    "originalStart": 47441
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00735",
+    "field": "sourceLabel",
+    "originalStart": 47622
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00736",
+    "field": "headline",
+    "originalStart": 47676
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00737",
+    "field": "relicSet",
+    "originalStart": 47746
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00738",
+    "field": "planarSet",
+    "originalStart": 47774
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00739",
+    "field": "slot",
+    "originalStart": 47809
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00740",
+    "field": "value",
+    "originalStart": 47822
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00741",
+    "field": "slot",
+    "originalStart": 47846
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00742",
+    "field": "value",
+    "originalStart": 47859
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00743",
+    "field": "slot",
+    "originalStart": 47875
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00744",
+    "field": "value",
+    "originalStart": 47892
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00745",
+    "field": "slot",
+    "originalStart": 47913
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00746",
+    "field": "value",
+    "originalStart": 47927
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00747",
+    "field": "label",
+    "originalStart": 47974
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00748",
+    "field": "label",
+    "originalStart": 48062
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00749",
+    "field": "label",
+    "originalStart": 48153
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00750",
+    "field": "label",
+    "originalStart": 48244
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00751",
+    "field": "targetContext",
+    "originalStart": 48324
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00752",
+    "field": "sourceLabel",
+    "originalStart": 48484
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00753",
+    "field": "headline",
+    "originalStart": 48546
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00754",
+    "field": "relicSet",
+    "originalStart": 48613
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00755",
+    "field": "planarSet",
+    "originalStart": 48647
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00756",
+    "field": "slot",
+    "originalStart": 48679
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00757",
+    "field": "value",
+    "originalStart": 48692
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00758",
+    "field": "slot",
+    "originalStart": 48716
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00759",
+    "field": "value",
+    "originalStart": 48729
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00760",
+    "field": "slot",
+    "originalStart": 48745
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00761",
+    "field": "value",
+    "originalStart": 48762
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00762",
+    "field": "slot",
+    "originalStart": 48786
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00763",
+    "field": "value",
+    "originalStart": 48800
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00764",
+    "field": "label",
+    "originalStart": 48846
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00765",
+    "field": "label",
+    "originalStart": 48930
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00766",
+    "field": "label",
+    "originalStart": 49022
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00767",
+    "field": "targetContext",
+    "originalStart": 49105
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00768",
+    "field": "sourceLabel",
+    "originalStart": 49251
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00769",
+    "field": "headline",
+    "originalStart": 49308
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00770",
+    "field": "relicSet",
+    "originalStart": 49383
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00771",
+    "field": "planarSet",
+    "originalStart": 49411
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00772",
+    "field": "slot",
+    "originalStart": 49450
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00773",
+    "field": "value",
+    "originalStart": 49463
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00774",
+    "field": "slot",
+    "originalStart": 49487
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00775",
+    "field": "value",
+    "originalStart": 49500
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00776",
+    "field": "slot",
+    "originalStart": 49523
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00777",
+    "field": "value",
+    "originalStart": 49540
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00778",
+    "field": "slot",
+    "originalStart": 49562
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00779",
+    "field": "value",
+    "originalStart": 49576
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00780",
+    "field": "label",
+    "originalStart": 49623
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00781",
+    "field": "label",
+    "originalStart": 49711
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00782",
+    "field": "label",
+    "originalStart": 49802
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00783",
+    "field": "label",
+    "originalStart": 49893
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00784",
+    "field": "targetContext",
+    "originalStart": 49973
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00785",
+    "field": "sourceLabel",
+    "originalStart": 50149
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00786",
+    "field": "headline",
+    "originalStart": 50252
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00787",
+    "field": "relicSet",
+    "originalStart": 50326
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00788",
+    "field": "planarSet",
+    "originalStart": 50352
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00789",
+    "field": "slot",
+    "originalStart": 50384
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00790",
+    "field": "value",
+    "originalStart": 50397
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00791",
+    "field": "slot",
+    "originalStart": 50421
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00792",
+    "field": "value",
+    "originalStart": 50434
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00793",
+    "field": "slot",
+    "originalStart": 50450
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00794",
+    "field": "value",
+    "originalStart": 50467
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00795",
+    "field": "slot",
+    "originalStart": 50489
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00796",
+    "field": "value",
+    "originalStart": 50503
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00797",
+    "field": "label",
+    "originalStart": 50548
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00798",
+    "field": "label",
+    "originalStart": 50639
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00799",
+    "field": "label",
+    "originalStart": 50734
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00800",
+    "field": "label",
+    "originalStart": 50824
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00801",
+    "field": "targetContext",
+    "originalStart": 50907
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00802",
+    "field": "sourceLabel",
+    "originalStart": 51065
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00803",
+    "field": "headline",
+    "originalStart": 51128
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00804",
+    "field": "relicSet",
+    "originalStart": 51181
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00805",
+    "field": "planarSet",
+    "originalStart": 51228
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00806",
+    "field": "slot",
+    "originalStart": 51262
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00807",
+    "field": "value",
+    "originalStart": 51275
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00808",
+    "field": "slot",
+    "originalStart": 51298
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00809",
+    "field": "value",
+    "originalStart": 51311
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00810",
+    "field": "slot",
+    "originalStart": 51327
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00811",
+    "field": "value",
+    "originalStart": 51344
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00812",
+    "field": "slot",
+    "originalStart": 51368
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00813",
+    "field": "value",
+    "originalStart": 51382
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00814",
+    "field": "label",
+    "originalStart": 51435
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00815",
+    "field": "label",
+    "originalStart": 51528
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00816",
+    "field": "targetContext",
+    "originalStart": 51610
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00817",
+    "field": "sourceLabel",
+    "originalStart": 51773
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00818",
+    "field": "headline",
+    "originalStart": 51845
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00819",
+    "field": "relicSet",
+    "originalStart": 51912
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00820",
+    "field": "planarSet",
+    "originalStart": 51963
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00821",
+    "field": "slot",
+    "originalStart": 51999
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00822",
+    "field": "value",
+    "originalStart": 52012
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00823",
+    "field": "slot",
+    "originalStart": 52036
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00824",
+    "field": "value",
+    "originalStart": 52049
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00825",
+    "field": "slot",
+    "originalStart": 52065
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00826",
+    "field": "value",
+    "originalStart": 52082
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00827",
+    "field": "slot",
+    "originalStart": 52109
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00828",
+    "field": "value",
+    "originalStart": 52123
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00829",
+    "field": "label",
+    "originalStart": 52166
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00830",
+    "field": "label",
+    "originalStart": 52250
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00831",
+    "field": "label",
+    "originalStart": 52343
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00832",
+    "field": "targetContext",
+    "originalStart": 52422
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00833",
+    "field": "sourceLabel",
+    "originalStart": 52587
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00834",
+    "field": "headline",
+    "originalStart": 52656
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00835",
+    "field": "relicSet",
+    "originalStart": 52722
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00836",
+    "field": "planarSet",
+    "originalStart": 52750
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00837",
+    "field": "slot",
+    "originalStart": 52786
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00838",
+    "field": "value",
+    "originalStart": 52799
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00839",
+    "field": "slot",
+    "originalStart": 52816
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00840",
+    "field": "value",
+    "originalStart": 52829
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00841",
+    "field": "slot",
+    "originalStart": 52847
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00842",
+    "field": "value",
+    "originalStart": 52864
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00843",
+    "field": "slot",
+    "originalStart": 52892
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00844",
+    "field": "value",
+    "originalStart": 52906
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00845",
+    "field": "label",
+    "originalStart": 52951
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00846",
+    "field": "label",
+    "originalStart": 53044
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00847",
+    "field": "targetContext",
+    "originalStart": 53127
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00848",
+    "field": "sourceLabel",
+    "originalStart": 53302
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00849",
+    "field": "headline",
+    "originalStart": 53403
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00850",
+    "field": "relicSet",
+    "originalStart": 53446
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00851",
+    "field": "planarSet",
+    "originalStart": 53484
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00852",
+    "field": "slot",
+    "originalStart": 53529
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00853",
+    "field": "value",
+    "originalStart": 53542
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00854",
+    "field": "slot",
+    "originalStart": 53566
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00855",
+    "field": "value",
+    "originalStart": 53579
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00856",
+    "field": "slot",
+    "originalStart": 53602
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00857",
+    "field": "value",
+    "originalStart": 53619
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00858",
+    "field": "slot",
+    "originalStart": 53639
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00859",
+    "field": "value",
+    "originalStart": 53653
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00860",
+    "field": "headline",
+    "originalStart": 54768
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00861",
+    "field": "relicSet",
+    "originalStart": 54830
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00862",
+    "field": "planarSet",
+    "originalStart": 54876
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00863",
+    "field": "slot",
+    "originalStart": 54910
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00864",
+    "field": "value",
+    "originalStart": 54923
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00865",
+    "field": "slot",
+    "originalStart": 54947
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00866",
+    "field": "value",
+    "originalStart": 54960
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00867",
+    "field": "slot",
+    "originalStart": 54978
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00868",
+    "field": "value",
+    "originalStart": 54995
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00869",
+    "field": "slot",
+    "originalStart": 55017
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00870",
+    "field": "value",
+    "originalStart": 55031
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00871",
+    "field": "label",
+    "originalStart": 55078
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00872",
+    "field": "label",
+    "originalStart": 55166
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00873",
+    "field": "targetContext",
+    "originalStart": 55249
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00874",
+    "field": "sourceLabel",
+    "originalStart": 55413
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00875",
+    "field": "headline",
+    "originalStart": 55476
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00876",
+    "field": "relicSet",
+    "originalStart": 55542
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00877",
+    "field": "planarSet",
+    "originalStart": 55571
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00878",
+    "field": "slot",
+    "originalStart": 55606
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00879",
+    "field": "value",
+    "originalStart": 55619
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00880",
+    "field": "slot",
+    "originalStart": 55637
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00881",
+    "field": "value",
+    "originalStart": 55650
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00882",
+    "field": "slot",
+    "originalStart": 55666
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00883",
+    "field": "value",
+    "originalStart": 55683
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00884",
+    "field": "slot",
+    "originalStart": 55701
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00885",
+    "field": "value",
+    "originalStart": 55715
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00886",
+    "field": "label",
+    "originalStart": 55762
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00887",
+    "field": "label",
+    "originalStart": 55855
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00888",
+    "field": "label",
+    "originalStart": 55945
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00889",
+    "field": "targetContext",
+    "originalStart": 56025
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00890",
+    "field": "sourceLabel",
+    "originalStart": 56199
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00891",
+    "field": "headline",
+    "originalStart": 56253
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00892",
+    "field": "relicSet",
+    "originalStart": 56319
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00893",
+    "field": "planarSet",
+    "originalStart": 56371
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00894",
+    "field": "slot",
+    "originalStart": 56420
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00895",
+    "field": "value",
+    "originalStart": 56433
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00896",
+    "field": "slot",
+    "originalStart": 56457
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00897",
+    "field": "value",
+    "originalStart": 56470
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00898",
+    "field": "slot",
+    "originalStart": 56486
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00899",
+    "field": "value",
+    "originalStart": 56503
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00900",
+    "field": "slot",
+    "originalStart": 56532
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00901",
+    "field": "value",
+    "originalStart": 56546
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00902",
+    "field": "label",
+    "originalStart": 56599
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00903",
+    "field": "label",
+    "originalStart": 56694
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00904",
+    "field": "targetContext",
+    "originalStart": 56774
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00905",
+    "field": "sourceLabel",
+    "originalStart": 56950
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00906",
+    "field": "headline",
+    "originalStart": 57011
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00907",
+    "field": "relicSet",
+    "originalStart": 57082
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00908",
+    "field": "planarSet",
+    "originalStart": 57107
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00909",
+    "field": "slot",
+    "originalStart": 57153
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00910",
+    "field": "value",
+    "originalStart": 57166
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00911",
+    "field": "slot",
+    "originalStart": 57191
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00912",
+    "field": "value",
+    "originalStart": 57204
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00913",
+    "field": "slot",
+    "originalStart": 57220
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00914",
+    "field": "value",
+    "originalStart": 57237
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00915",
+    "field": "slot",
+    "originalStart": 57258
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00916",
+    "field": "value",
+    "originalStart": 57272
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00917",
+    "field": "label",
+    "originalStart": 57324
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00918",
+    "field": "label",
+    "originalStart": 57412
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00919",
+    "field": "label",
+    "originalStart": 57503
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00920",
+    "field": "targetContext",
+    "originalStart": 57583
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00921",
+    "field": "sourceLabel",
+    "originalStart": 57741
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00922",
+    "field": "headline",
+    "originalStart": 57812
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00923",
+    "field": "relicSet",
+    "originalStart": 57895
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00924",
+    "field": "planarSet",
+    "originalStart": 57923
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00925",
+    "field": "slot",
+    "originalStart": 57962
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00926",
+    "field": "value",
+    "originalStart": 57975
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00927",
+    "field": "slot",
+    "originalStart": 57999
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00928",
+    "field": "value",
+    "originalStart": 58012
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00929",
+    "field": "slot",
+    "originalStart": 58028
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00930",
+    "field": "value",
+    "originalStart": 58045
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00931",
+    "field": "slot",
+    "originalStart": 58066
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00932",
+    "field": "value",
+    "originalStart": 58080
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00933",
+    "field": "label",
+    "originalStart": 58127
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00934",
+    "field": "label",
+    "originalStart": 58213
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00935",
+    "field": "label",
+    "originalStart": 58302
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00936",
+    "field": "label",
+    "originalStart": 58393
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00937",
+    "field": "targetContext",
+    "originalStart": 58477
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00938",
+    "field": "sourceLabel",
+    "originalStart": 58612
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00939",
+    "field": "headline",
+    "originalStart": 58667
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00940",
+    "field": "relicSet",
+    "originalStart": 58734
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00941",
+    "field": "planarSet",
+    "originalStart": 58759
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00942",
+    "field": "slot",
+    "originalStart": 58791
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00943",
+    "field": "value",
+    "originalStart": 58804
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00944",
+    "field": "slot",
+    "originalStart": 58822
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00945",
+    "field": "value",
+    "originalStart": 58835
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00946",
+    "field": "slot",
+    "originalStart": 58851
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00947",
+    "field": "value",
+    "originalStart": 58868
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00948",
+    "field": "slot",
+    "originalStart": 58886
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00949",
+    "field": "value",
+    "originalStart": 58900
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00950",
+    "field": "label",
+    "originalStart": 58952
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00951",
+    "field": "label",
+    "originalStart": 59043
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00952",
+    "field": "label",
+    "originalStart": 59134
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00953",
+    "field": "targetContext",
+    "originalStart": 59214
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00954",
+    "field": "sourceLabel",
+    "originalStart": 59360
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00955",
+    "field": "headline",
+    "originalStart": 59520
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00956",
+    "field": "relicSet",
+    "originalStart": 59595
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00957",
+    "field": "planarSet",
+    "originalStart": 59624
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00958",
+    "field": "slot",
+    "originalStart": 59663
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00959",
+    "field": "value",
+    "originalStart": 59676
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00960",
+    "field": "slot",
+    "originalStart": 59693
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00961",
+    "field": "value",
+    "originalStart": 59706
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00962",
+    "field": "slot",
+    "originalStart": 59724
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00963",
+    "field": "value",
+    "originalStart": 59741
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00964",
+    "field": "slot",
+    "originalStart": 59763
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00965",
+    "field": "value",
+    "originalStart": 59777
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00966",
+    "field": "label",
+    "originalStart": 59824
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00967",
+    "field": "label",
+    "originalStart": 59912
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00968",
+    "field": "label",
+    "originalStart": 60003
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00969",
+    "field": "targetContext",
+    "originalStart": 60087
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00970",
+    "field": "sourceLabel",
+    "originalStart": 60334
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00971",
+    "field": "headline",
+    "originalStart": 60392
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00972",
+    "field": "relicSet",
+    "originalStart": 60467
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00973",
+    "field": "planarSet",
+    "originalStart": 60494
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00974",
+    "field": "slot",
+    "originalStart": 60541
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00975",
+    "field": "value",
+    "originalStart": 60554
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00976",
+    "field": "slot",
+    "originalStart": 60572
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00977",
+    "field": "value",
+    "originalStart": 60585
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00978",
+    "field": "slot",
+    "originalStart": 60608
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00979",
+    "field": "value",
+    "originalStart": 60625
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00980",
+    "field": "slot",
+    "originalStart": 60643
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00981",
+    "field": "value",
+    "originalStart": 60657
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00982",
+    "field": "label",
+    "originalStart": 60711
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00983",
+    "field": "targetContext",
+    "originalStart": 60791
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00984",
+    "field": "sourceLabel",
+    "originalStart": 60999
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00985",
+    "field": "headline",
+    "originalStart": 61139
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00986",
+    "field": "relicSet",
+    "originalStart": 61220
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00987",
+    "field": "planarSet",
+    "originalStart": 61247
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00988",
+    "field": "slot",
+    "originalStart": 61280
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00989",
+    "field": "value",
+    "originalStart": 61293
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00990",
+    "field": "slot",
+    "originalStart": 61310
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00991",
+    "field": "value",
+    "originalStart": 61323
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00992",
+    "field": "slot",
+    "originalStart": 61339
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00993",
+    "field": "value",
+    "originalStart": 61356
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00994",
+    "field": "slot",
+    "originalStart": 61383
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00995",
+    "field": "value",
+    "originalStart": 61397
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00996",
+    "field": "label",
+    "originalStart": 61452
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00997",
+    "field": "label",
+    "originalStart": 61540
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00998",
+    "field": "label",
+    "originalStart": 61628
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b00999",
+    "field": "label",
+    "originalStart": 61712
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01000",
+    "field": "label",
+    "originalStart": 61810
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01001",
+    "field": "targetContext",
+    "originalStart": 61890
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01002",
+    "field": "sourceLabel",
+    "originalStart": 62200
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01003",
+    "field": "headline",
+    "originalStart": 62259
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01004",
+    "field": "relicSet",
+    "originalStart": 62328
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01005",
+    "field": "planarSet",
+    "originalStart": 62360
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01006",
+    "field": "slot",
+    "originalStart": 62393
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01007",
+    "field": "value",
+    "originalStart": 62406
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01008",
+    "field": "slot",
+    "originalStart": 62423
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01009",
+    "field": "value",
+    "originalStart": 62436
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01010",
+    "field": "slot",
+    "originalStart": 62459
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01011",
+    "field": "value",
+    "originalStart": 62476
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01012",
+    "field": "slot",
+    "originalStart": 62504
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01013",
+    "field": "value",
+    "originalStart": 62518
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01014",
+    "field": "label",
+    "originalStart": 62574
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01015",
+    "field": "label",
+    "originalStart": 62663
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01016",
+    "field": "label",
+    "originalStart": 62752
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01017",
+    "field": "targetContext",
+    "originalStart": 62832
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01018",
+    "field": "sourceLabel",
+    "originalStart": 63139
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01019",
+    "field": "headline",
+    "originalStart": 63200
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01020",
+    "field": "relicSet",
+    "originalStart": 63275
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01021",
+    "field": "planarSet",
+    "originalStart": 63301
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01022",
+    "field": "slot",
+    "originalStart": 63337
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01023",
+    "field": "value",
+    "originalStart": 63350
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01024",
+    "field": "slot",
+    "originalStart": 63374
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01025",
+    "field": "value",
+    "originalStart": 63387
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01026",
+    "field": "slot",
+    "originalStart": 63403
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01027",
+    "field": "value",
+    "originalStart": 63420
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01028",
+    "field": "slot",
+    "originalStart": 63437
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01029",
+    "field": "value",
+    "originalStart": 63451
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01030",
+    "field": "label",
+    "originalStart": 63503
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01031",
+    "field": "label",
+    "originalStart": 63593
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01032",
+    "field": "label",
+    "originalStart": 63681
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01033",
+    "field": "targetContext",
+    "originalStart": 63761
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01034",
+    "field": "sourceLabel",
+    "originalStart": 64033
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01035",
+    "field": "headline",
+    "originalStart": 64176
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01036",
+    "field": "relicSet",
+    "originalStart": 64240
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01037",
+    "field": "planarSet",
+    "originalStart": 64266
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01038",
+    "field": "slot",
+    "originalStart": 64306
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01039",
+    "field": "value",
+    "originalStart": 64319
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01040",
+    "field": "slot",
+    "originalStart": 64336
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01041",
+    "field": "value",
+    "originalStart": 64349
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01042",
+    "field": "slot",
+    "originalStart": 64365
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01043",
+    "field": "value",
+    "originalStart": 64382
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01044",
+    "field": "slot",
+    "originalStart": 64410
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01045",
+    "field": "value",
+    "originalStart": 64424
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01046",
+    "field": "label",
+    "originalStart": 64473
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01047",
+    "field": "label",
+    "originalStart": 64562
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01048",
+    "field": "label",
+    "originalStart": 64651
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01049",
+    "field": "targetContext",
+    "originalStart": 64734
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01050",
+    "field": "sourceLabel",
+    "originalStart": 65135
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01051",
+    "field": "headline",
+    "originalStart": 65285
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01052",
+    "field": "relicSet",
+    "originalStart": 65349
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01053",
+    "field": "planarSet",
+    "originalStart": 65376
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01054",
+    "field": "slot",
+    "originalStart": 65412
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01055",
+    "field": "value",
+    "originalStart": 65425
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01056",
+    "field": "slot",
+    "originalStart": 65442
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01057",
+    "field": "value",
+    "originalStart": 65455
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01058",
+    "field": "slot",
+    "originalStart": 65471
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01059",
+    "field": "value",
+    "originalStart": 65488
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01060",
+    "field": "slot",
+    "originalStart": 65506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01061",
+    "field": "value",
+    "originalStart": 65520
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01062",
+    "field": "label",
+    "originalStart": 65568
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01063",
+    "field": "label",
+    "originalStart": 65659
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01064",
+    "field": "targetContext",
+    "originalStart": 65739
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01065",
+    "field": "sourceLabel",
+    "originalStart": 66137
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01066",
+    "field": "headline",
+    "originalStart": 66255
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01067",
+    "field": "relicSet",
+    "originalStart": 66311
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01068",
+    "field": "planarSet",
+    "originalStart": 66366
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01069",
+    "field": "slot",
+    "originalStart": 66405
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01070",
+    "field": "value",
+    "originalStart": 66418
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01071",
+    "field": "slot",
+    "originalStart": 66442
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01072",
+    "field": "value",
+    "originalStart": 66455
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01073",
+    "field": "slot",
+    "originalStart": 66471
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01074",
+    "field": "value",
+    "originalStart": 66488
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01075",
+    "field": "slot",
+    "originalStart": 66516
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01076",
+    "field": "value",
+    "originalStart": 66530
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01077",
+    "field": "label",
+    "originalStart": 66575
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01078",
+    "field": "label",
+    "originalStart": 66669
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01079",
+    "field": "label",
+    "originalStart": 66757
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01080",
+    "field": "label",
+    "originalStart": 66847
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01081",
+    "field": "targetContext",
+    "originalStart": 66927
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01082",
+    "field": "sourceLabel",
+    "originalStart": 67073
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01083",
+    "field": "headline",
+    "originalStart": 67134
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01084",
+    "field": "relicSet",
+    "originalStart": 67189
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01085",
+    "field": "planarSet",
+    "originalStart": 67215
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01086",
+    "field": "slot",
+    "originalStart": 67264
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01087",
+    "field": "value",
+    "originalStart": 67277
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01088",
+    "field": "slot",
+    "originalStart": 67301
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01089",
+    "field": "value",
+    "originalStart": 67314
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01090",
+    "field": "slot",
+    "originalStart": 67330
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01091",
+    "field": "value",
+    "originalStart": 67347
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01092",
+    "field": "slot",
+    "originalStart": 67376
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01093",
+    "field": "value",
+    "originalStart": 67390
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01094",
+    "field": "label",
+    "originalStart": 67437
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01095",
+    "field": "label",
+    "originalStart": 67523
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01096",
+    "field": "label",
+    "originalStart": 67612
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01097",
+    "field": "targetContext",
+    "originalStart": 67695
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01098",
+    "field": "sourceLabel",
+    "originalStart": 67831
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01099",
+    "field": "headline",
+    "originalStart": 67892
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01100",
+    "field": "relicSet",
+    "originalStart": 67939
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01101",
+    "field": "planarSet",
+    "originalStart": 67966
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01102",
+    "field": "slot",
+    "originalStart": 68002
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01103",
+    "field": "value",
+    "originalStart": 68015
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01104",
+    "field": "slot",
+    "originalStart": 68040
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01105",
+    "field": "value",
+    "originalStart": 68053
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01106",
+    "field": "slot",
+    "originalStart": 68069
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01107",
+    "field": "value",
+    "originalStart": 68086
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01108",
+    "field": "slot",
+    "originalStart": 68110
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01109",
+    "field": "value",
+    "originalStart": 68124
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01110",
+    "field": "label",
+    "originalStart": 68177
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01111",
+    "field": "label",
+    "originalStart": 68270
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01112",
+    "field": "targetContext",
+    "originalStart": 68353
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01113",
+    "field": "sourceLabel",
+    "originalStart": 68495
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01114",
+    "field": "headline",
+    "originalStart": 68557
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01115",
+    "field": "relicSet",
+    "originalStart": 68613
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01116",
+    "field": "planarSet",
+    "originalStart": 68657
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01117",
+    "field": "slot",
+    "originalStart": 68705
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01118",
+    "field": "value",
+    "originalStart": 68718
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01119",
+    "field": "slot",
+    "originalStart": 68736
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01120",
+    "field": "value",
+    "originalStart": 68749
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01121",
+    "field": "slot",
+    "originalStart": 68771
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01122",
+    "field": "value",
+    "originalStart": 68788
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01123",
+    "field": "slot",
+    "originalStart": 68805
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01124",
+    "field": "value",
+    "originalStart": 68819
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01125",
+    "field": "label",
+    "originalStart": 68874
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01126",
+    "field": "label",
+    "originalStart": 68962
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01127",
+    "field": "label",
+    "originalStart": 69049
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01128",
+    "field": "label",
+    "originalStart": 69139
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01129",
+    "field": "targetContext",
+    "originalStart": 69217
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01130",
+    "field": "sourceLabel",
+    "originalStart": 69385
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01131",
+    "field": "headline",
+    "originalStart": 69448
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01132",
+    "field": "relicSet",
+    "originalStart": 69499
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01133",
+    "field": "planarSet",
+    "originalStart": 69525
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01134",
+    "field": "slot",
+    "originalStart": 69570
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01135",
+    "field": "value",
+    "originalStart": 69583
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01136",
+    "field": "slot",
+    "originalStart": 69600
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01137",
+    "field": "value",
+    "originalStart": 69613
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01138",
+    "field": "slot",
+    "originalStart": 69629
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01139",
+    "field": "value",
+    "originalStart": 69646
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01140",
+    "field": "slot",
+    "originalStart": 69663
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01141",
+    "field": "value",
+    "originalStart": 69677
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01142",
+    "field": "label",
+    "originalStart": 69723
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01143",
+    "field": "label",
+    "originalStart": 69814
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01144",
+    "field": "targetContext",
+    "originalStart": 69894
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01145",
+    "field": "sourceLabel",
+    "originalStart": 70029
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01146",
+    "field": "headline",
+    "originalStart": 70092
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01147",
+    "field": "relicSet",
+    "originalStart": 70152
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01148",
+    "field": "planarSet",
+    "originalStart": 70178
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01149",
+    "field": "slot",
+    "originalStart": 70212
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01150",
+    "field": "value",
+    "originalStart": 70225
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01151",
+    "field": "slot",
+    "originalStart": 70249
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01152",
+    "field": "value",
+    "originalStart": 70262
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01153",
+    "field": "slot",
+    "originalStart": 70278
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01154",
+    "field": "value",
+    "originalStart": 70295
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01155",
+    "field": "slot",
+    "originalStart": 70312
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01156",
+    "field": "value",
+    "originalStart": 70326
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01157",
+    "field": "label",
+    "originalStart": 70369
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01158",
+    "field": "label",
+    "originalStart": 70461
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01159",
+    "field": "label",
+    "originalStart": 70551
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01160",
+    "field": "label",
+    "originalStart": 70642
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01161",
+    "field": "targetContext",
+    "originalStart": 70722
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01162",
+    "field": "sourceLabel",
+    "originalStart": 70897
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01163",
+    "field": "headline",
+    "originalStart": 70960
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01164",
+    "field": "relicSet",
+    "originalStart": 71012
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01165",
+    "field": "planarSet",
+    "originalStart": 71052
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01166",
+    "field": "slot",
+    "originalStart": 71088
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01167",
+    "field": "value",
+    "originalStart": 71101
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01168",
+    "field": "slot",
+    "originalStart": 71125
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01169",
+    "field": "value",
+    "originalStart": 71138
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01170",
+    "field": "slot",
+    "originalStart": 71161
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01171",
+    "field": "value",
+    "originalStart": 71178
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01172",
+    "field": "slot",
+    "originalStart": 71207
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01173",
+    "field": "value",
+    "originalStart": 71221
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01174",
+    "field": "label",
+    "originalStart": 71266
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01175",
+    "field": "label",
+    "originalStart": 71354
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01176",
+    "field": "label",
+    "originalStart": 71446
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01177",
+    "field": "label",
+    "originalStart": 71539
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01178",
+    "field": "label",
+    "originalStart": 71628
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01179",
+    "field": "targetContext",
+    "originalStart": 71711
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01180",
+    "field": "sourceLabel",
+    "originalStart": 71893
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01181",
+    "field": "headline",
+    "originalStart": 71955
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01182",
+    "field": "relicSet",
+    "originalStart": 72003
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01183",
+    "field": "planarSet",
+    "originalStart": 72029
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01184",
+    "field": "slot",
+    "originalStart": 72061
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01185",
+    "field": "value",
+    "originalStart": 72074
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01186",
+    "field": "slot",
+    "originalStart": 72091
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01187",
+    "field": "value",
+    "originalStart": 72104
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01188",
+    "field": "slot",
+    "originalStart": 72120
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01189",
+    "field": "value",
+    "originalStart": 72137
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01190",
+    "field": "slot",
+    "originalStart": 72154
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01191",
+    "field": "value",
+    "originalStart": 72168
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01192",
+    "field": "label",
+    "originalStart": 72211
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01193",
+    "field": "label",
+    "originalStart": 72301
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01194",
+    "field": "targetContext",
+    "originalStart": 72381
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01195",
+    "field": "sourceLabel",
+    "originalStart": 72525
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01196",
+    "field": "headline",
+    "originalStart": 72627
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01197",
+    "field": "relicSet",
+    "originalStart": 72689
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01198",
+    "field": "planarSet",
+    "originalStart": 72731
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01199",
+    "field": "slot",
+    "originalStart": 72792
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01200",
+    "field": "value",
+    "originalStart": 72805
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01201",
+    "field": "slot",
+    "originalStart": 72822
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01202",
+    "field": "value",
+    "originalStart": 72835
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01203",
+    "field": "slot",
+    "originalStart": 72851
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01204",
+    "field": "value",
+    "originalStart": 72868
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01205",
+    "field": "slot",
+    "originalStart": 72889
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01206",
+    "field": "value",
+    "originalStart": 72903
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01207",
+    "field": "label",
+    "originalStart": 72947
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01208",
+    "field": "targetContext",
+    "originalStart": 73027
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01209",
+    "field": "sourceLabel",
+    "originalStart": 73181
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01210",
+    "field": "headline",
+    "originalStart": 73233
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01211",
+    "field": "relicSet",
+    "originalStart": 73296
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01212",
+    "field": "planarSet",
+    "originalStart": 73324
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01213",
+    "field": "slot",
+    "originalStart": 73369
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01214",
+    "field": "value",
+    "originalStart": 73382
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01215",
+    "field": "slot",
+    "originalStart": 73406
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01216",
+    "field": "value",
+    "originalStart": 73419
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01217",
+    "field": "slot",
+    "originalStart": 73435
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01218",
+    "field": "value",
+    "originalStart": 73452
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01219",
+    "field": "slot",
+    "originalStart": 73476
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01220",
+    "field": "value",
+    "originalStart": 73490
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01221",
+    "field": "label",
+    "originalStart": 73544
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01222",
+    "field": "label",
+    "originalStart": 73631
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01223",
+    "field": "targetContext",
+    "originalStart": 73711
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01224",
+    "field": "sourceLabel",
+    "originalStart": 73860
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01225",
+    "field": "headline",
+    "originalStart": 73913
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01226",
+    "field": "relicSet",
+    "originalStart": 73976
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01227",
+    "field": "planarSet",
+    "originalStart": 74005
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01228",
+    "field": "slot",
+    "originalStart": 74060
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01229",
+    "field": "value",
+    "originalStart": 74073
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01230",
+    "field": "slot",
+    "originalStart": 74097
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01231",
+    "field": "value",
+    "originalStart": 74110
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01232",
+    "field": "slot",
+    "originalStart": 74133
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01233",
+    "field": "value",
+    "originalStart": 74150
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01234",
+    "field": "slot",
+    "originalStart": 74171
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01235",
+    "field": "value",
+    "originalStart": 74185
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01236",
+    "field": "targetContext",
+    "originalStart": 74224
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01237",
+    "field": "sourceLabel",
+    "originalStart": 74404
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01238",
+    "field": "headline",
+    "originalStart": 74461
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01239",
+    "field": "relicSet",
+    "originalStart": 74536
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01240",
+    "field": "planarSet",
+    "originalStart": 74564
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01241",
+    "field": "slot",
+    "originalStart": 74602
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01242",
+    "field": "value",
+    "originalStart": 74615
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01243",
+    "field": "slot",
+    "originalStart": 74639
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01244",
+    "field": "value",
+    "originalStart": 74652
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01245",
+    "field": "slot",
+    "originalStart": 74675
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01246",
+    "field": "value",
+    "originalStart": 74692
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01247",
+    "field": "slot",
+    "originalStart": 74720
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01248",
+    "field": "value",
+    "originalStart": 74734
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01249",
+    "field": "label",
+    "originalStart": 74781
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01250",
+    "field": "label",
+    "originalStart": 74875
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01251",
+    "field": "label",
+    "originalStart": 74963
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01252",
+    "field": "label",
+    "originalStart": 75061
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01253",
+    "field": "targetContext",
+    "originalStart": 75144
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01254",
+    "field": "sourceLabel",
+    "originalStart": 75296
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01255",
+    "field": "headline",
+    "originalStart": 75350
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01256",
+    "field": "relicSet",
+    "originalStart": 75413
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01257",
+    "field": "planarSet",
+    "originalStart": 75441
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01258",
+    "field": "slot",
+    "originalStart": 75508
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01259",
+    "field": "value",
+    "originalStart": 75521
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01260",
+    "field": "slot",
+    "originalStart": 75545
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01261",
+    "field": "value",
+    "originalStart": 75558
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01262",
+    "field": "slot",
+    "originalStart": 75581
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01263",
+    "field": "value",
+    "originalStart": 75598
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01264",
+    "field": "slot",
+    "originalStart": 75626
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01265",
+    "field": "value",
+    "originalStart": 75640
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01266",
+    "field": "targetContext",
+    "originalStart": 75679
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01267",
+    "field": "sourceLabel",
+    "originalStart": 75861
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01268",
+    "field": "headline",
+    "originalStart": 75916
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01269",
+    "field": "relicSet",
+    "originalStart": 75980
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01270",
+    "field": "planarSet",
+    "originalStart": 76021
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01271",
+    "field": "slot",
+    "originalStart": 76054
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01272",
+    "field": "value",
+    "originalStart": 76067
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01273",
+    "field": "slot",
+    "originalStart": 76091
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01274",
+    "field": "value",
+    "originalStart": 76104
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01275",
+    "field": "slot",
+    "originalStart": 76120
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01276",
+    "field": "value",
+    "originalStart": 76137
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01277",
+    "field": "slot",
+    "originalStart": 76165
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01278",
+    "field": "value",
+    "originalStart": 76179
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01279",
+    "field": "targetContext",
+    "originalStart": 76217
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01280",
+    "field": "sourceLabel",
+    "originalStart": 76398
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01281",
+    "field": "headline",
+    "originalStart": 76450
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01282",
+    "field": "relicSet",
+    "originalStart": 76518
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01283",
+    "field": "planarSet",
+    "originalStart": 76573
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01284",
+    "field": "slot",
+    "originalStart": 76607
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01285",
+    "field": "value",
+    "originalStart": 76620
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01286",
+    "field": "slot",
+    "originalStart": 76637
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01287",
+    "field": "value",
+    "originalStart": 76650
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01288",
+    "field": "slot",
+    "originalStart": 76668
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01289",
+    "field": "value",
+    "originalStart": 76685
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01290",
+    "field": "slot",
+    "originalStart": 76706
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01291",
+    "field": "value",
+    "originalStart": 76720
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01292",
+    "field": "targetContext",
+    "originalStart": 76759
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01293",
+    "field": "sourceLabel",
+    "originalStart": 76960
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01294",
+    "field": "headline",
+    "originalStart": 77014
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01295",
+    "field": "relicSet",
+    "originalStart": 77081
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01296",
+    "field": "planarSet",
+    "originalStart": 77120
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01297",
+    "field": "slot",
+    "originalStart": 77152
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01298",
+    "field": "value",
+    "originalStart": 77165
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01299",
+    "field": "slot",
+    "originalStart": 77182
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01300",
+    "field": "value",
+    "originalStart": 77195
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01301",
+    "field": "slot",
+    "originalStart": 77211
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01302",
+    "field": "value",
+    "originalStart": 77228
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01303",
+    "field": "slot",
+    "originalStart": 77245
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01304",
+    "field": "value",
+    "originalStart": 77259
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01305",
+    "field": "targetContext",
+    "originalStart": 77300
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01306",
+    "field": "sourceLabel",
+    "originalStart": 77484
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01307",
+    "field": "headline",
+    "originalStart": 77577
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01308",
+    "field": "relicSet",
+    "originalStart": 77634
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01309",
+    "field": "planarSet",
+    "originalStart": 77659
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01310",
+    "field": "slot",
+    "originalStart": 77691
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01311",
+    "field": "value",
+    "originalStart": 77704
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01312",
+    "field": "slot",
+    "originalStart": 77729
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01313",
+    "field": "value",
+    "originalStart": 77742
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01314",
+    "field": "slot",
+    "originalStart": 77758
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01315",
+    "field": "value",
+    "originalStart": 77775
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01316",
+    "field": "slot",
+    "originalStart": 77804
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01317",
+    "field": "value",
+    "originalStart": 77818
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01318",
+    "field": "label",
+    "originalStart": 77862
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01319",
+    "field": "label",
+    "originalStart": 77950
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01320",
+    "field": "label",
+    "originalStart": 78049
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01321",
+    "field": "targetContext",
+    "originalStart": 78129
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01322",
+    "field": "sourceLabel",
+    "originalStart": 78278
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01323",
+    "field": "headline",
+    "originalStart": 78339
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01324",
+    "field": "relicSet",
+    "originalStart": 78400
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01325",
+    "field": "planarSet",
+    "originalStart": 78427
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01326",
+    "field": "slot",
+    "originalStart": 78489
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01327",
+    "field": "value",
+    "originalStart": 78502
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01328",
+    "field": "slot",
+    "originalStart": 78519
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01329",
+    "field": "value",
+    "originalStart": 78532
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01330",
+    "field": "slot",
+    "originalStart": 78550
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01331",
+    "field": "value",
+    "originalStart": 78567
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01332",
+    "field": "slot",
+    "originalStart": 78596
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01333",
+    "field": "value",
+    "originalStart": 78610
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01334",
+    "field": "label",
+    "originalStart": 78657
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01335",
+    "field": "label",
+    "originalStart": 78745
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01336",
+    "field": "label",
+    "originalStart": 78836
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01337",
+    "field": "targetContext",
+    "originalStart": 78920
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01338",
+    "field": "sourceLabel",
+    "originalStart": 79055
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01339",
+    "field": "headline",
+    "originalStart": 79125
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01340",
+    "field": "relicSet",
+    "originalStart": 79180
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01341",
+    "field": "planarSet",
+    "originalStart": 79206
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01342",
+    "field": "slot",
+    "originalStart": 79254
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01343",
+    "field": "value",
+    "originalStart": 79267
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01344",
+    "field": "slot",
+    "originalStart": 79284
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01345",
+    "field": "value",
+    "originalStart": 79297
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01346",
+    "field": "slot",
+    "originalStart": 79320
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01347",
+    "field": "value",
+    "originalStart": 79337
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01348",
+    "field": "slot",
+    "originalStart": 79366
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01349",
+    "field": "value",
+    "originalStart": 79380
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01350",
+    "field": "label",
+    "originalStart": 79433
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01351",
+    "field": "label",
+    "originalStart": 79523
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01352",
+    "field": "label",
+    "originalStart": 79612
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01353",
+    "field": "label",
+    "originalStart": 79703
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01354",
+    "field": "targetContext",
+    "originalStart": 79787
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01355",
+    "field": "sourceLabel",
+    "originalStart": 79927
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01356",
+    "field": "headline",
+    "originalStart": 79996
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01357",
+    "field": "relicSet",
+    "originalStart": 80057
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01358",
+    "field": "planarSet",
+    "originalStart": 80083
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01359",
+    "field": "slot",
+    "originalStart": 80118
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01360",
+    "field": "value",
+    "originalStart": 80131
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01361",
+    "field": "slot",
+    "originalStart": 80155
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01362",
+    "field": "value",
+    "originalStart": 80168
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01363",
+    "field": "slot",
+    "originalStart": 80195
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01364",
+    "field": "value",
+    "originalStart": 80212
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01365",
+    "field": "slot",
+    "originalStart": 80230
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01366",
+    "field": "value",
+    "originalStart": 80244
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01367",
+    "field": "label",
+    "originalStart": 80300
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01368",
+    "field": "label",
+    "originalStart": 80390
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01369",
+    "field": "label",
+    "originalStart": 80483
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01370",
+    "field": "targetContext",
+    "originalStart": 80566
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01371",
+    "field": "sourceLabel",
+    "originalStart": 80727
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01372",
+    "field": "headline",
+    "originalStart": 80788
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01373",
+    "field": "relicSet",
+    "originalStart": 80840
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01374",
+    "field": "planarSet",
+    "originalStart": 80891
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01375",
+    "field": "slot",
+    "originalStart": 80936
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01376",
+    "field": "value",
+    "originalStart": 80949
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01377",
+    "field": "slot",
+    "originalStart": 80973
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01378",
+    "field": "value",
+    "originalStart": 80986
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01379",
+    "field": "slot",
+    "originalStart": 81002
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01380",
+    "field": "value",
+    "originalStart": 81019
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01381",
+    "field": "slot",
+    "originalStart": 81043
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01382",
+    "field": "value",
+    "originalStart": 81057
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01383",
+    "field": "label",
+    "originalStart": 81103
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01384",
+    "field": "targetContext",
+    "originalStart": 81183
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01385",
+    "field": "sourceLabel",
+    "originalStart": 81333
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01386",
+    "field": "headline",
+    "originalStart": 81410
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01387",
+    "field": "relicSet",
+    "originalStart": 81463
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01388",
+    "field": "planarSet",
+    "originalStart": 81490
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01389",
+    "field": "slot",
+    "originalStart": 81539
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01390",
+    "field": "value",
+    "originalStart": 81552
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01391",
+    "field": "slot",
+    "originalStart": 81570
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01392",
+    "field": "value",
+    "originalStart": 81583
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01393",
+    "field": "slot",
+    "originalStart": 81599
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01394",
+    "field": "value",
+    "originalStart": 81616
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01395",
+    "field": "slot",
+    "originalStart": 81640
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01396",
+    "field": "value",
+    "originalStart": 81654
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01397",
+    "field": "label",
+    "originalStart": 81715
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01398",
+    "field": "label",
+    "originalStart": 81802
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01399",
+    "field": "label",
+    "originalStart": 81895
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01400",
+    "field": "targetContext",
+    "originalStart": 81978
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01401",
+    "field": "sourceLabel",
+    "originalStart": 82121
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01402",
+    "field": "headline",
+    "originalStart": 82187
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01403",
+    "field": "relicSet",
+    "originalStart": 82242
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01404",
+    "field": "planarSet",
+    "originalStart": 82271
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01405",
+    "field": "slot",
+    "originalStart": 82326
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01406",
+    "field": "value",
+    "originalStart": 82339
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01407",
+    "field": "slot",
+    "originalStart": 82363
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01408",
+    "field": "value",
+    "originalStart": 82376
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01409",
+    "field": "slot",
+    "originalStart": 82399
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01410",
+    "field": "value",
+    "originalStart": 82416
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01411",
+    "field": "slot",
+    "originalStart": 82444
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01412",
+    "field": "value",
+    "originalStart": 82458
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01413",
+    "field": "label",
+    "originalStart": 82505
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01414",
+    "field": "label",
+    "originalStart": 82593
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01415",
+    "field": "label",
+    "originalStart": 82684
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01416",
+    "field": "label",
+    "originalStart": 82775
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01417",
+    "field": "targetContext",
+    "originalStart": 82855
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01418",
+    "field": "sourceLabel",
+    "originalStart": 82990
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01419",
+    "field": "headline",
+    "originalStart": 83052
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01420",
+    "field": "relicSet",
+    "originalStart": 83107
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01421",
+    "field": "planarSet",
+    "originalStart": 83132
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01422",
+    "field": "slot",
+    "originalStart": 83164
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01423",
+    "field": "value",
+    "originalStart": 83177
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01424",
+    "field": "slot",
+    "originalStart": 83202
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01425",
+    "field": "value",
+    "originalStart": 83215
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01426",
+    "field": "slot",
+    "originalStart": 83231
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01427",
+    "field": "value",
+    "originalStart": 83248
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01428",
+    "field": "slot",
+    "originalStart": 83276
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01429",
+    "field": "value",
+    "originalStart": 83290
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01430",
+    "field": "label",
+    "originalStart": 83342
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01431",
+    "field": "label",
+    "originalStart": 83430
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01432",
+    "field": "label",
+    "originalStart": 83521
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01433",
+    "field": "targetContext",
+    "originalStart": 83601
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01434",
+    "field": "sourceLabel",
+    "originalStart": 83755
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01435",
+    "field": "headline",
+    "originalStart": 83856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01436",
+    "field": "relicSet",
+    "originalStart": 83910
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01437",
+    "field": "planarSet",
+    "originalStart": 83935
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01438",
+    "field": "slot",
+    "originalStart": 83998
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01439",
+    "field": "value",
+    "originalStart": 84011
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01440",
+    "field": "slot",
+    "originalStart": 84035
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01441",
+    "field": "value",
+    "originalStart": 84048
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01442",
+    "field": "slot",
+    "originalStart": 84070
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01443",
+    "field": "value",
+    "originalStart": 84087
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01444",
+    "field": "slot",
+    "originalStart": 84114
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01445",
+    "field": "value",
+    "originalStart": 84128
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01446",
+    "field": "label",
+    "originalStart": 84174
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01447",
+    "field": "label",
+    "originalStart": 84262
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01448",
+    "field": "label",
+    "originalStart": 84352
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01449",
+    "field": "label",
+    "originalStart": 84436
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01450",
+    "field": "targetContext",
+    "originalStart": 84519
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01451",
+    "field": "sourceLabel",
+    "originalStart": 84666
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01452",
+    "field": "headline",
+    "originalStart": 84735
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01453",
+    "field": "relicSet",
+    "originalStart": 84791
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01454",
+    "field": "planarSet",
+    "originalStart": 84819
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01455",
+    "field": "slot",
+    "originalStart": 84870
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01456",
+    "field": "value",
+    "originalStart": 84883
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01457",
+    "field": "slot",
+    "originalStart": 84907
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01458",
+    "field": "value",
+    "originalStart": 84920
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01459",
+    "field": "slot",
+    "originalStart": 84943
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01460",
+    "field": "value",
+    "originalStart": 84960
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01461",
+    "field": "slot",
+    "originalStart": 84989
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01462",
+    "field": "value",
+    "originalStart": 85003
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01463",
+    "field": "label",
+    "originalStart": 85050
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01464",
+    "field": "targetContext",
+    "originalStart": 85129
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01465",
+    "field": "sourceLabel",
+    "originalStart": 85281
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01466",
+    "field": "headline",
+    "originalStart": 85333
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01467",
+    "field": "relicSet",
+    "originalStart": 85388
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01468",
+    "field": "planarSet",
+    "originalStart": 85435
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01469",
+    "field": "slot",
+    "originalStart": 85493
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01470",
+    "field": "value",
+    "originalStart": 85506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01471",
+    "field": "slot",
+    "originalStart": 85530
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01472",
+    "field": "value",
+    "originalStart": 85543
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01473",
+    "field": "slot",
+    "originalStart": 85559
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01474",
+    "field": "value",
+    "originalStart": 85576
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01475",
+    "field": "slot",
+    "originalStart": 85605
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01476",
+    "field": "value",
+    "originalStart": 85619
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01477",
+    "field": "label",
+    "originalStart": 85673
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01478",
+    "field": "label",
+    "originalStart": 85766
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01479",
+    "field": "targetContext",
+    "originalStart": 85852
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01480",
+    "field": "sourceLabel",
+    "originalStart": 86012
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01481",
+    "field": "headline",
+    "originalStart": 86064
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01482",
+    "field": "relicSet",
+    "originalStart": 86114
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01483",
+    "field": "planarSet",
+    "originalStart": 86159
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01484",
+    "field": "slot",
+    "originalStart": 86192
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01485",
+    "field": "value",
+    "originalStart": 86205
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01486",
+    "field": "slot",
+    "originalStart": 86229
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01487",
+    "field": "value",
+    "originalStart": 86242
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01488",
+    "field": "slot",
+    "originalStart": 86260
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01489",
+    "field": "value",
+    "originalStart": 86277
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01490",
+    "field": "slot",
+    "originalStart": 86299
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01491",
+    "field": "value",
+    "originalStart": 86313
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01492",
+    "field": "targetContext",
+    "originalStart": 86352
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01493",
+    "field": "sourceLabel",
+    "originalStart": 86535
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01494",
+    "field": "headline",
+    "originalStart": 86587
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01495",
+    "field": "relicSet",
+    "originalStart": 86644
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01496",
+    "field": "planarSet",
+    "originalStart": 86672
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01497",
+    "field": "slot",
+    "originalStart": 86731
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01498",
+    "field": "value",
+    "originalStart": 86744
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01499",
+    "field": "slot",
+    "originalStart": 86768
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01500",
+    "field": "value",
+    "originalStart": 86781
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01501",
+    "field": "slot",
+    "originalStart": 86804
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01502",
+    "field": "value",
+    "originalStart": 86821
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01503",
+    "field": "slot",
+    "originalStart": 86842
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01504",
+    "field": "value",
+    "originalStart": 86856
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01505",
+    "field": "targetContext",
+    "originalStart": 86895
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01506",
+    "field": "sourceLabel",
+    "originalStart": 87072
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01507",
+    "field": "headline",
+    "originalStart": 87127
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01508",
+    "field": "relicSet",
+    "originalStart": 87177
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01509",
+    "field": "planarSet",
+    "originalStart": 87221
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01510",
+    "field": "slot",
+    "originalStart": 87267
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01511",
+    "field": "value",
+    "originalStart": 87280
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01512",
+    "field": "slot",
+    "originalStart": 87298
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01513",
+    "field": "value",
+    "originalStart": 87311
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01514",
+    "field": "slot",
+    "originalStart": 87334
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01515",
+    "field": "value",
+    "originalStart": 87351
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01516",
+    "field": "slot",
+    "originalStart": 87369
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01517",
+    "field": "value",
+    "originalStart": 87383
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01518",
+    "field": "label",
+    "originalStart": 87430
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01519",
+    "field": "label",
+    "originalStart": 87529
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01520",
+    "field": "targetContext",
+    "originalStart": 87609
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01521",
+    "field": "sourceLabel",
+    "originalStart": 87799
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01522",
+    "field": "headline",
+    "originalStart": 87902
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01523",
+    "field": "relicSet",
+    "originalStart": 87962
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01524",
+    "field": "planarSet",
+    "originalStart": 87991
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01525",
+    "field": "slot",
+    "originalStart": 88025
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01526",
+    "field": "value",
+    "originalStart": 88038
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01527",
+    "field": "slot",
+    "originalStart": 88055
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01528",
+    "field": "value",
+    "originalStart": 88068
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01529",
+    "field": "slot",
+    "originalStart": 88091
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01530",
+    "field": "value",
+    "originalStart": 88108
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01531",
+    "field": "slot",
+    "originalStart": 88126
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01532",
+    "field": "value",
+    "originalStart": 88140
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01533",
+    "field": "label",
+    "originalStart": 88196
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01534",
+    "field": "targetContext",
+    "originalStart": 88278
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01535",
+    "field": "sourceLabel",
+    "originalStart": 88499
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01536",
+    "field": "headline",
+    "originalStart": 88562
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01537",
+    "field": "relicSet",
+    "originalStart": 88625
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01538",
+    "field": "planarSet",
+    "originalStart": 88652
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01539",
+    "field": "slot",
+    "originalStart": 88686
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01540",
+    "field": "value",
+    "originalStart": 88699
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01541",
+    "field": "slot",
+    "originalStart": 88717
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01542",
+    "field": "value",
+    "originalStart": 88730
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01543",
+    "field": "slot",
+    "originalStart": 88746
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01544",
+    "field": "value",
+    "originalStart": 88763
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01545",
+    "field": "slot",
+    "originalStart": 88781
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01546",
+    "field": "value",
+    "originalStart": 88795
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01547",
+    "field": "label",
+    "originalStart": 88845
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01548",
+    "field": "label",
+    "originalStart": 88935
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01549",
+    "field": "label",
+    "originalStart": 89023
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01550",
+    "field": "targetContext",
+    "originalStart": 89107
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01551",
+    "field": "sourceLabel",
+    "originalStart": 89342
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01552",
+    "field": "headline",
+    "originalStart": 89412
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01553",
+    "field": "relicSet",
+    "originalStart": 89471
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01554",
+    "field": "planarSet",
+    "originalStart": 89522
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01555",
+    "field": "slot",
+    "originalStart": 89558
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01556",
+    "field": "value",
+    "originalStart": 89571
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01557",
+    "field": "slot",
+    "originalStart": 89589
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01558",
+    "field": "value",
+    "originalStart": 89602
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01559",
+    "field": "slot",
+    "originalStart": 89618
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01560",
+    "field": "value",
+    "originalStart": 89635
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01561",
+    "field": "slot",
+    "originalStart": 89663
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01562",
+    "field": "value",
+    "originalStart": 89677
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01563",
+    "field": "label",
+    "originalStart": 89731
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01564",
+    "field": "label",
+    "originalStart": 89821
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01565",
+    "field": "targetContext",
+    "originalStart": 89901
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01566",
+    "field": "sourceLabel",
+    "originalStart": 90088
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01567",
+    "field": "headline",
+    "originalStart": 90166
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01568",
+    "field": "relicSet",
+    "originalStart": 90232
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01569",
+    "field": "planarSet",
+    "originalStart": 90259
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01570",
+    "field": "slot",
+    "originalStart": 90293
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01571",
+    "field": "value",
+    "originalStart": 90306
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01572",
+    "field": "slot",
+    "originalStart": 90330
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01573",
+    "field": "value",
+    "originalStart": 90343
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01574",
+    "field": "slot",
+    "originalStart": 90359
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01575",
+    "field": "value",
+    "originalStart": 90376
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01576",
+    "field": "slot",
+    "originalStart": 90400
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01577",
+    "field": "value",
+    "originalStart": 90414
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01578",
+    "field": "label",
+    "originalStart": 90460
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01579",
+    "field": "label",
+    "originalStart": 90550
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01580",
+    "field": "label",
+    "originalStart": 90638
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01581",
+    "field": "targetContext",
+    "originalStart": 90721
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01582",
+    "field": "sourceLabel",
+    "originalStart": 91052
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01583",
+    "field": "relicSet",
+    "originalStart": 91364
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01584",
+    "field": "planarSet",
+    "originalStart": 91410
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01585",
+    "field": "slot",
+    "originalStart": 91457
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01586",
+    "field": "value",
+    "originalStart": 91470
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01587",
+    "field": "slot",
+    "originalStart": 91493
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01588",
+    "field": "value",
+    "originalStart": 91506
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01589",
+    "field": "slot",
+    "originalStart": 91520
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01590",
+    "field": "value",
+    "originalStart": 91537
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01591",
+    "field": "slot",
+    "originalStart": 91553
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01592",
+    "field": "value",
+    "originalStart": 91567
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01593",
+    "field": "label",
+    "originalStart": 91619
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01594",
+    "field": "label",
+    "originalStart": 91702
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01595",
+    "field": "label",
+    "originalStart": 91784
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01596",
+    "field": "label",
+    "originalStart": 91870
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01597",
+    "field": "headline",
+    "originalStart": 91986
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01598",
+    "field": "targetContext",
+    "originalStart": 92043
+  },
+  {
+    "id": "guide.legacy.buildAdvisor.b01599",
+    "field": "sourceLabel",
+    "originalStart": 92196
+  }
+]

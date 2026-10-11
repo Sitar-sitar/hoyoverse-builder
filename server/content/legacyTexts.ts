@@ -8,6 +8,12 @@ export function createLegacyTexts(sources: SourceText[], en: Record<string, Tran
   const ja = (id: TextId) => japaneseText(index, { kind: "textRef", id });
   return {
     ja,
+    triple(id: TextId): [string, string, string] {
+      const english = en[id];
+      const chinese = zh[id];
+      if (!english || !chinese) throw new Error(`Legacy translation missing: ${id}`);
+      return [ja(id), english.text, chinese.text];
+    },
     localized(id: TextId) {
       const english = en[id];
       const chinese = zh[id];

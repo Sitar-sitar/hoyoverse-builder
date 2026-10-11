@@ -22,4 +22,16 @@ describe("canonical source adoption", () => {
     expect(() => texts.localized(result.sources[0]!.id)).toThrow("Legacy translation missing");
     expect(() => texts.ja("guide.unknown")).toThrow("Unknown content reference");
   });
+
+  it("preserves localized helper calls and tuple arguments across nested module paths", () => {
+    const input = 'const title=t("日本語","English","中文");const party=member("名前","Name","名字","役割","Role","角色");';
+    const result = adoptModule(input, "parties_test", 1);
+    expect(result.sources.map(source => source.ja)).toEqual(["日本語", "名前", "役割"]);
+    expect(result.migrated).toContain('from "../content/legacyTexts"');
+    expect(result.migrated).toContain('from "../../content/ja/guides/parties_test"');
+    const texts = createLegacyTexts(result.sources, result.translations.en, result.translations["zh-CN"]);
+    expect(texts.triple(result.sources[1]!.id)).toEqual(["名前", "Name", "名字"]);
+    expect(texts.triple(result.sources[2]!.id)).toEqual(["役割", "Role", "角色"]);
+    expect(adoptModule('const x=t(dynamicName,"English","中文")', "test").sources).toHaveLength(0);
+  });
 });

@@ -1,0 +1,562 @@
+[
+  {
+    "id": "guide.legacy.individualGuides.b00001",
+    "field": "slot",
+    "originalStart": 913
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00002",
+    "field": "value",
+    "originalStart": 926
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00003",
+    "field": "slot",
+    "originalStart": 950
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00004",
+    "field": "value",
+    "originalStart": 963
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00005",
+    "field": "slot",
+    "originalStart": 986
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00006",
+    "field": "value",
+    "originalStart": 1003
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00007",
+    "field": "slot",
+    "originalStart": 1023
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00008",
+    "field": "slot",
+    "originalStart": 1154
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00009",
+    "field": "slot",
+    "originalStart": 1184
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00010",
+    "field": "slot",
+    "originalStart": 1211
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00011",
+    "field": "slot",
+    "originalStart": 1328
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00012",
+    "field": "slot",
+    "originalStart": 1355
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00013",
+    "field": "slot",
+    "originalStart": 1380
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00014",
+    "field": "relicSet",
+    "originalStart": 1504
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00015",
+    "field": "planarSet",
+    "originalStart": 1534
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00016",
+    "field": "relicSet",
+    "originalStart": 1798
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00017",
+    "field": "planarSet",
+    "originalStart": 1832
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00018",
+    "field": "slot",
+    "originalStart": 1870
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00019",
+    "field": "value",
+    "originalStart": 1883
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00020",
+    "field": "slot",
+    "originalStart": 1908
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00021",
+    "field": "value",
+    "originalStart": 1921
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00022",
+    "field": "slot",
+    "originalStart": 1937
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00023",
+    "field": "value",
+    "originalStart": 1954
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00024",
+    "field": "slot",
+    "originalStart": 1981
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00025",
+    "field": "value",
+    "originalStart": 1995
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00026",
+    "field": "relicSet",
+    "originalStart": 2184
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00027",
+    "field": "planarSet",
+    "originalStart": 2214
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00028",
+    "field": "slot",
+    "originalStart": 2253
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00029",
+    "field": "value",
+    "originalStart": 2266
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00030",
+    "field": "slot",
+    "originalStart": 2284
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00031",
+    "field": "value",
+    "originalStart": 2297
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00032",
+    "field": "slot",
+    "originalStart": 2313
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00033",
+    "field": "value",
+    "originalStart": 2330
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00034",
+    "field": "slot",
+    "originalStart": 2357
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00035",
+    "field": "value",
+    "originalStart": 2371
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00036",
+    "field": "relicSet",
+    "originalStart": 2562
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00037",
+    "field": "planarSet",
+    "originalStart": 2592
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00038",
+    "field": "slot",
+    "originalStart": 2629
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00039",
+    "field": "value",
+    "originalStart": 2642
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00040",
+    "field": "slot",
+    "originalStart": 2666
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00041",
+    "field": "value",
+    "originalStart": 2679
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00042",
+    "field": "slot",
+    "originalStart": 2695
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00043",
+    "field": "value",
+    "originalStart": 2712
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00044",
+    "field": "slot",
+    "originalStart": 2736
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00045",
+    "field": "value",
+    "originalStart": 2750
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00046",
+    "field": "relicSet",
+    "originalStart": 2933
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00047",
+    "field": "planarSet",
+    "originalStart": 2966
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00048",
+    "field": "slot",
+    "originalStart": 3003
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00049",
+    "field": "value",
+    "originalStart": 3016
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00050",
+    "field": "slot",
+    "originalStart": 3039
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00051",
+    "field": "value",
+    "originalStart": 3052
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00052",
+    "field": "slot",
+    "originalStart": 3068
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00053",
+    "field": "value",
+    "originalStart": 3085
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00054",
+    "field": "slot",
+    "originalStart": 3109
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00055",
+    "field": "value",
+    "originalStart": 3123
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00056",
+    "field": "relicSet",
+    "originalStart": 3303
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00057",
+    "field": "planarSet",
+    "originalStart": 3337
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00058",
+    "field": "slot",
+    "originalStart": 3371
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00059",
+    "field": "value",
+    "originalStart": 3384
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00060",
+    "field": "slot",
+    "originalStart": 3408
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00061",
+    "field": "value",
+    "originalStart": 3421
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00062",
+    "field": "slot",
+    "originalStart": 3437
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00063",
+    "field": "value",
+    "originalStart": 3454
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00064",
+    "field": "slot",
+    "originalStart": 3478
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00065",
+    "field": "value",
+    "originalStart": 3492
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00066",
+    "field": "relicSet",
+    "originalStart": 3679
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00067",
+    "field": "planarSet",
+    "originalStart": 3713
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00068",
+    "field": "slot",
+    "originalStart": 3750
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00069",
+    "field": "value",
+    "originalStart": 3763
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00070",
+    "field": "slot",
+    "originalStart": 3787
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00071",
+    "field": "value",
+    "originalStart": 3800
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00072",
+    "field": "slot",
+    "originalStart": 3822
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00073",
+    "field": "value",
+    "originalStart": 3839
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00074",
+    "field": "slot",
+    "originalStart": 3865
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00075",
+    "field": "value",
+    "originalStart": 3879
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00076",
+    "field": "relicSet",
+    "originalStart": 4058
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00077",
+    "field": "planarSet",
+    "originalStart": 4090
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00078",
+    "field": "slot",
+    "originalStart": 4127
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00079",
+    "field": "value",
+    "originalStart": 4140
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00080",
+    "field": "slot",
+    "originalStart": 4164
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00081",
+    "field": "value",
+    "originalStart": 4177
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00082",
+    "field": "slot",
+    "originalStart": 4200
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00083",
+    "field": "value",
+    "originalStart": 4217
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00084",
+    "field": "slot",
+    "originalStart": 4235
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00085",
+    "field": "value",
+    "originalStart": 4249
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00086",
+    "field": "relicSet",
+    "originalStart": 4523
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00087",
+    "field": "planarSet",
+    "originalStart": 4556
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00088",
+    "field": "relicSet",
+    "originalStart": 4797
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00089",
+    "field": "planarSet",
+    "originalStart": 4830
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00090",
+    "field": "relicSet",
+    "originalStart": 5088
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00091",
+    "field": "planarSet",
+    "originalStart": 5122
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00092",
+    "field": "relicSet",
+    "originalStart": 5365
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00093",
+    "field": "planarSet",
+    "originalStart": 5398
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00094",
+    "field": "relicSet",
+    "originalStart": 5612
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00095",
+    "field": "planarSet",
+    "originalStart": 5643
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00096",
+    "field": "relicSet",
+    "originalStart": 5864
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00097",
+    "field": "planarSet",
+    "originalStart": 5898
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00098",
+    "field": "relicSet",
+    "originalStart": 6208
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00099",
+    "field": "planarSet",
+    "originalStart": 6246
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00100",
+    "field": "relicSet",
+    "originalStart": 6506
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00101",
+    "field": "planarSet",
+    "originalStart": 6544
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00102",
+    "field": "relicSet",
+    "originalStart": 6765
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00103",
+    "field": "planarSet",
+    "originalStart": 6805
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00104",
+    "field": "relicSet",
+    "originalStart": 7013
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00105",
+    "field": "planarSet",
+    "originalStart": 7049
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00106",
+    "field": "relicSet",
+    "originalStart": 7268
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00107",
+    "field": "planarSet",
+    "originalStart": 7304
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00108",
+    "field": "relicSet",
+    "originalStart": 7515
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00109",
+    "field": "planarSet",
+    "originalStart": 7551
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00110",
+    "field": "relicSet",
+    "originalStart": 7916
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00111",
+    "field": "planarSet",
+    "originalStart": 7959
+  },
+  {
+    "id": "guide.legacy.individualGuides.b00112",
+    "field": "targetContext",
+    "originalStart": 8070
+  }
+]

@@ -1,5 +1,5 @@
 import type { SourceText } from "../../../shared/content/types";
-export const sources: SourceText[] = [
+const block0: SourceText[] = [
   {
     "id": "guide.legacy.batch23GenshinData.b00001",
     "ja": "星拡散の表アタッカー。氷付着を確保し、通常攻撃・元素爆発で剣気を溜めて特殊元素スキルを強化する。",
@@ -476,3 +476,4 @@ export const sources: SourceText[] = [
     ]
   }
 ];
+export const sources: SourceText[] = [...block0];

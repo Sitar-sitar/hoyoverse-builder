@@ -1,0 +1,492 @@
+[
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00001",
+    "field": "title",
+    "originalStart": 323
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00002",
+    "field": "name",
+    "originalStart": 422
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00003",
+    "field": "role",
+    "originalStart": 470
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00004",
+    "field": "name",
+    "originalStart": 564
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00005",
+    "field": "role",
+    "originalStart": 609
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00006",
+    "field": "name",
+    "originalStart": 707
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00007",
+    "field": "role",
+    "originalStart": 755
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00008",
+    "field": "name",
+    "originalStart": 844
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00009",
+    "field": "role",
+    "originalStart": 895
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00010",
+    "field": "localized paragraph",
+    "originalStart": 983
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00011",
+    "field": "targetSummary",
+    "originalStart": 1262
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00012",
+    "field": "sourceLabel",
+    "originalStart": 1539
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00013",
+    "field": "label",
+    "originalStart": 1761
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00014",
+    "field": "note",
+    "originalStart": 1936
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00015",
+    "field": "title",
+    "originalStart": 2217
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00016",
+    "field": "name",
+    "originalStart": 2326
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00017",
+    "field": "role",
+    "originalStart": 2374
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00018",
+    "field": "name",
+    "originalStart": 2468
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00019",
+    "field": "role",
+    "originalStart": 2510
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00020",
+    "field": "name",
+    "originalStart": 2581
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00021",
+    "field": "role",
+    "originalStart": 2629
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00022",
+    "field": "name",
+    "originalStart": 2710
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00023",
+    "field": "role",
+    "originalStart": 2761
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00024",
+    "field": "localized paragraph",
+    "originalStart": 2849
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00025",
+    "field": "targetSummary",
+    "originalStart": 3195
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00026",
+    "field": "sourceLabel",
+    "originalStart": 3472
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00027",
+    "field": "label",
+    "originalStart": 3694
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00028",
+    "field": "note",
+    "originalStart": 3885
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00029",
+    "field": "title",
+    "originalStart": 4166
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00030",
+    "field": "name",
+    "originalStart": 4284
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00031",
+    "field": "role",
+    "originalStart": 4332
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00032",
+    "field": "name",
+    "originalStart": 4426
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00033",
+    "field": "role",
+    "originalStart": 4480
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00034",
+    "field": "name",
+    "originalStart": 4570
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00035",
+    "field": "role",
+    "originalStart": 4618
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00036",
+    "field": "name",
+    "originalStart": 4719
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00037",
+    "field": "role",
+    "originalStart": 4767
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00038",
+    "field": "localized paragraph",
+    "originalStart": 4859
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00039",
+    "field": "targetSummary",
+    "originalStart": 5210
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00040",
+    "field": "sourceLabel",
+    "originalStart": 5487
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00041",
+    "field": "label",
+    "originalStart": 5725
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00042",
+    "field": "note",
+    "originalStart": 5900
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00043",
+    "field": "title",
+    "originalStart": 6185
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00044",
+    "field": "name",
+    "originalStart": 6309
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00045",
+    "field": "role",
+    "originalStart": 6363
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00046",
+    "field": "name",
+    "originalStart": 6453
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00047",
+    "field": "role",
+    "originalStart": 6513
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00048",
+    "field": "name",
+    "originalStart": 6609
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00049",
+    "field": "role",
+    "originalStart": 6657
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00050",
+    "field": "name",
+    "originalStart": 6758
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00051",
+    "field": "role",
+    "originalStart": 6806
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00052",
+    "field": "localized paragraph",
+    "originalStart": 6898
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00053",
+    "field": "targetSummary",
+    "originalStart": 7324
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00054",
+    "field": "sourceLabel",
+    "originalStart": 7601
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00055",
+    "field": "label",
+    "originalStart": 7839
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00056",
+    "field": "note",
+    "originalStart": 8010
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00057",
+    "field": "title",
+    "originalStart": 8371
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00058",
+    "field": "name",
+    "originalStart": 8488
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00059",
+    "field": "role",
+    "originalStart": 8542
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00060",
+    "field": "name",
+    "originalStart": 8632
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00061",
+    "field": "role",
+    "originalStart": 8680
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00062",
+    "field": "name",
+    "originalStart": 8763
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00063",
+    "field": "role",
+    "originalStart": 8823
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00064",
+    "field": "name",
+    "originalStart": 8919
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00065",
+    "field": "role",
+    "originalStart": 8970
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00066",
+    "field": "localized paragraph",
+    "originalStart": 9061
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00067",
+    "field": "targetSummary",
+    "originalStart": 9471
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00068",
+    "field": "sourceLabel",
+    "originalStart": 9748
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00069",
+    "field": "label",
+    "originalStart": 9970
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00070",
+    "field": "note",
+    "originalStart": 10157
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00071",
+    "field": "title",
+    "originalStart": 10518
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00072",
+    "field": "name",
+    "originalStart": 10636
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00073",
+    "field": "role",
+    "originalStart": 10690
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00074",
+    "field": "name",
+    "originalStart": 10780
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00075",
+    "field": "role",
+    "originalStart": 10837
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00076",
+    "field": "name",
+    "originalStart": 10905
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00077",
+    "field": "role",
+    "originalStart": 10962
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00078",
+    "field": "name",
+    "originalStart": 11053
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00079",
+    "field": "role",
+    "originalStart": 11101
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00080",
+    "field": "localized paragraph",
+    "originalStart": 11193
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00081",
+    "field": "targetSummary",
+    "originalStart": 11530
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00082",
+    "field": "sourceLabel",
+    "originalStart": 11807
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00083",
+    "field": "label",
+    "originalStart": 12045
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00084",
+    "field": "note",
+    "originalStart": 12216
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00085",
+    "field": "title",
+    "originalStart": 12571
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00086",
+    "field": "name",
+    "originalStart": 12683
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00087",
+    "field": "role",
+    "originalStart": 12728
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00088",
+    "field": "name",
+    "originalStart": 12826
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00089",
+    "field": "role",
+    "originalStart": 12874
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00090",
+    "field": "name",
+    "originalStart": 12957
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00091",
+    "field": "role",
+    "originalStart": 13005
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00092",
+    "field": "name",
+    "originalStart": 13094
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00093",
+    "field": "role",
+    "originalStart": 13145
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00094",
+    "field": "localized paragraph",
+    "originalStart": 13236
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00095",
+    "field": "targetSummary",
+    "originalStart": 13570
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00096",
+    "field": "sourceLabel",
+    "originalStart": 13847
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00097",
+    "field": "label",
+    "originalStart": 14069
+  },
+  {
+    "id": "guide.legacy.parties_batch25Teams.b00098",
+    "field": "note",
+    "originalStart": 14240
+  }
+]

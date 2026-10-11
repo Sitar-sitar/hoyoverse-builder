@@ -1,0 +1,2077 @@
+[
+  {
+    "id": "guide.legacy.characterConstellations.b00001",
+    "field": "localized call",
+    "originalStart": 2585
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00002",
+    "field": "localized call",
+    "originalStart": 2842
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00003",
+    "field": "localized call",
+    "originalStart": 3068
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00004",
+    "field": "localized call",
+    "originalStart": 3620
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00005",
+    "field": "localized call",
+    "originalStart": 6546
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00006",
+    "field": "localized call",
+    "originalStart": 9812
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00007",
+    "field": "localized call",
+    "originalStart": 11935
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00008",
+    "field": "localized call",
+    "originalStart": 29807
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00009",
+    "field": "sourceLabel",
+    "originalStart": 74004
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00010",
+    "field": "name",
+    "originalStart": 74190
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00011",
+    "field": "description",
+    "originalStart": 74246
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00012",
+    "field": "caution",
+    "originalStart": 74354
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00013",
+    "field": "name",
+    "originalStart": 74514
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00014",
+    "field": "description",
+    "originalStart": 74570
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00015",
+    "field": "caution",
+    "originalStart": 74756
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00016",
+    "field": "name",
+    "originalStart": 74916
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00017",
+    "field": "description",
+    "originalStart": 74972
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00018",
+    "field": "caution",
+    "originalStart": 75074
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00019",
+    "field": "name",
+    "originalStart": 75234
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00020",
+    "field": "description",
+    "originalStart": 75290
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00021",
+    "field": "caution",
+    "originalStart": 75395
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00022",
+    "field": "name",
+    "originalStart": 75555
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00023",
+    "field": "description",
+    "originalStart": 75611
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00024",
+    "field": "caution",
+    "originalStart": 75701
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00025",
+    "field": "name",
+    "originalStart": 75861
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00026",
+    "field": "description",
+    "originalStart": 75917
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00027",
+    "field": "caution",
+    "originalStart": 76019
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00028",
+    "field": "sourceLabel",
+    "originalStart": 76263
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00029",
+    "field": "name",
+    "originalStart": 76449
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00030",
+    "field": "description",
+    "originalStart": 76505
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00031",
+    "field": "caution",
+    "originalStart": 76601
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00032",
+    "field": "name",
+    "originalStart": 76761
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00033",
+    "field": "description",
+    "originalStart": 76817
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00034",
+    "field": "caution",
+    "originalStart": 76982
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00035",
+    "field": "name",
+    "originalStart": 77142
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00036",
+    "field": "description",
+    "originalStart": 77198
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00037",
+    "field": "caution",
+    "originalStart": 77294
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00038",
+    "field": "name",
+    "originalStart": 77454
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00039",
+    "field": "description",
+    "originalStart": 77510
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00040",
+    "field": "caution",
+    "originalStart": 77672
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00041",
+    "field": "name",
+    "originalStart": 77832
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00042",
+    "field": "description",
+    "originalStart": 77888
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00043",
+    "field": "caution",
+    "originalStart": 77984
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00044",
+    "field": "name",
+    "originalStart": 78144
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00045",
+    "field": "description",
+    "originalStart": 78200
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00046",
+    "field": "caution",
+    "originalStart": 78353
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00047",
+    "field": "sourceLabel",
+    "originalStart": 78597
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00048",
+    "field": "name",
+    "originalStart": 78783
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00049",
+    "field": "description",
+    "originalStart": 78839
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00050",
+    "field": "caution",
+    "originalStart": 79004
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00051",
+    "field": "name",
+    "originalStart": 79164
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00052",
+    "field": "description",
+    "originalStart": 79220
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00053",
+    "field": "caution",
+    "originalStart": 79385
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00054",
+    "field": "name",
+    "originalStart": 79545
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00055",
+    "field": "description",
+    "originalStart": 79601
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00056",
+    "field": "caution",
+    "originalStart": 79739
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00057",
+    "field": "name",
+    "originalStart": 79899
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00058",
+    "field": "description",
+    "originalStart": 79955
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00059",
+    "field": "caution",
+    "originalStart": 80096
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00060",
+    "field": "name",
+    "originalStart": 80256
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00061",
+    "field": "description",
+    "originalStart": 80312
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00062",
+    "field": "caution",
+    "originalStart": 80441
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00063",
+    "field": "name",
+    "originalStart": 80601
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00064",
+    "field": "description",
+    "originalStart": 80657
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00065",
+    "field": "caution",
+    "originalStart": 80810
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00066",
+    "field": "sourceLabel",
+    "originalStart": 81054
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00067",
+    "field": "name",
+    "originalStart": 81240
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00068",
+    "field": "description",
+    "originalStart": 81296
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00069",
+    "field": "caution",
+    "originalStart": 81425
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00070",
+    "field": "name",
+    "originalStart": 81585
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00071",
+    "field": "description",
+    "originalStart": 81641
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00072",
+    "field": "caution",
+    "originalStart": 81764
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00073",
+    "field": "name",
+    "originalStart": 81924
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00074",
+    "field": "description",
+    "originalStart": 81980
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00075",
+    "field": "caution",
+    "originalStart": 82076
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00076",
+    "field": "name",
+    "originalStart": 82236
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00077",
+    "field": "description",
+    "originalStart": 82292
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00078",
+    "field": "caution",
+    "originalStart": 82385
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00079",
+    "field": "name",
+    "originalStart": 82545
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00080",
+    "field": "description",
+    "originalStart": 82601
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00081",
+    "field": "caution",
+    "originalStart": 82697
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00082",
+    "field": "name",
+    "originalStart": 82857
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00083",
+    "field": "description",
+    "originalStart": 82913
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00084",
+    "field": "caution",
+    "originalStart": 83033
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00085",
+    "field": "sourceLabel",
+    "originalStart": 83277
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00086",
+    "field": "name",
+    "originalStart": 83463
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00087",
+    "field": "description",
+    "originalStart": 83519
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00088",
+    "field": "caution",
+    "originalStart": 83627
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00089",
+    "field": "name",
+    "originalStart": 83787
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00090",
+    "field": "description",
+    "originalStart": 83843
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00091",
+    "field": "caution",
+    "originalStart": 83951
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00092",
+    "field": "name",
+    "originalStart": 84111
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00093",
+    "field": "description",
+    "originalStart": 84167
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00094",
+    "field": "caution",
+    "originalStart": 84263
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00095",
+    "field": "name",
+    "originalStart": 84423
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00096",
+    "field": "description",
+    "originalStart": 84479
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00097",
+    "field": "caution",
+    "originalStart": 84623
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00098",
+    "field": "name",
+    "originalStart": 84783
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00099",
+    "field": "description",
+    "originalStart": 84839
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00100",
+    "field": "caution",
+    "originalStart": 84935
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00101",
+    "field": "name",
+    "originalStart": 85095
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00102",
+    "field": "description",
+    "originalStart": 85151
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00103",
+    "field": "caution",
+    "originalStart": 85250
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00104",
+    "field": "sourceLabel",
+    "originalStart": 85494
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00105",
+    "field": "name",
+    "originalStart": 85680
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00106",
+    "field": "description",
+    "originalStart": 85736
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00107",
+    "field": "caution",
+    "originalStart": 85904
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00108",
+    "field": "name",
+    "originalStart": 86064
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00109",
+    "field": "description",
+    "originalStart": 86120
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00110",
+    "field": "caution",
+    "originalStart": 86225
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00111",
+    "field": "name",
+    "originalStart": 86385
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00112",
+    "field": "description",
+    "originalStart": 86441
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00113",
+    "field": "caution",
+    "originalStart": 86570
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00114",
+    "field": "name",
+    "originalStart": 86730
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00115",
+    "field": "description",
+    "originalStart": 86786
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00116",
+    "field": "caution",
+    "originalStart": 86885
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00117",
+    "field": "name",
+    "originalStart": 87045
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00118",
+    "field": "description",
+    "originalStart": 87101
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00119",
+    "field": "caution",
+    "originalStart": 87230
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00120",
+    "field": "name",
+    "originalStart": 87390
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00121",
+    "field": "description",
+    "originalStart": 87446
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00122",
+    "field": "caution",
+    "originalStart": 87653
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00123",
+    "field": "sourceLabel",
+    "originalStart": 87897
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00124",
+    "field": "name",
+    "originalStart": 88083
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00125",
+    "field": "description",
+    "originalStart": 88139
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00126",
+    "field": "caution",
+    "originalStart": 88271
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00127",
+    "field": "name",
+    "originalStart": 88431
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00128",
+    "field": "description",
+    "originalStart": 88487
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00129",
+    "field": "caution",
+    "originalStart": 88577
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00130",
+    "field": "name",
+    "originalStart": 88737
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00131",
+    "field": "description",
+    "originalStart": 88793
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00132",
+    "field": "caution",
+    "originalStart": 88895
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00133",
+    "field": "name",
+    "originalStart": 89055
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00134",
+    "field": "description",
+    "originalStart": 89111
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00135",
+    "field": "caution",
+    "originalStart": 89216
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00136",
+    "field": "name",
+    "originalStart": 89376
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00137",
+    "field": "description",
+    "originalStart": 89432
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00138",
+    "field": "caution",
+    "originalStart": 89522
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00139",
+    "field": "name",
+    "originalStart": 89682
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00140",
+    "field": "description",
+    "originalStart": 89738
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00141",
+    "field": "caution",
+    "originalStart": 89870
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00142",
+    "field": "sourceLabel",
+    "originalStart": 90114
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00143",
+    "field": "name",
+    "originalStart": 90300
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00144",
+    "field": "description",
+    "originalStart": 90356
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00145",
+    "field": "caution",
+    "originalStart": 90455
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00146",
+    "field": "name",
+    "originalStart": 90615
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00147",
+    "field": "description",
+    "originalStart": 90671
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00148",
+    "field": "caution",
+    "originalStart": 90773
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00149",
+    "field": "name",
+    "originalStart": 90933
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00150",
+    "field": "description",
+    "originalStart": 90989
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00151",
+    "field": "caution",
+    "originalStart": 91091
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00152",
+    "field": "name",
+    "originalStart": 91251
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00153",
+    "field": "description",
+    "originalStart": 91307
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00154",
+    "field": "caution",
+    "originalStart": 91427
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00155",
+    "field": "name",
+    "originalStart": 91587
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00156",
+    "field": "description",
+    "originalStart": 91643
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00157",
+    "field": "caution",
+    "originalStart": 91733
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00158",
+    "field": "name",
+    "originalStart": 91893
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00159",
+    "field": "description",
+    "originalStart": 91949
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00160",
+    "field": "caution",
+    "originalStart": 92108
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00161",
+    "field": "sourceLabel",
+    "originalStart": 92360
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00162",
+    "field": "name",
+    "originalStart": 92539
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00163",
+    "field": "description",
+    "originalStart": 92595
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00164",
+    "field": "caution",
+    "originalStart": 92694
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00165",
+    "field": "name",
+    "originalStart": 92854
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00166",
+    "field": "description",
+    "originalStart": 92910
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00167",
+    "field": "caution",
+    "originalStart": 93051
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00168",
+    "field": "name",
+    "originalStart": 93211
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00169",
+    "field": "description",
+    "originalStart": 93267
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00170",
+    "field": "caution",
+    "originalStart": 93339
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00171",
+    "field": "name",
+    "originalStart": 93499
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00172",
+    "field": "description",
+    "originalStart": 93555
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00173",
+    "field": "caution",
+    "originalStart": 93684
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00174",
+    "field": "name",
+    "originalStart": 93844
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00175",
+    "field": "description",
+    "originalStart": 93900
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00176",
+    "field": "caution",
+    "originalStart": 93969
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00177",
+    "field": "name",
+    "originalStart": 94129
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00178",
+    "field": "description",
+    "originalStart": 94185
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00179",
+    "field": "caution",
+    "originalStart": 94404
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00180",
+    "field": "sourceLabel",
+    "originalStart": 94656
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00181",
+    "field": "name",
+    "originalStart": 94835
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00182",
+    "field": "description",
+    "originalStart": 94891
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00183",
+    "field": "caution",
+    "originalStart": 95107
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00184",
+    "field": "name",
+    "originalStart": 95267
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00185",
+    "field": "description",
+    "originalStart": 95323
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00186",
+    "field": "caution",
+    "originalStart": 95518
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00187",
+    "field": "name",
+    "originalStart": 95678
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00188",
+    "field": "description",
+    "originalStart": 95734
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00189",
+    "field": "caution",
+    "originalStart": 95803
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00190",
+    "field": "name",
+    "originalStart": 95963
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00191",
+    "field": "description",
+    "originalStart": 96019
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00192",
+    "field": "caution",
+    "originalStart": 96160
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00193",
+    "field": "name",
+    "originalStart": 96320
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00194",
+    "field": "description",
+    "originalStart": 96376
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00195",
+    "field": "caution",
+    "originalStart": 96448
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00196",
+    "field": "name",
+    "originalStart": 96608
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00197",
+    "field": "description",
+    "originalStart": 96664
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00198",
+    "field": "caution",
+    "originalStart": 96847
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00199",
+    "field": "sourceLabel",
+    "originalStart": 97099
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00200",
+    "field": "name",
+    "originalStart": 97278
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00201",
+    "field": "description",
+    "originalStart": 97334
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00202",
+    "field": "caution",
+    "originalStart": 97526
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00203",
+    "field": "name",
+    "originalStart": 97686
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00204",
+    "field": "description",
+    "originalStart": 97742
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00205",
+    "field": "caution",
+    "originalStart": 97820
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00206",
+    "field": "name",
+    "originalStart": 97980
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00207",
+    "field": "description",
+    "originalStart": 98036
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00208",
+    "field": "caution",
+    "originalStart": 98108
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00209",
+    "field": "name",
+    "originalStart": 98268
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00210",
+    "field": "description",
+    "originalStart": 98324
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00211",
+    "field": "caution",
+    "originalStart": 98423
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00212",
+    "field": "name",
+    "originalStart": 98583
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00213",
+    "field": "description",
+    "originalStart": 98639
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00214",
+    "field": "caution",
+    "originalStart": 98708
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00215",
+    "field": "name",
+    "originalStart": 98868
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00216",
+    "field": "description",
+    "originalStart": 98924
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00217",
+    "field": "caution",
+    "originalStart": 99080
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00218",
+    "field": "sourceLabel",
+    "originalStart": 99332
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00219",
+    "field": "name",
+    "originalStart": 99511
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00220",
+    "field": "description",
+    "originalStart": 99567
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00221",
+    "field": "caution",
+    "originalStart": 99642
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00222",
+    "field": "name",
+    "originalStart": 99802
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00223",
+    "field": "description",
+    "originalStart": 99858
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00224",
+    "field": "caution",
+    "originalStart": 100011
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00225",
+    "field": "name",
+    "originalStart": 100171
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00226",
+    "field": "description",
+    "originalStart": 100227
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00227",
+    "field": "caution",
+    "originalStart": 100296
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00228",
+    "field": "name",
+    "originalStart": 100456
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00229",
+    "field": "description",
+    "originalStart": 100512
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00230",
+    "field": "caution",
+    "originalStart": 100713
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00231",
+    "field": "name",
+    "originalStart": 100873
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00232",
+    "field": "description",
+    "originalStart": 100929
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00233",
+    "field": "caution",
+    "originalStart": 101001
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00234",
+    "field": "name",
+    "originalStart": 101161
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00235",
+    "field": "description",
+    "originalStart": 101217
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00236",
+    "field": "caution",
+    "originalStart": 101391
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00237",
+    "field": "sourceLabel",
+    "originalStart": 101643
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00238",
+    "field": "name",
+    "originalStart": 101822
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00239",
+    "field": "description",
+    "originalStart": 101878
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00240",
+    "field": "caution",
+    "originalStart": 102061
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00241",
+    "field": "name",
+    "originalStart": 102221
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00242",
+    "field": "description",
+    "originalStart": 102277
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00243",
+    "field": "caution",
+    "originalStart": 102463
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00244",
+    "field": "name",
+    "originalStart": 102623
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00245",
+    "field": "description",
+    "originalStart": 102679
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00246",
+    "field": "caution",
+    "originalStart": 102751
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00247",
+    "field": "name",
+    "originalStart": 102911
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00248",
+    "field": "description",
+    "originalStart": 102967
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00249",
+    "field": "caution",
+    "originalStart": 103072
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00250",
+    "field": "name",
+    "originalStart": 103232
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00251",
+    "field": "description",
+    "originalStart": 103288
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00252",
+    "field": "caution",
+    "originalStart": 103357
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00253",
+    "field": "name",
+    "originalStart": 103517
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00254",
+    "field": "description",
+    "originalStart": 103573
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00255",
+    "field": "caution",
+    "originalStart": 103753
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00256",
+    "field": "sourceLabel",
+    "originalStart": 104005
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00257",
+    "field": "name",
+    "originalStart": 104184
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00258",
+    "field": "description",
+    "originalStart": 104240
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00259",
+    "field": "caution",
+    "originalStart": 104363
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00260",
+    "field": "name",
+    "originalStart": 104523
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00261",
+    "field": "description",
+    "originalStart": 104579
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00262",
+    "field": "caution",
+    "originalStart": 104759
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00263",
+    "field": "name",
+    "originalStart": 104919
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00264",
+    "field": "description",
+    "originalStart": 104975
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00265",
+    "field": "caution",
+    "originalStart": 105044
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00266",
+    "field": "name",
+    "originalStart": 105204
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00267",
+    "field": "description",
+    "originalStart": 105260
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00268",
+    "field": "caution",
+    "originalStart": 105401
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00269",
+    "field": "name",
+    "originalStart": 105561
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00270",
+    "field": "description",
+    "originalStart": 105617
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00271",
+    "field": "caution",
+    "originalStart": 105689
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00272",
+    "field": "name",
+    "originalStart": 105849
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00273",
+    "field": "description",
+    "originalStart": 105905
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00274",
+    "field": "caution",
+    "originalStart": 106100
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00275",
+    "field": "sourceLabel",
+    "originalStart": 106352
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00276",
+    "field": "name",
+    "originalStart": 106531
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00277",
+    "field": "description",
+    "originalStart": 106587
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00278",
+    "field": "caution",
+    "originalStart": 106716
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00279",
+    "field": "name",
+    "originalStart": 106876
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00280",
+    "field": "description",
+    "originalStart": 106932
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00281",
+    "field": "caution",
+    "originalStart": 107130
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00282",
+    "field": "name",
+    "originalStart": 107290
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00283",
+    "field": "description",
+    "originalStart": 107346
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00284",
+    "field": "caution",
+    "originalStart": 107418
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00285",
+    "field": "name",
+    "originalStart": 107578
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00286",
+    "field": "description",
+    "originalStart": 107634
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00287",
+    "field": "caution",
+    "originalStart": 107766
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00288",
+    "field": "name",
+    "originalStart": 107926
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00289",
+    "field": "description",
+    "originalStart": 107982
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00290",
+    "field": "caution",
+    "originalStart": 108051
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00291",
+    "field": "name",
+    "originalStart": 108211
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00292",
+    "field": "description",
+    "originalStart": 108267
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00293",
+    "field": "caution",
+    "originalStart": 108474
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00294",
+    "field": "sourceLabel",
+    "originalStart": 108726
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00295",
+    "field": "name",
+    "originalStart": 108905
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00296",
+    "field": "description",
+    "originalStart": 108961
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00297",
+    "field": "caution",
+    "originalStart": 109096
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00298",
+    "field": "name",
+    "originalStart": 109256
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00299",
+    "field": "description",
+    "originalStart": 109312
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00300",
+    "field": "caution",
+    "originalStart": 109426
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00301",
+    "field": "name",
+    "originalStart": 109586
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00302",
+    "field": "description",
+    "originalStart": 109642
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00303",
+    "field": "caution",
+    "originalStart": 109714
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00304",
+    "field": "name",
+    "originalStart": 109874
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00305",
+    "field": "description",
+    "originalStart": 109930
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00306",
+    "field": "caution",
+    "originalStart": 110059
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00307",
+    "field": "name",
+    "originalStart": 110219
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00308",
+    "field": "description",
+    "originalStart": 110275
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00309",
+    "field": "caution",
+    "originalStart": 110344
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00310",
+    "field": "name",
+    "originalStart": 110504
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00311",
+    "field": "description",
+    "originalStart": 110560
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00312",
+    "field": "caution",
+    "originalStart": 110737
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00313",
+    "field": "sourceLabel",
+    "originalStart": 110981
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00314",
+    "field": "name",
+    "originalStart": 111160
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00315",
+    "field": "description",
+    "originalStart": 111216
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00316",
+    "field": "caution",
+    "originalStart": 111390
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00317",
+    "field": "name",
+    "originalStart": 111550
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00318",
+    "field": "description",
+    "originalStart": 111606
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00319",
+    "field": "caution",
+    "originalStart": 111729
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00320",
+    "field": "name",
+    "originalStart": 111889
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00321",
+    "field": "description",
+    "originalStart": 111945
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00322",
+    "field": "caution",
+    "originalStart": 112017
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00323",
+    "field": "name",
+    "originalStart": 112177
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00324",
+    "field": "description",
+    "originalStart": 112233
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00325",
+    "field": "caution",
+    "originalStart": 112356
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00326",
+    "field": "name",
+    "originalStart": 112516
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00327",
+    "field": "description",
+    "originalStart": 112572
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00328",
+    "field": "caution",
+    "originalStart": 112644
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00329",
+    "field": "name",
+    "originalStart": 112804
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00330",
+    "field": "description",
+    "originalStart": 112860
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00331",
+    "field": "caution",
+    "originalStart": 113010
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00332",
+    "field": "sourceLabel",
+    "originalStart": 113254
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00333",
+    "field": "name",
+    "originalStart": 113433
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00334",
+    "field": "description",
+    "originalStart": 113489
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00335",
+    "field": "caution",
+    "originalStart": 113675
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00336",
+    "field": "name",
+    "originalStart": 113835
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00337",
+    "field": "description",
+    "originalStart": 113891
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00338",
+    "field": "caution",
+    "originalStart": 114080
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00339",
+    "field": "name",
+    "originalStart": 114240
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00340",
+    "field": "description",
+    "originalStart": 114296
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00341",
+    "field": "caution",
+    "originalStart": 114368
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00342",
+    "field": "name",
+    "originalStart": 114528
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00343",
+    "field": "description",
+    "originalStart": 114584
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00344",
+    "field": "caution",
+    "originalStart": 114713
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00345",
+    "field": "name",
+    "originalStart": 114873
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00346",
+    "field": "description",
+    "originalStart": 114929
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00347",
+    "field": "caution",
+    "originalStart": 115001
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00348",
+    "field": "name",
+    "originalStart": 115161
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00349",
+    "field": "description",
+    "originalStart": 115217
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00350",
+    "field": "caution",
+    "originalStart": 115409
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00351",
+    "field": "sourceLabel",
+    "originalStart": 115653
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00352",
+    "field": "name",
+    "originalStart": 115832
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00353",
+    "field": "description",
+    "originalStart": 115888
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00354",
+    "field": "caution",
+    "originalStart": 116044
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00355",
+    "field": "name",
+    "originalStart": 116204
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00356",
+    "field": "description",
+    "originalStart": 116260
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00357",
+    "field": "caution",
+    "originalStart": 116443
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00358",
+    "field": "name",
+    "originalStart": 116603
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00359",
+    "field": "description",
+    "originalStart": 116659
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00360",
+    "field": "caution",
+    "originalStart": 116731
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00361",
+    "field": "name",
+    "originalStart": 116891
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00362",
+    "field": "description",
+    "originalStart": 116947
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00363",
+    "field": "caution",
+    "originalStart": 117097
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00364",
+    "field": "name",
+    "originalStart": 117257
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00365",
+    "field": "description",
+    "originalStart": 117313
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00366",
+    "field": "caution",
+    "originalStart": 117385
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00367",
+    "field": "name",
+    "originalStart": 117545
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00368",
+    "field": "description",
+    "originalStart": 117601
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00369",
+    "field": "caution",
+    "originalStart": 117811
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00370",
+    "field": "sourceLabel",
+    "originalStart": 118055
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00371",
+    "field": "name",
+    "originalStart": 118234
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00372",
+    "field": "description",
+    "originalStart": 118290
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00373",
+    "field": "caution",
+    "originalStart": 118404
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00374",
+    "field": "name",
+    "originalStart": 118564
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00375",
+    "field": "description",
+    "originalStart": 118620
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00376",
+    "field": "caution",
+    "originalStart": 118776
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00377",
+    "field": "name",
+    "originalStart": 118936
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00378",
+    "field": "description",
+    "originalStart": 118992
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00379",
+    "field": "caution",
+    "originalStart": 119064
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00380",
+    "field": "name",
+    "originalStart": 119224
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00381",
+    "field": "description",
+    "originalStart": 119280
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00382",
+    "field": "caution",
+    "originalStart": 119439
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00383",
+    "field": "name",
+    "originalStart": 119599
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00384",
+    "field": "description",
+    "originalStart": 119655
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00385",
+    "field": "caution",
+    "originalStart": 119727
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00386",
+    "field": "name",
+    "originalStart": 119887
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00387",
+    "field": "description",
+    "originalStart": 119943
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00388",
+    "field": "caution",
+    "originalStart": 120096
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00389",
+    "field": "localized call",
+    "originalStart": 174954
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00390",
+    "field": "localized call",
+    "originalStart": 174993
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00391",
+    "field": "localized call",
+    "originalStart": 175037
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00392",
+    "field": "localized call",
+    "originalStart": 292984
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00393",
+    "field": "localized call",
+    "originalStart": 295557
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00394",
+    "field": "localized call",
+    "originalStart": 299456
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00395",
+    "field": "localized call",
+    "originalStart": 302575
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00396",
+    "field": "localized call",
+    "originalStart": 304183
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00397",
+    "field": "localized call",
+    "originalStart": 305965
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00398",
+    "field": "localized call",
+    "originalStart": 307787
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00399",
+    "field": "localized call",
+    "originalStart": 309559
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00400",
+    "field": "localized call",
+    "originalStart": 311375
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00401",
+    "field": "localized call",
+    "originalStart": 313653
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00402",
+    "field": "localized call",
+    "originalStart": 315658
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00403",
+    "field": "localized call",
+    "originalStart": 318132
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00404",
+    "field": "localized call",
+    "originalStart": 320831
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00405",
+    "field": "localized call",
+    "originalStart": 323115
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00406",
+    "field": "localized call",
+    "originalStart": 324626
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00407",
+    "field": "localized call",
+    "originalStart": 326294
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00408",
+    "field": "localized call",
+    "originalStart": 328558
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00409",
+    "field": "localized call",
+    "originalStart": 329699
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00410",
+    "field": "localized call",
+    "originalStart": 331320
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00411",
+    "field": "localized call",
+    "originalStart": 333351
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00412",
+    "field": "localized call",
+    "originalStart": 335333
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00413",
+    "field": "localized call",
+    "originalStart": 337647
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00414",
+    "field": "localized call",
+    "originalStart": 339317
+  },
+  {
+    "id": "guide.legacy.characterConstellations.b00415",
+    "field": "localized call",
+    "originalStart": 342378
+  }
+]
