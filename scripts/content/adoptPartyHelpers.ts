@@ -5,7 +5,10 @@ import { pathToFileURL } from "node:url";
 import type { SourceText, TranslationRecord } from "../../shared/content/types";
 import { renderSources } from "./adopt";
 
-export function adoptPartyHelpers(text: string) {
+export function adoptPartyHelpers(
+  text: string,
+  moduleName = "parties_batch24Helpers"
+) {
   const ast = ts.createSourceFile(
     "batch24Teams.ts",
     text,
@@ -26,11 +29,11 @@ export function adoptPartyHelpers(text: string) {
     template = false
   ) {
     const id =
-      `guide.legacy.parties_batch24Helpers.b${String(sources.length + 1).padStart(5, "0")}` as const;
+      `guide.legacy.${moduleName}.b${String(sources.length + 1).padStart(5, "0")}` as const;
     sources.push({
       id,
       ja: values[0]!,
-      context: `batch24 ${field}; preserved existing helper output`,
+      context: `${moduleName} ${field}; preserved existing helper output`,
       audience: "public",
       placeholders: template ? { v0: "string" } : {},
       dependencies: [],
@@ -81,11 +84,14 @@ export function adoptPartyHelpers(text: string) {
       ) {
         const args =
           node.arguments as unknown as readonly ts.TemplateExpression[];
+        const expression = args[0]!.templateSpans[0]?.expression.getText(ast);
         if (
+          !expression ||
+          !["name", "secondaryDate"].includes(expression) ||
           args.some(
             arg =>
               arg.templateSpans.length !== 1 ||
-              arg.templateSpans[0]!.expression.getText(ast) !== "secondaryDate"
+              arg.templateSpans[0]!.expression.getText(ast) !== expression
           )
         )
           throw new Error("Unclassified party helper template");
@@ -94,13 +100,15 @@ export function adoptPartyHelpers(text: string) {
             arg => arg.head.text + "{v0}" + arg.templateSpans[0]!.literal.text
           ),
           node,
-          "secondary source label",
+          expression === "secondaryDate"
+            ? "secondary source label"
+            : "character-specific party template",
           true
         );
         edits.push({
           start: node.getStart(ast),
           end: node.end,
-          value: `_partyHelper.localized(${JSON.stringify(id)},{v0:secondaryDate})`,
+          value: `_partyHelper.localized(${JSON.stringify(id)},{v0:${expression}})`,
         });
         return;
       }
@@ -114,10 +122,10 @@ export function adoptPartyHelpers(text: string) {
       migrated.slice(0, edit.start) + edit.value + migrated.slice(edit.end);
   if (sources.length)
     migrated =
-      'import {sources as helperSources} from "../../content/ja/guides/parties_batch24Helpers";\nimport {records as helperEn} from "../../content/translations/en/parties_batch24Helpers";\nimport {records as helperZh} from "../../content/translations/zh-CN/parties_batch24Helpers";\n' +
+      `import {sources as partySources} from "../../content/ja/guides/${moduleName}";\nimport {records as partyEn} from "../../content/translations/en/${moduleName}";\nimport {records as partyZh} from "../../content/translations/zh-CN/${moduleName}";\n` +
       migrated.replace(
         "const _content = createLegacyTexts(_sources, _en, _zh);",
-        "const _content = createLegacyTexts(_sources, _en, _zh);\nconst _partyHelper=createLegacyTexts(helperSources,helperEn,helperZh);"
+        "const _content = createLegacyTexts(_sources, _en, _zh);\nconst _partyHelper=createLegacyTexts(partySources,partyEn,partyZh);"
       );
   const parsed = ts.createSourceFile(
     "migrated.ts",
@@ -132,27 +140,33 @@ export function adoptPartyHelpers(text: string) {
   return { sources, translations, mapping, migrated };
 }
 export function adoptPartyHelpersMain(args: string[]) {
+  const legacy = args[0] === "legacyCatalog";
+  if (legacy) args = args.slice(1);
   if (args.length > 1 || (args[0] && args[0] !== "--write"))
     throw new Error("Usage: adopt-party-helpers [--write]");
-  const target = resolve("server/parties/batch24Teams.ts"),
-    result = adoptPartyHelpers(readFileSync(target, "utf8"));
+  const moduleName = legacy
+    ? "parties_legacyCatalog_templates"
+    : "parties_batch24Helpers";
+  const target = resolve(
+      legacy
+        ? "server/parties/legacyCatalog.ts"
+        : "server/parties/batch24Teams.ts"
+    ),
+    result = adoptPartyHelpers(readFileSync(target, "utf8"), moduleName);
   if (args[0] === "--write" && result.sources.length) {
     const outputs: [string, string][] = [
-      [
-        "content/ja/guides/parties_batch24Helpers.ts",
-        renderSources(result.sources),
-      ],
+      [`content/ja/guides/${moduleName}.ts`, renderSources(result.sources)],
       ...(["en", "zh-CN"] as const).map(
         language =>
           [
-            `content/translations/${language}/parties_batch24Helpers.ts`,
+            `content/translations/${language}/${moduleName}.ts`,
             'import type {TranslationRecord} from "../../../shared/content/types";\nexport const records:Record<string,TranslationRecord>=' +
               JSON.stringify(result.translations[language], null, 2) +
               ";\n",
           ] as [string, string]
       ),
       [
-        "content/coverage/parties_batch24Helpers.migration.json",
+        `content/coverage/${moduleName}.migration.json`,
         JSON.stringify(result.mapping, null, 2) + "\n",
       ],
     ];
