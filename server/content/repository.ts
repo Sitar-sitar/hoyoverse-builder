@@ -8,6 +8,7 @@ import { characterRefs } from "../../shared/content/walk";
 import { historySections } from "../../content/history";
 import {teamSections} from "../../content/teams";
 import {constellationSections} from "../../content/constellations";
+import {genericTeamSections} from "../../content/genericTeams";
 import {linkHistorySections} from "../../content/linkHistory";
 
 export function plannedSections(): CoverageSection[] {
@@ -28,7 +29,7 @@ export function contentRepository() {
   validateCharacterRecords(characterRecords, characterSources);
   const planned = plannedSections();
   const names: CoverageSection[] = characterRecords.map(record => ({ id: `character.${record.game}.${record.identityKey.slice(record.game.length + 1)}.name`, audience: "public", visibility: "active", section: { status: "registered", data: [record.name], evidence: "confirmed catalog identity migration" } }));
-  const catalog = canonicalCatalog([...planned, ...names, ...historySections(),...teamSections(),...linkHistorySections(),...constellationSections()]);
+  const catalog = canonicalCatalog([...planned, ...names, ...historySections(),...teamSections(),...linkHistorySections(),...constellationSections(),...genericTeamSections()]);
   const index = indexCatalog(catalog, planned);
   const issues = [...index.issues, ...catalog.sources.flatMap(sourceIssues)];
   if (issues.length) throw new Error(`Canonical content invalid: ${issues.map(issue => issue.code).join(", ")}`);
