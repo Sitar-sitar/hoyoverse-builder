@@ -3413,4 +3413,9 @@ const block3: SourceText[] = [
     "protectedTokens": []
   }
 ];
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, {
+  id: "history.character.profile.summary",
+  ja: "採用プロファイル: {v0}。公開プロフィールで比較可能な戦闘外の目標値を設定しました。",
+  context: "Character history baseline: preserved profile ID summary; v0 is the existing metadata profileId",
+  audience: "public", placeholders: {v0:"string"}, dependencies: [], protectedTokens: [],
+}];

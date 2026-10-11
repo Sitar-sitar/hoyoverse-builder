@@ -70,3 +70,8 @@ export type HistoryContent = {
   changes: Array<{ blockId: string; text: TextRef }>;
   rationale: TextRef;
 };
+export type HistoryRecord = { content: HistoryContent; scope: "site" | "character"; games: Game[]; characterName?: string;
+  /** Exact old API serialization order, separate from display authoring. */
+  legacyFieldOrder: Array<"date" | "scope" | "title" | "summary" | "changes" | "rationale" | "games">;
+};
+export type HistoryBatchRecord = {batch:number;content:HistoryContent;summaryBindings:{v0:"characterName"}};
