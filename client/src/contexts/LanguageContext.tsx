@@ -1,4 +1,4 @@
-import { uiDictionary } from "@/content/ui";
+import { uiDictionary, uiText } from "@/content/ui";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 import { DEFAULT_ENABLED_LANGUAGES, normalizeEnabledLanguages, type AppLanguage } from "@shared/languages";
@@ -7,9 +7,9 @@ export type { AppLanguage } from "@shared/languages";
 const STORAGE_KEY = "starrail-build-advisor.language";
 
 export const LANGUAGE_LABELS: Record<AppLanguage, string> = {
-  ja: "日本語",
-  en: "English",
-  "zh-CN": "简体中文",
+  ja: uiText("ui.languages.autonym.ja"),
+  en: uiText("ui.languages.autonym.en"),
+  "zh-CN": uiText("ui.languages.autonym.zhCN"),
 };
 
 const copy = uiDictionary({

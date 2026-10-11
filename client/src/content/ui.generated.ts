@@ -20,6 +20,16 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "プレビューを終了",
     "zh-CN": "プレビューを終了"
   },
+  "ui.components_ErrorBoundary_brand1.literal1": {
+    "ja": "An unexpected error occurred.",
+    "en": "An unexpected error occurred.",
+    "zh-CN": "An unexpected error occurred."
+  },
+  "ui.components_ErrorBoundary_brand1.literal2": {
+    "ja": "Reload Page",
+    "en": "Reload Page",
+    "zh-CN": "Reload Page"
+  },
   "ui.components_PartyAppearances.dictionary1.data": {
     "ja": "基準日",
     "en": "Data as of",
@@ -54,6 +64,146 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": "キャラ図鑑（UID不要）",
     "en": "Character Catalog (No UID)",
     "zh-CN": "角色图鉴（无需UID）"
+  },
+  "ui.components_SiteHeader_brand1.literal1": {
+    "ja": "HoYoverse Builder",
+    "en": "HoYoverse Builder",
+    "zh-CN": "HoYoverse Builder"
+  },
+  "ui.components_TranslationFeedbackForm_brand1.literal1": {
+    "ja": "TRANSLATION QUALITY",
+    "en": "TRANSLATION QUALITY",
+    "zh-CN": "TRANSLATION QUALITY"
+  },
+  "ui.components_ui_breadcrumb_brand1.literal1": {
+    "ja": "breadcrumb",
+    "en": "breadcrumb",
+    "zh-CN": "breadcrumb"
+  },
+  "ui.components_ui_breadcrumb_brand1.literal2": {
+    "ja": "More",
+    "en": "More",
+    "zh-CN": "More"
+  },
+  "ui.components_ui_carousel_brand1.literal1": {
+    "ja": "Previous slide",
+    "en": "Previous slide",
+    "zh-CN": "Previous slide"
+  },
+  "ui.components_ui_carousel_brand1.literal2": {
+    "ja": "Next slide",
+    "en": "Next slide",
+    "zh-CN": "Next slide"
+  },
+  "ui.components_ui_dialog_brand1.literal1": {
+    "ja": "Close",
+    "en": "Close",
+    "zh-CN": "Close"
+  },
+  "ui.components_ui_pagination_brand1.literal1": {
+    "ja": "pagination",
+    "en": "pagination",
+    "zh-CN": "pagination"
+  },
+  "ui.components_ui_pagination_brand1.literal2": {
+    "ja": "Go to previous page",
+    "en": "Go to previous page",
+    "zh-CN": "Go to previous page"
+  },
+  "ui.components_ui_pagination_brand1.literal3": {
+    "ja": "Previous",
+    "en": "Previous",
+    "zh-CN": "Previous"
+  },
+  "ui.components_ui_pagination_brand1.literal4": {
+    "ja": "Go to next page",
+    "en": "Go to next page",
+    "zh-CN": "Go to next page"
+  },
+  "ui.components_ui_pagination_brand1.literal5": {
+    "ja": "Next",
+    "en": "Next",
+    "zh-CN": "Next"
+  },
+  "ui.components_ui_pagination_brand1.literal6": {
+    "ja": "More pages",
+    "en": "More pages",
+    "zh-CN": "More pages"
+  },
+  "ui.components_ui_sheet_brand1.literal1": {
+    "ja": "Close",
+    "en": "Close",
+    "zh-CN": "Close"
+  },
+  "ui.components_ui_sidebar_brand1.literal1": {
+    "ja": "Sidebar",
+    "en": "Sidebar",
+    "zh-CN": "Sidebar"
+  },
+  "ui.components_ui_sidebar_brand1.literal2": {
+    "ja": "Displays the mobile sidebar.",
+    "en": "Displays the mobile sidebar.",
+    "zh-CN": "Displays the mobile sidebar."
+  },
+  "ui.components_ui_sidebar_brand1.literal3": {
+    "ja": "Toggle Sidebar",
+    "en": "Toggle Sidebar",
+    "zh-CN": "Toggle Sidebar"
+  },
+  "ui.components_ui_sidebar_brand1.literal4": {
+    "ja": "Toggle Sidebar",
+    "en": "Toggle Sidebar",
+    "zh-CN": "Toggle Sidebar"
+  },
+  "ui.components_ui_sidebar_brand1.literal5": {
+    "ja": "Toggle Sidebar",
+    "en": "Toggle Sidebar",
+    "zh-CN": "Toggle Sidebar"
+  },
+  "ui.components_ui_spinner_brand1.literal1": {
+    "ja": "Loading",
+    "en": "Loading",
+    "zh-CN": "Loading"
+  },
+  "ui.components_variants_PartyFormation_brand1.literal1": {
+    "ja": "PLAN ",
+    "en": "PLAN ",
+    "zh-CN": "PLAN "
+  },
+  "ui.components_variants_PartyFormation_brand1.literal2": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.components_variants_PartyFormation_brand1.literal3": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.components_variants_PartyFormation_brand1.literal4": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.components_variants_ProgressionStepper_brand1.literal1": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.components_variants_ProgressionStepper_brand1.literal2": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.components_variants_TopPortal_brand1.literal1": {
+    "ja": "HoYoverse Builder",
+    "en": "HoYoverse Builder",
+    "zh-CN": "HoYoverse Builder"
+  },
+  "ui.components_variants_TopPortal_brand1.literal2": {
+    "ja": "UID ",
+    "en": "UID ",
+    "zh-CN": "UID "
   },
   "ui.contexts_LanguageContext.dictionary1.acceptable": {
     "ja": "妥協",
@@ -1045,6 +1195,76 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "{target}{unit} / {deficit}",
     "zh-CN": "{target}{unit} / {deficit}"
   },
+  "ui.home.stats.unavailable": {
+    "ja": "未取得",
+    "en": "未取得",
+    "zh-CN": "未取得"
+  },
+  "ui.home.zzz.statsNote": {
+    "ja": "選択中エージェント固有の有効ステータスを、推定最終値で照合します。戦闘中および条件付きの効果は含みません。",
+    "en": "選択中エージェント固有の有効ステータスを、推定最終値で照合します。戦闘中および条件付きの効果は含みません。",
+    "zh-CN": "選択中エージェント固有の有効ステータスを、推定最終値で照合します。戦闘中および条件付きの効果は含みません。"
+  },
+  "ui.languages.autonym.en": {
+    "ja": "English",
+    "en": "English",
+    "zh-CN": "English"
+  },
+  "ui.languages.autonym.ja": {
+    "ja": "日本語",
+    "en": "日本語",
+    "zh-CN": "日本語"
+  },
+  "ui.languages.autonym.zhCN": {
+    "ja": "简体中文",
+    "en": "简体中文",
+    "zh-CN": "简体中文"
+  },
+  "ui.lib_safeTrpcFetch_literals1.literal1": {
+    "ja": "照会サービスへ接続できませんでした。通信環境を確認して再試行してください。",
+    "en": "照会サービスへ接続できませんでした。通信環境を確認して再試行してください。",
+    "zh-CN": "照会サービスへ接続できませんでした。通信環境を確認して再試行してください。"
+  },
+  "ui.lib_safeTrpcFetch_literals1.literal2": {
+    "ja": "照会サービスが一時的に応答していません。1〜2分後にもう一度お試しください。",
+    "en": "照会サービスが一時的に応答していません。1〜2分後にもう一度お試しください。",
+    "zh-CN": "照会サービスが一時的に応答していません。1〜2分後にもう一度お試しください。"
+  },
+  "ui.lib_safeTrpcFetch_literals1.literal3": {
+    "ja": "照会リクエストを処理できませんでした。UIDと公開設定をご確認ください。",
+    "en": "照会リクエストを処理できませんでした。UIDと公開設定をご確認ください。",
+    "zh-CN": "照会リクエストを処理できませんでした。UIDと公開設定をご確認ください。"
+  },
+  "ui.migration.notice": {
+    "ja": "移行確認用ページです。通常利用・お問い合わせは現在のサイトをご利用ください。",
+    "en": "This page is for migration testing. Please use the current site for regular use and feedback.",
+    "zh-CN": "此页面用于迁移验证。日常使用和反馈请前往当前网站。"
+  },
+  "ui.pages_CharacterCatalog_brand1.literal1": {
+    "ja": "STAT",
+    "en": "STAT",
+    "zh-CN": "STAT"
+  },
+  "ui.pages_CharacterCatalog_brand1.literal2": {
+    "ja": "PLAN ",
+    "en": "PLAN ",
+    "zh-CN": "PLAN "
+  },
+  "ui.pages_CharacterCatalog_brand1.literal3": {
+    "ja": "REVIEWED ",
+    "en": "REVIEWED ",
+    "zh-CN": "REVIEWED "
+  },
+  "ui.pages_CharacterCatalog_brand1.literal4": {
+    "ja": "Loading",
+    "en": "Loading",
+    "zh-CN": "Loading"
+  },
+  "ui.pages_CharacterCatalog_brand1.literal5": {
+    "ja": "LOADING BUILD REFERENCE",
+    "en": "LOADING BUILD REFERENCE",
+    "zh-CN": "LOADING BUILD REFERENCE"
+  },
   "ui.pages_CharacterCatalog_literals1.literal1": {
     "ja": "崩壊：スターレイル",
     "en": "崩壊：スターレイル",
@@ -1335,10 +1555,125 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "Updated",
     "zh-CN": "更新日"
   },
+  "ui.pages_GuideHistory_brand1.literal1": {
+    "ja": "BUILD GUIDE ARCHIVE",
+    "en": "BUILD GUIDE ARCHIVE",
+    "zh-CN": "BUILD GUIDE ARCHIVE"
+  },
+  "ui.pages_GuideHistory_brand1.literal2": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_GuideHistory_brand1.literal3": {
+    "ja": "UPDATE COVERAGE",
+    "en": "UPDATE COVERAGE",
+    "zh-CN": "UPDATE COVERAGE"
+  },
+  "ui.pages_GuideHistory_brand1.literal4": {
+    "ja": "SITE-WIDE CHANGES",
+    "en": "SITE-WIDE CHANGES",
+    "zh-CN": "SITE-WIDE CHANGES"
+  },
+  "ui.pages_GuideHistory_brand1.literal5": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_GuideHistory_brand1.literal6": {
+    "ja": "CHARACTER RECORDS",
+    "en": "CHARACTER RECORDS",
+    "zh-CN": "CHARACTER RECORDS"
+  },
+  "ui.pages_GuideHistory_brand1.literal7": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
   "ui.pages_GuideHistory_literals1.literal1": {
     "ja": "原神",
     "en": "原神",
     "zh-CN": "原神"
+  },
+  "ui.pages_Home_brand1.literal1": {
+    "ja": "Build with",
+    "en": "Build with",
+    "zh-CN": "Build with"
+  },
+  "ui.pages_Home_brand1.literal10": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal11": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal12": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal13": {
+    "ja": "PLAN ",
+    "en": "PLAN ",
+    "zh-CN": "PLAN "
+  },
+  "ui.pages_Home_brand1.literal14": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal15": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal16": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
+  },
+  "ui.pages_Home_brand1.literal2": {
+    "ja": "Intention.",
+    "en": "Intention.",
+    "zh-CN": "Intention."
+  },
+  "ui.pages_Home_brand1.literal3": {
+    "ja": "LOOKUP UNAVAILABLE",
+    "en": "LOOKUP UNAVAILABLE",
+    "zh-CN": "LOOKUP UNAVAILABLE"
+  },
+  "ui.pages_Home_brand1.literal4": {
+    "ja": "UID ",
+    "en": "UID ",
+    "zh-CN": "UID "
+  },
+  "ui.pages_Home_brand1.literal5": {
+    "ja": "ENKA FALLBACK",
+    "en": "ENKA FALLBACK",
+    "zh-CN": "ENKA FALLBACK"
+  },
+  "ui.pages_Home_brand1.literal6": {
+    "ja": "LV.",
+    "en": "LV.",
+    "zh-CN": "LV."
+  },
+  "ui.pages_Home_brand1.literal7": {
+    "ja": "SOURCE ID / ",
+    "en": "SOURCE ID / ",
+    "zh-CN": "SOURCE ID / "
+  },
+  "ui.pages_Home_brand1.literal8": {
+    "ja": "LV.",
+    "en": "LV.",
+    "zh-CN": "LV."
+  },
+  "ui.pages_Home_brand1.literal9": {
+    "ja": " JST",
+    "en": " JST",
+    "zh-CN": " JST"
   },
   "ui.pages_Home_literals1.literal1": {
     "ja": "崩壊：スターレイル",
@@ -1599,6 +1934,31 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": "対応バージョン",
     "en": "Game version",
     "zh-CN": "适用版本"
+  },
+  "ui.pages_NotFound_brand1.literal1": {
+    "ja": "Page Not Found",
+    "en": "Page Not Found",
+    "zh-CN": "Page Not Found"
+  },
+  "ui.pages_NotFound_brand1.literal2": {
+    "ja": "Sorry, the page you are looking for doesn't exist.",
+    "en": "Sorry, the page you are looking for doesn't exist.",
+    "zh-CN": "Sorry, the page you are looking for doesn't exist."
+  },
+  "ui.pages_NotFound_brand1.literal3": {
+    "ja": "It may have been moved or deleted.",
+    "en": "It may have been moved or deleted.",
+    "zh-CN": "It may have been moved or deleted."
+  },
+  "ui.pages_NotFound_brand1.literal4": {
+    "ja": "Go Home",
+    "en": "Go Home",
+    "zh-CN": "Go Home"
+  },
+  "ui.pages_TranslationFeedback_brand1.literal1": {
+    "ja": "TRANSLATION QUALITY",
+    "en": "TRANSLATION QUALITY",
+    "zh-CN": "TRANSLATION QUALITY"
   }
 };
 export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> = {

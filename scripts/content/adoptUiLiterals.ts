@@ -16,7 +16,7 @@ export function adoptUiLiterals(text: string, moduleName: string, displayConstan
   const edits: { start: number; end: number; value: string }[] = [];
   const mapping: { id: string; start: number; kind: string }[] = [];
   function register(node: ts.Node, value: string, kind: "jsx" | "attribute" | "constant") {
-    if (!/[\u3040-\u30ff\u3400-\u9fff]/.test(value)) return;
+    if (!/[\u3040-\u30ff\u3400-\u9fff]/.test(value) && !(kind !== "constant" && /[A-Za-z]/.test(value))) return;
     const id = `ui.${moduleName}.literal${sources.length + 1}` as const;
     sources.push({ id, ja: value, context: `${moduleName} ${kind} display text`, audience, placeholders: {}, dependencies: [], protectedTokens: [] });
     const call = `${resolverName}(${JSON.stringify(id)})`;
@@ -36,7 +36,7 @@ export function adoptUiLiterals(text: string, moduleName: string, displayConstan
       }).filter(Boolean).join(" ");
       register(node, value, "jsx");
     } else if (ts.isStringLiteral(node)) {
-      if (ts.isJsxAttribute(node.parent)) register(node, node.text, "attribute");
+      if (ts.isJsxAttribute(node.parent) && ["title", "placeholder", "alt", "aria-label", "aria-description", "label", "detail", "description", "caption"].includes(node.parent.name.getText(ast))) register(node, node.text, "attribute");
       else if ((displayConstant || displayConstants.includes("*")) && !ts.isLiteralTypeNode(node.parent) && !(ts.isPropertyAssignment(node.parent) && node.parent.name === node)) register(node, node.text, "constant");
     }
     ts.forEachChild(node, child => visit(child, displayConstant));
@@ -50,9 +50,9 @@ export function adoptUiLiterals(text: string, moduleName: string, displayConstan
 
 export function adoptUiLiteralsMain(args: string[]) {
   const [path, batch, ...options] = args;
-  if (!path || !/^(?:pages|components)(?:\/[A-Za-z][A-Za-z0-9]*)+\.tsx$/.test(path) || !batch || !/^[a-z][a-z0-9]*$/.test(batch)) throw new Error("Usage: adopt-ui-literals path batch [--write] [displayConstant ...]");
+  if (!path || !/^(?:pages|components|lib)(?:\/[A-Za-z][A-Za-z0-9_-]*)+\.tsx?$/.test(path) || !batch || !/^[a-z][a-z0-9]*$/.test(batch)) throw new Error("Usage: adopt-ui-literals path batch [--write] [displayConstant ...]");
   const target = resolve("client/src", path);
-  const moduleName = path.replace(/\.tsx$/, "").replace(/\//g, "_") + "_" + batch;
+  const moduleName = path.replace(/\.tsx?$/, "").replace(/\//g, "_") + "_" + batch;
   const result = adoptUiLiterals(readFileSync(target, "utf8"), moduleName, options.filter(option => option !== "--write"));
   if (options.includes("--write") && result.sources.length) {
     const outputs: [string, string][] = [

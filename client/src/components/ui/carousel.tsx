@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
@@ -194,7 +195,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      <span className="sr-only">{uiText("ui.components_ui_carousel_brand1.literal1")}</span>
     </Button>
   );
 }
@@ -224,7 +225,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      <span className="sr-only">{uiText("ui.components_ui_carousel_brand1.literal2")}</span>
     </Button>
   );
 }

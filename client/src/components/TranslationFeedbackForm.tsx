@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { canSubmitPreviewFeedback, isMigrationPreview, LEGACY_SITE_URL, migrationNotice } from "@/lib/migrationPage";
 import { Button } from "@/components/ui/button";
@@ -50,7 +51,7 @@ function FeedbackFormContent({ pagePath, canSubmit }: FeedbackFormProps & { canS
   }
 
   return <form onSubmit={submit} className="paper-card border border-stone-300 p-5 sm:p-7">
-    <div className="flex flex-wrap items-start justify-between gap-4"><div><p className="detail-mono text-[9px] text-amber-800">TRANSLATION QUALITY</p><h1 className="display-serif mt-1 text-3xl font-semibold sm:text-4xl">{t("feedbackTitle")}</h1></div><p className="detail-mono border border-stone-300 px-2 py-1 text-[9px] text-stone-600">{t("feedbackPage")} / {pagePath === "/" ? t("lookup") : t("guideHistory")}</p></div>
+    <div className="flex flex-wrap items-start justify-between gap-4"><div><p className="detail-mono text-[9px] text-amber-800">{uiText("ui.components_TranslationFeedbackForm_brand1.literal1")}</p><h1 className="display-serif mt-1 text-3xl font-semibold sm:text-4xl">{t("feedbackTitle")}</h1></div><p className="detail-mono border border-stone-300 px-2 py-1 text-[9px] text-stone-600">{t("feedbackPage")} / {pagePath === "/" ? t("lookup") : t("guideHistory")}</p></div>
     <p className="mt-4 max-w-2xl text-sm leading-6 text-stone-600">{t("feedbackIntro")}</p>
     <div className="mt-6 grid gap-5 sm:grid-cols-2"><label className="grid gap-2 text-sm font-semibold text-stone-800"><span>{t("feedbackType")}</span><select value={feedbackType} onChange={(event) => setFeedbackType(event.target.value as FeedbackType)} className="h-11 rounded-none border border-stone-400 bg-transparent px-3 text-sm font-normal shadow-none focus:outline-none focus:ring-2 focus:ring-amber-700"><option value="mistranslation">{t("mistranslation")}</option><option value="improvement">{t("translationImprovement")}</option><option value="other">{t("otherFeedback")}</option></select></label><div className="grid gap-2 text-sm font-semibold text-stone-800"><span>{t("displayLanguage")}</span><p className="flex h-11 items-center border border-stone-300 bg-stone-100/60 px-3 text-sm font-normal text-stone-700">{LANGUAGE_LABELS[language]}</p></div></div>
     <label className="mt-5 grid gap-2 text-sm font-semibold text-stone-800"><span>{t("originalText")}</span><textarea value={originalText} onChange={(event) => setOriginalText(event.target.value)} maxLength={800} rows={3} className="resize-y rounded-none border border-stone-400 bg-transparent p-3 text-sm font-normal leading-6 shadow-none focus:outline-none focus:ring-2 focus:ring-amber-700" /></label>

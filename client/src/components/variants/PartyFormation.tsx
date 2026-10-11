@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { useLanguage, type AppLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import React, { useId, useRef, type KeyboardEvent } from "react";
@@ -146,7 +147,7 @@ export default function PartyFormation({ options, selectedId, onSelect, selected
                   : dark ? "border-stone-600 text-stone-200 hover:border-stone-300" : "border-stone-300 text-stone-700 hover:border-stone-700",
               )}
             >
-              <span className="detail-mono block text-[11px] opacity-70">PLAN {String(option.rank).padStart(2, "0")}</span>
+              <span className="detail-mono block text-[11px] opacity-70">{uiText("ui.components_variants_PartyFormation_brand1.literal1")}{String(option.rank).padStart(2, "0")}</span>
               <span className="mt-1 block text-xs font-semibold">{local(option.title)}</span>
             </button>
           );
@@ -219,12 +220,12 @@ export default function PartyFormation({ options, selectedId, onSelect, selected
 
         <div className={cn("mt-5 border-t pt-3 text-[11px] leading-5", rule, muted)} data-testid="party-formation-sources">
           <p><span className={cn("detail-mono mr-2", accent)}>{labels.version}</span>{selected.gameVersion}</p>
-          <p><span className={cn("detail-mono mr-2", accent)}>{labels.dataAsOf}</span>{selected.dataAsOf} JST</p>
-          <p><span className={cn("detail-mono mr-2", accent)}>{labels.updated}</span>{selected.updatedAt} JST</p>
+          <p><span className={cn("detail-mono mr-2", accent)}>{labels.dataAsOf}</span>{selected.dataAsOf}{uiText("ui.components_variants_PartyFormation_brand1.literal2")}</p>
+          <p><span className={cn("detail-mono mr-2", accent)}>{labels.updated}</span>{selected.updatedAt}{uiText("ui.components_variants_PartyFormation_brand1.literal3")}</p>
           <p><span className={cn("detail-mono mr-2", accent)}>{labels.source}</span><a className="underline underline-offset-2" href={selected.sourceUrl} target="_blank" rel="noreferrer">{local(selected.sourceLabel)}</a></p>
           {selected.communitySources.map((source) => (
             <div key={source.url} className={cn("mt-3 border-l pl-3", dark ? "border-stone-600" : "border-stone-300")}>
-              <p className={cn("detail-mono", accent)}>{labels.community} / {labels.checked} {source.checkedAt} JST</p>
+              <p className={cn("detail-mono", accent)}>{labels.community} / {labels.checked} {source.checkedAt}{uiText("ui.components_variants_PartyFormation_brand1.literal4")}</p>
               <a className="mt-1 block underline underline-offset-2" href={source.url} target="_blank" rel="noreferrer">{local(source.label)}</a>
               <p className="mt-1">{local(source.note)}</p>
             </div>

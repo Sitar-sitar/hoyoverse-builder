@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ui.lib_safeTrpcFetch_literals1.literal1",
+    "start": 888,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.lib_safeTrpcFetch_literals1.literal2",
+    "start": 1217,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.lib_safeTrpcFetch_literals1.literal3",
+    "start": 1265,
+    "kind": "constant"
+  }
+]

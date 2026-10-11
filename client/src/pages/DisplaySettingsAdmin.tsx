@@ -136,7 +136,7 @@ export default function DisplaySettingsAdmin() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3">
           <div className="flex items-center gap-3">
             <span className="inline-block h-2 w-2 rounded-full bg-amber-700" />
-            <p className="detail-mono text-[9px] text-stone-600">ADMIN / DISPLAY DESIGN</p>
+            <p className="detail-mono text-[9px] text-stone-600">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal1")}</p>
           </div>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
@@ -148,14 +148,14 @@ export default function DisplaySettingsAdmin() {
 
       <main className="container pb-20 pt-10 sm:pt-16">
         <section className="mx-auto max-w-5xl">
-          <p className="detail-mono text-[10px] text-amber-800">PRESENTATION VARIANTS</p>
+          <p className="detail-mono text-[10px] text-amber-800">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal2")}</p>
           <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal2")}</h1>
           <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal3")}</p>
         </section>
 
         {loading && (
           <section className="mx-auto mt-12 max-w-5xl border-y border-stone-300 py-10 text-center">
-            <p className="detail-mono text-[10px] text-stone-500">AUTHENTICATING</p>
+            <p className="detail-mono text-[10px] text-stone-500">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal3")}</p>
           </section>
         )}
 

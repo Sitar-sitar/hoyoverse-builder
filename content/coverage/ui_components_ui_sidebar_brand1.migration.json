@@ -1,0 +1,27 @@
+[
+  {
+    "id": "ui.components_ui_sidebar_brand1.literal1",
+    "start": 5785,
+    "kind": "jsx"
+  },
+  {
+    "id": "ui.components_ui_sidebar_brand1.literal2",
+    "start": 5837,
+    "kind": "jsx"
+  },
+  {
+    "id": "ui.components_ui_sidebar_brand1.literal3",
+    "start": 8819,
+    "kind": "jsx"
+  },
+  {
+    "id": "ui.components_ui_sidebar_brand1.literal4",
+    "start": 9095,
+    "kind": "attribute"
+  },
+  {
+    "id": "ui.components_ui_sidebar_brand1.literal5",
+    "start": 9177,
+    "kind": "attribute"
+  }
+]

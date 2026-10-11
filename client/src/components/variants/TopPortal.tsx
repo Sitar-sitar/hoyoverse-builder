@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useLanguage, type TranslationKey } from "@/contexts/LanguageContext";
@@ -90,14 +91,14 @@ export default function TopPortal({ game, uid, validUid, uidHint, isFetching, ha
   return (
     <section data-testid="top-portal" data-collapsed={collapsed ? "true" : "false"}>
       <div className="border-b border-stone-400 pb-6">
-        <h1 className="display-serif text-4xl font-bold tracking-[-.04em] text-stone-900 sm:text-6xl">HoYoverse Builder</h1>
+        <h1 className="display-serif text-4xl font-bold tracking-[-.04em] text-stone-900 sm:text-6xl">{uiText("ui.components_variants_TopPortal_brand1.literal1")}</h1>
         <p className="mt-3 font-serif text-base leading-7 text-stone-600 sm:text-lg">{t("portalSubtitle")}</p>
       </div>
 
       {collapsed ? (
         <div className="mt-6" data-testid="portal-strip">
           <div className="portal-panel flex flex-wrap items-center justify-between gap-3 border border-stone-300 px-4 py-3" style={accentStyle(game)} data-game={game}>
-            <div className="flex items-center gap-3"><span className={cn("portal-deco h-6 w-6 shrink-0", `portal-deco-${game}`)} aria-hidden="true" /><p className="font-serif text-lg font-semibold">{gameName(game)}</p><p className="detail-mono text-[11px] text-stone-600">UID {uid}</p></div>
+            <div className="flex items-center gap-3"><span className={cn("portal-deco h-6 w-6 shrink-0", `portal-deco-${game}`)} aria-hidden="true" /><p className="font-serif text-lg font-semibold">{gameName(game)}</p><p className="detail-mono text-[11px] text-stone-600">{uiText("ui.components_variants_TopPortal_brand1.literal2")}{uid}</p></div>
             <button type="button" onClick={() => choose(game)} className="detail-mono min-h-9 border border-stone-400 px-3 text-[11px] text-stone-800 hover:border-stone-900">{t("portalChangeUid")}</button>
           </div>
           <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={t("portalOtherGames")}>

@@ -1,4 +1,4 @@
-import { uiText } from "@/content/ui.admin";
+import { uiFormat, uiText } from "@/content/ui.admin";
 import { useAuth } from "@/_core/hooks/useAuth";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -63,7 +63,7 @@ export default function AdminHome() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3">
           <div className="flex items-center gap-3">
             <span className="inline-block h-2 w-2 rounded-full bg-amber-700" />
-            <p className="detail-mono text-[9px] text-stone-600">ADMIN / CONTROL CENTER</p>
+            <p className="detail-mono text-[9px] text-stone-600">{uiText("ui.pages_AdminHome_brand1.literal1")}</p>
           </div>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
@@ -77,7 +77,7 @@ export default function AdminHome() {
 
       <main className="container pb-20 pt-10 sm:pt-16">
         <section className="mx-auto max-w-5xl">
-          <p className="detail-mono text-[10px] text-amber-800">GITHUB APP AUTHENTICATED</p>
+          <p className="detail-mono text-[10px] text-amber-800">{uiText("ui.pages_AdminHome_brand1.literal2")}</p>
           <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">{uiText("ui.pages_AdminHome_literals1.literal2")}</h1>
           {isAdmin && <Link href="/admin/languages" className="mt-5 inline-flex border border-stone-300 px-4 py-3 text-sm text-stone-700 hover:bg-stone-200">{uiText("ui.pages_AdminHome_literals1.literal3")}</Link>}
           <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal4")}</p>
@@ -85,14 +85,14 @@ export default function AdminHome() {
 
         {loading && (
           <section className="mx-auto mt-12 max-w-5xl border-y border-stone-300 py-10 text-center">
-            <p className="detail-mono text-[10px] text-stone-500">AUTHENTICATING</p>
+            <p className="detail-mono text-[10px] text-stone-500">{uiText("ui.pages_AdminHome_brand1.literal3")}</p>
           </section>
         )}
 
         {!loading && !isAdmin && (
           <section className="mx-auto mt-12 max-w-md border border-amber-900/30 bg-amber-50/60 p-6 sm:p-8">
             <Github className="h-6 w-6 text-amber-900" />
-            <p className="detail-mono mt-4 text-[9px] text-amber-800">ADMIN ACCESS</p>
+            <p className="detail-mono mt-4 text-[9px] text-amber-800">{uiText("ui.pages_AdminHome_brand1.literal4")}</p>
             <h2 className="mt-2 font-serif text-2xl font-semibold">{isAuthenticated ? uiText("ui.pages_AdminHome_literals2.literal1") : uiText("ui.pages_AdminHome_literals2.literal2")}</h2>
             <p className="mt-3 text-sm leading-6 text-stone-700">
               {isAuthenticated
@@ -110,7 +110,7 @@ export default function AdminHome() {
           <>
             <section className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-between gap-4 border-y border-stone-300 py-4">
               <div>
-                <p className="detail-mono text-[9px] text-stone-500">SIGNED IN</p>
+                <p className="detail-mono text-[9px] text-stone-500">{uiText("ui.pages_AdminHome_brand1.literal5")}</p>
                 <p className="mt-1 text-sm font-semibold text-stone-900">{user.name || user.openId}</p>
               </div>
               <Button variant="outline" onClick={signOut} className="h-9 rounded-none border-stone-400 text-xs">
@@ -119,10 +119,10 @@ export default function AdminHome() {
 
             <section className="mx-auto mt-10 max-w-5xl">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <AdminMetric label="TODAY LOOKUPS" value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={`本日（JST）の照会数 / 累計 ${analyticsQuery.data?.totalLookups ?? "—"}`} />
-                <AdminMetric label="CACHE HIT RATE" value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal7")} />
-                <AdminMetric label="OPEN FEEDBACK" value={feedbackQuery.data ? unresolvedFeedback : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal8")} />
-                <AdminMetric label="API STATUS" value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail="API health check" />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal6")} value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={uiFormat("ui.admin.analytics.today", { total: String(analyticsQuery.data?.totalLookups ?? "—") })} />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal7")} value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal7")} />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal8")} value={feedbackQuery.data ? unresolvedFeedback : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal8")} />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal9")} value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail={uiText("ui.pages_AdminHome_brand1.literal10")} />
               </div>
               {recentDays.length > 0 && (
                 <div className="mt-6 border border-stone-300 bg-stone-50/50 p-5">
@@ -147,13 +147,13 @@ export default function AdminHome() {
 
             <section className="mx-auto mt-14 max-w-5xl">
               <div className="border-b border-stone-400 pb-4">
-                <p className="detail-mono text-[9px] text-amber-800">OPERATIONS</p>
+                <p className="detail-mono text-[9px] text-amber-800">{uiText("ui.pages_AdminHome_brand1.literal11")}</p>
                 <h2 className="display-serif mt-1 text-3xl font-semibold">{uiText("ui.pages_AdminHome_literals1.literal11")}</h2>
               </div>
               <div className="mt-5 grid gap-4 md:grid-cols-2">
                 <Link href="/admin/feedback" className="group border border-stone-300 bg-stone-50/50 p-6 transition-colors hover:border-stone-900 hover:bg-stone-100">
                   <MessageSquareText className="h-5 w-5 text-amber-800" />
-                  <h3 className="mt-4 font-serif text-2xl font-semibold">Feedback / Analytics</h3>
+                  <h3 className="mt-4 font-serif text-2xl font-semibold">{uiText("ui.pages_AdminHome_brand1.literal12")}</h3>
                   <p className="mt-2 text-sm leading-6 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal12")}</p>
                 </Link>
                 <Link href="/admin/display" className="group border border-stone-300 bg-stone-50/50 p-6 transition-colors hover:border-stone-900 hover:bg-stone-100">
@@ -163,12 +163,12 @@ export default function AdminHome() {
                 </Link>
                 <div className="border border-stone-300 bg-stone-50/50 p-6">
                   <ShieldCheck className="h-5 w-5 text-emerald-800" />
-                  <h3 className="mt-4 font-serif text-2xl font-semibold">Security</h3>
+                  <h3 className="mt-4 font-serif text-2xl font-semibold">{uiText("ui.pages_AdminHome_brand1.literal13")}</h3>
                   <p className="mt-2 text-sm leading-6 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal15")}</p>
                   <div className="mt-4 flex flex-wrap gap-4 text-[10px] text-stone-500">
-                    <span className="inline-flex items-center gap-1"><Github className="h-3.5 w-3.5" />GitHub App</span>
-                    <span className="inline-flex items-center gap-1"><BarChart3 className="h-3.5 w-3.5" />Admin API</span>
-                    <span className="inline-flex items-center gap-1"><Activity className="h-3.5 w-3.5" />12h session</span>
+                    <span className="inline-flex items-center gap-1"><Github className="h-3.5 w-3.5" />{uiText("ui.pages_AdminHome_brand1.literal14")}</span>
+                    <span className="inline-flex items-center gap-1"><BarChart3 className="h-3.5 w-3.5" />{uiText("ui.pages_AdminHome_brand1.literal15")}</span>
+                    <span className="inline-flex items-center gap-1"><Activity className="h-3.5 w-3.5" />{uiText("ui.pages_AdminHome_brand1.literal16")}</span>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,12 @@
 import { UI_TEXT, UI_VARIABLES } from "./ui.generated";
 import { formatContentText } from "@shared/content/format";
 
+export function uiLocalized(id: string) {
+  const entry = UI_TEXT[id];
+  if (!entry) throw new Error("Unknown UI content reference");
+  return { ...entry };
+}
+
 export function uiFormat(id: string, variables: Record<string, string | number>, language: "ja" | "en" | "zh-CN" = "ja") {
   const entry = UI_TEXT[id];
   if (!entry) throw new Error("Unknown UI content reference");

@@ -92,8 +92,8 @@ export function adoptUiMain(args: string[]) {
   const batch = batchIndex >= 0 ? args[batchIndex + 1] : undefined;
   if (!args[0] || (batchIndex >= 0 && (!batch || !/^[a-z][a-z0-9]*$/.test(batch))) || args.slice(1).some((arg, index) => arg !== "--write" && arg !== "--batch" && index + 1 !== batchIndex + 1)) throw new Error("Usage: content:adopt-ui <relative-tsx-path> [--batch name] [--write]");
   const path = args[0]!;
-  if (!/^(?:pages|contexts|components)(?:\/[A-Za-z][A-Za-z0-9]*)+\.tsx$/.test(path)) throw new Error("Invalid UI module path");
-  const moduleName = path.replace(/\.tsx$/, "").replace(/\//g, "_") + (batch ? `_${batch}` : "");
+  if (!/^(?:pages|contexts|components|lib)(?:\/[A-Za-z][A-Za-z0-9]*)+\.tsx?$/.test(path)) throw new Error("Invalid UI module path");
+  const moduleName = path.replace(/\.tsx?$/, "").replace(/\//g, "_") + (batch ? `_${batch}` : "");
   const target = resolve("client/src", path);
   const result = adoptUi(readFileSync(target, "utf8"), moduleName);
   if (write && result.sources.length) {

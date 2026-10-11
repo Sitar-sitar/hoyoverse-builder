@@ -213,7 +213,7 @@ export default function CharacterCatalog() {
           <div className="mt-4 overflow-x-auto border border-stone-300">
             <table className="w-full min-w-[560px] border-collapse text-sm">
               <thead className="bg-stone-100 detail-mono text-[9px] text-stone-500">
-                <tr><th className="px-4 py-3 text-left">STAT</th><th className="px-4 py-3 text-right">{copy.strict}</th><th className="px-4 py-3 text-right">{copy.goal}</th><th className="px-4 py-3 text-right">{copy.baseline}</th></tr>
+                <tr><th className="px-4 py-3 text-left">{resolveUiText("ui.pages_CharacterCatalog_brand1.literal1")}</th><th className="px-4 py-3 text-right">{copy.strict}</th><th className="px-4 py-3 text-right">{copy.goal}</th><th className="px-4 py-3 text-right">{copy.baseline}</th></tr>
               </thead>
               <tbody>
                 {reference.guide.targets.map((target) => (
@@ -252,7 +252,7 @@ export default function CharacterCatalog() {
         <div className="mt-4 grid gap-4 xl:grid-cols-3">
           {reference.partyRecommendations.options.map((option) => (
             <article key={option.id} className="border border-stone-300 p-4">
-              <p className="detail-mono text-[9px] text-amber-800">PLAN {option.rank}</p>
+              <p className="detail-mono text-[9px] text-amber-800">{resolveUiText("ui.pages_CharacterCatalog_brand1.literal2")}{option.rank}</p>
               <h4 className="mt-2 font-serif text-lg font-semibold">{localText(option.title as LocalizedText, language)}</h4>
               <div className="mt-4 space-y-2">
                 {option.members.map((member, index) => (
@@ -329,8 +329,7 @@ export default function CharacterCatalog() {
               <p className="mt-4 max-w-2xl font-serif text-sm leading-7 text-stone-600 sm:text-base">{copy.subtitle}</p>
             </div>
             {catalogQuery.data && (
-              <p className="detail-mono text-[9px] text-stone-500">
-                REVIEWED {catalogQuery.data.reviewed} / {catalogQuery.data.total}
+              <p className="detail-mono text-[9px] text-stone-500">{resolveUiText("ui.pages_CharacterCatalog_brand1.literal3")}{catalogQuery.data.reviewed} / {catalogQuery.data.total}
               </p>
             )}
           </div>
@@ -395,7 +394,7 @@ export default function CharacterCatalog() {
             </div>
 
             <div className="mt-3 max-h-[560px] overflow-y-auto border-y border-stone-300">
-              {catalogQuery.isLoading && <div className="flex items-center gap-2 px-3 py-5 text-xs text-stone-500"><Loader2 className="h-4 w-4 animate-spin" />Loading</div>}
+              {catalogQuery.isLoading && <div className="flex items-center gap-2 px-3 py-5 text-xs text-stone-500"><Loader2 className="h-4 w-4 animate-spin" />{resolveUiText("ui.pages_CharacterCatalog_brand1.literal4")}</div>}
               {!catalogQuery.isLoading && filteredEntries.length === 0 && <p className="px-3 py-5 text-xs text-stone-500">{copy.noMatch}</p>}
               {filteredEntries.map((entry) => (
                 <button
@@ -417,7 +416,7 @@ export default function CharacterCatalog() {
             {referenceQuery.isFetching && !reference && (
               <div className="flex min-h-72 items-center justify-center border-y border-stone-300">
                 <Loader2 className="mr-3 h-5 w-5 animate-spin text-amber-800" />
-                <span className="detail-mono text-[10px] text-stone-500">LOADING BUILD REFERENCE</span>
+                <span className="detail-mono text-[10px] text-stone-500">{resolveUiText("ui.pages_CharacterCatalog_brand1.literal5")}</span>
               </div>
             )}
 

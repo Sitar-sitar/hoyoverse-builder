@@ -1,3 +1,4 @@
+import { uiLocalized } from "@/content/ui";
 export const NEXT_PAGES_BASE = "/hoyoverse-builder/app/";
 export const LEGACY_SITE_URL =
   "https://sitar-sitar.github.io/hoyoverse-builder/";
@@ -19,8 +20,4 @@ export function canSubmitPreviewFeedback(
   return !preview || role === "admin";
 }
 
-export const migrationNotice = {
-  ja: "移行確認用ページです。通常利用・お問い合わせは現在のサイトをご利用ください。",
-  en: "This page is for migration testing. Please use the current site for regular use and feedback.",
-  "zh-CN": "此页面用于迁移验证。日常使用和反馈请前往当前网站。",
-};
+export const migrationNotice = uiLocalized("ui.migration.notice");

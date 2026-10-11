@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { Film, Sparkle } from "lucide-react";
@@ -226,8 +227,8 @@ export default function ProgressionStepper({ game, tone, mode, profile, resetKey
       {curated && footnoteLabels && profile && (
         <div className={cn("mt-4 border-t pt-3 text-[10px] leading-5", dark ? "border-stone-700 text-stone-300" : "border-stone-200 text-stone-500")}>
           <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.version}</span>{profile.gameVersion}</p>
-          <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.asOf}</span>{profile.dataAsOf} JST</p>
-          <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.updated}</span>{profile.updatedAt} JST</p>
+          <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.asOf}</span>{profile.dataAsOf}{uiText("ui.components_variants_ProgressionStepper_brand1.literal1")}</p>
+          <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.updated}</span>{profile.updatedAt}{uiText("ui.components_variants_ProgressionStepper_brand1.literal2")}</p>
           {profile.sourceUrl && profile.sourceLabel && (
             <p><span className={cn("detail-mono mr-2 text-[8px]", dark ? "text-amber-200" : "text-amber-800")}>{footnoteLabels.source}</span><a className="underline underline-offset-2" href={profile.sourceUrl} target="_blank" rel="noreferrer">{profile.sourceLabel[language]}</a></p>
           )}

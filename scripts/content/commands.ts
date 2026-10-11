@@ -4,6 +4,7 @@ import { pathToFileURL } from "node:url";
 import { contentManifest, contentRepository } from "../../server/content/repository";
 import { exportCandidates, readiness, reportCoverage } from "../../server/content/coverage";
 import { expectedCatalogIndex } from "./catalogIndex";
+import { checkUiGate } from "./uiGate";
 
 export function generatedManifestText() {
   // Public identity only; no original corpus, contexts or translation reviews in Pages.
@@ -25,18 +26,21 @@ export function contentCommand(args: string[]): number {
   const [command, ...raw] = args;
   const options = raw[0] === "--" ? raw.slice(1) : raw;
   const index = contentRepository();
+  const ui = command === "generate" ? undefined : checkUiGate(new Set(index.sources.keys()));
   const language = options[options.indexOf("--language") + 1];
   const validLanguage = language === "en" || language === "zh-CN";
   const output = (value: unknown) => console.log(JSON.stringify(value, null, 2));
   if (command === "report" && (options.length === 0 || options.join(" ") === "--format json")) {
-    output({ manifest: contentManifest(), ...reportCoverage(index) }); return 0;
+    output({ manifest: contentManifest(), ui, ...reportCoverage(index) }); return 0;
   }
   if (command === "export" && options.length === 2 && options[0] === "--language" && validLanguage) {
     output(exportCandidates(index, language)); return 0;
   }
   if (command === "ready" && options.length === 4 && options[0] === "--language" && validLanguage && options[2] === "--scope" && ["public", "admin"].includes(options[3]!)) {
     const result = readiness(index, language, options[3] as "public" | "admin");
-    output(result); return result.structureIssues.length ? 1 : result.ready ? 0 : 2;
+    const legacyDisplay = options[3] === "public" ? ui!.legacyCompatibility : [];
+    if (legacyDisplay.length) result.ready = false;
+    output({ ...result, legacyDisplay }); return result.structureIssues.length ? 1 : result.ready ? 0 : 2;
   }
   const target = resolve("client/src/content/manifest.ts");
   if (command === "generate" && !options.length) {
