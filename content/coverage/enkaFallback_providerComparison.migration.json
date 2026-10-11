@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "enkaFallback_providerComparison",
+  "inputDigest": "87e64f38dc3b363da7ac9bc78015a33f205ddd8cb8c86cd43a7480b103f29084",
+  "outputDigest": "4dca3b1b3aba5a14efec414e86db6b5ab339c99d24c055dfdf8e21b79a0d30c3",
+  "artifactDigests": {
+    "content/ja/guides/enkaFallback_providerComparison.ts": "0c5d4bb1e5f24d453619b98255bcf09c2de5e154a849cdf31ab959e024cdb3b0",
+    "content/translations/en/enkaFallback_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/enkaFallback_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 8976,
+      "end": 8983,
+      "id": "guide.providerComparison.enkaFallback.b00001",
+      "oldText": "\"ステータス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.enkaFallback.b00001\")"
+    },
+    {
+      "start": 23382,
+      "end": 23387,
+      "id": "guide.providerComparison.enkaFallback.b00002",
+      "oldText": "\"未取得\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.enkaFallback.b00002\")"
+    },
+    {
+      "start": 23390,
+      "end": 23456,
+      "id": "guide.providerComparison.enkaFallback.b00003",
+      "oldText": "`算出 ${current.toFixed(target.unit === \"%\" ? 1 : 0)}${target.unit}`",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.enkaFallback.b00003\", {v0:String(current.toFixed(target.unit === \"%\" ? 1 : 0)),v1:String(target.unit)})"
+    }
+  ]
+}

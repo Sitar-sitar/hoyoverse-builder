@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "buildAdvisor_providerComparison",
+  "inputDigest": "5db0f8e9c449d2f769daf0882e88881a19e97141e6801fc9af6ee60ac29d95c2",
+  "outputDigest": "0f0c71fd4af84bbdfd41c93ab0e012dae5536a608dc35dafcaeb37008e7604c0",
+  "artifactDigests": {
+    "content/ja/guides/buildAdvisor_providerComparison.ts": "5a0fb6d1838440b8f6a7aefaefeba54cd52c86ae80ec783da25650f3b33ae07c",
+    "content/translations/en/buildAdvisor_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/buildAdvisor_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 19268,
+      "end": 19273,
+      "id": "guide.providerComparison.buildAdvisor.b00001",
+      "oldText": "\"未取得\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.buildAdvisor.b00001\")"
+    }
+  ]
+}

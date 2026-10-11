@@ -36,7 +36,8 @@ const configurations = {
 
 export function adoptProviderDisplays(
   text: string,
-  module: keyof typeof configurations
+  module: keyof typeof configurations,
+  comparisons = false
 ) {
   const ast = ts.createSourceFile(
     module + ".ts",
@@ -44,15 +45,12 @@ export function adoptProviderDisplays(
     ts.ScriptTarget.Latest,
     true
   );
-  const selected = new Set<string>(configurations[module]);
-  const fallbacks = new Set([
-    "遺物",
-    "光円錐",
-    "開拓者",
-    "装備",
-    "未解決",
-    "未設定",
-  ]);
+  const selected = new Set<string>(comparisons ? [] : configurations[module]);
+  const fallbacks = new Set(
+    comparisons
+      ? ["未取得", "ステータス"]
+      : ["遺物", "光円錐", "開拓者", "装備", "未解決", "未設定"]
+  );
   const sources: SourceText[] = [];
   const edits: Array<{
     start: number;
@@ -61,14 +59,15 @@ export function adoptProviderDisplays(
     id: string;
     oldText: string;
   }> = [];
-  const resolver = "_providerDisplay";
+  const tag = comparisons ? "providerComparison" : "providerDisplay";
+  const resolver = `_${tag}`;
   function register(
     ja: string,
     context: string,
     placeholders: Record<string, "string" | "number"> = {}
   ) {
     const id =
-      `guide.providerDisplay.${module}.b${String(sources.length + 1).padStart(5, "0")}` as const;
+      `guide.${tag}.${module}.b${String(sources.length + 1).padStart(5, "0")}` as const;
     sources.push({
       id,
       ja,
@@ -95,10 +94,18 @@ export function adoptProviderDisplays(
         ts.isIdentifier(declaration.name)
           ? declaration.name.text
           : undefined;
+      const comparisonLabel =
+        comparisons &&
+        module === "gameProviders" &&
+        owner === "entries" &&
+        ts.isArrayLiteralExpression(node.parent) &&
+        node.parent.elements[0] === node;
       if (
         !key &&
         !typeLiteral &&
-        ((owner && selected.has(owner)) || fallbacks.has(node.text))
+        ((owner && selected.has(owner)) ||
+          comparisonLabel ||
+          fallbacks.has(node.text))
       ) {
         const id = register(node.text, owner ?? "missing-value fallback");
         edits.push({
@@ -113,7 +120,9 @@ export function adoptProviderDisplays(
     }
     if (
       ts.isTemplateExpression(node) &&
-      /^(遺物 |未解決（ID: )/.test(node.head.text)
+      (comparisons
+        ? /^算出 /.test(node.head.text)
+        : /^(遺物 |未解決（ID: )/.test(node.head.text))
     ) {
       let ja = node.head.text;
       const placeholders: Record<string, "string"> = {};
@@ -153,7 +162,7 @@ export function adoptProviderDisplays(
       migrated.slice(edit.end);
   if (sources.length)
     migrated =
-      `import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";\nimport {sources as providerDisplaySources} from "../content/ja/guides/${module}_providerDisplay";\nconst ${resolver} = createProviderDisplayTexts(providerDisplaySources, {}, {});\n` +
+      `import {createLegacyTexts as create${tag}Texts} from "./content/legacyTexts";\nimport {sources as ${tag}Sources} from "../content/ja/guides/${module}_${tag}";\nconst ${resolver} = create${tag}Texts(${tag}Sources, {}, {});\n` +
       migrated;
   return { migrated, sources, edits };
 }
@@ -167,17 +176,22 @@ export function adoptProviderDisplaysMain(
 ) {
   if (
     args.length < 1 ||
-    args.length > 2 ||
+    args.length > 3 ||
     !Object.hasOwn(configurations, args[0]!) ||
-    (args[1] && args[1] !== "--write")
+    args
+      .slice(1)
+      .some(option => !["--write", "--comparisons"].includes(option)) ||
+    new Set(args).size !== args.length
   )
     throw new Error(
-      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--write]"
+      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--comparisons] [--write]"
     );
   const module = args[0] as keyof typeof configurations;
+  const comparisons = args.includes("--comparisons"),
+    write = args.includes("--write");
   const target = resolve(root, `server/${module}.ts`);
   const original = readFileSync(target, "utf8");
-  const name = `${module}_providerDisplay`;
+  const name = `${module}_${comparisons ? "providerComparison" : "providerDisplay"}`;
   const receipt = resolve(root, `content/coverage/${name}.migration.json`);
   if (existsSync(receipt)) {
     const saved = JSON.parse(readFileSync(receipt, "utf8"));
@@ -209,12 +223,12 @@ export function adoptProviderDisplaysMain(
       JSON.stringify({
         module,
         action: "unchanged",
-        write: args[1] === "--write",
+        write,
       })
     );
     return;
   }
-  const result = adoptProviderDisplays(original, module);
+  const result = adoptProviderDisplays(original, module, comparisons);
   const outputs: string[][] = [
     [
       `content/ja/guides/${name}.ts`,
@@ -243,7 +257,7 @@ export function adoptProviderDisplaysMain(
       2
     ) + "\n",
   ]);
-  if (args[1] === "--write") {
+  if (write) {
     if (!result.sources.length)
       throw new Error("No provider display candidates");
     for (const [path] of outputs)
@@ -283,7 +297,7 @@ export function adoptProviderDisplaysMain(
       module,
       sources: result.sources.length,
       sites: result.edits.length,
-      write: args[1] === "--write",
+      write,
     })
   );
 }

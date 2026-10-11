@@ -1,3 +1,6 @@
+import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
+import {sources as providerComparisonSources} from "../content/ja/guides/buildAdvisor_providerComparison";
+const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
 import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
 import {sources as providerDisplaySources} from "../content/ja/guides/buildAdvisor_providerDisplay";
 const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
@@ -445,7 +448,7 @@ function comparisonFromValue(target: TargetStatDefinition, current: number | nul
   return {
     ...target,
     current,
-    currentDisplay: current === null ? "未取得" : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
+    currentDisplay: current === null ? _providerComparison.ja("guide.providerComparison.buildAdvisor.b00001") : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
     achieved: {
       "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
       "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),

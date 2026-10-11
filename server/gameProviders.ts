@@ -1,3 +1,6 @@
+import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
+import {sources as providerComparisonSources} from "../content/ja/guides/gameProviders_providerComparison";
+const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
 import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
 import {sources as providerDisplaySources} from "../content/ja/guides/gameProviders_providerDisplay";
 const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
@@ -280,7 +283,7 @@ function comparisonsFromStats(targets: TargetStatDefinition[], values: Record<st
     return {
       ...target,
       current,
-      currentDisplay: current === null ? "未取得" : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
+      currentDisplay: current === null ? _providerComparison.ja("guide.providerComparison.gameProviders.b00001") : target.unit === "%" ? `${current.toFixed(1)}%` : current.toFixed(0),
       achieved: {
         "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
         "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),
@@ -447,22 +450,22 @@ function finalZzzStats(catalog: ZzzCatalog, agent: Record<string, number>, weapo
     return roundToNearest ? Math.round(value) : Math.floor(value);
   };
   const entries: Array<[string, number, boolean]> = [
-    ["HP", scale("11101", "11102", "11103", true), false],
-    ["攻撃力", scale("12101", "12102", "12103"), false],
-    ["防御力", scale("13101", "13102", "13103"), false],
-    ["衝撃力", total("12201") * (1 + total("12202") / 100), false],
-    ["会心率", total("20101") + total("20103"), true],
-    ["会心ダメージ", total("21101") + total("21103"), true],
-    ["異常掌握", total("31401") * (1 + total("31402") / 100) + total("31403"), false],
-    ["異常マスタリー", total("31201") + total("31203"), false],
-    ["貫通率", total("23101") + total("23103"), true],
-    ["貫通値", total("23201") + total("23203"), false],
-    ["エネルギー自動回復", total("30501") * (1 + total("30502") / 100) + total("30503"), false],
-    ["物理属性ダメージボーナス", total("31501") + total("31503"), true],
-    ["炎属性ダメージボーナス", total("31601") + total("31603"), true],
-    ["氷属性ダメージボーナス", total("31701") + total("31703"), true],
-    ["電気属性ダメージボーナス", total("31801") + total("31803"), true],
-    ["エーテル属性ダメージボーナス", total("31901") + total("31903"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00002"), scale("11101", "11102", "11103", true), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00003"), scale("12101", "12102", "12103"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00004"), scale("13101", "13102", "13103"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00005"), total("12201") * (1 + total("12202") / 100), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00006"), total("20101") + total("20103"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00007"), total("21101") + total("21103"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00008"), total("31401") * (1 + total("31402") / 100) + total("31403"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00009"), total("31201") + total("31203"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00010"), total("23101") + total("23103"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00011"), total("23201") + total("23203"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00012"), total("30501") * (1 + total("30502") / 100) + total("30503"), false],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00013"), total("31501") + total("31503"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00014"), total("31601") + total("31603"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00015"), total("31701") + total("31703"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00016"), total("31801") + total("31803"), true],
+    [_providerComparison.ja("guide.providerComparison.gameProviders.b00017"), total("31901") + total("31903"), true],
   ];
   const display = entries.filter(([, value]) => value !== 0).map(([name, value, percent]) => ({ name, value, display: percent ? `${value.toFixed(1)}%` : Number.isInteger(value) ? value.toFixed(0) : value.toFixed(1), icon: null }));
   return {

@@ -1,3 +1,6 @@
+import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
+import {sources as providerComparisonSources} from "../content/ja/guides/enkaFallback_providerComparison";
+const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
 import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
 import {sources as providerDisplaySources} from "../content/ja/guides/enkaFallback_providerDisplay";
 const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
@@ -168,7 +171,7 @@ function propertyDisplay(properties: Record<string, RawRecord>, source: RawRecor
   const type = str(source.type);
   const value = num(source.value);
   const meta = propertyMeta(properties, type);
-  const name = meta.name || type || "ステータス";
+  const name = meta.name || type || _providerComparison.ja("guide.providerComparison.enkaFallback.b00001");
   if (value === null) return { name, display: "—" };
   // Base なしの型は properties.json の percent が Base 付きと食い違う（例: CriticalChance は false）。
   // 実際は比率なので、対応表に載っている型は百分率で表示する。
@@ -447,7 +450,7 @@ function comparisonForKey(target: TargetStatDefinition, finalMap: Partial<Record
   return {
     ...target,
     current,
-    currentDisplay: current === null ? "未取得" : `算出 ${current.toFixed(target.unit === "%" ? 1 : 0)}${target.unit}`,
+    currentDisplay: current === null ? _providerComparison.ja("guide.providerComparison.enkaFallback.b00002") : _providerComparison.ja("guide.providerComparison.enkaFallback.b00003", {v0:String(current.toFixed(target.unit === "%" ? 1 : 0)),v1:String(target.unit)}),
     achieved: {
       "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
       "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),

@@ -16,6 +16,30 @@ import { resolve } from "node:path";
 import { createLegacyTexts } from "./legacyTexts";
 
 describe("provider display adoption", () => {
+  it("adopts comparison labels and calculated text without converting property IDs or changing rounding", () => {
+    const input =
+      'const entries=[["HP",10,false],["攻撃力",scale("12101","12102"),false]]; const output={rows:entries,currentDisplay:`算出 ${12.345.toFixed(1)}${"%"}`,unknown:"未取得"};output;';
+    const adopted = adoptProviderDisplays(input, "gameProviders", true);
+    const context = { scale: (...ids: string[]) => ids.length };
+    const after = runInNewContext(
+      adopted.migrated.split("\n").slice(3).join("\n"),
+      {
+        ...context,
+        _providerComparison: createLegacyTexts(adopted.sources, {}, {}),
+      }
+    );
+    expect(JSON.stringify(after)).toBe(
+      JSON.stringify(runInNewContext(input, context))
+    );
+    expect(adopted.sources.map(source => source.ja)).toEqual([
+      "HP",
+      "攻撃力",
+      "算出 {v0}{v1}",
+      "未取得",
+    ]);
+    expect(adopted.migrated).toContain('scale("12101","12102")');
+    expect(adopted.sources.some(source => source.ja === "12101")).toBe(false);
+  });
   function fixture(run: (root: string, original: string) => void) {
     const parent = resolve("tmp");
     mkdirSync(parent, { recursive: true });
