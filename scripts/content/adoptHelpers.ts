@@ -191,21 +191,30 @@ export function adoptHelpers(
 }
 export function adoptHelpersMain(args: string[]) {
   if (
-    !["characterConstellations", "legacyCatalog"].includes(args[0]!) ||
+    ![
+      "characterConstellations",
+      "legacyCatalog",
+      "batch17ConstellationData.generated",
+    ].includes(args[0]!) ||
     args.length > 2 ||
     (args[1] && args[1] !== "--write")
   )
     throw new Error(
-      "Usage: adopt-helpers characterConstellations|legacyCatalog [--write]"
+      "Usage: adopt-helpers characterConstellations|legacyCatalog|batch17ConstellationData.generated [--write]"
     );
   const party = args[0] === "legacyCatalog";
+  const batch17 = args[0] === "batch17ConstellationData.generated";
   const moduleName = party
     ? "parties_legacyCatalog_helpers"
-    : "characterConstellations_helpers";
+    : batch17
+      ? "batch17ConstellationData_helpers"
+      : "characterConstellations_helpers";
   const target = resolve(
     party
       ? "server/parties/legacyCatalog.ts"
-      : "server/characterConstellations.ts"
+      : batch17
+        ? "server/batch17ConstellationData.generated.ts"
+        : "server/characterConstellations.ts"
   );
   const result = adoptHelpers(
     readFileSync(target, "utf8"),

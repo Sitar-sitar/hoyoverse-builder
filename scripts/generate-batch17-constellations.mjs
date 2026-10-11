@@ -1,5 +1,12 @@
 import { writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { JSDOM } from "jsdom";
+
+// This historical importer cannot overwrite the reference-based authority.
+// Fail before fetching external data; maintenance now edits stable source IDs.
+if (existsSync(new URL("../content/constellationBatch17.ts", import.meta.url))) {
+  throw new Error("Batch 17 authoring migrated: maintain content/constellationBatch17.ts and content/ja/guides/batch17ConstellationData_*; historical generator disabled");
+}
 
 const checkedAt = "2026-09-08";
 const gameVersion = "7.0";
