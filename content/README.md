@@ -14,7 +14,11 @@ Phase 59の初期段階では共通型・検査・旧データの基準保存を
 
 `baseline.v1.json` は翻訳正本ではなく、移行前の挙動保全用。既存baselineが違えばsnapshotは上書きしない。データ更新を正当化するためにbaselineを再作成しない。
 
-`content:check/report/export/ready/generate`、文章正本の移行、公開言語制御・画面接続は後続段階で追加する。現在のcore resolver/visitorを提供しただけで、サイト全体の翻訳管理へ接続済みとは扱わない。テスト内の英文は状態検証用の架空fixtureであり、ゲーム情報の翻訳ではない。
+テスト内の英文は状態検証用の架空fixtureであり、ゲーム情報の翻訳ではない。
+
+2026-10-11現在、`content:check/report/export/ready/generate` を実カタログへ接続した。checkは現在の正本参照・型付き変数・生成index/manifest一致を検査する。UI迂回のAST検査は未接続で、全表示領域の移行完了を保証しない。reportは512件の紹介/通常スキル未収集を翻訳状態と別に示す。exportは既存訳・文脈・現在hashを出力するだけ。readyは未完了で終了2となり、翻訳や承認を行わない。
+
+guideUpdateHistoryとPTリンク履歴を含む移行済み正本は5,879項目。公開設定は準備段階のja限定をAPI/Pages両方で強制し、en/zhのpublishはDB更新前に拒否する。既存保存値は削除しない。Dの表示DTO・Eの全画面文言移行・FのCI/起動ゲートと本番公開は未完了。
 
 ## C: 移行前検査（2026-10-11着手）
 

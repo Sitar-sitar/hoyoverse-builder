@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { LANGUAGE_LABELS } from "@/contexts/LanguageContext";
 import { trpc } from "@/lib/trpc";
 import { APP_LANGUAGES, type AppLanguage } from "@shared/languages";
+import { CONTENT_MANIFEST } from "@/content/manifest";
 
 export default function LanguageSettingsAdmin() {
   const { user, loading, isAuthenticated } = useAuth();
@@ -47,6 +48,7 @@ export default function LanguageSettingsAdmin() {
       <Link href="/admin" className="text-sm text-stone-600 underline">管理者ポータルへ</Link>
       <h1 className="display-serif mt-8 text-4xl font-semibold">公開言語</h1>
       <p className="mt-5 text-sm leading-7 text-stone-600">公開サイトで利用できる言語を選択します。翻訳の準備が整うまでは日本語のみで運用できます。日本語は常時有効です。</p>
+      <p className="mt-3 text-sm text-stone-600">翻訳の構造を準備中のため、現在は日本語のみ公開できます。{query.data?.preparation && `確認待ちの文章：${query.data.preparation.unavailableSources}件。`}</p>
       {loading && <p className="mt-8">認証を確認しています。</p>}
       {!loading && !isAdmin && <div className="mt-8 border border-stone-300 p-6">
         <p>{isAuthenticated ? "管理者権限がありません。" : "管理者としてログインしてください。"}</p>
@@ -60,7 +62,7 @@ export default function LanguageSettingsAdmin() {
           <fieldset disabled={saving || query.isError} className="space-y-4 border border-stone-300 bg-stone-50 p-6">
             <legend className="px-2 text-sm font-semibold">有効にする言語</legend>
             {APP_LANGUAGES.map(language => <label key={language} className="flex items-center gap-3 text-sm">
-              <input type="checkbox" checked={form.includes(language)} disabled={language === "ja"} onChange={event => {
+              <input type="checkbox" checked={form.includes(language)} disabled={language === "ja" || !(CONTENT_MANIFEST.readyLanguages as readonly string[]).includes(language)} onChange={event => {
                 setNotice("");
                 setForm(APP_LANGUAGES.filter(item => item === language ? event.target.checked : form.includes(item)));
               }} />

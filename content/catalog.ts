@@ -18,29 +18,35 @@ import { records as zh4 } from "./translations/zh-CN/characterConstellations";
 import { sources as s5 } from "./ja/guides/gameProviders";
 import { records as en5 } from "./translations/en/gameProviders";
 import { records as zh5 } from "./translations/zh-CN/gameProviders";
-import { sources as s6 } from "./ja/guides/individualGuides";
-import { records as en6 } from "./translations/en/individualGuides";
-import { records as zh6 } from "./translations/zh-CN/individualGuides";
-import { sources as s7 } from "./ja/guides/parties_batch24Teams";
-import { records as en7 } from "./translations/en/parties_batch24Teams";
-import { records as zh7 } from "./translations/zh-CN/parties_batch24Teams";
-import { sources as s8 } from "./ja/guides/parties_batch25Teams";
-import { records as en8 } from "./translations/en/parties_batch25Teams";
-import { records as zh8 } from "./translations/zh-CN/parties_batch25Teams";
-import { sources as s9 } from "./ja/guides/parties_batch26Teams";
-import { records as en9 } from "./translations/en/parties_batch26Teams";
-import { records as zh9 } from "./translations/zh-CN/parties_batch26Teams";
-import { sources as s10 } from "./ja/guides/parties_batch27Teams";
-import { records as en10 } from "./translations/en/parties_batch27Teams";
-import { records as zh10 } from "./translations/zh-CN/parties_batch27Teams";
-import { sources as s11 } from "./ja/guides/parties_legacyCatalog";
-import { records as en11 } from "./translations/en/parties_legacyCatalog";
-import { records as zh11 } from "./translations/zh-CN/parties_legacyCatalog";
-import { sources as s12 } from "./ja/guides/parties_sharedTeams";
-import { records as en12 } from "./translations/en/parties_sharedTeams";
-import { records as zh12 } from "./translations/zh-CN/parties_sharedTeams";
-export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12];
-export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12} };
+import { sources as s6 } from "./ja/guides/guideUpdateHistory";
+import { records as en6 } from "./translations/en/guideUpdateHistory";
+import { records as zh6 } from "./translations/zh-CN/guideUpdateHistory";
+import { sources as s7 } from "./ja/guides/individualGuides";
+import { records as en7 } from "./translations/en/individualGuides";
+import { records as zh7 } from "./translations/zh-CN/individualGuides";
+import { sources as s8 } from "./ja/guides/parties_batch24Teams";
+import { records as en8 } from "./translations/en/parties_batch24Teams";
+import { records as zh8 } from "./translations/zh-CN/parties_batch24Teams";
+import { sources as s9 } from "./ja/guides/parties_batch25Teams";
+import { records as en9 } from "./translations/en/parties_batch25Teams";
+import { records as zh9 } from "./translations/zh-CN/parties_batch25Teams";
+import { sources as s10 } from "./ja/guides/parties_batch26Teams";
+import { records as en10 } from "./translations/en/parties_batch26Teams";
+import { records as zh10 } from "./translations/zh-CN/parties_batch26Teams";
+import { sources as s11 } from "./ja/guides/parties_batch27Teams";
+import { records as en11 } from "./translations/en/parties_batch27Teams";
+import { records as zh11 } from "./translations/zh-CN/parties_batch27Teams";
+import { sources as s12 } from "./ja/guides/parties_legacyCatalog";
+import { records as en12 } from "./translations/en/parties_legacyCatalog";
+import { records as zh12 } from "./translations/zh-CN/parties_legacyCatalog";
+import { sources as s13 } from "./ja/guides/parties_linkRecords";
+import { records as en13 } from "./translations/en/parties_linkRecords";
+import { records as zh13 } from "./translations/zh-CN/parties_linkRecords";
+import { sources as s14 } from "./ja/guides/parties_sharedTeams";
+import { records as en14 } from "./translations/en/parties_sharedTeams";
+import { records as zh14 } from "./translations/zh-CN/parties_sharedTeams";
+export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12, ...s13, ...s14];
+export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12, ...en13, ...en14}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12, ...zh13, ...zh14} };
 export function canonicalCatalog(planned: CoverageSection[] = []): ContentCatalog {
 return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTranslations, aliases: [], sections: [
 {id:"legacy.batch17ConstellationData_generated", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s0.map(source=>({kind:"textRef" as const,id:source.id}))}},
@@ -49,12 +55,14 @@ return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTra
 {id:"legacy.buildAdvisor", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s3.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.characterConstellations", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s4.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.gameProviders", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s5.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.individualGuides", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s6.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch24Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s7.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch25Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s8.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch26Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s9.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch27Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s10.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_legacyCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s11.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_sharedTeams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s12.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.guideUpdateHistory", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s6.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.individualGuides", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s7.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch24Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s8.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch25Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s9.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch26Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s10.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch27Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s11.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_legacyCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s12.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_linkRecords", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s13.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_sharedTeams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s14.map(source=>({kind:"textRef" as const,id:source.id}))}},
 ...planned] };
 }

@@ -5,7 +5,7 @@ import { pathToFileURL } from "node:url";
 import type { SourceText, TranslationRecord } from "../../shared/content/types";
 import { createLegacyTexts } from "../../server/content/legacyTexts";
 
-const fieldNames = new Set(["headline", "relicSet", "planarSet", "targetContext", "sourceLabel", "slot", "value", "label"]);
+const fieldNames = new Set(["headline", "relicSet", "planarSet", "targetContext", "sourceLabel", "slot", "value", "label", "title", "summary", "rationale", "sourceNote", "context"]);
 export function renderSources(sources: SourceText[]) {
   const blocks = Array.from({ length: Math.ceil(sources.length / 100) }, (_, index) => sources.slice(index * 100, (index + 1) * 100));
   return `import type { SourceText } from "../../../shared/content/types";\n` +
@@ -20,18 +20,37 @@ export function adoptModule(text: string, moduleName: string, depth = 0) {
   const mapping: { id: string; field: string; originalStart: number }[] = [];
   const edits: { start: number; end: number; replacement: string }[] = [];
   const propertyName = (node: ts.PropertyName) => ts.isIdentifier(node) || ts.isStringLiteral(node) ? node.text : null;
-  function register(ja: string, node: ts.Node, field: string, localized?: Record<string, string>, span?: {start: number; end: number}) {
+  function register(ja: string, node: ts.Node, field: string, localized?: Record<string, string>, span?: {start: number; end: number}, bindings?: Record<string, { expression: string; type: "string" | "number" }>) {
     const id = `guide.legacy.${moduleName}.b${String(sources.length + 1).padStart(5, "0")}` as const;
-    sources.push({ id, ja, context: `${moduleName}: ${field}; preserved legacy display field`, audience: "public", placeholders: {}, dependencies: [],
+    sources.push({ id, ja, context: `${moduleName}: ${field}; preserved legacy display field`, audience: "public", placeholders: Object.fromEntries(Object.entries(bindings ?? {}).map(([key, value]) => [key, value.type])), dependencies: [],
       protectedTokens: [...new Set(ja.match(/\d+(?:[.,]\d+)*/g) ?? [])] });
     mapping.push({ id, field, originalStart: node.getStart(ast) });
     if (localized) for (const language of ["en", "zh-CN"] as const) translations[language][id] = {
       text: localized[language]!, sourceHash: null, origin: "legacy", review: "pending",
     };
     edits.push({ start: span?.start ?? node.getStart(ast), end: span?.end ?? node.end,
-      replacement: `${span ? "..." : ""}_content.${span ? "triple" : localized ? "localized" : "ja"}(${JSON.stringify(id)})` });
+      replacement: `${span ? "..." : ""}_content.${span ? "triple" : localized ? "localized" : "ja"}(${JSON.stringify(id)}${bindings ? ", {" + Object.entries(bindings).map(([key, value]) => `${key}: ${value.expression}`).join(", ") + "}" : ""})` });
   }
   function visit(node: ts.Node) {
+    if (ts.isTemplateExpression(node) && ts.isArrowFunction(node.parent) && ts.isPropertyAssignment(node.parent.parent)) {
+      const field = propertyName(node.parent.parent.name);
+      if (field && fieldNames.has(field)) {
+        const bindings: Record<string, { expression: string; type: "string" | "number" }> = {};
+        let template = node.head.text;
+        node.templateSpans.forEach((span, index) => {
+          const expression = span.expression.getText(ast);
+          const key = `v${index}`;
+          bindings[key] = { expression, type: expression.endsWith(".length") ? "number" : "string" };
+          template += `{${key}}` + span.literal.text;
+        });
+        register(template, node, field, undefined, undefined, bindings);
+        return;
+      }
+    }
+    if (ts.isStringLiteral(node) && ts.isArrayLiteralExpression(node.parent) && ts.isPropertyAssignment(node.parent.parent)) {
+      const field = propertyName(node.parent.parent.name);
+      if (field === "changes" || field === "stats") { register(node.text, node, field); return; }
+    }
     if (ts.isCallExpression(node) && ts.isIdentifier(node.expression)) {
       const name = node.expression.text;
       if (name === "t" && node.arguments.length === 3 && node.arguments.every(ts.isStringLiteral)) {

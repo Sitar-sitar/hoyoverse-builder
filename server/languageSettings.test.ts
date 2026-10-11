@@ -34,13 +34,15 @@ describe("公開言語設定", () => {
     }
     expect(mocks.upsertDisplaySettings).not.toHaveBeenCalled();
   });
-  it("言語設定だけを保存し、次の公開取得で再開・停止を反映", async () => {
+  it("準備段階では保存済み言語を日本語へ絞り、英中の公開をDB更新前に拒否", async () => {
+    mocks.getDisplaySettingRows.mockResolvedValue([{ settingKey: "enabledLanguages", variant: '["ja","en","zh-CN"]' }]);
+    expect(await caller().settings()).toEqual({ enabledLanguages: ["ja"] });
+    for (const language of ["en", "zh-CN"] as const) await expect(caller("admin").publish({ enabledLanguages: ["ja", language] })).rejects.toMatchObject({ code: "PRECONDITION_FAILED" });
+    expect(mocks.upsertDisplaySettings).not.toHaveBeenCalled();
+    expect(await caller("admin").adminSettings()).toMatchObject({ preparation: { mode: "preparation" } });
     mocks.upsertDisplaySettings.mockImplementation(async changes => {
       mocks.getDisplaySettingRows.mockResolvedValue(changes.map((change: any) => ({ settingKey: change.key, variant: change.variant })));
     });
-    await caller("admin").publish({ enabledLanguages: ["zh-CN", "ja"] });
-    expect(mocks.upsertDisplaySettings).toHaveBeenLastCalledWith([{ key: "enabledLanguages", variant: '["ja","zh-CN"]' }]);
-    expect(await caller().settings()).toEqual({ enabledLanguages: ["ja", "zh-CN"] });
     await caller("admin").publish({ enabledLanguages: ["ja"] });
     expect(await caller().settings()).toEqual({ enabledLanguages: ["ja"] });
   });

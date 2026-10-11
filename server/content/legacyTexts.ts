@@ -5,7 +5,7 @@ import { indexCatalog, japaneseText } from "./catalog";
 export function createLegacyTexts(sources: SourceText[], en: Record<string, TranslationRecord>, zh: Record<string, TranslationRecord>) {
   const index = indexCatalog({ schemaVersion: 1, sources, translations: { en, "zh-CN": zh }, aliases: [], sections: [] });
   if (index.issues.length) throw new Error("Invalid canonical legacy content");
-  const ja = (id: TextId) => japaneseText(index, { kind: "textRef", id });
+  const ja = (id: TextId, variables: Record<string, string | number> = {}) => japaneseText(index, { kind: "textRef", id }, variables);
   return {
     ja,
     triple(id: TextId): [string, string, string] {
