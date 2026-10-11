@@ -59,6 +59,17 @@ describe("Japanese presentation DTO boundary", () => {
       expect(legacy).toEqual(character.reference);
       expect(selectPresentation(result)).toEqual(result);
       expect(presentation).toMatchObject({ language: "ja", identityKey: character.key, information: { skills: "notCollected" } });
+      expect(Object.keys(presentation).sort()).toEqual(["contentRevision", "display", "identityKey", "information", "language", "schemaVersion"]);
+      expect(Object.keys(presentation.display).every(key => ["name", "guide", "constellations", "partyRecommendations", "partyAppearances", "statsNote"].includes(key))).toBe(true);
+      const visit = (value: unknown) => {
+        if (Array.isArray(value)) { value.forEach(visit); return; }
+        if (!value || typeof value !== "object") return;
+        for (const [key, child] of Object.entries(value)) {
+          expect(["context", "review", "reviewedAt", "sourceHash", "translations", "sources", "aliases", "uid", "player", "admin"].includes(key), `${character.key}:${key}`).toBe(false);
+          visit(child);
+        }
+      };
+      visit(presentation.display);
       const serialized = JSON.stringify(presentation);
       expect(serialized).not.toContain('"sourceHash"');
       expect(serialized).not.toContain('"context"');
