@@ -1,0 +1,232 @@
+[
+  {
+    "id": "guide.legacy.batch23GenshinData.b00001",
+    "field": "headline",
+    "originalStart": 670
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00002",
+    "field": "relicSet",
+    "originalStart": 739
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00003",
+    "field": "planarSet",
+    "originalStart": 789
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00004",
+    "field": "slot",
+    "originalStart": 888
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00005",
+    "field": "value",
+    "originalStart": 901
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00006",
+    "field": "slot",
+    "originalStart": 919
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00007",
+    "field": "value",
+    "originalStart": 931
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00008",
+    "field": "slot",
+    "originalStart": 949
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00009",
+    "field": "value",
+    "originalStart": 961
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00010",
+    "field": "targetContext",
+    "originalStart": 1022
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00011",
+    "field": "headline",
+    "originalStart": 1455
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00012",
+    "field": "relicSet",
+    "originalStart": 1522
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00013",
+    "field": "planarSet",
+    "originalStart": 1582
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00014",
+    "field": "slot",
+    "originalStart": 1676
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00015",
+    "field": "value",
+    "originalStart": 1689
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00016",
+    "field": "slot",
+    "originalStart": 1706
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00017",
+    "field": "value",
+    "originalStart": 1718
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00018",
+    "field": "slot",
+    "originalStart": 1735
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00019",
+    "field": "value",
+    "originalStart": 1747
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00020",
+    "field": "targetContext",
+    "originalStart": 1799
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00021",
+    "field": "sourceLabel",
+    "originalStart": 2513
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00022",
+    "field": "name",
+    "originalStart": 2929
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00023",
+    "field": "description",
+    "originalStart": 3067
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00024",
+    "field": "name",
+    "originalStart": 3804
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00025",
+    "field": "description",
+    "originalStart": 3943
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00026",
+    "field": "name",
+    "originalStart": 4635
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00027",
+    "field": "description",
+    "originalStart": 4772
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00028",
+    "field": "name",
+    "originalStart": 5073
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00029",
+    "field": "description",
+    "originalStart": 5210
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00030",
+    "field": "name",
+    "originalStart": 5562
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00031",
+    "field": "description",
+    "originalStart": 5699
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00032",
+    "field": "name",
+    "originalStart": 5998
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00033",
+    "field": "description",
+    "originalStart": 6129
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00034",
+    "field": "sourceLabel",
+    "originalStart": 7243
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00035",
+    "field": "name",
+    "originalStart": 7664
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00036",
+    "field": "description",
+    "originalStart": 7805
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00037",
+    "field": "name",
+    "originalStart": 8228
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00038",
+    "field": "description",
+    "originalStart": 8373
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00039",
+    "field": "name",
+    "originalStart": 9621
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00040",
+    "field": "description",
+    "originalStart": 9773
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00041",
+    "field": "name",
+    "originalStart": 10084
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00042",
+    "field": "description",
+    "originalStart": 10242
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00043",
+    "field": "name",
+    "originalStart": 11059
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00044",
+    "field": "description",
+    "originalStart": 11205
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00045",
+    "field": "name",
+    "originalStart": 11506
+  },
+  {
+    "id": "guide.legacy.batch23GenshinData.b00046",
+    "field": "description",
+    "originalStart": 11651
+  }
+]
