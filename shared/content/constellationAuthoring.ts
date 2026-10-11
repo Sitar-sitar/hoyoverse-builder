@@ -14,5 +14,6 @@ export type Batch17ConstellationEntry = {
 export type ConstellationAuthoring = {
   entryId: string;
   identities: string[];
+  legacyIdentities?: Record<string, string>;
   data: RefFields<Batch17ConstellationEntry>;
 };

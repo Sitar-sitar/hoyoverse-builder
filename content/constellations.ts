@@ -1,4 +1,6 @@
 import { records } from "./constellationBatch17";
+import { records as curated } from "./constellationCurated";
+import { records as batch23 } from "./constellationBatch23";
 import { canonicalSources } from "./catalog";
 import { contentFields, requiredContentRef } from "../shared/content/walk";
 import type { ConstellationAuthoring } from "../shared/content/constellationAuthoring";
@@ -25,6 +27,7 @@ export function constellationRefs(record: ConstellationAuthoring): TextRef[] {
   return contentFields(record, {
     entryId: ignore,
     identities: ignore,
+    legacyIdentities: ignore,
     data: data =>
       contentFields(data, {
         gameVersion: ignore,
@@ -64,7 +67,9 @@ export function validateConstellations(values: ConstellationAuthoring[]) {
   const identities = new Set<string>();
   for (const record of values) {
     if (
-      !/^constellation\.batch17\.entry\d+$/.test(record.entryId) ||
+      !/^constellation\.(batch17|batch23|curated)\.entry\d+$/.test(
+        record.entryId
+      ) ||
       ids.has(record.entryId)
     )
       throw new Error("Invalid constellation entry ID");
@@ -72,10 +77,35 @@ export function validateConstellations(values: ConstellationAuthoring[]) {
     if (!record.identities.length)
       throw new Error("Unbound constellation entry");
     for (const identity of record.identities) {
-      if (!/^genshin:\d+(?:-\d+)?$/.test(identity) || identities.has(identity))
+      const confirmed = /^(hsr|genshin|zzz):\d+(?:-\d+)?$/.test(identity);
+      if (
+        identities.has(identity) ||
+        (!confirmed && !record.legacyIdentities?.[identity]?.trim())
+      )
         throw new Error("Invalid constellation identity");
+      if (confirmed && record.legacyIdentities?.[identity])
+        throw new Error("Confirmed identity cannot be legacy");
       identities.add(identity);
     }
+    if (
+      Object.keys(record.legacyIdentities ?? {}).some(
+        identity => !record.identities.includes(identity)
+      )
+    )
+      throw new Error("Unknown legacy constellation identity");
+    for (const effect of record.data.effects)
+      for (const change of effect.targetChanges ?? []) {
+        if (
+          JSON.stringify(Object.keys(change.targets).sort()) !==
+            JSON.stringify(["厳選", "目標", "妥協"].sort()) ||
+          Object.values(change.targets).some(
+            value => typeof value !== "number" || !Number.isFinite(value)
+          )
+        )
+          throw new Error("Invalid constellation target values");
+        if (!["", "%"].includes(change.unit))
+          throw new Error("Invalid constellation target unit");
+      }
     if (
       record.data.effects.length !== 6 ||
       record.data.effects.some((effect, index) => effect.level !== index + 1)
@@ -89,9 +119,19 @@ export function validateConstellations(values: ConstellationAuthoring[]) {
     constellationRefs(record);
   }
 }
+export const constellationRecords = [...records, ...curated, ...batch23];
+export function unresolvedConstellationIdentities() {
+  return constellationRecords
+    .flatMap(record =>
+      Object.entries(record.legacyIdentities ?? {}).map(
+        ([identity, reason]) => ({ entryId: record.entryId, identity, reason })
+      )
+    )
+    .sort((a, b) => a.entryId.localeCompare(b.entryId));
+}
 export function constellationSections(): CoverageSection[] {
-  validateConstellations(records);
-  return records.map(record => ({
+  validateConstellations(constellationRecords);
+  return constellationRecords.map(record => ({
     id: record.entryId,
     audience: "public",
     visibility: "active",
