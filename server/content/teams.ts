@@ -1,6 +1,9 @@
 import { validateTeamRecords } from "../../content/teams";
 import { canonicalSources, canonicalTranslations } from "../../content/catalog";
-import type { TeamAuthoring } from "../../shared/content/teamAuthoring";
+import type {
+  TeamAuthoring,
+  BoundTextRef,
+} from "../../shared/content/teamAuthoring";
 import type { Team } from "../parties/types";
 import type { TextRef } from "../../shared/content/types";
 import { createLegacyTexts } from "./legacyTexts";
@@ -13,7 +16,10 @@ function project(value: unknown): unknown {
   if (Array.isArray(value)) return value.map(project);
   if (!value || typeof value !== "object") return value;
   if ("kind" in value && value.kind === "textRef")
-    return texts.localized((value as TextRef).id);
+    return texts.localized(
+      (value as BoundTextRef).id,
+      (value as BoundTextRef).variables
+    );
   return Object.fromEntries(
     Object.entries(value)
       .filter(

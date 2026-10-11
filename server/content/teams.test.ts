@@ -11,8 +11,29 @@ import { TEAM_STORE } from "../parties/teamStore";
 import type { TeamAuthoring } from "../../shared/content/teamAuthoring";
 
 describe("shared team authoring refs", () => {
+  it("keeps typed template bindings outside coverage refs and rejects changed bindings", () => {
+    const team = structuredClone(teamRecords.find(team => team.batch === 24)!);
+    const label = team.communitySources[0]!.label;
+    expect(label.variables).toEqual({ v0: "2026-10-02" });
+    expect(projectTeams([team])[0]!.communitySources[0]!.label).toEqual({
+      ja: "Game8個別編成ガイド（2026-10-02更新）",
+      en: "Game8 character team guide (updated 2026-10-02)",
+      "zh-CN": "Game8角色配队指南（2026-10-02更新）",
+    });
+    expect(
+      teamAuthoringRefs(team).every(ref => !Object.hasOwn(ref, "variables"))
+    ).toBe(true);
+    label.variables = { v0: 2 };
+    expect(() => validateTeamRecords([team])).toThrow(
+      "Invalid content variable"
+    );
+    label.variables = {};
+    expect(() => validateTeamRecords([team])).toThrow(
+      "Content variables differ"
+    );
+  });
   it("supplies one shared definition without exposing ref/identity metadata in the legacy model", () => {
-    expect(teamRecords).toHaveLength(16);
+    expect(teamRecords).toHaveLength(24);
     const projected = projectTeams(teamRecords);
     for (const team of projected) {
       expect(TEAM_STORE.byId.get(team.id)).toEqual(team);
@@ -31,7 +52,7 @@ describe("shared team authoring refs", () => {
         )
       ).toBe(true);
     }
-    expect(teamSections()).toHaveLength(16);
+    expect(teamSections()).toHaveLength(24);
     expect(unresolvedTeamMembers().length).toBeGreaterThan(0);
     expect(
       unresolvedTeamMembers().every(

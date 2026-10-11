@@ -1,8 +1,11 @@
 import type { Team, LocalizedText } from "../../server/parties/types";
 import type { TextRef } from "./types";
+export type BoundTextRef = TextRef & {
+  variables?: Record<string, string | number>;
+};
 /** Preserve computation metadata while requiring refs for every localized field. */
 export type RefFields<T> = T extends LocalizedText
-  ? TextRef
+  ? BoundTextRef
   : T extends Array<infer U>
     ? Array<RefFields<U>>
     : T extends object
@@ -16,5 +19,5 @@ export type TeamAuthoring = Omit<RefFields<Team>, "members" | "synergy"> & {
       identityReason?: string;
     }
   >;
-  synergy: Array<{ blockId: string; text: TextRef }>;
+  synergy: Array<{ blockId: string; text: BoundTextRef }>;
 };

@@ -1,19 +1,40 @@
 import { teams as batch25 } from "./teamBatch25";
+import { teams as batch24 } from "./teamBatch24";
 import { teams as batch26 } from "./teamBatch26";
 import { teams as batch27 } from "./teamBatch27";
+import { teams as batch23 } from "./teamBatch23";
 import { canonicalSources } from "./catalog";
-import type { TeamAuthoring } from "../shared/content/teamAuthoring";
+import type {
+  TeamAuthoring,
+  BoundTextRef,
+} from "../shared/content/teamAuthoring";
+import { formatContentText } from "../shared/content/format";
 import type { CoverageSection, TextRef } from "../shared/content/types";
-import {
-  contentFields,
-  requiredContentRef as ref,
-} from "../shared/content/walk";
+import { contentFields, requiredContentRef } from "../shared/content/walk";
 export const teamRecords: TeamAuthoring[] = [
+  ...batch24,
   ...batch25,
   ...batch26,
   ...batch27,
+  ...batch23,
 ];
 const ignore = (_value: unknown): TextRef[] => [];
+const textSources = new Map(
+  canonicalSources.map(source => [source.id, source])
+);
+function ref(value: BoundTextRef): TextRef[] {
+  requiredContentRef(value);
+  contentFields(value, { kind: ignore, id: ignore, variables: ignore });
+  const source = textSources.get(value.id);
+  if (!source) throw new Error("Unknown team text reference");
+  formatContentText(
+    value.id,
+    source.ja,
+    source.placeholders,
+    value.variables ?? {}
+  );
+  return [{ kind: "textRef", id: value.id }];
+}
 
 export function teamAuthoringRefs(team: TeamAuthoring): TextRef[] {
   const changes = (
