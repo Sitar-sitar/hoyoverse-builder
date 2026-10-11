@@ -10,6 +10,7 @@
     "content:adopt-characters": "tsx scripts/content/adoptCharacters.ts",
     "content:adopt-history-records": "tsx scripts/content/adoptHistoryRecords.ts",
     "content:adopt-history-batches": "tsx scripts/content/adoptHistoryBatches.ts",
+    "content:adopt-teams": "tsx scripts/content/adoptTeams.ts",
     "content:adopt-helpers": "tsx scripts/content/adoptHelpers.ts",
     "content:adopt-ui": "tsx scripts/content/adoptUi.ts",
     "content:adopt-ui-literals": "tsx scripts/content/adoptUiLiterals.ts",

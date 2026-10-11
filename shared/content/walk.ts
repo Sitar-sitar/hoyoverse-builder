@@ -8,12 +8,14 @@ const ref = (value: TextRef): TextRef[] => {
   return [value];
 };
 const optionalRef = (value: TextRef | undefined): TextRef[] => value ? [value] : [];
+export { ref as requiredContentRef };
 
 /** Exhaustive field handlers are required at compile time; extra runtime keys fail. */
 function fields<T extends object>(value: T, visitors: FieldVisitors<T>): TextRef[] {
   for (const key of Object.keys(value)) if (!Object.hasOwn(visitors, key)) throw new Error(`Unclassified content field: ${key}`);
   return (Object.keys(visitors) as Array<keyof T>).flatMap(key => visitors[key](value[key]));
 }
+export {fields as contentFields};
 
 function section<T>(value: Section<T[]>, visit: (entry: T) => TextRef[]): TextRef[] {
   switch (value.status) {

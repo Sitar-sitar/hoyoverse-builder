@@ -6,6 +6,7 @@ import { sourceIssues } from "./coverage";
 import { characterRecords, characterSources, validateCharacterRecords } from "../../content/characters";
 import { characterRefs } from "../../shared/content/walk";
 import { historySections } from "../../content/history";
+import {teamSections} from "../../content/teams";
 
 export function plannedSections(): CoverageSection[] {
   return characterRecords.flatMap(record => {
@@ -25,7 +26,7 @@ export function contentRepository() {
   validateCharacterRecords(characterRecords, characterSources);
   const planned = plannedSections();
   const names: CoverageSection[] = characterRecords.map(record => ({ id: `character.${record.game}.${record.identityKey.slice(record.game.length + 1)}.name`, audience: "public", visibility: "active", section: { status: "registered", data: [record.name], evidence: "confirmed catalog identity migration" } }));
-  const catalog = canonicalCatalog([...planned, ...names, ...historySections()]);
+  const catalog = canonicalCatalog([...planned, ...names, ...historySections(),...teamSections()]);
   const index = indexCatalog(catalog, planned);
   const issues = [...index.issues, ...catalog.sources.flatMap(sourceIssues)];
   if (issues.length) throw new Error(`Canonical content invalid: ${issues.map(issue => issue.code).join(", ")}`);

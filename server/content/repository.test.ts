@@ -21,12 +21,16 @@ describe("repository content maintenance", () => {
       expect(contentCommand(["report", "--", "--format", "json"])).toBe(0);
       const report = JSON.parse(output.mock.calls.at(-1)![0]);
       expect(report.information.notCollected).toHaveLength(512);
+      expect(report.unresolvedTeamMembers.length).toBeGreaterThan(0);
       expect(contentCommand(["export", "--language", "en"])).toBe(0);
       const candidates = JSON.parse(output.mock.calls.at(-1)![0]);
       expect(candidates.length).toBeGreaterThan(5000);
       expect(candidates.every((entry: {state: string}) => entry.state !== "approved")).toBe(true);
       expect(contentCommand(["ready", "--language", "en", "--scope", "public"])).toBe(2);
       expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "public"])).toBe(2);
+      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers.length).toBeGreaterThan(0);
+      expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "admin"])).toBe(2);
+      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers).toEqual([]);
       expect(() => contentCommand(["export", "--language", "zh-TW"])).toThrow();
     } finally { output.mockRestore(); }
   });
