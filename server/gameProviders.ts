@@ -1,3 +1,5 @@
+import {sources as externalDisplaySources} from "../content/ja/guides/externalDisplayFallbacks";
+const _externalDisplay = createLegacyTexts(externalDisplaySources, {}, {});
 import {records as guideRecords} from "../content/guideDefinitions_providers";
 import {projectGuideRegistry} from "./content/guides";
 import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
@@ -321,9 +323,9 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
       const mainProp = text(main.mainPropId ?? reliquary.mainPropId);
       return {
         id: text(equip.itemId, `${id}-artifact-${index}`),
-        name: localized(catalog.loc, flat.nameTextMapHash, GI_ARTIFACT_SLOTS[text(flat.equipType)] ?? "聖遺物"),
-        slot: GI_ARTIFACT_SLOTS[text(flat.equipType)] ?? "聖遺物",
-        setName: localized(catalog.loc, flat.setNameTextMapHash, "聖遺物セット"),
+        name: localized(catalog.loc, flat.nameTextMapHash, GI_ARTIFACT_SLOTS[text(flat.equipType)] ?? _externalDisplay.ja("guide.externalDisplayFallbacks.label1")),
+        slot: GI_ARTIFACT_SLOTS[text(flat.equipType)] ?? _externalDisplay.ja("guide.externalDisplayFallbacks.label1"),
+        setName: localized(catalog.loc, flat.setNameTextMapHash, _externalDisplay.ja("guide.externalDisplayFallbacks.label10")),
         level: Math.max(0, number(reliquary.level) - 1), icon: iconUrl(text(flat.icon)) ?? null,
         main: mainProp ? { name: GI_PROP_NAMES[mainProp] ?? mainProp, display: giStat(mainProp, number(main.statValue), false).display } : null,
         subs: asArray(flat.reliquarySubstats).map(asRecord).map((sub) => {
@@ -341,12 +343,12 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
     return {
       id: identity.sourceId, identity, name, level: number(asRecord(avatar.propMap)["4001"] && asRecord(asRecord(avatar.propMap)["4001"]).val, null as unknown as number),
       rank: asArray(avatar.talentIdList).length, portrait: iconUrl(text(metadata.SideIconName)) ?? null,
-      element: elementMeta.label, elementColor: elementMeta.color, path: GI_WEAPONS[text(metadata.WeaponType)] ?? "武器",
-      lightCone: weapon ? { name: localized(catalog.loc, weaponFlat.nameTextMapHash, "武器"), level: number(weaponInfo.level, null as unknown as number), rank: number(Object.values(asRecord(weaponInfo.affixMap))[0], -1) + 1, icon: iconUrl(text(weaponFlat.icon)) ?? null } : null,
+      element: elementMeta.label, elementColor: elementMeta.color, path: GI_WEAPONS[text(metadata.WeaponType)] ?? _externalDisplay.ja("guide.externalDisplayFallbacks.label2"),
+      lightCone: weapon ? { name: localized(catalog.loc, weaponFlat.nameTextMapHash, _externalDisplay.ja("guide.externalDisplayFallbacks.label2")), level: number(weaponInfo.level, null as unknown as number), rank: number(Object.values(asRecord(weaponInfo.affixMap))[0], -1) + 1, icon: iconUrl(text(weaponFlat.icon)) ?? null } : null,
       relics, allStats, guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: mismatchedAddition ? { gameVersion: "7.1", dataAsOf: "2026-10-01", updatedAt: "2026-10-01", options: [] } : partyRecommendationsFor("genshin", name), constellations: constellationProfileFor(identity, asArray(avatar.talentIdList).length),
     };
   });
-  return { player: { uid: text(root.uid), name: text(player.nickname, "旅人"), level: number(player.level, null as unknown as number) }, characters };
+  return { player: { uid: text(root.uid), name: text(player.nickname, _externalDisplay.ja("guide.externalDisplayFallbacks.label3")), level: number(player.level, null as unknown as number) }, characters };
 }
 
 const ZZZ_ELEMENTS: Record<string, { label: string; color: string }> = {
@@ -533,9 +535,9 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
         aggregate[stat.name] = (aggregate[stat.name] ?? 0) + stat.value;
         addProperty(equipmentByProperty, stat.id, stat.value);
       });
-      const setName = zzzName(catalog, suit.Name ?? `EquipmentSuit_${suitId}_name`, "ドライバディスクセット");
+      const setName = zzzName(catalog, suit.Name ?? `EquipmentSuit_${suitId}_name`, _externalDisplay.ja("guide.externalDisplayFallbacks.label4"));
       const slot = text(entry.Slot, String(index + 1));
-      return { id: text(equipment.Uid, `${id}-disc-${index}`), name: `ドライバディスク ${slot}`, slot, setName, level, icon: null, main: mainStats[0] ? { name: mainStats[0].name, display: mainStats[0].display } : null, subs: subs.map((stat) => ({ name: stat.name, display: stat.display })) };
+      return { id: text(equipment.Uid, `${id}-disc-${index}`), name: _externalDisplay.ja("guide.externalDisplayFallbacks.disc", {slot}), slot, setName, level, icon: null, main: mainStats[0] ? { name: mainStats[0].name, display: mainStats[0].display } : null, subs: subs.map((stat) => ({ name: stat.name, display: stat.display })) };
     });
     Object.entries(suitCounts).filter(([, count]) => count >= 2).forEach(([suitId]) => {
       const bonusProps = asRecord(asRecord(suits[suitId]).SetBonusProps);
@@ -550,12 +552,12 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
     const recommendations = priorityRecommendations(comparisons);
     return {
       id: identity.sourceId, identity, name, level: number(avatar.Level, null as unknown as number), rank: number(avatar.TalentLevel, null as unknown as number), portrait: iconUrl(text(metadata.Image)) ?? null,
-      element: elements.map((element) => element?.label).filter(Boolean).join(" / ") || "属性", elementColor: elements[0]?.color ?? "#c28a42", path: (ZZZ_PROFESSIONS[profession] ?? profession) || "役割",
-      lightCone: weaponId ? { name: zzzName(catalog, weaponMeta.ItemName, "音動機"), level: number(rawWeapon.Level, null as unknown as number), rank: number(rawWeapon.BreakLevel, null as unknown as number), icon: iconUrl(text(weaponMeta.ImagePath)) ?? null } : null,
-      relics, allStats: finalStats.display, statsNote: "エージェント・音動機・コア強化・ドライバディスクを合算した戦闘外の推定最終値です。戦闘中・条件付き効果は含みません。", guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: partyRecommendationsFor("zzz", name), constellations: constellationProfileFor(identity, number(avatar.TalentLevel, null as unknown as number)),
+      element: elements.map((element) => element?.label).filter(Boolean).join(" / ") || _externalDisplay.ja("guide.externalDisplayFallbacks.label7"), elementColor: elements[0]?.color ?? "#c28a42", path: (ZZZ_PROFESSIONS[profession] ?? profession) || _externalDisplay.ja("guide.externalDisplayFallbacks.label8"),
+      lightCone: weaponId ? { name: zzzName(catalog, weaponMeta.ItemName, _externalDisplay.ja("guide.externalDisplayFallbacks.label5")), level: number(rawWeapon.Level, null as unknown as number), rank: number(rawWeapon.BreakLevel, null as unknown as number), icon: iconUrl(text(weaponMeta.ImagePath)) ?? null } : null,
+      relics, allStats: finalStats.display, statsNote: _externalDisplay.ja("guide.externalDisplayFallbacks.label9"), guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: partyRecommendationsFor("zzz", name), constellations: constellationProfileFor(identity, number(avatar.TalentLevel, null as unknown as number)),
     };
   });
-  return { player: { uid: text(root.uid, text(profile.Uid)), name: text(profile.Nickname, "プロキシ"), level: number(profile.Level, null as unknown as number) }, characters };
+  return { player: { uid: text(root.uid, text(profile.Uid)), name: text(profile.Nickname, _externalDisplay.ja("guide.externalDisplayFallbacks.label6")), level: number(profile.Level, null as unknown as number) }, characters };
 }
 
 const genshinCache = new UidResponseCache<NormalizedBuild>();
