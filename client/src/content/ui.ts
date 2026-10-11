@@ -1,4 +1,11 @@
-import { UI_TEXT } from "./ui.generated";
+import { UI_TEXT, UI_VARIABLES } from "./ui.generated";
+import { formatContentText } from "@shared/content/format";
+
+export function uiFormat(id: string, variables: Record<string, string | number>, language: "ja" | "en" | "zh-CN" = "ja") {
+  const entry = UI_TEXT[id];
+  if (!entry) throw new Error("Unknown UI content reference");
+  return formatContentText(id, entry[language], UI_VARIABLES[id] ?? {}, variables);
+}
 
 /** Japanese preparation mode. Missing translations remain missing in authoring data. */
 export function uiText(id: string): string {

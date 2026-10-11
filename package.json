@@ -7,6 +7,7 @@
     "content:baseline": "tsx scripts/content/baseline.ts",
     "content:migrate": "tsx scripts/content/migrate.ts",
     "content:adopt": "tsx scripts/content/adopt.ts",
+    "content:adopt-helpers": "tsx scripts/content/adoptHelpers.ts",
     "content:adopt-ui": "tsx scripts/content/adoptUi.ts",
     "content:adopt-ui-literals": "tsx scripts/content/adoptUiLiterals.ts",
     "content:ui-audit": "tsx scripts/content/uiAudit.ts",

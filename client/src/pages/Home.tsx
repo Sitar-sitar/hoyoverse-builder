@@ -1,4 +1,4 @@
-import { uiText } from "@/content/ui";
+import { uiFormat, uiText } from "@/content/ui";
 import { uiDictionary } from "@/content/ui";
 import { Button } from "@/components/ui/button";
 import { selectPresentation } from "@/content/presentation";
@@ -109,9 +109,9 @@ const meetsTarget = (current: number, target: number) => current >= target - COM
 function deficitText(deficit: number, unit: string, language: "ja" | "en" | "zh-CN") {
   const digits = unit === "%" ? 1 : 0;
   const under = Number(deficit.toFixed(digits)) === 0;
-  const amount = under ? `<${(10 ** -digits).toFixed(digits)}${unit}` : `${deficit.toFixed(digits)}${unit}`;
-  if (language !== "ja") return `-${amount}`;
-  return under ? `あと ${(10 ** -digits).toFixed(digits)}${unit}未満` : `あと ${deficit.toFixed(digits)}${unit}`;
+  return uiFormat(under ? "ui.home.deficit.under" : "ui.home.deficit.amount", {
+    amount: under ? (10 ** -digits).toFixed(digits) : deficit.toFixed(digits), unit,
+  }, language);
 }
 
 function recommendationsFromComparisons(comparisons: Comparison[], language: "ja" | "en" | "zh-CN"): PriorityRecommendation[] {
@@ -125,7 +125,7 @@ function recommendationsFromComparisons(comparisons: Comparison[], language: "ja
       return {
         key: comparison.key, label: comparison.label, unit: comparison.unit, current: comparison.current, target, deficit,
         priority,
-        rationale: language === "ja" ? `目標 ${target}${comparison.unit} まで${deficitText(deficit, comparison.unit, language)}` : `${target}${comparison.unit} / ${deficitText(deficit, comparison.unit, language)}`,
+        rationale: uiFormat("ui.home.recommendation.target", { target, unit: comparison.unit, deficit: deficitText(deficit, comparison.unit, language) }, language),
       };
     })
     .sort((left, right) => (right.deficit / Math.max(right.target, 1)) - (left.deficit / Math.max(left.target, 1)))
@@ -240,7 +240,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-stone-800/10" />
               <div className="relative flex h-full min-h-[340px] flex-col justify-between">
                 <div className="flex justify-between"><p className="detail-mono text-[9px] text-stone-300">{t("selectedRecord")}</p><p className="detail-mono text-[9px] text-stone-300">LV.{selected.level ?? "—"} / {activeGame.characterRank}{selected.rank ?? 0}</p></div>
-                <div><div className="mb-3 flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ backgroundColor: selected.elementColor ?? "#c28a42" }} /><span className="detail-mono text-[9px] text-stone-200">{selected.element} / {selected.path}</span></div><h2 className="display-serif text-5xl font-semibold tracking-tight">{selected.name}</h2>{selected.identity && <div className="mt-3 space-y-1 border-l border-amber-200/70 pl-3"><p className="detail-mono text-[9px] text-stone-300">SOURCE ID / {selected.identity.key}</p>{selected.identity.variantOf && <p className="text-[11px] leading-5 text-amber-100">{language === "ja" ? `${selected.identity.variantOf}とは別実装として識別しています。` : language === "zh-CN" ? `作为与${selected.identity.variantOf}不同的独立实现进行识别。` : `Identified as a distinct implementation from ${selected.identity.variantOf}.`}</p>}{!selected.identity.resolved && <p className="text-[11px] leading-5 text-amber-100">{uiDictionary({
+                <div><div className="mb-3 flex items-center gap-2"><span className="h-2 w-2 rounded-full" style={{ backgroundColor: selected.elementColor ?? "#c28a42" }} /><span className="detail-mono text-[9px] text-stone-200">{selected.element} / {selected.path}</span></div><h2 className="display-serif text-5xl font-semibold tracking-tight">{selected.name}</h2>{selected.identity && <div className="mt-3 space-y-1 border-l border-amber-200/70 pl-3"><p className="detail-mono text-[9px] text-stone-300">SOURCE ID / {selected.identity.key}</p>{selected.identity.variantOf && <p className="text-[11px] leading-5 text-amber-100">{uiFormat("ui.home.identity.variant", { name: selected.identity.variantOf }, language)}</p>}{!selected.identity.resolved && <p className="text-[11px] leading-5 text-amber-100">{uiDictionary({
   "text": "ui.pages_Home_residual1.dictionary1.text"
 })[language].text}</p>}</div>}<p className="mt-3 max-w-sm font-serif text-sm leading-6 text-stone-200">{selected.guide.headline}</p></div>
               </div>

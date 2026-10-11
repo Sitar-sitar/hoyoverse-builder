@@ -1,4 +1,4 @@
-import { uiText } from "@/content/ui.admin";
+import { uiFormat, uiText } from "@/content/ui.admin";
 import React, { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -49,7 +49,7 @@ export default function LanguageSettingsAdmin() {
       <Link href="/admin" className="text-sm text-stone-600 underline">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal1")}</Link>
       <h1 className="display-serif mt-8 text-4xl font-semibold">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal2")}</h1>
       <p className="mt-5 text-sm leading-7 text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal3")}</p>
-      <p className="mt-3 text-sm text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal4")}{query.data?.preparation && `確認待ちの文章：${query.data.preparation.unavailableSources}件。`}</p>
+      <p className="mt-3 text-sm text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal4")}{query.data?.preparation && uiFormat("ui.admin.languages.waitingCount", { count: query.data.preparation.unavailableSources })}</p>
       {loading && <p className="mt-8">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal5")}</p>}
       {!loading && !isAdmin && <div className="mt-8 border border-stone-300 p-6">
         <p>{isAuthenticated ? uiText("ui.pages_LanguageSettingsAdmin_literals2.literal4") : uiText("ui.pages_LanguageSettingsAdmin_literals2.literal5")}</p>

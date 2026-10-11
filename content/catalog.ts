@@ -15,89 +15,98 @@ import { records as zh3 } from "./translations/zh-CN/buildAdvisor";
 import { sources as s4 } from "./ja/guides/characterConstellations";
 import { records as en4 } from "./translations/en/characterConstellations";
 import { records as zh4 } from "./translations/zh-CN/characterConstellations";
-import { sources as s5 } from "./ja/guides/gameProviders";
-import { records as en5 } from "./translations/en/gameProviders";
-import { records as zh5 } from "./translations/zh-CN/gameProviders";
-import { sources as s6 } from "./ja/guides/guideUpdateHistory";
-import { records as en6 } from "./translations/en/guideUpdateHistory";
-import { records as zh6 } from "./translations/zh-CN/guideUpdateHistory";
-import { sources as s7 } from "./ja/guides/individualGuides";
-import { records as en7 } from "./translations/en/individualGuides";
-import { records as zh7 } from "./translations/zh-CN/individualGuides";
-import { sources as s8 } from "./ja/guides/parties_batch24Teams";
-import { records as en8 } from "./translations/en/parties_batch24Teams";
-import { records as zh8 } from "./translations/zh-CN/parties_batch24Teams";
-import { sources as s9 } from "./ja/guides/parties_batch25Teams";
-import { records as en9 } from "./translations/en/parties_batch25Teams";
-import { records as zh9 } from "./translations/zh-CN/parties_batch25Teams";
-import { sources as s10 } from "./ja/guides/parties_batch26Teams";
-import { records as en10 } from "./translations/en/parties_batch26Teams";
-import { records as zh10 } from "./translations/zh-CN/parties_batch26Teams";
-import { sources as s11 } from "./ja/guides/parties_batch27Teams";
-import { records as en11 } from "./translations/en/parties_batch27Teams";
-import { records as zh11 } from "./translations/zh-CN/parties_batch27Teams";
-import { sources as s12 } from "./ja/guides/parties_legacyCatalog";
-import { records as en12 } from "./translations/en/parties_legacyCatalog";
-import { records as zh12 } from "./translations/zh-CN/parties_legacyCatalog";
-import { sources as s13 } from "./ja/guides/parties_linkRecords";
-import { records as en13 } from "./translations/en/parties_linkRecords";
-import { records as zh13 } from "./translations/zh-CN/parties_linkRecords";
-import { sources as s14 } from "./ja/guides/parties_sharedTeams";
-import { records as en14 } from "./translations/en/parties_sharedTeams";
-import { records as zh14 } from "./translations/zh-CN/parties_sharedTeams";
-import { sources as s15 } from "./ja/ui/components_AdminLogoutButton_literals1";
-import { records as en15 } from "./translations/en/ui_components_AdminLogoutButton_literals1";
-import { records as zh15 } from "./translations/zh-CN/ui_components_AdminLogoutButton_literals1";
-import { sources as s16 } from "./ja/ui/components_DisplayPreviewBanner_literals1";
-import { records as en16 } from "./translations/en/ui_components_DisplayPreviewBanner_literals1";
-import { records as zh16 } from "./translations/zh-CN/ui_components_DisplayPreviewBanner_literals1";
-import { sources as s17 } from "./ja/ui/components_PartyAppearances";
-import { records as en17 } from "./translations/en/ui_components_PartyAppearances";
-import { records as zh17 } from "./translations/zh-CN/ui_components_PartyAppearances";
-import { sources as s18 } from "./ja/ui/components_PublicCatalogShortcut";
-import { records as en18 } from "./translations/en/ui_components_PublicCatalogShortcut";
-import { records as zh18 } from "./translations/zh-CN/ui_components_PublicCatalogShortcut";
-import { sources as s19 } from "./ja/ui/contexts_LanguageContext";
-import { records as en19 } from "./translations/en/ui_contexts_LanguageContext";
-import { records as zh19 } from "./translations/zh-CN/ui_contexts_LanguageContext";
-import { sources as s20 } from "./ja/ui/pages_AdminHome_literals1";
-import { records as en20 } from "./translations/en/ui_pages_AdminHome_literals1";
-import { records as zh20 } from "./translations/zh-CN/ui_pages_AdminHome_literals1";
-import { sources as s21 } from "./ja/ui/pages_AdminHome_literals2";
-import { records as en21 } from "./translations/en/ui_pages_AdminHome_literals2";
-import { records as zh21 } from "./translations/zh-CN/ui_pages_AdminHome_literals2";
-import { sources as s22 } from "./ja/ui/pages_CharacterCatalog";
-import { records as en22 } from "./translations/en/ui_pages_CharacterCatalog";
-import { records as zh22 } from "./translations/zh-CN/ui_pages_CharacterCatalog";
-import { sources as s23 } from "./ja/ui/pages_CharacterCatalog_literals1";
-import { records as en23 } from "./translations/en/ui_pages_CharacterCatalog_literals1";
-import { records as zh23 } from "./translations/zh-CN/ui_pages_CharacterCatalog_literals1";
-import { sources as s24 } from "./ja/ui/pages_DisplaySettingsAdmin_literals1";
-import { records as en24 } from "./translations/en/ui_pages_DisplaySettingsAdmin_literals1";
-import { records as zh24 } from "./translations/zh-CN/ui_pages_DisplaySettingsAdmin_literals1";
-import { sources as s25 } from "./ja/ui/pages_DisplaySettingsAdmin_literals2";
-import { records as en25 } from "./translations/en/ui_pages_DisplaySettingsAdmin_literals2";
-import { records as zh25 } from "./translations/zh-CN/ui_pages_DisplaySettingsAdmin_literals2";
-import { sources as s26 } from "./ja/ui/pages_GuideHistory_literals1";
-import { records as en26 } from "./translations/en/ui_pages_GuideHistory_literals1";
-import { records as zh26 } from "./translations/zh-CN/ui_pages_GuideHistory_literals1";
-import { sources as s27 } from "./ja/ui/pages_Home";
-import { records as en27 } from "./translations/en/ui_pages_Home";
-import { records as zh27 } from "./translations/zh-CN/ui_pages_Home";
-import { sources as s28 } from "./ja/ui/pages_Home_literals1";
-import { records as en28 } from "./translations/en/ui_pages_Home_literals1";
-import { records as zh28 } from "./translations/zh-CN/ui_pages_Home_literals1";
-import { sources as s29 } from "./ja/ui/pages_Home_residual1";
-import { records as en29 } from "./translations/en/ui_pages_Home_residual1";
-import { records as zh29 } from "./translations/zh-CN/ui_pages_Home_residual1";
-import { sources as s30 } from "./ja/ui/pages_LanguageSettingsAdmin_literals1";
-import { records as en30 } from "./translations/en/ui_pages_LanguageSettingsAdmin_literals1";
-import { records as zh30 } from "./translations/zh-CN/ui_pages_LanguageSettingsAdmin_literals1";
-import { sources as s31 } from "./ja/ui/pages_LanguageSettingsAdmin_literals2";
-import { records as en31 } from "./translations/en/ui_pages_LanguageSettingsAdmin_literals2";
-import { records as zh31 } from "./translations/zh-CN/ui_pages_LanguageSettingsAdmin_literals2";
-export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12, ...s13, ...s14, ...s15, ...s16, ...s17, ...s18, ...s19, ...s20, ...s21, ...s22, ...s23, ...s24, ...s25, ...s26, ...s27, ...s28, ...s29, ...s30, ...s31];
-export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12, ...en13, ...en14, ...en15, ...en16, ...en17, ...en18, ...en19, ...en20, ...en21, ...en22, ...en23, ...en24, ...en25, ...en26, ...en27, ...en28, ...en29, ...en30, ...en31}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12, ...zh13, ...zh14, ...zh15, ...zh16, ...zh17, ...zh18, ...zh19, ...zh20, ...zh21, ...zh22, ...zh23, ...zh24, ...zh25, ...zh26, ...zh27, ...zh28, ...zh29, ...zh30, ...zh31} };
+import { sources as s5 } from "./ja/guides/characterConstellations_helpers";
+import { records as en5 } from "./translations/en/characterConstellations_helpers";
+import { records as zh5 } from "./translations/zh-CN/characterConstellations_helpers";
+import { sources as s6 } from "./ja/guides/gameProviders";
+import { records as en6 } from "./translations/en/gameProviders";
+import { records as zh6 } from "./translations/zh-CN/gameProviders";
+import { sources as s7 } from "./ja/guides/guideUpdateHistory";
+import { records as en7 } from "./translations/en/guideUpdateHistory";
+import { records as zh7 } from "./translations/zh-CN/guideUpdateHistory";
+import { sources as s8 } from "./ja/guides/individualGuides";
+import { records as en8 } from "./translations/en/individualGuides";
+import { records as zh8 } from "./translations/zh-CN/individualGuides";
+import { sources as s9 } from "./ja/guides/parties_batch24Teams";
+import { records as en9 } from "./translations/en/parties_batch24Teams";
+import { records as zh9 } from "./translations/zh-CN/parties_batch24Teams";
+import { sources as s10 } from "./ja/guides/parties_batch25Teams";
+import { records as en10 } from "./translations/en/parties_batch25Teams";
+import { records as zh10 } from "./translations/zh-CN/parties_batch25Teams";
+import { sources as s11 } from "./ja/guides/parties_batch26Teams";
+import { records as en11 } from "./translations/en/parties_batch26Teams";
+import { records as zh11 } from "./translations/zh-CN/parties_batch26Teams";
+import { sources as s12 } from "./ja/guides/parties_batch27Teams";
+import { records as en12 } from "./translations/en/parties_batch27Teams";
+import { records as zh12 } from "./translations/zh-CN/parties_batch27Teams";
+import { sources as s13 } from "./ja/guides/parties_legacyCatalog";
+import { records as en13 } from "./translations/en/parties_legacyCatalog";
+import { records as zh13 } from "./translations/zh-CN/parties_legacyCatalog";
+import { sources as s14 } from "./ja/guides/parties_linkRecords";
+import { records as en14 } from "./translations/en/parties_linkRecords";
+import { records as zh14 } from "./translations/zh-CN/parties_linkRecords";
+import { sources as s15 } from "./ja/guides/parties_sharedTeams";
+import { records as en15 } from "./translations/en/parties_sharedTeams";
+import { records as zh15 } from "./translations/zh-CN/parties_sharedTeams";
+import { sources as s16 } from "./ja/ui/components_AdminLogoutButton_literals1";
+import { records as en16 } from "./translations/en/ui_components_AdminLogoutButton_literals1";
+import { records as zh16 } from "./translations/zh-CN/ui_components_AdminLogoutButton_literals1";
+import { sources as s17 } from "./ja/ui/components_DisplayPreviewBanner_literals1";
+import { records as en17 } from "./translations/en/ui_components_DisplayPreviewBanner_literals1";
+import { records as zh17 } from "./translations/zh-CN/ui_components_DisplayPreviewBanner_literals1";
+import { sources as s18 } from "./ja/ui/components_PartyAppearances";
+import { records as en18 } from "./translations/en/ui_components_PartyAppearances";
+import { records as zh18 } from "./translations/zh-CN/ui_components_PartyAppearances";
+import { sources as s19 } from "./ja/ui/components_PublicCatalogShortcut";
+import { records as en19 } from "./translations/en/ui_components_PublicCatalogShortcut";
+import { records as zh19 } from "./translations/zh-CN/ui_components_PublicCatalogShortcut";
+import { sources as s20 } from "./ja/ui/contexts_LanguageContext";
+import { records as en20 } from "./translations/en/ui_contexts_LanguageContext";
+import { records as zh20 } from "./translations/zh-CN/ui_contexts_LanguageContext";
+import { sources as s21 } from "./ja/ui/pages_AdminHome_literals1";
+import { records as en21 } from "./translations/en/ui_pages_AdminHome_literals1";
+import { records as zh21 } from "./translations/zh-CN/ui_pages_AdminHome_literals1";
+import { sources as s22 } from "./ja/ui/pages_AdminHome_literals2";
+import { records as en22 } from "./translations/en/ui_pages_AdminHome_literals2";
+import { records as zh22 } from "./translations/zh-CN/ui_pages_AdminHome_literals2";
+import { sources as s23 } from "./ja/ui/pages_CharacterCatalog";
+import { records as en23 } from "./translations/en/ui_pages_CharacterCatalog";
+import { records as zh23 } from "./translations/zh-CN/ui_pages_CharacterCatalog";
+import { sources as s24 } from "./ja/ui/pages_CharacterCatalog_literals1";
+import { records as en24 } from "./translations/en/ui_pages_CharacterCatalog_literals1";
+import { records as zh24 } from "./translations/zh-CN/ui_pages_CharacterCatalog_literals1";
+import { sources as s25 } from "./ja/ui/pages_DisplaySettingsAdmin_literals1";
+import { records as en25 } from "./translations/en/ui_pages_DisplaySettingsAdmin_literals1";
+import { records as zh25 } from "./translations/zh-CN/ui_pages_DisplaySettingsAdmin_literals1";
+import { sources as s26 } from "./ja/ui/pages_DisplaySettingsAdmin_literals2";
+import { records as en26 } from "./translations/en/ui_pages_DisplaySettingsAdmin_literals2";
+import { records as zh26 } from "./translations/zh-CN/ui_pages_DisplaySettingsAdmin_literals2";
+import { sources as s27 } from "./ja/ui/pages_GuideHistory_literals1";
+import { records as en27 } from "./translations/en/ui_pages_GuideHistory_literals1";
+import { records as zh27 } from "./translations/zh-CN/ui_pages_GuideHistory_literals1";
+import { sources as s28 } from "./ja/ui/pages_Home";
+import { records as en28 } from "./translations/en/ui_pages_Home";
+import { records as zh28 } from "./translations/zh-CN/ui_pages_Home";
+import { sources as s29 } from "./ja/ui/pages_Home_literals1";
+import { records as en29 } from "./translations/en/ui_pages_Home_literals1";
+import { records as zh29 } from "./translations/zh-CN/ui_pages_Home_literals1";
+import { sources as s30 } from "./ja/ui/pages_Home_residual1";
+import { records as en30 } from "./translations/en/ui_pages_Home_residual1";
+import { records as zh30 } from "./translations/zh-CN/ui_pages_Home_residual1";
+import { sources as s31 } from "./ja/ui/pages_Home_templates";
+import { records as en31 } from "./translations/en/ui_pages_Home_templates";
+import { records as zh31 } from "./translations/zh-CN/ui_pages_Home_templates";
+import { sources as s32 } from "./ja/ui/pages_LanguageSettingsAdmin_literals1";
+import { records as en32 } from "./translations/en/ui_pages_LanguageSettingsAdmin_literals1";
+import { records as zh32 } from "./translations/zh-CN/ui_pages_LanguageSettingsAdmin_literals1";
+import { sources as s33 } from "./ja/ui/pages_LanguageSettingsAdmin_literals2";
+import { records as en33 } from "./translations/en/ui_pages_LanguageSettingsAdmin_literals2";
+import { records as zh33 } from "./translations/zh-CN/ui_pages_LanguageSettingsAdmin_literals2";
+import { sources as s34 } from "./ja/ui/pages_LanguageSettingsAdmin_templates";
+import { records as en34 } from "./translations/en/ui_pages_LanguageSettingsAdmin_templates";
+import { records as zh34 } from "./translations/zh-CN/ui_pages_LanguageSettingsAdmin_templates";
+export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12, ...s13, ...s14, ...s15, ...s16, ...s17, ...s18, ...s19, ...s20, ...s21, ...s22, ...s23, ...s24, ...s25, ...s26, ...s27, ...s28, ...s29, ...s30, ...s31, ...s32, ...s33, ...s34];
+export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12, ...en13, ...en14, ...en15, ...en16, ...en17, ...en18, ...en19, ...en20, ...en21, ...en22, ...en23, ...en24, ...en25, ...en26, ...en27, ...en28, ...en29, ...en30, ...en31, ...en32, ...en33, ...en34}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12, ...zh13, ...zh14, ...zh15, ...zh16, ...zh17, ...zh18, ...zh19, ...zh20, ...zh21, ...zh22, ...zh23, ...zh24, ...zh25, ...zh26, ...zh27, ...zh28, ...zh29, ...zh30, ...zh31, ...zh32, ...zh33, ...zh34} };
 export function canonicalCatalog(planned: CoverageSection[] = []): ContentCatalog {
 return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTranslations, aliases: [], sections: [
 {id:"legacy.batch17ConstellationData_generated", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s0.map(source=>({kind:"textRef" as const,id:source.id}))}},
@@ -105,32 +114,35 @@ return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTra
 {id:"legacy.batch23GenshinData", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s2.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.buildAdvisor", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s3.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.characterConstellations", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s4.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.gameProviders", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s5.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.guideUpdateHistory", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s6.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.individualGuides", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s7.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch24Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s8.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch25Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s9.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch26Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s10.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_batch27Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s11.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_legacyCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s12.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_linkRecords", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s13.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.parties_sharedTeams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s14.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_components_AdminLogoutButton_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s15.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_components_DisplayPreviewBanner_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s16.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_components_PartyAppearances", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s17.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_components_PublicCatalogShortcut", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s18.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_contexts_LanguageContext", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s19.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_AdminHome_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s20.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_AdminHome_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s21.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_CharacterCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s22.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_CharacterCatalog_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s23.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_DisplaySettingsAdmin_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s24.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_DisplaySettingsAdmin_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s25.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_GuideHistory_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s26.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_Home", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s27.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_Home_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s28.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_Home_residual1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s29.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_LanguageSettingsAdmin_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s30.map(source=>({kind:"textRef" as const,id:source.id}))}},
-{id:"legacy.ui_pages_LanguageSettingsAdmin_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s31.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.characterConstellations_helpers", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s5.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.gameProviders", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s6.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.guideUpdateHistory", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s7.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.individualGuides", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s8.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch24Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s9.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch25Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s10.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch26Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s11.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_batch27Teams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s12.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_legacyCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s13.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_linkRecords", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s14.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.parties_sharedTeams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s15.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_AdminLogoutButton_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s16.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_DisplayPreviewBanner_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s17.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_PartyAppearances", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s18.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_PublicCatalogShortcut", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s19.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_contexts_LanguageContext", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s20.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_AdminHome_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s21.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_AdminHome_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s22.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_CharacterCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s23.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_CharacterCatalog_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s24.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_DisplaySettingsAdmin_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s25.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_DisplaySettingsAdmin_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s26.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_GuideHistory_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s27.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_Home", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s28.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_Home_literals1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s29.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_Home_residual1", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s30.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_Home_templates", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s31.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_LanguageSettingsAdmin_literals1", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s32.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_LanguageSettingsAdmin_literals2", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s33.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_LanguageSettingsAdmin_templates", audience:"admin", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s34.map(source=>({kind:"textRef" as const,id:source.id}))}},
 ...planned] };
 }
