@@ -6,6 +6,7 @@ import { exportCandidates, readiness, reportCoverage } from "../../server/conten
 import {unresolvedTeamMembers} from "../../content/teams";
 import {unresolvedConstellationIdentities} from "../../content/constellations";
 import {unresolvedGenericTeamMembers} from "../../content/genericTeams";
+import {unresolvedGuideFields} from "../../content/guides";
 import { expectedCatalogIndex } from "./catalogIndex";
 import { checkUiGate } from "./uiGate";
 
@@ -34,7 +35,7 @@ export function contentCommand(args: string[]): number {
   const validLanguage = language === "en" || language === "zh-CN";
   const output = (value: unknown) => console.log(JSON.stringify(value, null, 2));
   if (command === "report" && (options.length === 0 || options.join(" ") === "--format json")) {
-    output({ manifest: contentManifest(), ui, unresolvedTeamMembers:unresolvedTeamMembers(), unresolvedGenericTeamMembers:unresolvedGenericTeamMembers(), unresolvedConstellationIdentities:unresolvedConstellationIdentities(), ...reportCoverage(index) }); return 0;
+    output({ manifest: contentManifest(), ui, unresolvedTeamMembers:unresolvedTeamMembers(), unresolvedGenericTeamMembers:unresolvedGenericTeamMembers(), unresolvedConstellationIdentities:unresolvedConstellationIdentities(), unresolvedGuideFields:unresolvedGuideFields(), ...reportCoverage(index) }); return 0;
   }
   if (command === "export" && options.length === 2 && options[0] === "--language" && validLanguage) {
     output(exportCandidates(index, language)); return 0;
@@ -45,8 +46,9 @@ export function contentCommand(args: string[]): number {
     const unresolvedMembers=options[3]==="public"?unresolvedTeamMembers():[];
     const unresolvedConstellations=options[3]==="public"?unresolvedConstellationIdentities():[];
     const unresolvedGenericMembers=options[3]==="public"?unresolvedGenericTeamMembers():[];
-    if (legacyDisplay.length || unresolvedMembers.length || unresolvedConstellations.length || unresolvedGenericMembers.length) result.ready = false;
-    output({ ...result, legacyDisplay, unresolvedMembers, unresolvedConstellations, unresolvedGenericMembers }); return result.structureIssues.length ? 1 : result.ready ? 0 : 2;
+    const unresolvedGuides=options[3]==="public"?unresolvedGuideFields():[];
+    if (legacyDisplay.length || unresolvedMembers.length || unresolvedConstellations.length || unresolvedGenericMembers.length || unresolvedGuides.length) result.ready = false;
+    output({ ...result, legacyDisplay, unresolvedMembers, unresolvedConstellations, unresolvedGenericMembers, unresolvedGuides }); return result.structureIssues.length ? 1 : result.ready ? 0 : 2;
   }
   const target = resolve("client/src/content/manifest.ts");
   if (command === "generate" && !options.length) {

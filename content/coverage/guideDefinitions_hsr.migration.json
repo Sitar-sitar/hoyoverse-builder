@@ -1,0 +1,442 @@
+[
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00001",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ホタル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00002",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "カフカ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00003",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "銀狼"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00004",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "御空"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00005",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "長夜月"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00006",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "停雲"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00007",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "白露"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00008",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "緋英"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00009",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "彦卿"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00010",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "黄泉"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00011",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ゼーレ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00012",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "景元"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00013",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "姫子"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00014",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "Dr.レイシオ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00015",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "トパーズ＆カブ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00016",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "飲月"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00017",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "刃"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00018",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ブートヒル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00019",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ルアン・メェイ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00020",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "花火"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00021",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ブローニャ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00022",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "符玄"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00023",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アベンチュリン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00024",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "フォフォ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00025",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ギャラガー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00026",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "キャストリス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00027",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アグライア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00028",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アナイクス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00029",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "飛霄"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00030",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "雲璃"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00031",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "霊砂"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00032",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "椒丘"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00033",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ブラックスワン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00034",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "サンデー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00035",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ロビン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00036",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "クラーラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00037",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "サフェル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00038",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "マダム・ヘルタ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00039",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "トパーズ&カブ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00040",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "丹恒・飲月"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00041",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "鏡流"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00042",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "羅刹"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00043",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アーチャー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00044",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アーラン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00045",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アスター"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00046",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アルジェンティ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00047",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ヴェルト"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00048",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "キュレネ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00049",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ギルガメッシュ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00050",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ケリュドラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00051",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "サンポ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00052",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "セイバー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00053",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "セイレンス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00054",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ジェイド"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00055",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ジェパード"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00056",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "千冶・刃"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00057",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "姫子・旅立ち"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00058",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ロビン・夏空の歌"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00059",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "アベンチュリン・波と戯れる夏"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00060",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "パール"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00061",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "セーバル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00062",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ダリア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00063",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "トリビー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00064",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ナターシャ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00065",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ヒアンシー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00066",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ファイノン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00067",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "フック"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00068",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ペラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00069",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ヘルタ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00070",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ミーシャ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00071",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "モーディス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00072",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "モゼ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00073",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "リンクス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00074",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "ルカ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00075",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "遠坂凛"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00076",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "火花"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00077",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "寒鴉"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00078",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "帰忘の流離人"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00079",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "桂乃芬"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00080",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "青雀"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00081",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "雪衣"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00082",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "素裳"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00083",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "丹恒"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00084",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "丹恒・騰荒"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00085",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "不死途"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00086",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "乱破"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00087",
+    "registry": "GUIDE_OVERRIDES",
+    "lookupKey": "爻光"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_hsr.b00088",
+    "registry": "GUIDE_OVERRIDES_BY_SOURCE_ID",
+    "lookupKey": "1001"
+  }
+]

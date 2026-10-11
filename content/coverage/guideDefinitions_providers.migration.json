@@ -1,0 +1,722 @@
+[
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00001",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ナヒーダ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00002",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "楓原万葉"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00003",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "神里綾華"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00004",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "雷電将軍"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00005",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ヌヴィレット"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00006",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "フリーナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00007",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "夜蘭"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00008",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "珊瑚宮心海"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00009",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "鍾離"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00010",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ニィロウ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00011",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アルハイゼン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00012",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アルレッキーノ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00013",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ナヴィア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00014",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "胡桃"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00015",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "シロネン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00016",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "閑雲"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00017",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ベネット"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00018",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アンバー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00019",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "甘雨"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00020",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "行秋"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00021",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "久岐忍"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00022",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "香菱"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00023",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "フィッシュル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00024",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "白朮"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00025",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "八重神子"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00026",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "宵宮"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00027",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アーロイ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00028",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アイノ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00029",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "アルベド"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00030",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "イアンサ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00031",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "イネファ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00032",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "イファ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00033",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ヴァレサ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00034",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ウェンティ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00035",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "エウルア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00036",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "エスコフィエ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00037",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "エミリエ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00038",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "オロルン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00039",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "カーヴェ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00040",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ガイア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00041",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "カチーナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00042",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "キィニチ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00043",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "キャンディス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00044",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "クレー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00045",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "クロリンデ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00046",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "コレイ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00047",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ゴロー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00048",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "コロンビーナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00049",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "シグウィン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00050",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "シトラリ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00051",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "シャルロット"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00052",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "シュヴルーズ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00053",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ジン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00054",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "スカーク"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00055",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "スクロース"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00056",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "セトス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00057",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "セノ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00058",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ダリア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00059",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "タルタリヤ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00060",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "チャスカ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00061",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ディオナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00062",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ディシア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00063",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ティナリ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00064",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "バーバラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00065",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ファルザン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00066",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "フレミネ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00067",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ミカ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00068",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "モナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00069",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ヨォーヨ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00070",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ラウマ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00071",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "リサ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00072",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "リネ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00073",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "リネット"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00074",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "レイラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00075",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "マーヴィカ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00076",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ムアラニ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00077",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "フリンズ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00078",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ヤフォダ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00079",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "リオセスリ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00080",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ディルック"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00081",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ドゥリン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00082",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "トーマ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00083",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ドリー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00084",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ネフェル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00085",
+    "registry": "GI_GUIDE_OVERRIDES",
+    "lookupKey": "ノエル"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00086",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "クラレッタ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00087",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "0号・アンビー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00088",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ビビアン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00089",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "プロメイア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00090",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "エレン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00091",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ジェーン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00092",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "星見雅"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00093",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "浮波柚葉"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00094",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "月城柳"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00095",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "アストラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00096",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ライト"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00097",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "レミエール"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00098",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "猫又"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00099",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "盤岳"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00100",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "葉瞬光"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00101",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "潘引壺"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00102",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "セス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00103",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "パイパー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00104",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "蒼角"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00105",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "グレース"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00106",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "バーニス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00107",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ルーシー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00108",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "シーザー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00109",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "リナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00110",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "青衣"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00111",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "「11号」"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00112",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "「シード」"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00113",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "「トリガー」"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00114",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "アリア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00115",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "アリス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00116",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "アンドー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00117",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "アンビー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00118",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "イヴリン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00119",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "イドリー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00120",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ヴェリナ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00121",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "オルペウス&「鬼火」"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00122",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "カリン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00123",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "クレタ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00124",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "シーシィア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00125",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "シグリッド"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00126",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "スターライト･ビリー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00127",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ダイアリン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00128",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ニコ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00129",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ノルムー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00130",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ヒューゴ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00131",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ピュロイス"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00132",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ビリー"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00133",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "プルクラ"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00134",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ベン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00135",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "ライカン"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00136",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "リュシア"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00137",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "儀玄"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00138",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "橘福福"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00139",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "狛野真斗"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00140",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "朱鳶"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00141",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "照"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00142",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "千夏"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00143",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "浅羽悠真"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_providers.b00144",
+    "registry": "ZZZ_CHARACTER_GUIDES",
+    "lookupKey": "南宮羽"
+  }
+]
