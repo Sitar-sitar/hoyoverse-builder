@@ -1,10 +1,10 @@
+import { records as guideRecords } from "../content/guideDefinitions_batch23";
+import { projectGuideRegistry } from "./content/guides";
 import { records as constellationRecords } from "../content/constellationBatch23";
 import { projectConstellations } from "./content/constellations";
 import { createLegacyTexts } from "./content/legacyTexts";
-import { sources as _sources } from "../content/ja/guides/batch23GenshinData";
-import { records as _en } from "../content/translations/en/batch23GenshinData";
-import { records as _zh } from "../content/translations/zh-CN/batch23GenshinData";
-const _content = createLegacyTexts(_sources, _en, _zh);
+import { characterSources } from "../content/characters";
+const _content = createLegacyTexts(characterSources, {}, {});
 import type { GuideDefinition } from "./buildAdvisor";
 import type { ConstellationProfile } from "./characterConstellations";
 
@@ -21,62 +21,26 @@ export const BATCH23_GENSHIN_CHARACTERS: Record<
   }
 > = {
   "10000143": {
-    name: "ヴェスナ",
+    name: _content.ja("character.genshin.10000143.name"),
     element: "Wind",
     weaponType: "WEAPON_SWORD_ONE_HAND",
     sideIcon: "UI_AvatarIcon_Side_Vesna",
     portrait:
       "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Vesna.png",
-    guide: {
-      headline: _content.ja("guide.legacy.batch23GenshinData.b00001"),
-      relicSet: _content.ja("guide.legacy.batch23GenshinData.b00002"),
-      planarSet: _content.ja("guide.legacy.batch23GenshinData.b00003"),
-      mainStats: [
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00004"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00005"),
-        },
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00006"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00007"),
-        },
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00008"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00009"),
-        },
-      ],
-      targets: [],
-      targetContext: _content.ja("guide.legacy.batch23GenshinData.b00010"),
-    },
+    guide: projectGuideRegistry(guideRecords, "BATCH23_GENSHIN_CHARACTERS")[
+      "10000143"
+    ],
   },
   "10000140": {
-    name: "ヴォジャニーツァ",
+    name: _content.ja("character.genshin.10000140.name"),
     element: "Water",
     weaponType: "WEAPON_CATALYST",
     sideIcon: "UI_AvatarIcon_Side_Vodyanitsa",
     portrait:
       "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Vodyanitsa.png",
-    guide: {
-      headline: _content.ja("guide.legacy.batch23GenshinData.b00011"),
-      relicSet: _content.ja("guide.legacy.batch23GenshinData.b00012"),
-      planarSet: _content.ja("guide.legacy.batch23GenshinData.b00013"),
-      mainStats: [
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00014"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00015"),
-        },
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00016"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00017"),
-        },
-        {
-          slot: _content.ja("guide.legacy.batch23GenshinData.b00018"),
-          value: _content.ja("guide.legacy.batch23GenshinData.b00019"),
-        },
-      ],
-      targets: [],
-      targetContext: _content.ja("guide.legacy.batch23GenshinData.b00020"),
-    },
+    guide: projectGuideRegistry(guideRecords, "BATCH23_GENSHIN_CHARACTERS")[
+      "10000140"
+    ],
   },
 };
 

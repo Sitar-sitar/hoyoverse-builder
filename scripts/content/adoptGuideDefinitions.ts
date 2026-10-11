@@ -16,6 +16,7 @@ export function decodeGuideDefinitions(
       game: GuideAuthoringRecord["game"];
       kind: GuideAuthoringRecord["lookupKind"];
       factory?: { headline: TextRef; context: TextRef };
+      nestedGuide?: true;
       normalize?: (
         raw: any,
         name: string,
@@ -236,37 +237,60 @@ export function decodeGuideDefinitions(
     }
     if (!declaration?.initializer)
       throw new Error(`Missing guide registry ${registry}`);
-    edits.push({
-      start: declaration.initializer.getStart(ast),
-      end: declaration.initializer.end,
-      value: policy.factory
-        ? `projectGuideProfileRegistry(guideRecords, ${JSON.stringify(registry)}) as ${declaration.type?.getText(ast)}`
-        : `projectGuideRegistry(guideRecords, ${JSON.stringify(registry)})`,
-    });
+    if (policy.nestedGuide) {
+      if (!ts.isObjectLiteralExpression(declaration.initializer))
+        throw new Error("Nested guide registry must be static");
+      for (const property of declaration.initializer.properties) {
+        if (
+          !ts.isPropertyAssignment(property) ||
+          !ts.isObjectLiteralExpression(property.initializer)
+        )
+          throw new Error("Invalid nested guide entry");
+        const guide = property.initializer.properties.find(
+          item => ts.isPropertyAssignment(item) && key(item.name) === "guide"
+        );
+        if (!guide || !ts.isPropertyAssignment(guide))
+          throw new Error("Missing nested guide field");
+        edits.push({
+          start: guide.initializer.getStart(ast),
+          end: guide.initializer.end,
+          value: `projectGuideRegistry(guideRecords, ${JSON.stringify(registry)})[${JSON.stringify(key(property.name))}]`,
+        });
+      }
+    } else
+      edits.push({
+        start: declaration.initializer.getStart(ast),
+        end: declaration.initializer.end,
+        value: policy.factory
+          ? `projectGuideProfileRegistry(guideRecords, ${JSON.stringify(registry)}) as ${declaration.type?.getText(ast)}`
+          : `projectGuideRegistry(guideRecords, ${JSON.stringify(registry)})`,
+      });
     for (const [lookupKey, original] of Object.entries(dictionary)) {
-      const raw = policy.normalize
-        ? policy.normalize(original, lookupKey, {
-            constant: name => {
-              const expression = constants.get(name);
-              if (!expression) throw new Error("Missing guide constant");
-              return value(expression);
-            },
-            template: (ja, placeholders, variables) => {
-              const existing = sources.find(
-                source =>
-                  source.ja === ja &&
-                  JSON.stringify(source.placeholders) ===
-                    JSON.stringify(placeholders)
-              );
-              const textRef = existing
-                ? { kind: "textRef" as const, id: existing.id }
-                : ref(ja, `${policy.game} ${registry}: typed guide template`);
-              if (!existing)
-                sources[sources.length - 1].placeholders = placeholders;
-              return { ...textRef, variables };
-            },
-          })
-        : original;
+      const raw = policy.nestedGuide
+        ? original.guide
+        : policy.normalize
+          ? policy.normalize(original, lookupKey, {
+              constant: name => {
+                const expression = constants.get(name);
+                if (!expression) throw new Error("Missing guide constant");
+                return value(expression);
+              },
+              template: (ja, placeholders, variables) => {
+                const existing = sources.find(
+                  source =>
+                    source.ja === ja &&
+                    JSON.stringify(source.placeholders) ===
+                      JSON.stringify(placeholders)
+                );
+                const textRef = existing
+                  ? { kind: "textRef" as const, id: existing.id }
+                  : ref(ja, `${policy.game} ${registry}: typed guide template`);
+                if (!existing)
+                  sources[sources.length - 1].placeholders = placeholders;
+                return { ...textRef, variables };
+              },
+            })
+          : original;
       if (
         Object.keys(raw).some(
           key =>
@@ -446,6 +470,16 @@ if (
         ZZZ_CHARACTER_GUIDES: { game: "zzz", kind: "name" },
       },
     },
+    batch23: {
+      path: "server/batch23GenshinData.ts",
+      registries: {
+        BATCH23_GENSHIN_CHARACTERS: {
+          game: "genshin",
+          kind: "sourceId",
+          nestedGuide: true,
+        },
+      },
+    },
     batch17: {
       path: "server/batch17Guides.ts",
       registries: {
@@ -541,7 +575,7 @@ if (
     (process.argv[3] !== undefined && process.argv[3] !== "--write")
   )
     throw new Error(
-      "Usage: adopt-guide-definitions hsr|providers|profiles|batch17 [--write]"
+      "Usage: adopt-guide-definitions hsr|providers|profiles|batch17|batch23 [--write]"
     );
   const moduleName = `guideDefinitions_${module}`;
   const output = `content/${moduleName}.ts`;
@@ -558,17 +592,19 @@ if (
       `import type {GuideAuthoringRecord} from "../shared/content/guideAuthoring";\nexport const records:GuideAuthoringRecord[]=${JSON.stringify(result.records, null, 2)};\n`,
       { flag: "wx" }
     );
-    writeFileSync(
-      resolve(`content/ja/guides/${moduleName}.ts`),
-      renderSources(result.sources),
-      { flag: "wx" }
-    );
-    for (const language of ["en", "zh-CN"])
+    if (result.sources.length) {
       writeFileSync(
-        resolve(`content/translations/${language}/${moduleName}.ts`),
-        'import type {TranslationRecord} from "../../../shared/content/types";\nexport const records:Record<string,TranslationRecord>={};\n',
+        resolve(`content/ja/guides/${moduleName}.ts`),
+        renderSources(result.sources),
         { flag: "wx" }
       );
+      for (const language of ["en", "zh-CN"])
+        writeFileSync(
+          resolve(`content/translations/${language}/${moduleName}.ts`),
+          'import type {TranslationRecord} from "../../../shared/content/types";\nexport const records:Record<string,TranslationRecord>={};\n',
+          { flag: "wx" }
+        );
+    }
     writeFileSync(
       resolve(`content/coverage/${moduleName}.migration.json`),
       JSON.stringify(result.mapping, null, 2) + "\n",

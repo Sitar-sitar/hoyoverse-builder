@@ -12,6 +12,7 @@ import { TRPCError } from "@trpc/server";
 import { FIELD_TO_COMPONENT, FIELD_TO_STAT_KEY, fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
 import { generatedHsrGuide } from "./individualGuides";
 import { guideMetadataFor } from "./characterGuideMetadata";
+import {projectGuideMetadataDefaults} from "./content/guideMetadata";
 import { partyRecommendationsFor, type PartyRecommendationSet } from "./partyRecommendations";
 import { resolveCharacterIdentity, type CharacterIdentity } from "./characterIdentity";
 import { constellationProfileFor, type ConstellationProfile } from "./characterConstellations";
@@ -41,13 +42,14 @@ export type GuideDefinition = {
   profileId?: string;
 };
 
+const guideMetadataDefaults = projectGuideMetadataDefaults();
 export const GUIDE_DATASET_STATUS = {
   dataAsOf: "2026-08-18",
   updatedAt: "2026-08-18",
   sourceLabels: {
-    hsr: "KQM・StarDB・Game8の公開ビルド情報を照合",
-    genshin: "GameWith・Game8の公開ビルド情報を照合",
-    zzz: "Prydwen・公開エージェントデータを照合",
+    hsr: guideMetadataDefaults.hsr.sourceLabel,
+    genshin: guideMetadataDefaults.genshin.sourceLabel,
+    zzz: guideMetadataDefaults.zzz.sourceLabel,
   },
 } as const;
 
@@ -276,18 +278,9 @@ export type BuildLookupResult = {
   fetchedAt: string;
 };
 
-const DAMAGE_TARGETS: TargetStatDefinition[] = [
-  { key: "critRate", label: _content.ja("guide.legacy.buildAdvisor.b00001"), unit: "%", targets: { "厳選": 85, "目標": 75, "妥協": 65 } },
-  { key: "critDmg", label: _content.ja("guide.legacy.buildAdvisor.b00002"), unit: "%", targets: { "厳選": 180, "目標": 150, "妥協": 120 } },
-  { key: "speed", label: _content.ja("guide.legacy.buildAdvisor.b00003"), unit: "", targets: { "厳選": 134, "目標": 134, "妥協": 120 } },
-  { key: "attackPercent", label: _content.ja("guide.legacy.buildAdvisor.b00004"), unit: "%", targets: { "厳選": 70, "目標": 55, "妥協": 40 } },
-];
 
-const SUPPORT_TARGETS: TargetStatDefinition[] = [
-  { key: "speed", label: _content.ja("guide.legacy.buildAdvisor.b00005"), unit: "", targets: { "厳選": 160, "目標": 145, "妥協": 134 } },
-  { key: "effectRes", label: _content.ja("guide.legacy.buildAdvisor.b00006"), unit: "%", targets: { "厳選": 45, "目標": 30, "妥協": 20 } },
-  { key: "hpPercent", label: _content.ja("guide.legacy.buildAdvisor.b00007"), unit: "%", targets: { "厳選": 45, "目標": 32, "妥協": 20 } },
-];
+
+
 
 const BREAK_TARGETS: TargetStatDefinition[] = [
   { key: "breakEffect", label: _content.ja("guide.legacy.buildAdvisor.b00008"), unit: "%", targets: { "厳選": 360, "目標": 300, "妥協": 240 } },
@@ -295,64 +288,14 @@ const BREAK_TARGETS: TargetStatDefinition[] = [
   { key: "attackPercent", label: _content.ja("guide.legacy.buildAdvisor.b00010"), unit: "%", targets: { "厳選": 45, "目標": 35, "妥協": 25 } },
 ];
 
-const DOT_TARGETS: TargetStatDefinition[] = [
-  { key: "speed", label: _content.ja("guide.legacy.buildAdvisor.b00011"), unit: "", targets: { "厳選": 160, "目標": 147, "妥協": 134 } },
-  { key: "attackPercent", label: _content.ja("guide.legacy.buildAdvisor.b00012"), unit: "%", targets: { "厳選": 90, "目標": 75, "妥協": 60 } },
-  { key: "effectHitRate", label: _content.ja("guide.legacy.buildAdvisor.b00013"), unit: "%", targets: { "厳選": 40, "目標": 30, "妥協": 20 } },
-];
 
-function damageGuide(headline: string, relicSet: string, planarSet: string, targets = DAMAGE_TARGETS): GuideDefinition {
-  return { headline, relicSet, planarSet, mainStats: [{ slot: _content.ja("guide.legacy.buildAdvisor.b00014"), value: _content.ja("guide.legacy.buildAdvisor.b00015") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00016"), value: _content.ja("guide.legacy.buildAdvisor.b00017") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00018"), value: _content.ja("guide.legacy.buildAdvisor.b00019") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00020"), value: _content.ja("guide.legacy.buildAdvisor.b00021") }], targets };
-}
 
-function supportGuide(headline: string, relicSet: string, planarSet: string, targets = SUPPORT_TARGETS): GuideDefinition {
-  return { headline, relicSet, planarSet, mainStats: [{ slot: _content.ja("guide.legacy.buildAdvisor.b00022"), value: _content.ja("guide.legacy.buildAdvisor.b00023") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00024"), value: _content.ja("guide.legacy.buildAdvisor.b00025") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00026"), value: _content.ja("guide.legacy.buildAdvisor.b00027") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00028"), value: _content.ja("guide.legacy.buildAdvisor.b00029") }], targets };
-}
+
+
+
 
 const GUIDE_OVERRIDES: Record<string, GuideDefinition> = projectGuideRegistry(guideRecords, "GUIDE_OVERRIDES");
 
-const ROLE_GUIDES: Record<string, GuideDefinition> = {
-  "調和": {
-    headline: _content.ja("guide.legacy.buildAdvisor.b00166"),
-    relicSet: _content.ja("guide.legacy.buildAdvisor.b00167"),
-    planarSet: _content.ja("guide.legacy.buildAdvisor.b00168"),
-    mainStats: [
-      { slot: _content.ja("guide.legacy.buildAdvisor.b00169"), value: _content.ja("guide.legacy.buildAdvisor.b00170") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00171"), value: _content.ja("guide.legacy.buildAdvisor.b00172") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00173"), value: _content.ja("guide.legacy.buildAdvisor.b00174") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00175"), value: _content.ja("guide.legacy.buildAdvisor.b00176") },
-    ],
-    targets: SUPPORT_TARGETS,
-  },
-  "虚無": {
-    headline: _content.ja("guide.legacy.buildAdvisor.b00177"),
-    relicSet: _content.ja("guide.legacy.buildAdvisor.b00178"),
-    planarSet: _content.ja("guide.legacy.buildAdvisor.b00179"),
-    mainStats: [
-      { slot: _content.ja("guide.legacy.buildAdvisor.b00180"), value: _content.ja("guide.legacy.buildAdvisor.b00181") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00182"), value: _content.ja("guide.legacy.buildAdvisor.b00183") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00184"), value: _content.ja("guide.legacy.buildAdvisor.b00185") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00186"), value: _content.ja("guide.legacy.buildAdvisor.b00187") },
-    ],
-    targets: DOT_TARGETS,
-  },
-  "豊穣": {
-    headline: _content.ja("guide.legacy.buildAdvisor.b00188"),
-    relicSet: _content.ja("guide.legacy.buildAdvisor.b00189"),
-    planarSet: _content.ja("guide.legacy.buildAdvisor.b00190"),
-    mainStats: [
-      { slot: _content.ja("guide.legacy.buildAdvisor.b00191"), value: _content.ja("guide.legacy.buildAdvisor.b00192") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00193"), value: _content.ja("guide.legacy.buildAdvisor.b00194") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00195"), value: _content.ja("guide.legacy.buildAdvisor.b00196") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00197"), value: _content.ja("guide.legacy.buildAdvisor.b00198") },
-    ],
-    targets: SUPPORT_TARGETS,
-  },
-  "存護": {
-    headline: _content.ja("guide.legacy.buildAdvisor.b00199"),
-    relicSet: _content.ja("guide.legacy.buildAdvisor.b00200"),
-    planarSet: _content.ja("guide.legacy.buildAdvisor.b00201"),
-    mainStats: [
-      { slot: _content.ja("guide.legacy.buildAdvisor.b00202"), value: _content.ja("guide.legacy.buildAdvisor.b00203") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00204"), value: _content.ja("guide.legacy.buildAdvisor.b00205") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00206"), value: _content.ja("guide.legacy.buildAdvisor.b00207") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00208"), value: _content.ja("guide.legacy.buildAdvisor.b00209") },
-    ],
-    targets: [
-      { key: "speed", label: _content.ja("guide.legacy.buildAdvisor.b00210"), unit: "", targets: { "厳選": 150, "目標": 134, "妥協": 120 } },
-      { key: "defPercent", label: _content.ja("guide.legacy.buildAdvisor.b00211"), unit: "%", targets: { "厳選": 80, "目標": 60, "妥協": 45 } },
-      { key: "effectRes", label: _content.ja("guide.legacy.buildAdvisor.b00212"), unit: "%", targets: { "厳選": 45, "目標": 30, "妥協": 20 } },
-    ],
-  },
-};
 
 
 
@@ -366,15 +309,8 @@ const ROLE_GUIDES: Record<string, GuideDefinition> = {
 
 
 
-const DEFAULT_GUIDE: GuideDefinition = {
-  headline: _content.ja("guide.legacy.buildAdvisor.b00849"),
-  relicSet: _content.ja("guide.legacy.buildAdvisor.b00850"),
-  planarSet: _content.ja("guide.legacy.buildAdvisor.b00851"),
-  mainStats: [
-    { slot: _content.ja("guide.legacy.buildAdvisor.b00852"), value: _content.ja("guide.legacy.buildAdvisor.b00853") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00854"), value: _content.ja("guide.legacy.buildAdvisor.b00855") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00856"), value: _content.ja("guide.legacy.buildAdvisor.b00857") }, { slot: _content.ja("guide.legacy.buildAdvisor.b00858"), value: _content.ja("guide.legacy.buildAdvisor.b00859") },
-  ],
-  targets: DAMAGE_TARGETS,
-};
+
+
 
 function asRecord(value: unknown): RawRecord {
   return value && typeof value === "object" && !Array.isArray(value) ? value as RawRecord : {};

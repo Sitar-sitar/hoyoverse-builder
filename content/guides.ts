@@ -2,6 +2,7 @@ import { records as hsr } from "./guideDefinitions_hsr";
 import { records as providers } from "./guideDefinitions_providers";
 import { records as profiles } from "./guideDefinitions_profiles";
 import { records as batch17 } from "./guideDefinitions_batch17";
+import { records as batch23 } from "./guideDefinitions_batch23";
 import { canonicalSources } from "./catalog";
 import {
   contentFields,
@@ -17,7 +18,13 @@ import { formatContentText } from "../shared/content/format";
 const ignore = (_value: unknown): TextRef[] => [];
 const sources = new Set(canonicalSources.map(source => source.id));
 const sourceMap = new Map(canonicalSources.map(source => [source.id, source]));
-export const guideRecords = [...hsr, ...providers, ...profiles, ...batch17];
+export const guideRecords = [
+  ...hsr,
+  ...providers,
+  ...profiles,
+  ...batch17,
+  ...batch23,
+];
 export function validateGuides(records: GuideAuthoringRecord[]) {
   const ids = new Set<string>(),
     lookups = new Set<string>();
@@ -76,7 +83,7 @@ export function validateGuides(records: GuideAuthoringRecord[]) {
         }),
     });
     if (
-      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17)\.b\d{5}$/.test(
+      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17|batch23)\.b\d{5}$/.test(
         record.guideId
       ) ||
       ids.has(record.guideId) ||

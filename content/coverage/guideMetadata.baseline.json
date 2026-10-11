@@ -1,0 +1,1566 @@
+{
+  "records": {
+    "hsr": {
+      "Dr.レイシオ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アーチャー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アーラン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アグライア": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アスター": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アナイクス": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アベンチュリン": {
+        "profileId": "def",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アベンチュリン・波と戯れる夏": {
+        "profileId": "curated:batch20:hsr:アベンチュリン・波と戯れる夏",
+        "dataAsOf": "2026-09-24",
+        "updatedAt": "2026-09-24",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合"
+      },
+      "アルジェンティ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ヴェルト": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "カフカ": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "キャストリス": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ギャラガー": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "キュレネ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ギルガメッシュ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "クラーラ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ケリュドラ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "サフェル": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "サンデー": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "サンポ": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-14",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ジェイド": {
+        "profileId": "curated:batch18:hsr:ジェイド",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-09-11",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルドを照合"
+      },
+      "ジェパード": {
+        "profileId": "curated:batch18:hsr:ジェパード",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-09-11",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルドを照合"
+      },
+      "セイバー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "セイレンス": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "セーバル": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ゼーレ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ダリア": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "トパーズ&カブ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "トリビー": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ナターシャ": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "パール": {
+        "profileId": "curated:batch21:hsr:パール",
+        "dataAsOf": "2026-09-28",
+        "updatedAt": "2026-09-28",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合"
+      },
+      "ヒアンシー": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ファイノン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-05-31",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ブートヒル": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "フォフォ": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "フック": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ブラックスワン": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ブローニャ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ペラ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ヘルタ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ホタル": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "マダム・ヘルタ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ミーシャ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "モーディス": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "モゼ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "リンクス": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ルアン・メェイ": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ルカ": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ロビン": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ロビン・夏空の歌": {
+        "profileId": "curated:batch18:hsr:ロビン・夏空の歌",
+        "dataAsOf": "2026-09-11",
+        "updatedAt": "2026-09-11",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合"
+      },
+      "雲璃": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "遠坂凛": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "黄泉": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "火花": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "花火": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "寒鴉": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "帰忘の流離人": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "鏡流": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "銀狼": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "景元": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "桂乃芬": {
+        "profileId": "dot",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "御空": {
+        "profileId": "support",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "三月なのか": {
+        "profileId": "tank",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "刃": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "青雀": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "雪衣": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "千冶・刃": {
+        "profileId": "curated:batch18:hsr:千冶・刃",
+        "dataAsOf": "2026-09-11",
+        "updatedAt": "2026-09-11",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合"
+      },
+      "素裳": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "丹恒": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-11",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "丹恒・飲月": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "丹恒・騰荒": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "長夜月": {
+        "profileId": "hp",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "停雲": {
+        "profileId": "support",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "白露": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "緋英": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "飛霄": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "彦卿": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "姫子": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer4.5更新日付き個別ビルド・星魂・編成情報を照合"
+      },
+      "姫子・旅立ち": {
+        "profileId": "curated:batch18:hsr:姫子・旅立ち",
+        "dataAsOf": "2026-09-11",
+        "updatedAt": "2026-09-11",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・StarRailResの公式星魂データを照合"
+      },
+      "不死途": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-07",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・星魂・PTガイドを照合"
+      },
+      "符玄": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "羅刹": {
+        "profileId": "sustain",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "乱破": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・星魂・PTガイドを照合"
+      },
+      "霊砂": {
+        "profileId": "break",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "椒丘": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-21",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・星魂・PTガイドを照合"
+      },
+      "爻光": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-07",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・星魂・PTガイドを照合"
+      }
+    },
+    "genshin": {
+      "アーロイ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アイノ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アルハイゼン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アルベド": {
+        "profileId": "def",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アルレッキーノ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "アンバー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMains・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "イアンサ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMains・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "イネファ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMains・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "イファ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-24",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veins・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ヴァレサ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veins・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ヴェスナ": {
+        "profileId": "curated:batch23:genshin:ヴェスナ",
+        "dataAsOf": "2026-10-01",
+        "updatedAt": "2026-10-01",
+        "sourceLabel": "Game8・Prydwenの個別ビルド・編成とgenshin-dbの命ノ星座データを照合"
+      },
+      "ヴォジャニーツァ": {
+        "profileId": "curated:batch23:genshin:ヴォジャニーツァ",
+        "dataAsOf": "2026-10-01",
+        "updatedAt": "2026-10-01",
+        "sourceLabel": "Game8・Prydwenの個別ビルド・編成とgenshin-dbの命ノ星座データを照合"
+      },
+      "ウェンティ": {
+        "profileId": "em",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veins・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "エウルア": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "エスコフィエ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "エミリエ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "オロルン": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "カーヴェ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ガイア": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "カチーナ": {
+        "profileId": "def",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "キィニチ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "キャンディス": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "クレー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "クロリンデ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "コレイ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ゴロー": {
+        "profileId": "def",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "コロンビーナ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "シグウィン": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "シトラリ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "シャルロット": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "シュヴルーズ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "シロネン": {
+        "profileId": "def",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ジン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "スカーク": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "スクロース": {
+        "profileId": "em",
+        "dataAsOf": "2026-08-14",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・Game8英語版・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "セトス": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "セノ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ダリア": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "タルタリヤ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "チャスカ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ディオナ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ディシア": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ティナリ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ディルック": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ドゥリン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "トーマ": {
+        "profileId": "hp",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ドリー": {
+        "profileId": "support",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ナヴィア": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ナヒーダ": {
+        "profileId": "em",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ニィロウ": {
+        "profileId": "hp",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ヌヴィレット": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "ネフェル": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "ノエル": {
+        "profileId": "def",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer7.0個別ビルド・命ノ星座・編成情報を照合"
+      },
+      "バーバラ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ファルザン": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "フィッシュル": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "フリーナ": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "フリンズ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-01",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "フレミネ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ベネット": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "マーヴィカ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-07",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ミカ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ムアラニ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "モナ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ヤフォダ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ヨォーヨ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ラウマ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "リオセスリ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-07",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "リサ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "リネ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "リネット": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "レイラ": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-07",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "レザー": {
+        "profileId": "curated:batch17:genshin:レザー",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "ロサリア": {
+        "profileId": "curated:batch17:genshin:ロサリア",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "雲菫": {
+        "profileId": "curated:batch17:genshin:雲菫",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "煙緋": {
+        "profileId": "curated:batch17:genshin:煙緋",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "嘉明": {
+        "profileId": "curated:batch17:genshin:嘉明",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "甘雨": {
+        "profileId": "curated:batch17:genshin:甘雨",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "閑雲": {
+        "profileId": "curated:batch17:genshin:閑雲",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "久岐忍": {
+        "profileId": "em",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "凝光": {
+        "profileId": "curated:batch17:genshin:凝光",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "九条裟羅": {
+        "profileId": "curated:batch17:genshin:九条裟羅",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "胡桃": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・KeqingMainsの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "荒瀧一斗": {
+        "profileId": "curated:batch17:genshin:荒瀧一斗",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "行秋": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "香菱": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "刻晴": {
+        "profileId": "curated:batch17:genshin:刻晴",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "珊瑚宮心海": {
+        "profileId": "curated:batch17:genshin:珊瑚宮心海",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "鹿野院平蔵": {
+        "profileId": "curated:batch17:genshin:鹿野院平蔵",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "七七": {
+        "profileId": "curated:batch17:genshin:七七",
+        "dataAsOf": "2026-09-08",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "重雲": {
+        "profileId": "curated:batch17:genshin:重雲",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "宵宮": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "鍾離": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "申鶴": {
+        "profileId": "curated:batch17:genshin:申鶴",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "神里綾華": {
+        "profileId": "curated:batch17:genshin:神里綾華",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "神里綾人": {
+        "profileId": "curated:batch17:genshin:神里綾人",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "辛炎": {
+        "profileId": "curated:batch17:genshin:辛炎",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "千織": {
+        "profileId": "curated:batch17:genshin:千織",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "早柚": {
+        "profileId": "curated:batch17:genshin:早柚",
+        "dataAsOf": "2026-08-14",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "白朮": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "八重神子": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "楓原万葉": {
+        "profileId": "em",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "放浪者": {
+        "profileId": "curated:batch17:genshin:放浪者",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "北斗": {
+        "profileId": "curated:batch17:genshin:北斗",
+        "dataAsOf": "2026-09-08",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "夢見月瑞希": {
+        "profileId": "curated:batch17:genshin:夢見月瑞希",
+        "dataAsOf": "2026-09-08",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "夜蘭": {
+        "profileId": "hp",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8の更新日付き個別ビルド・PTガイドを照合"
+      },
+      "雷電将軍": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・PTガイドを照合"
+      },
+      "藍硯": {
+        "profileId": "curated:batch17:genshin:藍硯",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "旅人": {
+        "profileId": "curated:batch17:genshin:旅人",
+        "dataAsOf": "2026-09-08",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "綺良々": {
+        "profileId": "curated:batch17:genshin:綺良々",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "魈": {
+        "profileId": "curated:batch17:genshin:魈",
+        "dataAsOf": "2026-08-13",
+        "updatedAt": "2026-09-08",
+        "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      }
+    },
+    "zzz": {
+      "「11号」": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "「シード」": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "「トリガー」": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "0号・アンビー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "アストラ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "アリア": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "アリス": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "アンドー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "アンビー": {
+        "profileId": "stun",
+        "dataAsOf": "2026-06-05",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "イヴリン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwen・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "イドリー": {
+        "profileId": "rupture",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ヴェリナ": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "エレン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "オルペウス&「鬼火」": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "カリン": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "グレース": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "クラレッタ": {
+        "profileId": "curated:batch19:zzz:クラレッタ",
+        "dataAsOf": "2026-09-12",
+        "updatedAt": "2026-09-13",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・編成・心象映画情報を照合"
+      },
+      "クレタ": {
+        "profileId": "stun",
+        "dataAsOf": "2026-07-31",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "シーザー": {
+        "profileId": "tank",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "シーシィア": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ジェーン": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "シグリッド": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "スターライト･ビリー": {
+        "profileId": "rupture",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "セス": {
+        "profileId": "tank",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ダイアリン": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ニコ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "ノルムー": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "バーニス": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "パイパー": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ビビアン": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ヒューゴ": {
+        "profileId": "crit",
+        "dataAsOf": "2026-07-31",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "ピュロイス": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "ビリー": {
+        "profileId": "crit",
+        "dataAsOf": "2026-06-05",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "プルクラ": {
+        "profileId": "stun",
+        "dataAsOf": "2026-07-31",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェントガイドを照合"
+      },
+      "プロメイア": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ベン": {
+        "profileId": "tank",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ライカン": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-19",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ライト": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "リナ": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "リュシア": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "ルーシー": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "レミエール": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "儀玄": {
+        "profileId": "rupture",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "橘福福": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWith・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "月城柳": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "狛野真斗": {
+        "profileId": "rupture",
+        "dataAsOf": "2026-06-05",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェント・PTガイドを照合"
+      },
+      "朱鳶": {
+        "profileId": "crit",
+        "dataAsOf": "2026-06-05",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8の更新日付き個別エージェント・PTガイドを照合"
+      },
+      "照": {
+        "profileId": "tank",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWithの更新日付き個別エージェント・PTガイドを照合"
+      },
+      "星見雅": {
+        "profileId": "anomaly",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "青衣": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "千夏": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWithの更新日付き個別エージェント・PTガイドを照合"
+      },
+      "浅羽悠真": {
+        "profileId": "crit",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWithの更新日付き個別エージェント・PTガイドを照合"
+      },
+      "蒼角": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-26",
+        "updatedAt": "2026-08-26",
+        "sourceLabel": "Game8・Prydwenの更新日付き個別エージェントガイドを照合"
+      },
+      "南宮羽": {
+        "profileId": "stun",
+        "dataAsOf": "2026-08-27",
+        "updatedAt": "2026-08-27",
+        "sourceLabel": "Game8・GameWithの更新日付き個別エージェント・PTガイドを照合"
+      },
+      "猫又": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合"
+      },
+      "盤岳": {
+        "profileId": "rupture",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合"
+      },
+      "浮波柚葉": {
+        "profileId": "support",
+        "dataAsOf": "2026-08-25",
+        "updatedAt": "2026-08-25",
+        "sourceLabel": "Game8・Icy Veinsの更新日付き個別エージェントガイドを照合"
+      },
+      "葉瞬光": {
+        "profileId": "crit",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合"
+      },
+      "潘引壺": {
+        "profileId": "tank",
+        "dataAsOf": "2026-09-05",
+        "updatedAt": "2026-09-05",
+        "sourceLabel": "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合"
+      }
+    }
+  },
+  "defaults": {
+    "hsr": {
+      "profileId": "curated",
+      "dataAsOf": "2026-08-18",
+      "updatedAt": "2026-08-18",
+      "sourceLabel": "KQM・StarDB・Game8の公開ビルド情報を照合"
+    },
+    "genshin": {
+      "profileId": "curated",
+      "dataAsOf": "2026-08-18",
+      "updatedAt": "2026-08-18",
+      "sourceLabel": "GameWith・Game8の公開ビルド情報を照合"
+    },
+    "zzz": {
+      "profileId": "curated",
+      "dataAsOf": "2026-08-18",
+      "updatedAt": "2026-08-18",
+      "sourceLabel": "Prydwen・公開エージェントデータを照合"
+    }
+  }
+}

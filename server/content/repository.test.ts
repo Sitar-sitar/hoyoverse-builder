@@ -20,8 +20,8 @@ describe("repository content maintenance", () => {
       expect(contentCommand(["check"])).toBe(0);
       expect(contentCommand(["report", "--", "--format", "json"])).toBe(0);
       const report = JSON.parse(output.mock.calls.at(-1)![0]);
-      expect(report.information.notCollected).toHaveLength(1636);
-      expect(report.unresolvedGuideFields).toHaveLength(281);
+      expect(report.information.notCollected).toHaveLength(1644);
+      expect(report.unresolvedGuideFields).toHaveLength(283);
       expect(report.unresolvedTeamMembers.length).toBeGreaterThan(0);
       expect(contentCommand(["export", "--language", "en"])).toBe(0);
       const candidates = JSON.parse(output.mock.calls.at(-1)![0]);
@@ -30,7 +30,7 @@ describe("repository content maintenance", () => {
       expect(contentCommand(["ready", "--language", "en", "--scope", "public"])).toBe(2);
       expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "public"])).toBe(2);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers.length).toBeGreaterThan(0);
-      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedGuides).toHaveLength(281);
+      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedGuides).toHaveLength(283);
       expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "admin"])).toBe(2);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers).toEqual([]);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedGuides).toEqual([]);

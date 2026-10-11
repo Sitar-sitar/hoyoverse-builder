@@ -17,13 +17,13 @@ import { decodeGuideDefinitions } from "../../scripts/content/adoptGuideDefiniti
 
 describe("guide authoring migration", () => {
   it("registers every migrated definition and preserves projection fields", () => {
-    expect(guideRecords).toHaveLength(281);
+    expect(guideRecords).toHaveLength(283);
     expect(
       guideSections().filter(section => section.visibility === "active")
-    ).toHaveLength(281);
+    ).toHaveLength(283);
     expect(
       guideSections().filter(section => section.visibility === "planned")
-    ).toHaveLength(1124);
+    ).toHaveLength(1132);
     for (const record of guideRecords) {
       const projected = record.factory
         ? projectGuideProfile(record)
@@ -106,6 +106,16 @@ describe("guide authoring migration", () => {
       'projectGuideRegistry(guideRecords, "DICT")'
     );
     expect(decoded.migrated).not.toContain("Object.assign(DICT");
+    const nested = decodeGuideDefinitions(
+      `const DICT={"143":{name:"元の名称",element:"Wind",guide:${guide}}}`,
+      "fixture",
+      { DICT: { game: "genshin", kind: "sourceId", nestedGuide: true } }
+    );
+    expect(nested.records[0].content.identityKey).toBe("genshin:143");
+    expect(nested.migrated).toContain('name:"元の名称",element:"Wind"');
+    expect(nested.migrated).toContain(
+      'guide:projectGuideRegistry(guideRecords, "DICT")["143"]'
+    );
     expect(() =>
       decodeGuideDefinitions(
         `const DICT={name:{...${guide},unclassified:"漏れ"}}`,

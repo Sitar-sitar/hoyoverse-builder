@@ -222,8 +222,8 @@ const GI_DEFAULT_TARGETS: TargetStatDefinition[] = [
   { key: "elementalMastery", label: _content.ja("guide.legacy.gameProviders.b00011"), unit: "", targets: { "厳選": 220, "目標": 160, "妥協": 100 } },
 ];
 
-const giGuide = (headline: string, relicSet: string, mainStats: GuideDefinition["mainStats"], targets: TargetStatDefinition[], planarSet = "チーム内の役割・武器・元素反応に合わせて調整"): GuideDefinition => ({ headline, relicSet, planarSet, mainStats, targets });
-const GI_CRIT_MAIN_STATS: GuideDefinition["mainStats"] = [{ slot: _content.ja("guide.legacy.gameProviders.b00012"), value: _content.ja("guide.legacy.gameProviders.b00013") }, { slot: _content.ja("guide.legacy.gameProviders.b00014"), value: _content.ja("guide.legacy.gameProviders.b00015") }, { slot: _content.ja("guide.legacy.gameProviders.b00016"), value: _content.ja("guide.legacy.gameProviders.b00017") }];
+
+
 const GI_STANDARD_CRIT_TARGETS: TargetStatDefinition[] = [{ key: "critRate", label: _content.ja("guide.legacy.gameProviders.b00018"), unit: "%", targets: { "厳選": 80, "目標": 70, "妥協": 60 } }, { key: "critDmg", label: _content.ja("guide.legacy.gameProviders.b00019"), unit: "%", targets: { "厳選": 220, "目標": 180, "妥協": 150 } }, { key: "energyRecharge", label: _content.ja("guide.legacy.gameProviders.b00020"), unit: "%", targets: { "厳選": 150, "目標": 130, "妥協": 115 } }];
 
 const GI_GUIDE_OVERRIDES: Record<string, GuideDefinition> = projectGuideRegistry(guideRecords, "GI_GUIDE_OVERRIDES");
