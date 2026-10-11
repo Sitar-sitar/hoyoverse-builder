@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "migrationId": "buildAdvisor_providerDisplay",
-  "inputDigest": "c7d692cb072b1a8770d37299b612bd44b11d592b65d0d349489d9b11090d9b50",
-  "outputDigest": "d14e24390a59075c91c3cce547030d1e192aea64eebc3a49850e905119c747c9",
+  "inputDigest": "d0dfff3fd93b46e8989bcd4d61a8700c9f7afcb9367b9177ffd55ab607a08a48",
+  "outputDigest": "5db0f8e9c449d2f769daf0882e88881a19e97141e6801fc9af6ee60ac29d95c2",
   "mapping": [
     {
       "start": 11165,
@@ -88,5 +88,10 @@
       "oldText": "\"開拓者\"",
       "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00012\")"
     }
-  ]
+  ],
+  "artifactDigests": {
+    "content/ja/guides/buildAdvisor_providerDisplay.ts": "97f92db307e30f30e6a29baff45937dab0e19f950811e79570da11d3125466a1",
+    "content/translations/en/buildAdvisor_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/buildAdvisor_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  }
 }

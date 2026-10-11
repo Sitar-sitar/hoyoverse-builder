@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "migrationId": "gameProviders_providerDisplay",
-  "inputDigest": "76ba8b19c99229b0a95c984bea3538d6a57440aed64b5837b561245ec4c2d778",
-  "outputDigest": "23027a1f7e71a3bac3c3df4f67226a9c47c8660032cc0f691ada492414e272e4",
+  "inputDigest": "1f149a23a7d3d23db0882993a1953edbe76c3b61b12ab05ed0e95e6e0291ff0f",
+  "outputDigest": "90f61b6a8ae55ec27b01acf0bebacae5fbb28ea0bc22ba551d4400e6d581b4e8",
   "mapping": [
     {
       "start": 7997,
@@ -410,5 +410,10 @@
       "oldText": "\"異常掌握\"",
       "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00058\")"
     }
-  ]
+  ],
+  "artifactDigests": {
+    "content/ja/guides/gameProviders_providerDisplay.ts": "9187845f7dea98a39154f264ecdcf91a7d93a4e41526813426ada5a0b15a4b8d",
+    "content/translations/en/gameProviders_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/gameProviders_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  }
 }

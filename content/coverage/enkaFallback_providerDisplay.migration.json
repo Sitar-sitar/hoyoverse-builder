@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "migrationId": "enkaFallback_providerDisplay",
-  "inputDigest": "b9da56414338f11d06fb9dfb5981100a095377d9bf53e87231528b06e1ca74d8",
-  "outputDigest": "8b4ea9676c2c3945264c216ad75e93475c6cf98019feeeec58d4fea0a1b2a850",
+  "inputDigest": "8fba6d91555f326c761770d1faf778338e5f047b938251c69ce850d9c5fdbff6",
+  "outputDigest": "87e64f38dc3b363da7ac9bc78015a33f205ddd8cb8c86cd43a7480b103f29084",
   "mapping": [
     {
       "start": 2362,
@@ -263,5 +263,10 @@
       "oldText": "\"開拓者\"",
       "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00039\")"
     }
-  ]
+  ],
+  "artifactDigests": {
+    "content/ja/guides/enkaFallback_providerDisplay.ts": "525f7c6233a107a56e2b94b3c7f3e36c5b842a09fd352cf24a3fa6cafeafc1ff",
+    "content/translations/en/enkaFallback_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/enkaFallback_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  }
 }

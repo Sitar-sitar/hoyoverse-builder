@@ -1,5 +1,11 @@
 import ts from "typescript";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  readFileSync,
+  writeFileSync,
+  renameSync,
+  unlinkSync,
+} from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { contentDigest } from "../../server/content/hash";
@@ -152,7 +158,13 @@ export function adoptProviderDisplays(
   return { migrated, sources, edits };
 }
 
-export function adoptProviderDisplaysMain(args: string[]) {
+const textDigest = (text: string) => contentDigest(text.replace(/\r\n/g, "\n"));
+
+export function adoptProviderDisplaysMain(
+  args: string[],
+  root = resolve("."),
+  beforeCommit?: () => void
+) {
   if (
     args.length < 1 ||
     args.length > 2 ||
@@ -163,11 +175,47 @@ export function adoptProviderDisplaysMain(args: string[]) {
       "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--write]"
     );
   const module = args[0] as keyof typeof configurations;
-  const target = resolve(`server/${module}.ts`);
+  const target = resolve(root, `server/${module}.ts`);
   const original = readFileSync(target, "utf8");
-  const result = adoptProviderDisplays(original, module);
   const name = `${module}_providerDisplay`;
-  const outputs = [
+  const receipt = resolve(root, `content/coverage/${name}.migration.json`);
+  if (existsSync(receipt)) {
+    const saved = JSON.parse(readFileSync(receipt, "utf8"));
+    const paths = [
+      `content/ja/guides/${name}.ts`,
+      ...["en", "zh-CN"].map(
+        language => `content/translations/${language}/${name}.ts`
+      ),
+    ];
+    if (
+      saved.schemaVersion !== 1 ||
+      saved.migrationId !== name ||
+      saved.outputDigest !== textDigest(original) ||
+      !saved.artifactDigests ||
+      Object.keys(saved.artifactDigests).sort().join("|") !==
+        [...paths].sort().join("|") ||
+      paths.some(
+        path =>
+          !existsSync(resolve(root, path)) ||
+          saved.artifactDigests[path] !==
+            textDigest(readFileSync(resolve(root, path), "utf8"))
+      )
+    ) {
+      throw new Error(
+        "Provider migration differs; preserved outputs will not be overwritten"
+      );
+    }
+    console.log(
+      JSON.stringify({
+        module,
+        action: "unchanged",
+        write: args[1] === "--write",
+      })
+    );
+    return;
+  }
+  const result = adoptProviderDisplays(original, module);
+  const outputs: string[][] = [
     [
       `content/ja/guides/${name}.ts`,
       `import type {SourceText} from "../../../shared/content/types";\nexport const sources: SourceText[] = ${JSON.stringify(result.sources, null, 2)};\n`,
@@ -176,29 +224,59 @@ export function adoptProviderDisplaysMain(args: string[]) {
       `content/translations/${language}/${name}.ts`,
       'import type {TranslationRecord} from "../../../shared/content/types";\nexport const records: Record<string,TranslationRecord> = {};\n',
     ]),
-    [
-      `content/coverage/${name}.migration.json`,
-      JSON.stringify(
-        {
-          schemaVersion: 1,
-          migrationId: name,
-          inputDigest: contentDigest(original),
-          outputDigest: contentDigest(result.migrated),
-          mapping: result.edits,
-        },
-        null,
-        2
-      ) + "\n",
-    ],
   ];
+  const artifactDigests = Object.fromEntries(
+    outputs.map(([path, value]) => [path!, textDigest(value!)])
+  );
+  outputs.push([
+    `content/coverage/${name}.migration.json`,
+    JSON.stringify(
+      {
+        schemaVersion: 1,
+        migrationId: name,
+        inputDigest: textDigest(original),
+        outputDigest: textDigest(result.migrated),
+        artifactDigests,
+        mapping: result.edits,
+      },
+      null,
+      2
+    ) + "\n",
+  ]);
   if (args[1] === "--write") {
     if (!result.sources.length)
       throw new Error("No provider display candidates");
     for (const [path] of outputs)
-      if (existsSync(resolve(path!)))
+      if (existsSync(resolve(root, path!)))
         throw new Error(`Output already exists: ${path}`);
-    for (const [path, value] of outputs) writeFileSync(resolve(path!), value!);
-    writeFileSync(target, result.migrated);
+    const temporary = target + ".provider-adoption.tmp";
+    const created: string[][] = [];
+    let staged = false;
+    try {
+      writeFileSync(temporary, result.migrated, { flag: "wx" });
+      staged = true;
+      for (const [path, value] of outputs) {
+        writeFileSync(resolve(root, path!), value!, { flag: "wx" });
+        created.push([path!, value!]);
+      }
+      beforeCommit?.();
+      if (textDigest(readFileSync(target, "utf8")) !== textDigest(original))
+        throw new Error("Provider input changed during migration");
+      renameSync(temporary, target);
+      staged = false;
+    } catch (error) {
+      // Remove only files created by this attempt whose bytes are still ours.
+      for (const [path, value] of created.reverse()) {
+        const absolute = resolve(root, path!);
+        if (
+          existsSync(absolute) &&
+          textDigest(readFileSync(absolute, "utf8")) === textDigest(value!)
+        )
+          unlinkSync(absolute);
+      }
+      if (staged && existsSync(temporary)) unlinkSync(temporary);
+      throw error;
+    }
   }
   console.log(
     JSON.stringify({

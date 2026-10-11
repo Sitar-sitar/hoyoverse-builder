@@ -1,9 +1,103 @@
 import { describe, expect, it } from "vitest";
 import { runInNewContext } from "node:vm";
-import { adoptProviderDisplays } from "../../scripts/content/adoptProviderDisplays";
+import {
+  adoptProviderDisplays,
+  adoptProviderDisplaysMain,
+} from "../../scripts/content/adoptProviderDisplays";
+import {
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
+import { resolve } from "node:path";
 import { createLegacyTexts } from "./legacyTexts";
 
 describe("provider display adoption", () => {
+  function fixture(run: (root: string, original: string) => void) {
+    const parent = resolve("tmp");
+    mkdirSync(parent, { recursive: true });
+    const root = mkdtempSync(resolve(parent, "provider-adoption-test-"));
+    const original = 'const GI_PROP_NAMES={FIGHT_PROP_ATTACK:"攻撃力"};';
+    try {
+      for (const directory of [
+        "server",
+        "content/ja/guides",
+        "content/translations/en",
+        "content/translations/zh-CN",
+        "content/coverage",
+      ])
+        mkdirSync(resolve(root, directory), { recursive: true });
+      writeFileSync(resolve(root, "server/gameProviders.ts"), original);
+      run(root, original);
+    } finally {
+      if (!root.startsWith(parent + "\\") && !root.startsWith(parent + "/"))
+        throw new Error("Test cleanup escaped workspace tmp");
+      rmSync(root, { recursive: true, force: true });
+    }
+  }
+  it("defaults to dry-run and accepts an identical retry without overwriting drift", () =>
+    fixture((root, original) => {
+      const source = resolve(root, "server/gameProviders.ts");
+      const output = resolve(
+        root,
+        "content/ja/guides/gameProviders_providerDisplay.ts"
+      );
+      adoptProviderDisplaysMain(["gameProviders"], root);
+      expect(readFileSync(source, "utf8")).toBe(original);
+      expect(existsSync(output)).toBe(false);
+      adoptProviderDisplaysMain(["gameProviders", "--write"], root);
+      const committed = readFileSync(source, "utf8"),
+        corpus = readFileSync(output, "utf8");
+      adoptProviderDisplaysMain(["gameProviders", "--write"], root);
+      expect(readFileSync(source, "utf8")).toBe(committed);
+      expect(readFileSync(output, "utf8")).toBe(corpus);
+      writeFileSync(source, committed.replace(/\r?\n/g, "\r\n"));
+      writeFileSync(output, corpus.replace(/\r?\n/g, "\r\n"));
+      adoptProviderDisplaysMain(["gameProviders", "--write"], root);
+      writeFileSync(source, committed);
+      writeFileSync(output, corpus + "// changed\n");
+      expect(() =>
+        adoptProviderDisplaysMain(["gameProviders", "--write"], root)
+      ).toThrow("will not be overwritten");
+      expect(readFileSync(output, "utf8")).toBe(corpus + "// changed\n");
+      expect(readFileSync(source, "utf8")).toBe(committed);
+    }));
+  it("rolls back only newly created artifacts after failure before source commit", () =>
+    fixture((root, original) => {
+      expect(() =>
+        adoptProviderDisplaysMain(["gameProviders", "--write"], root, () => {
+          throw Error("injected interruption");
+        })
+      ).toThrow("injected interruption");
+      expect(
+        readFileSync(resolve(root, "server/gameProviders.ts"), "utf8")
+      ).toBe(original);
+      expect(
+        existsSync(
+          resolve(root, "content/ja/guides/gameProviders_providerDisplay.ts")
+        )
+      ).toBe(false);
+      expect(
+        existsSync(
+          resolve(
+            root,
+            "content/coverage/gameProviders_providerDisplay.migration.json"
+          )
+        )
+      ).toBe(false);
+      expect(
+        existsSync(
+          resolve(root, "server/gameProviders.ts.provider-adoption.tmp")
+        )
+      ).toBe(false);
+      adoptProviderDisplaysMain(["gameProviders", "--write"], root);
+      expect(
+        readFileSync(resolve(root, "server/gameProviders.ts"), "utf8")
+      ).not.toBe(original);
+    }));
   it("preserves dictionary keys, numeric computation and generated unknown equipment names", () => {
     const input =
       'const ELEMENT_NAMES={Fire:"炎"}; const CORE_STAT_LABELS={hp:"HP"}; const slots=["頭部","手部"]; const raw="BaseHP"; const result={element:ELEMENT_NAMES.Fire,label:CORE_STAT_LABELS.hp,slot:slots[1],value:100*1.5,name:`遺物 ${2}`,setName:`未解決（ID: ${"" || "不明"}）`}; result;';
