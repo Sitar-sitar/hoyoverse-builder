@@ -1,28 +1,30 @@
 import { canonicalCatalog } from "../../content/catalog";
-import { CHARACTER_GUIDE_CATALOG } from "../characterGuideCatalog";
-import { catalogSourceIdFor } from "../characterConstellations";
-import { SKILL_COLLECTION_REASON, SKILL_REQUIRED_KINDS } from "../../content/coverage/skillRequirements";
 import type { CoverageSection } from "../../shared/content/types";
 import { indexCatalog } from "./catalog";
 import { contentDigest } from "./hash";
 import { sourceIssues } from "./coverage";
+import { characterRecords, characterSources, validateCharacterRecords } from "../../content/characters";
+import { characterRefs } from "../../shared/content/walk";
 
 export function plannedSections(): CoverageSection[] {
-  return (["hsr", "genshin", "zzz"] as const).flatMap(game => CHARACTER_GUIDE_CATALOG[game].flatMap(name => {
-    const sourceId = catalogSourceIdFor(game, name);
-    if (!sourceId) throw new Error(`Unresolved canonical character identity: ${game}:${name}`);
-    return (["introduction", "skills"] as const).map(section => ({
-      id: `character.${game}.${sourceId}.${section}`, audience: "public" as const, visibility: "planned" as const,
-      section: { status: "notCollected" as const,
-        reason: section === "skills" ? SKILL_COLLECTION_REASON : "独立した紹介文が未登録",
-        requiredKinds: section === "skills" ? [...SKILL_REQUIRED_KINDS[game]] : ["introduction"] },
-    }));
-  }));
+  return characterRecords.flatMap(record => {
+    const { order: _order, ...character } = record;
+    return (["introduction", "skills"] as const).map(key => {
+      const value = character[key];
+      const refs = characterRefs({ ...character,
+        [key === "skills" ? "introduction" : "skills"]: { status: "notCollected", reason: "Separate coverage section", requiredKinds: ["separate"] },
+      }).slice(1);
+      return { id: `character.${record.game}.${record.identityKey.slice(record.game.length + 1)}.${key}`, audience: "public", visibility: "planned",
+        section: value.status === "registered" ? { ...value, data: refs } : value } as CoverageSection;
+    });
+  });
 }
 
 export function contentRepository() {
+  validateCharacterRecords(characterRecords, characterSources);
   const planned = plannedSections();
-  const catalog = canonicalCatalog(planned);
+  const names: CoverageSection[] = characterRecords.map(record => ({ id: `character.${record.game}.${record.identityKey.slice(record.game.length + 1)}.name`, audience: "public", visibility: "active", section: { status: "registered", data: [record.name], evidence: "confirmed catalog identity migration" } }));
+  const catalog = canonicalCatalog([...planned, ...names]);
   const index = indexCatalog(catalog, planned);
   const issues = [...index.issues, ...catalog.sources.flatMap(sourceIssues)];
   if (issues.length) throw new Error(`Canonical content invalid: ${issues.map(issue => issue.code).join(", ")}`);

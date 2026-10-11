@@ -22,8 +22,9 @@ export type CharacterContent = {
   identityKey: string;
   game: Game;
   name: TextRef;
-  elementKey: string;
-  roleKey: string;
+  /** Null preserves an uncollected independent authoring field; never infer it. */
+  elementKey: string | null;
+  roleKey: string | null;
   introduction: Section<TextRef[]>;
   skills: Section<SkillDefinition[]>;
 };
