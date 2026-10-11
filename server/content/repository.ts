@@ -12,6 +12,7 @@ import {genericTeamSections} from "../../content/genericTeams";
 import {linkHistorySections} from "../../content/linkHistory";
 import {guideSections} from "../../content/guides";
 import {guideMetadataSections} from "../../content/guideMetadataRegistry";
+import {validateExternalNameBoundaries} from "../../content/externalNames";
 
 export function plannedSections(): CoverageSection[] {
   return characterRecords.flatMap(record => {
@@ -28,6 +29,7 @@ export function plannedSections(): CoverageSection[] {
 }
 
 export function contentRepository() {
+  validateExternalNameBoundaries();
   validateCharacterRecords(characterRecords, characterSources);
   const planned = plannedSections();
   const names: CoverageSection[] = characterRecords.map(record => ({ id: `character.${record.game}.${record.identityKey.slice(record.game.length + 1)}.name`, audience: "public", visibility: "active", section: { status: "registered", data: [record.name], evidence: "confirmed catalog identity migration" } }));
