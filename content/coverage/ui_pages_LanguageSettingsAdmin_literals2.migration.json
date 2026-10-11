@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal1",
+    "start": 1411,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal2",
+    "start": 1886,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal3",
+    "start": 1925,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal4",
+    "start": 2936,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal5",
+    "start": 2953,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal6",
+    "start": 4484,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal7",
+    "start": 4866,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_LanguageSettingsAdmin_literals2.literal8",
+    "start": 4875,
+    "kind": "constant"
+  }
+]

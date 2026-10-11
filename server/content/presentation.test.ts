@@ -1,9 +1,29 @@
 import { describe, expect, it, vi } from "vitest";
 import { collectBaseline } from "../../scripts/content/baseline";
-import { withLookupPresentation, withPresentation } from "./presentation";
+import { withCatalogPresentation, withHistoryPresentation, withLookupPresentation, withPresentation } from "./presentation";
+import { characterReferenceCatalog } from "../characterReference";
+import { guideUpdateHistory } from "../guideUpdateHistory";
 import { selectPresentation } from "../../client/src/content/presentation";
 
 describe("Japanese presentation DTO boundary", () => {
+  it("preserves catalog/history caches, identities and counts with Japanese display DTOs", () => {
+    for (const [value, project] of [[characterReferenceCatalog(), withCatalogPresentation], [guideUpdateHistory(), withHistoryPresentation]] as const) {
+      const original = JSON.stringify(value);
+      const result = project(value);
+      const { presentation, ...legacy } = result;
+      expect(legacy).toEqual(value);
+      expect(JSON.stringify(value)).toBe(original);
+      expect(selectPresentation(result)).toEqual(result);
+      expect(presentation.language).toBe("ja");
+      expect(JSON.stringify(presentation)).not.toContain('"sourceHash"');
+    }
+    const value = withHistoryPresentation({ characters: [{ game: "hsr", name: "名前", sourceId: "1001", events: [{ date: "2026-10-10", title: "更新", scope: "character", games: ["hsr"] }] }], updateLedger: { total: 256 } });
+    value.presentation.display.characters = [{ game: "zzz", name: "表示名", sourceId: "x", events: [{ date: "invalid", title: "表示題名", scope: "site", games: ["zzz"] }] }];
+    value.presentation.display.updateLedger = { total: 1 };
+    const selected = selectPresentation(value)!;
+    expect(selected.characters[0]).toEqual({ game: "hsr", name: "表示名", sourceId: "1001", events: [{ date: "2026-10-10", title: "表示題名", scope: "character", games: ["hsr"] }] });
+    expect(selected.updateLedger.total).toBe(256);
+  });
   it("adds only presentation and preserves all legacy data for every catalog character", () => {
     for (const character of collectBaseline().characters) {
       const result = withPresentation(character.reference, character.key);

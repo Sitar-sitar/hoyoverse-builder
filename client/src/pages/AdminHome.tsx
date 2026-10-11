@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui.admin";
 import { useAuth } from "@/_core/hooks/useAuth";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
@@ -68,8 +69,7 @@ export default function AdminHome() {
             <LanguageSwitcher />
             <Link href="/">
               <Button variant="ghost" size="sm" className="h-8 rounded-none text-[10px] text-stone-600 hover:bg-stone-200">
-                <ArrowLeft className="h-3.5 w-3.5" />公開サイトへ
-              </Button>
+                <ArrowLeft className="h-3.5 w-3.5" />{uiText("ui.pages_AdminHome_literals1.literal1")}</Button>
             </Link>
           </div>
         </div>
@@ -78,11 +78,9 @@ export default function AdminHome() {
       <main className="container pb-20 pt-10 sm:pt-16">
         <section className="mx-auto max-w-5xl">
           <p className="detail-mono text-[10px] text-amber-800">GITHUB APP AUTHENTICATED</p>
-          <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">管理者ポータル</h1>
-          {isAdmin && <Link href="/admin/languages" className="mt-5 inline-flex border border-stone-300 px-4 py-3 text-sm text-stone-700 hover:bg-stone-200">公開言語の設定</Link>}
-          <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">
-            検索利用状況、翻訳フィードバック、API状態を確認します。管理操作はGitHub App認証とサーバー側Allowlistで保護されています。
-          </p>
+          <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">{uiText("ui.pages_AdminHome_literals1.literal2")}</h1>
+          {isAdmin && <Link href="/admin/languages" className="mt-5 inline-flex border border-stone-300 px-4 py-3 text-sm text-stone-700 hover:bg-stone-200">{uiText("ui.pages_AdminHome_literals1.literal3")}</Link>}
+          <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal4")}</p>
         </section>
 
         {loading && (
@@ -95,16 +93,15 @@ export default function AdminHome() {
           <section className="mx-auto mt-12 max-w-md border border-amber-900/30 bg-amber-50/60 p-6 sm:p-8">
             <Github className="h-6 w-6 text-amber-900" />
             <p className="detail-mono mt-4 text-[9px] text-amber-800">ADMIN ACCESS</p>
-            <h2 className="mt-2 font-serif text-2xl font-semibold">{isAuthenticated ? "管理者権限がありません" : "GitHubで管理者ログイン"}</h2>
+            <h2 className="mt-2 font-serif text-2xl font-semibold">{isAuthenticated ? uiText("ui.pages_AdminHome_literals2.literal1") : uiText("ui.pages_AdminHome_literals2.literal2")}</h2>
             <p className="mt-3 text-sm leading-6 text-stone-700">
               {isAuthenticated
-                ? "このアカウントは管理者Allowlistに登録されていません。"
-                : "登録済みのGitHubアカウントだけが管理画面へアクセスできます。"}
+                ? uiText("ui.pages_AdminHome_literals2.literal3")
+                : uiText("ui.pages_AdminHome_literals2.literal4")}
             </p>
             {!isAuthenticated && (
               <Button onClick={() => startLogin("/admin")} className="mt-5 h-11 w-full rounded-none bg-stone-900 text-stone-50 hover:bg-amber-900 sm:w-auto">
-                <LogIn className="h-4 w-4" />GitHubでログイン
-              </Button>
+                <LogIn className="h-4 w-4" />{uiText("ui.pages_AdminHome_literals1.literal5")}</Button>
             )}
           </section>
         )}
@@ -117,22 +114,21 @@ export default function AdminHome() {
                 <p className="mt-1 text-sm font-semibold text-stone-900">{user.name || user.openId}</p>
               </div>
               <Button variant="outline" onClick={signOut} className="h-9 rounded-none border-stone-400 text-xs">
-                <LogOut className="h-4 w-4" />ログアウト
-              </Button>
+                <LogOut className="h-4 w-4" />{uiText("ui.pages_AdminHome_literals1.literal6")}</Button>
             </section>
 
             <section className="mx-auto mt-10 max-w-5xl">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <AdminMetric label="TODAY LOOKUPS" value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={`本日（JST）の照会数 / 累計 ${analyticsQuery.data?.totalLookups ?? "—"}`} />
-                <AdminMetric label="CACHE HIT RATE" value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail="外部API負荷の抑制率" />
-                <AdminMetric label="OPEN FEEDBACK" value={feedbackQuery.data ? unresolvedFeedback : "—"} detail="未解決・対応中フィードバック" />
+                <AdminMetric label="CACHE HIT RATE" value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal7")} />
+                <AdminMetric label="OPEN FEEDBACK" value={feedbackQuery.data ? unresolvedFeedback : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal8")} />
                 <AdminMetric label="API STATUS" value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail="API health check" />
               </div>
               {recentDays.length > 0 && (
                 <div className="mt-6 border border-stone-300 bg-stone-50/50 p-5">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <p className="detail-mono text-[9px] text-stone-500">DAILY LOOKUPS / 直近7日（JST）</p>
-                    <Link href="/admin/feedback" className="text-[10px] text-amber-800 underline-offset-2 hover:underline">30日分を見る</Link>
+                    <p className="detail-mono text-[9px] text-stone-500">{uiText("ui.pages_AdminHome_literals1.literal9")}</p>
+                    <Link href="/admin/feedback" className="text-[10px] text-amber-800 underline-offset-2 hover:underline">{uiText("ui.pages_AdminHome_literals1.literal10")}</Link>
                   </div>
                   <ol className="mt-4 grid grid-cols-7 gap-2">
                     {recentDays.map(day => (
@@ -152,23 +148,23 @@ export default function AdminHome() {
             <section className="mx-auto mt-14 max-w-5xl">
               <div className="border-b border-stone-400 pb-4">
                 <p className="detail-mono text-[9px] text-amber-800">OPERATIONS</p>
-                <h2 className="display-serif mt-1 text-3xl font-semibold">管理メニュー</h2>
+                <h2 className="display-serif mt-1 text-3xl font-semibold">{uiText("ui.pages_AdminHome_literals1.literal11")}</h2>
               </div>
               <div className="mt-5 grid gap-4 md:grid-cols-2">
                 <Link href="/admin/feedback" className="group border border-stone-300 bg-stone-50/50 p-6 transition-colors hover:border-stone-900 hover:bg-stone-100">
                   <MessageSquareText className="h-5 w-5 text-amber-800" />
                   <h3 className="mt-4 font-serif text-2xl font-semibold">Feedback / Analytics</h3>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">翻訳フィードバックの対応状況変更、検索数・ゲーム別内訳・キャッシュヒット率を確認します。</p>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal12")}</p>
                 </Link>
                 <Link href="/admin/display" className="group border border-stone-300 bg-stone-50/50 p-6 transition-colors hover:border-stone-900 hover:bg-stone-100">
                   <Palette className="h-5 w-5 text-amber-800" />
-                  <h3 className="mt-4 font-serif text-2xl font-semibold">表示デザイン</h3>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">公開サイトの見せ方を案ごとにプレビューし、公開・現行への復帰を切り替えます。</p>
+                  <h3 className="mt-4 font-serif text-2xl font-semibold">{uiText("ui.pages_AdminHome_literals1.literal13")}</h3>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal14")}</p>
                 </Link>
                 <div className="border border-stone-300 bg-stone-50/50 p-6">
                   <ShieldCheck className="h-5 w-5 text-emerald-800" />
                   <h3 className="mt-4 font-serif text-2xl font-semibold">Security</h3>
-                  <p className="mt-2 text-sm leading-6 text-stone-600">GitHub App + numeric GitHub ID Allowlist + tRPC adminProcedure の三段で管理APIを保護しています。</p>
+                  <p className="mt-2 text-sm leading-6 text-stone-600">{uiText("ui.pages_AdminHome_literals1.literal15")}</p>
                   <div className="mt-4 flex flex-wrap gap-4 text-[10px] text-stone-500">
                     <span className="inline-flex items-center gap-1"><Github className="h-3.5 w-3.5" />GitHub App</span>
                     <span className="inline-flex items-center gap-1"><BarChart3 className="h-3.5 w-3.5" />Admin API</span>
@@ -179,9 +175,7 @@ export default function AdminHome() {
             </section>
 
             {(analyticsQuery.error || feedbackQuery.error) && (
-              <section className="mx-auto mt-8 max-w-5xl border-l-2 border-rose-700 pl-4 text-sm text-rose-800">
-                管理データの一部を取得できませんでした。APIのDB接続設定と管理者設定を確認してください。
-              </section>
+              <section className="mx-auto mt-8 max-w-5xl border-l-2 border-rose-700 pl-4 text-sm text-rose-800">{uiText("ui.pages_AdminHome_literals1.literal16")}</section>
             )}
           </>
         )}

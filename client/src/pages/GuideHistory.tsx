@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { trpc } from "@/lib/trpc";
@@ -8,13 +9,16 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { ArrowLeft, Clock3, Database, Search } from "lucide-react";
 import { Link } from "wouter";
 import React, { useMemo, useState } from "react";
+import { selectPresentation } from "@/content/presentation";
 
 type GameId = "hsr" | "genshin" | "zzz";
-const GAME_LABELS: Record<GameId, string> = { hsr: "HSR", genshin: "原神", zzz: "ZZZ" };
+const GAME_LABELS: Record<GameId, string> = { hsr: "HSR", genshin: uiText("ui.pages_GuideHistory_literals1.literal1"), zzz: "ZZZ" };
 
 export default function GuideHistory() {
   const { t } = useLanguage();
-  const history = trpc.build.guideHistory.useQuery();
+  const historyQuery = trpc.build.guideHistory.useQuery();
+  const historyData = useMemo(() => selectPresentation(historyQuery.data), [historyQuery.data]);
+  const history = { ...historyQuery, data: historyData };
   const [game, setGame] = useState<"all" | GameId>("all");
   const [query, setQuery] = useState("");
   const characters = useMemo(() => (history.data?.characters ?? []).filter((item) => (game === "all" || item.game === game) && item.name.toLowerCase().includes(query.trim().toLowerCase())), [history.data?.characters, game, query]);

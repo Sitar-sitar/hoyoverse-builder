@@ -23,7 +23,7 @@ export function adoptUi(text: string, moduleName: string) {
   const translations: Record<"en" | "zh-CN", Record<string, TranslationRecord>> = { en: {}, "zh-CN": {} };
   const edits: { start: number; end: number; replacement: string }[] = [];
   let dictionary = 0;
-  function registerGroups(node: ts.Node, groups: Partial<Record<Language, Record<string, string>>>, selection?: string) {
+  function registerGroups(node: ts.Node, groups: Partial<Record<Language, Record<string, string>>>, selection?: string, field?: string) {
     const keys = Object.keys(groups.ja!).sort();
     if (languages.some(language => JSON.stringify(Object.keys(groups[language]!).sort()) !== JSON.stringify(keys))) throw new Error(`UI dictionary keys differ: ${moduleName}`);
     const refs: Record<string, string> = {};
@@ -37,12 +37,24 @@ export function adoptUi(text: string, moduleName: string) {
       refs[key] = id;
     }
     edits.push({ start: node.getStart(ast), end: ts.isAsExpression(node.parent) && node.parent.type.getText(ast) === "const" ? node.parent.end : node.end,
-      replacement: `uiDictionary(${JSON.stringify(refs, null, 2)})${selection ? `[${selection}]` : ""}` });
+      replacement: `uiDictionary(${JSON.stringify(refs, null, 2)})${selection ? `[${selection}]` : ""}${field ? `.${field}` : ""}` });
   }
   function visit(node: ts.Node) {
     if (ts.isConditionalExpression(node) && ts.isConditionalExpression(node.whenFalse) && ts.isBinaryExpression(node.condition) && ts.isBinaryExpression(node.whenFalse.condition)) {
       const first = node.condition;
       const second = node.whenFalse.condition;
+      if (first.operatorToken.kind === ts.SyntaxKind.EqualsEqualsEqualsToken && second.operatorToken.kind === ts.SyntaxKind.EqualsEqualsEqualsToken &&
+          ts.isIdentifier(first.left) && first.left.getText(ast) === second.left.getText(ast) &&
+          ts.isStringLiteral(first.right) && languages.includes(first.right.text as Language) && ts.isStringLiteral(second.right) && languages.includes(second.right.text as Language) && first.right.text !== second.right.text &&
+          ts.isStringLiteral(node.whenTrue) && ts.isStringLiteral(node.whenFalse.whenTrue) && ts.isStringLiteral(node.whenFalse.whenFalse)) {
+        const firstLanguage = first.right.text;
+        const secondLanguage = second.right.text;
+        const remaining = languages.find(language => language !== firstLanguage && language !== secondLanguage)!;
+        const groups = { [first.right.text]: { text: node.whenTrue.text },
+          [second.right.text]: { text: node.whenFalse.whenTrue.text },
+          [remaining]: { text: node.whenFalse.whenFalse.text } };
+        registerGroups(node, groups, first.left.getText(ast), "text"); return;
+      }
       if (first.operatorToken.kind === ts.SyntaxKind.EqualsEqualsEqualsToken && second.operatorToken.kind === ts.SyntaxKind.EqualsEqualsEqualsToken &&
           ts.isIdentifier(first.left) && first.left.getText(ast) === second.left.getText(ast) &&
           ts.isStringLiteral(first.right) && first.right.text === "ja" && ts.isStringLiteral(second.right) && second.right.text === "zh-CN" &&
@@ -70,17 +82,21 @@ export function adoptUi(text: string, moduleName: string) {
   visit(ast);
   let migrated = text;
   for (const edit of edits.sort((a, b) => b.start - a.start)) migrated = migrated.slice(0, edit.start) + edit.replacement + migrated.slice(edit.end);
-  if (sources.length) migrated = 'import { uiDictionary } from "@/content/ui";\n' + migrated;
+  const helper = /Admin/.test(moduleName) ? "ui.admin" : "ui";
+  if (sources.length && !/import\s*\{[^}]*\buiDictionary\b[^}]*\}\s*from\s*["']@\/content\/ui(?:\.admin)?["']/.test(migrated)) migrated = `import { uiDictionary } from "@/content/${helper}";\n` + migrated;
   return { sources, translations, migrated };
 }
 export function adoptUiMain(args: string[]) {
-  if (args.length < 1 || args.length > 2 || (args[1] && args[1] !== "--write")) throw new Error("Usage: content:adopt-ui <relative-tsx-path> [--write]");
+  const write = args.includes("--write");
+  const batchIndex = args.indexOf("--batch");
+  const batch = batchIndex >= 0 ? args[batchIndex + 1] : undefined;
+  if (!args[0] || (batchIndex >= 0 && (!batch || !/^[a-z][a-z0-9]*$/.test(batch))) || args.slice(1).some((arg, index) => arg !== "--write" && arg !== "--batch" && index + 1 !== batchIndex + 1)) throw new Error("Usage: content:adopt-ui <relative-tsx-path> [--batch name] [--write]");
   const path = args[0]!;
   if (!/^(?:pages|contexts|components)(?:\/[A-Za-z][A-Za-z0-9]*)+\.tsx$/.test(path)) throw new Error("Invalid UI module path");
-  const moduleName = path.replace(/\.tsx$/, "").replace(/\//g, "_");
+  const moduleName = path.replace(/\.tsx$/, "").replace(/\//g, "_") + (batch ? `_${batch}` : "");
   const target = resolve("client/src", path);
   const result = adoptUi(readFileSync(target, "utf8"), moduleName);
-  if (args[1] === "--write" && result.sources.length) {
+  if (write && result.sources.length) {
     const outputs = [
       [`content/ja/ui/${moduleName}.ts`, `import type { SourceText } from "../../../shared/content/types";\nexport const sources: SourceText[] = ${JSON.stringify(result.sources, null, 2)};\n`],
       ...(["en", "zh-CN"] as const).map(language => [`content/translations/${language}/ui_${moduleName}.ts`, `import type { TranslationRecord } from "../../../shared/content/types";\nexport const records: Record<string, TranslationRecord> = ${JSON.stringify(result.translations[language], null, 2)};\n`]),

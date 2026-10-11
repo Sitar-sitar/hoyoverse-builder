@@ -1,6 +1,6 @@
 import { booleanSetting, previewAdmin } from "./_core/migrationRuntime";
 import { languageSettingsRouter } from "./languageSettings";
-import { withLookupPresentation, withPresentation } from "./content/presentation";
+import { withCatalogPresentation, withHistoryPresentation, withLookupPresentation, withPresentation } from "./content/presentation";
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -84,8 +84,8 @@ export const appRouter = router({
   }),
 
   build: router({
-    guideHistory: publicProcedure.query(() => guideUpdateHistory()),
-    referenceCatalog: publicProcedure.query(() => characterReferenceCatalog()),
+    guideHistory: publicProcedure.query(() => withHistoryPresentation(guideUpdateHistory())),
+    referenceCatalog: publicProcedure.query(() => withCatalogPresentation(characterReferenceCatalog())),
     reference: publicProcedure
       .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), name: z.string().trim().min(1).max(80) }))
       .query(({ input }) => {

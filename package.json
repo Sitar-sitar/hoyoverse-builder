@@ -8,6 +8,7 @@
     "content:migrate": "tsx scripts/content/migrate.ts",
     "content:adopt": "tsx scripts/content/adopt.ts",
     "content:adopt-ui": "tsx scripts/content/adoptUi.ts",
+    "content:adopt-ui-literals": "tsx scripts/content/adoptUiLiterals.ts",
     "content:ui-audit": "tsx scripts/content/uiAudit.ts",
     "content:catalog-index": "tsx scripts/content/catalogIndex.ts",
     "content:check": "tsx scripts/content/commands.ts check",

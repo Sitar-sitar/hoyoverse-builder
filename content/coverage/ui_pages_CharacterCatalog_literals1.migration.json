@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ui.pages_CharacterCatalog_literals1.literal1",
+    "start": 1294,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_CharacterCatalog_literals1.literal2",
+    "start": 1342,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_CharacterCatalog_literals1.literal3",
+    "start": 1380,
+    "kind": "constant"
+  }
+]

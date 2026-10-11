@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal1",
+    "start": 2049,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal2",
+    "start": 3916,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal3",
+    "start": 4168,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal4",
+    "start": 4188,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal5",
+    "start": 4759,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal6",
+    "start": 5598,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal7",
+    "start": 5644,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal8",
+    "start": 7563,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal9",
+    "start": 7579,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal10",
+    "start": 7703,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal11",
+    "start": 7739,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal12",
+    "start": 13700,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal13",
+    "start": 13712,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal14",
+    "start": 14532,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_DisplaySettingsAdmin_literals2.literal15",
+    "start": 14553,
+    "kind": "constant"
+  }
+]

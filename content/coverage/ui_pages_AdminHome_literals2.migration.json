@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ui.pages_AdminHome_literals2.literal1",
+    "start": 4709,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_AdminHome_literals2.literal2",
+    "start": 4725,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_AdminHome_literals2.literal3",
+    "start": 4866,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_AdminHome_literals2.literal4",
+    "start": 4919,
+    "kind": "constant"
+  }
+]

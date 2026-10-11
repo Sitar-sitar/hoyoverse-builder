@@ -1,3 +1,4 @@
+import { uiText as resolveUiText } from "@/content/ui";
 import { uiDictionary } from "@/content/ui";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { selectPresentation } from "@/content/presentation";
@@ -19,9 +20,9 @@ type GameId = "hsr" | "genshin" | "zzz";
 type LocalizedText = { ja: string; en: string; "zh-CN": string };
 
 const GAMES: Record<GameId, { short: string; name: string }> = {
-  hsr: { short: "HSR", name: "崩壊：スターレイル" },
-  genshin: { short: "GI", name: "原神" },
-  zzz: { short: "ZZZ", name: "ゼンレスゾーンゼロ" },
+  hsr: { short: "HSR", name: resolveUiText("ui.pages_CharacterCatalog_literals1.literal1") },
+  genshin: { short: "GI", name: resolveUiText("ui.pages_CharacterCatalog_literals1.literal2") },
+  zzz: { short: "ZZZ", name: resolveUiText("ui.pages_CharacterCatalog_literals1.literal3") },
 };
 
 const uiText = uiDictionary({
@@ -110,7 +111,8 @@ export default function CharacterCatalog() {
   const searchRef = useRef<HTMLInputElement>(null);
 
   const catalogQuery = trpc.build.referenceCatalog.useQuery(undefined, { staleTime: 10 * 60_000 });
-  const entries = catalogQuery.data?.games[game] ?? [];
+  const catalog = useMemo(() => selectPresentation(catalogQuery.data), [catalogQuery.data]);
+  const entries = catalog?.games[game] ?? [];
   const filteredEntries = useMemo(() => {
     const keyword = filter.trim().toLocaleLowerCase();
     if (!keyword) return entries;

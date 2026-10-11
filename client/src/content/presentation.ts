@@ -15,7 +15,7 @@ function hydrate(legacy: unknown, display: unknown): unknown {
   const record = legacy as Record<string, unknown>;
   if (typeof record.ja === "string" && typeof record.en === "string" && typeof record["zh-CN"] === "string") return typeof display === "string" ? { ...record, ja: display } : legacy;
   if (!display || typeof display !== "object") return legacy;
-  const identifiers = new Set(["id", "key", "unit", "profileId", "slot", "gameVersion", "dataAsOf", "updatedAt", "sourceUrl", "url", "checkedAt"]);
+  const identifiers = new Set(["id", "key", "unit", "profileId", "slot", "game", "games", "scope", "date", "sourceId", "identity", "gameVersion", "dataAsOf", "updatedAt", "sourceUrl", "url", "checkedAt"]);
   return Object.fromEntries(Object.entries(record).map(([key, value]) => [key, identifiers.has(key) ? value : hydrate(value, (display as Record<string, unknown>)[key])]));
 }
 export function selectPresentation<T extends object>(legacy: T | undefined): T | undefined {
@@ -26,7 +26,7 @@ export function selectPresentation<T extends object>(legacy: T | undefined): T |
     return legacy;
   }
   const output = { ...legacy } as T;
-  for (const field of ["name", "guide", "statsNote", "constellations", "partyRecommendations", "partyAppearances"] as const) {
+  for (const field of ["name", "guide", "statsNote", "constellations", "partyRecommendations", "partyAppearances", "games", "siteEvents", "characters", "updateLedger"] as const) {
     if (field in legacy && field in dto.display) (output as Record<string, unknown>)[field] = hydrate((legacy as Record<string, unknown>)[field], dto.display[field]);
   }
   return output;
