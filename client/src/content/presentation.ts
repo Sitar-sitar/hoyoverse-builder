@@ -1,8 +1,17 @@
 import { CONTENT_MANIFEST } from "./manifest";
 import type { PresentationDTO } from "@shared/content/presentation";
 
+export function validPreparationManifest(value: unknown): value is typeof CONTENT_MANIFEST {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const manifest = value as Record<string, unknown>;
+  return manifest.schemaVersion === 1 &&
+    typeof manifest.contentRevision === "string" && /^[a-f0-9]{64}$/.test(manifest.contentRevision) &&
+    manifest.translationMode === "preparation" &&
+    Array.isArray(manifest.readyLanguages) && manifest.readyLanguages.length === 1 && manifest.readyLanguages[0] === "ja";
+}
+
 export function validPresentation(value: unknown): value is PresentationDTO {
-  if (!value || typeof value !== "object") return false;
+  if (!validPreparationManifest(CONTENT_MANIFEST) || !value || typeof value !== "object") return false;
   const dto = value as PresentationDTO;
   const statuses=["registered","notCollected","notApplicable"];
   return dto.schemaVersion === 1 && dto.language === "ja" && dto.contentRevision === CONTENT_MANIFEST.contentRevision &&

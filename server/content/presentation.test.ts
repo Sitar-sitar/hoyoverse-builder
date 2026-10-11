@@ -4,9 +4,26 @@ import { withCatalogPresentation, withHistoryPresentation, withLookupPresentatio
 import {characterRecords} from "../../content/characters";
 import { characterReferenceCatalog } from "../characterReference";
 import { guideUpdateHistory } from "../guideUpdateHistory";
-import { selectPresentation,validPresentation } from "../../client/src/content/presentation";
+import { selectPresentation,validPresentation,validPreparationManifest } from "../../client/src/content/presentation";
+import { CONTENT_MANIFEST } from "../../client/src/content/manifest";
 
 describe("Japanese presentation DTO boundary", () => {
+  it("rejects malformed or prematurely multilingual preparation manifests", () => {
+    expect(validPreparationManifest(CONTENT_MANIFEST)).toBe(true);
+    for (const change of [null, [], {}, { ...CONTENT_MANIFEST, schemaVersion: 2 },
+      { ...CONTENT_MANIFEST, contentRevision: "old" }, { ...CONTENT_MANIFEST, translationMode: "ready" },
+      { ...CONTENT_MANIFEST, readyLanguages: ["ja", "en"] }, { ...CONTENT_MANIFEST, readyLanguages: [] }]) {
+      expect(validPreparationManifest(change)).toBe(false);
+    }
+    const original = CONTENT_MANIFEST.schemaVersion;
+    try {
+      Object.assign(CONTENT_MANIFEST, { schemaVersion: 99 });
+      const legacy = { name: "日本語", presentation: { schemaVersion: 1, language: "ja", contentRevision: CONTENT_MANIFEST.contentRevision, identityKey: null, information: { introduction: "notCollected", skills: "notCollected" }, display: { name: "別表示" } } };
+      const logger = vi.spyOn(console, "warn").mockImplementation(() => {});
+      try { expect(selectPresentation(legacy)).toBe(legacy); expect(logger).toHaveBeenCalled(); }
+      finally { logger.mockRestore(); }
+    } finally { Object.assign(CONTENT_MANIFEST, { schemaVersion: original }); }
+  });
   it("derives information states from authoring records and rejects unknown DTO states",()=>{
     const record=structuredClone(characterRecords[0]!);
     record.introduction={status:"registered",evidence:"fixture",data:[record.name]};
