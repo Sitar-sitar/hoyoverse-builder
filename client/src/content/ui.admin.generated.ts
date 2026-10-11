@@ -105,6 +105,21 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "API STATUS",
     "zh-CN": "API STATUS"
   },
+  "ui.pages_AdminHome_displayflow1.display1": {
+    "ja": "{v0}%",
+    "en": "{v0}%",
+    "zh-CN": "{v0}%"
+  },
+  "ui.pages_AdminHome_displayflow1.display2": {
+    "ja": "OK",
+    "en": "OK",
+    "zh-CN": "OK"
+  },
+  "ui.pages_AdminHome_displayflow1.display3": {
+    "ja": "NG",
+    "en": "NG",
+    "zh-CN": "NG"
+  },
   "ui.pages_AdminHome_literals1.literal1": {
     "ja": "公開サイトへ",
     "en": "公開サイトへ",
@@ -430,6 +445,41 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "INBOX",
     "zh-CN": "INBOX"
   },
+  "ui.pages_FeedbackAdmin_displayflow1.display1": {
+    "ja": "HSR",
+    "en": "HSR",
+    "zh-CN": "HSR"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display2": {
+    "ja": "GI",
+    "en": "GI",
+    "zh-CN": "GI"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display3": {
+    "ja": "ZZZ",
+    "en": "ZZZ",
+    "zh-CN": "ZZZ"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display4": {
+    "ja": "{v0} {v1}",
+    "en": "{v0} {v1}",
+    "zh-CN": "{v0} {v1}"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display5": {
+    "ja": "{v0} {v1}%",
+    "en": "{v0} {v1}%",
+    "zh-CN": "{v0} {v1}%"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display6": {
+    "ja": "{v0}%",
+    "en": "{v0}%",
+    "zh-CN": "{v0}%"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display7": {
+    "ja": "{v0} {v1}",
+    "en": "{v0} {v1}",
+    "zh-CN": "{v0} {v1}"
+  },
   "ui.pages_LanguageSettingsAdmin_literals1.literal1": {
     "ja": "管理者ポータルへ",
     "en": "管理者ポータルへ",
@@ -532,5 +582,23 @@ export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> =
   },
   "ui.admin.languages.waitingCount": {
     "count": "number"
+  },
+  "ui.pages_AdminHome_displayflow1.display1": {
+    "v0": "string"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display4": {
+    "v0": "string",
+    "v1": "string"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display5": {
+    "v0": "string",
+    "v1": "string"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display6": {
+    "v0": "string"
+  },
+  "ui.pages_FeedbackAdmin_displayflow1.display7": {
+    "v0": "string",
+    "v1": "string"
   }
 };

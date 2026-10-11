@@ -1,3 +1,4 @@
+import {uiFormat} from "@/content/ui";
 import { uiText } from "@/content/ui";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -74,7 +75,7 @@ export default function TopPortal({ game, uid, validUid, uidHint, isFetching, ha
   const form = (
     <form onSubmit={submit} className="mt-4" data-testid="portal-form">
       <div className="flex gap-2">
-        <Input ref={inputRef} value={uid} onChange={(event) => onUidChange(event.target.value.replace(/\D/g, ""))} inputMode="numeric" maxLength={10} placeholder={uidHint} aria-label={`${gameName(game)} UID`} className="h-12 rounded-none border-stone-400 bg-stone-50/80 font-mono text-sm shadow-none focus-visible:ring-amber-700" />
+        <Input ref={inputRef} value={uid} onChange={(event) => onUidChange(event.target.value.replace(/\D/g, ""))} inputMode="numeric" maxLength={10} placeholder={uidHint} aria-label={uiFormat("ui.components_variants_TopPortal_displayflow1.display1", {v0:String(gameName(game))})} className="h-12 rounded-none border-stone-400 bg-stone-50/80 font-mono text-sm shadow-none focus-visible:ring-amber-700" />
         <Button type="submit" disabled={!validUid || isFetching} className="h-12 rounded-none bg-stone-900 px-4 text-stone-50 hover:bg-amber-900"><Search className="h-4 w-4" /><span className="sr-only">{t("retrieve")}</span></Button>
       </div>
     </form>

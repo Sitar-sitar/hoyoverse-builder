@@ -1,3 +1,4 @@
+import {uiText} from "@/content/ui";
 "use client";
 
 import * as React from "react";
@@ -30,8 +31,8 @@ function Command({
 }
 
 function CommandDialog({
-  title = "Command Palette",
-  description = "Search for a command to run...",
+  title = uiText("ui.components_ui_command_displayflow1.display1"),
+  description = uiText("ui.components_ui_command_displayflow1.display2"),
   children,
   className,
   showCloseButton = true,

@@ -1,3 +1,4 @@
+import {uiFormat} from "@/content/ui";
 import { uiText as resolveUiText } from "@/content/ui";
 import { uiDictionary } from "@/content/ui";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -167,12 +168,12 @@ export default function CharacterCatalog() {
       <section className="paper-card border border-stone-300 p-5 sm:p-7">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <p className="detail-mono text-[9px] text-stone-500">{GAMES[game].short} / {reference.guide.profileId ?? "BUILD"}</p>
+            <p className="detail-mono text-[9px] text-stone-500">{GAMES[game].short} / {reference.guide.profileId ?? resolveUiText("ui.pages_CharacterCatalog_displayflow1.display1")}</p>
             <h2 className="display-serif mt-2 text-3xl font-bold sm:text-4xl">{reference.name}</h2>
           </div>
           <span className={cn("inline-flex items-center gap-1.5 border px-2.5 py-1 detail-mono text-[9px]", reference.status === "reviewed" ? "border-emerald-700 text-emerald-800" : "border-stone-400 text-stone-500")}>
             {reference.status === "reviewed" && <CheckCircle2 className="h-3.5 w-3.5" />}
-            {reference.status === "reviewed" ? `${copy.reviewed} / ${copy.batch} ${reference.batch}` : copy.pending}
+            {reference.status === "reviewed" ? uiFormat("ui.pages_CharacterCatalog_displayflow1.display2", {v0:String(copy.reviewed),v1:String(copy.batch),v2:String(reference.batch)}) : copy.pending}
           </span>
         </div>
         <p className="mt-5 max-w-3xl font-serif text-base leading-7 text-stone-700">{reference.guide.headline}</p>
@@ -405,7 +406,7 @@ export default function CharacterCatalog() {
                 >
                   <span className="text-sm font-semibold">{entry.name}</span>
                   <span className={cn("detail-mono shrink-0 text-[8px]", selectedName === entry.name ? "text-stone-300" : entry.status === "reviewed" ? "text-emerald-800" : "text-stone-400")}>
-                    {entry.status === "reviewed" ? `B${entry.batch}` : "PROFILE"}
+                    {entry.status === "reviewed" ? uiFormat("ui.pages_CharacterCatalog_displayflow1.display3", {v0:String(entry.batch)}) : resolveUiText("ui.pages_CharacterCatalog_displayflow1.display4")}
                   </span>
                 </button>
               ))}

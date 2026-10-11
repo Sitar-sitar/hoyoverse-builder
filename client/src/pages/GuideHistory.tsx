@@ -12,7 +12,7 @@ import React, { useMemo, useState } from "react";
 import { selectPresentation } from "@/content/presentation";
 
 type GameId = "hsr" | "genshin" | "zzz";
-const GAME_LABELS: Record<GameId, string> = { hsr: "HSR", genshin: uiText("ui.pages_GuideHistory_literals1.literal1"), zzz: "ZZZ" };
+const GAME_LABELS: Record<GameId, string> = { hsr: uiText("ui.pages_GuideHistory_displayflow1.display1"), genshin: uiText("ui.pages_GuideHistory_literals1.literal1"), zzz: uiText("ui.pages_GuideHistory_displayflow1.display2") };
 
 export default function GuideHistory() {
   const { t } = useLanguage();

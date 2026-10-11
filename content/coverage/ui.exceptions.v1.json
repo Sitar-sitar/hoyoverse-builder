@@ -513,6 +513,15 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
+    "fingerprint": "a32c6f31256929ba73f34fdc5b91290481bdd7314aa1a6f1c1fbf0aea14f1a1b",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "a different stat",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
+  },
+  {
     "fingerprint": "aadf7d28acbe17b6d91b289d1cf6a5b5de5ec0a03fc6e0fcec15509c8a9d5b7d",
     "file": "pages/Home.tsx",
     "site": "partyAdjustedComparisons",
@@ -594,6 +603,15 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
+    "fingerprint": "bce0d736d695ac064877703803560405c3450acc4fa1932188f0dd76a98662a9",
+    "file": "pages/DisplaySettingsAdmin.tsx",
+    "site": "DisplaySettingsAdmin",
+    "text": "legacy",
+    "count": 1,
+    "reason": "The admin screen displays the exact stored variant identifier for configuration inspection; legacy is an implementation identifier.",
+    "withdrawal": "Remove when the configuration inspection switches from stored variant identifiers to display labels."
+  },
+  {
     "fingerprint": "bf0adc3b010b739071043bba71d4958baed585256a612f420cebabcd7e2e3e9b",
     "file": "components/variants/StatGauge.tsx",
     "site": "metTarget",
@@ -619,6 +637,15 @@
     "count": 1,
     "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "c70137d941b34814fa83c466084cd92a6671346aa489686d9e69b5f8d820b447",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…} is currently ${…}. Replacing it with a ${…} main-stat piece is the most direct way to close this gap.",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
   },
   {
     "fingerprint": "c814861d0c2b9b65b8f8fec85e05a4739403eeffd965625b955757036c846da0",
@@ -664,6 +691,15 @@
     "count": 1,
     "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "ced862b365af3c52276ca16c8cfcab6488806b7daab59675495dc6a8a5eeeaab",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…} already has ${…} as its main stat. Prioritize pieces with ${…} substats.",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
   },
   {
     "fingerprint": "d19e96d1fa9039d891845f7fe3374e304e38966e75b432cd5e86f343905cc6ef",

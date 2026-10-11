@@ -120,9 +120,9 @@ export default function AdminHome() {
             <section className="mx-auto mt-10 max-w-5xl">
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal6")} value={analyticsQuery.data?.byDay?.[0]?.totalLookups ?? "—"} detail={uiFormat("ui.admin.analytics.today", { total: String(analyticsQuery.data?.totalLookups ?? "—") })} />
-                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal7")} value={analyticsQuery.data ? `${analyticsQuery.data.cacheHitRate.toFixed(1)}%` : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal7")} />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal7")} value={analyticsQuery.data ? uiFormat("ui.pages_AdminHome_displayflow1.display1", {v0:String(analyticsQuery.data.cacheHitRate.toFixed(1))}) : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal7")} />
                 <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal8")} value={feedbackQuery.data ? unresolvedFeedback : "—"} detail={uiText("ui.pages_AdminHome_literals1.literal8")} />
-                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal9")} value={health === "ok" ? "OK" : health === "error" ? "NG" : "…"} detail={uiText("ui.pages_AdminHome_brand1.literal10")} />
+                <AdminMetric label={uiText("ui.pages_AdminHome_brand1.literal9")} value={health === "ok" ? uiText("ui.pages_AdminHome_displayflow1.display2") : health === "error" ? uiText("ui.pages_AdminHome_displayflow1.display3") : "…"} detail={uiText("ui.pages_AdminHome_brand1.literal10")} />
               </div>
               {recentDays.length > 0 && (
                 <div className="mt-6 border border-stone-300 bg-stone-50/50 p-5">

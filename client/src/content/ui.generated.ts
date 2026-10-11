@@ -95,6 +95,16 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "Next slide",
     "zh-CN": "Next slide"
   },
+  "ui.components_ui_command_displayflow1.display1": {
+    "ja": "Command Palette",
+    "en": "Command Palette",
+    "zh-CN": "Command Palette"
+  },
+  "ui.components_ui_command_displayflow1.display2": {
+    "ja": "Search for a command to run...",
+    "en": "Search for a command to run...",
+    "zh-CN": "Search for a command to run..."
+  },
   "ui.components_ui_dialog_brand1.literal1": {
     "ja": "Close",
     "en": "Close",
@@ -204,6 +214,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": "UID ",
     "en": "UID ",
     "zh-CN": "UID "
+  },
+  "ui.components_variants_TopPortal_displayflow1.display1": {
+    "ja": "{v0} UID",
+    "en": "{v0} UID",
+    "zh-CN": "{v0} UID"
   },
   "ui.contexts_LanguageContext.dictionary1.acceptable": {
     "ja": "妥協",
@@ -1265,6 +1280,26 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "LOADING BUILD REFERENCE",
     "zh-CN": "LOADING BUILD REFERENCE"
   },
+  "ui.pages_CharacterCatalog_displayflow1.display1": {
+    "ja": "BUILD",
+    "en": "BUILD",
+    "zh-CN": "BUILD"
+  },
+  "ui.pages_CharacterCatalog_displayflow1.display2": {
+    "ja": "{v0} / {v1} {v2}",
+    "en": "{v0} / {v1} {v2}",
+    "zh-CN": "{v0} / {v1} {v2}"
+  },
+  "ui.pages_CharacterCatalog_displayflow1.display3": {
+    "ja": "B{v0}",
+    "en": "B{v0}",
+    "zh-CN": "B{v0}"
+  },
+  "ui.pages_CharacterCatalog_displayflow1.display4": {
+    "ja": "PROFILE",
+    "en": "PROFILE",
+    "zh-CN": "PROFILE"
+  },
   "ui.pages_CharacterCatalog_literals1.literal1": {
     "ja": "崩壊：スターレイル",
     "en": "崩壊：スターレイル",
@@ -1590,6 +1625,16 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": " JST",
     "zh-CN": " JST"
   },
+  "ui.pages_GuideHistory_displayflow1.display1": {
+    "ja": "HSR",
+    "en": "HSR",
+    "zh-CN": "HSR"
+  },
+  "ui.pages_GuideHistory_displayflow1.display2": {
+    "ja": "ZZZ",
+    "en": "ZZZ",
+    "zh-CN": "ZZZ"
+  },
   "ui.pages_GuideHistory_literals1.literal1": {
     "ja": "原神",
     "en": "原神",
@@ -1674,6 +1719,26 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": " JST",
     "en": " JST",
     "zh-CN": " JST"
+  },
+  "ui.pages_Home_displayflow1.display1": {
+    "ja": "SET",
+    "en": "SET",
+    "zh-CN": "SET"
+  },
+  "ui.pages_Home_displayflow1.display2": {
+    "ja": "{v0} UID",
+    "en": "{v0} UID",
+    "zh-CN": "{v0} UID"
+  },
+  "ui.pages_Home_displayflow1.display3": {
+    "ja": "PATH",
+    "en": "PATH",
+    "zh-CN": "PATH"
+  },
+  "ui.pages_Home_displayflow1.display4": {
+    "ja": "{v0} {v1}{v2} / -{v3}{v4}",
+    "en": "{v0} {v1}{v2} / -{v3}{v4}",
+    "zh-CN": "{v0} {v1}{v2} / -{v3}{v4}"
   },
   "ui.pages_Home_literals1.literal1": {
     "ja": "崩壊：スターレイル",
@@ -1962,6 +2027,9 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
   }
 };
 export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> = {
+  "ui.components_variants_TopPortal_displayflow1.display1": {
+    "v0": "string"
+  },
   "ui.contexts_LanguageContext.dictionary1.anySlotSubstatReason": {
     "stat": "string"
   },
@@ -1984,7 +2052,25 @@ export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> =
     "unit": "string",
     "deficit": "string"
   },
+  "ui.pages_CharacterCatalog_displayflow1.display2": {
+    "v0": "string",
+    "v1": "string",
+    "v2": "string"
+  },
+  "ui.pages_CharacterCatalog_displayflow1.display3": {
+    "v0": "string"
+  },
   "ui.pages_CharacterCatalog.dictionary1.catalogStatus": {
     "count": "number"
+  },
+  "ui.pages_Home_displayflow1.display2": {
+    "v0": "string"
+  },
+  "ui.pages_Home_displayflow1.display4": {
+    "v0": "string",
+    "v1": "string",
+    "v2": "string",
+    "v3": "string",
+    "v4": "string"
   }
 };
