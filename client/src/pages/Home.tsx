@@ -1,3 +1,4 @@
+import { uiDictionary } from "@/content/ui";
 import { Button } from "@/components/ui/button";
 import { selectPresentation } from "@/content/presentation";
 import { Input } from "@/components/ui/input";
@@ -189,16 +190,35 @@ export default function Home() {
   };
   // 案 A の強化提案用。現行カードと同じ文言を返す（表示の分岐だけで、算出は変えない）。
   const recommendationRationale = (item: PriorityRecommendation) => language === "ja" ? item.rationale : `${t("target")} ${item.target}${item.unit} / -${item.deficit.toFixed(item.unit === "%" ? 1 : 0)}${item.unit}`;
-  const partyUi = language === "ja"
-    ? { eyebrow: "PARTY SYNERGY / 最大3案", title: "おすすめPT編成", select: "編成を選択", members: "編成メンバー", synergy: "シナジー", targets: "この編成での目標変更", version: "対応バージョン", dataAsOf: "編成基準日", updated: "最終更新日", source: "編成の参照", community: "SNS・コミュニティ照合", checked: "確認日", noData: "このキャラクターの編成データは現在準備中です。目標ステータスは個別ガイドの基本値で表示します。", battleNote: "戦闘中・条件付きのバフは公開プロフィールの現在値へ加算せず、目標変更と説明で分けて表示します。" }
-    : language === "zh-CN"
-      ? { eyebrow: "队伍协同 / 最多3套", title: "推荐队伍", select: "选择队伍", members: "队伍成员", synergy: "协同效果", targets: "此队的目标变更", version: "适用版本", dataAsOf: "队伍基准日", updated: "最后更新日", source: "队伍参考", community: "SNS与社区核对", checked: "核对日", noData: "该角色的队伍数据正在准备中。目标属性将使用角色指南的基础值显示。", battleNote: "战斗内和条件性增益不会计入公开面板当前值，而会通过目标变更和说明单独显示。" }
-      : { eyebrow: "PARTY SYNERGY / UP TO 3", title: "Recommended Teams", select: "Select a team", members: "Team members", synergy: "Synergy", targets: "Targets for this team", version: "Game version", dataAsOf: "Team data as of", updated: "Last updated", source: "Team reference", community: "Social & community checks", checked: "Checked", noData: "Team recommendations for this character are being prepared. Target stats use the character guide baseline.", battleNote: "In-combat and conditional buffs are not added to public-profile stats; they are shown separately through target changes and notes." };
-  const constellationUi = language === "ja"
-    ? { eyebrow: "CHARACTER PROGRESSION", title: "凸効果・目標補正", unlocked: "解放済み", locked: "未解放の効果を表示", noData: "このキャラクターの凸効果データは収集中です。表示対象は10キャラクター単位で検証・適用します。", target: "凸による目標変更", source: "効果の参照", version: "対応バージョン", asOf: "基準日", updated: "最終更新日", battleNote: "戦闘中・条件付きの効果は公開プロフィールの現在値へ加算せず、目標変更と注記で区別します。" }
-    : language === "zh-CN"
-      ? { eyebrow: "CHARACTER PROGRESSION", title: "星魂/命座/心象与目标修正", unlocked: "已解锁", locked: "显示未解锁效果", noData: "该角色的效果数据正在收集中。每10名角色完成验证后再分批应用。", target: "因解锁效果调整的目标", source: "效果参考", version: "适用版本", asOf: "基准日", updated: "最后更新日", battleNote: "战斗内和条件性效果不会计入公开面板当前值，而会通过目标变化和说明单独显示。" }
-      : { eyebrow: "CHARACTER PROGRESSION", title: "Constellations & Target Changes", unlocked: "Unlocked", locked: "Show locked effects", noData: "Effect data for this character is being collected. It is verified and applied in batches of ten characters.", target: "Targets changed by progression", source: "Effect reference", version: "Game version", asOf: "Data as of", updated: "Last updated", battleNote: "In-combat and conditional effects are not added to the public-profile value; they are separated through target changes and notes." };
+  const partyUi = uiDictionary({
+  "battleNote": "ui.pages_Home.dictionary1.battleNote",
+  "checked": "ui.pages_Home.dictionary1.checked",
+  "community": "ui.pages_Home.dictionary1.community",
+  "dataAsOf": "ui.pages_Home.dictionary1.dataAsOf",
+  "eyebrow": "ui.pages_Home.dictionary1.eyebrow",
+  "members": "ui.pages_Home.dictionary1.members",
+  "noData": "ui.pages_Home.dictionary1.noData",
+  "select": "ui.pages_Home.dictionary1.select",
+  "source": "ui.pages_Home.dictionary1.source",
+  "synergy": "ui.pages_Home.dictionary1.synergy",
+  "targets": "ui.pages_Home.dictionary1.targets",
+  "title": "ui.pages_Home.dictionary1.title",
+  "updated": "ui.pages_Home.dictionary1.updated",
+  "version": "ui.pages_Home.dictionary1.version"
+})[language];
+  const constellationUi = uiDictionary({
+  "asOf": "ui.pages_Home.dictionary2.asOf",
+  "battleNote": "ui.pages_Home.dictionary2.battleNote",
+  "eyebrow": "ui.pages_Home.dictionary2.eyebrow",
+  "locked": "ui.pages_Home.dictionary2.locked",
+  "noData": "ui.pages_Home.dictionary2.noData",
+  "source": "ui.pages_Home.dictionary2.source",
+  "target": "ui.pages_Home.dictionary2.target",
+  "title": "ui.pages_Home.dictionary2.title",
+  "unlocked": "ui.pages_Home.dictionary2.unlocked",
+  "updated": "ui.pages_Home.dictionary2.updated",
+  "version": "ui.pages_Home.dictionary2.version"
+})[language];
 
   return <div className="min-h-screen overflow-hidden" data-site-chrome={chromeVariant === "unified" ? "unified" : undefined} data-game={chromeVariant === "unified" ? game : undefined}>
     {chromeVariant === "unified" ? <SiteHeader activePage="lookup" game={game}><LanguageSwitcher /></SiteHeader> : <header className="container pt-6 sm:pt-8"><div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3"><div className="flex items-center gap-3"><span className="inline-block h-2 w-2 rounded-full bg-amber-700" /><p className="detail-mono text-[9px] text-stone-600">{t("publicBuildIntelligence")}</p></div><div className="flex flex-wrap items-center justify-end gap-2 sm:gap-4"><LanguageSwitcher /><Link href="/updates" className="detail-mono text-[9px] text-amber-800 underline-offset-4 hover:underline">{t("updates")}</Link><Link href="/feedback?source=/" className="detail-mono text-[9px] text-amber-800 underline-offset-4 hover:underline">{t("translationFeedback")}</Link><Link href="/admin/feedback" className="detail-mono inline-flex h-7 items-center border border-stone-400 px-2 text-[9px] text-stone-700 transition-colors hover:border-stone-900 hover:bg-stone-900 hover:text-stone-50">{t("adminAccess")}</Link><p className="hidden detail-mono text-[9px] text-stone-500 sm:block">01 — {activeGame.short} / {t("uidOnly")}</p></div></div></header>}

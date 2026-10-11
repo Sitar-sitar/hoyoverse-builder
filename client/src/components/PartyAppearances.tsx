@@ -1,32 +1,15 @@
+import { uiDictionary } from "@/content/ui";
 import React from "react";
 import type { PartyAppearance } from "../../../server/parties/appearances";
 
-const copy = {
-  ja: {
-    heading: "このキャラが入るほかの編成",
-    note: "共有編成のうち、現在の推奨枠にない案です。本人向けの推薦順位や目標値には反映しません。",
-    origin: "出典の起点：",
-    version: "バージョン",
-    data: "基準日",
-    updated: "更新日",
-  },
-  en: {
-    heading: "Other teams featuring this character",
-    note: "Shared teams outside this character's current recommendations. They do not affect recommendation ranks or target stats.",
-    origin: "Source character: ",
-    version: "Version",
-    data: "Data as of",
-    updated: "Updated",
-  },
-  "zh-CN": {
-    heading: "包含该角色的其他队伍",
-    note: "这些共享队伍未列入该角色当前的推荐栏，不影响推荐顺序或目标属性。",
-    origin: "来源角色：",
-    version: "版本",
-    data: "数据日期",
-    updated: "更新日期",
-  },
-};
+const copy = uiDictionary({
+  "data": "ui.components_PartyAppearances.dictionary1.data",
+  "heading": "ui.components_PartyAppearances.dictionary1.heading",
+  "note": "ui.components_PartyAppearances.dictionary1.note",
+  "origin": "ui.components_PartyAppearances.dictionary1.origin",
+  "updated": "ui.components_PartyAppearances.dictionary1.updated",
+  "version": "ui.components_PartyAppearances.dictionary1.version"
+});
 
 export default function PartyAppearances({
   appearances,

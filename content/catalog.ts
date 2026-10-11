@@ -45,8 +45,23 @@ import { records as zh13 } from "./translations/zh-CN/parties_linkRecords";
 import { sources as s14 } from "./ja/guides/parties_sharedTeams";
 import { records as en14 } from "./translations/en/parties_sharedTeams";
 import { records as zh14 } from "./translations/zh-CN/parties_sharedTeams";
-export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12, ...s13, ...s14];
-export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12, ...en13, ...en14}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12, ...zh13, ...zh14} };
+import { sources as s15 } from "./ja/ui/components_PartyAppearances";
+import { records as en15 } from "./translations/en/ui_components_PartyAppearances";
+import { records as zh15 } from "./translations/zh-CN/ui_components_PartyAppearances";
+import { sources as s16 } from "./ja/ui/components_PublicCatalogShortcut";
+import { records as en16 } from "./translations/en/ui_components_PublicCatalogShortcut";
+import { records as zh16 } from "./translations/zh-CN/ui_components_PublicCatalogShortcut";
+import { sources as s17 } from "./ja/ui/contexts_LanguageContext";
+import { records as en17 } from "./translations/en/ui_contexts_LanguageContext";
+import { records as zh17 } from "./translations/zh-CN/ui_contexts_LanguageContext";
+import { sources as s18 } from "./ja/ui/pages_CharacterCatalog";
+import { records as en18 } from "./translations/en/ui_pages_CharacterCatalog";
+import { records as zh18 } from "./translations/zh-CN/ui_pages_CharacterCatalog";
+import { sources as s19 } from "./ja/ui/pages_Home";
+import { records as en19 } from "./translations/en/ui_pages_Home";
+import { records as zh19 } from "./translations/zh-CN/ui_pages_Home";
+export const canonicalSources = [...s0, ...s1, ...s2, ...s3, ...s4, ...s5, ...s6, ...s7, ...s8, ...s9, ...s10, ...s11, ...s12, ...s13, ...s14, ...s15, ...s16, ...s17, ...s18, ...s19];
+export const canonicalTranslations = { en: {...en0, ...en1, ...en2, ...en3, ...en4, ...en5, ...en6, ...en7, ...en8, ...en9, ...en10, ...en11, ...en12, ...en13, ...en14, ...en15, ...en16, ...en17, ...en18, ...en19}, "zh-CN": {...zh0, ...zh1, ...zh2, ...zh3, ...zh4, ...zh5, ...zh6, ...zh7, ...zh8, ...zh9, ...zh10, ...zh11, ...zh12, ...zh13, ...zh14, ...zh15, ...zh16, ...zh17, ...zh18, ...zh19} };
 export function canonicalCatalog(planned: CoverageSection[] = []): ContentCatalog {
 return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTranslations, aliases: [], sections: [
 {id:"legacy.batch17ConstellationData_generated", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s0.map(source=>({kind:"textRef" as const,id:source.id}))}},
@@ -64,5 +79,10 @@ return { schemaVersion: 1, sources: canonicalSources, translations: canonicalTra
 {id:"legacy.parties_legacyCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s12.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.parties_linkRecords", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s13.map(source=>({kind:"textRef" as const,id:source.id}))}},
 {id:"legacy.parties_sharedTeams", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s14.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_PartyAppearances", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s15.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_components_PublicCatalogShortcut", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s16.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_contexts_LanguageContext", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s17.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_CharacterCatalog", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s18.map(source=>({kind:"textRef" as const,id:source.id}))}},
+{id:"legacy.ui_pages_Home", audience:"public", visibility:"active", section:{status:"registered", evidence:"legacy source migration mapping", data:s19.map(source=>({kind:"textRef" as const,id:source.id}))}},
 ...planned] };
 }

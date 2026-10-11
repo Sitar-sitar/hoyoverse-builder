@@ -29,6 +29,9 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Validate content structure and generated UI
+        run: pnpm content:check
+
       - name: Test production monitor
         run: node --test scripts/monitor-production.test.mjs
 

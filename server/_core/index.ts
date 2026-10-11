@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { contentRepository } from "../content/repository";
 import { booleanSetting, maintenanceMiddleware } from "./migrationRuntime";
 import { validateClientIpConfiguration } from "./rateLimit";
 import compression from "compression";
@@ -87,6 +88,9 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 }
 
 async function startServer() {
+  // Fail before accepting requests when source identity or references are invalid.
+  // Untranslated preparation records are allowed; structural corruption is not.
+  contentRepository();
   booleanSetting("API_MAINTENANCE");
   booleanSetting("API_MIGRATION_PREVIEW");
   validateClientIpConfiguration();

@@ -38,6 +38,9 @@ jobs:
       - name: Run tests
         run: pnpm test
 
+      - name: Validate content structure and generated UI
+        run: pnpm content:check
+
       - name: Test Pages migration modes
         run: node --test scripts/pages.test.mjs scripts/wait-production-api.test.mjs scripts/verify-party-appearances.test.mjs
 
