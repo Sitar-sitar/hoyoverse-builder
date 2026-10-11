@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "buildAdvisor_providerDisplay",
+  "inputDigest": "c7d692cb072b1a8770d37299b612bd44b11d592b65d0d349489d9b11090d9b50",
+  "outputDigest": "d14e24390a59075c91c3cce547030d1e192aea64eebc3a49850e905119c747c9",
+  "mapping": [
+    {
+      "start": 11165,
+      "end": 11169,
+      "id": "guide.providerDisplay.buildAdvisor.b00001",
+      "oldText": "\"装備\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00001\")"
+    },
+    {
+      "start": 17903,
+      "end": 17957,
+      "id": "guide.providerDisplay.buildAdvisor.b00002",
+      "oldText": "\"公開中のキャラクター・光円錐・遺物・軌跡を合算した戦闘外の最終値です。戦闘中・条件付き効果は含みません。\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00002\")"
+    },
+    {
+      "start": 17992,
+      "end": 18038,
+      "id": "guide.providerDisplay.buildAdvisor.b00003",
+      "oldText": "\"最終ステータスを取得できないため、目標比較を保留しています。数分後に再度お試しください。\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00003\")"
+    },
+    {
+      "start": 19770,
+      "end": 19774,
+      "id": "guide.providerDisplay.buildAdvisor.b00004",
+      "oldText": "\"頭部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00004\")"
+    },
+    {
+      "start": 19776,
+      "end": 19780,
+      "id": "guide.providerDisplay.buildAdvisor.b00005",
+      "oldText": "\"手部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00005\")"
+    },
+    {
+      "start": 19782,
+      "end": 19786,
+      "id": "guide.providerDisplay.buildAdvisor.b00006",
+      "oldText": "\"胴体\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00006\")"
+    },
+    {
+      "start": 19788,
+      "end": 19792,
+      "id": "guide.providerDisplay.buildAdvisor.b00007",
+      "oldText": "\"脚部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00007\")"
+    },
+    {
+      "start": 19794,
+      "end": 19802,
+      "id": "guide.providerDisplay.buildAdvisor.b00008",
+      "oldText": "\"次元界オーブ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00008\")"
+    },
+    {
+      "start": 19804,
+      "end": 19809,
+      "id": "guide.providerDisplay.buildAdvisor.b00009",
+      "oldText": "\"連結縄\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00009\")"
+    },
+    {
+      "start": 20075,
+      "end": 20079,
+      "id": "guide.providerDisplay.buildAdvisor.b00010",
+      "oldText": "\"遺物\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00010\")"
+    },
+    {
+      "start": 21325,
+      "end": 21330,
+      "id": "guide.providerDisplay.buildAdvisor.b00011",
+      "oldText": "\"光円錐\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00011\")"
+    },
+    {
+      "start": 22291,
+      "end": 22296,
+      "id": "guide.providerDisplay.buildAdvisor.b00012",
+      "oldText": "\"開拓者\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.buildAdvisor.b00012\")"
+    }
+  ]
+}

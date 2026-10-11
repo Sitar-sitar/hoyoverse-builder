@@ -1,3 +1,6 @@
+import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
+import {sources as providerDisplaySources} from "../content/ja/guides/buildAdvisor_providerDisplay";
+const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
 import {records as guideRecords} from "../content/guideDefinitions_hsr";
 import {projectGuideRegistry} from "./content/guides";
 import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
@@ -227,7 +230,7 @@ export function equipmentActionsFor(guide: GuideDefinition, relics: RelicForActi
       equippedName: equipped?.name ?? null, currentMain, desiredStat,
       reason: mainMatches
         ? _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00003",{v0:slot,v1:String(currentMain),v2:desiredStat})
-        : _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00004",{v0:slot,v1:currentMain ? `は現在${currentMain}` : "",v2:desiredStat,v3:equipped?.name ?? "装備"}),
+        : _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00004",{v0:slot,v1:currentMain ? `は現在${currentMain}` : "",v2:desiredStat,v3:equipped?.name ?? _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00001")}),
     }];
   });
 }
@@ -420,8 +423,8 @@ function mihomoStatValues(finals: RawRecord[], properties: RawRecord[]): Partial
   return values;
 }
 
-const MIHOMO_FINAL_STATS_NOTE = "公開中のキャラクター・光円錐・遺物・軌跡を合算した戦闘外の最終値です。戦闘中・条件付き効果は含みません。";
-const MIHOMO_UNAVAILABLE_NOTE = "最終ステータスを取得できないため、目標比較を保留しています。数分後に再度お試しください。";
+const MIHOMO_FINAL_STATS_NOTE = _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00002");
+const MIHOMO_UNAVAILABLE_NOTE = _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00003");
 
 const MIHOMO_FINAL_LABELS: Record<string, string> ={ hp: "HP", atk: "攻撃力", def: "防御力", spd: "速度" };
 
@@ -459,13 +462,13 @@ function parseCharacter(source: RawRecord): CharacterProfile {
   const identity = resolveCharacterIdentity("hsr", text(source.id, "unknown"), text(source.name));
   const name = identity.displayName;
   const guide = guideFor(name, text(path.name), identity);
-  const hsrSlots = ["頭部", "手部", "胴体", "脚部", "次元界オーブ", "連結縄"];
+  const hsrSlots = [_providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00004"), _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00005"), _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00006"), _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00007"), _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00008"), _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00009")];
   const relics = asArray(source.relics).map((entry, index) => {
     const relic = asRecord(entry);
     const main = asRecord(relic.main_affix ?? relic.mainAffix);
     return {
       id: text(relic.id, `${name}-relic-${index}`),
-      name: text(relic.name, "遺物"),
+      name: text(relic.name, _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00010")),
       slot: hsrSlots[index] ?? text(relic.type ?? relic.slot),
       setName: text(relic.set_name ?? relic.setName),
       level: nullableNumber(relic.level),
@@ -491,7 +494,7 @@ function parseCharacter(source: RawRecord): CharacterProfile {
     elementColor: text(element.color) || null,
     path: text(path.name),
     lightCone: Object.keys(lightCone).length ? {
-      name: text(lightCone.name, "光円錐"),
+      name: text(lightCone.name, _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00011")),
       level: nullableNumber(lightCone.level),
       rank: nullableNumber(lightCone.rank),
       icon: text(lightCone.icon) || null,
@@ -515,7 +518,7 @@ export function normalizeMihomoPayload(payload: unknown): Omit<BuildLookupResult
   return {
     player: {
       uid: text(player.uid ?? root.uid),
-      name: text(player.nickname ?? player.name, "開拓者"),
+      name: text(player.nickname ?? player.name, _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00012")),
       level: nullableNumber(player.level),
     },
     characters: asArray(root.characters).map(asRecord).map(parseCharacter),

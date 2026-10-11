@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "enkaFallback_providerDisplay",
+  "inputDigest": "b9da56414338f11d06fb9dfb5981100a095377d9bf53e87231528b06e1ca74d8",
+  "outputDigest": "8b4ea9676c2c3945264c216ad75e93475c6cf98019feeeec58d4fea0a1b2a850",
+  "mapping": [
+    {
+      "start": 2362,
+      "end": 2368,
+      "id": "guide.providerDisplay.enkaFallback.b00001",
+      "oldText": "\"セイバー\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00001\")"
+    },
+    {
+      "start": 2388,
+      "end": 2393,
+      "id": "guide.providerDisplay.enkaFallback.b00002",
+      "oldText": "\"ホタル\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00002\")"
+    },
+    {
+      "start": 2413,
+      "end": 2421,
+      "id": "guide.providerDisplay.enkaFallback.b00003",
+      "oldText": "\"キャストリス\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00003\")"
+    },
+    {
+      "start": 2441,
+      "end": 2451,
+      "id": "guide.providerDisplay.enkaFallback.b00004",
+      "oldText": "\"銀狼Lv.999\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00004\")"
+    },
+    {
+      "start": 2471,
+      "end": 2476,
+      "id": "guide.providerDisplay.enkaFallback.b00005",
+      "oldText": "\"遠坂凛\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00005\")"
+    },
+    {
+      "start": 2496,
+      "end": 2505,
+      "id": "guide.providerDisplay.enkaFallback.b00006",
+      "oldText": "\"ギルガメッシュ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00006\")"
+    },
+    {
+      "start": 2568,
+      "end": 2571,
+      "id": "guide.providerDisplay.enkaFallback.b00007",
+      "oldText": "\"炎\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00007\")"
+    },
+    {
+      "start": 2578,
+      "end": 2581,
+      "id": "guide.providerDisplay.enkaFallback.b00008",
+      "oldText": "\"氷\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00008\")"
+    },
+    {
+      "start": 2594,
+      "end": 2598,
+      "id": "guide.providerDisplay.enkaFallback.b00009",
+      "oldText": "\"虚数\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00009\")"
+    },
+    {
+      "start": 2610,
+      "end": 2614,
+      "id": "guide.providerDisplay.enkaFallback.b00010",
+      "oldText": "\"物理\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00010\")"
+    },
+    {
+      "start": 2625,
+      "end": 2629,
+      "id": "guide.providerDisplay.enkaFallback.b00011",
+      "oldText": "\"量子\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00011\")"
+    },
+    {
+      "start": 2640,
+      "end": 2643,
+      "id": "guide.providerDisplay.enkaFallback.b00012",
+      "oldText": "\"雷\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00012\")"
+    },
+    {
+      "start": 2651,
+      "end": 2654,
+      "id": "guide.providerDisplay.enkaFallback.b00013",
+      "oldText": "\"風\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00013\")"
+    },
+    {
+      "start": 2691,
+      "end": 2750,
+      "id": "guide.providerDisplay.enkaFallback.b00014",
+      "oldText": "\"公開中のキャラクター・光円錐・遺物・解放済み軌跡から算出した戦闘外の最終値です。戦闘中・条件付き効果は含みません。\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00014\")"
+    },
+    {
+      "start": 2783,
+      "end": 2838,
+      "id": "guide.providerDisplay.enkaFallback.b00015",
+      "oldText": "\"静的データを取得できないため、最終ステータスの算出と目標比較を保留しています。数分後に再度お試しください。\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00015\")"
+    },
+    {
+      "start": 20339,
+      "end": 20343,
+      "id": "guide.providerDisplay.enkaFallback.b00016",
+      "oldText": "\"HP\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00016\")"
+    },
+    {
+      "start": 20353,
+      "end": 20358,
+      "id": "guide.providerDisplay.enkaFallback.b00017",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00017\")"
+    },
+    {
+      "start": 20369,
+      "end": 20374,
+      "id": "guide.providerDisplay.enkaFallback.b00018",
+      "oldText": "\"防御力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00018\")"
+    },
+    {
+      "start": 20383,
+      "end": 20387,
+      "id": "guide.providerDisplay.enkaFallback.b00019",
+      "oldText": "\"速度\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00019\")"
+    },
+    {
+      "start": 20399,
+      "end": 20404,
+      "id": "guide.providerDisplay.enkaFallback.b00020",
+      "oldText": "\"会心率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00020\")"
+    },
+    {
+      "start": 20415,
+      "end": 20421,
+      "id": "guide.providerDisplay.enkaFallback.b00021",
+      "oldText": "\"会心ダメ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00021\")"
+    },
+    {
+      "start": 20436,
+      "end": 20442,
+      "id": "guide.providerDisplay.enkaFallback.b00022",
+      "oldText": "\"撃破特効\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00022\")"
+    },
+    {
+      "start": 20459,
+      "end": 20465,
+      "id": "guide.providerDisplay.enkaFallback.b00023",
+      "oldText": "\"効果命中\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00023\")"
+    },
+    {
+      "start": 20478,
+      "end": 20484,
+      "id": "guide.providerDisplay.enkaFallback.b00024",
+      "oldText": "\"効果抵抗\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00024\")"
+    },
+    {
+      "start": 20502,
+      "end": 20510,
+      "id": "guide.providerDisplay.enkaFallback.b00025",
+      "oldText": "\"EP回復効率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00025\")"
+    },
+    {
+      "start": 23151,
+      "end": 23155,
+      "id": "guide.providerDisplay.enkaFallback.b00026",
+      "oldText": "\"頭部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00026\")"
+    },
+    {
+      "start": 23157,
+      "end": 23161,
+      "id": "guide.providerDisplay.enkaFallback.b00027",
+      "oldText": "\"手部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00027\")"
+    },
+    {
+      "start": 23163,
+      "end": 23167,
+      "id": "guide.providerDisplay.enkaFallback.b00028",
+      "oldText": "\"胴体\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00028\")"
+    },
+    {
+      "start": 23169,
+      "end": 23173,
+      "id": "guide.providerDisplay.enkaFallback.b00029",
+      "oldText": "\"脚部\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00029\")"
+    },
+    {
+      "start": 23175,
+      "end": 23183,
+      "id": "guide.providerDisplay.enkaFallback.b00030",
+      "oldText": "\"次元界オーブ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00030\")"
+    },
+    {
+      "start": 23185,
+      "end": 23190,
+      "id": "guide.providerDisplay.enkaFallback.b00031",
+      "oldText": "\"連結縄\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00031\")"
+    },
+    {
+      "start": 23288,
+      "end": 23310,
+      "id": "guide.providerDisplay.enkaFallback.b00032",
+      "oldText": "`遺物 ${relicIndex + 1}`",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00032\", {v0:String(relicIndex + 1)})"
+    },
+    {
+      "start": 23388,
+      "end": 23415,
+      "id": "guide.providerDisplay.enkaFallback.b00034",
+      "oldText": "`未解決（ID: ${setId || \"不明\"}）`",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00034\", {v0:String(setId || _providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00033\"))})"
+    },
+    {
+      "start": 23882,
+      "end": 23887,
+      "id": "guide.providerDisplay.enkaFallback.b00035",
+      "oldText": "\"未設定\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00035\")"
+    },
+    {
+      "start": 24504,
+      "end": 24509,
+      "id": "guide.providerDisplay.enkaFallback.b00036",
+      "oldText": "\"未解決\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00036\")"
+    },
+    {
+      "start": 24634,
+      "end": 24662,
+      "id": "guide.providerDisplay.enkaFallback.b00038",
+      "oldText": "`未解決（ID: ${coneId || \"不明\"}）`",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00038\", {v0:String(coneId || _providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00037\"))})"
+    },
+    {
+      "start": 25334,
+      "end": 25339,
+      "id": "guide.providerDisplay.enkaFallback.b00039",
+      "oldText": "\"開拓者\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.enkaFallback.b00039\")"
+    }
+  ]
+}

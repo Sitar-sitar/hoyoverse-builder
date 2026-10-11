@@ -1,3 +1,6 @@
+import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
+import {sources as providerDisplaySources} from "../content/ja/guides/gameProviders_providerDisplay";
+const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
 import {sources as externalDisplaySources} from "../content/ja/guides/externalDisplayFallbacks";
 const _externalDisplay = createLegacyTexts(externalDisplaySources, {}, {});
 import {records as guideRecords} from "../content/guideDefinitions_providers";
@@ -193,17 +196,17 @@ const GI_ELEMENTS: Record<string, { label: string; color: string }> = {
 };
 
 const GI_WEAPONS: Record<string, string> = {
-  WEAPON_SWORD_ONE_HAND: "片手剣", WEAPON_CLAYMORE: "両手剣", WEAPON_POLE: "長柄武器", WEAPON_BOW: "弓", WEAPON_CATALYST: "法器",
+  WEAPON_SWORD_ONE_HAND: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00001"), WEAPON_CLAYMORE: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00002"), WEAPON_POLE: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00003"), WEAPON_BOW: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00004"), WEAPON_CATALYST: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00005"),
 };
 
 const GI_PROP_NAMES: Record<string, string> = {
-  FIGHT_PROP_HP: "HP", FIGHT_PROP_ATTACK: "攻撃力", FIGHT_PROP_DEFENSE: "防御力", FIGHT_PROP_HP_PERCENT: "HP%", FIGHT_PROP_ATTACK_PERCENT: "攻撃力%", FIGHT_PROP_DEFENSE_PERCENT: "防御力%",
-  FIGHT_PROP_CRITICAL: "会心率", FIGHT_PROP_CRITICAL_HURT: "会心ダメージ", FIGHT_PROP_CHARGE_EFFICIENCY: "元素チャージ効率", FIGHT_PROP_ELEMENT_MASTERY: "元素熟知", FIGHT_PROP_HEAL_ADD: "与える治癒効果",
-  FIGHT_PROP_FIRE_ADD_HURT: "炎元素ダメージ", FIGHT_PROP_ELEC_ADD_HURT: "雷元素ダメージ", FIGHT_PROP_WATER_ADD_HURT: "水元素ダメージ", FIGHT_PROP_WIND_ADD_HURT: "風元素ダメージ", FIGHT_PROP_ICE_ADD_HURT: "氷元素ダメージ", FIGHT_PROP_ROCK_ADD_HURT: "岩元素ダメージ", FIGHT_PROP_GRASS_ADD_HURT: "草元素ダメージ", FIGHT_PROP_PHYSICAL_ADD_HURT: "物理ダメージ",
+  FIGHT_PROP_HP: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00006"), FIGHT_PROP_ATTACK: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00007"), FIGHT_PROP_DEFENSE: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00008"), FIGHT_PROP_HP_PERCENT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00009"), FIGHT_PROP_ATTACK_PERCENT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00010"), FIGHT_PROP_DEFENSE_PERCENT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00011"),
+  FIGHT_PROP_CRITICAL: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00012"), FIGHT_PROP_CRITICAL_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00013"), FIGHT_PROP_CHARGE_EFFICIENCY: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00014"), FIGHT_PROP_ELEMENT_MASTERY: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00015"), FIGHT_PROP_HEAL_ADD: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00016"),
+  FIGHT_PROP_FIRE_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00017"), FIGHT_PROP_ELEC_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00018"), FIGHT_PROP_WATER_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00019"), FIGHT_PROP_WIND_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00020"), FIGHT_PROP_ICE_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00021"), FIGHT_PROP_ROCK_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00022"), FIGHT_PROP_GRASS_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00023"), FIGHT_PROP_PHYSICAL_ADD_HURT: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00024"),
 };
 
 const GI_ARTIFACT_SLOTS: Record<string, string> = {
-  EQUIP_BRACER: "生の花", EQUIP_NECKLACE: "死の羽", EQUIP_SHOES: "時の砂", EQUIP_RING: "空の杯", EQUIP_DRESS: "理の冠",
+  EQUIP_BRACER: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00025"), EQUIP_NECKLACE: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00026"), EQUIP_SHOES: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00027"), EQUIP_RING: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00028"), EQUIP_DRESS: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00029"),
 };
 
 const GI_PERCENT_PROPS = new Set([
@@ -354,10 +357,10 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
 const ZZZ_ELEMENTS: Record<string, { label: string; color: string }> = {
   Fire: { label: _content.ja("guide.legacy.gameProviders.b01117"), color: "#d45b48" }, Ice: { label: _content.ja("guide.legacy.gameProviders.b01118"), color: "#76c8dc" }, Elec: { label: _content.ja("guide.legacy.gameProviders.b01119"), color: "#a278d2" }, Electric: { label: _content.ja("guide.legacy.gameProviders.b01120"), color: "#a278d2" }, Physical: { label: _content.ja("guide.legacy.gameProviders.b01121"), color: "#a6a6a6" }, Physics: { label: _content.ja("guide.legacy.gameProviders.b01122"), color: "#a6a6a6" }, Ether: { label: _content.ja("guide.legacy.gameProviders.b01123"), color: "#d875ce" },
 };
-const ZZZ_PROFESSIONS: Record<string, string> = { Attack: "強攻", Anomaly: "異常", Stun: "撃破", Support: "支援", Defense: "防護", Rupture: "命破", Armorer: "鋭御" };
+const ZZZ_PROFESSIONS: Record<string, string> = { Attack: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00030"), Anomaly: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00031"), Stun: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00032"), Support: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00033"), Defense: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00034"), Rupture: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00035"), Armorer: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00036") };
 const ZZZ_PROP_FALLBACKS: Record<string, string> = {
-  "11101": "HP", "11102": "HP%", "11103": "HP", "12101": "攻撃力", "12102": "攻撃力%", "12103": "攻撃力", "12201": "衝撃力", "12202": "衝撃力%", "13101": "防御力", "13102": "防御力%", "13103": "防御力",
-  "20101": "会心率", "20103": "会心率", "21101": "会心ダメージ", "21103": "会心ダメージ", "23101": "貫通率", "23103": "貫通率", "23201": "貫通値", "23203": "貫通値", "30501": "エネルギー自動回復", "31201": "異常マスタリー", "31401": "異常掌握",
+  "11101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00037"), "11102": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00038"), "11103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00039"), "12101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00040"), "12102": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00041"), "12103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00042"), "12201": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00043"), "12202": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00044"), "13101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00045"), "13102": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00046"), "13103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00047"),
+  "20101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00048"), "20103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00049"), "21101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00050"), "21103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00051"), "23101": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00052"), "23103": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00053"), "23201": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00054"), "23203": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00055"), "30501": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00056"), "31201": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00057"), "31401": _providerDisplay.ja("guide.providerDisplay.gameProviders.b00058"),
 };
 
 type ZzzCatalog = { avatars: RawRecord; weapons: RawRecord; equipments: RawRecord; locs: RawRecord; property: RawRecord };

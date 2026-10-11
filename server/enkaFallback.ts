@@ -1,3 +1,6 @@
+import {createLegacyTexts as createProviderDisplayTexts} from "./content/legacyTexts";
+import {sources as providerDisplaySources} from "../content/ja/guides/enkaFallback_providerDisplay";
+const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, {});
 import { TRPCError } from "@trpc/server";
 import { equipmentActionsFor, guideFor, meetsTarget, priorityRecommendations, type BuildLookupResult, type CharacterProfile, type StatComparison, type StatKey, type TargetStatDefinition } from "./buildAdvisor";
 import { partyRecommendationsFor } from "./partyRecommendations";
@@ -46,12 +49,12 @@ let lastKnownGoodStatic: { value: StaticIndex; savedAt: number } | null = null;
 let staticNextRetryAt = 0;
 
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
-  "1014": { name: "セイバー" }, "1310": { name: "ホタル" }, "1407": { name: "キャストリス" }, "1506": { name: "銀狼Lv.999" }, "1508": { name: "遠坂凛" }, "1509": { name: "ギルガメッシュ" },
+  "1014": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00001") }, "1310": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00002") }, "1407": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00003") }, "1506": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00004") }, "1508": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00005") }, "1509": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00006") },
 };
-const ELEMENT_NAMES: Record<string, string> = { Fire: "炎", Ice: "氷", Imaginary: "虚数", Physical: "物理", Quantum: "量子", Thunder: "雷", Wind: "風" };
+const ELEMENT_NAMES: Record<string, string> = { Fire: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00007"), Ice: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00008"), Imaginary: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00009"), Physical: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00010"), Quantum: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00011"), Thunder: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00012"), Wind: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00013") };
 
-const ENKA_FINAL_STATS_NOTE = "公開中のキャラクター・光円錐・遺物・解放済み軌跡から算出した戦闘外の最終値です。戦闘中・条件付き効果は含みません。";
-const ENKA_UNAVAILABLE_NOTE = "静的データを取得できないため、最終ステータスの算出と目標比較を保留しています。数分後に再度お試しください。";
+const ENKA_FINAL_STATS_NOTE = _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00014");
+const ENKA_UNAVAILABLE_NOTE = _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00015");
 
 function record(value: unknown): RawRecord { return value && typeof value === "object" && !Array.isArray(value) ? value as RawRecord : {}; }
 function array(value: unknown): unknown[] { return Array.isArray(value) ? value : []; }
@@ -417,7 +420,7 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
 }
 
 const CORE_STAT_ORDER: StatKey[] = ["hp", "attack", "defense", "speed", "critRate", "critDmg", "breakEffect", "effectHitRate", "effectRes", "energyRecharge"];
-const CORE_STAT_LABELS: Record<string, string> = { hp: "HP", attack: "攻撃力", defense: "防御力", speed: "速度", critRate: "会心率", critDmg: "会心ダメ", breakEffect: "撃破特効", effectHitRate: "効果命中", effectRes: "効果抵抗", energyRecharge: "EP回復効率" };
+const CORE_STAT_LABELS: Record<string, string> = { hp: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00016"), attack: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00017"), defense: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00018"), speed: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00019"), critRate: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00020"), critDmg: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00021"), breakEffect: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00022"), effectHitRate: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00023"), effectRes: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00024"), energyRecharge: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00025") };
 
 function formatCoreStat(key: StatKey, value: number): string {
   if (key === "hp" || key === "attack" || key === "defense") return value.toFixed(0);
@@ -467,21 +470,21 @@ export function normalizeEnkaPayload(payload: unknown, staticData: StaticIndex =
       relicContributions.push(...collectContributions(rawProps));
       const props = rawProps.map((prop) => propertyDisplay(staticData.properties, prop));
       const setId = str(flat.setID);
-      const slots = ["頭部", "手部", "胴体", "脚部", "次元界オーブ", "連結縄"];
-      return { id: `${str(relic.tid, "relic")}-${str(relic.type, String(relicIndex))}`, name: `遺物 ${relicIndex + 1}`, slot: slots[relicIndex], setName: str(staticData.relicSets[setId]?.name) || `未解決（ID: ${setId || "不明"}）`, level: num(relic.level), icon: null, main: props[0] ? { name: props[0].name, display: props[0].display } : null, subs: props.slice(1).map((item) => ({ name: item.name, display: item.display })) };
+      const slots = [_providerDisplay.ja("guide.providerDisplay.enkaFallback.b00026"), _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00027"), _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00028"), _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00029"), _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00030"), _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00031")];
+      return { id: `${str(relic.tid, "relic")}-${str(relic.type, String(relicIndex))}`, name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00032", {v0:String(relicIndex + 1)}), slot: slots[relicIndex], setName: str(staticData.relicSets[setId]?.name) || _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00034", {v0:String(setId || _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00033"))}), level: num(relic.level), icon: null, main: props[0] ? { name: props[0].name, display: props[0].display } : null, subs: props.slice(1).map((item) => ({ name: item.name, display: item.display })) };
     });
 
     const finalStats = computeFinalStats(avatar, staticData, relicContributions);
 
-    const cone = record(avatar.equipment); const coneId = str(cone.tid); const path = HSR_PATH_LABELS[str(avatarMeta.path)] ?? HSR_PATH_LABELS[fallbackMeta.path ?? ""] ?? "未設定"; const guide = guideFor(metaName, path, identity);
+    const cone = record(avatar.equipment); const coneId = str(cone.tid); const path = HSR_PATH_LABELS[str(avatarMeta.path)] ?? HSR_PATH_LABELS[fallbackMeta.path ?? ""] ?? _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00035"); const guide = guideFor(metaName, path, identity);
 
     const comparisons: StatComparison[] = guide.targets.map((target) => comparisonForKey(target, finalStats.status === "final" ? finalStats.map : null));
     const recommendations = priorityRecommendations(comparisons);
     return {
       id: identity.sourceId, identity, name: metaName, level: num(avatar.level), rank: num(avatar.rank),
       portrait: avatarId ? `https://enka.network/ui/hsr/SpriteOutput/AvatarRoundIcon/Avatar/${avatarId}.png` : null,
-      element: ELEMENT_NAMES[str(avatarMeta.element)] ?? ELEMENT_NAMES[fallbackMeta.element ?? ""] ?? "未解決", elementColor: null, path,
-      lightCone: Object.keys(cone).length ? { name: str(staticData.lightCones[coneId]?.name) || `未解決（ID: ${coneId || "不明"}）`, level: num(cone.level), rank: num(cone.rank), icon: null } : null,
+      element: ELEMENT_NAMES[str(avatarMeta.element)] ?? ELEMENT_NAMES[fallbackMeta.element ?? ""] ?? _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00036"), elementColor: null, path,
+      lightCone: Object.keys(cone).length ? { name: str(staticData.lightCones[coneId]?.name) || _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00038", {v0:String(coneId || _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00037"))}), level: num(cone.level), rank: num(cone.rank), icon: null } : null,
       relics,
       allStats: buildAllStats(finalStats),
       statsStatus: finalStats.status,
@@ -494,7 +497,7 @@ export function normalizeEnkaPayload(payload: unknown, staticData: StaticIndex =
       constellations: constellationProfileFor(identity, num(avatar.rank)),
     } satisfies CharacterProfile;
   });
-  return { player: { uid: str(root.uid ?? detail.uid), name: str(detail.nickname, "開拓者"), level: num(detail.level) }, characters };
+  return { player: { uid: str(root.uid ?? detail.uid), name: str(detail.nickname, _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00039")), level: num(detail.level) }, characters };
 }
 
 export function isEnkaResultComplete(data: LookupData): boolean {
