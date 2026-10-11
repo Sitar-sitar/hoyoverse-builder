@@ -5,6 +5,20 @@ import type {
 } from "../../shared/content/types";
 import { indexCatalog, japaneseText } from "./catalog";
 import { formatContentText } from "../../shared/content/format";
+import type { BoundTextRef } from "../../shared/content/teamAuthoring";
+let capturing = false;
+const captured = new WeakMap<object, BoundTextRef>();
+/** Migration-only provenance capture, disabled in normal API execution. */
+export function beginLegacyTextCapture() {
+  if (capturing) throw new Error("Legacy text capture already active");
+  capturing = true;
+  return () => {
+    capturing = false;
+  };
+}
+export function capturedLegacyTextRef(value: object) {
+  return captured.get(value);
+}
 
 /** Japanese computation compatibility and unchanged legacy language projection. */
 export function createLegacyTexts(
@@ -41,11 +55,20 @@ export function createLegacyTexts(
         Object.keys(placeholders).length
           ? formatContentText(id, text, placeholders, variables)
           : text;
-      return {
+      const result = {
         ja: ja(id, variables),
         en: legacy(english.text),
         "zh-CN": legacy(chinese.text),
       };
+      if (capturing)
+        captured.set(result, {
+          kind: "textRef",
+          id,
+          ...(Object.keys(variables).length
+            ? { variables: { ...variables } }
+            : {}),
+        });
+      return result;
     },
   };
 }
