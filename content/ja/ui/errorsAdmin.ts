@@ -158,5 +158,23 @@ export const sources: SourceText[] = [
   "protectedTokens": [
     "CONTENT_TRANSLATION_PREPARATION"
   ]
+},
+{
+  "id": "ui.errors.admin.japaneseRequired",
+  "ja": "日本語は常時有効です。",
+  "context": "Existing API compatibility error message; stable display code admin.japaneseRequired",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.duplicateLanguages",
+  "ja": "言語を重複して指定できません。",
+  "context": "Existing API compatibility error message; stable display code admin.duplicateLanguages",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
 }
 ];

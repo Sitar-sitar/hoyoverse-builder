@@ -34,8 +34,8 @@ export const languageSettingsRouter = router({
   }),
   publish: adminProcedure.input(z.object({
     enabledLanguages: z.array(z.enum(APP_LANGUAGES)).min(1).max(3)
-      .refine(value => value.includes("ja"), "日本語は常時有効です。")
-      .refine(value => new Set(value).size === value.length, "言語を重複して指定できません。"),
+      .refine(value => value.includes("ja"), errorMessage("admin.japaneseRequired"))
+      .refine(value => new Set(value).size === value.length, errorMessage("admin.duplicateLanguages")),
   })).mutation(async ({ input }) => {
     const readyLanguages: readonly string[] = contentManifest().readyLanguages;
     if (input.enabledLanguages.some(language => !readyLanguages.includes(language))) {

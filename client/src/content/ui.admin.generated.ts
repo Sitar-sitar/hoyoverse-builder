@@ -65,6 +65,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "Unable to save display settings",
     "zh-CN": "Unable to save display settings"
   },
+  "ui.errors.admin.duplicateLanguages": {
+    "ja": "言語を重複して指定できません。",
+    "en": "言語を重複して指定できません。",
+    "zh-CN": "言語を重複して指定できません。"
+  },
   "ui.errors.admin.feedbackNotFound": {
     "ja": "Feedback not found",
     "en": "Feedback not found",
@@ -84,6 +89,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": "Unable to update feedback",
     "en": "Unable to update feedback",
     "zh-CN": "Unable to update feedback"
+  },
+  "ui.errors.admin.japaneseRequired": {
+    "ja": "日本語は常時有効です。",
+    "en": "日本語は常時有効です。",
+    "zh-CN": "日本語は常時有効です。"
   },
   "ui.errors.admin.languageLoadFailed": {
     "ja": "言語設定を取得できませんでした。",
