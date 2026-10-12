@@ -3,8 +3,27 @@ import { contentRepository } from "./repository";
 import { indexCatalog } from "./catalog";
 import { exportCandidates, translationState } from "./coverage";
 import { sourceHash } from "./hash";
+import { mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 
 describe("whole catalog revision acceptance", () => {
+  it("keeps source revision and translation state when its storage file moves", () => {
+    const directory = mkdtempSync(join(tmpdir(), "content-source-move-"));
+    try {
+      const original = contentRepository().catalog.sources[0]!;
+      const oldPath = join(directory, "before.json"), nextPath = join(directory, "after.json");
+      const candidate = { text: original.ja + " candidate", sourceHash: sourceHash(original), review: "pending" as const, origin: "legacy" as const };
+      writeFileSync(oldPath, JSON.stringify(original));
+      renameSync(oldPath, nextPath);
+      const moved = JSON.parse(readFileSync(nextPath, "utf8"));
+      expect(moved.id).toBe(original.id);
+      expect(sourceHash(moved)).toBe(candidate.sourceHash);
+      expect(translationState(moved, candidate).state).toBe("pending");
+      expect(translationState({ ...moved, ja: moved.ja + "変更" }, candidate).state).toBe("stale");
+      expect(candidate.sourceHash).toBe(sourceHash(original));
+    } finally { rmSync(directory, { recursive: true, force: true }); }
+  });
   it("preserves every existing translation as unapproved legacy data during preparation", () => {
     const index = contentRepository();
     for (const [language, records] of Object.entries(index.catalog.translations)) {
