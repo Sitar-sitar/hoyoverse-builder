@@ -16,6 +16,28 @@ import { resolve } from "node:path";
 import { createLegacyTexts } from "./legacyTexts";
 
 describe("provider display adoption", () => {
+  it("preserves equipment label values and computation keys in the limited equipment pass", () => {
+    const input =
+      'const ZZZ_DESIRED_STAT_LABELS={defense:"防御力%",hp:"HP%"};const DESIRED_STAT_LABELS_BY_FAMILY={energyRecharge:{hsr:"EP回復効率",genshin:"元素チャージ効率"}};const ALL_SLOTS_LABEL="全部位";const internal="時計";({ZZZ_DESIRED_STAT_LABELS,DESIRED_STAT_LABELS_BY_FAMILY,ALL_SLOTS_LABEL,internal});';
+    const adopted = adoptProviderDisplays(input, "buildAdvisor", false, true);
+    const after = runInNewContext(
+      adopted.migrated.split("\n").slice(3).join("\n"),
+      { _equipmentLabels: createLegacyTexts(adopted.sources, {}, {}) }
+    );
+    expect(JSON.stringify(after)).toBe(JSON.stringify(runInNewContext(input)));
+    expect(adopted.sources).toHaveLength(5);
+    expect(adopted.sources.some(source => source.ja === "時計")).toBe(false);
+    expect(() =>
+      adoptProviderDisplaysMain(["gameProviders", "--equipment"])
+    ).toThrow("Equipment labels require buildAdvisor only");
+    expect(() =>
+      adoptProviderDisplaysMain([
+        "buildAdvisor",
+        "--equipment",
+        "--comparisons",
+      ])
+    ).toThrow();
+  });
   it("adopts comparison labels and calculated text without converting property IDs or changing rounding", () => {
     const input =
       'const entries=[["HP",10,false],["攻撃力",scale("12101","12102"),false]]; const output={rows:entries,currentDisplay:`算出 ${12.345.toFixed(1)}${"%"}`,unknown:"未取得"};output;';

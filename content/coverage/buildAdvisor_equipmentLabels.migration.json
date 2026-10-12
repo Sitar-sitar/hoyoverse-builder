@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "buildAdvisor_equipmentLabels",
+  "inputDigest": "704e49f4cf171138e7e77bcf689efe5058711039cada45968a6200186a54b65a",
+  "outputDigest": "cffb2b5a2aec6f2d5fd5de307ff06ef66bc3faad4b8868a975266f676b9b7aa6",
+  "artifactDigests": {
+    "content/ja/guides/buildAdvisor_equipmentLabels.ts": "ca072abc8f815daf1438f77fe8199f519db89851e9eeadc4a345462f6a4a7be5",
+    "content/translations/en/buildAdvisor_equipmentLabels.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/buildAdvisor_equipmentLabels.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 8258,
+      "end": 8263,
+      "id": "guide.equipmentLabels.buildAdvisor.b00001",
+      "oldText": "\"HP%\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00001\")"
+    },
+    {
+      "start": 8276,
+      "end": 8281,
+      "id": "guide.equipmentLabels.buildAdvisor.b00002",
+      "oldText": "\"HP%\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00002\")"
+    },
+    {
+      "start": 8292,
+      "end": 8298,
+      "id": "guide.equipmentLabels.buildAdvisor.b00003",
+      "oldText": "\"防御力%\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00003\")"
+    },
+    {
+      "start": 8312,
+      "end": 8318,
+      "id": "guide.equipmentLabels.buildAdvisor.b00004",
+      "oldText": "\"防御力%\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00004\")"
+    },
+    {
+      "start": 8538,
+      "end": 8546,
+      "id": "guide.equipmentLabels.buildAdvisor.b00005",
+      "oldText": "\"EP回復効率\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00005\")"
+    },
+    {
+      "start": 8557,
+      "end": 8567,
+      "id": "guide.equipmentLabels.buildAdvisor.b00006",
+      "oldText": "\"元素チャージ効率\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00006\")"
+    },
+    {
+      "start": 8915,
+      "end": 8920,
+      "id": "guide.equipmentLabels.buildAdvisor.b00007",
+      "oldText": "\"全部位\"",
+      "replacement": "_equipmentLabels.ja(\"guide.equipmentLabels.buildAdvisor.b00007\")"
+    }
+  ]
+}

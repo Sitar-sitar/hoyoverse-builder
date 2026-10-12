@@ -37,7 +37,8 @@ const configurations = {
 export function adoptProviderDisplays(
   text: string,
   module: keyof typeof configurations,
-  comparisons = false
+  comparisons = false,
+  equipment = false
 ) {
   const ast = ts.createSourceFile(
     module + ".ts",
@@ -45,7 +46,17 @@ export function adoptProviderDisplays(
     ts.ScriptTarget.Latest,
     true
   );
-  const selected = new Set<string>(comparisons ? [] : configurations[module]);
+  const selected = new Set<string>(
+    equipment
+      ? [
+          "ZZZ_DESIRED_STAT_LABELS",
+          "DESIRED_STAT_LABELS_BY_FAMILY",
+          "ALL_SLOTS_LABEL",
+        ]
+      : comparisons
+        ? []
+        : configurations[module]
+  );
   const fallbacks = new Set(
     comparisons
       ? ["未取得", "ステータス"]
@@ -59,7 +70,11 @@ export function adoptProviderDisplays(
     id: string;
     oldText: string;
   }> = [];
-  const tag = comparisons ? "providerComparison" : "providerDisplay";
+  const tag = equipment
+    ? "equipmentLabels"
+    : comparisons
+      ? "providerComparison"
+      : "providerDisplay";
   const resolver = `_${tag}`;
   function register(
     ja: string,
@@ -180,18 +195,26 @@ export function adoptProviderDisplaysMain(
     !Object.hasOwn(configurations, args[0]!) ||
     args
       .slice(1)
-      .some(option => !["--write", "--comparisons"].includes(option)) ||
+      .some(
+        option => !["--write", "--comparisons", "--equipment"].includes(option)
+      ) ||
     new Set(args).size !== args.length
   )
     throw new Error(
-      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--comparisons] [--write]"
+      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--comparisons|--equipment] [--write]"
     );
   const module = args[0] as keyof typeof configurations;
+  const equipment = args.includes("--equipment");
+  if (
+    equipment &&
+    (args[0] !== "buildAdvisor" || args.includes("--comparisons"))
+  )
+    throw new Error("Equipment labels require buildAdvisor only");
   const comparisons = args.includes("--comparisons"),
     write = args.includes("--write");
   const target = resolve(root, `server/${module}.ts`);
   const original = readFileSync(target, "utf8");
-  const name = `${module}_${comparisons ? "providerComparison" : "providerDisplay"}`;
+  const name = `${module}_${equipment ? "equipmentLabels" : comparisons ? "providerComparison" : "providerDisplay"}`;
   const receipt = resolve(root, `content/coverage/${name}.migration.json`);
   if (existsSync(receipt)) {
     const saved = JSON.parse(readFileSync(receipt, "utf8"));
@@ -228,7 +251,12 @@ export function adoptProviderDisplaysMain(
     );
     return;
   }
-  const result = adoptProviderDisplays(original, module, comparisons);
+  const result = adoptProviderDisplays(
+    original,
+    module,
+    comparisons,
+    equipment
+  );
   const outputs: string[][] = [
     [
       `content/ja/guides/${name}.ts`,

@@ -1,3 +1,6 @@
+import {createLegacyTexts as createequipmentLabelsTexts} from "./content/legacyTexts";
+import {sources as equipmentLabelsSources} from "../content/ja/guides/buildAdvisor_equipmentLabels";
+const _equipmentLabels = createequipmentLabelsTexts(equipmentLabelsSources, {}, {});
 import { errorMessage } from "./content/errors";
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/buildAdvisor_providerComparison";
@@ -179,10 +182,10 @@ const SUBSTAT_CAPABLE_KEYS: Record<"hsr" | "genshin" | "zzz", ReadonlySet<StatKe
  * ZZZ のディスク IV〜VI が持てる HP・防御力は割合だけなので、実数表記（「HP」「防御力」）を提案しない。
  * 原神・HSR は従来どおり STAT_MAIN_LABELS の先頭を使う。
  */
-const ZZZ_DESIRED_STAT_LABELS: Partial<Record<StatKey, string>> = { hp: "HP%", hpPercent: "HP%", defense: "防御力%", defPercent: "防御力%" };
+const ZZZ_DESIRED_STAT_LABELS: Partial<Record<StatKey, string>> = { hp: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00001"), hpPercent: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00002"), defense: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00003"), defPercent: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00004") };
 /** 同じキーでもゲームで呼び名が違うもの。STAT_MAIN_LABELS の先頭は照合用の語なので、提案文にそのまま使えない。 */
 const DESIRED_STAT_LABELS_BY_FAMILY: Partial<Record<StatKey, Partial<Record<"hsr" | "genshin" | "zzz", string>>>> = {
-  energyRecharge: { hsr: "EP回復効率", genshin: "元素チャージ効率" },
+  energyRecharge: { hsr: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00005"), genshin: _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00006") },
 };
 
 function desiredStatLabel(family: "hsr" | "genshin" | "zzz", key: StatKey): string | undefined {
@@ -191,7 +194,7 @@ function desiredStatLabel(family: "hsr" | "genshin" | "zzz", key: StatKey): stri
 }
 
 /** 部位を特定しないときに返す既定ラベル（日本語）。画面は slotScope で言語別の語へ差し替える。 */
-const ALL_SLOTS_LABEL = "全部位";
+const ALL_SLOTS_LABEL = _equipmentLabels.ja("guide.equipmentLabels.buildAdvisor.b00007");
 
 function normalizedSlot(slot: string) {
   const normalized = slot.replace("時の砂", "時計").replace("空の杯", "杯").replace("理の冠", "冠").replace("ドライバディスク ", "").trim();
