@@ -1,4 +1,5 @@
 import { CONTENT_MANIFEST } from "./manifest";
+import { reportContentMismatch } from "./diagnostics";
 import type { PresentationDTO } from "@shared/content/presentation";
 
 export function validPreparationManifest(value: unknown): value is typeof CONTENT_MANIFEST {
@@ -33,7 +34,15 @@ export function selectPresentation<T extends object>(legacy: T | undefined): T |
   if (!legacy) return legacy;
   const dto = (legacy as { presentation?: unknown }).presentation;
   if (!validPresentation(dto)) {
-    if (dto) console.warn("[Content] Presentation identity mismatch; using Japanese compatibility fields");
+    if (dto || !validPreparationManifest(CONTENT_MANIFEST)) {
+      console.warn("[Content] Presentation identity mismatch; using Japanese compatibility fields");
+      const received = dto && typeof dto === "object" ? dto as Record<string, unknown> : {};
+      const revision = (value: unknown) => typeof value === "string" && /^[a-f0-9]{64}$/.test(value) ? value : null;
+      reportContentMismatch({
+        reason: !validPreparationManifest(CONTENT_MANIFEST) ? "manifest" : received.schemaVersion !== 1 ? "schema" : received.contentRevision !== CONTENT_MANIFEST.contentRevision ? "revision" : "shape",
+        expectedRevision: revision(CONTENT_MANIFEST.contentRevision), receivedRevision: revision(received.contentRevision),
+      });
+    }
     return legacy;
   }
   const output = { ...legacy } as T;
