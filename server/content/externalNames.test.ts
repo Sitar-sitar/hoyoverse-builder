@@ -4,8 +4,11 @@ import { externalNameBoundaries, externalNameReport, validateExternalNameBoundar
 describe("external name preparation boundaries", () => {
   it("reports all three games without fetching user payloads or claiming multilingual names", () => {
     const report = externalNameReport();
-    expect(report.entries).toHaveLength(24);
-    expect(report.unresolvedCount).toBe(21);
+    expect(report.entries).toHaveLength(33);
+    expect(report.unresolvedCount).toBe(30);
+    for (const game of ["hsr", "genshin", "zzz"]) for (const field of ["characters.element", "characters.path", "characters.relics.slot"]) {
+      expect(report.entries.find(entry => entry.id === `external.${game}.${field}`)).toMatchObject({ policy: "unresolved" });
+    }
     expect(report.entries.filter(entry => entry.policy === "user-value")).toHaveLength(3);
     expect(report.entries.map(entry => entry.id)).toEqual(report.entries.map(entry => entry.id).sort());
   });

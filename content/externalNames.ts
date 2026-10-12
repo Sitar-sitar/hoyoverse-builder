@@ -4,6 +4,7 @@ export const EXTERNAL_NAME_FIELDS = [
   "characters.relics.name", "characters.relics.setName",
   "characters.relics.main.name", "characters.relics.subs.name",
   "characters.allStats.name",
+  "characters.element", "characters.path", "characters.relics.slot",
 ] as const;
 export type ExternalNameField = typeof EXTERNAL_NAME_FIELDS[number];
 export type ExternalNameBoundary = {
@@ -28,7 +29,9 @@ export const externalNameBoundaries: ExternalNameBoundary[] =
       policy: field === "player.name" ? "user-value" : "unresolved",
       reason: field === "player.name"
         ? "User nickname is preserved verbatim; it is not an authored translation target. Missing-value labels belong to the Japanese corpus."
-        : "Existing Japanese/provider name is preserved. No multilingual dictionary or complete equipment identity mapping has been verified; unknown IDs must not be guessed.",
+        : field === "characters.element" || field === "characters.path" || field === "characters.relics.slot"
+          ? "Existing provider/category labels and normalization keys are preserved. Element, path/weapon/profession and equipment-slot multilingual resolution is not verified; numeric slots and IDs remain compatibility literals, not translated prose."
+          : "Existing Japanese/provider name is preserved. No multilingual dictionary or complete equipment identity mapping has been verified; unknown IDs must not be guessed.",
     })));
 
 export function validateExternalNameBoundaries(records = externalNameBoundaries) {
