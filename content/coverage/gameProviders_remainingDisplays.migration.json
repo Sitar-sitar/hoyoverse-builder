@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "gameProviders_remainingDisplays",
+  "inputDigest": "bb40ea0dca4b88fde1724ec5cc772546254cc59419866d6eba160726068b3c52",
+  "outputDigest": "280d9da19ae4930b7353e0911160410698a19a7fad1630c8a0468ad2e3ac5d30",
+  "artifactDigests": {
+    "content/ja/guides/gameProviders_remainingDisplays.ts": "e5ba136ddadd1d39e44d2bfeded1f4e5345c94a0177535915b4d88625f8a85f7",
+    "content/translations/en/gameProviders_remainingDisplays.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/gameProviders_remainingDisplays.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 24892,
+      "end": 24906,
+      "id": "guide.remainingDisplays.gameProviders.b00001",
+      "oldText": "`ステータス #${id}`",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.gameProviders.b00001\", {v0:String(id)})"
+    }
+  ]
+}

@@ -1,3 +1,6 @@
+import {createLegacyTexts as createremainingDisplaysTexts} from "./content/legacyTexts";
+import {sources as remainingDisplaysSources} from "../content/ja/guides/buildAdvisor_remainingDisplays";
+const _remainingDisplays = createremainingDisplaysTexts(remainingDisplaysSources, {}, {});
 import {createLegacyTexts as createequipmentLabelsTexts} from "./content/legacyTexts";
 import {sources as equipmentLabelsSources} from "../content/ja/guides/buildAdvisor_equipmentLabels";
 const _equipmentLabels = createequipmentLabelsTexts(equipmentLabelsSources, {}, {});
@@ -121,8 +124,8 @@ export function meetsTarget(current: number, target: number): boolean {
 function deficitText(deficit: number, unit: "" | "%"): string {
   const digits = unit === "%" ? 1 : 0;
   const rounded = Number(deficit.toFixed(digits));
-  if (rounded === 0) return `あと ${(10 ** -digits).toFixed(digits)}${unit}未満`;
-  return `あと ${deficit.toFixed(digits)}${unit}`;
+  if (rounded === 0) return _remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00001", {v0:String((10 ** -digits).toFixed(digits)),v1:String(unit)});
+  return _remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00002", {v0:String(deficit.toFixed(digits)),v1:String(unit)});
 }
 
 /** 公開プロフィールで計測できる値を、目標水準までの相対不足量で優先表示する。 */
@@ -152,9 +155,9 @@ export function priorityRecommendations(comparisons: StatComparison[]): Priority
 type RelicForAction = { name: string; slot?: string; main: { name: string; display: string } | null };
 
 const STAT_MAIN_LABELS: Record<StatKey, string[]> = {
-  critRate: ["会心率"], critDmg: ["会心ダメ"], speed: ["速度"], attack: ["攻撃力"], attackPercent: ["攻撃力"], breakEffect: ["撃破特効"],
-  effectHitRate: ["効果命中"], effectRes: ["効果抵抗"], hp: ["HP"], hpPercent: ["HP"], defense: ["防御力"], defPercent: ["防御力"],
-  energyRecharge: ["元素チャージ", "EP回復", "エネルギー"], elementalMastery: ["元素熟知"], anomalyMastery: ["異常マスタリー"], anomalyProficiency: ["異常掌握"], impact: ["衝撃力"], penRatio: ["貫通"], energyRegen: ["エネルギー"],
+  critRate: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00003")], critDmg: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00004")], speed: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00005")], attack: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00006")], attackPercent: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00007")], breakEffect: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00008")],
+  effectHitRate: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00009")], effectRes: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00010")], hp: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00011")], hpPercent: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00012")], defense: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00013")], defPercent: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00014")],
+  energyRecharge: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00015"), _remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00016"), _remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00017")], elementalMastery: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00018")], anomalyMastery: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00019")], anomalyProficiency: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00020")], impact: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00021")], penRatio: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00022")], energyRegen: [_remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00023")],
 };
 
 function guideFamily(guide: GuideDefinition): "hsr" | "genshin" | "zzz" {
@@ -237,7 +240,7 @@ export function equipmentActionsFor(guide: GuideDefinition, relics: RelicForActi
       equippedName: equipped?.name ?? null, currentMain, desiredStat,
       reason: mainMatches
         ? _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00003",{v0:slot,v1:String(currentMain),v2:desiredStat})
-        : _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00004",{v0:slot,v1:currentMain ? `は現在${currentMain}` : "",v2:desiredStat,v3:equipped?.name ?? _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00001")}),
+        : _guideTemplates.ja("guide.legacy.buildAdvisor_templates.b00004",{v0:slot,v1:currentMain ? _remainingDisplays.ja("guide.remainingDisplays.buildAdvisor.b00024", {v0:String(currentMain)}) : "",v2:desiredStat,v3:equipped?.name ?? _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00001")}),
     }];
   });
 }

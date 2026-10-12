@@ -1,3 +1,6 @@
+import {createLegacyTexts as createremainingDisplaysTexts} from "./content/legacyTexts";
+import {sources as remainingDisplaysSources} from "../content/ja/guides/gameProviders_remainingDisplays";
+const _remainingDisplays = createremainingDisplaysTexts(remainingDisplaysSources, {}, {});
 import { errorMessage } from "./content/errors";
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/gameProviders_providerComparison";
@@ -385,7 +388,7 @@ function zzzStat(catalog: ZzzCatalog, stat: RawRecord, multiplier: number) {
   const rawValue = number(stat.PropertyValue) * multiplier;
   const percent = text(property.Format).includes("%");
   const displayValue = percent ? rawValue / 100 : rawValue;
-  const name = ZZZ_PROP_FALLBACKS[id] ?? zzzName(catalog, property.Name, `ステータス #${id}`);
+  const name = ZZZ_PROP_FALLBACKS[id] ?? zzzName(catalog, property.Name, _remainingDisplays.ja("guide.remainingDisplays.gameProviders.b00001", {v0:String(id)}));
   return { id, name, value: displayValue, display: percent ? `${displayValue.toFixed(1)}%` : displayValue.toFixed(0), percent };
 }
 

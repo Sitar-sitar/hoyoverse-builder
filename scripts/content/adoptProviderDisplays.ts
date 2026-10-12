@@ -38,7 +38,8 @@ export function adoptProviderDisplays(
   text: string,
   module: keyof typeof configurations,
   comparisons = false,
-  equipment = false
+  equipment = false,
+  remainders = false
 ) {
   const ast = ts.createSourceFile(
     module + ".ts",
@@ -47,20 +48,24 @@ export function adoptProviderDisplays(
     true
   );
   const selected = new Set<string>(
-    equipment
-      ? [
-          "ZZZ_DESIRED_STAT_LABELS",
-          "DESIRED_STAT_LABELS_BY_FAMILY",
-          "ALL_SLOTS_LABEL",
-        ]
-      : comparisons
-        ? []
-        : configurations[module]
+    remainders
+      ? ["STAT_MAIN_LABELS"]
+      : equipment
+        ? [
+            "ZZZ_DESIRED_STAT_LABELS",
+            "DESIRED_STAT_LABELS_BY_FAMILY",
+            "ALL_SLOTS_LABEL",
+          ]
+        : comparisons
+          ? []
+          : configurations[module]
   );
   const fallbacks = new Set(
-    comparisons
-      ? ["未取得", "ステータス"]
-      : ["遺物", "光円錐", "開拓者", "装備", "未解決", "未設定"]
+    remainders
+      ? []
+      : comparisons
+        ? ["未取得", "ステータス"]
+        : ["遺物", "光円錐", "開拓者", "装備", "未解決", "未設定"]
   );
   const sources: SourceText[] = [];
   const edits: Array<{
@@ -70,11 +75,13 @@ export function adoptProviderDisplays(
     id: string;
     oldText: string;
   }> = [];
-  const tag = equipment
-    ? "equipmentLabels"
-    : comparisons
-      ? "providerComparison"
-      : "providerDisplay";
+  const tag = remainders
+    ? "remainingDisplays"
+    : equipment
+      ? "equipmentLabels"
+      : comparisons
+        ? "providerComparison"
+        : "providerDisplay";
   const resolver = `_${tag}`;
   function register(
     ja: string,
@@ -135,9 +142,11 @@ export function adoptProviderDisplays(
     }
     if (
       ts.isTemplateExpression(node) &&
-      (comparisons
-        ? /^算出 /.test(node.head.text)
-        : /^(遺物 |未解決（ID: )/.test(node.head.text))
+      (remainders
+        ? /^(あと |は現在|ステータス #)/.test(node.head.text)
+        : comparisons
+          ? /^算出 /.test(node.head.text)
+          : /^(遺物 |未解決（ID: )/.test(node.head.text))
     ) {
       let ja = node.head.text;
       const placeholders: Record<string, "string"> = {};
@@ -196,14 +205,23 @@ export function adoptProviderDisplaysMain(
     args
       .slice(1)
       .some(
-        option => !["--write", "--comparisons", "--equipment"].includes(option)
+        option =>
+          !["--write", "--comparisons", "--equipment", "--remainders"].includes(
+            option
+          )
       ) ||
     new Set(args).size !== args.length
   )
     throw new Error(
-      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--comparisons|--equipment] [--write]"
+      "Usage: adoptProviderDisplays gameProviders|buildAdvisor|enkaFallback [--comparisons|--equipment|--remainders] [--write]"
     );
   const module = args[0] as keyof typeof configurations;
+  const remainders = args.includes("--remainders");
+  if (
+    remainders &&
+    (args.includes("--equipment") || args.includes("--comparisons"))
+  )
+    throw new Error("Remaining displays pass cannot be combined");
   const equipment = args.includes("--equipment");
   if (
     equipment &&
@@ -214,7 +232,7 @@ export function adoptProviderDisplaysMain(
     write = args.includes("--write");
   const target = resolve(root, `server/${module}.ts`);
   const original = readFileSync(target, "utf8");
-  const name = `${module}_${equipment ? "equipmentLabels" : comparisons ? "providerComparison" : "providerDisplay"}`;
+  const name = `${module}_${remainders ? "remainingDisplays" : equipment ? "equipmentLabels" : comparisons ? "providerComparison" : "providerDisplay"}`;
   const receipt = resolve(root, `content/coverage/${name}.migration.json`);
   if (existsSync(receipt)) {
     const saved = JSON.parse(readFileSync(receipt, "utf8"));
@@ -255,7 +273,8 @@ export function adoptProviderDisplaysMain(
     original,
     module,
     comparisons,
-    equipment
+    equipment,
+    remainders
   );
   const outputs: string[][] = [
     [

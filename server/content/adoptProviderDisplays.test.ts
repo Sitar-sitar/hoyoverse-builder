@@ -16,6 +16,29 @@ import { resolve } from "node:path";
 import { createLegacyTexts } from "./legacyTexts";
 
 describe("provider display adoption", () => {
+  it("preserves deficit interpolation, rounding, matching labels and internal tier keys", () => {
+    const input =
+      'const STAT_MAIN_LABELS={critDmg:["会心ダメ","CD"]};const value=12.345;const currentMain="HP%";const id="unknown";const out={labels:STAT_MAIN_LABELS,small:`あと ${value.toFixed(1)}${"%"}未満`,main:`は現在${currentMain}`,name:`ステータス #${id}`,tier:"目標",internal:"時の砂"};out;';
+    const adopted = adoptProviderDisplays(
+      input,
+      "buildAdvisor",
+      false,
+      false,
+      true
+    );
+    const after = runInNewContext(
+      adopted.migrated.split("\n").slice(3).join("\n"),
+      { _remainingDisplays: createLegacyTexts(adopted.sources, {}, {}) }
+    );
+    expect(JSON.stringify(after)).toBe(JSON.stringify(runInNewContext(input)));
+    expect(adopted.sources).toHaveLength(5);
+    expect(
+      adopted.sources.some(source => ["目標", "時の砂"].includes(source.ja))
+    ).toBe(false);
+    expect(() =>
+      adoptProviderDisplaysMain(["buildAdvisor", "--remainders", "--equipment"])
+    ).toThrow("cannot be combined");
+  });
   it("preserves equipment label values and computation keys in the limited equipment pass", () => {
     const input =
       'const ZZZ_DESIRED_STAT_LABELS={defense:"防御力%",hp:"HP%"};const DESIRED_STAT_LABELS_BY_FAMILY={energyRecharge:{hsr:"EP回復効率",genshin:"元素チャージ効率"}};const ALL_SLOTS_LABEL="全部位";const internal="時計";({ZZZ_DESIRED_STAT_LABELS,DESIRED_STAT_LABELS_BY_FAMILY,ALL_SLOTS_LABEL,internal});';
