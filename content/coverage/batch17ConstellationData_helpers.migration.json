@@ -1,0 +1,2042 @@
+[
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00001",
+    "originalStart": 1796,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00002",
+    "originalStart": 1849,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00003",
+    "originalStart": 2058,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00004",
+    "originalStart": 2106,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00005",
+    "originalStart": 2282,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00006",
+    "originalStart": 2334,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00007",
+    "originalStart": 2513,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00008",
+    "originalStart": 2555,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00009",
+    "originalStart": 2784,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00010",
+    "originalStart": 2840,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00011",
+    "originalStart": 3028,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00012",
+    "originalStart": 3079,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00013",
+    "originalStart": 4040,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00014",
+    "originalStart": 4099,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00015",
+    "originalStart": 4356,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00016",
+    "originalStart": 4417,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00017",
+    "originalStart": 4599,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00018",
+    "originalStart": 4656,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00019",
+    "originalStart": 4843,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00020",
+    "originalStart": 4899,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00021",
+    "originalStart": 5200,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00022",
+    "originalStart": 5252,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00023",
+    "originalStart": 5437,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00024",
+    "originalStart": 5496,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00025",
+    "originalStart": 5988,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00026",
+    "originalStart": 6042,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00027",
+    "originalStart": 6178,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00028",
+    "originalStart": 6239,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00029",
+    "originalStart": 6486,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00030",
+    "originalStart": 6542,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00031",
+    "originalStart": 6743,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00032",
+    "originalStart": 6804,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00033",
+    "originalStart": 7011,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00034",
+    "originalStart": 7078,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00035",
+    "originalStart": 7261,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00036",
+    "originalStart": 7320,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00037",
+    "originalStart": 7833,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00038",
+    "originalStart": 7911,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00039",
+    "originalStart": 8263,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00040",
+    "originalStart": 8335,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00041",
+    "originalStart": 8535,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00042",
+    "originalStart": 8596,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00043",
+    "originalStart": 8775,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00044",
+    "originalStart": 8834,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00045",
+    "originalStart": 9186,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00046",
+    "originalStart": 9245,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00047",
+    "originalStart": 9422,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00048",
+    "originalStart": 9482,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00049",
+    "originalStart": 9939,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00050",
+    "originalStart": 10001,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00051",
+    "originalStart": 10247,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00052",
+    "originalStart": 10311,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00053",
+    "originalStart": 10571,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00054",
+    "originalStart": 10630,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00055",
+    "originalStart": 10813,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00056",
+    "originalStart": 10875,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00057",
+    "originalStart": 11208,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00058",
+    "originalStart": 11268,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00059",
+    "originalStart": 11461,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00060",
+    "originalStart": 11520,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00061",
+    "originalStart": 12112,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00062",
+    "originalStart": 12160,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00063",
+    "originalStart": 12700,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00064",
+    "originalStart": 12751,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00065",
+    "originalStart": 12885,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00066",
+    "originalStart": 12935,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00067",
+    "originalStart": 13096,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00068",
+    "originalStart": 13149,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00069",
+    "originalStart": 13611,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00070",
+    "originalStart": 13660,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00071",
+    "originalStart": 13825,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00072",
+    "originalStart": 13873,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00073",
+    "originalStart": 14399,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00074",
+    "originalStart": 14463,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00075",
+    "originalStart": 14600,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00076",
+    "originalStart": 14668,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00077",
+    "originalStart": 15980,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00078",
+    "originalStart": 16059,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00079",
+    "originalStart": 16250,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00080",
+    "originalStart": 16318,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00081",
+    "originalStart": 16892,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00082",
+    "originalStart": 16966,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00083",
+    "originalStart": 17157,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00084",
+    "originalStart": 17229,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00085",
+    "originalStart": 18236,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00086",
+    "originalStart": 18300,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00087",
+    "originalStart": 18445,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00088",
+    "originalStart": 18505,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00089",
+    "originalStart": 18710,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00090",
+    "originalStart": 18785,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00091",
+    "originalStart": 18962,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00092",
+    "originalStart": 19059,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00093",
+    "originalStart": 19225,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00094",
+    "originalStart": 19301,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00095",
+    "originalStart": 19475,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00096",
+    "originalStart": 19548,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00097",
+    "originalStart": 20001,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00098",
+    "originalStart": 20048,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00099",
+    "originalStart": 20464,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00100",
+    "originalStart": 20518,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00101",
+    "originalStart": 20902,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00102",
+    "originalStart": 20950,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00103",
+    "originalStart": 21138,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00104",
+    "originalStart": 21191,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00105",
+    "originalStart": 21406,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00106",
+    "originalStart": 21448,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00107",
+    "originalStart": 21630,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00108",
+    "originalStart": 21677,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00109",
+    "originalStart": 22228,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00110",
+    "originalStart": 22311,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00111",
+    "originalStart": 22705,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00112",
+    "originalStart": 22788,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00113",
+    "originalStart": 23250,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00114",
+    "originalStart": 23343,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00115",
+    "originalStart": 23528,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00116",
+    "originalStart": 23603,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00117",
+    "originalStart": 23925,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00118",
+    "originalStart": 24006,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00119",
+    "originalStart": 24203,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00120",
+    "originalStart": 24278,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00121",
+    "originalStart": 24910,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00122",
+    "originalStart": 24965,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00123",
+    "originalStart": 25296,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00124",
+    "originalStart": 25348,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00125",
+    "originalStart": 25699,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00126",
+    "originalStart": 25757,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00127",
+    "originalStart": 25918,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00128",
+    "originalStart": 25965,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00129",
+    "originalStart": 26178,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00130",
+    "originalStart": 26231,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00131",
+    "originalStart": 26396,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00132",
+    "originalStart": 26447,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00133",
+    "originalStart": 27218,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00134",
+    "originalStart": 27277,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00135",
+    "originalStart": 27751,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00136",
+    "originalStart": 27826,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00137",
+    "originalStart": 28325,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00138",
+    "originalStart": 28396,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00139",
+    "originalStart": 28583,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00140",
+    "originalStart": 28662,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00141",
+    "originalStart": 29130,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00142",
+    "originalStart": 29198,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00143",
+    "originalStart": 29382,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00144",
+    "originalStart": 29435,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00145",
+    "originalStart": 30124,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00146",
+    "originalStart": 30195,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00147",
+    "originalStart": 30577,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00148",
+    "originalStart": 30647,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00149",
+    "originalStart": 30899,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00150",
+    "originalStart": 30967,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00151",
+    "originalStart": 31153,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00152",
+    "originalStart": 31213,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00153",
+    "originalStart": 31791,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00154",
+    "originalStart": 31849,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00155",
+    "originalStart": 32030,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00156",
+    "originalStart": 32093,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00157",
+    "originalStart": 32758,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00158",
+    "originalStart": 32816,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00159",
+    "originalStart": 33174,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00160",
+    "originalStart": 33234,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00161",
+    "originalStart": 33496,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00162",
+    "originalStart": 33557,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00163",
+    "originalStart": 33762,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00164",
+    "originalStart": 33822,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00165",
+    "originalStart": 34141,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00166",
+    "originalStart": 34202,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00167",
+    "originalStart": 34405,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00168",
+    "originalStart": 34464,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00169",
+    "originalStart": 35396,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00170",
+    "originalStart": 35451,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00171",
+    "originalStart": 35766,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00172",
+    "originalStart": 35830,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00173",
+    "originalStart": 36108,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00174",
+    "originalStart": 36165,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00175",
+    "originalStart": 36372,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00176",
+    "originalStart": 36425,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00177",
+    "originalStart": 36740,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00178",
+    "originalStart": 36796,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00179",
+    "originalStart": 37006,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00180",
+    "originalStart": 37069,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00181",
+    "originalStart": 37718,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00182",
+    "originalStart": 37771,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00183",
+    "originalStart": 37910,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00184",
+    "originalStart": 37963,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00185",
+    "originalStart": 38260,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00186",
+    "originalStart": 38306,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00187",
+    "originalStart": 38502,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00188",
+    "originalStart": 38548,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00189",
+    "originalStart": 39236,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00190",
+    "originalStart": 39291,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00191",
+    "originalStart": 39489,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00192",
+    "originalStart": 39542,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00193",
+    "originalStart": 40102,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00194",
+    "originalStart": 40164,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00195",
+    "originalStart": 40552,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00196",
+    "originalStart": 40620,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00197",
+    "originalStart": 40905,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00198",
+    "originalStart": 40975,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00199",
+    "originalStart": 41170,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00200",
+    "originalStart": 41224,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00201",
+    "originalStart": 41470,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00202",
+    "originalStart": 41535,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00203",
+    "originalStart": 41726,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00204",
+    "originalStart": 41781,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00205",
+    "originalStart": 42514,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00206",
+    "originalStart": 42571,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00207",
+    "originalStart": 42761,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00208",
+    "originalStart": 42821,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00209",
+    "originalStart": 43103,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00210",
+    "originalStart": 43166,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00211",
+    "originalStart": 43357,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00212",
+    "originalStart": 43413,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00213",
+    "originalStart": 43656,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00214",
+    "originalStart": 43716,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00215",
+    "originalStart": 43907,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00216",
+    "originalStart": 43968,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00217",
+    "originalStart": 44719,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00218",
+    "originalStart": 44780,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00219",
+    "originalStart": 45057,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00220",
+    "originalStart": 45119,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00221",
+    "originalStart": 45405,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00222",
+    "originalStart": 45464,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00223",
+    "originalStart": 45650,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00224",
+    "originalStart": 45707,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00225",
+    "originalStart": 45923,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00226",
+    "originalStart": 45988,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00227",
+    "originalStart": 46167,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00228",
+    "originalStart": 46231,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00229",
+    "originalStart": 46820,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00230",
+    "originalStart": 46888,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00231",
+    "originalStart": 47838,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00232",
+    "originalStart": 47901,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00233",
+    "originalStart": 48592,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00234",
+    "originalStart": 48660,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00235",
+    "originalStart": 48845,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00236",
+    "originalStart": 48914,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00237",
+    "originalStart": 49879,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00238",
+    "originalStart": 49938,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00239",
+    "originalStart": 50130,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00240",
+    "originalStart": 50193,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00241",
+    "originalStart": 51027,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00242",
+    "originalStart": 51091,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00243",
+    "originalStart": 51416,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00244",
+    "originalStart": 51471,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00245",
+    "originalStart": 52057,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00246",
+    "originalStart": 52136,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00247",
+    "originalStart": 52341,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00248",
+    "originalStart": 52415,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00249",
+    "originalStart": 52682,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00250",
+    "originalStart": 52744,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00251",
+    "originalStart": 52947,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00252",
+    "originalStart": 53008,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00253",
+    "originalStart": 54152,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00254",
+    "originalStart": 54231,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00255",
+    "originalStart": 54801,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00256",
+    "originalStart": 54888,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00257",
+    "originalStart": 55445,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00258",
+    "originalStart": 55519,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00259",
+    "originalStart": 55723,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00260",
+    "originalStart": 55803,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00261",
+    "originalStart": 56480,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00262",
+    "originalStart": 56574,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00263",
+    "originalStart": 56779,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00264",
+    "originalStart": 56866,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00265",
+    "originalStart": 58088,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00266",
+    "originalStart": 58152,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00267",
+    "originalStart": 58477,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00268",
+    "originalStart": 58563,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00269",
+    "originalStart": 58723,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00270",
+    "originalStart": 58780,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00271",
+    "originalStart": 58955,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00272",
+    "originalStart": 59020,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00273",
+    "originalStart": 59230,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00274",
+    "originalStart": 59299,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00275",
+    "originalStart": 59478,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00276",
+    "originalStart": 59534,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00277",
+    "originalStart": 60129,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00278",
+    "originalStart": 60180,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00279",
+    "originalStart": 61517,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00280",
+    "originalStart": 61572,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00281",
+    "originalStart": 62457,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00282",
+    "originalStart": 62510,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00283",
+    "originalStart": 62704,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00284",
+    "originalStart": 62753,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00285",
+    "originalStart": 63643,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00286",
+    "originalStart": 63718,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00287",
+    "originalStart": 63927,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00288",
+    "originalStart": 63980,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00289",
+    "originalStart": 65396,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00290",
+    "originalStart": 65492,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00291",
+    "originalStart": 66093,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00292",
+    "originalStart": 66195,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00293",
+    "originalStart": 66750,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00294",
+    "originalStart": 66847,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00295",
+    "originalStart": 67036,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00296",
+    "originalStart": 67140,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00297",
+    "originalStart": 67395,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00298",
+    "originalStart": 67483,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00299",
+    "originalStart": 67680,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00300",
+    "originalStart": 67770,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00301",
+    "originalStart": 68221,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00302",
+    "originalStart": 68282,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00303",
+    "originalStart": 68666,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00304",
+    "originalStart": 68734,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00305",
+    "originalStart": 69601,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00306",
+    "originalStart": 69668,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00307",
+    "originalStart": 69856,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00308",
+    "originalStart": 69914,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00309",
+    "originalStart": 70700,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00310",
+    "originalStart": 70773,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00311",
+    "originalStart": 70983,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00312",
+    "originalStart": 71064,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00313",
+    "originalStart": 71627,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00314",
+    "originalStart": 71711,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00315",
+    "originalStart": 71853,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00316",
+    "originalStart": 71940,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00317",
+    "originalStart": 72147,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00318",
+    "originalStart": 72222,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00319",
+    "originalStart": 72415,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00320",
+    "originalStart": 72504,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00321",
+    "originalStart": 72666,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00322",
+    "originalStart": 72750,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00323",
+    "originalStart": 72934,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00324",
+    "originalStart": 73013,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00325",
+    "originalStart": 73677,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00326",
+    "originalStart": 73736,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00327",
+    "originalStart": 73910,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00328",
+    "originalStart": 73970,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00329",
+    "originalStart": 74095,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00330",
+    "originalStart": 74150,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00331",
+    "originalStart": 74332,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00332",
+    "originalStart": 74394,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00333",
+    "originalStart": 74549,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00334",
+    "originalStart": 74607,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00335",
+    "originalStart": 74788,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00336",
+    "originalStart": 74849,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00337",
+    "originalStart": 75483,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00338",
+    "originalStart": 75551,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00339",
+    "originalStart": 75818,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00340",
+    "originalStart": 75880,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00341",
+    "originalStart": 76207,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00342",
+    "originalStart": 76264,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00343",
+    "originalStart": 76446,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00344",
+    "originalStart": 76503,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00345",
+    "originalStart": 76806,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00346",
+    "originalStart": 76864,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00347",
+    "originalStart": 77046,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00348",
+    "originalStart": 77107,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00349",
+    "originalStart": 77632,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00350",
+    "originalStart": 77701,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00351",
+    "originalStart": 77905,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00352",
+    "originalStart": 77964,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00353",
+    "originalStart": 78214,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00354",
+    "originalStart": 78278,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00355",
+    "originalStart": 78463,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00356",
+    "originalStart": 78529,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00357",
+    "originalStart": 78907,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00358",
+    "originalStart": 78970,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00359",
+    "originalStart": 79149,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00360",
+    "originalStart": 79209,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00361",
+    "originalStart": 79879,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00362",
+    "originalStart": 79936,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00363",
+    "originalStart": 80141,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00364",
+    "originalStart": 80202,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00365",
+    "originalStart": 80334,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00366",
+    "originalStart": 80391,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00367",
+    "originalStart": 80573,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00368",
+    "originalStart": 80628,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00369",
+    "originalStart": 81028,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00370",
+    "originalStart": 81094,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00371",
+    "originalStart": 81285,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00372",
+    "originalStart": 81346,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00373",
+    "originalStart": 82103,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00374",
+    "originalStart": 82158,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00375",
+    "originalStart": 82429,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00376",
+    "originalStart": 82488,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00377",
+    "originalStart": 82703,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00378",
+    "originalStart": 82766,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00379",
+    "originalStart": 82947,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00380",
+    "originalStart": 83002,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00381",
+    "originalStart": 83879,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00382",
+    "originalStart": 83939,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00383",
+    "originalStart": 84120,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00384",
+    "originalStart": 84178,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00385",
+    "originalStart": 84836,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00386",
+    "originalStart": 84895,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00387",
+    "originalStart": 85789,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00388",
+    "originalStart": 85847,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00389",
+    "originalStart": 87087,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00390",
+    "originalStart": 87145,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00391",
+    "originalStart": 87601,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00392",
+    "originalStart": 87659,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00393",
+    "originalStart": 88561,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00394",
+    "originalStart": 88621,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00395",
+    "originalStart": 89083,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00396",
+    "originalStart": 89149,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00397",
+    "originalStart": 90682,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00398",
+    "originalStart": 90741,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00399",
+    "originalStart": 91046,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00400",
+    "originalStart": 91105,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00401",
+    "originalStart": 91803,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00402",
+    "originalStart": 91865,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00403",
+    "originalStart": 92051,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00404",
+    "originalStart": 92124,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00405",
+    "originalStart": 92343,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00406",
+    "originalStart": 92397,
+    "field": "effect description"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00407",
+    "originalStart": 92576,
+    "field": "effect name"
+  },
+  {
+    "id": "guide.legacy.batch17ConstellationData_helpers.b00408",
+    "originalStart": 92639,
+    "field": "effect description"
+  }
+]

@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import { useLanguage, type TranslationKey } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -51,7 +52,7 @@ export default function SiteHeader({ activePage, game, children }: SiteHeaderPro
       <div className="border-y border-stone-400 py-3" style={{ borderTopColor: "var(--game-accent, var(--site-accent-fallback, #92400e))" }}>
         <div className="flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3">
-            <Link href="/" className="display-serif text-lg font-bold tracking-[-.02em] text-stone-900">HoYoverse Builder</Link>
+            <Link href="/" className="display-serif text-lg font-bold tracking-[-.02em] text-stone-900">{uiText("ui.components_SiteHeader_brand1.literal1")}</Link>
             {game && <p className="detail-mono truncate text-[11px] text-[var(--game-accent,var(--site-accent-fallback,#92400e))]" data-testid="site-header-game">{GAME_MARKS[game].mark} / {t(GAME_MARKS[game].name)}</p>}
           </div>
           <div className="flex items-center gap-2">

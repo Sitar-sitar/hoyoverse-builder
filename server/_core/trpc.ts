@@ -1,12 +1,21 @@
+import { errorMessage } from "../content/errors";
 import { NOT_ADMIN_ERR_MSG, UNAUTHED_ERR_MSG } from '@shared/const';
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import type { TrpcContext } from "./context";
+import { contentErrorCode } from "../../shared/content/errorDisplay";
+import { sources as publicErrorSources } from "../../content/ja/ui/errorsPublic";
+import { sources as adminErrorSources } from "../../content/ja/ui/errorsAdmin";
 import { hasGitHubAdminAllowlist, isGitHubAdminOpenIdAllowed } from "./githubAdminAuth";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter, type RateLimiter, type RateLimitRule } from "./rateLimit";
 
 const t = initTRPC.context<TrpcContext>().create({
   transformer: superjson,
+  errorFormatter({shape,error}) {
+    const sources=[...publicErrorSources,...adminErrorSources];
+    const code=contentErrorCode(error.message,sources,error.code==="BAD_REQUEST" && error.cause?.name==="ZodError");
+    return {...shape,data:{...shape.data,contentErrorCode:code}};
+  },
 });
 
 export const router = t.router;
@@ -18,7 +27,7 @@ export const router = t.router;
  * httpBatchLink は複数 operation を1リクエストへまとめるので、HTTP リクエスト単位ではなく
  * operation 単位で数える。
  */
-export const TOO_MANY_REQUESTS_MESSAGE = "リクエストが集中しています。しばらく待ってから再度お試しください。";
+export const TOO_MANY_REQUESTS_MESSAGE = errorMessage("public.globalRateLimited");
 
 const globalApiLimiter = createRateLimiter({ windowMs: 60_000, max: 120 });
 

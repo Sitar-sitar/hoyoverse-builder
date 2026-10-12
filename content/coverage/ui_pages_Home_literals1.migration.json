@@ -1,0 +1,132 @@
+[
+  {
+    "id": "ui.pages_Home_literals1.literal1",
+    "start": 4681,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal2",
+    "start": 4703,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal3",
+    "start": 4744,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal4",
+    "start": 4794,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal5",
+    "start": 4813,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal6",
+    "start": 4833,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal7",
+    "start": 4852,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal8",
+    "start": 4937,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal9",
+    "start": 4952,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal10",
+    "start": 4994,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal11",
+    "start": 5046,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal12",
+    "start": 5064,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal13",
+    "start": 5085,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal14",
+    "start": 5103,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal15",
+    "start": 5131,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal16",
+    "start": 5153,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal17",
+    "start": 5193,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal18",
+    "start": 5215,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal19",
+    "start": 5260,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal20",
+    "start": 5318,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal21",
+    "start": 5337,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal22",
+    "start": 5363,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal23",
+    "start": 5380,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal24",
+    "start": 5408,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal25",
+    "start": 5430,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.pages_Home_literals1.literal26",
+    "start": 6807,
+    "kind": "jsx"
+  }
+]

@@ -1,5 +1,6 @@
 import type { ContentCatalog, ContentIssue, CoverageSection, SourceText, TextId, TextRef } from "../../shared/content/types";
 import { parseCatalog } from "./schema";
+import { formatContentText } from "../../shared/content/format";
 
 export type ContentIndex = {
   catalog: ContentCatalog;
@@ -78,16 +79,5 @@ export function textRef(id: TextId): TextRef {
 export function japaneseText(index: ContentIndex, ref: TextRef, variables: Record<string, string | number> = {}): string {
   const source = index.resolve(ref.id);
   if (!source) throw new Error(`Unknown content reference: ${ref.id}`);
-  const expected = Object.keys(source.placeholders).sort();
-  const templateNames = [...new Set([...source.ja.matchAll(/\{([A-Za-z][A-Za-z0-9_]*)\}/g)].map(match => match[1]!))].sort();
-  if (JSON.stringify(templateNames) !== JSON.stringify(expected)) throw new Error(`Invalid Japanese template: ${ref.id}`);
-  const actual = Object.keys(variables).sort();
-  if (JSON.stringify(expected) !== JSON.stringify(actual)) throw new Error(`Content variables differ: ${ref.id}`);
-  for (const name of expected) {
-    const value = variables[name];
-    if (typeof value !== source.placeholders[name] || (typeof value === "number" && !Number.isFinite(value))) {
-      throw new Error(`Invalid content variable: ${ref.id}.${name}`);
-    }
-  }
-  return source.ja.replace(/\{([A-Za-z][A-Za-z0-9_]*)\}/g, (_, name: string) => String(variables[name]));
+  return formatContentText(ref.id, source.ja, source.placeholders, variables);
 }

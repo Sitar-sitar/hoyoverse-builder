@@ -1,0 +1,5 @@
+[
+  {"id":"team.legacy.memberRole.damage","legacyPath":"server/parties/legacyCatalog.ts:manualMember:index=1:role","field":"member role"},
+  {"id":"team.legacy.memberRole.support","legacyPath":"server/parties/legacyCatalog.ts:manualMember:index=2:role","field":"member role"},
+  {"id":"team.legacy.memberRole.sustain","legacyPath":"server/parties/legacyCatalog.ts:manualMember:index>=3:role","field":"member role"}
+]

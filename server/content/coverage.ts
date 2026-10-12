@@ -6,6 +6,20 @@ const placeholders = (value: string) => [...value.matchAll(/\{([A-Za-z][A-Za-z0-
 const unique = (values: string[]) => [...new Set(values)];
 const occurrences = (value: string, token: string) => value.split(token).length - 1;
 
+function sourceUsage(index: ContentIndex) {
+  const usage = new Map<string, Set<string>>();
+  for (const section of index.catalog.sections) {
+    if (section.section.status !== "registered") continue;
+    for (const ref of section.section.data) {
+      const id = index.resolve(ref.id)?.id;
+      if (!id) continue;
+      if (!usage.has(id)) usage.set(id, new Set());
+      usage.get(id)!.add(section.id);
+    }
+  }
+  return usage;
+}
+
 export function sourceIssues(source: SourceText): ContentIssue[] {
   const issues: ContentIssue[] = [];
   if (JSON.stringify(unique(placeholders(source.ja))) !== JSON.stringify(Object.keys(source.placeholders).sort())) {
@@ -59,12 +73,13 @@ export function reportCoverage(index: ContentIndex, audience?: ContentAudience) 
 }
 
 export function exportCandidates(index: ContentIndex, language: TranslationLanguage) {
+  const usage = sourceUsage(index);
   return [...index.sources.values()].sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0).flatMap(source => {
     const old = index.catalog.translations[language][source.id];
     const status = translationState(source, old);
     if (status.state === "approved") return [];
     return [{ ...source, language, sourceHash: sourceHash(source), oldText: old?.text ?? null, ...status,
-      usedBy: index.catalog.sections.filter(entry => entry.section.status === "registered" && entry.section.data.some(ref => index.resolve(ref.id)?.id === source.id)).map(entry => entry.id).sort(),
+      usedBy: [...(usage.get(source.id) ?? [])].sort(),
     }];
   });
 }
@@ -77,7 +92,8 @@ export function readiness(index: ContentIndex, language: TranslationLanguage, au
     ? entry.section.data.map(ref => index.resolve(ref.id)?.id).filter((id): id is SourceText["id"] => Boolean(id)) : []));
   const missingSections = activeSections.filter(entry => entry.section.status === "notCollected").map(entry => entry.id);
   const incomplete = report.languages[language].entries.filter(entry => activeIds.has(entry.id as SourceText["id"]) && entry.state !== "approved");
-  const unassigned = [...index.sources.values()].filter(source => source.audience === audience && !index.catalog.sections.some(entry => entry.section.status === "registered" && entry.section.data.some(ref => index.resolve(ref.id)?.id === source.id))).map(source => source.id);
+  const usage = sourceUsage(index);
+  const unassigned = [...index.sources.values()].filter(source => source.audience === audience && !usage.has(source.id)).map(source => source.id);
   return { ready: activeSections.length > 0 && report.structureIssues.length === 0 && missingSections.length === 0 && incomplete.length === 0 && unassigned.length === 0,
     missingSections, incomplete, unassigned, structureIssues: report.structureIssues };
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ui.components_AdminLogoutButton_literals1.literal1",
+    "start": 929,
+    "kind": "attribute"
+  },
+  {
+    "id": "ui.components_AdminLogoutButton_literals1.literal2",
+    "start": 1005,
+    "kind": "constant"
+  },
+  {
+    "id": "ui.components_AdminLogoutButton_literals1.literal3",
+    "start": 1017,
+    "kind": "constant"
+  }
+]

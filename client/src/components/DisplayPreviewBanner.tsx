@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui";
 import React from "react";
 import { useDisplaySettings } from "@/contexts/DisplaySettingsContext";
 import { diffDisplayVariants } from "@shared/displayVariants";
@@ -17,15 +18,12 @@ export default function DisplayPreviewBanner() {
       <div className="container flex flex-wrap items-center justify-between gap-2 py-2 text-xs">
         <p className="flex items-center gap-2 font-semibold">
           <Eye className="h-4 w-4 text-amber-900" aria-hidden="true" />
-          プレビュー表示中：公開中の見せ方と {differences} 件異なります
-        </p>
+          {uiText("ui.components_DisplayPreviewBanner_literals1.literal1")}{differences}{uiText("ui.components_DisplayPreviewBanner_literals1.literal2")}</p>
         <div className="flex items-center gap-2">
           <Link href="/admin/display" className="inline-flex min-h-9 items-center border border-stone-900 px-3 font-semibold hover:bg-stone-900 hover:text-stone-50">
-            管理画面へ戻る
-          </Link>
+            {uiText("ui.components_DisplayPreviewBanner_literals1.literal3")}</Link>
           <button type="button" onClick={clearPreview} className="inline-flex min-h-9 items-center bg-stone-900 px-3 font-semibold text-stone-50 hover:bg-amber-900">
-            プレビューを終了
-          </button>
+            {uiText("ui.components_DisplayPreviewBanner_literals1.literal4")}</button>
         </div>
       </div>
     </div>

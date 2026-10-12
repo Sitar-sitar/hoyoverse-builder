@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui.admin";
 import { useAuth } from "@/_core/hooks/useAuth";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import {
@@ -43,7 +44,7 @@ const keyLabel = (key: string) => DISPLAY_VARIANTS.find((definition) => definiti
 const toVariants = (entries: AdminEntry[]) => ({ ...legacyDisplayVariants(), ...Object.fromEntries(entries.map((entry) => [entry.key, entry.variant])) });
 const formatJst = (value: string | null) => value
   ? new Intl.DateTimeFormat("ja-JP", { timeZone: "Asia/Tokyo", dateStyle: "medium", timeStyle: "short" }).format(new Date(value))
-  : "未保存（現行）";
+  : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal1");
 
 export default function DisplaySettingsAdmin() {
   const { user, loading, isAuthenticated } = useAuth();
@@ -86,12 +87,12 @@ export default function DisplaySettingsAdmin() {
     try {
       const fresh = await adminQuery.refetch();
       if (fresh.isError || !fresh.data) {
-        setNotice({ tone: "error", text: "公開中の設定を取得できませんでした。時間をおいて再度お試しください。" });
+        setNotice({ tone: "error", text: uiText("ui.pages_DisplaySettingsAdmin_literals2.literal2") });
         return;
       }
       const changes = diffDisplayVariants(toVariants(fresh.data.entries as AdminEntry[]), target);
       if (!changes.length) {
-        setNotice({ tone: "warning", text: resetAll ? "すでにすべて現行の見せ方です。" : "公開中の設定と同じため、公開する変更はありません。" });
+        setNotice({ tone: "warning", text: resetAll ? uiText("ui.pages_DisplaySettingsAdmin_literals2.literal3") : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal4") });
         return;
       }
       setPending({ changes, target, resetAll });
@@ -108,7 +109,7 @@ export default function DisplaySettingsAdmin() {
     try {
       result = await publishMutation.mutateAsync({ changes: changes.map((change) => ({ key: change.key, variant: change.to })) });
     } catch {
-      setNotice({ tone: "error", text: "保存できませんでした。時間をおいて再度お試しください。" });
+      setNotice({ tone: "error", text: uiText("ui.pages_DisplaySettingsAdmin_literals2.literal5") });
       return;
     }
 
@@ -125,8 +126,8 @@ export default function DisplaySettingsAdmin() {
       setForm(toVariants(adminRefetch.value.data.entries as AdminEntry[]));
     }
     setNotice(refreshed
-      ? { tone: "success", text: "公開しました。" }
-      : { tone: "warning", text: "公開しました。最新状態の取得に失敗したため、再読み込みしてください。" });
+      ? { tone: "success", text: uiText("ui.pages_DisplaySettingsAdmin_literals2.literal6") }
+      : { tone: "warning", text: uiText("ui.pages_DisplaySettingsAdmin_literals2.literal7") });
   };
 
   return (
@@ -135,42 +136,38 @@ export default function DisplaySettingsAdmin() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-y border-stone-400 py-3">
           <div className="flex items-center gap-3">
             <span className="inline-block h-2 w-2 rounded-full bg-amber-700" />
-            <p className="detail-mono text-[9px] text-stone-600">ADMIN / DISPLAY DESIGN</p>
+            <p className="detail-mono text-[9px] text-stone-600">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal1")}</p>
           </div>
           <div className="flex items-center gap-2">
             <LanguageSwitcher />
             <Link href="/admin" className="inline-flex h-8 items-center gap-1 px-2 text-[10px] text-stone-600 hover:bg-stone-200">
-              <ArrowLeft className="h-3.5 w-3.5" />管理者ポータルへ
-            </Link>
+              <ArrowLeft className="h-3.5 w-3.5" />{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal1")}</Link>
           </div>
         </div>
       </header>
 
       <main className="container pb-20 pt-10 sm:pt-16">
         <section className="mx-auto max-w-5xl">
-          <p className="detail-mono text-[10px] text-amber-800">PRESENTATION VARIANTS</p>
-          <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">表示デザイン</h1>
-          <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">
-            公開サイトの見せ方を案ごとに切り替えます。プレビューはこのブラウザのタブだけに反映され、「公開する」で全員の表示が変わります。キャラクターデータは変わりません。
-          </p>
+          <p className="detail-mono text-[10px] text-amber-800">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal2")}</p>
+          <h1 className="display-serif mt-3 text-4xl font-semibold tracking-[-.045em] sm:text-6xl">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal2")}</h1>
+          <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal3")}</p>
         </section>
 
         {loading && (
           <section className="mx-auto mt-12 max-w-5xl border-y border-stone-300 py-10 text-center">
-            <p className="detail-mono text-[10px] text-stone-500">AUTHENTICATING</p>
+            <p className="detail-mono text-[10px] text-stone-500">{uiText("ui.pages_DisplaySettingsAdmin_brand1.literal3")}</p>
           </section>
         )}
 
         {!loading && !isAdmin && (
           <section className="mx-auto mt-12 max-w-md border border-amber-900/30 bg-amber-50/60 p-6 sm:p-8">
-            <h2 className="font-serif text-2xl font-semibold">{isAuthenticated ? "管理者権限がありません" : "GitHubで管理者ログイン"}</h2>
+            <h2 className="font-serif text-2xl font-semibold">{isAuthenticated ? uiText("ui.pages_DisplaySettingsAdmin_literals2.literal8") : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal9")}</h2>
             <p className="mt-3 text-sm leading-6 text-stone-700">
-              {isAuthenticated ? "このアカウントは管理者Allowlistに登録されていません。" : "登録済みのGitHubアカウントだけが表示デザインを変更できます。"}
+              {isAuthenticated ? uiText("ui.pages_DisplaySettingsAdmin_literals2.literal10") : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal11")}
             </p>
             {!isAuthenticated && (
               <Button onClick={() => startLogin("/admin/display")} className="mt-5 h-11 w-full rounded-none bg-stone-900 text-stone-50 hover:bg-amber-900 sm:w-auto">
-                <LogIn className="h-4 w-4" />GitHubでログイン
-              </Button>
+                <LogIn className="h-4 w-4" />{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal4")}</Button>
             )}
           </section>
         )}
@@ -183,12 +180,10 @@ export default function DisplaySettingsAdmin() {
               </p>
             )}
 
-            {adminQuery.isLoading && <p className="border-y border-stone-300 py-8 text-center text-sm text-stone-500">公開中の設定を読み込んでいます。</p>}
+            {adminQuery.isLoading && <p className="border-y border-stone-300 py-8 text-center text-sm text-stone-500">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal5")}</p>}
 
             {adminQuery.isError && !adminQuery.data && (
-              <p role="alert" className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">
-                公開中の設定を取得できませんでした。APIのデータベース接続設定を確認し、再読み込みしてください。取得できるまで公開操作はできません。
-              </p>
+              <p role="alert" className="border border-rose-300 bg-rose-50 p-5 text-sm text-rose-800">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal6")}</p>
             )}
 
             {adminQuery.data && form && (
@@ -199,12 +194,12 @@ export default function DisplaySettingsAdmin() {
                     return (
                       <fieldset key={definition.key} className="border border-stone-300 bg-stone-50/50 p-5 sm:p-6">
                         <legend className="px-2 font-serif text-xl font-semibold">
-                          <span className="detail-mono mr-2 text-[10px] text-amber-800">案 {definition.proposal}</span>{definition.label}
+                          <span className="detail-mono mr-2 text-[10px] text-amber-800">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal7")}{definition.proposal}</span>{definition.label}
                         </legend>
                         <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-stone-600">
-                          <span>影響する画面: {definition.screens.join(" / ")}</span>
-                          <span>公開中: <strong className="text-stone-900">{variantLabel(definition.key, entry?.variant ?? "legacy")}</strong></span>
-                          <span>最終更新: {formatJst(entry?.updatedAt ?? null)}</span>
+                          <span>{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal8")}{definition.screens.join(" / ")}</span>
+                          <span>{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal9")}<strong className="text-stone-900">{variantLabel(definition.key, entry?.variant ?? "legacy")}</strong></span>
+                          <span>{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal10")}{formatJst(entry?.updatedAt ?? null)}</span>
                         </div>
                         <div className="mt-4 grid gap-3 md:grid-cols-2">
                           {definition.variants.map((variant) => {
@@ -236,28 +231,25 @@ export default function DisplaySettingsAdmin() {
                 <div className="mt-8 flex flex-col gap-4 border-t border-stone-400 pt-6 lg:flex-row lg:items-end lg:justify-between">
                   <div className="flex flex-wrap items-end gap-2">
                     <label className="text-xs text-stone-600">
-                      <span className="block">プレビューで開く画面</span>
+                      <span className="block">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal11")}</span>
                       <select value={previewPath} onChange={(event) => setPreviewPath(event.target.value as DisplayPreviewPath)} className="mt-1 h-10 border border-stone-400 bg-transparent px-2 text-sm text-stone-900">
                         {DISPLAY_PREVIEW_PATHS.map((item) => <option key={item.path} value={item.path}>{item.label}</option>)}
                       </select>
                     </label>
                     <Button type="button" variant="outline" disabled={busy} onClick={startPreview} className="h-10 rounded-none border-stone-900">
-                      <Eye className="h-4 w-4" />この組み合わせをプレビュー
-                    </Button>
+                      <Eye className="h-4 w-4" />{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal12")}</Button>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     <Button type="button" variant="outline" disabled={busy} onClick={() => openConfirm(legacyDisplayVariants(), true)} className="h-10 rounded-none border-stone-400">
-                      <RotateCcw className="h-4 w-4" />すべて現行に戻す
-                    </Button>
+                      <RotateCcw className="h-4 w-4" />{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal13")}</Button>
                     <Button type="button" disabled={busy || formChanges.length === 0} onClick={() => openConfirm(form, false)} className="h-10 rounded-none bg-stone-900 text-stone-50 hover:bg-amber-900">
-                      <Upload className="h-4 w-4" />{publishMutation.isPending ? "公開しています" : "公開する"}
+                      <Upload className="h-4 w-4" />{publishMutation.isPending ? uiText("ui.pages_DisplaySettingsAdmin_literals2.literal12") : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal13")}
                     </Button>
                   </div>
                 </div>
                 {preview && (
                   <p className="mt-3 text-xs text-stone-600">
-                    <Palette className="mr-1 inline h-3.5 w-3.5" />このタブではプレビュー中です。
-                    <button type="button" onClick={clearPreview} className="ml-2 underline underline-offset-2">プレビューを終了</button>
+                    <Palette className="mr-1 inline h-3.5 w-3.5" />{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal14")}<button type="button" onClick={clearPreview} className="ml-2 underline underline-offset-2">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal15")}</button>
                   </p>
                 )}
               </>
@@ -269,10 +261,10 @@ export default function DisplaySettingsAdmin() {
       <AlertDialog open={pending !== null} onOpenChange={(open) => { if (!open) setPending(null); }}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{pending?.resetAll ? "すべて現行の見せ方に戻しますか？" : "この見せ方を公開しますか？"}</AlertDialogTitle>
-            <AlertDialogDescription>公開すると、すべての閲覧者の表示が変わります（表示中の画面には約2分以内に反映されます）。</AlertDialogDescription>
+            <AlertDialogTitle>{pending?.resetAll ? uiText("ui.pages_DisplaySettingsAdmin_literals2.literal14") : uiText("ui.pages_DisplaySettingsAdmin_literals2.literal15")}</AlertDialogTitle>
+            <AlertDialogDescription>{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal16")}</AlertDialogDescription>
           </AlertDialogHeader>
-          <ul className="space-y-2 text-sm" aria-label="公開する変更">
+          <ul className="space-y-2 text-sm" aria-label={uiText("ui.pages_DisplaySettingsAdmin_literals1.literal17")}>
             {pending?.changes.map((change) => (
               <li key={change.key} className="border-l-2 border-amber-700 pl-3">
                 <span className="font-semibold">{keyLabel(change.key)}</span>：{variantLabel(change.key, change.from)} → {variantLabel(change.key, change.to)}
@@ -280,8 +272,8 @@ export default function DisplaySettingsAdmin() {
             ))}
           </ul>
           <AlertDialogFooter>
-            <AlertDialogCancel>やめる</AlertDialogCancel>
-            <Button type="button" onClick={confirmPublish} className="rounded-none bg-stone-900 text-stone-50 hover:bg-amber-900">公開する</Button>
+            <AlertDialogCancel>{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal18")}</AlertDialogCancel>
+            <Button type="button" onClick={confirmPublish} className="rounded-none bg-stone-900 text-stone-50 hover:bg-amber-900">{uiText("ui.pages_DisplaySettingsAdmin_literals1.literal19")}</Button>
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>

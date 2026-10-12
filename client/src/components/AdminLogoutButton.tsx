@@ -1,3 +1,4 @@
+import { uiText } from "@/content/ui.admin";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { LogOut } from "lucide-react";
@@ -23,10 +24,10 @@ export default function AdminLogoutButton() {
       onClick={signOut}
       disabled={loading}
       className="fixed bottom-4 right-4 z-50 h-10 rounded-none border-stone-500 bg-stone-50/95 px-4 text-xs shadow-md backdrop-blur hover:bg-stone-200 sm:bottom-6 sm:right-6"
-      aria-label="管理者からログアウト"
+      aria-label={uiText("ui.components_AdminLogoutButton_literals1.literal1")}
     >
       <LogOut className="h-4 w-4" />
-      {loading ? "ログアウト中…" : "ログアウト"}
+      {loading ? uiText("ui.components_AdminLogoutButton_literals1.literal2") : uiText("ui.components_AdminLogoutButton_literals1.literal3")}
     </Button>
   );
 }

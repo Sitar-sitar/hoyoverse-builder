@@ -1,0 +1,866 @@
+[
+  {
+    "fingerprint": "00addde7ae221268d4c54682032a793bfbc82fc39e4749a35b193168f4cfdcbc",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "効果命中",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "02e4cfa17ac0e70655dfcf1b528bebd694758933f8f6d9c468a1f249a9db2b9b",
+    "file": "pages/Home.tsx",
+    "site": "tierLabel",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "04ac15183b8e02df61d6b87f5cdec6ab33d4142ebc0e832173f3df57941c03a5",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "05e7bc01f03e627a7280d0ce25f8736e0a1a3c133dc0ba16325e05d0221a6ffd",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "弱体",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "08f7212e5c27de1e0089966014d86570135d7af5f757e7dd89b7125540bdf9dc",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "主ステータスを変更",
+    "count": 2,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "096c9ebeb9db2c194cc52847bfd6caac5a11b1eb3cdf4417c564f69f9ee23b41",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "攻撃力",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "097e34985d063ff9f1287184aad2ca9cfa76b43bb469e7e2bffab107452b2860",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "防御力%",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "0c455be2af83be91b63578caf804148636af08e897d5ab41e0a8a7d412e2e437",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "TIERS_HIGH_TO_LOW",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "0f1779f9112de85f92693b9b2534ba0f4b45600940f1741ad783c5a0d404ffaf",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeTier",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "0f834e61d48ec2eda999899302d316ea7c3c6266198b8e65c6865feb298b4123",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "アタッカー",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "16d7e552b34d8cae91bad0eea30d38a3b6b4434fa68f6d009b45b52d818d07ab",
+    "file": "pages/Home.tsx",
+    "site": "priorityLabel",
+    "text": "優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "18521a11b2b25e49faff9a68c7e430ff4d580f4b2f82d24983f9646ef56365bd",
+    "file": "pages/Home.tsx",
+    "site": "TIERS",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "193a7bcbf3b6fc0d9434cc86aa7fae5bf27bbf5134f58df3d966d13efc4f016a",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "23ab9aeca79aa5791b7632a1f014f72646a7ff41cc88d3f94dbe302d9f38eaf9",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GAUGE_TIERS",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "28961c607567fd0aa490bdbd5a8c2cfedd40c0bdda8ff966a50cb4bfdb3e8bd8",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "効果抵抗",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "2cb1ecf7801c28b3053c265e3d1f9ad4fe1321192923fac70a281ab34e2d7e5f",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "2d84134d668714c013764cae85528d54b54395cb52cb1321dd61d892d5d08c82",
+    "file": "pages/Home.tsx",
+    "site": "priorityLabel",
+    "text": "最優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "2d954ff9f8cf57bb8dd95bdc5ce1e5d4707508ab02da93b7bd8a0890cf0990d0",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeRecommendation",
+    "text": "次点",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "3037d8359382ed456c7c0c8d414e391f6230fadf012ac155196f4d4daf0047fe",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "Tier",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "3cb97a7159e04716a5c538f432f9b735975055ec258dd83eec406d0c88f9a4a8",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "其他属性",
+    "count": 1,
+    "reason": "Exact legacy Chinese equipment explanation remains for old stored language compatibility; preparation publishes Japanese only",
+    "withdrawal": "Legacy display: remove when equipment action descriptions use localized structured references"
+  },
+  {
+    "fingerprint": "3cf2e902203644b0e1e3225b0cf260d783d1a0ead1e096b334f769afa4b91d84",
+    "file": "pages/Home.tsx",
+    "site": "recommendationsFromComparisons",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "3ff123d66aea4a11a2b7f6e04a1e7deebbf590f326870faf1e0302ddf2d5f053",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "value",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "40298cd5c2ac816223610b2374c353e553b5cd5fabdefd86c5edfd41d93b1e12",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "415ac0bd7998b3d61c6b429268bb22ce263d1b060ba14faac6fd4154100b2657",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "StatGauge",
+    "text": "目標",
+    "count": 2,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "43f54eacb1fc8937c667f9025bfed4477d579c90bd2d304caf0f892ee3fc742c",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "速度",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "4821e93ae1f0c8063d83964027ded153abd0d8270a8c6905428804521fbc6c6a",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…}当前为${…}。更换为${…}主属性的装备，更容易补足缺口。",
+    "count": 1,
+    "reason": "Exact legacy Chinese equipment explanation remains for old stored language compatibility; preparation publishes Japanese only",
+    "withdrawal": "Legacy display: remove when equipment action descriptions use localized structured references"
+  },
+  {
+    "fingerprint": "4f59e38bf35f808b3d1240687286ab057d387be8f706b257d33a1dd559466044",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "デバッファー",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "51543020d4b57a1f7d71325e59eb1446d9febf2066ebcc765a4675b716a0d9a1",
+    "file": "pages/Home.tsx",
+    "site": "PriorityRecommendation",
+    "text": "優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "5268541edf322daca85bbecbd699d68fad0a750f69e1a7a995f5e4996e2d3d0f",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "TIERS_HIGH_TO_LOW",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "58c7c9589179db007ea39be8fa3b2df2345aa537a77e4f2c78cdbc491c3c954d",
+    "file": "pages/Home.tsx",
+    "site": "target",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "595135d90b8d7667d6b985f8f6d6f5e26e58da7b2dd5e63da90a4f1fe8cde471",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "支援",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "5ab396253106856cd245dd3b56513e809d46576718828a114fed5a7eaf18258c",
+    "file": "pages/Home.tsx",
+    "site": "PriorityRecommendation",
+    "text": "最優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "5d6f9e261557d2704a53b7c312daf2217d89e068bdfe65e396791fc29e1fbced",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "防御力",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "5d87c3e9ababe33777c303225dda41a56a82ba4a342d9c4016b81333806f9bf8",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "攻撃力%",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "5e910dadc689d56feb2e94dab7b743bdd010d8ef1141ebe4469446141f8fa112",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "Tier",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "628f391853da039287ff04ca310695efbb6c80858efca8d881c0dbfdbdfe4dee",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "元素熟知",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "6464eb657032d970cdfe837dd61f73ae8bc156220db39abc4c1a09a36f828e75",
+    "file": "pages/Home.tsx",
+    "site": "TierName",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "6b2854f33523605593eefe573e686f613886114940068c86a85cb63fdcfb2b34",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "主力",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "6c9627a4dbc1f3c28838266bf3e1fa91e2acfaa28c962b9d2a8110f429985fbe",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "異常マスタリー",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "70aad70dcfff20fe5eac416f87f117d3d15c27f4d10bac6fd89ca2058b8af65d",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeRecommendation",
+    "text": "優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "73817086a778195f50bb21718bea4d0029f3e654c19c486e41426a0f3f109876",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeTier",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "747650e7ae57f562d625ed61b573ab7712496b0552308d1ef0c2ecafc294810c",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "エネルギー自動回復",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "78e8d7ffeb759d17a628798709798e9c9834ce58cca6879091f5ff84915afa67",
+    "file": "pages/CharacterCatalog.tsx",
+    "site": "detail",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "796decd2a472466cec32160123d20851c4edf58c0786190aa2fcb17564a750a6",
+    "file": "pages/CharacterCatalog.tsx",
+    "site": "detail",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "7b9075d8279f7d6ba46a19c921f015904ab1ae53fcdf9cc542935fbc05e17c85",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "回復",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "7bfd9d69d782f8b750cb06d89eed542ce53750604aa6a6c94aba49706be11bf6",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "StatGauge",
+    "text": "厳選",
+    "count": 2,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "7daa83cd8bdb894c551500bc600269ab025813f285bd0be28f0d9f712655352d",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "Tier",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "7de3ff702dfdc3a3d76c84cc6d18e6356eb7ee5e6b4b4a1545f84a4737e72006",
+    "file": "pages/Home.tsx",
+    "site": "PriorityRecommendation",
+    "text": "次点",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "7fd42f001a5e1cc5447a8ad136ba3ab64b2f593b153fd6dfea9fd10ea272ebe6",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "810253b3b0b6befa65f19e07ac6430bf3a40f956a3ed792e8ad98c6cf97429ff",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…}的主属性为${…}。优先筛选带有${…}副属性的装备。",
+    "count": 1,
+    "reason": "Exact legacy Chinese equipment explanation remains for old stored language compatibility; preparation publishes Japanese only",
+    "withdrawal": "Legacy display: remove when equipment action descriptions use localized structured references"
+  },
+  {
+    "fingerprint": "86b0c1949ff8d9dff6595cd6130e176bfc7496d9e19546ae0ceeef10730043c1",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "会心ダメージ",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "8bff408ee221153b4e02aa2b27fa7091e90b3eeb9c06cd279f5b25510180b806",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "PartyFormation",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "95f755d499f6bd29208c2033b3ab767db037ccc5ccfe9f5eaac94837827b4031",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "会心率",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "9b987c812f53778dcf9a1de30fcfed71366107d25742806d5083b9bd216c2ab5",
+    "file": "pages/GuideHistory.tsx",
+    "site": "GuideHistory",
+    "text": "・",
+    "count": 1,
+    "reason": "Fixed punctuation joins resolved history changes",
+    "withdrawal": "Remove when list markup replaces the punctuation join"
+  },
+  {
+    "fingerprint": "9bf64dacc0c396d86629cc1965d01e9c1f84e04f34de8107efd6cea67bb79e2b",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "TIERS_HIGH_TO_LOW",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "9cf49998146121246a8d98a7d84de293c690d19f796e74765c69c0380843cc7e",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeTier",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "9e441fbdfa820f1484900b89b2e236137bf87f971cfa1dc5f9606bcb8f5f088f",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeRecommendation",
+    "text": "最優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "a32c6f31256929ba73f34fdc5b91290481bdd7314aa1a6f1c1fbf0aea14f1a1b",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "a different stat",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
+  },
+  {
+    "fingerprint": "aadf7d28acbe17b6d91b289d1cf6a5b5de5ec0a03fc6e0fcec15509c8a9d5b7d",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "acd5eeeebdcdea79fdb6d604746c9a381e912c6fc9eb57b638a640b86a93d88d",
+    "file": "pages/Home.tsx",
+    "site": "TIERS",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "ad78c149e2b82e8852f7ff7f625851cf3efca55a049a1a82e31d251166049452",
+    "file": "pages/Home.tsx",
+    "site": "TIERS",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "b37b9b7f0b5c94f964298db7af8e544f8ad460192084b1cdc620c5d4515291e7",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeEquipmentAction",
+    "text": "主ステータスを変更",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "b607e7bc1558c6f40ab3eab7ec474293fe6bf697d03db642c8bdfc0808cd99c2",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "bac0624f4aff110150eb52440fce292a70ee3aff2f21b5d9c03ad06f2805486c",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "元素チャージ効率",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "bae363f9646329f8700c7cc8410bad74b53ccf6ff00e3db279124194eab45152",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "bbed36c88cbb23f36d3cdf92732ce43c807afae019bfc27927a2eca36a9b44d7",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "衝撃力",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "bc9aa10beedbb8078633fd5e98cb2c83d931152b246003e71d0f9b26294d28db",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "bce0d736d695ac064877703803560405c3450acc4fa1932188f0dd76a98662a9",
+    "file": "pages/DisplaySettingsAdmin.tsx",
+    "site": "DisplaySettingsAdmin",
+    "text": "legacy",
+    "count": 1,
+    "reason": "The admin screen displays the exact stored variant identifier for configuration inspection; legacy is an implementation identifier.",
+    "withdrawal": "Remove when the configuration inspection switches from stored variant identifiers to display labels."
+  },
+  {
+    "fingerprint": "bf0adc3b010b739071043bba71d4958baed585256a612f420cebabcd7e2e3e9b",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "metTarget",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "c00bb78d0d2c7d116e8ae4cdf08820e206528fdb942938c798c98ae505ad650c",
+    "file": "pages/Home.tsx",
+    "site": "TierName",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "c5aefdb1a93f4257c5cd3735249c9085516097b06c5cf1e3e69b629937f541da",
+    "file": "pages/Home.tsx",
+    "site": "priority",
+    "text": "次点",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "c70137d941b34814fa83c466084cd92a6671346aa489686d9e69b5f8d820b447",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…} is currently ${…}. Replacing it with a ${…} main-stat piece is the most direct way to close this gap.",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
+  },
+  {
+    "fingerprint": "c814861d0c2b9b65b8f8fec85e05a4739403eeffd965625b955757036c846da0",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "ヒーラー",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "c8743b88f98615f325bda95c42dd3c61209c6d4aa093e81caf554bb5ded49137",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "妥協",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "c95bd3f75357e652df5327dafc0c4b6f088848ee39706b9382538b26585720a9",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GAUGE_TIERS",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "ca053f06f6ea702809c1d1a035e003282f282c82d9c14122a96a1adacbdfb14b",
+    "file": "pages/Home.tsx",
+    "site": "tierLabel",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "cdbe66413ca3110ee0e3184931377d2dcdec9296053acfc4bbdc642ebedf8d98",
+    "file": "pages/Home.tsx",
+    "site": "EquipmentAction",
+    "text": "主ステータスを変更",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "ced862b365af3c52276ca16c8cfcab6488806b7daab59675495dc6a8a5eeeaab",
+    "file": "pages/Home.tsx",
+    "site": "actionReason",
+    "text": "${…} already has ${…} as its main stat. Prioritize pieces with ${…} substats.",
+    "count": 1,
+    "reason": "Existing English equipment-action compatibility text; its Japanese counterpart remains the server action.reason. No translation or approval is performed in this migration.",
+    "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
+  },
+  {
+    "fingerprint": "d19e96d1fa9039d891845f7fe3374e304e38966e75b432cd5e86f343905cc6ef",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "貫通率",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "d37a64d7abdc0c721b220cd795b762d974d06c4a8892bdf63eb215ec63aa99a9",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GaugeEquipmentAction",
+    "text": "サブステータスを厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "d381bf7e25f7a45b5804169b3e1b49d8fd77ae28d58d2fee44b7b73a885af611",
+    "file": "components/variants/ProgressionStepper.tsx",
+    "site": "ProgressionStepper",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "d77d0fb65b6a0d5ea26d02054f2ea499ec06865faac870e683676d4f911b6140",
+    "file": "pages/CharacterCatalog.tsx",
+    "site": "detail",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "dcf2df91033801e97b39f9167732d9840fc4800c863c716ed9bdbee5df55f2c8",
+    "file": "pages/Home.tsx",
+    "site": "adjusted",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "dd60f4c736cce0ea153225904b0d9fe94ca6d52b7a28729fa7c2e7387e0f15c2",
+    "file": "pages/Home.tsx",
+    "site": "Home",
+    "text": "目標",
+    "count": 2,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "dea8719ea91d241b6fa77730d7592fb38a2ef3a91728f24359ecf6bcd69ac53b",
+    "file": "pages/Home.tsx",
+    "site": "statNameForPartyKey",
+    "text": "撃破特効",
+    "count": 1,
+    "reason": "Japanese stat names match the existing numeric API response; never translated computation lookup",
+    "withdrawal": "Remove when the numeric API provides StatKey on every stat"
+  },
+  {
+    "fingerprint": "df59956e15ea67e89b656df562cb63e6921eb85c33f1fbc37a078aa75214ea95",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "シールド",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "e7640d5d0f62419d945537a863eea31b30ab20dd13dd3ae8d0c2d16287146948",
+    "file": "pages/Home.tsx",
+    "site": "actionLabel",
+    "text": "主ステータスを変更",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "e7ffa5d72746b647dba254c8119adcce94a323d0b7c6d737947cdd6849ea5a81",
+    "file": "pages/Home.tsx",
+    "site": "TierName",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "ed602616e5cb5482b934c51529aa1633a00c6c4ee00327b1b7196c8ffc713e9d",
+    "file": "pages/Home.tsx",
+    "site": "partyAdjustedComparisons",
+    "text": "目標",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "efe914dc44afb150f4ecefafaca2c1bf6aae88f9d27614e8bceb5da7992f5ca1",
+    "file": "components/variants/StatGauge.tsx",
+    "site": "GAUGE_TIERS",
+    "text": "厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "f04e4d7d28fb26545cf697f487b7a6acaffa8a165bf5ec44c485035b6cfb04c8",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "耐久",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "f2071446589c2ec6b89241ba5fdfcaac6e38a3bf226e6beb492ba7d57c94bcec",
+    "file": "pages/Home.tsx",
+    "site": "priority",
+    "text": "優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "f70718a847b09de41e40efd854e94fd5a3869993ed2dfbb311f2bcdd6afb5104",
+    "file": "pages/Home.tsx",
+    "site": "priority",
+    "text": "最優先",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  },
+  {
+    "fingerprint": "f930feed300d34efb37c97e56632aceba9c3a93a71b6e66dae20c8577110c67c",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "バッファー",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "fa2180e5577fd755e82dfa241b85d759b496326093d485309b6c32316fd8bfbf",
+    "file": "components/variants/PartyFormation.tsx",
+    "site": "ROLE_GROUPS",
+    "text": "サポート",
+    "count": 1,
+    "reason": "Japanese role words classify a color group; displayed role is resolved separately",
+    "withdrawal": "Remove when roles are supplied as structured group IDs"
+  },
+  {
+    "fingerprint": "faa55343cd10e5b8f6843b437d54c1c3a4a367155386c6ea0a32972f5aed6339",
+    "file": "pages/Home.tsx",
+    "site": "EquipmentAction",
+    "text": "サブステータスを厳選",
+    "count": 1,
+    "reason": "Existing typed API discriminator or numeric target key; visible labels use the UI resolver",
+    "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
+  }
+]

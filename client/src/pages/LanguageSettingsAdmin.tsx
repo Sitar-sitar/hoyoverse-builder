@@ -1,3 +1,4 @@
+import { uiFormat, uiText } from "@/content/ui.admin";
 import React, { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { useAuth } from "@/_core/hooks/useAuth";
@@ -6,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { LANGUAGE_LABELS } from "@/contexts/LanguageContext";
 import { trpc } from "@/lib/trpc";
 import { APP_LANGUAGES, type AppLanguage } from "@shared/languages";
+import { CONTENT_MANIFEST } from "@/content/manifest";
 
 export default function LanguageSettingsAdmin() {
   const { user, loading, isAuthenticated } = useAuth();
@@ -29,7 +31,7 @@ export default function LanguageSettingsAdmin() {
     try {
       saved = await mutation.mutateAsync({ enabledLanguages: form });
     } catch {
-      setNotice("保存できませんでした。時間をおいて再度お試しください。");
+      setNotice(uiText("ui.pages_LanguageSettingsAdmin_literals2.literal1"));
       setSaving(false);
       return;
     }
@@ -38,37 +40,38 @@ export default function LanguageSettingsAdmin() {
     const results = await Promise.allSettled([utils.languages.settings.invalidate(), query.refetch()]);
     const failed = results.some(result => result.status === "rejected")
       || (results[1].status === "fulfilled" && results[1].value.isError);
-    setNotice(failed ? "保存しました。最新状態の取得に失敗したため、再読み込みしてください。" : "保存しました。公開サイトへ反映しました。開いている画面には通常1分以内に反映されます。");
+    setNotice(failed ? uiText("ui.pages_LanguageSettingsAdmin_literals2.literal2") : uiText("ui.pages_LanguageSettingsAdmin_literals2.literal3"));
     setSaving(false);
   };
 
   return <main className="container min-h-screen py-10 sm:py-16">
     <section className="mx-auto max-w-3xl">
-      <Link href="/admin" className="text-sm text-stone-600 underline">管理者ポータルへ</Link>
-      <h1 className="display-serif mt-8 text-4xl font-semibold">公開言語</h1>
-      <p className="mt-5 text-sm leading-7 text-stone-600">公開サイトで利用できる言語を選択します。翻訳の準備が整うまでは日本語のみで運用できます。日本語は常時有効です。</p>
-      {loading && <p className="mt-8">認証を確認しています。</p>}
+      <Link href="/admin" className="text-sm text-stone-600 underline">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal1")}</Link>
+      <h1 className="display-serif mt-8 text-4xl font-semibold">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal2")}</h1>
+      <p className="mt-5 text-sm leading-7 text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal3")}</p>
+      <p className="mt-3 text-sm text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal4")}{query.data?.preparation && uiFormat("ui.admin.languages.waitingCount", { count: query.data.preparation.unavailableSources })}</p>
+      {loading && <p className="mt-8">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal5")}</p>}
       {!loading && !isAdmin && <div className="mt-8 border border-stone-300 p-6">
-        <p>{isAuthenticated ? "管理者権限がありません。" : "管理者としてログインしてください。"}</p>
-        {!isAuthenticated && <Button className="mt-4" onClick={() => startLogin("/admin/languages")}>GitHubでログイン</Button>}
+        <p>{isAuthenticated ? uiText("ui.pages_LanguageSettingsAdmin_literals2.literal4") : uiText("ui.pages_LanguageSettingsAdmin_literals2.literal5")}</p>
+        {!isAuthenticated && <Button className="mt-4" onClick={() => startLogin("/admin/languages")}>{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal6")}</Button>}
       </div>}
       {isAdmin && <div className="mt-8">
         {notice && <p role="status" className="mb-5 text-sm">{notice}</p>}
-        {query.isLoading && <p>公開中の言語設定を読み込んでいます。</p>}
-        {query.isError && <p role="alert">言語設定を取得できませんでした。<button type="button" className="ml-2 underline" onClick={() => void query.refetch()}>再試行</button></p>}
+        {query.isLoading && <p>{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal7")}</p>}
+        {query.isError && <p role="alert">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal8")}<button type="button" className="ml-2 underline" onClick={() => void query.refetch()}>{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal9")}</button></p>}
         {query.data && form && <>
           <fieldset disabled={saving || query.isError} className="space-y-4 border border-stone-300 bg-stone-50 p-6">
-            <legend className="px-2 text-sm font-semibold">有効にする言語</legend>
+            <legend className="px-2 text-sm font-semibold">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal10")}</legend>
             {APP_LANGUAGES.map(language => <label key={language} className="flex items-center gap-3 text-sm">
-              <input type="checkbox" checked={form.includes(language)} disabled={language === "ja"} onChange={event => {
+              <input type="checkbox" checked={form.includes(language)} disabled={language === "ja" || !(CONTENT_MANIFEST.readyLanguages as readonly string[]).includes(language)} onChange={event => {
                 setNotice("");
                 setForm(APP_LANGUAGES.filter(item => item === language ? event.target.checked : form.includes(item)));
               }} />
-              {LANGUAGE_LABELS[language]}{language === "ja" && "（常時有効）"}
+              {LANGUAGE_LABELS[language]}{language === "ja" && uiText("ui.pages_LanguageSettingsAdmin_literals2.literal6")}
             </label>)}
           </fieldset>
-          <p className="mt-4 text-xs leading-6 text-stone-600">無効な言語を選択していた利用者は日本語に戻ります。日本語のみの場合、言語切替ボタンは表示しません。「保存する」で全利用者に適用されます。</p>
-          <Button className="mt-6 rounded-none" disabled={saving || query.isError || JSON.stringify(form) === JSON.stringify(query.data.enabledLanguages)} onClick={() => void save()}>{saving ? "保存中…" : "保存する"}</Button>
+          <p className="mt-4 text-xs leading-6 text-stone-600">{uiText("ui.pages_LanguageSettingsAdmin_literals1.literal11")}</p>
+          <Button className="mt-6 rounded-none" disabled={saving || query.isError || JSON.stringify(form) === JSON.stringify(query.data.enabledLanguages)} onClick={() => void save()}>{saving ? uiText("ui.pages_LanguageSettingsAdmin_literals2.literal7") : uiText("ui.pages_LanguageSettingsAdmin_literals2.literal8")}</Button>
         </>}
       </div>}
     </section>

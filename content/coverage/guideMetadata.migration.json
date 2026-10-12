@@ -1,0 +1,1288 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "guide-metadata-v1",
+  "inputDigest": "ca515f85ac04ced4bca6b26ff0e0d8bef64ad362329de350a4d2fe966c7c07d7",
+  "authoringDigest": "d3d9f306899f58430399ab489fd93fe1d7b0b164dc745724764db12c046e10b6",
+  "mapping": [
+    {
+      "identityKey": "hsr:1305",
+      "nameRef": "character.hsr.1305.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1015",
+      "nameRef": "character.hsr.1015.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1008",
+      "nameRef": "character.hsr.1008.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1402",
+      "nameRef": "character.hsr.1402.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "hsr:1009",
+      "nameRef": "character.hsr.1009.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1405",
+      "nameRef": "character.hsr.1405.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "hsr:1304",
+      "nameRef": "character.hsr.1304.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1513",
+      "nameRef": "character.hsr.1513.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00003"
+    },
+    {
+      "identityKey": "hsr:1302",
+      "nameRef": "character.hsr.1302.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1004",
+      "nameRef": "character.hsr.1004.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00004"
+    },
+    {
+      "identityKey": "hsr:1005",
+      "nameRef": "character.hsr.1005.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1407",
+      "nameRef": "character.hsr.1407.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "hsr:1301",
+      "nameRef": "character.hsr.1301.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00004"
+    },
+    {
+      "identityKey": "hsr:1415",
+      "nameRef": "character.hsr.1415.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00004"
+    },
+    {
+      "identityKey": "hsr:1509",
+      "nameRef": "character.hsr.1509.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00004"
+    },
+    {
+      "identityKey": "hsr:1107",
+      "nameRef": "character.hsr.1107.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1412",
+      "nameRef": "character.hsr.1412.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1406",
+      "nameRef": "character.hsr.1406.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1313",
+      "nameRef": "character.hsr.1313.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1108",
+      "nameRef": "character.hsr.1108.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1314",
+      "nameRef": "character.hsr.1314.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00006"
+    },
+    {
+      "identityKey": "hsr:1104",
+      "nameRef": "character.hsr.1104.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00006"
+    },
+    {
+      "identityKey": "hsr:1014",
+      "nameRef": "character.hsr.1014.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1410",
+      "nameRef": "character.hsr.1410.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1103",
+      "nameRef": "character.hsr.1103.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1102",
+      "nameRef": "character.hsr.1102.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1321",
+      "nameRef": "character.hsr.1321.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1112",
+      "nameRef": "character.hsr.1112.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1403",
+      "nameRef": "character.hsr.1403.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1105",
+      "nameRef": "character.hsr.1105.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1503",
+      "nameRef": "character.hsr.1503.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00003"
+    },
+    {
+      "identityKey": "hsr:1409",
+      "nameRef": "character.hsr.1409.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1408",
+      "nameRef": "character.hsr.1408.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1315",
+      "nameRef": "character.hsr.1315.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1217",
+      "nameRef": "character.hsr.1217.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1109",
+      "nameRef": "character.hsr.1109.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1307",
+      "nameRef": "character.hsr.1307.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1101",
+      "nameRef": "character.hsr.1101.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1106",
+      "nameRef": "character.hsr.1106.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1013",
+      "nameRef": "character.hsr.1013.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1310",
+      "nameRef": "character.hsr.1310.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "hsr:1401",
+      "nameRef": "character.hsr.1401.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1312",
+      "nameRef": "character.hsr.1312.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1404",
+      "nameRef": "character.hsr.1404.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1223",
+      "nameRef": "character.hsr.1223.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1110",
+      "nameRef": "character.hsr.1110.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1303",
+      "nameRef": "character.hsr.1303.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1111",
+      "nameRef": "character.hsr.1111.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1309",
+      "nameRef": "character.hsr.1309.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1512",
+      "nameRef": "character.hsr.1512.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00003"
+    },
+    {
+      "identityKey": "hsr:1221",
+      "nameRef": "character.hsr.1221.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1508",
+      "nameRef": "character.hsr.1508.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1308",
+      "nameRef": "character.hsr.1308.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1501",
+      "nameRef": "character.hsr.1501.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1306",
+      "nameRef": "character.hsr.1306.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1215",
+      "nameRef": "character.hsr.1215.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1225",
+      "nameRef": "character.hsr.1225.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1212",
+      "nameRef": "character.hsr.1212.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1006",
+      "nameRef": "character.hsr.1006.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1204",
+      "nameRef": "character.hsr.1204.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1210",
+      "nameRef": "character.hsr.1210.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1207",
+      "nameRef": "character.hsr.1207.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1001",
+      "nameRef": "character.hsr.1001.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1205",
+      "nameRef": "character.hsr.1205.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00008"
+    },
+    {
+      "identityKey": "hsr:1201",
+      "nameRef": "character.hsr.1201.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1214",
+      "nameRef": "character.hsr.1214.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1507",
+      "nameRef": "character.hsr.1507.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00003"
+    },
+    {
+      "identityKey": "hsr:1206",
+      "nameRef": "character.hsr.1206.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1002",
+      "nameRef": "character.hsr.1002.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "hsr:1213",
+      "nameRef": "character.hsr.1213.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1414",
+      "nameRef": "character.hsr.1414.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "hsr:1413",
+      "nameRef": "character.hsr.1413.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1202",
+      "nameRef": "character.hsr.1202.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1211",
+      "nameRef": "character.hsr.1211.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1505",
+      "nameRef": "character.hsr.1505.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1220",
+      "nameRef": "character.hsr.1220.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00001"
+    },
+    {
+      "identityKey": "hsr:1209",
+      "nameRef": "character.hsr.1209.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1003",
+      "nameRef": "character.hsr.1003.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00009"
+    },
+    {
+      "identityKey": "hsr:1510",
+      "nameRef": "character.hsr.1510.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00003"
+    },
+    {
+      "identityKey": "hsr:1504",
+      "nameRef": "character.hsr.1504.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00011"
+    },
+    {
+      "identityKey": "hsr:1208",
+      "nameRef": "character.hsr.1208.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1203",
+      "nameRef": "character.hsr.1203.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1317",
+      "nameRef": "character.hsr.1317.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00012"
+    },
+    {
+      "identityKey": "hsr:1222",
+      "nameRef": "character.hsr.1222.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00005"
+    },
+    {
+      "identityKey": "hsr:1218",
+      "nameRef": "character.hsr.1218.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00012"
+    },
+    {
+      "identityKey": "hsr:1502",
+      "nameRef": "character.hsr.1502.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00011"
+    },
+    {
+      "identityKey": "genshin:10000062",
+      "nameRef": "character.genshin.10000062.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000121",
+      "nameRef": "character.genshin.10000121.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000078",
+      "nameRef": "character.genshin.10000078.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00013"
+    },
+    {
+      "identityKey": "genshin:10000038",
+      "nameRef": "character.genshin.10000038.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000096",
+      "nameRef": "character.genshin.10000096.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000021",
+      "nameRef": "character.genshin.10000021.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00014"
+    },
+    {
+      "identityKey": "genshin:10000110",
+      "nameRef": "character.genshin.10000110.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00014"
+    },
+    {
+      "identityKey": "genshin:10000116",
+      "nameRef": "character.genshin.10000116.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00014"
+    },
+    {
+      "identityKey": "genshin:10000113",
+      "nameRef": "character.genshin.10000113.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00015"
+    },
+    {
+      "identityKey": "genshin:10000111",
+      "nameRef": "character.genshin.10000111.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00015"
+    },
+    {
+      "identityKey": "genshin:10000143",
+      "nameRef": "character.genshin.10000143.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00016"
+    },
+    {
+      "identityKey": "genshin:10000140",
+      "nameRef": "character.genshin.10000140.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00016"
+    },
+    {
+      "identityKey": "genshin:10000022",
+      "nameRef": "character.genshin.10000022.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00015"
+    },
+    {
+      "identityKey": "genshin:10000051",
+      "nameRef": "character.genshin.10000051.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000112",
+      "nameRef": "character.genshin.10000112.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000099",
+      "nameRef": "character.genshin.10000099.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00002"
+    },
+    {
+      "identityKey": "genshin:10000105",
+      "nameRef": "character.genshin.10000105.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000081",
+      "nameRef": "character.genshin.10000081.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000015",
+      "nameRef": "character.genshin.10000015.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000100",
+      "nameRef": "character.genshin.10000100.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000101",
+      "nameRef": "character.genshin.10000101.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000072",
+      "nameRef": "character.genshin.10000072.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00017"
+    },
+    {
+      "identityKey": "genshin:10000029",
+      "nameRef": "character.genshin.10000029.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000098",
+      "nameRef": "character.genshin.10000098.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000067",
+      "nameRef": "character.genshin.10000067.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000055",
+      "nameRef": "character.genshin.10000055.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000125",
+      "nameRef": "character.genshin.10000125.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000095",
+      "nameRef": "character.genshin.10000095.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000107",
+      "nameRef": "character.genshin.10000107.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000088",
+      "nameRef": "character.genshin.10000088.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000090",
+      "nameRef": "character.genshin.10000090.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000103",
+      "nameRef": "character.genshin.10000103.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000003",
+      "nameRef": "character.genshin.10000003.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000114",
+      "nameRef": "character.genshin.10000114.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000043",
+      "nameRef": "character.genshin.10000043.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00018"
+    },
+    {
+      "identityKey": "genshin:10000097",
+      "nameRef": "character.genshin.10000097.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000071",
+      "nameRef": "character.genshin.10000071.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000115",
+      "nameRef": "character.genshin.10000115.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000033",
+      "nameRef": "character.genshin.10000033.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000104",
+      "nameRef": "character.genshin.10000104.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000039",
+      "nameRef": "character.genshin.10000039.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000079",
+      "nameRef": "character.genshin.10000079.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000069",
+      "nameRef": "character.genshin.10000069.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000016",
+      "nameRef": "character.genshin.10000016.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000123",
+      "nameRef": "character.genshin.10000123.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000050",
+      "nameRef": "character.genshin.10000050.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000068",
+      "nameRef": "character.genshin.10000068.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000091",
+      "nameRef": "character.genshin.10000091.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000073",
+      "nameRef": "character.genshin.10000073.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000070",
+      "nameRef": "character.genshin.10000070.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000087",
+      "nameRef": "character.genshin.10000087.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000122",
+      "nameRef": "character.genshin.10000122.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000034",
+      "nameRef": "character.genshin.10000034.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00019"
+    },
+    {
+      "identityKey": "genshin:10000014",
+      "nameRef": "character.genshin.10000014.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000076",
+      "nameRef": "character.genshin.10000076.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000031",
+      "nameRef": "character.genshin.10000031.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000089",
+      "nameRef": "character.genshin.10000089.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000120",
+      "nameRef": "character.genshin.10000120.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000085",
+      "nameRef": "character.genshin.10000085.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000032",
+      "nameRef": "character.genshin.10000032.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000106",
+      "nameRef": "character.genshin.10000106.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000080",
+      "nameRef": "character.genshin.10000080.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000102",
+      "nameRef": "character.genshin.10000102.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000041",
+      "nameRef": "character.genshin.10000041.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000124",
+      "nameRef": "character.genshin.10000124.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000077",
+      "nameRef": "character.genshin.10000077.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000119",
+      "nameRef": "character.genshin.10000119.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000086",
+      "nameRef": "character.genshin.10000086.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000006",
+      "nameRef": "character.genshin.10000006.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000084",
+      "nameRef": "character.genshin.10000084.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000083",
+      "nameRef": "character.genshin.10000083.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000074",
+      "nameRef": "character.genshin.10000074.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000020",
+      "nameRef": "character.genshin.10000020.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000045",
+      "nameRef": "character.genshin.10000045.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000064",
+      "nameRef": "character.genshin.10000064.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000048",
+      "nameRef": "character.genshin.10000048.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000092",
+      "nameRef": "character.genshin.10000092.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000037",
+      "nameRef": "character.genshin.10000037.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000093",
+      "nameRef": "character.genshin.10000093.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000065",
+      "nameRef": "character.genshin.10000065.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00013"
+    },
+    {
+      "identityKey": "genshin:10000027",
+      "nameRef": "character.genshin.10000027.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000056",
+      "nameRef": "character.genshin.10000056.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000046",
+      "nameRef": "character.genshin.10000046.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00013"
+    },
+    {
+      "identityKey": "genshin:10000057",
+      "nameRef": "character.genshin.10000057.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000025",
+      "nameRef": "character.genshin.10000025.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000023",
+      "nameRef": "character.genshin.10000023.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000042",
+      "nameRef": "character.genshin.10000042.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000054",
+      "nameRef": "character.genshin.10000054.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000059",
+      "nameRef": "character.genshin.10000059.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000035",
+      "nameRef": "character.genshin.10000035.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000036",
+      "nameRef": "character.genshin.10000036.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000049",
+      "nameRef": "character.genshin.10000049.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000030",
+      "nameRef": "character.genshin.10000030.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000063",
+      "nameRef": "character.genshin.10000063.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000002",
+      "nameRef": "character.genshin.10000002.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000066",
+      "nameRef": "character.genshin.10000066.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000044",
+      "nameRef": "character.genshin.10000044.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000094",
+      "nameRef": "character.genshin.10000094.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000053",
+      "nameRef": "character.genshin.10000053.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000082",
+      "nameRef": "character.genshin.10000082.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000058",
+      "nameRef": "character.genshin.10000058.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000047",
+      "nameRef": "character.genshin.10000047.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000075",
+      "nameRef": "character.genshin.10000075.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000024",
+      "nameRef": "character.genshin.10000024.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000109",
+      "nameRef": "character.genshin.10000109.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000060",
+      "nameRef": "character.genshin.10000060.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00007"
+    },
+    {
+      "identityKey": "genshin:10000052",
+      "nameRef": "character.genshin.10000052.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00010"
+    },
+    {
+      "identityKey": "genshin:10000108",
+      "nameRef": "character.genshin.10000108.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000005",
+      "nameRef": "character.genshin.10000005.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000061",
+      "nameRef": "character.genshin.10000061.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "genshin:10000026",
+      "nameRef": "character.genshin.10000026.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00020"
+    },
+    {
+      "identityKey": "zzz:1041",
+      "nameRef": "character.zzz.1041.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1461",
+      "nameRef": "character.zzz.1461.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1361",
+      "nameRef": "character.zzz.1361.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1381",
+      "nameRef": "character.zzz.1381.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1311",
+      "nameRef": "character.zzz.1311.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1501",
+      "nameRef": "character.zzz.1501.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1401",
+      "nameRef": "character.zzz.1401.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1111",
+      "nameRef": "character.zzz.1111.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1011",
+      "nameRef": "character.zzz.1011.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1321",
+      "nameRef": "character.zzz.1321.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00021"
+    },
+    {
+      "identityKey": "zzz:1051",
+      "nameRef": "character.zzz.1051.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1561",
+      "nameRef": "character.zzz.1561.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1191",
+      "nameRef": "character.zzz.1191.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1301",
+      "nameRef": "character.zzz.1301.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1061",
+      "nameRef": "character.zzz.1061.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1181",
+      "nameRef": "character.zzz.1181.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1611",
+      "nameRef": "character.zzz.1611.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00024"
+    },
+    {
+      "identityKey": "zzz:1101",
+      "nameRef": "character.zzz.1101.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1071",
+      "nameRef": "character.zzz.1071.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1521",
+      "nameRef": "character.zzz.1521.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1261",
+      "nameRef": "character.zzz.1261.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1591",
+      "nameRef": "character.zzz.1591.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1531",
+      "nameRef": "character.zzz.1531.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1271",
+      "nameRef": "character.zzz.1271.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1481",
+      "nameRef": "character.zzz.1481.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1031",
+      "nameRef": "character.zzz.1031.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1571",
+      "nameRef": "character.zzz.1571.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1171",
+      "nameRef": "character.zzz.1171.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1281",
+      "nameRef": "character.zzz.1281.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1331",
+      "nameRef": "character.zzz.1331.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1291",
+      "nameRef": "character.zzz.1291.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1551",
+      "nameRef": "character.zzz.1551.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1081",
+      "nameRef": "character.zzz.1081.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1351",
+      "nameRef": "character.zzz.1351.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00025"
+    },
+    {
+      "identityKey": "zzz:1541",
+      "nameRef": "character.zzz.1541.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1121",
+      "nameRef": "character.zzz.1121.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1141",
+      "nameRef": "character.zzz.1141.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1161",
+      "nameRef": "character.zzz.1161.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1211",
+      "nameRef": "character.zzz.1211.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1451",
+      "nameRef": "character.zzz.1451.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1151",
+      "nameRef": "character.zzz.1151.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1581",
+      "nameRef": "character.zzz.1581.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1371",
+      "nameRef": "character.zzz.1371.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1391",
+      "nameRef": "character.zzz.1391.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00023"
+    },
+    {
+      "identityKey": "zzz:1221",
+      "nameRef": "character.zzz.1221.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1441",
+      "nameRef": "character.zzz.1441.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00026"
+    },
+    {
+      "identityKey": "zzz:1241",
+      "nameRef": "character.zzz.1241.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00026"
+    },
+    {
+      "identityKey": "zzz:1341",
+      "nameRef": "character.zzz.1341.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00027"
+    },
+    {
+      "identityKey": "zzz:1091",
+      "nameRef": "character.zzz.1091.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00028"
+    },
+    {
+      "identityKey": "zzz:1251",
+      "nameRef": "character.zzz.1251.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1491",
+      "nameRef": "character.zzz.1491.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00027"
+    },
+    {
+      "identityKey": "zzz:1201",
+      "nameRef": "character.zzz.1201.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00027"
+    },
+    {
+      "identityKey": "zzz:1131",
+      "nameRef": "character.zzz.1131.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00022"
+    },
+    {
+      "identityKey": "zzz:1511",
+      "nameRef": "character.zzz.1511.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00027"
+    },
+    {
+      "identityKey": "zzz:1021",
+      "nameRef": "character.zzz.1021.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00029"
+    },
+    {
+      "identityKey": "zzz:1471",
+      "nameRef": "character.zzz.1471.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00029"
+    },
+    {
+      "identityKey": "zzz:1411",
+      "nameRef": "character.zzz.1411.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00028"
+    },
+    {
+      "identityKey": "zzz:1431",
+      "nameRef": "character.zzz.1431.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00029"
+    },
+    {
+      "identityKey": "zzz:1421",
+      "nameRef": "character.zzz.1421.name",
+      "sourceLabelRef": "guide.legacy.metadataMaster.b00029"
+    }
+  ]
+}

@@ -1,8 +1,13 @@
+import { uiDictionary } from "@/content/ui";
 import React from "react";
 import { BookOpen } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useDisplayVariant } from "@/contexts/DisplaySettingsContext";
+
+const shortcutText = uiDictionary({
+  "label": "ui.components_PublicCatalogShortcut.dictionary1.label"
+});
 
 export default function PublicCatalogShortcut() {
   const [location] = useLocation();
@@ -11,7 +16,7 @@ export default function PublicCatalogShortcut() {
   const chromeVariant = useDisplayVariant("siteChrome");
   if (location !== "/" || chromeVariant === "unified") return null;
 
-  const label = language === "ja" ? "キャラ図鑑（UID不要）" : language === "zh-CN" ? "角色图鉴（无需UID）" : "Character Catalog (No UID)";
+  const label = shortcutText[language].label;
 
   return (
     <Link

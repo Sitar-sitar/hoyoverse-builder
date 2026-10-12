@@ -1,0 +1,49 @@
+[
+  {
+    "id": "guide.legacy.buildAdvisor_templates.b00001",
+    "field": "rationale",
+    "originalStart": 4862,
+    "bindings": {
+      "v0": "target",
+      "v1": "comparison.unit",
+      "v2": "deficitText(deficit, comparison.unit)"
+    }
+  },
+  {
+    "id": "guide.legacy.buildAdvisor_templates.b00002",
+    "field": "reason",
+    "originalStart": 9441,
+    "bindings": {
+      "v0": "desiredStat"
+    }
+  },
+  {
+    "id": "guide.legacy.buildAdvisor_templates.b00003",
+    "field": "reason",
+    "originalStart": 10277,
+    "bindings": {
+      "v0": "slot",
+      "v1": "String(currentMain)",
+      "v2": "desiredStat"
+    }
+  },
+  {
+    "id": "guide.legacy.buildAdvisor_templates.b00004",
+    "field": "reason",
+    "originalStart": 10361,
+    "bindings": {
+      "v0": "slot",
+      "v1": "currentMain ? `は現在${currentMain}` : \"\"",
+      "v2": "desiredStat",
+      "v3": "equipped?.name ?? \"装備\""
+    }
+  },
+  {
+    "id": "guide.legacy.buildAdvisor_templates.b00005",
+    "field": "targetContext",
+    "originalStart": 139941,
+    "bindings": {
+      "v0": "name"
+    }
+  }
+]

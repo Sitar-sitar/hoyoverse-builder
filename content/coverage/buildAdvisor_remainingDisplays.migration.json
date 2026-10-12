@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "buildAdvisor_remainingDisplays",
+  "inputDigest": "cffb2b5a2aec6f2d5fd5de307ff06ef66bc3faad4b8868a975266f676b9b7aa6",
+  "outputDigest": "61235815dfdb0e912d3e47e70099308c17c0d868458041bc58bafd3a096f6c15",
+  "artifactDigests": {
+    "content/ja/guides/buildAdvisor_remainingDisplays.ts": "2f5de86036c4d49f6c7fdc84d95bbc084570a2bbfe8fd1df5127279a6656c7d7",
+    "content/translations/en/buildAdvisor_remainingDisplays.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/buildAdvisor_remainingDisplays.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 5323,
+      "end": 5371,
+      "id": "guide.remainingDisplays.buildAdvisor.b00001",
+      "oldText": "`あと ${(10 ** -digits).toFixed(digits)}${unit}未満`",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00001\", {v0:String((10 ** -digits).toFixed(digits)),v1:String(unit)})"
+    },
+    {
+      "start": 5383,
+      "end": 5421,
+      "id": "guide.remainingDisplays.buildAdvisor.b00002",
+      "oldText": "`あと ${deficit.toFixed(digits)}${unit}`",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00002\", {v0:String(deficit.toFixed(digits)),v1:String(unit)})"
+    },
+    {
+      "start": 6765,
+      "end": 6770,
+      "id": "guide.remainingDisplays.buildAdvisor.b00003",
+      "oldText": "\"会心率\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00003\")"
+    },
+    {
+      "start": 6783,
+      "end": 6789,
+      "id": "guide.remainingDisplays.buildAdvisor.b00004",
+      "oldText": "\"会心ダメ\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00004\")"
+    },
+    {
+      "start": 6800,
+      "end": 6804,
+      "id": "guide.remainingDisplays.buildAdvisor.b00005",
+      "oldText": "\"速度\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00005\")"
+    },
+    {
+      "start": 6816,
+      "end": 6821,
+      "id": "guide.remainingDisplays.buildAdvisor.b00006",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00006\")"
+    },
+    {
+      "start": 6840,
+      "end": 6845,
+      "id": "guide.remainingDisplays.buildAdvisor.b00007",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00007\")"
+    },
+    {
+      "start": 6862,
+      "end": 6868,
+      "id": "guide.remainingDisplays.buildAdvisor.b00008",
+      "oldText": "\"撃破特効\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00008\")"
+    },
+    {
+      "start": 6890,
+      "end": 6896,
+      "id": "guide.remainingDisplays.buildAdvisor.b00009",
+      "oldText": "\"効果命中\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00009\")"
+    },
+    {
+      "start": 6911,
+      "end": 6917,
+      "id": "guide.remainingDisplays.buildAdvisor.b00010",
+      "oldText": "\"効果抵抗\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00010\")"
+    },
+    {
+      "start": 6925,
+      "end": 6929,
+      "id": "guide.remainingDisplays.buildAdvisor.b00011",
+      "oldText": "\"HP\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00011\")"
+    },
+    {
+      "start": 6944,
+      "end": 6948,
+      "id": "guide.remainingDisplays.buildAdvisor.b00012",
+      "oldText": "\"HP\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00012\")"
+    },
+    {
+      "start": 6961,
+      "end": 6966,
+      "id": "guide.remainingDisplays.buildAdvisor.b00013",
+      "oldText": "\"防御力\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00013\")"
+    },
+    {
+      "start": 6982,
+      "end": 6987,
+      "id": "guide.remainingDisplays.buildAdvisor.b00014",
+      "oldText": "\"防御力\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00014\")"
+    },
+    {
+      "start": 7010,
+      "end": 7018,
+      "id": "guide.remainingDisplays.buildAdvisor.b00015",
+      "oldText": "\"元素チャージ\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00015\")"
+    },
+    {
+      "start": 7020,
+      "end": 7026,
+      "id": "guide.remainingDisplays.buildAdvisor.b00016",
+      "oldText": "\"EP回復\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00016\")"
+    },
+    {
+      "start": 7028,
+      "end": 7035,
+      "id": "guide.remainingDisplays.buildAdvisor.b00017",
+      "oldText": "\"エネルギー\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00017\")"
+    },
+    {
+      "start": 7057,
+      "end": 7063,
+      "id": "guide.remainingDisplays.buildAdvisor.b00018",
+      "oldText": "\"元素熟知\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00018\")"
+    },
+    {
+      "start": 7083,
+      "end": 7092,
+      "id": "guide.remainingDisplays.buildAdvisor.b00019",
+      "oldText": "\"異常マスタリー\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00019\")"
+    },
+    {
+      "start": 7116,
+      "end": 7122,
+      "id": "guide.remainingDisplays.buildAdvisor.b00020",
+      "oldText": "\"異常掌握\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00020\")"
+    },
+    {
+      "start": 7134,
+      "end": 7139,
+      "id": "guide.remainingDisplays.buildAdvisor.b00021",
+      "oldText": "\"衝撃力\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00021\")"
+    },
+    {
+      "start": 7153,
+      "end": 7157,
+      "id": "guide.remainingDisplays.buildAdvisor.b00022",
+      "oldText": "\"貫通\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00022\")"
+    },
+    {
+      "start": 7174,
+      "end": 7181,
+      "id": "guide.remainingDisplays.buildAdvisor.b00023",
+      "oldText": "\"エネルギー\"",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00023\")"
+    },
+    {
+      "start": 12393,
+      "end": 12412,
+      "id": "guide.remainingDisplays.buildAdvisor.b00024",
+      "oldText": "`は現在${currentMain}`",
+      "replacement": "_remainingDisplays.ja(\"guide.remainingDisplays.buildAdvisor.b00024\", {v0:String(currentMain)})"
+    }
+  ]
+}

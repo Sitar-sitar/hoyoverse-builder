@@ -1,5 +1,8 @@
+import { errorMessage } from "./content/errors";
+import { contentDiagnosticsRouter } from "./content/diagnostics";
 import { booleanSetting, previewAdmin } from "./_core/migrationRuntime";
 import { languageSettingsRouter } from "./languageSettings";
+import { withCatalogPresentation, withHistoryPresentation, withLookupPresentation, withPresentation } from "./content/presentation";
 import { COOKIE_NAME } from "@shared/const";
 import { TRPCError } from "@trpc/server";
 import { z } from "zod";
@@ -21,8 +24,8 @@ const lookupIpLimiter = createProcedureRateLimiter({ windowMs: 60_000, max: 20 }
 const lookupUidLimiter = createProcedureRateLimiter({ windowMs: 60_000, max: 6 });
 const feedbackIpLimiter = createProcedureRateLimiter({ windowMs: 10 * 60_000, max: 5 });
 
-const LOOKUP_TOO_MANY_REQUESTS = "照会が集中しています。数分後に再度お試しください。";
-const FEEDBACK_TOO_MANY_REQUESTS = "送信が集中しています。しばらく待ってから再度お試しください。";
+const LOOKUP_TOO_MANY_REQUESTS = errorMessage("public.busy");
+const FEEDBACK_TOO_MANY_REQUESTS = errorMessage("public.feedbackBusy");
 
 const isCalendarDate = (date: string) => {
   const [year, month, day] = date.split("-").map(Number);
@@ -32,17 +35,17 @@ const isCalendarDate = (date: string) => {
 
 const analyticsFilterInput = z.object({
   game: z.enum(["hsr", "genshin", "zzz"]).optional(),
-  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "開始日はYYYY-MM-DD形式で指定してください。").optional(),
-  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "終了日はYYYY-MM-DD形式で指定してください。").optional(),
+  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, errorMessage("admin.analyticsStartFormat")).optional(),
+  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, errorMessage("admin.analyticsEndFormat")).optional(),
 }).superRefine((input, ctx) => {
   if (input.startDate && !isCalendarDate(input.startDate)) {
-    ctx.addIssue({ code: "custom", path: ["startDate"], message: "開始日に有効な日付を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["startDate"], message: errorMessage("admin.analyticsStartInvalid") });
   }
   if (input.endDate && !isCalendarDate(input.endDate)) {
-    ctx.addIssue({ code: "custom", path: ["endDate"], message: "終了日に有効な日付を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["endDate"], message: errorMessage("admin.analyticsEndInvalid") });
   }
   if (input.startDate && input.endDate && input.startDate > input.endDate) {
-    ctx.addIssue({ code: "custom", path: ["endDate"], message: "終了日は開始日以降を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["endDate"], message: errorMessage("admin.analyticsDateOrder") });
   }
 });
 
@@ -71,6 +74,7 @@ const endOfJst = (date: string) => new Date(`${date}T23:59:59.999+09:00`);
 export const appRouter = router({
   // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
   system: systemRouter,
+  content: contentDiagnosticsRouter,
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
     logout: publicProcedure.mutation(({ ctx }) => {
@@ -83,21 +87,21 @@ export const appRouter = router({
   }),
 
   build: router({
-    guideHistory: publicProcedure.query(() => guideUpdateHistory()),
-    referenceCatalog: publicProcedure.query(() => characterReferenceCatalog()),
+    guideHistory: publicProcedure.query(() => withHistoryPresentation(guideUpdateHistory())),
+    referenceCatalog: publicProcedure.query(() => withCatalogPresentation(characterReferenceCatalog())),
     reference: publicProcedure
       .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), name: z.string().trim().min(1).max(80) }))
       .query(({ input }) => {
         const result = characterReferenceFor(input.game, input.name);
         if (!result) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "キャラクターが図鑑に見つかりません。" });
+          throw new TRPCError({ code: "NOT_FOUND", message: errorMessage("public.catalogNotFound") });
         }
-        return result;
+        return withPresentation(result);
       }),
     lookup: publicProcedure
-      .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), uid: z.string().trim().regex(/^\d{8,10}$/, "UIDは8〜10桁の数字で入力してください。") }).superRefine(({ game, uid }, ctx) => {
+      .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), uid: z.string().trim().regex(/^\d{8,10}$/, errorMessage("public.uidInvalid")) }).superRefine(({ game, uid }, ctx) => {
         if (game !== "zzz" && !/^\d{9,10}$/.test(uid)) {
-          ctx.addIssue({ code: "custom", path: ["uid"], message: "このゲームのUIDは9〜10桁の数字で入力してください。" });
+          ctx.addIssue({ code: "custom", path: ["uid"], message: errorMessage("public.uidForGameInvalid") });
         }
       }))
       .use(({ ctx, input, next }) => {
@@ -114,7 +118,7 @@ export const appRouter = router({
         // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 46-1
         if (!booleanSetting("API_MIGRATION_PREVIEW") || previewAdmin(ctx)) void recordLookupAnalyticsEvent(input.game, result.cached)
           .catch(error => console.error("[Analytics] Failed to record lookup:", error));
-        return result;
+        return withLookupPresentation(result);
       }),
   }),
 
@@ -127,7 +131,7 @@ export const appRouter = router({
         return await readAdminDisplaySettings();
       } catch (error) {
         console.error("[DisplaySettings] Failed to load admin display settings:", error);
-        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to load display settings" });
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.displayLoadFailed") });
       }
     }),
     publish: adminProcedure.input(displayPublishInput).mutation(async ({ input }) => {
@@ -135,7 +139,7 @@ export const appRouter = router({
         return await publishDisplaySettings(input.changes);
       } catch (error) {
         console.error("[DisplaySettings] Failed to save display settings:", error);
-        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to save display settings" });
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.displaySaveFailed") });
       }
     }),
   }),
@@ -150,7 +154,7 @@ export const appRouter = router({
         });
       } catch (error) {
         console.error("[Analytics] Failed to load lookup dashboard:", error);
-        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to load lookup analytics" });
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.analyticsUnavailable") });
       }
     }),
   }),
@@ -183,7 +187,7 @@ export const appRouter = router({
           return { success: true } as const;
         } catch (error) {
           console.error("[Feedback] Failed to store translation feedback:", error);
-          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to save feedback" });
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackSaveFailed") });
         }
       }),
     list: adminProcedure.query(async () => {
@@ -191,7 +195,7 @@ export const appRouter = router({
         return await listTranslationFeedback();
       } catch (error) {
         console.error("[Feedback] Failed to list translation feedback:", error);
-        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to load feedback" });
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackUnavailable") });
       }
     }),
     updateStatus: adminProcedure
@@ -199,12 +203,12 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         try {
           const updated = await updateTranslationFeedbackStatus(input.id, input.status);
-          if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: "Feedback not found" });
+          if (!updated) throw new TRPCError({ code: "NOT_FOUND", message: errorMessage("admin.feedbackNotFound") });
           return { success: true } as const;
         } catch (error) {
           if (error instanceof TRPCError) throw error;
           console.error("[Feedback] Failed to update feedback status:", error);
-          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Unable to update feedback" });
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackUpdateFailed") });
         }
       }),
   }),

@@ -1,0 +1,1349 @@
+{
+  "overrides": [],
+  "identities": [
+    {
+      "entryId": "constellation.curated.entry00001",
+      "identities": [
+        "hsr:1513"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00002",
+      "identities": [
+        "hsr:1503"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00003",
+      "identities": [
+        "zzz:1031"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00004",
+      "identities": [
+        "zzz:1521"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00005",
+      "identities": [
+        "zzz:1611"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00006",
+      "identities": [
+        "hsr:1310"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00007",
+      "identities": [
+        "hsr:1402"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00008",
+      "identities": [
+        "hsr:1405"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00009",
+      "identities": [
+        "hsr:1407"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00010",
+      "identities": [
+        "hsr:1309"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00011",
+      "identities": [
+        "hsr:1303"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00012",
+      "identities": [
+        "hsr:1220"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00013",
+      "identities": [
+        "genshin:楓原万葉"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00014",
+      "identities": [
+        "genshin:ベネット"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00015",
+      "identities": [
+        "genshin:フリーナ"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00016",
+      "identities": [
+        "genshin:10000103"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00017",
+      "identities": [
+        "genshin:10000096"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00018",
+      "identities": [
+        "genshin:10000087"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00019",
+      "identities": [
+        "genshin:10000060"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00020",
+      "identities": [
+        "zzz:1091"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00021",
+      "identities": [
+        "zzz:1411"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00022",
+      "identities": [
+        "zzz:1221"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00023",
+      "identities": [
+        "zzz:1311"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00024",
+      "identities": [
+        "zzz:1161"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00025",
+      "identities": [
+        "zzz:1581"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00026",
+      "identities": [
+        "hsr:1313"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00027",
+      "identities": [
+        "hsr:1315"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00028",
+      "identities": [
+        "hsr:1308"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00029",
+      "identities": [
+        "hsr:1222"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00030",
+      "identities": [
+        "genshin:10000052"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00031",
+      "identities": [
+        "genshin:10000073"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00032",
+      "identities": [
+        "genshin:10000030"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00033",
+      "identities": [
+        "zzz:1331"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00034",
+      "identities": [
+        "zzz:1261"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00035",
+      "identities": [
+        "zzz:1191"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00036",
+      "identities": [
+        "hsr:1304"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00037",
+      "identities": [
+        "hsr:1112"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00038",
+      "identities": [
+        "hsr:1306"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00039",
+      "identities": [
+        "hsr:1213"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00040",
+      "identities": [
+        "genshin:10000078"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00041",
+      "identities": [
+        "genshin:10000046"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00042",
+      "identities": [
+        "genshin:10000065"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00043",
+      "identities": [
+        "zzz:1271"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00044",
+      "identities": [
+        "zzz:1281"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00045",
+      "identities": [
+        "zzz:1131"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00046",
+      "identities": [
+        "hsr:1207"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00047",
+      "identities": [
+        "hsr:1001"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00048",
+      "identities": [
+        "hsr:1413"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00049",
+      "identities": [
+        "hsr:1202"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00050",
+      "identities": [
+        "hsr:1211"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00051",
+      "identities": [
+        "hsr:1505"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00052",
+      "identities": [
+        "hsr:1209"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00053",
+      "identities": [
+        "hsr:1003"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00054",
+      "identities": [
+        "genshin:10000016"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00055",
+      "identities": [
+        "genshin:10000123"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00056",
+      "identities": [
+        "genshin:10000050"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00057",
+      "identities": [
+        "genshin:10000068"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00058",
+      "identities": [
+        "genshin:10000091"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00059",
+      "identities": [
+        "genshin:10000070"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00060",
+      "identities": [
+        "genshin:10000122"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00061",
+      "identities": [
+        "genshin:10000034"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00062",
+      "identities": [
+        "zzz:1021"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00063",
+      "identities": [
+        "zzz:1471"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00064",
+      "identities": [
+        "zzz:1431"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00065",
+      "identities": [
+        "zzz:1421"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00066",
+      "identities": [
+        "hsr:1305"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00067",
+      "identities": [
+        "hsr:1005"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00068",
+      "identities": [
+        "hsr:1307"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00069",
+      "identities": [
+        "hsr:1212"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00070",
+      "identities": [
+        "genshin:10000025"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00071",
+      "identities": [
+        "genshin:10000023"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00072",
+      "identities": [
+        "genshin:10000031"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00073",
+      "identities": [
+        "zzz:1181"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00074",
+      "identities": [
+        "zzz:1171"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00075",
+      "identities": [
+        "zzz:1151"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00076",
+      "identities": [
+        "hsr:1101"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00077",
+      "identities": [
+        "hsr:1006"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00078",
+      "identities": [
+        "hsr:1208"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00079",
+      "identities": [
+        "hsr:1203"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00080",
+      "identities": [
+        "genshin:10000082"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00081",
+      "identities": [
+        "genshin:10000058"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00082",
+      "identities": [
+        "genshin:10000049"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00083",
+      "identities": [
+        "zzz:1071"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00084",
+      "identities": [
+        "zzz:1211"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00085",
+      "identities": [
+        "zzz:1251"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00086",
+      "identities": [
+        "hsr:1015"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00087",
+      "identities": [
+        "hsr:1008"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00088",
+      "identities": [
+        "hsr:1009"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00089",
+      "identities": [
+        "hsr:1302"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00090",
+      "identities": [
+        "genshin:10000121"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00091",
+      "identities": [
+        "genshin:10000038"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00092",
+      "identities": [
+        "zzz:1041"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00093",
+      "identities": [
+        "zzz:1461"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00094",
+      "identities": [
+        "zzz:1361"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00095",
+      "identities": [
+        "hsr:1004"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00096",
+      "identities": [
+        "hsr:1301"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00097",
+      "identities": [
+        "hsr:1415"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00098",
+      "identities": [
+        "hsr:1509"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00099",
+      "identities": [
+        "genshin:10000021"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00100",
+      "identities": [
+        "genshin:10000110"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00101",
+      "identities": [
+        "genshin:10000116"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00102",
+      "identities": [
+        "zzz:1381"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00103",
+      "identities": [
+        "zzz:1501"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00104",
+      "identities": [
+        "zzz:1401"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00105",
+      "identities": [
+        "hsr:1107"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00106",
+      "identities": [
+        "hsr:1412"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00107",
+      "identities": [
+        "hsr:1406"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00108",
+      "identities": [
+        "hsr:1108"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00109",
+      "identities": [
+        "genshin:10000113"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00110",
+      "identities": [
+        "genshin:10000111"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00111",
+      "identities": [
+        "genshin:10000022"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00112",
+      "identities": [
+        "zzz:1111"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00113",
+      "identities": [
+        "zzz:1011"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00114",
+      "identities": [
+        "zzz:1321"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00115",
+      "identities": [
+        "hsr:1014"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00116",
+      "identities": [
+        "hsr:1410"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00117",
+      "identities": [
+        "hsr:1314"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00118",
+      "identities": [
+        "hsr:1104"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00119",
+      "identities": [
+        "genshin:10000112"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00120",
+      "identities": [
+        "genshin:10000099"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00121",
+      "identities": [
+        "zzz:1051"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00122",
+      "identities": [
+        "zzz:1561"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00123",
+      "identities": [
+        "genshin:10000051"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00124",
+      "identities": [
+        "zzz:1301"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00125",
+      "identities": [
+        "hsr:1103"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00126",
+      "identities": [
+        "hsr:1102"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00127",
+      "identities": [
+        "hsr:1321"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00128",
+      "identities": [
+        "hsr:1403"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00129",
+      "identities": [
+        "hsr:1105"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00130",
+      "identities": [
+        "hsr:1409"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00131",
+      "identities": [
+        "hsr:1408"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00132",
+      "identities": [
+        "hsr:1217"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00133",
+      "identities": [
+        "genshin:10000105"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00134",
+      "identities": [
+        "genshin:10000081"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00135",
+      "identities": [
+        "genshin:10000015"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00136",
+      "identities": [
+        "genshin:10000100"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00137",
+      "identities": [
+        "genshin:10000101"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00138",
+      "identities": [
+        "genshin:10000072"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00139",
+      "identities": [
+        "zzz:1061"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00140",
+      "identities": [
+        "zzz:1101"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00141",
+      "identities": [
+        "zzz:1591"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00142",
+      "identities": [
+        "zzz:1531"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00143",
+      "identities": [
+        "zzz:1481"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00144",
+      "identities": [
+        "hsr:1109"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00145",
+      "identities": [
+        "hsr:1106"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00146",
+      "identities": [
+        "hsr:1013"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00147",
+      "identities": [
+        "hsr:1401"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00148",
+      "identities": [
+        "hsr:1312"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00149",
+      "identities": [
+        "hsr:1404"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00150",
+      "identities": [
+        "hsr:1223"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00151",
+      "identities": [
+        "hsr:1110"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00152",
+      "identities": [
+        "genshin:10000029"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00153",
+      "identities": [
+        "genshin:10000098"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00154",
+      "identities": [
+        "genshin:10000067"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00155",
+      "identities": [
+        "genshin:10000055"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00156",
+      "identities": [
+        "genshin:10000095"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00157",
+      "identities": [
+        "zzz:1571"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00158",
+      "identities": [
+        "zzz:1291"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00159",
+      "identities": [
+        "zzz:1081"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00160",
+      "identities": [
+        "zzz:1351"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00161",
+      "identities": [
+        "hsr:1111"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00162",
+      "identities": [
+        "hsr:1221"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00163",
+      "identities": [
+        "hsr:1508"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00164",
+      "identities": [
+        "hsr:1501"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00165",
+      "identities": [
+        "hsr:1215"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00166",
+      "identities": [
+        "hsr:1225"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00167",
+      "identities": [
+        "hsr:1204"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00168",
+      "identities": [
+        "hsr:1210"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00169",
+      "identities": [
+        "genshin:10000107"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00170",
+      "identities": [
+        "genshin:10000088"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00171",
+      "identities": [
+        "genshin:10000090"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00172",
+      "identities": [
+        "genshin:10000003"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00173",
+      "identities": [
+        "genshin:10000114"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00174",
+      "identities": [
+        "genshin:10000043"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00175",
+      "identities": [
+        "zzz:1541"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00176",
+      "identities": [
+        "zzz:1121"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00177",
+      "identities": [
+        "zzz:1141"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00178",
+      "identities": [
+        "zzz:1451"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00179",
+      "identities": [
+        "zzz:1371"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00180",
+      "identities": [
+        "zzz:1391"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00181",
+      "identities": [
+        "hsr:1205"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00182",
+      "identities": [
+        "hsr:1201"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00183",
+      "identities": [
+        "hsr:1214"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00184",
+      "identities": [
+        "hsr:1206"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00185",
+      "identities": [
+        "hsr:1002"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00186",
+      "identities": [
+        "hsr:1414"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00187",
+      "identities": [
+        "genshin:10000097"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00188",
+      "identities": [
+        "genshin:10000071"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00189",
+      "identities": [
+        "genshin:10000115"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00190",
+      "identities": [
+        "genshin:10000033"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00191",
+      "identities": [
+        "genshin:10000104"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00192",
+      "identities": [
+        "genshin:10000039"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00193",
+      "identities": [
+        "genshin:10000079"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00194",
+      "identities": [
+        "genshin:10000069"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00195",
+      "identities": [
+        "zzz:1441"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00196",
+      "identities": [
+        "zzz:1241"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00197",
+      "identities": [
+        "zzz:1341"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00198",
+      "identities": [
+        "zzz:1491"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00199",
+      "identities": [
+        "zzz:1201"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00200",
+      "identities": [
+        "zzz:1511"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00201",
+      "identities": [
+        "hsr:1507"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00202",
+      "identities": [
+        "hsr:1510"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00203",
+      "identities": [
+        "hsr:1512"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00204",
+      "identities": [
+        "hsr:1504"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00205",
+      "identities": [
+        "hsr:1317"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00206",
+      "identities": [
+        "hsr:1218"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00207",
+      "identities": [
+        "hsr:1502"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00208",
+      "identities": [
+        "genshin:10000014"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00209",
+      "identities": [
+        "genshin:10000076"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00210",
+      "identities": [
+        "genshin:10000085"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00211",
+      "identities": [
+        "genshin:10000080"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00212",
+      "identities": [
+        "genshin:10000041"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00213",
+      "identities": [
+        "genshin:10000077"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00214",
+      "identities": [
+        "genshin:10000119"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00215",
+      "identities": [
+        "genshin:10000006"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00216",
+      "identities": [
+        "genshin:10000084"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00217",
+      "identities": [
+        "genshin:10000083"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00218",
+      "identities": [
+        "genshin:10000074"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00219",
+      "identities": [
+        "genshin:10000106"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00220",
+      "identities": [
+        "genshin:10000102"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00221",
+      "identities": [
+        "genshin:10000120"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00222",
+      "identities": [
+        "genshin:10000124"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00223",
+      "identities": [
+        "genshin:10000086"
+      ]
+    },
+    {
+      "entryId": "constellation.curated.entry00224",
+      "identities": [
+        "genshin:10000125"
+      ]
+    }
+  ]
+}

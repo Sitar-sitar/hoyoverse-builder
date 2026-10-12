@@ -13,6 +13,11 @@ vi.mock("@/lib/trpc", () => ({ trpc: {
   useUtils: () => ({ languages: { settings: { setData: mocks.setData, invalidate: mocks.invalidate }, adminSettings: { setData: mocks.setData } } }),
 } }));
 import LanguageSettingsAdmin from "./LanguageSettingsAdmin";
+import { CONTENT_MANIFEST } from "@/content/manifest";
+const originalReadyLanguages = CONTENT_MANIFEST.readyLanguages;
+function allowFutureLanguageFixture() {
+  Object.assign(CONTENT_MANIFEST, { readyLanguages: ["ja", "en"] });
+}
 describe("言語管理画面", () => {
   beforeEach(() => {
     mocks.auth = { user: { role: "admin" }, loading: false, isAuthenticated: true };
@@ -21,8 +26,21 @@ describe("言語管理画面", () => {
     mocks.setData.mockReset();
     mocks.invalidate.mockReset().mockResolvedValue(undefined);
   });
-  afterEach(cleanup);
-  it("日本語は固定し、選択した翻訳言語を保存する", async () => {
+  afterEach(() => { cleanup(); Object.assign(CONTENT_MANIFEST, { readyLanguages: originalReadyLanguages }); });
+  it("準備段階では日本語のみ選択済みで英中と保存を無効にする", () => {
+    render(<LanguageSettingsAdmin />);
+    for (const name of [/日本語/, "English", "简体中文"]) {
+      const input = screen.getByRole("checkbox", { name }) as HTMLInputElement;
+      expect(input.disabled).toBe(true);
+      const checked = input.checked;
+      input.click();
+      expect(input.checked).toBe(checked);
+    }
+    expect((screen.getByRole("button", { name: "保存する" }) as HTMLButtonElement).disabled).toBe(true);
+    expect(mocks.save).not.toHaveBeenCalled();
+  });
+  it("将来の公開可能言語fixtureでは日本語は固定し選択した言語を保存する", async () => {
+    allowFutureLanguageFixture();
     render(<LanguageSettingsAdmin />);
     expect((screen.getByRole("checkbox", { name: /日本語/ }) as HTMLInputElement).disabled).toBe(true);
     fireEvent.click(screen.getByRole("checkbox", { name: "English" }));
@@ -43,6 +61,7 @@ describe("言語管理画面", () => {
     expect(screen.getByRole("alert")).toBeTruthy();
   });
   it("保存失敗と保存後の取得失敗を区別する", async () => {
+    allowFutureLanguageFixture();
     mocks.save.mockRejectedValueOnce(new Error("offline"));
     render(<LanguageSettingsAdmin />);
     fireEvent.click(screen.getByRole("checkbox", { name: "English" }));

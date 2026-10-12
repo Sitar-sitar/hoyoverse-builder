@@ -1,5 +1,6 @@
 import { CHARACTER_GUIDE_CATALOG } from "../characterGuideCatalog";
-import { legacyOptionsFor } from "./legacyCatalog";
+import { teams as legacyRecords } from "../../content/teamLegacy";
+import { projectTeams } from "../content/teams";
 import { SHARED_TEAMS } from "./sharedTeams";
 import type { PartyGameId, PartyRecommendation, Team } from "./types";
 
@@ -32,13 +33,7 @@ export function toLegacyTeam(game: PartyGameId, owner: string, option: PartyReco
 }
 
 export function legacyTeams(): Team[] {
-  const teams: Team[] = [];
-  for (const game of PARTY_GAMES) {
-    for (const owner of CHARACTER_GUIDE_CATALOG[game] as readonly string[]) {
-      for (const option of legacyOptionsFor(game, owner) ?? []) teams.push(toLegacyTeam(game, owner, option));
-    }
-  }
-  return teams;
+  return projectTeams(legacyRecords);
 }
 
 /** 先に出たIDを採用し、後の重複は duplicateIds へ入れる（起動時に例外を投げない。D8）。 */

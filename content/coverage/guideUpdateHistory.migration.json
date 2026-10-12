@@ -1,0 +1,1627 @@
+[
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00001",
+    "field": "title",
+    "originalStart": 752
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00002",
+    "field": "summary",
+    "originalStart": 781
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00003",
+    "field": "changes",
+    "originalStart": 841
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00004",
+    "field": "changes",
+    "originalStart": 859
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00005",
+    "field": "changes",
+    "originalStart": 882
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00006",
+    "field": "rationale",
+    "originalStart": 928
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00007",
+    "field": "title",
+    "originalStart": 1065
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00008",
+    "field": "summary",
+    "originalStart": 1106
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00009",
+    "field": "changes",
+    "originalStart": 1186
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00010",
+    "field": "changes",
+    "originalStart": 1202
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00011",
+    "field": "changes",
+    "originalStart": 1223
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00012",
+    "field": "rationale",
+    "originalStart": 1256
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00013",
+    "field": "title",
+    "originalStart": 1400
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00014",
+    "field": "summary",
+    "originalStart": 1441
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00015",
+    "field": "changes",
+    "originalStart": 1517
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00016",
+    "field": "changes",
+    "originalStart": 1542
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00017",
+    "field": "changes",
+    "originalStart": 1561
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00018",
+    "field": "changes",
+    "originalStart": 1578
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00019",
+    "field": "rationale",
+    "originalStart": 1623
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00020",
+    "field": "title",
+    "originalStart": 1746
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00021",
+    "field": "summary",
+    "originalStart": 1780
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00022",
+    "field": "changes",
+    "originalStart": 1845
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00023",
+    "field": "changes",
+    "originalStart": 1866
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00024",
+    "field": "rationale",
+    "originalStart": 1913
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00025",
+    "field": "title",
+    "originalStart": 2075
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00026",
+    "field": "summary",
+    "originalStart": 2109
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00027",
+    "field": "changes",
+    "originalStart": 2176
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00028",
+    "field": "changes",
+    "originalStart": 2202
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00029",
+    "field": "rationale",
+    "originalStart": 2242
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00030",
+    "field": "title",
+    "originalStart": 2384
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00031",
+    "field": "summary",
+    "originalStart": 2420
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00032",
+    "field": "changes",
+    "originalStart": 2487
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00033",
+    "field": "changes",
+    "originalStart": 2510
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00034",
+    "field": "rationale",
+    "originalStart": 2548
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00035",
+    "field": "title",
+    "originalStart": 2709
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00036",
+    "field": "summary",
+    "originalStart": 2743
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00037",
+    "field": "changes",
+    "originalStart": 2814
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00038",
+    "field": "changes",
+    "originalStart": 2835
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00039",
+    "field": "rationale",
+    "originalStart": 2881
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00040",
+    "field": "title",
+    "originalStart": 3061
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00041",
+    "field": "summary",
+    "originalStart": 3090
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00042",
+    "field": "changes",
+    "originalStart": 3156
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00043",
+    "field": "changes",
+    "originalStart": 3181
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00044",
+    "field": "rationale",
+    "originalStart": 3216
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00045",
+    "field": "title",
+    "originalStart": 3380
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00046",
+    "field": "summary",
+    "originalStart": 3415
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00047",
+    "field": "changes",
+    "originalStart": 3479
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00048",
+    "field": "changes",
+    "originalStart": 3509
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00049",
+    "field": "rationale",
+    "originalStart": 3547
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00050",
+    "field": "title",
+    "originalStart": 3707
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00051",
+    "field": "summary",
+    "originalStart": 3742
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00052",
+    "field": "changes",
+    "originalStart": 3809
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00053",
+    "field": "changes",
+    "originalStart": 3839
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00054",
+    "field": "changes",
+    "originalStart": 3866
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00055",
+    "field": "rationale",
+    "originalStart": 3906
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00056",
+    "field": "title",
+    "originalStart": 4063
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00057",
+    "field": "summary",
+    "originalStart": 4101
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00058",
+    "field": "changes",
+    "originalStart": 4173
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00059",
+    "field": "changes",
+    "originalStart": 4191
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00060",
+    "field": "changes",
+    "originalStart": 4223
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00061",
+    "field": "rationale",
+    "originalStart": 4265
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00062",
+    "field": "title",
+    "originalStart": 4422
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00063",
+    "field": "summary",
+    "originalStart": 4464
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00064",
+    "field": "changes",
+    "originalStart": 4541
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00065",
+    "field": "changes",
+    "originalStart": 4579
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00066",
+    "field": "changes",
+    "originalStart": 4612
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00067",
+    "field": "changes",
+    "originalStart": 4642
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00068",
+    "field": "rationale",
+    "originalStart": 4689
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00069",
+    "field": "title",
+    "originalStart": 4864
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00070",
+    "field": "summary",
+    "originalStart": 4918
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00071",
+    "field": "changes",
+    "originalStart": 5033
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00072",
+    "field": "changes",
+    "originalStart": 5079
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00073",
+    "field": "changes",
+    "originalStart": 5134
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00074",
+    "field": "rationale",
+    "originalStart": 5209
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00075",
+    "field": "title",
+    "originalStart": 5355
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00076",
+    "field": "summary",
+    "originalStart": 5397
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00077",
+    "field": "changes",
+    "originalStart": 5467
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00078",
+    "field": "changes",
+    "originalStart": 5491
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00079",
+    "field": "changes",
+    "originalStart": 5512
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00080",
+    "field": "changes",
+    "originalStart": 5536
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00081",
+    "field": "rationale",
+    "originalStart": 5573
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00082",
+    "field": "title",
+    "originalStart": 5726
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00083",
+    "field": "summary",
+    "originalStart": 5777
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00084",
+    "field": "changes",
+    "originalStart": 5876
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00085",
+    "field": "changes",
+    "originalStart": 5909
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00086",
+    "field": "changes",
+    "originalStart": 5943
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00087",
+    "field": "changes",
+    "originalStart": 5976
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00088",
+    "field": "rationale",
+    "originalStart": 6022
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00089",
+    "field": "title",
+    "originalStart": 6184
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00090",
+    "field": "summary",
+    "originalStart": 6215
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00091",
+    "field": "changes",
+    "originalStart": 6271
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00092",
+    "field": "changes",
+    "originalStart": 6293
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00093",
+    "field": "changes",
+    "originalStart": 6327
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00094",
+    "field": "rationale",
+    "originalStart": 6377
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00095",
+    "field": "title",
+    "originalStart": 6527
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00096",
+    "field": "summary",
+    "originalStart": 6566
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00097",
+    "field": "changes",
+    "originalStart": 6626
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00098",
+    "field": "changes",
+    "originalStart": 6659
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00099",
+    "field": "changes",
+    "originalStart": 6711
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00100",
+    "field": "rationale",
+    "originalStart": 6758
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00101",
+    "field": "title",
+    "originalStart": 7035
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00102",
+    "field": "summary",
+    "originalStart": 7062
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00103",
+    "field": "changes",
+    "originalStart": 7119
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00104",
+    "field": "changes",
+    "originalStart": 7155
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00105",
+    "field": "rationale",
+    "originalStart": 7199
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00106",
+    "field": "title",
+    "originalStart": 7353
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00107",
+    "field": "summary",
+    "originalStart": 7380
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00108",
+    "field": "changes",
+    "originalStart": 7461
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00109",
+    "field": "changes",
+    "originalStart": 7497
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00110",
+    "field": "rationale",
+    "originalStart": 7540
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00111",
+    "field": "title",
+    "originalStart": 7693
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00112",
+    "field": "summary",
+    "originalStart": 7720
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00113",
+    "field": "changes",
+    "originalStart": 7761
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00114",
+    "field": "changes",
+    "originalStart": 7787
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00115",
+    "field": "rationale",
+    "originalStart": 7817
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00116",
+    "field": "title",
+    "originalStart": 7943
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00117",
+    "field": "summary",
+    "originalStart": 7973
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00118",
+    "field": "changes",
+    "originalStart": 8017
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00119",
+    "field": "changes",
+    "originalStart": 8039
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00120",
+    "field": "rationale",
+    "originalStart": 8072
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00121",
+    "field": "title",
+    "originalStart": 8217
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00122",
+    "field": "summary",
+    "originalStart": 8244
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00123",
+    "field": "changes",
+    "originalStart": 8328
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00124",
+    "field": "changes",
+    "originalStart": 8360
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00125",
+    "field": "rationale",
+    "originalStart": 8408
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00126",
+    "field": "title",
+    "originalStart": 8567
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00127",
+    "field": "summary",
+    "originalStart": 8596
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00128",
+    "field": "changes",
+    "originalStart": 8636
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00129",
+    "field": "changes",
+    "originalStart": 8654
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00130",
+    "field": "rationale",
+    "originalStart": 8683
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00131",
+    "field": "title",
+    "originalStart": 8831
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00132",
+    "field": "summary",
+    "originalStart": 8859
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00133",
+    "field": "changes",
+    "originalStart": 8911
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00134",
+    "field": "changes",
+    "originalStart": 8946
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00135",
+    "field": "changes",
+    "originalStart": 8980
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00136",
+    "field": "rationale",
+    "originalStart": 9023
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00137",
+    "field": "title",
+    "originalStart": 9167
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00138",
+    "field": "summary",
+    "originalStart": 9195
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00139",
+    "field": "changes",
+    "originalStart": 9262
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00140",
+    "field": "changes",
+    "originalStart": 9290
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00141",
+    "field": "changes",
+    "originalStart": 9324
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00142",
+    "field": "rationale",
+    "originalStart": 9366
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00143",
+    "field": "title",
+    "originalStart": 9508
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00144",
+    "field": "summary",
+    "originalStart": 9532
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00145",
+    "field": "changes",
+    "originalStart": 9576
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00146",
+    "field": "changes",
+    "originalStart": 9593
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00147",
+    "field": "rationale",
+    "originalStart": 9626
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00148",
+    "field": "title",
+    "originalStart": 10000
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00149",
+    "field": "summary",
+    "originalStart": 10050
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00150",
+    "field": "changes",
+    "originalStart": 10128
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00151",
+    "field": "changes",
+    "originalStart": 10157
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00152",
+    "field": "changes",
+    "originalStart": 10180
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00153",
+    "field": "changes",
+    "originalStart": 10209
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00154",
+    "field": "rationale",
+    "originalStart": 10248
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00155",
+    "field": "title",
+    "originalStart": 10366
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00156",
+    "field": "summary",
+    "originalStart": 10416
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00157",
+    "field": "changes",
+    "originalStart": 10497
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00158",
+    "field": "changes",
+    "originalStart": 10519
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00159",
+    "field": "changes",
+    "originalStart": 10534
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00160",
+    "field": "changes",
+    "originalStart": 10556
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00161",
+    "field": "rationale",
+    "originalStart": 10592
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00162",
+    "field": "title",
+    "originalStart": 10710
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00163",
+    "field": "summary",
+    "originalStart": 10760
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00164",
+    "field": "changes",
+    "originalStart": 10835
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00165",
+    "field": "changes",
+    "originalStart": 10857
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00166",
+    "field": "changes",
+    "originalStart": 10877
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00167",
+    "field": "changes",
+    "originalStart": 10902
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00168",
+    "field": "rationale",
+    "originalStart": 10943
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00169",
+    "field": "title",
+    "originalStart": 11060
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00170",
+    "field": "summary",
+    "originalStart": 11110
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00171",
+    "field": "changes",
+    "originalStart": 11185
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00172",
+    "field": "changes",
+    "originalStart": 11207
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00173",
+    "field": "changes",
+    "originalStart": 11227
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00174",
+    "field": "changes",
+    "originalStart": 11252
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00175",
+    "field": "rationale",
+    "originalStart": 11293
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00176",
+    "field": "title",
+    "originalStart": 11415
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00177",
+    "field": "summary",
+    "originalStart": 11465
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00178",
+    "field": "changes",
+    "originalStart": 11540
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00179",
+    "field": "changes",
+    "originalStart": 11562
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00180",
+    "field": "changes",
+    "originalStart": 11582
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00181",
+    "field": "changes",
+    "originalStart": 11607
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00182",
+    "field": "rationale",
+    "originalStart": 11648
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00183",
+    "field": "title",
+    "originalStart": 11770
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00184",
+    "field": "summary",
+    "originalStart": 11820
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00185",
+    "field": "changes",
+    "originalStart": 11895
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00186",
+    "field": "changes",
+    "originalStart": 11917
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00187",
+    "field": "changes",
+    "originalStart": 11937
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00188",
+    "field": "changes",
+    "originalStart": 11962
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00189",
+    "field": "changes",
+    "originalStart": 11986
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00190",
+    "field": "rationale",
+    "originalStart": 12022
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00191",
+    "field": "title",
+    "originalStart": 12144
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00192",
+    "field": "summary",
+    "originalStart": 12194
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00193",
+    "field": "changes",
+    "originalStart": 12305
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00194",
+    "field": "changes",
+    "originalStart": 12327
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00195",
+    "field": "changes",
+    "originalStart": 12361
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00196",
+    "field": "changes",
+    "originalStart": 12386
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00197",
+    "field": "changes",
+    "originalStart": 12410
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00198",
+    "field": "rationale",
+    "originalStart": 12446
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00199",
+    "field": "title",
+    "originalStart": 12568
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00200",
+    "field": "summary",
+    "originalStart": 12618
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00201",
+    "field": "changes",
+    "originalStart": 12693
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00202",
+    "field": "changes",
+    "originalStart": 12715
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00203",
+    "field": "changes",
+    "originalStart": 12735
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00204",
+    "field": "changes",
+    "originalStart": 12760
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00205",
+    "field": "changes",
+    "originalStart": 12784
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00206",
+    "field": "rationale",
+    "originalStart": 12820
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00207",
+    "field": "title",
+    "originalStart": 12942
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00208",
+    "field": "summary",
+    "originalStart": 12992
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00209",
+    "field": "changes",
+    "originalStart": 13067
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00210",
+    "field": "changes",
+    "originalStart": 13089
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00211",
+    "field": "changes",
+    "originalStart": 13109
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00212",
+    "field": "changes",
+    "originalStart": 13134
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00213",
+    "field": "changes",
+    "originalStart": 13158
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00214",
+    "field": "rationale",
+    "originalStart": 13194
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00215",
+    "field": "title",
+    "originalStart": 13317
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00216",
+    "field": "summary",
+    "originalStart": 13368
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00217",
+    "field": "changes",
+    "originalStart": 13443
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00218",
+    "field": "changes",
+    "originalStart": 13465
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00219",
+    "field": "changes",
+    "originalStart": 13485
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00220",
+    "field": "changes",
+    "originalStart": 13510
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00221",
+    "field": "changes",
+    "originalStart": 13534
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00222",
+    "field": "rationale",
+    "originalStart": 13570
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00223",
+    "field": "title",
+    "originalStart": 13693
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00224",
+    "field": "summary",
+    "originalStart": 13744
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00225",
+    "field": "changes",
+    "originalStart": 13851
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00226",
+    "field": "changes",
+    "originalStart": 13873
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00227",
+    "field": "changes",
+    "originalStart": 13915
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00228",
+    "field": "changes",
+    "originalStart": 13940
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00229",
+    "field": "changes",
+    "originalStart": 13964
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00230",
+    "field": "changes",
+    "originalStart": 13983
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00231",
+    "field": "rationale",
+    "originalStart": 14025
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00232",
+    "field": "title",
+    "originalStart": 14159
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00233",
+    "field": "summary",
+    "originalStart": 14210
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00234",
+    "field": "changes",
+    "originalStart": 14348
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00235",
+    "field": "changes",
+    "originalStart": 14370
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00236",
+    "field": "changes",
+    "originalStart": 14407
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00237",
+    "field": "changes",
+    "originalStart": 14444
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00238",
+    "field": "changes",
+    "originalStart": 14469
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00239",
+    "field": "changes",
+    "originalStart": 14493
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00240",
+    "field": "rationale",
+    "originalStart": 14533
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00241",
+    "field": "title",
+    "originalStart": 14662
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00242",
+    "field": "summary",
+    "originalStart": 14713
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00243",
+    "field": "changes",
+    "originalStart": 14833
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00244",
+    "field": "changes",
+    "originalStart": 14855
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00245",
+    "field": "changes",
+    "originalStart": 14886
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00246",
+    "field": "changes",
+    "originalStart": 14921
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00247",
+    "field": "changes",
+    "originalStart": 14946
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00248",
+    "field": "changes",
+    "originalStart": 14970
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00249",
+    "field": "rationale",
+    "originalStart": 15010
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00250",
+    "field": "title",
+    "originalStart": 15141
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00251",
+    "field": "summary",
+    "originalStart": 15192
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00252",
+    "field": "changes",
+    "originalStart": 15318
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00253",
+    "field": "changes",
+    "originalStart": 15340
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00254",
+    "field": "changes",
+    "originalStart": 15371
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00255",
+    "field": "changes",
+    "originalStart": 15405
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00256",
+    "field": "changes",
+    "originalStart": 15430
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00257",
+    "field": "changes",
+    "originalStart": 15454
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00258",
+    "field": "rationale",
+    "originalStart": 15514
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00259",
+    "field": "title",
+    "originalStart": 15649
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00260",
+    "field": "summary",
+    "originalStart": 15700
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00261",
+    "field": "changes",
+    "originalStart": 15786
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00262",
+    "field": "changes",
+    "originalStart": 15817
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00263",
+    "field": "changes",
+    "originalStart": 15841
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00264",
+    "field": "changes",
+    "originalStart": 15870
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00265",
+    "field": "changes",
+    "originalStart": 15903
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00266",
+    "field": "rationale",
+    "originalStart": 15946
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00267",
+    "field": "title",
+    "originalStart": 16067
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00268",
+    "field": "summary",
+    "originalStart": 16118
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00269",
+    "field": "changes",
+    "originalStart": 16256
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00270",
+    "field": "changes",
+    "originalStart": 16278
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00271",
+    "field": "changes",
+    "originalStart": 16309
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00272",
+    "field": "changes",
+    "originalStart": 16340
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00273",
+    "field": "changes",
+    "originalStart": 16368
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00274",
+    "field": "changes",
+    "originalStart": 16392
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00275",
+    "field": "rationale",
+    "originalStart": 16446
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00276",
+    "field": "title",
+    "originalStart": 16571
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00277",
+    "field": "summary",
+    "originalStart": 16625
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00278",
+    "field": "changes",
+    "originalStart": 16734
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00279",
+    "field": "changes",
+    "originalStart": 16756
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00280",
+    "field": "changes",
+    "originalStart": 16785
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00281",
+    "field": "changes",
+    "originalStart": 16800
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00282",
+    "field": "changes",
+    "originalStart": 16826
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00283",
+    "field": "rationale",
+    "originalStart": 16869
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00284",
+    "field": "title",
+    "originalStart": 16993
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00285",
+    "field": "summary",
+    "originalStart": 17051
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00286",
+    "field": "changes",
+    "originalStart": 17163
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00287",
+    "field": "changes",
+    "originalStart": 17182
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00288",
+    "field": "changes",
+    "originalStart": 17239
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00289",
+    "field": "changes",
+    "originalStart": 17274
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00290",
+    "field": "changes",
+    "originalStart": 17312
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00291",
+    "field": "rationale",
+    "originalStart": 17363
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00292",
+    "field": "title",
+    "originalStart": 17485
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00293",
+    "field": "summary",
+    "originalStart": 17537
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00294",
+    "field": "changes",
+    "originalStart": 17609
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00295",
+    "field": "changes",
+    "originalStart": 17634
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00296",
+    "field": "changes",
+    "originalStart": 17664
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00297",
+    "field": "changes",
+    "originalStart": 17688
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00298",
+    "field": "rationale",
+    "originalStart": 17725
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00299",
+    "field": "title",
+    "originalStart": 17848
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00300",
+    "field": "summary",
+    "originalStart": 17900
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00301",
+    "field": "changes",
+    "originalStart": 18010
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00302",
+    "field": "changes",
+    "originalStart": 18029
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00303",
+    "field": "changes",
+    "originalStart": 18065
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00304",
+    "field": "changes",
+    "originalStart": 18100
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00305",
+    "field": "changes",
+    "originalStart": 18133
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00306",
+    "field": "rationale",
+    "originalStart": 18194
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00307",
+    "field": "title",
+    "originalStart": 18311
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00308",
+    "field": "summary",
+    "originalStart": 18363
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00309",
+    "field": "changes",
+    "originalStart": 18433
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00310",
+    "field": "changes",
+    "originalStart": 18448
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00311",
+    "field": "changes",
+    "originalStart": 18470
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00312",
+    "field": "changes",
+    "originalStart": 18494
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00313",
+    "field": "changes",
+    "originalStart": 18510
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00314",
+    "field": "rationale",
+    "originalStart": 18553
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00315",
+    "field": "title",
+    "originalStart": 18676
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00316",
+    "field": "summary",
+    "originalStart": 18717
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00317",
+    "field": "changes",
+    "originalStart": 18827
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00318",
+    "field": "changes",
+    "originalStart": 18846
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00319",
+    "field": "changes",
+    "originalStart": 18875
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00320",
+    "field": "changes",
+    "originalStart": 18910
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00321",
+    "field": "changes",
+    "originalStart": 18943
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00322",
+    "field": "rationale",
+    "originalStart": 18999
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00323",
+    "field": "title",
+    "originalStart": 20124
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00324",
+    "field": "changes",
+    "originalStart": 20245
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00325",
+    "field": "rationale",
+    "originalStart": 20295
+  }
+]

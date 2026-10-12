@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "gameProviders_providerComparison",
+  "inputDigest": "90f61b6a8ae55ec27b01acf0bebacae5fbb28ea0bc22ba551d4400e6d581b4e8",
+  "outputDigest": "d1d271cfbce0404db18b29165606680bf69aa3f04ea4d3e25b6291e58d652e37",
+  "artifactDigests": {
+    "content/ja/guides/gameProviders_providerComparison.ts": "438c72f219c8265e0f8f198b31efb64cdda00d7c8372f4c6424b50d80559c5bf",
+    "content/translations/en/gameProviders_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/gameProviders_providerComparison.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  },
+  "mapping": [
+    {
+      "start": 14422,
+      "end": 14427,
+      "id": "guide.providerComparison.gameProviders.b00001",
+      "oldText": "\"未取得\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00001\")"
+    },
+    {
+      "start": 28348,
+      "end": 28352,
+      "id": "guide.providerComparison.gameProviders.b00002",
+      "oldText": "\"HP\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00002\")"
+    },
+    {
+      "start": 28408,
+      "end": 28413,
+      "id": "guide.providerComparison.gameProviders.b00003",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00003\")"
+    },
+    {
+      "start": 28463,
+      "end": 28468,
+      "id": "guide.providerComparison.gameProviders.b00004",
+      "oldText": "\"防御力\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00004\")"
+    },
+    {
+      "start": 28518,
+      "end": 28523,
+      "id": "guide.providerComparison.gameProviders.b00005",
+      "oldText": "\"衝撃力\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00005\")"
+    },
+    {
+      "start": 28584,
+      "end": 28589,
+      "id": "guide.providerComparison.gameProviders.b00006",
+      "oldText": "\"会心率\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00006\")"
+    },
+    {
+      "start": 28637,
+      "end": 28645,
+      "id": "guide.providerComparison.gameProviders.b00007",
+      "oldText": "\"会心ダメージ\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00007\")"
+    },
+    {
+      "start": 28693,
+      "end": 28699,
+      "id": "guide.providerComparison.gameProviders.b00008",
+      "oldText": "\"異常掌握\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00008\")"
+    },
+    {
+      "start": 28777,
+      "end": 28786,
+      "id": "guide.providerComparison.gameProviders.b00009",
+      "oldText": "\"異常マスタリー\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00009\")"
+    },
+    {
+      "start": 28835,
+      "end": 28840,
+      "id": "guide.providerComparison.gameProviders.b00010",
+      "oldText": "\"貫通率\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00010\")"
+    },
+    {
+      "start": 28888,
+      "end": 28893,
+      "id": "guide.providerComparison.gameProviders.b00011",
+      "oldText": "\"貫通値\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00011\")"
+    },
+    {
+      "start": 28942,
+      "end": 28953,
+      "id": "guide.providerComparison.gameProviders.b00012",
+      "oldText": "\"エネルギー自動回復\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00012\")"
+    },
+    {
+      "start": 29031,
+      "end": 29045,
+      "id": "guide.providerComparison.gameProviders.b00013",
+      "oldText": "\"物理属性ダメージボーナス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00013\")"
+    },
+    {
+      "start": 29093,
+      "end": 29106,
+      "id": "guide.providerComparison.gameProviders.b00014",
+      "oldText": "\"炎属性ダメージボーナス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00014\")"
+    },
+    {
+      "start": 29154,
+      "end": 29167,
+      "id": "guide.providerComparison.gameProviders.b00015",
+      "oldText": "\"氷属性ダメージボーナス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00015\")"
+    },
+    {
+      "start": 29215,
+      "end": 29229,
+      "id": "guide.providerComparison.gameProviders.b00016",
+      "oldText": "\"電気属性ダメージボーナス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00016\")"
+    },
+    {
+      "start": 29277,
+      "end": 29293,
+      "id": "guide.providerComparison.gameProviders.b00017",
+      "oldText": "\"エーテル属性ダメージボーナス\"",
+      "replacement": "_providerComparison.ja(\"guide.providerComparison.gameProviders.b00017\")"
+    }
+  ]
+}

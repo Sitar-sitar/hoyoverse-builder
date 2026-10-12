@@ -163,7 +163,8 @@ describe("表示キー topPortal の分岐", () => {
     renderHome("/?game=hsr&uid=800000001");
     submit();
     expect(portal().dataset.collapsed).toBe("false");
-    expect(screen.getByText("照会できませんでした")).toBeTruthy();
+    expect(screen.getByText("公開プロフィールを取得できませんでした。")).toBeTruthy();
+    expect(screen.queryByText("照会できませんでした")).toBeNull();
     mocks.lookupMode = "empty";
     fireEvent.change(screen.getByRole("textbox"), { target: { value: "800000002" } });
     submit();

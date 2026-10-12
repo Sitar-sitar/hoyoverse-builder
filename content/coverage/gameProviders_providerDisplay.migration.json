@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "migrationId": "gameProviders_providerDisplay",
+  "inputDigest": "1f149a23a7d3d23db0882993a1953edbe76c3b61b12ab05ed0e95e6e0291ff0f",
+  "outputDigest": "90f61b6a8ae55ec27b01acf0bebacae5fbb28ea0bc22ba551d4400e6d581b4e8",
+  "mapping": [
+    {
+      "start": 7997,
+      "end": 8002,
+      "id": "guide.providerDisplay.gameProviders.b00001",
+      "oldText": "\"片手剣\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00001\")"
+    },
+    {
+      "start": 8021,
+      "end": 8026,
+      "id": "guide.providerDisplay.gameProviders.b00002",
+      "oldText": "\"両手剣\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00002\")"
+    },
+    {
+      "start": 8041,
+      "end": 8047,
+      "id": "guide.providerDisplay.gameProviders.b00003",
+      "oldText": "\"長柄武器\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00003\")"
+    },
+    {
+      "start": 8061,
+      "end": 8064,
+      "id": "guide.providerDisplay.gameProviders.b00004",
+      "oldText": "\"弓\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00004\")"
+    },
+    {
+      "start": 8083,
+      "end": 8087,
+      "id": "guide.providerDisplay.gameProviders.b00005",
+      "oldText": "\"法器\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00005\")"
+    },
+    {
+      "start": 8162,
+      "end": 8166,
+      "id": "guide.providerDisplay.gameProviders.b00006",
+      "oldText": "\"HP\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00006\")"
+    },
+    {
+      "start": 8187,
+      "end": 8192,
+      "id": "guide.providerDisplay.gameProviders.b00007",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00007\")"
+    },
+    {
+      "start": 8214,
+      "end": 8219,
+      "id": "guide.providerDisplay.gameProviders.b00008",
+      "oldText": "\"防御力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00008\")"
+    },
+    {
+      "start": 8244,
+      "end": 8249,
+      "id": "guide.providerDisplay.gameProviders.b00009",
+      "oldText": "\"HP%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00009\")"
+    },
+    {
+      "start": 8278,
+      "end": 8284,
+      "id": "guide.providerDisplay.gameProviders.b00010",
+      "oldText": "\"攻撃力%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00010\")"
+    },
+    {
+      "start": 8314,
+      "end": 8320,
+      "id": "guide.providerDisplay.gameProviders.b00011",
+      "oldText": "\"防御力%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00011\")"
+    },
+    {
+      "start": 8346,
+      "end": 8351,
+      "id": "guide.providerDisplay.gameProviders.b00012",
+      "oldText": "\"会心率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00012\")"
+    },
+    {
+      "start": 8379,
+      "end": 8387,
+      "id": "guide.providerDisplay.gameProviders.b00013",
+      "oldText": "\"会心ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00013\")"
+    },
+    {
+      "start": 8419,
+      "end": 8429,
+      "id": "guide.providerDisplay.gameProviders.b00014",
+      "oldText": "\"元素チャージ効率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00014\")"
+    },
+    {
+      "start": 8459,
+      "end": 8465,
+      "id": "guide.providerDisplay.gameProviders.b00015",
+      "oldText": "\"元素熟知\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00015\")"
+    },
+    {
+      "start": 8488,
+      "end": 8497,
+      "id": "guide.providerDisplay.gameProviders.b00016",
+      "oldText": "\"与える治癒効果\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00016\")"
+    },
+    {
+      "start": 8528,
+      "end": 8537,
+      "id": "guide.providerDisplay.gameProviders.b00017",
+      "oldText": "\"炎元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00017\")"
+    },
+    {
+      "start": 8565,
+      "end": 8574,
+      "id": "guide.providerDisplay.gameProviders.b00018",
+      "oldText": "\"雷元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00018\")"
+    },
+    {
+      "start": 8603,
+      "end": 8612,
+      "id": "guide.providerDisplay.gameProviders.b00019",
+      "oldText": "\"水元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00019\")"
+    },
+    {
+      "start": 8640,
+      "end": 8649,
+      "id": "guide.providerDisplay.gameProviders.b00020",
+      "oldText": "\"風元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00020\")"
+    },
+    {
+      "start": 8676,
+      "end": 8685,
+      "id": "guide.providerDisplay.gameProviders.b00021",
+      "oldText": "\"氷元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00021\")"
+    },
+    {
+      "start": 8713,
+      "end": 8722,
+      "id": "guide.providerDisplay.gameProviders.b00022",
+      "oldText": "\"岩元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00022\")"
+    },
+    {
+      "start": 8751,
+      "end": 8760,
+      "id": "guide.providerDisplay.gameProviders.b00023",
+      "oldText": "\"草元素ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00023\")"
+    },
+    {
+      "start": 8792,
+      "end": 8800,
+      "id": "guide.providerDisplay.gameProviders.b00024",
+      "oldText": "\"物理ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00024\")"
+    },
+    {
+      "start": 8878,
+      "end": 8883,
+      "id": "guide.providerDisplay.gameProviders.b00025",
+      "oldText": "\"生の花\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00025\")"
+    },
+    {
+      "start": 8901,
+      "end": 8906,
+      "id": "guide.providerDisplay.gameProviders.b00026",
+      "oldText": "\"死の羽\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00026\")"
+    },
+    {
+      "start": 8921,
+      "end": 8926,
+      "id": "guide.providerDisplay.gameProviders.b00027",
+      "oldText": "\"時の砂\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00027\")"
+    },
+    {
+      "start": 8940,
+      "end": 8945,
+      "id": "guide.providerDisplay.gameProviders.b00028",
+      "oldText": "\"空の杯\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00028\")"
+    },
+    {
+      "start": 8960,
+      "end": 8965,
+      "id": "guide.providerDisplay.gameProviders.b00029",
+      "oldText": "\"理の冠\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00029\")"
+    },
+    {
+      "start": 18997,
+      "end": 19001,
+      "id": "guide.providerDisplay.gameProviders.b00030",
+      "oldText": "\"強攻\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00030\")"
+    },
+    {
+      "start": 19012,
+      "end": 19016,
+      "id": "guide.providerDisplay.gameProviders.b00031",
+      "oldText": "\"異常\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00031\")"
+    },
+    {
+      "start": 19024,
+      "end": 19028,
+      "id": "guide.providerDisplay.gameProviders.b00032",
+      "oldText": "\"撃破\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00032\")"
+    },
+    {
+      "start": 19039,
+      "end": 19043,
+      "id": "guide.providerDisplay.gameProviders.b00033",
+      "oldText": "\"支援\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00033\")"
+    },
+    {
+      "start": 19054,
+      "end": 19058,
+      "id": "guide.providerDisplay.gameProviders.b00034",
+      "oldText": "\"防護\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00034\")"
+    },
+    {
+      "start": 19069,
+      "end": 19073,
+      "id": "guide.providerDisplay.gameProviders.b00035",
+      "oldText": "\"命破\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00035\")"
+    },
+    {
+      "start": 19084,
+      "end": 19088,
+      "id": "guide.providerDisplay.gameProviders.b00036",
+      "oldText": "\"鋭御\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00036\")"
+    },
+    {
+      "start": 19158,
+      "end": 19162,
+      "id": "guide.providerDisplay.gameProviders.b00037",
+      "oldText": "\"HP\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00037\")"
+    },
+    {
+      "start": 19173,
+      "end": 19178,
+      "id": "guide.providerDisplay.gameProviders.b00038",
+      "oldText": "\"HP%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00038\")"
+    },
+    {
+      "start": 19189,
+      "end": 19193,
+      "id": "guide.providerDisplay.gameProviders.b00039",
+      "oldText": "\"HP\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00039\")"
+    },
+    {
+      "start": 19204,
+      "end": 19209,
+      "id": "guide.providerDisplay.gameProviders.b00040",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00040\")"
+    },
+    {
+      "start": 19220,
+      "end": 19226,
+      "id": "guide.providerDisplay.gameProviders.b00041",
+      "oldText": "\"攻撃力%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00041\")"
+    },
+    {
+      "start": 19237,
+      "end": 19242,
+      "id": "guide.providerDisplay.gameProviders.b00042",
+      "oldText": "\"攻撃力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00042\")"
+    },
+    {
+      "start": 19253,
+      "end": 19258,
+      "id": "guide.providerDisplay.gameProviders.b00043",
+      "oldText": "\"衝撃力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00043\")"
+    },
+    {
+      "start": 19269,
+      "end": 19275,
+      "id": "guide.providerDisplay.gameProviders.b00044",
+      "oldText": "\"衝撃力%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00044\")"
+    },
+    {
+      "start": 19286,
+      "end": 19291,
+      "id": "guide.providerDisplay.gameProviders.b00045",
+      "oldText": "\"防御力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00045\")"
+    },
+    {
+      "start": 19302,
+      "end": 19308,
+      "id": "guide.providerDisplay.gameProviders.b00046",
+      "oldText": "\"防御力%\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00046\")"
+    },
+    {
+      "start": 19319,
+      "end": 19324,
+      "id": "guide.providerDisplay.gameProviders.b00047",
+      "oldText": "\"防御力\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00047\")"
+    },
+    {
+      "start": 19338,
+      "end": 19343,
+      "id": "guide.providerDisplay.gameProviders.b00048",
+      "oldText": "\"会心率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00048\")"
+    },
+    {
+      "start": 19354,
+      "end": 19359,
+      "id": "guide.providerDisplay.gameProviders.b00049",
+      "oldText": "\"会心率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00049\")"
+    },
+    {
+      "start": 19370,
+      "end": 19378,
+      "id": "guide.providerDisplay.gameProviders.b00050",
+      "oldText": "\"会心ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00050\")"
+    },
+    {
+      "start": 19389,
+      "end": 19397,
+      "id": "guide.providerDisplay.gameProviders.b00051",
+      "oldText": "\"会心ダメージ\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00051\")"
+    },
+    {
+      "start": 19408,
+      "end": 19413,
+      "id": "guide.providerDisplay.gameProviders.b00052",
+      "oldText": "\"貫通率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00052\")"
+    },
+    {
+      "start": 19424,
+      "end": 19429,
+      "id": "guide.providerDisplay.gameProviders.b00053",
+      "oldText": "\"貫通率\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00053\")"
+    },
+    {
+      "start": 19440,
+      "end": 19445,
+      "id": "guide.providerDisplay.gameProviders.b00054",
+      "oldText": "\"貫通値\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00054\")"
+    },
+    {
+      "start": 19456,
+      "end": 19461,
+      "id": "guide.providerDisplay.gameProviders.b00055",
+      "oldText": "\"貫通値\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00055\")"
+    },
+    {
+      "start": 19472,
+      "end": 19483,
+      "id": "guide.providerDisplay.gameProviders.b00056",
+      "oldText": "\"エネルギー自動回復\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00056\")"
+    },
+    {
+      "start": 19494,
+      "end": 19503,
+      "id": "guide.providerDisplay.gameProviders.b00057",
+      "oldText": "\"異常マスタリー\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00057\")"
+    },
+    {
+      "start": 19514,
+      "end": 19520,
+      "id": "guide.providerDisplay.gameProviders.b00058",
+      "oldText": "\"異常掌握\"",
+      "replacement": "_providerDisplay.ja(\"guide.providerDisplay.gameProviders.b00058\")"
+    }
+  ],
+  "artifactDigests": {
+    "content/ja/guides/gameProviders_providerDisplay.ts": "9187845f7dea98a39154f264ecdcf91a7d93a4e41526813426ada5a0b15a4b8d",
+    "content/translations/en/gameProviders_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae",
+    "content/translations/zh-CN/gameProviders_providerDisplay.ts": "0e73b4e371dffdb25effab1ce3e2c967be89290c27abb9f231a6cffd5b623dae"
+  }
+}

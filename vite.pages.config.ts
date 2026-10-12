@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig, type Plugin } from "vite";
+import { contentCommand } from "./scripts/content/commands";
 
 function githubPagesHtmlCompatibility(): Plugin {
   return {
@@ -38,7 +39,10 @@ if (
 export default defineConfig({
   base,
   define: { "import.meta.env.VITE_MIGRATION_PREVIEW": JSON.stringify(preview) },
-  plugins: [react(), tailwindcss(), githubPagesHtmlCompatibility()],
+  plugins: [
+    { name: "content-structure-gate", buildStart() { contentCommand(["check"]); } },
+    react(), tailwindcss(), githubPagesHtmlCompatibility(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

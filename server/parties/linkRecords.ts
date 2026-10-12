@@ -1,3 +1,4 @@
+import {projectLinkHistory} from "../content/linkHistory";
 import type { GuideUpdateEvent } from "../guideUpdateHistory";
 import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
 
@@ -5,43 +6,7 @@ import type { PartyGameId, PartyLinkBatch, PartyLinkRecord } from "./types";
  * 参照の変更記録と、そこから作る更新履歴（§4.7）。
  * PARTY_LINK_RECORDS は追記専用。過去の行を書き換えない・消さない。参照を入れ替えるときは新しいバッチの行を足す。
  */
-export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = {
-  27: {batch:27,date:"2026-10-09T21:44:00+09:00",updatedAt:"2026-10-09",sourceNote:"推奨PTのみ現行の個別編成本文を照合",title:"第27バッチ：夏ロビン・クラレッタの編成を共有化",summary:(name,record)=>`${name}の共有PTを${record.added.length}案反映しました。`,changes:["残り2起点の旧6案を共有化", "本人ガイドに一致する関連キャラへ参照を追加", "出典の構成差とポテンシャル解放条件を明記", "ビルド・装備・凸・公開現在値は変更しない"],rationale:"旧PTバックログを解消し、関連キャラも同じ共有データを参照するため。"},
-  26: {
-    batch: 26, date: "2026-10-07T21:45:00+09:00", updatedAt: "2026-10-07",
-    sourceNote: "ホタルの推奨PTのみ2026-10-07に再確認",
-    title: "ホタルの推奨PTを更新",
-    summary: (name, record) => name + "の推奨PTを耐久あり・耐久なし・代替支援の" + record.added.length + "案へ更新しました。",
-    changes: ["ダリア・帰忘の流離人を含む現行編成を登録", "耐久なし編成の使用条件を明記", "旧PT用の速度補正を新編成へ流用しない", "他キャラの表示PT・ビルド・装備・星魂・公開現在値は変更しない"],
-    rationale: "Phase 55の例外として、古いホタルの推奨PTだけを更新するため。",
-  },
-  25: {
-    batch:25, date:'2026-10-03T13:00:00+09:00', updatedAt:'2026-10-03',
-    sourceNote:'推奨PTのみ個別ガイド本文を再確認し、出典ごとの構成差を区別して共有化',
-    title:'第25バッチ：千冶・刃・姫子・旅立ち・不死途の編成を共有化',
-    summary:(name,record)=>`${name}の推奨PTに共有編成を${record.added.length}案反映し、旧参照を${record.removed.length}案整理しました。`,
-    changes:['旧3起点8案を共有7編成へ統合','参加者の参照と3枠制限による見送りを記録','出典の回復役・支援役の違いを明記','ビルド・装備・凸・公開現在値は変更しない'],
-    rationale:'千冶・刃と不死途の同じ4名構成を統合し、関連キャラからも共有データを参照するため。',
-  },
-  24: {
-    batch: 24, date: "2026-10-03T12:00:00+09:00", updatedAt: "2026-10-03",
-    sourceNote: "推奨PTのみGameWith・Game8の個別編成本文を再照合して共有化",
-    title: "第24バッチ：パール・夏アベンチュリンの編成を共有化",
-    summary: (name, record) => `${name}の推奨PTに共有編成を${record.added.length}案反映し、旧参照を${record.removed.length}案整理しました。`,
-    changes: ["旧3起点7案を共有4編成へ整理", "緋英の同構成を統合し、再確認できない旧2案を除外", "関連キャラの参照・見送りと三言語の役割・条件を記録", "ビルド・装備・凸・公開現在値は変更しない"],
-    rationale: "同じ編成の重複登録を解消し、参加する既存キャラ側からも同じ共有データを参照するため。",
-  },
-  23: {
-    batch: 23,
-    date: "2026-10-01T19:23:00+09:00",
-    updatedAt: "2026-10-01",
-    sourceNote: "推奨PTのみGame8の2026-09-29更新の個別編成ガイドで更新",
-    title: "第23バッチ追補：新キャラ入りの推奨PTを登録",
-    summary: (name, record) => `${name}側へ新キャラ入りの編成を${record.added.length}案反映しました。`,
-    changes: ["本人を含む4名編成を追加", "役割・条件・三言語・出典を維持", "ビルドの基準日・固定目標・命ノ星座は変更せず、PT更新だけを記録"],
-    rationale: "新キャラの編成に参加する既存キャラからも同じ構成を選べるようにするため。",
-  },
-};
+export const PARTY_LINK_BATCHES: Record<number, PartyLinkBatch> = projectLinkHistory();
 
 export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   { batch: 23, game: "genshin", owner: "ファルザン",

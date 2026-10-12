@@ -5,7 +5,6 @@ import { consumeLoginReturnPath } from "@/lib/loginReturnPath";
 import NotFound from "@/pages/NotFound";
 import { Route, Router as WouterRouter, Switch, useLocation } from "wouter";
 import React, { Suspense, lazy, useEffect } from "react";
-import AdminLogoutButton from "./components/AdminLogoutButton";
 import DisplayPreviewBanner from "./components/DisplayPreviewBanner";
 import ErrorBoundary from "./components/ErrorBoundary";
 import PublicCatalogShortcut from "./components/PublicCatalogShortcut";
@@ -23,6 +22,14 @@ const AdminHome = lazy(() => import("./pages/AdminHome"));
 const FeedbackAdmin = lazy(() => import("./pages/FeedbackAdmin"));
 const DisplaySettingsAdmin = lazy(() => import("./pages/DisplaySettingsAdmin"));
 const LanguageSettingsAdmin = lazy(() => import("./pages/LanguageSettingsAdmin"));
+const AdminLogoutButton = lazy(() => import("./components/AdminLogoutButton"));
+
+/** Keep admin-only content out of the public route's initial module graph. */
+function AdminLogoutGate() {
+  const [location] = useLocation();
+  if (!location.startsWith("/admin/") || location === "/admin") return null;
+  return <Suspense fallback={null}><AdminLogoutButton /></Suspense>;
+}
 
 /** テーマを切り替えられる公開画面（案 E-2）。管理画面と 404 はライト固定。 */
 export const THEME_SWITCHABLE_PATHS = ["/", "/characters", "/updates", "/feedback"] as const;
@@ -96,7 +103,7 @@ function App() {
                 <DisplayPreviewBanner />
                 <Router />
                 <PublicCatalogShortcut />
-                <AdminLogoutButton />
+                <AdminLogoutGate />
               </TooltipProvider>
             </ThemeGate>
           </WouterRouter>

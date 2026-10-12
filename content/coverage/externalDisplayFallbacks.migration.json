@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "target": "server/gameProviders.ts",
+  "mapping": [
+    {
+      "id": "guide.externalDisplayFallbacks.label1",
+      "originalStart": 15419,
+      "oldText": "\"聖遺物\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label1",
+      "originalStart": 15485,
+      "oldText": "\"聖遺物\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label2",
+      "originalStart": 16899,
+      "oldText": "\"武器\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label2",
+      "originalStart": 16991,
+      "oldText": "\"武器\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label3",
+      "originalStart": 17663,
+      "oldText": "\"旅人\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label4",
+      "originalStart": 28890,
+      "oldText": "\"ドライバディスクセット\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.disc",
+      "originalStart": 29033,
+      "oldText": "`ドライバディスク ${slot}`"
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label7",
+      "originalStart": 30451,
+      "oldText": "\"属性\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label8",
+      "originalStart": 30557,
+      "oldText": "\"役割\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label5",
+      "originalStart": 30638,
+      "oldText": "\"音動機\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label9",
+      "originalStart": 30884,
+      "oldText": "\"エージェント・音動機・コア強化・ドライバディスクを合算した戦闘外の推定最終値です。戦闘中・条件付き効果は含みません。\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label6",
+      "originalStart": 31326,
+      "oldText": "\"プロキシ\""
+    },
+    {
+      "id": "guide.externalDisplayFallbacks.label10",
+      "oldText": "\"聖遺物セット\"",
+      "field": "relics.setName fallback"
+    }
+  ]
+}

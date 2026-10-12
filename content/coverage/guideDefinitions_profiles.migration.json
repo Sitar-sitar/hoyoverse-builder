@@ -1,0 +1,107 @@
+[
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00001",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "crit"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00002",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "dot"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00003",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "break"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00004",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "support"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00005",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "sustain"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00006",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "tank"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00007",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "hp"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00008",
+    "registry": "HSR_PROFILES",
+    "lookupKey": "def"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00009",
+    "registry": "GI_PROFILES",
+    "lookupKey": "crit"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00010",
+    "registry": "GI_PROFILES",
+    "lookupKey": "hp"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00011",
+    "registry": "GI_PROFILES",
+    "lookupKey": "def"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00012",
+    "registry": "GI_PROFILES",
+    "lookupKey": "em"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00013",
+    "registry": "GI_PROFILES",
+    "lookupKey": "support"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00014",
+    "registry": "GI_PROFILES",
+    "lookupKey": "sustain"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00015",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "crit"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00016",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "anomaly"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00017",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "stun"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00018",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "support"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00019",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "tank"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00020",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "rupture"
+  },
+  {
+    "guideId": "guide.authoring.guideDefinitions_profiles.b00021",
+    "registry": "ZZZ_PROFILES",
+    "lookupKey": "def"
+  }
+]

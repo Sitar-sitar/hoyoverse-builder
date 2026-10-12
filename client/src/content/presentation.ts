@@ -1,0 +1,53 @@
+import { CONTENT_MANIFEST } from "./manifest";
+import { reportContentMismatch } from "./diagnostics";
+import type { PresentationDTO } from "@shared/content/presentation";
+
+export function validPreparationManifest(value: unknown): value is typeof CONTENT_MANIFEST {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  const manifest = value as Record<string, unknown>;
+  return manifest.schemaVersion === 1 &&
+    typeof manifest.contentRevision === "string" && /^[a-f0-9]{64}$/.test(manifest.contentRevision) &&
+    manifest.translationMode === "preparation" &&
+    Array.isArray(manifest.readyLanguages) && manifest.readyLanguages.length === 1 && manifest.readyLanguages[0] === "ja";
+}
+
+export function validPresentation(value: unknown): value is PresentationDTO {
+  if (!validPreparationManifest(CONTENT_MANIFEST) || !value || typeof value !== "object") return false;
+  const dto = value as PresentationDTO;
+  const statuses=["registered","notCollected","notApplicable"];
+  return dto.schemaVersion === 1 && dto.language === "ja" && dto.contentRevision === CONTENT_MANIFEST.contentRevision &&
+    (dto.identityKey===null||typeof dto.identityKey==="string") && Boolean(dto.information) && statuses.includes(dto.information.introduction) && statuses.includes(dto.information.skills) &&
+    Boolean(dto.display) && typeof dto.display === "object" && !Array.isArray(dto.display);
+}
+/** Numeric inputs stay in the legacy model; only display strings are projected. */
+function hydrate(legacy: unknown, display: unknown): unknown {
+  if (typeof legacy === "string") return typeof display === "string" ? display : legacy;
+  if (Array.isArray(legacy)) return Array.isArray(display) && legacy.length === display.length ? legacy.map((value, index) => hydrate(value, display[index])) : legacy;
+  if (!legacy || typeof legacy !== "object") return legacy;
+  const record = legacy as Record<string, unknown>;
+  if (typeof record.ja === "string" && typeof record.en === "string" && typeof record["zh-CN"] === "string") return typeof display === "string" ? { ...record, ja: display } : legacy;
+  if (!display || typeof display !== "object") return legacy;
+  const identifiers = new Set(["id", "key", "unit", "profileId", "slot", "game", "games", "scope", "date", "sourceId", "identity", "gameVersion", "dataAsOf", "updatedAt", "sourceUrl", "url", "checkedAt"]);
+  return Object.fromEntries(Object.entries(record).map(([key, value]) => [key, identifiers.has(key) ? value : hydrate(value, (display as Record<string, unknown>)[key])]));
+}
+export function selectPresentation<T extends object>(legacy: T | undefined): T | undefined {
+  if (!legacy) return legacy;
+  const dto = (legacy as { presentation?: unknown }).presentation;
+  if (!validPresentation(dto)) {
+    if (dto || !validPreparationManifest(CONTENT_MANIFEST)) {
+      console.warn("[Content] Presentation identity mismatch; using Japanese compatibility fields");
+      const received = dto && typeof dto === "object" ? dto as Record<string, unknown> : {};
+      const revision = (value: unknown) => typeof value === "string" && /^[a-f0-9]{64}$/.test(value) ? value : null;
+      reportContentMismatch({
+        reason: !validPreparationManifest(CONTENT_MANIFEST) ? "manifest" : received.schemaVersion !== 1 ? "schema" : received.contentRevision !== CONTENT_MANIFEST.contentRevision ? "revision" : "shape",
+        expectedRevision: revision(CONTENT_MANIFEST.contentRevision), receivedRevision: revision(received.contentRevision),
+      });
+    }
+    return legacy;
+  }
+  const output = { ...legacy } as T;
+  for (const field of ["name", "guide", "statsNote", "constellations", "partyRecommendations", "partyAppearances", "games", "siteEvents", "characters", "updateLedger"] as const) {
+    if (field in legacy && field in dto.display) (output as Record<string, unknown>)[field] = hydrate((legacy as Record<string, unknown>)[field], dto.display[field]);
+  }
+  return output;
+}

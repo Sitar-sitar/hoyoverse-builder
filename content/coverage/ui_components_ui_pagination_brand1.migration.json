@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ui.components_ui_pagination_brand1.literal1",
+    "start": 377,
+    "kind": "attribute"
+  },
+  {
+    "id": "ui.components_ui_pagination_brand1.literal2",
+    "start": 1659,
+    "kind": "attribute"
+  },
+  {
+    "id": "ui.components_ui_pagination_brand1.literal3",
+    "start": 1855,
+    "kind": "jsx"
+  },
+  {
+    "id": "ui.components_ui_pagination_brand1.literal4",
+    "start": 2060,
+    "kind": "attribute"
+  },
+  {
+    "id": "ui.components_ui_pagination_brand1.literal5",
+    "start": 2225,
+    "kind": "jsx"
+  },
+  {
+    "id": "ui.components_ui_pagination_brand1.literal6",
+    "start": 2656,
+    "kind": "jsx"
+  }
+]
