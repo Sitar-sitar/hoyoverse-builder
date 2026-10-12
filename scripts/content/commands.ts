@@ -11,6 +11,7 @@ import { expectedCatalogIndex } from "./catalogIndex";
 import { checkUiGate } from "./uiGate";
 import { sourceUsageReport } from "./sourceUsage";
 import { externalNameReport } from "../../content/externalNames";
+import { checkProviderLiteralGate } from "./providerLiteralGate";
 
 export function generatedManifestText() {
   // Public identity only; no original corpus, contexts or translation reviews in Pages.
@@ -36,12 +37,13 @@ export function contentCommand(args: string[]): number {
   const [command, ...raw] = args;
   const options = raw[0] === "--" ? raw.slice(1) : raw;
   const index = contentRepository();
+  const providerLiterals = command === "generate" ? undefined : checkProviderLiteralGate();
   const ui = command === "generate" ? undefined : checkUiGate(new Set(index.sources.keys()));
   const language = options[options.indexOf("--language") + 1];
   const validLanguage = language === "en" || language === "zh-CN";
   const output = (value: unknown) => console.log(JSON.stringify(value, null, 2));
   if (command === "report" && (options.length === 0 || options.join(" ") === "--format json")) {
-    output({ manifest: contentManifest(), ui, sourceUsage: sourceUsageReport(new Set(index.sources.keys())), externalNames: externalNameReport(), unresolvedTeamMembers:unresolvedTeamMembers(), unresolvedGenericTeamMembers:unresolvedGenericTeamMembers(), unresolvedConstellationIdentities:unresolvedConstellationIdentities(), unresolvedGuideFields:unresolvedGuideFields(), ...reportCoverage(index) }); return 0;
+    output({ manifest: contentManifest(), ui, providerLiterals, sourceUsage: sourceUsageReport(new Set(index.sources.keys())), externalNames: externalNameReport(), unresolvedTeamMembers:unresolvedTeamMembers(), unresolvedGenericTeamMembers:unresolvedGenericTeamMembers(), unresolvedConstellationIdentities:unresolvedConstellationIdentities(), unresolvedGuideFields:unresolvedGuideFields(), ...reportCoverage(index) }); return 0;
   }
   if (command === "export" && options.length === 2 && options[0] === "--language" && validLanguage) {
     output(exportCandidates(index, language)); return 0;

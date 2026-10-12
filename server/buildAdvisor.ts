@@ -5,6 +5,8 @@ import {createLegacyTexts as createequipmentLabelsTexts} from "./content/legacyT
 import {sources as equipmentLabelsSources} from "../content/ja/guides/buildAdvisor_equipmentLabels";
 const _equipmentLabels = createequipmentLabelsTexts(equipmentLabelsSources, {}, {});
 import { errorMessage } from "./content/errors";
+import { sources as finalLabelSources } from "../content/ja/guides/buildAdvisor_finalLabels";
+const _finalLabels = createequipmentLabelsTexts(finalLabelSources, {}, {});
 import {createLegacyTexts as createproviderComparisonTexts} from "./content/legacyTexts";
 import {sources as providerComparisonSources} from "../content/ja/guides/buildAdvisor_providerComparison";
 const _providerComparison = createproviderComparisonTexts(providerComparisonSources, {}, {});
@@ -436,7 +438,12 @@ function mihomoStatValues(finals: RawRecord[], properties: RawRecord[]): Partial
 const MIHOMO_FINAL_STATS_NOTE = _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00002");
 const MIHOMO_UNAVAILABLE_NOTE = _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00003");
 
-const MIHOMO_FINAL_LABELS: Record<string, string> ={ hp: "HP", atk: "攻撃力", def: "防御力", spd: "速度" };
+const MIHOMO_FINAL_LABELS: Record<string, string> = {
+  hp: _finalLabels.ja("guide.buildAdvisor.finalLabel.hp"),
+  atk: _finalLabels.ja("guide.buildAdvisor.finalLabel.atk"),
+  def: _finalLabels.ja("guide.buildAdvisor.finalLabel.def"),
+  spd: _finalLabels.ja("guide.buildAdvisor.finalLabel.spd"),
+};
 
 /** 最終値の一覧を「現在のステータス」として並べる。`statistics` の「基礎HP」等は中身が最終値なので表示名を直す。 */
 function finalAllStatsFor(finals: RawRecord[]): CharacterProfile["allStats"] {

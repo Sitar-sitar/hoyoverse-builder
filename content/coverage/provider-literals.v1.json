@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    "server/buildAdvisor.ts",
+    "server/gameProviders.ts",
+    "server/enkaFallback.ts"
+  ],
+  "entries": [
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "cab39518b145e15f158eb5c64ff77c76a7e1cdc12547499d4858bf789113aa05",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "7c1313c73b81ebd8454ec544222e4587a0d2cf48481a0e1081eddbae42de8578",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "b25b80a2041c87da80fa7c942ba5a84edc288f9e316ae660c169496bdc12ecb7",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"最優先\"",
+      "fingerprint": "00181d3c1b69dd696f70ef65db2cb722cfb70000c627b92804c72d79e6c78e55",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"優先\"",
+      "fingerprint": "d3b59f34a94aa92c8f4a3f719171903b40a3375ca404856a7fdfa032bebf8db5",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"次点\"",
+      "fingerprint": "8019b8b6df432fa1b09eed12add78b88c823ba6d6dbb7a38911afc460ca33e11",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"主ステータスを変更\"",
+      "fingerprint": "808f786c7b8bd2a9ac4fa8e886a053f8b743f84611e49c574224f3764d2a9170",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"サブステータスを厳選\"",
+      "fingerprint": "945cafac9f8fb638c89220efde91a611bd9f7d869199a8fdfd23f0efb62f5c9b",
+      "count": 1,
+      "reason": "Type-level compatibility union; never rendered",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "17a26a01abbaca72b98723f52ba6a33bf81dd679cc4b4bb493b465757c418603",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"最優先\"",
+      "fingerprint": "6a2444923b2ef04fb2ead275209f719113ec6a062a228d1e5d999a5b0c689f3c",
+      "count": 1,
+      "reason": "Compatibility enum; Home priorityLabel/actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"優先\"",
+      "fingerprint": "bbf7ba33767bbd4c5293573e446269bc0afc7cc93ef2df674577e0ab39d5780d",
+      "count": 1,
+      "reason": "Compatibility enum; Home priorityLabel/actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"次点\"",
+      "fingerprint": "bbf7ba33767bbd4c5293573e446269bc0afc7cc93ef2df674577e0ab39d5780d",
+      "count": 1,
+      "reason": "Compatibility enum; Home priorityLabel/actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"時の砂\"",
+      "fingerprint": "de3f195d8d37416d7b0479304945e581ae034fa5244d1a9e4e5203ef76efa8fb",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"時計\"",
+      "fingerprint": "de3f195d8d37416d7b0479304945e581ae034fa5244d1a9e4e5203ef76efa8fb",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"空の杯\"",
+      "fingerprint": "aba2754022e273aac2faa0879aa407a757f567123d59877b6b8daa7d918a399d",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"杯\"",
+      "fingerprint": "aba2754022e273aac2faa0879aa407a757f567123d59877b6b8daa7d918a399d",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"理の冠\"",
+      "fingerprint": "9ed6a2a0497b40768260887e4009a03b2a27e91d74ff2ec313eff81017d46f34",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"冠\"",
+      "fingerprint": "9ed6a2a0497b40768260887e4009a03b2a27e91d74ff2ec313eff81017d46f34",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"ドライバディスク \"",
+      "fingerprint": "afdabf00fdf794a61485c876bb8f30864947a0c85e00938a5aa98217a3926c45",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"ボーナス\"",
+      "fingerprint": "9f8112cbaf28409810f2259e070156a423445134604b60f844eacd3de88677dc",
+      "count": 1,
+      "reason": "Input normalization matching; output labels resolved separately",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"サブステータスを厳選\"",
+      "fingerprint": "d4e7fe527f23f33b20e466e85e4c9505ceec4430fa1af34ab8117a9ffaa63703",
+      "count": 1,
+      "reason": "Compatibility enum; Home actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"サブステータスを厳選\"",
+      "fingerprint": "44c560feef4ee9e0dca7a188421a9b959301178b107c11280b98fc0d3057095c",
+      "count": 1,
+      "reason": "Compatibility enum; Home actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"主ステータスを変更\"",
+      "fingerprint": "44c560feef4ee9e0dca7a188421a9b959301178b107c11280b98fc0d3057095c",
+      "count": 1,
+      "reason": "Compatibility enum; Home actionLabel maps it to registered UI text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "41205bbc58f202bba2193b9f8154e60fecea06be150a71b8aaccdd8729f67054",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "614764e8577b9d17164b96c948e47ef3bbfa66ff4b3130b74d7e36d8c5393ec8",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "c3befc8e93ef32693a4a7042ab8ee75a93d77f644cebaa32f65604011bff6206",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "b887ffdb5636e21fee78fddf10d5783ab9494b5f5894ea60588080340ee74793",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "5e869650724c2f129f397a258559a30f3c59c518d19d13349fbc76de5046b8a9",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "6fb20f789928fec7722d632cff58a2b843e69b14a463fa2a4c518628aa187430",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "8dec9a736fce4ea10e552f8894b6b2c726457878254895aa4a4e1a20c3387281",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "b7c6dc742693c6af0de82ae861df55a908db60b0d2667b42009dc0d311dadbb1",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "96bd42af13055b3a74bdd4dea4256b9c009d5d92e84df2a945e967cb9eaceb2c",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"セーバル\"",
+      "fingerprint": "06f1f6088426044b9f719354c16e94b890f534099c788eb3ee4248f8ea41a6f2",
+      "count": 1,
+      "reason": "Character-name identity membership check for curated guide selection; not output",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"ゼーレ\"",
+      "fingerprint": "9487465303697f6a0a49430a9dd9397274749f819bf7c9d15c96f476e7963943",
+      "count": 1,
+      "reason": "Character-name identity membership check for curated guide selection; not output",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"ナターシャ\"",
+      "fingerprint": "6f83ad6e63fbc94e64e176ea1d84919823c43839b37ec174717950f6f132096b",
+      "count": 1,
+      "reason": "Character-name identity membership check for curated guide selection; not output",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"ファイノン\"",
+      "fingerprint": "2c013fc58987d849c4f396df25c98311742ea3b50f58a6a78fc8866f2c4a1378",
+      "count": 1,
+      "reason": "Character-name identity membership check for curated guide selection; not output",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"フォフォ\"",
+      "fingerprint": "66bb914d41cc73b52baba64350314440289562b938fa92fe10e2d78b553580db",
+      "count": 1,
+      "reason": "Character-name identity membership check for curated guide selection; not output",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "6ed01fbfe9cf8f20cada380eb34f92f395eff48ce211c2edbc1494a7986852f8",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "b77ed261a07c40620055ddf296c7c3f72c2721c58e650b34cc009771ad379cc3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "f502d442ba09980435950618af3fa7673e0bd49bdef18f756c2116c13ea5488f",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "c6b1982a5882e28331ed4d0567af195c8ac401b8c2c7489fbddb865c15bd2ec3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "e0435c6e23853301d818b00e8cf456087e32e597f3fcc9d69af252f007ccc30a",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/buildAdvisor.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "2492400684278989fd3f0a62358e53e400e090cc4c1fbde32ea291211449a66b",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "`[${label}] 静的カタログの取得に失敗したため、直近正常データ（保存: ${new Date(savedAt).toISOString()}）を使用します。`",
+      "fingerprint": "0aad65babcd04be14c9e398b3e0ea97992fc8ebdb94168aab3046038e02e7e77",
+      "count": 1,
+      "reason": "Operational console diagnostic only; not returned as display text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "e2c154096c3e67f179517bdb61db5a1c28d407f054b7b15466109a7f3e179021",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "e38e43e8e34b37ab8670eefaedc4ddeea7bc6a308396fed1623b14a67c5021d3",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "b7768c6a4e445cdb41fd4a4d8cd89307c9b1441d57c88e5fdf5869ab79abc16f",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "c01f7403d20c4b0139245f36207a04c0384335dff254edc08e556c0b42181532",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "a35feb30f70038c0df935c8ffd00ef24f361367461547875391f468e3fd5f2c1",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "791737054e862b141e9c4c773620c6a0b703ac4eb105205451f9ce3e45a10850",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "e706c41fffb7463bf06956e7fcd5b562e10a96c6077a00825c74275804f43a81",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "bf068de151c5073ecae7b246bd7d9c47055f626943ee0b287ed083c058c9e778",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "bbb06b9c84e402d3aaa784cbe26a6a474d36be85a22103c2ff20237c53b217e6",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "fc41da3965c1fafe9660d07191a93108eeca5c1f3755530578b1781ddf26f4ab",
+      "count": 2,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "016eb08988d7dffa801191a524cad34532d6ae8e4c71d317fd695721134dcb07",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "23039be1da582634bf0fe7362888d7e054493fe6034bc2cc86818432a124169d",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "091e28cea74fee1bc48383a7acd21be788361c33701a7c33dc606b78475ecea1",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "d3cfded1b206a2ec09c3eb22976446ce036d438c96fe65d7ee8c19181030c824",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "81a9b14948786bf2b16deb4d9c165296bb4fcfa85756663a49d2f1ffe137375d",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "399d7fad02e64f344d0bb3db27d17b82185b4d56a927a80125747046435ebfff",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "6ed01fbfe9cf8f20cada380eb34f92f395eff48ce211c2edbc1494a7986852f8",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "b77ed261a07c40620055ddf296c7c3f72c2721c58e650b34cc009771ad379cc3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "f502d442ba09980435950618af3fa7673e0bd49bdef18f756c2116c13ea5488f",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "c6b1982a5882e28331ed4d0567af195c8ac401b8c2c7489fbddb865c15bd2ec3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "e0435c6e23853301d818b00e8cf456087e32e597f3fcc9d69af252f007ccc30a",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/gameProviders.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "2492400684278989fd3f0a62358e53e400e090cc4c1fbde32ea291211449a66b",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "`[hsr-enka-fallback] 静的データの取得に失敗したため、直近正常バンドル（保存: ${new Date(lastKnownGoodStatic.savedAt).toISOString()}）を使用します。`",
+      "fingerprint": "ad00705bb8d6b3865143d178ebcfd740a8fc548f347a0f93a833aca3dd99d8d3",
+      "count": 1,
+      "reason": "Operational console diagnostic only; not returned as display text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"[hsr-enka-fallback] 静的データを取得できず、直近正常バンドルも利用できません。戦闘外最終値の算出を保留します。\"",
+      "fingerprint": "8092b4f8aecc18d263aa1c27be1cddf588e487efaaa0eb5c3317ec547d44badb",
+      "count": 1,
+      "reason": "Operational console diagnostic only; not returned as display text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "`[hsr-enka-fallback] 未知のプロパティ種別を検出しました: ${contribution.type}`",
+      "fingerprint": "a49c4a8ed0dfc09e35fbc6f729281cda1c2193f2924e9571e062b4d8f8ccb49f",
+      "count": 1,
+      "reason": "Operational console diagnostic only; not returned as display text",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "6ed01fbfe9cf8f20cada380eb34f92f395eff48ce211c2edbc1494a7986852f8",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"厳選\"",
+      "fingerprint": "b77ed261a07c40620055ddf296c7c3f72c2721c58e650b34cc009771ad379cc3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "f502d442ba09980435950618af3fa7673e0bd49bdef18f756c2116c13ea5488f",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"目標\"",
+      "fingerprint": "c6b1982a5882e28331ed4d0567af195c8ac401b8c2c7489fbddb865c15bd2ec3",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "e0435c6e23853301d818b00e8cf456087e32e597f3fcc9d69af252f007ccc30a",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    },
+    {
+      "file": "server/enkaFallback.ts",
+      "literal": "\"妥協\"",
+      "fingerprint": "2492400684278989fd3f0a62358e53e400e090cc4c1fbde32ea291211449a66b",
+      "count": 1,
+      "reason": "TierName calculation and comparison keys; UI uses registered tier labels",
+      "withdrawal": "Remove or revise this exact occurrence when the compatibility computation, UI enum mapping, normalization, identity matching or log is replaced; any context/count change fails content:check."
+    }
+  ]
+}
