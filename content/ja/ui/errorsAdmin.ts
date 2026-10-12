@@ -102,5 +102,61 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "10002"
     ]
-  }
+  },
+{
+  "id": "ui.errors.admin.analyticsStartFormat",
+  "ja": "開始日はYYYY-MM-DD形式で指定してください。",
+  "context": "Existing API compatibility error message; stable display code admin.analyticsStartFormat",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.analyticsEndFormat",
+  "ja": "終了日はYYYY-MM-DD形式で指定してください。",
+  "context": "Existing API compatibility error message; stable display code admin.analyticsEndFormat",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.analyticsStartInvalid",
+  "ja": "開始日に有効な日付を指定してください。",
+  "context": "Existing API compatibility error message; stable display code admin.analyticsStartInvalid",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.analyticsEndInvalid",
+  "ja": "終了日に有効な日付を指定してください。",
+  "context": "Existing API compatibility error message; stable display code admin.analyticsEndInvalid",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.analyticsDateOrder",
+  "ja": "終了日は開始日以降を指定してください。",
+  "context": "Existing API compatibility error message; stable display code admin.analyticsDateOrder",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+},
+{
+  "id": "ui.errors.admin.translationPreparation",
+  "ja": "CONTENT_TRANSLATION_PREPARATION: 翻訳準備中のため日本語のみ公開できます。",
+  "context": "Existing API compatibility error message; stable display code admin.translationPreparation",
+  "audience": "admin",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": [
+    "CONTENT_TRANSLATION_PREPARATION"
+  ]
+}
 ];

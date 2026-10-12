@@ -25,7 +25,7 @@ const lookupUidLimiter = createProcedureRateLimiter({ windowMs: 60_000, max: 6 }
 const feedbackIpLimiter = createProcedureRateLimiter({ windowMs: 10 * 60_000, max: 5 });
 
 const LOOKUP_TOO_MANY_REQUESTS = errorMessage("public.busy");
-const FEEDBACK_TOO_MANY_REQUESTS = "送信が集中しています。しばらく待ってから再度お試しください。";
+const FEEDBACK_TOO_MANY_REQUESTS = errorMessage("public.feedbackBusy");
 
 const isCalendarDate = (date: string) => {
   const [year, month, day] = date.split("-").map(Number);
@@ -35,17 +35,17 @@ const isCalendarDate = (date: string) => {
 
 const analyticsFilterInput = z.object({
   game: z.enum(["hsr", "genshin", "zzz"]).optional(),
-  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "開始日はYYYY-MM-DD形式で指定してください。").optional(),
-  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "終了日はYYYY-MM-DD形式で指定してください。").optional(),
+  startDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, errorMessage("admin.analyticsStartFormat")).optional(),
+  endDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, errorMessage("admin.analyticsEndFormat")).optional(),
 }).superRefine((input, ctx) => {
   if (input.startDate && !isCalendarDate(input.startDate)) {
-    ctx.addIssue({ code: "custom", path: ["startDate"], message: "開始日に有効な日付を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["startDate"], message: errorMessage("admin.analyticsStartInvalid") });
   }
   if (input.endDate && !isCalendarDate(input.endDate)) {
-    ctx.addIssue({ code: "custom", path: ["endDate"], message: "終了日に有効な日付を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["endDate"], message: errorMessage("admin.analyticsEndInvalid") });
   }
   if (input.startDate && input.endDate && input.startDate > input.endDate) {
-    ctx.addIssue({ code: "custom", path: ["endDate"], message: "終了日は開始日以降を指定してください。" });
+    ctx.addIssue({ code: "custom", path: ["endDate"], message: errorMessage("admin.analyticsDateOrder") });
   }
 });
 

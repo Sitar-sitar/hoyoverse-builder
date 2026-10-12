@@ -131,5 +131,14 @@ export const sources: SourceText[] = [
       "9",
       "10"
     ]
-  }
+  },
+{
+  "id": "ui.errors.public.feedbackBusy",
+  "ja": "送信が集中しています。しばらく待ってから再度お試しください。",
+  "context": "Existing API compatibility error message; stable display code public.feedbackBusy",
+  "audience": "public",
+  "placeholders": {},
+  "dependencies": [],
+  "protectedTokens": []
+}
 ];

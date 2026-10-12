@@ -25,6 +25,31 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "ログアウト",
     "zh-CN": "ログアウト"
   },
+  "ui.errors.admin.analyticsDateOrder": {
+    "ja": "終了日は開始日以降を指定してください。",
+    "en": "終了日は開始日以降を指定してください。",
+    "zh-CN": "終了日は開始日以降を指定してください。"
+  },
+  "ui.errors.admin.analyticsEndFormat": {
+    "ja": "終了日はYYYY-MM-DD形式で指定してください。",
+    "en": "終了日はYYYY-MM-DD形式で指定してください。",
+    "zh-CN": "終了日はYYYY-MM-DD形式で指定してください。"
+  },
+  "ui.errors.admin.analyticsEndInvalid": {
+    "ja": "終了日に有効な日付を指定してください。",
+    "en": "終了日に有効な日付を指定してください。",
+    "zh-CN": "終了日に有効な日付を指定してください。"
+  },
+  "ui.errors.admin.analyticsStartFormat": {
+    "ja": "開始日はYYYY-MM-DD形式で指定してください。",
+    "en": "開始日はYYYY-MM-DD形式で指定してください。",
+    "zh-CN": "開始日はYYYY-MM-DD形式で指定してください。"
+  },
+  "ui.errors.admin.analyticsStartInvalid": {
+    "ja": "開始日に有効な日付を指定してください。",
+    "en": "開始日に有効な日付を指定してください。",
+    "zh-CN": "開始日に有効な日付を指定してください。"
+  },
   "ui.errors.admin.analyticsUnavailable": {
     "ja": "Unable to load lookup analytics",
     "en": "Unable to load lookup analytics",
@@ -79,6 +104,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "ja": "You do not have required permission (10002)",
     "en": "You do not have required permission (10002)",
     "zh-CN": "You do not have required permission (10002)"
+  },
+  "ui.errors.admin.translationPreparation": {
+    "ja": "CONTENT_TRANSLATION_PREPARATION: 翻訳準備中のため日本語のみ公開できます。",
+    "en": "CONTENT_TRANSLATION_PREPARATION: 翻訳準備中のため日本語のみ公開できます。",
+    "zh-CN": "CONTENT_TRANSLATION_PREPARATION: 翻訳準備中のため日本語のみ公開できます。"
   },
   "ui.pages_AdminHome_brand1.literal1": {
     "ja": "ADMIN / CONTROL CENTER",

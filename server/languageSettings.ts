@@ -39,7 +39,7 @@ export const languageSettingsRouter = router({
   })).mutation(async ({ input }) => {
     const readyLanguages: readonly string[] = contentManifest().readyLanguages;
     if (input.enabledLanguages.some(language => !readyLanguages.includes(language))) {
-      throw new TRPCError({ code: "PRECONDITION_FAILED", message: "CONTENT_TRANSLATION_PREPARATION: 翻訳準備中のため日本語のみ公開できます。" });
+      throw new TRPCError({ code: "PRECONDITION_FAILED", message: errorMessage("admin.translationPreparation") });
     }
     const enabledLanguages = normalizeEnabledLanguages(input.enabledLanguages);
     try {
