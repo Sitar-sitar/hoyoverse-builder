@@ -22,6 +22,7 @@
     "content:adopt-ui-literals": "tsx scripts/content/adoptUiLiterals.ts",
     "content:adopt-ui-display": "tsx scripts/content/adoptUiDisplay.ts",
     "content:ui-audit": "tsx scripts/content/uiAudit.ts",
+    "content:audit-legacy-ui": "tsx scripts/content/auditLegacyUi.ts",
     "content:catalog-index": "tsx scripts/content/catalogIndex.ts",
     "content:check": "tsx scripts/content/commands.ts check",
     "content:report": "tsx scripts/content/commands.ts report",
