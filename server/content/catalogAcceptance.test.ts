@@ -5,6 +5,16 @@ import { exportCandidates, translationState } from "./coverage";
 import { sourceHash } from "./hash";
 
 describe("whole catalog revision acceptance", () => {
+  it("preserves every existing translation as unapproved legacy data during preparation", () => {
+    const index = contentRepository();
+    for (const [language, records] of Object.entries(index.catalog.translations)) {
+      expect(Object.keys(records).length, language).toBeGreaterThan(6000);
+      for (const [id, record] of Object.entries(records)) {
+        expect(index.sources.has(id), `${language}:${id}`).toBe(true);
+        expect(record, `${language}:${id}`).toMatchObject({ sourceHash: null, review: "pending", origin: "legacy" });
+      }
+    }
+  });
   it("detects Japanese/context changes for every source without rewriting saved translations", () => {
     const index = contentRepository();
     const saved = JSON.stringify(index.catalog.translations);
