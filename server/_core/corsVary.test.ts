@@ -2,6 +2,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { spawn, type ChildProcess } from "node:child_process";
 import { request } from "node:http";
 import path from "node:path";
+import { PRODUCTION_DB_TEST_ENV } from "./fixtures/productionDbEnv";
 
 /**
  * CORS の `Vary: Origin` の回帰ゲート（設計: docs/修正設計書_tRPC応答のVary_Origin欠落_Phase41_2026-09-15.md D3）。
@@ -45,7 +46,7 @@ function varyTokens(res: RawResponse): string[] {
 beforeAll(async () => {
   server = spawn(process.execPath, ["--import", "tsx", "server/_core/index.ts"], {
     cwd: ROOT,
-    env: { ...process.env, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
+    env: { ...process.env, ...PRODUCTION_DB_TEST_ENV, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
     stdio: ["ignore", "pipe", "pipe"],
   });
   port = await new Promise<number>((resolve, reject) => {
