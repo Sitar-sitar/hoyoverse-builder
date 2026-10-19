@@ -1,7 +1,7 @@
 [
   {
-    "fingerprint": "00addde7ae221268d4c54682032a793bfbc82fc39e4749a35b193168f4cfdcbc",
-    "file": "pages/Home.tsx",
+    "fingerprint": "57bd2a925ceced414b9cfdbe85cc45ca75c96c88b22ec9686c298fd9eeea9498",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "効果命中",
     "count": 1,
@@ -18,8 +18,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "04ac15183b8e02df61d6b87f5cdec6ab33d4142ebc0e832173f3df57941c03a5",
-    "file": "pages/Home.tsx",
+    "fingerprint": "11e5a83579eb7143b76d0fda3ed57efe613cc13ee50e7cf257186edb44d7c1e1",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "目標",
     "count": 1,
@@ -45,8 +45,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "096c9ebeb9db2c194cc52847bfd6caac5a11b1eb3cdf4417c564f69f9ee23b41",
-    "file": "pages/Home.tsx",
+    "fingerprint": "b015ee3d81f8e16aa73836f24c8df044b95281769cae79782564073bedbe2607",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "攻撃力",
     "count": 1,
@@ -54,8 +54,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "097e34985d063ff9f1287184aad2ca9cfa76b43bb469e7e2bffab107452b2860",
-    "file": "pages/Home.tsx",
+    "fingerprint": "b1d5494984b050024a5bcf8976ac6212f35b5ef3be50f468453526dbc4f1716f",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "防御力%",
     "count": 1,
@@ -108,8 +108,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "193a7bcbf3b6fc0d9434cc86aa7fae5bf27bbf5134f58df3d966d13efc4f016a",
-    "file": "pages/Home.tsx",
+    "fingerprint": "a8b78f9d60116362a7bf780f5966cd1f7eff51ade96e914f193bc1ee6d1aa60d",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "厳選",
     "count": 1,
@@ -126,8 +126,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "28961c607567fd0aa490bdbd5a8c2cfedd40c0bdda8ff966a50cb4bfdb3e8bd8",
-    "file": "pages/Home.tsx",
+    "fingerprint": "7b66839a5f048ec86743b4893d1352a2d0137dda5e224cea94a252d0039f07ae",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "効果抵抗",
     "count": 1,
@@ -135,8 +135,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "2cb1ecf7801c28b3053c265e3d1f9ad4fe1321192923fac70a281ab34e2d7e5f",
-    "file": "pages/Home.tsx",
+    "fingerprint": "07f6e13d76e4efd6cb787e17df23b239fd440ca28a6796e7b959d039d6ef2273",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "目標",
     "count": 1,
@@ -180,8 +180,8 @@
     "withdrawal": "Legacy display: remove when equipment action descriptions use localized structured references"
   },
   {
-    "fingerprint": "3cf2e902203644b0e1e3225b0cf260d783d1a0ead1e096b334f769afa4b91d84",
-    "file": "pages/Home.tsx",
+    "fingerprint": "977ac88d2f04df171a3aa839768d86a0b7a45d884835f8c8b5e00e67f0fa52c0",
+    "file": "lib/buildComparisons.ts",
     "site": "recommendationsFromComparisons",
     "text": "目標",
     "count": 1,
@@ -198,8 +198,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "40298cd5c2ac816223610b2374c353e553b5cd5fabdefd86c5edfd41d93b1e12",
-    "file": "pages/Home.tsx",
+    "fingerprint": "69bbc6fb853c3fa1097f7c20f7c3d0f901530651fbb931e933325c5215fb1a27",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "妥協",
     "count": 1,
@@ -216,8 +216,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "43f54eacb1fc8937c667f9025bfed4477d579c90bd2d304caf0f892ee3fc742c",
-    "file": "pages/Home.tsx",
+    "fingerprint": "32f733f285ae01b09356a8e6e67c96dc39b7ea9075d9c1948dbc9742775db756",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "速度",
     "count": 1,
@@ -243,8 +243,8 @@
     "withdrawal": "Remove when roles are supplied as structured group IDs"
   },
   {
-    "fingerprint": "51543020d4b57a1f7d71325e59eb1446d9febf2066ebcc765a4675b716a0d9a1",
-    "file": "pages/Home.tsx",
+    "fingerprint": "8c99cbcdb9cc74b19b51ae86a7f689db5a5f39037860c2b740d248b459941df2",
+    "file": "lib/buildComparisons.ts",
     "site": "PriorityRecommendation",
     "text": "優先",
     "count": 1,
@@ -261,8 +261,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "58c7c9589179db007ea39be8fa3b2df2345aa537a77e4f2c78cdbc491c3c954d",
-    "file": "pages/Home.tsx",
+    "fingerprint": "e9cd525e92a9156e1096095e8c5f2263de9d8ea4daefa4e5cc93e17896161c16",
+    "file": "lib/buildComparisons.ts",
     "site": "target",
     "text": "目標",
     "count": 1,
@@ -279,8 +279,8 @@
     "withdrawal": "Remove when roles are supplied as structured group IDs"
   },
   {
-    "fingerprint": "5ab396253106856cd245dd3b56513e809d46576718828a114fed5a7eaf18258c",
-    "file": "pages/Home.tsx",
+    "fingerprint": "b4f5712083582488c099d36f5ffc969b444cf2430896a90ff3442cc502f423d0",
+    "file": "lib/buildComparisons.ts",
     "site": "PriorityRecommendation",
     "text": "最優先",
     "count": 1,
@@ -288,8 +288,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "5d6f9e261557d2704a53b7c312daf2217d89e068bdfe65e396791fc29e1fbced",
-    "file": "pages/Home.tsx",
+    "fingerprint": "f974dba150f9ef9a26192c920e4c394c2cb351ead0ccd0cd6d046db3a6c446e5",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "防御力",
     "count": 1,
@@ -297,8 +297,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "5d87c3e9ababe33777c303225dda41a56a82ba4a342d9c4016b81333806f9bf8",
-    "file": "pages/Home.tsx",
+    "fingerprint": "0d5001ef870aa6c711c20c15618441e77b22827a339fe4f6baa1b8104def1793",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "攻撃力%",
     "count": 1,
@@ -315,8 +315,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "628f391853da039287ff04ca310695efbb6c80858efca8d881c0dbfdbdfe4dee",
-    "file": "pages/Home.tsx",
+    "fingerprint": "17559cd3336504f5288656eb0bdd6bd82e768121a6e815e22c00ec07c7d97055",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "元素熟知",
     "count": 1,
@@ -324,8 +324,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "6464eb657032d970cdfe837dd61f73ae8bc156220db39abc4c1a09a36f828e75",
-    "file": "pages/Home.tsx",
+    "fingerprint": "ea3f000786db22890f4606706585a7ce3652e7cf7f9af1abbe1207800c54c0f2",
+    "file": "lib/buildComparisons.ts",
     "site": "TierName",
     "text": "目標",
     "count": 1,
@@ -342,8 +342,8 @@
     "withdrawal": "Remove when roles are supplied as structured group IDs"
   },
   {
-    "fingerprint": "6c9627a4dbc1f3c28838266bf3e1fa91e2acfaa28c962b9d2a8110f429985fbe",
-    "file": "pages/Home.tsx",
+    "fingerprint": "29485c3ed14e3452da53a55cebbeae9bdd1bca9f409dc9785c436c81bf652eda",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "異常マスタリー",
     "count": 1,
@@ -369,8 +369,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "747650e7ae57f562d625ed61b573ab7712496b0552308d1ef0c2ecafc294810c",
-    "file": "pages/Home.tsx",
+    "fingerprint": "8b6849dcba99dca3127790b1c6bb91f7545f9b4fcda205a7f445b13b798c6925",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "エネルギー自動回復",
     "count": 1,
@@ -423,8 +423,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "7de3ff702dfdc3a3d76c84cc6d18e6356eb7ee5e6b4b4a1545f84a4737e72006",
-    "file": "pages/Home.tsx",
+    "fingerprint": "de561b5fd7a4aed96fb319da7e5366499ae3aa2bad487f2d3de4b9ed7e39a1a5",
+    "file": "lib/buildComparisons.ts",
     "site": "PriorityRecommendation",
     "text": "次点",
     "count": 1,
@@ -432,8 +432,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "7fd42f001a5e1cc5447a8ad136ba3ab64b2f593b153fd6dfea9fd10ea272ebe6",
-    "file": "pages/Home.tsx",
+    "fingerprint": "1f7112353c3a1a91014404d7f7a7661240f1739228289c182400059b2ff77c92",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "厳選",
     "count": 1,
@@ -450,8 +450,8 @@
     "withdrawal": "Legacy display: remove when equipment action descriptions use localized structured references"
   },
   {
-    "fingerprint": "86b0c1949ff8d9dff6595cd6130e176bfc7496d9e19546ae0ceeef10730043c1",
-    "file": "pages/Home.tsx",
+    "fingerprint": "f44b45311618b5519349213e95a5e59d519c242cd1806093b5278e3aad23237d",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "会心ダメージ",
     "count": 1,
@@ -468,8 +468,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "95f755d499f6bd29208c2033b3ab767db037ccc5ccfe9f5eaac94837827b4031",
-    "file": "pages/Home.tsx",
+    "fingerprint": "2c96c5a894d05f1678efa0c14aec9883e9c2af970112a25cd520459952e15b81",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "会心率",
     "count": 1,
@@ -522,8 +522,8 @@
     "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
   },
   {
-    "fingerprint": "aadf7d28acbe17b6d91b289d1cf6a5b5de5ec0a03fc6e0fcec15509c8a9d5b7d",
-    "file": "pages/Home.tsx",
+    "fingerprint": "ab09cb6331e713904cdec777be6d4b82ef63f683fbd1fd46cb82c1144a6e85ef",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "厳選",
     "count": 1,
@@ -558,8 +558,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "b607e7bc1558c6f40ab3eab7ec474293fe6bf697d03db642c8bdfc0808cd99c2",
-    "file": "pages/Home.tsx",
+    "fingerprint": "f72f2e502c38e4fe5b0d3623d1a415fed92aa21c713c129a6348f2152987c809",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "目標",
     "count": 1,
@@ -567,8 +567,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "bac0624f4aff110150eb52440fce292a70ee3aff2f21b5d9c03ad06f2805486c",
-    "file": "pages/Home.tsx",
+    "fingerprint": "f300a020f702bb14b93b5a06d256e079bf195f7e27d3018fab91bfbbe437307a",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "元素チャージ効率",
     "count": 1,
@@ -576,8 +576,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "bae363f9646329f8700c7cc8410bad74b53ccf6ff00e3db279124194eab45152",
-    "file": "pages/Home.tsx",
+    "fingerprint": "e6381a40406cfc182d4380661f77aad26d48a03d0154b670f73846b8b5c2814b",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "妥協",
     "count": 1,
@@ -585,8 +585,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "bbed36c88cbb23f36d3cdf92732ce43c807afae019bfc27927a2eca36a9b44d7",
-    "file": "pages/Home.tsx",
+    "fingerprint": "7035c86319a8910772c63ededc8e339d7055c18852c2cdc6bead59c20951ffee",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "衝撃力",
     "count": 1,
@@ -594,8 +594,8 @@
     "withdrawal": "Remove when the numeric API provides StatKey on every stat"
   },
   {
-    "fingerprint": "bc9aa10beedbb8078633fd5e98cb2c83d931152b246003e71d0f9b26294d28db",
-    "file": "pages/Home.tsx",
+    "fingerprint": "9983f2f03526edd778ea5df7499325334692a1281eda31029bf209f2b781a4c0",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "妥協",
     "count": 1,
@@ -621,8 +621,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "c00bb78d0d2c7d116e8ae4cdf08820e206528fdb942938c798c98ae505ad650c",
-    "file": "pages/Home.tsx",
+    "fingerprint": "a34d37edd1bf2e4574b206b0a4f22c515ba214ccd3bf4a56184fcc31b9c8e0fa",
+    "file": "lib/buildComparisons.ts",
     "site": "TierName",
     "text": "妥協",
     "count": 1,
@@ -630,8 +630,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "c5aefdb1a93f4257c5cd3735249c9085516097b06c5cf1e3e69b629937f541da",
-    "file": "pages/Home.tsx",
+    "fingerprint": "bd9d63f0fe3a80006dfcc8d4f18522ec200602577ce242e54782e33056befc4f",
+    "file": "lib/buildComparisons.ts",
     "site": "priority",
     "text": "次点",
     "count": 1,
@@ -657,8 +657,8 @@
     "withdrawal": "Remove when roles are supplied as structured group IDs"
   },
   {
-    "fingerprint": "c8743b88f98615f325bda95c42dd3c61209c6d4aa093e81caf554bb5ded49137",
-    "file": "pages/Home.tsx",
+    "fingerprint": "2cd38d1e7c0fc00e010dafdf1e1d987227e8ba16f4aa8a98e4e852939539b3ad",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "妥協",
     "count": 1,
@@ -702,8 +702,8 @@
     "withdrawal": "Legacy display: replace the equipment-action compatibility branch with reconciled Japanese template refs before multilingual readiness."
   },
   {
-    "fingerprint": "d19e96d1fa9039d891845f7fe3374e304e38966e75b432cd5e86f343905cc6ef",
-    "file": "pages/Home.tsx",
+    "fingerprint": "a161de9e128fbead30da617430cd5a725e851a459810ad857b9058d221f6ac25",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "貫通率",
     "count": 1,
@@ -738,8 +738,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "dcf2df91033801e97b39f9167732d9840fc4800c863c716ed9bdbee5df55f2c8",
-    "file": "pages/Home.tsx",
+    "fingerprint": "8d2b16c5aabfcbfad14326faa78f618eb19c19e91864304526e554893ee31c3f",
+    "file": "lib/buildComparisons.ts",
     "site": "adjusted",
     "text": "厳選",
     "count": 1,
@@ -756,8 +756,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "dea8719ea91d241b6fa77730d7592fb38a2ef3a91728f24359ecf6bcd69ac53b",
-    "file": "pages/Home.tsx",
+    "fingerprint": "b928e5661e8cba988397edd89098757ed4e20a2f635089f9c5859da4cc26a436",
+    "file": "lib/buildComparisons.ts",
     "site": "statNameForPartyKey",
     "text": "撃破特効",
     "count": 1,
@@ -783,8 +783,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "e7ffa5d72746b647dba254c8119adcce94a323d0b7c6d737947cdd6849ea5a81",
-    "file": "pages/Home.tsx",
+    "fingerprint": "f409d2b511d9fe27ed00d4ac740ea51a7465d33961af080988fa2cd1ecf663e7",
+    "file": "lib/buildComparisons.ts",
     "site": "TierName",
     "text": "厳選",
     "count": 1,
@@ -792,8 +792,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "ed602616e5cb5482b934c51529aa1633a00c6c4ee00327b1b7196c8ffc713e9d",
-    "file": "pages/Home.tsx",
+    "fingerprint": "1658307cd0b6d5e771b3b33abce18ab5e44a79141fc5718177e91d113dff7992",
+    "file": "lib/buildComparisons.ts",
     "site": "partyAdjustedComparisons",
     "text": "目標",
     "count": 1,
@@ -819,8 +819,8 @@
     "withdrawal": "Remove when roles are supplied as structured group IDs"
   },
   {
-    "fingerprint": "f2071446589c2ec6b89241ba5fdfcaac6e38a3bf226e6beb492ba7d57c94bcec",
-    "file": "pages/Home.tsx",
+    "fingerprint": "9977b48c211809c25f4a4f3b2236b48915fa448be391589dcd0d34db9af13ec9",
+    "file": "lib/buildComparisons.ts",
     "site": "priority",
     "text": "優先",
     "count": 1,
@@ -828,8 +828,8 @@
     "withdrawal": "Remove when the numeric API key/discriminator contract is migrated"
   },
   {
-    "fingerprint": "f70718a847b09de41e40efd854e94fd5a3869993ed2dfbb311f2bcdd6afb5104",
-    "file": "pages/Home.tsx",
+    "fingerprint": "7a22a516cc2668f721ec1d5b98f81d3a7ddb5ff11806d7d79c3312011be0af14",
+    "file": "lib/buildComparisons.ts",
     "site": "priority",
     "text": "最優先",
     "count": 1,

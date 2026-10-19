@@ -28,6 +28,7 @@
     "content:report": "tsx scripts/content/commands.ts report",
     "content:export": "tsx scripts/content/commands.ts export",
     "content:ready": "tsx scripts/content/commands.ts ready",
+    "content:backlog": "tsx scripts/content/improvementBacklog.ts",
     "content:generate": "tsx scripts/content/commands.ts generate",
     "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
     "build": "pnpm content:check && vite build && esbuild server/_core/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",

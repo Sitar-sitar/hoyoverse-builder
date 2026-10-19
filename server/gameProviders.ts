@@ -21,6 +21,7 @@ import { records as _en } from "../content/translations/en/gameProviders";
 import { records as _zh } from "../content/translations/zh-CN/gameProviders";
 const _content = createLegacyTexts(_sources, _en, _zh);
 import { TRPCError } from "@trpc/server";
+import { runWithLookupCapacity } from "./_core/lookupCapacity";
 import {
   BuildLookupResult,
   CharacterProfile,
@@ -583,12 +584,13 @@ async function lookupWithCache(uid: string, cache: UidResponseCache<NormalizedBu
   }
   const pending = inFlight.get(uid);
   if (pending) return pending;
-  const request = loader().then(async (payload) => {
+  // in-flight の get から set までに await を挟まない。枠は新規作業の開始時に同期的に取得する。
+  const request = runWithLookupCapacity(() => loader().then(async (payload) => {
     const normalized = await normalize(payload);
     if (!normalized.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: errorMessage("public.profileNotFound") });
     const expiresAt = cache.set(uid, normalized, ttlFromPayload(payload));
     return { ...normalized, cached: false, fetchedAt: new Date().toISOString(), cacheExpiresAt: new Date(expiresAt).toISOString() };
-  }).finally(() => inFlight.delete(uid));
+  })).finally(() => inFlight.delete(uid));
   inFlight.set(uid, request);
   return request;
 }

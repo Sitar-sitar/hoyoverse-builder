@@ -44,6 +44,9 @@ jobs:
       - name: Test Pages migration modes
         run: node --test scripts/pages.test.mjs scripts/wait-production-api.test.mjs scripts/verify-party-appearances.test.mjs
 
+      - name: Test release descriptor and production monitor
+        run: node --test scripts/monitor-production.test.mjs scripts/release-contract.test.mjs
+
       - name: Type check
         run: pnpm check
 
@@ -62,6 +65,12 @@ jobs:
           HOYOVERSE_API_BASE_URL: ${{ vars.HOYOVERSE_API_BASE_URL }}
           HOYOVERSE_NORTHFLANK_API_BASE_URL: ${{ vars.HOYOVERSE_NORTHFLANK_API_BASE_URL }}
         run: node scripts/pages.mjs --verify
+
+      # forward のときだけ公開版descriptorを生成し、他モードでは artifact から release.json を除く。
+      - name: Generate release descriptor
+        env:
+          HOYOVERSE_PAGES_MODE: ${{ vars.HOYOVERSE_PAGES_MODE }}
+        run: node --import tsx scripts/content/releaseManifest.ts
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
@@ -92,3 +101,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+      # 公開後の読み取り専用検査。descriptor が workflow 対象SHAを示し API と一致するまで最大120秒待つ。
+      # 失敗時も自動revert・DB復元・期待版の書換えは行わない。
+      - name: Verify published release
+        if: vars.HOYOVERSE_PAGES_MODE == 'forward'
+        run: node scripts/monitor-production.mjs --expect-revision "$GITHUB_SHA"

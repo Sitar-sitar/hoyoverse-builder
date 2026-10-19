@@ -2,6 +2,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { spawn, type ChildProcess } from "node:child_process";
 import { request } from "node:http";
 import path from "node:path";
+import { PRODUCTION_DB_TEST_ENV } from "./fixtures/productionDbEnv";
 
 /**
  * Express 層のレート制限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(B)(D)）。
@@ -46,7 +47,7 @@ function send(method: string, pathname: string, body?: string): Promise<RawRespo
 beforeAll(async () => {
   server = spawn(process.execPath, ["--import", "tsx", "server/_core/index.ts"], {
     cwd: ROOT,
-    env: { ...process.env, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
+    env: { ...process.env, ...PRODUCTION_DB_TEST_ENV, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
     stdio: ["ignore", "pipe", "pipe"],
   });
   port = await new Promise<number>((resolve, reject) => {

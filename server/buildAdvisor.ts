@@ -24,6 +24,7 @@ import { records as _en } from "../content/translations/en/buildAdvisor";
 import { records as _zh } from "../content/translations/zh-CN/buildAdvisor";
 const _content = createLegacyTexts(_sources, _en, _zh);
 import { TRPCError } from "@trpc/server";
+import { runWithLookupCapacity } from "./_core/lookupCapacity";
 import { FIELD_TO_COMPONENT, FIELD_TO_STAT_KEY, fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
 import { generatedHsrGuide } from "./individualGuides";
 import { guideMetadataFor } from "./characterGuideMetadata";
@@ -679,7 +680,8 @@ export async function lookupUidBuild(uid: string): Promise<BuildLookupResult> {
   }
   const pending = inFlightLookups.get(uid);
   if (pending) return pending;
-  const request = lookupWithFallback(() => requestMihomo(uid), () => requestEnka(uid)).finally(() => inFlightLookups.delete(uid));
+  // 枠は fallback 全体の外側で取る。内側で枠不足を投げると lookupWithFallback が Enka へ誤って fallback する。
+  const request = runWithLookupCapacity(() => lookupWithFallback(() => requestMihomo(uid), () => requestEnka(uid))).finally(() => inFlightLookups.delete(uid));
   inFlightLookups.set(uid, request);
   return request;
 }

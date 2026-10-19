@@ -1,0 +1,1988 @@
+{
+  "noChanges/ja": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "目標 4000 まであと 1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "目標 70% まであと 7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "目標 145 まであと 11"
+      }
+    ]
+  },
+  "override/ja": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度（PT）",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 170,
+          "目標": 160,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 4000,
+          "目標": 3600,
+          "妥協": 3200
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "目標 4000 まであと 1600"
+      },
+      {
+        "key": "speed",
+        "label": "速度（PT）",
+        "unit": "",
+        "current": 134,
+        "target": 160,
+        "deficit": 26,
+        "priority": "優先",
+        "rationale": "目標 160 まであと 26"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "目標 70% まであと 7.7%"
+      }
+    ]
+  },
+  "newStats/ja": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "撃破特効",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "effectHitRate",
+        "label": "効果命中",
+        "unit": "%",
+        "current": 67.2,
+        "currentDisplay": "67.2%",
+        "targets": {
+          "厳選": 80,
+          "目標": 67.2,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "elementalMastery",
+        "label": "元素熟知",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 300,
+          "目標": 200,
+          "妥協": 100
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "impact",
+        "label": "衝撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "未取得",
+        "targets": {
+          "厳選": 200,
+          "目標": 180,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "目標 4000 まであと 1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "目標 70% まであと 7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "目標 145 まであと 11"
+      }
+    ]
+  },
+  "duplicateKeys/ja": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率（凸）",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 80,
+          "目標": 62.3,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "撃破特効A",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "撃破特効B",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1400,
+          "目標": 1300,
+          "妥協": 1200
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "目標 4000 まであと 1600"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "目標 145 まであと 11"
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "target": 150,
+        "deficit": 10,
+        "priority": "次点",
+        "rationale": "目標 150% まであと 10.0%"
+      }
+    ]
+  },
+  "deficit/ja": [
+    "あと 0.1%未満",
+    "あと 0.1%",
+    "あと 1未満",
+    "あと 1",
+    "あと 12.3%",
+    "あと 7"
+  ],
+  "noChanges/en": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      }
+    ]
+  },
+  "override/en": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "SPD (team)",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 170,
+          "目標": 160,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "Energy Regen",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "ATK",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 4000,
+          "目標": 3600,
+          "妥協": 3200
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "speed",
+        "label": "SPD (team)",
+        "unit": "",
+        "current": 134,
+        "target": 160,
+        "deficit": 26,
+        "priority": "優先",
+        "rationale": "160 / -26"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      }
+    ]
+  },
+  "newStats/en": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "Break Effect",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "effectHitRate",
+        "label": "Effect Hit Rate",
+        "unit": "%",
+        "current": 67.2,
+        "currentDisplay": "67.2%",
+        "targets": {
+          "厳選": 80,
+          "目標": 67.2,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "elementalMastery",
+        "label": "Elemental Mastery",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 300,
+          "目標": 200,
+          "妥協": 100
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "impact",
+        "label": "Impact",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "未取得",
+        "targets": {
+          "厳選": 200,
+          "目標": 180,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      }
+    ]
+  },
+  "duplicateKeys/en": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "CRIT Rate (eidolon)",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 80,
+          "目標": 62.3,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "Break A",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "Break B",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1400,
+          "目標": 1300,
+          "妥協": 1200
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "target": 150,
+        "deficit": 10,
+        "priority": "次点",
+        "rationale": "150% / -10.0%"
+      }
+    ]
+  },
+  "deficit/en": [
+    "-<0.1%",
+    "-0.1%",
+    "-<1",
+    "-1",
+    "-12.3%",
+    "-7"
+  ],
+  "noChanges/zh-CN": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      }
+    ]
+  },
+  "override/zh-CN": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度（队伍）",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 170,
+          "目標": 160,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "能量恢复效率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻击力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 4000,
+          "目標": 3600,
+          "妥協": 3200
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "speed",
+        "label": "速度（队伍）",
+        "unit": "",
+        "current": 134,
+        "target": 160,
+        "deficit": 26,
+        "priority": "優先",
+        "rationale": "160 / -26"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      }
+    ]
+  },
+  "newStats/zh-CN": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 75,
+          "目標": 70,
+          "妥協": 60
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "击破特攻",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "effectHitRate",
+        "label": "效果命中",
+        "unit": "%",
+        "current": 67.2,
+        "currentDisplay": "67.2%",
+        "targets": {
+          "厳選": 80,
+          "目標": 67.2,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "elementalMastery",
+        "label": "元素精通",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 300,
+          "目標": 200,
+          "妥協": 100
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "impact",
+        "label": "冲击力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "未取得",
+        "targets": {
+          "厳選": 200,
+          "目標": 180,
+          "妥協": 150
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "critRate",
+        "label": "会心率",
+        "unit": "%",
+        "current": 62.3,
+        "target": 70,
+        "deficit": 7.700000000000003,
+        "priority": "優先",
+        "rationale": "70% / -7.7%"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      }
+    ]
+  },
+  "duplicateKeys/zh-CN": {
+    "adjusted": [
+      {
+        "key": "critRate",
+        "label": "暴击率（星魂）",
+        "unit": "%",
+        "current": 62.3,
+        "currentDisplay": "62.3%",
+        "targets": {
+          "厳選": 80,
+          "目標": 62.3,
+          "妥協": 50
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": true,
+          "妥協": true
+        }
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "currentDisplay": "140%",
+        "targets": {
+          "厳選": 160,
+          "目標": 150,
+          "妥協": 130
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "currentDisplay": "134",
+        "targets": {
+          "厳選": 160,
+          "目標": 145,
+          "妥協": 134
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "energyRegen",
+        "label": "EP回復効率",
+        "unit": "%",
+        "current": 119.39999999999999,
+        "currentDisplay": "119.39999999999999%",
+        "targets": {
+          "厳選": 124.4,
+          "目標": 119.4,
+          "妥協": 110
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "attack",
+        "label": "攻撃力",
+        "unit": "",
+        "current": null,
+        "currentDisplay": "—",
+        "targets": {
+          "厳選": 3800,
+          "目標": 3500,
+          "妥協": 3000
+        },
+        "achieved": {
+          "厳選": null,
+          "目標": null,
+          "妥協": null
+        }
+      },
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "currentDisplay": "2400",
+        "targets": {
+          "厳選": 5000,
+          "目標": 4000,
+          "妥協": 3500
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": false
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "击破A",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1300,
+          "目標": 1250,
+          "妥協": 1100
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      },
+      {
+        "key": "breakEffect",
+        "label": "击破B",
+        "unit": "%",
+        "current": 1234.5,
+        "currentDisplay": "1,234.5%",
+        "targets": {
+          "厳選": 1400,
+          "目標": 1300,
+          "妥協": 1200
+        },
+        "achieved": {
+          "厳選": false,
+          "目標": false,
+          "妥協": true
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "key": "hp",
+        "label": "HP",
+        "unit": "",
+        "current": 2400,
+        "target": 4000,
+        "deficit": 1600,
+        "priority": "最優先",
+        "rationale": "4000 / -1600"
+      },
+      {
+        "key": "speed",
+        "label": "速度",
+        "unit": "",
+        "current": 134,
+        "target": 145,
+        "deficit": 11,
+        "priority": "次点",
+        "rationale": "145 / -11"
+      },
+      {
+        "key": "critDmg",
+        "label": "会心ダメージ",
+        "unit": "%",
+        "current": 140,
+        "target": 150,
+        "deficit": 10,
+        "priority": "次点",
+        "rationale": "150% / -10.0%"
+      }
+    ]
+  },
+  "deficit/zh-CN": [
+    "-<0.1%",
+    "-0.1%",
+    "-<1",
+    "-1",
+    "-12.3%",
+    "-7"
+  ]
+}

@@ -14,6 +14,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { registerGitHubAdminAuthRoutes } from "./githubAdminAuth";
 import { serveStatic, setupVite } from "./vite";
+import { DatabaseConfigError, validateDatabaseConfig } from "./databaseConnection";
 
 const DEFAULT_CORS_ORIGINS = ["https://sitar-sitar.github.io"];
 
@@ -94,6 +95,8 @@ async function startServer() {
   booleanSetting("API_MAINTENANCE");
   booleanSetting("API_MIGRATION_PREVIEW");
   validateClientIpConfiguration();
+  // DB設定の不備は HTTP を受け付ける前に拒否する（getDb の catch で null にして起動を続けない）。
+  validateDatabaseConfig();
   const app = express();
   const server = createServer(app);
   const apiOnly = process.env.API_ONLY === "true";
@@ -173,4 +176,9 @@ async function startServer() {
   });
 }
 
-startServer().catch(error => { console.error(error); process.exitCode = 1; });
+startServer().catch(error => {
+  // 設定不備は固定コードだけを出す。URL・CAのpath・生の解析例外を最上位のログへ渡さない。
+  if (error instanceof DatabaseConfigError) console.error(`[Database] Invalid configuration: ${error.code}`);
+  else console.error(error);
+  process.exitCode = 1;
+});

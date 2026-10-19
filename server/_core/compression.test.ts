@@ -3,6 +3,7 @@ import { spawn, type ChildProcess } from "node:child_process";
 import { request } from "node:http";
 import { gunzipSync } from "node:zlib";
 import path from "node:path";
+import { PRODUCTION_DB_TEST_ENV } from "./fixtures/productionDbEnv";
 
 /**
  * 応答圧縮の回帰ゲート（設計: docs/修正設計書_更新履歴APIの転送量削減_2026-09-10.md D2）。
@@ -40,7 +41,7 @@ function get(pathname: string, headers: Record<string, string>): Promise<RawResp
 beforeAll(async () => {
   server = spawn(process.execPath, ["--import", "tsx", "server/_core/index.ts"], {
     cwd: ROOT,
-    env: { ...process.env, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
+    env: { ...process.env, ...PRODUCTION_DB_TEST_ENV, API_ONLY: "true", NODE_ENV: "production", PORT: String(PORT_BASE) },
     stdio: ["ignore", "pipe", "pipe"],
   });
   port = await new Promise<number>((resolve, reject) => {
