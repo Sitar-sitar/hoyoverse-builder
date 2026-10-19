@@ -9,7 +9,7 @@
 | 対象 | 構成（文書上の最終受入） | 確認日・根拠 | 現在値 |
 | --- | --- | --- | --- |
 | Pages | https://sitar-sitar.github.io/hoyoverse-builder/app/ 、旧入口の既知ルートは対応appルートへ転送 | 2026-10-09 Phase 57受入（実装ログ） | 公開URLは2026-10-19に応答を確認（Cache-Control: max-age=600） |
-| API | https://http--hoyoverse-api--s48krvgv8tjs.code.run | 2026-10-09 Phase 57受入 | 未確認 |
+| API | https://http--hoyoverse-api--s48krvgv8tjs.code.run | 2026-10-19 Phase 60配備時のhealth | `a0cb015`・通常受付・CORS正常を確認 |
 | API service | hoyoverse-api、Dockerfile.northflank（NODE_ENV=productionをimageで固定）、main追随、CI/CD ON、1 instance、Recreate | CI/CD ONは2026-10-08設定・2026-10-09に通常main更新で全経路受入（Phase 57） | 未確認 |
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB | 2026-10-08以前の台帳 | 未確認 |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS | 台帳 2026-10-05〜10-08 | 未確認（最大接続数は未測定） |
@@ -17,8 +17,8 @@
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false | 2026-10-09 health | 未確認 |
 | CORS | https://sitar-sitar.github.io（pathを含めない） | 2026-10-09 | 未確認 |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin | 2026-10-09 | 未確認 |
-| DB接続設定 | DATABASE_URL（queryなし）、DATABASE_SSL_CA_FILE=/secrets/mysql-ca.pem をAPIとJobへ個別mount | 2026-10-08 認証情報更新 | 未確認。Phase 60以降はproductionでquery付きURL・CA欠落・不正PEMを起動前に拒否する |
-| 外部監視 | GitHub Actions `Monitor Northflank production` | 2026-10-08に disabled_manually（過去記録参照） | 未確認。Phase 60 E公開後の再開は利用者判断 |
+| DB接続設定 | DATABASE_URL（queryなし）、DATABASE_SSL_CA_FILE=/secrets/mysql-ca.pem をAPIとJobへ個別mount | 2026-10-19 利用者確認（G-02、値は未記録） | APIは起動前検証を通過し公開表示設定をDBから取得。Jobの実接続は未確認。productionでquery付きURL・CA欠落・不正PEMを起動前に拒否する |
+| 外部監視 | GitHub Actions `Monitor Northflank production`（descriptor起点、Phase 60） | 2026-10-19に利用者指示で再開（active）、手動run成功 | 再開後の定期runは確認待ち |
 | 定期backup | Snapshot、日曜18:00 UTC＝月曜03:00 JST、保持28日 | 台帳 | 未確認 |
 
 秘密値（DB URL、password、CA本文、GitHub App secret、session鍵）は文書・ログ・Issueへ保存しない。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1はこの配備で実測した値で、別環境へ流用しない。認証は[GitHub App認証ガイド](github-admin-auth.md)を参照する。
