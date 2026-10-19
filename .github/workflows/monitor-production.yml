@@ -21,9 +21,8 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 22
-      - name: Verify production health
-        env:
-          HOYOVERSE_MONITOR_REVISION: ${{ vars.HOYOVERSE_MONITOR_REVISION }}
+      # 期待版は公開中の Pages descriptor から決める。Repository variable による上書きは使わない。
+      - name: Verify production release and content
         run: node scripts/monitor-production.mjs
       - name: Retain sanitized observation
         if: always()
