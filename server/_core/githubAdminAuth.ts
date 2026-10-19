@@ -288,8 +288,42 @@ export async function authenticateGitHubAdminRequest(req: Request) {
   }
 }
 
-async function exchangeCodeForToken(code: string, callbackUrl: string) {
-  const response = await fetch(GITHUB_TOKEN_URL, {
+/**
+ * GitHub との各通信は fetch 開始から JSON 本文の読取完了まで5秒で打ち切る。再送はしない。
+ * 設計: docs/修正設計書_運用安定化と保守性改善_2026-10-19.md §5.3
+ */
+export const OAUTH_REQUEST_TIMEOUT_MS = 5_000;
+
+export type OAuthFailureReason = "oauth_timeout" | "oauth_upstream_failed";
+
+export class OAuthRequestError extends Error {
+  constructor(readonly reason: OAuthFailureReason) {
+    super(reason);
+    this.name = "OAuthRequestError";
+  }
+}
+
+async function requestGitHubJson(url: string, init: RequestInit): Promise<unknown> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), OAUTH_REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, { ...init, signal: controller.signal });
+    if (!response.ok) {
+      await response.body?.cancel().catch(() => {});
+      throw new OAuthRequestError("oauth_upstream_failed");
+    }
+    return await response.json();
+  } catch (error) {
+    if (controller.signal.aborted) throw new OAuthRequestError("oauth_timeout");
+    if (error instanceof OAuthRequestError) throw error;
+    throw new OAuthRequestError("oauth_upstream_failed");
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+export async function exchangeCodeForToken(code: string, callbackUrl: string) {
+  const payload = await requestGitHubJson(GITHUB_TOKEN_URL, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -301,30 +335,22 @@ async function exchangeCodeForToken(code: string, callbackUrl: string) {
       code,
       redirect_uri: callbackUrl,
     }),
-  });
-
-  if (!response.ok) throw new Error(`GitHub token exchange failed: ${response.status}`);
-  const payload = await response.json() as { access_token?: string; error?: string; error_description?: string };
-  if (!payload.access_token) {
-    throw new Error(payload.error_description || payload.error || "GitHub access token missing");
-  }
+  }) as { access_token?: string } | null;
+  if (!payload?.access_token) throw new OAuthRequestError("oauth_upstream_failed");
   return payload.access_token;
 }
 
-async function fetchGitHubUser(accessToken: string) {
-  const response = await fetch(GITHUB_USER_URL, {
+export async function fetchGitHubUser(accessToken: string) {
+  const user = await requestGitHubJson(GITHUB_USER_URL, {
     headers: {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${accessToken}`,
       "X-GitHub-Api-Version": GITHUB_API_VERSION,
       "User-Agent": "hoyoverse-builder-admin",
     },
-  });
-  if (!response.ok) throw new Error(`GitHub user lookup failed: ${response.status}`);
-
-  const user = await response.json() as Partial<GitHubUser>;
-  if (!Number.isSafeInteger(user.id) || typeof user.login !== "string") {
-    throw new Error("GitHub user response is missing id/login");
+  }) as Partial<GitHubUser> | null;
+  if (!user || !Number.isSafeInteger(user.id) || typeof user.login !== "string") {
+    throw new OAuthRequestError("oauth_upstream_failed");
   }
   return user as GitHubUser;
 }
@@ -434,7 +460,9 @@ export function registerGitHubAdminAuthRoutes(app: Express) {
       frontendUrl.hash = new URLSearchParams({ admin_exchange_code: exchangeCode }).toString();
       res.redirect(302, frontendUrl.toString());
     } catch (error) {
-      console.error("[GitHub Admin Auth] Callback failed", error);
+      // code/state/token・URL・上流本文・例外オブジェクトはログへ出さない。固定理由コードだけを残す。
+      const reason: OAuthFailureReason = error instanceof OAuthRequestError ? error.reason : "oauth_upstream_failed";
+      console.error(`[GitHub Admin Auth] Callback failed: ${reason}`);
       res.status(502).json({ error: "GitHub administrator authentication failed" });
     }
   });

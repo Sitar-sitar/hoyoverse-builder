@@ -8,11 +8,22 @@ import { buildDailyLookupSeries, resolveDailyWindow } from "./lookupDailySeries"
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
+/**
+ * 接続10本を使用中の追加要求は待たずに即時失敗させる。非待機の根拠は waitForConnections=false であり、
+ * queueLimit=0（mysql2では無制限の意味）ではない。pool生成は接続成功を意味しない。
+ * 設計: docs/修正設計書_運用安定化と保守性改善_2026-10-19.md §5.4
+ */
+export const DB_POOL_OPTIONS = { connectionLimit: 10, waitForConnections: false, queueLimit: 0, connectTimeout: 10_000 } as const;
+
+export function createDbPool(url: string) {
+  return createPool({ ...databaseConnection(url), ...DB_POOL_OPTIONS });
+}
+
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
-      _db = drizzle(createPool(databaseConnection(process.env.DATABASE_URL)));
+      _db = drizzle(createDbPool(process.env.DATABASE_URL));
     } catch (error) {
       console.warn("[Database] Failed to connect:", error);
       _db = null;
