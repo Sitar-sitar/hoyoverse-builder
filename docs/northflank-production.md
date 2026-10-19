@@ -17,8 +17,8 @@
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false | 2026-10-09 health | 未確認 |
 | CORS | https://sitar-sitar.github.io（pathを含めない） | 2026-10-09 | 未確認 |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin | 2026-10-09 | 未確認 |
-| DB接続設定 | DATABASE_URL（queryなし）、DATABASE_SSL_CA_FILE=/secrets/mysql-ca.pem をAPIとJobへ個別mount | 2026-10-19 利用者確認（G-02、値は未記録） | APIは起動前検証を通過し公開表示設定をDBから取得。Jobの実接続は未確認。productionでquery付きURL・CA欠落・不正PEMを起動前に拒否する |
-| 外部監視 | GitHub Actions `Monitor Northflank production`（descriptor起点、Phase 60） | 2026-10-19に利用者指示で再開（active）、手動run成功 | 再開後の定期runは確認待ち |
+| DB接続設定 | DATABASE_URL（queryなし）、DATABASE_SSL_CA_FILE=/secrets/mysql-ca.pem をAPIとJobへ個別mount | 2026-10-19 利用者確認（G-02、値は未記録） | APIは起動前検証を通過し公開表示設定をDBから取得。Jobの実接続は未確認（2026-10-20、Run画面でimageにアクセスできず読取確認を開始できず。Job imageは旧digestで起動前検証も未有効。次のmigration時に解消）。productionでquery付きURL・CA欠落・不正PEMを起動前に拒否する |
+| 外部監視 | GitHub Actions `Monitor Northflank production`（descriptor起点、Phase 60） | 2026-10-19に利用者指示で再開（active）、手動run成功。再開後最初の定期run `39311424899`（2026-10-19 19:29Z）reason=ok | 以後の定期runは未確認。GitHub scheduleは数時間間隔になることがあり、24時間連続観察とは扱わない |
 | 定期backup | Snapshot、日曜18:00 UTC＝月曜03:00 JST、保持28日 | 台帳 | 未確認 |
 
 秘密値（DB URL、password、CA本文、GitHub App secret、session鍵）は文書・ログ・Issueへ保存しない。CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1はこの配備で実測した値で、別環境へ流用しない。認証は[GitHub App認証ガイド](github-admin-auth.md)を参照する。
@@ -40,7 +40,7 @@ DB schema変更を含まない更新の手順。docsだけの変更でもmain更
 
 ### 公開監視の読み方（Phase 60 E）
 
-監視の期待版は公開中のdescriptorから決める。固定RELEASEやRepository variable `HOYOVERSE_MONITOR_REVISION`は使わない（残っていても無視する）。各runは descriptor→health→（版一致時だけ）図鑑一覧と3件の代表詳細→descriptor/healthの再読 を直列に行い、次の理由を1つ記録する。
+監視の期待版は公開中のdescriptorから決める。固定RELEASEやRepository variable `HOYOVERSE_MONITOR_REVISION`は使わない（同variableは2026-10-19に削除済み。残るRepository variableは`HOYOVERSE_API_BASE_URL`・`HOYOVERSE_NORTHFLANK_API_BASE_URL`・`HOYOVERSE_PAGES_MODE`）。各runは descriptor→health→（版一致時だけ）図鑑一覧と3件の代表詳細→descriptor/healthの再読 を直列に行い、次の理由を1つ記録する。
 
 | 理由 | 意味 | 対応 |
 | --- | --- | --- |
