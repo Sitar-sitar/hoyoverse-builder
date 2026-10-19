@@ -103,10 +103,17 @@ test('a stalled body is aborted by the per-request timeout', { timeout: 20_000 }
   const stalled = (_n, options) => new Response(new ReadableStream({
     start(controller) { options.signal.addEventListener('abort', () => controller.error(new Error('aborted'))); },
   }), { headers: { 'content-type': 'application/json' } });
-  const started = Date.now();
-  const result = await runCheck({ fetcher: site({ descriptor: stalled }).fetcher });
-  assert.equal(result.reason, 'request_failed');
-  assert.ok(Date.now() - started >= 9_000);
+  // AbortSignal.timeout のタイマーは unref のため、偽の停止 stream だけでは event loop が空になる。
+  // 実通信では socket が loop を保持するので、試験中だけ ref 付きタイマーで同じ状態を作る。
+  const keepAlive = setInterval(() => {}, 1_000);
+  try {
+    const started = Date.now();
+    const result = await runCheck({ fetcher: site({ descriptor: stalled }).fetcher });
+    assert.equal(result.reason, 'request_failed');
+    assert.ok(Date.now() - started >= 9_000);
+  } finally {
+    clearInterval(keepAlive);
+  }
 });
 
 test('API ahead of Pages: skips the 4 content reads and reports api_ahead', async () => {
