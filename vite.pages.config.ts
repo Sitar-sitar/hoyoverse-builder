@@ -3,12 +3,13 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import { defineConfig, type Plugin } from "vite";
 import { contentCommand } from "./scripts/content/commands";
+import { injectPagesCsp, pagesApiOrigin } from "./shared/pagesCsp";
 
 function githubPagesHtmlCompatibility(): Plugin {
   return {
     name: "github-pages-html-compatibility",
     transformIndexHtml(html) {
-      return (
+      return injectPagesCsp((
         preview === "true"
           ? html.replace(
               "</head>",
@@ -18,7 +19,7 @@ function githubPagesHtmlCompatibility(): Plugin {
       ).replace(
         /\s*<script defer src="%VITE_ANALYTICS_ENDPOINT%\/umami" data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"><\/script>/,
         ""
-      );
+      ), apiOrigin);
     },
   };
 }
@@ -26,6 +27,8 @@ function githubPagesHtmlCompatibility(): Plugin {
 const base = process.env.PAGES_BASE_PATH ?? "/hoyoverse-builder/";
 const output = process.env.PAGES_OUTPUT_DIR ?? "dist/public";
 const preview = process.env.VITE_MIGRATION_PREVIEW ?? "false";
+// 公開CSPのconnect-src/form-actionに入れるAPI origin。HTTPSのoriginでなければbuildを止める。
+const apiOrigin = pagesApiOrigin(process.env.VITE_API_BASE_URL);
 if (!["/hoyoverse-builder/", "/hoyoverse-builder/app/"].includes(base))
   throw new Error("Invalid PAGES_BASE_PATH");
 if (!["dist/public", "dist/pages-legacy", "dist/pages-next"].includes(output))
