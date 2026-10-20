@@ -11,6 +11,7 @@ import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity } from "./characterIdentity";
 import { constellationProfileFor } from "./characterConstellations";
 import { HSR_PATH_LABELS } from "./characterGuideCatalog";
+import { BodyLimitError, createByteBudget, HSR_STATIC_BUNDLE_LIMIT_BYTES, HSR_STATIC_FILE_LIMIT_BYTES, readBoundedText, UID_BODY_LIMIT_BYTES, type ByteBudget } from "./_core/boundedBody";
 
 type RawRecord = Record<string, unknown>;
 type LookupData = Omit<BuildLookupResult, "cached" | "cacheExpiresAt" | "fetchedAt">;
@@ -51,6 +52,7 @@ const STATIC_RETRY_SUPPRESSION_MS = 60 * 1000;
 let staticCache: { value: StaticIndex; expiresAt: number } | null = null;
 let lastKnownGoodStatic: { value: StaticIndex; savedAt: number } | null = null;
 let staticNextRetryAt = 0;
+let staticPending: Promise<StaticIndex> | null = null;
 
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
   "1014": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00001") }, "1310": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00002") }, "1407": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00003") }, "1506": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00004") }, "1508": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00005") }, "1509": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00006") },
@@ -66,11 +68,12 @@ function str(value: unknown, fallback = ""): string { return typeof value === "s
 function num(value: unknown): number | null { return typeof value === "number" && Number.isFinite(value) ? value : null; }
 function map(value: unknown): Record<string, RawRecord> { const source = record(value); return Object.fromEntries(Object.entries(source).map(([key, item]) => [key, record(item)])); }
 
-async function fetchStaticMap(endpoint: string, signal: AbortSignal): Promise<Record<string, RawRecord> | null> {
+async function fetchStaticMap(endpoint: string, signal: AbortSignal, budget: ByteBudget): Promise<Record<string, RawRecord> | null> {
   try {
     const response = await fetch(`${STATIC_BASE}/${endpoint}.json`, { headers: { "User-Agent": "Star-Rail-Build-Advisor/1.0 (personal-use)" }, signal });
     if (!response.ok) return null;
-    const json: unknown = await response.json();
+    // 上限超過・本文不正はcatchでnullとなり、静的取得の失敗（LKG/EMPTY＋再試行抑止）になる。
+    const json: unknown = JSON.parse(await readBoundedText(response, { maxBytes: HSR_STATIC_FILE_LIMIT_BYTES, budget }));
     if (!json || typeof json !== "object" || Array.isArray(json)) return null;
     const parsed = map(json);
     return Object.keys(parsed).length ? parsed : null;
@@ -84,7 +87,8 @@ async function loadStaticIndex(): Promise<StaticIndex | null> {
   const timeout = setTimeout(() => controller.abort(), STATIC_FETCH_TIMEOUT_MS);
   try {
     const keys = Object.keys(STATIC_ENDPOINTS) as (keyof StaticIndex)[];
-    const results = await Promise.all(keys.map((key) => fetchStaticMap(STATIC_ENDPOINTS[key], controller.signal)));
+    const budget = createByteBudget(HSR_STATIC_BUNDLE_LIMIT_BYTES);
+    const results = await Promise.all(keys.map((key) => fetchStaticMap(STATIC_ENDPOINTS[key], controller.signal, budget)));
     const value = {} as StaticIndex;
     for (let i = 0; i < keys.length; i++) {
       const result = results[i];
@@ -114,16 +118,21 @@ export async function getStaticIndex(): Promise<StaticIndex> {
   // 失敗直後は外部へ行かない。8 エンドポイントを 5 秒のタイムアウトで毎回叩き直すと、
   // 障害中は照会のたびにその分だけ待たされる。
   if (now < staticNextRetryAt) return staticIndexWithoutFetch(now);
-
-  const fresh = await loadStaticIndex();
-  if (fresh) {
-    staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
-    lastKnownGoodStatic = { value: fresh, savedAt: now };
-    staticNextRetryAt = 0;
-    return fresh;
-  }
-  staticNextRetryAt = Date.now() + STATIC_RETRY_SUPPRESSION_MS;
-  return staticIndexWithoutFetch(now);
+  // 同時のcold取得は1回にまとめ、結果（fresh / LKG / EMPTY）を全待機者で共有する。
+  // cache・LKG・再試行抑止の更新まで含めて共有し、完了後は共有を解く（失敗Promiseを再利用しない）。
+  if (staticPending) return staticPending;
+  staticPending = (async () => {
+    const fresh = await loadStaticIndex();
+    if (fresh) {
+      staticCache = { value: fresh, expiresAt: now + STATIC_TTL_MS };
+      lastKnownGoodStatic = { value: fresh, savedAt: now };
+      staticNextRetryAt = 0;
+      return fresh;
+    }
+    staticNextRetryAt = Date.now() + STATIC_RETRY_SUPPRESSION_MS;
+    return staticIndexWithoutFetch(now);
+  })().finally(() => { staticPending = null; });
+  return staticPending;
 }
 
 /** テスト専用。モジュール内の静的データ状態を初期化する。 */
@@ -131,6 +140,7 @@ export function resetStaticIndexForTests() {
   staticCache = null;
   lastKnownGoodStatic = null;
   staticNextRetryAt = 0;
+  staticPending = null;
 }
 
 // ---- プロパティ分類（properties.json のメタデータ駆動） ----
@@ -534,7 +544,7 @@ export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData;
     const response = await fetch(`https://enka.network/api/hsr/uid/${encodeURIComponent(uid)}/`, { headers: { "User-Agent": "Star-Rail-Build-Advisor/1.0 (personal-use)" }, signal: controller.signal });
     if (!response.ok) throw enkaStatusError(response.status);
 
-    const raw = await response.text();
+    const raw = await readBoundedText(response, { maxBytes: UID_BODY_LIMIT_BYTES });
     let payload: unknown;
     try {
       payload = JSON.parse(raw || "{}");
@@ -549,6 +559,8 @@ export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData;
     return { data, ttlSeconds: num(record(payload).ttl) };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
+    // UID応答の上限超過は上流障害として扱う。ここは既にfallback内なので再fallbackしない。
+    if (error instanceof BodyLimitError) throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
     throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UNREACHABLE_MESSAGE, cause: error });
   } finally { clearTimeout(timeout); }
 }

@@ -25,6 +25,7 @@ import { records as _zh } from "../content/translations/zh-CN/buildAdvisor";
 const _content = createLegacyTexts(_sources, _en, _zh);
 import { TRPCError } from "@trpc/server";
 import { runWithLookupCapacity } from "./_core/lookupCapacity";
+import { readBoundedText, UID_BODY_LIMIT_BYTES } from "./_core/boundedBody";
 import { FIELD_TO_COMPONENT, FIELD_TO_STAT_KEY, fetchEnkaPayload, isEnkaResultComplete } from "./enkaFallback";
 import { generatedHsrGuide } from "./individualGuides";
 import { guideMetadataFor } from "./characterGuideMetadata";
@@ -620,7 +621,8 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
       signal: controller.signal,
     });
     const contentType = response.headers.get("content-type") ?? "";
-    const rawBody = await response.text();
+    // 上限超過は主取得の失敗としてcatchで扱われ、lookupWithFallbackがEnkaへfallbackする。
+    const rawBody = await readBoundedText(response, { maxBytes: UID_BODY_LIMIT_BYTES });
     const payload: unknown = contentType.toLowerCase().includes("application/json")
       ? JSON.parse(rawBody || "{}")
       : {};
