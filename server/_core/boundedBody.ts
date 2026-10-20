@@ -8,15 +8,15 @@
 export const MiB = 1024 * 1024;
 
 /**
- * 上限値は暫定（2026-10-20）。隔離測定で設計値（16/4/4 MiB）の最悪時peak RSSが受入基準を超えたため、
- * U-3の実測と本番の常駐メモリを踏まえて利用者が採用値を決めるまで公開しない（実装ログ Phase 61 参照）。
+ * 上限値は2026-10-20に利用者が採用（最悪時の隔離測定で設計初期値16/4/4 MiBのpeak RSSが過大だったため）。
+ * 実データ（HSR bundle 3.63 MiB・最大ファイル2.43 MiB、原神0.40 MiB、ZZZ 0.53 MiB）に対する余裕を残す。
  */
-/** UID応答（MiHoMo/Enka/原神/ZZZ）。 */
-export const UID_BODY_LIMIT_BYTES = 4 * MiB;
-export const HSR_STATIC_FILE_LIMIT_BYTES = 8 * MiB;
-export const HSR_STATIC_BUNDLE_LIMIT_BYTES = 16 * MiB;
-export const ENKA_STORE_FILE_LIMIT_BYTES = 4 * MiB;
-export const ENKA_STORE_BUNDLE_LIMIT_BYTES = 4 * MiB;
+/** UID応答（MiHoMo/Enka/原神/ZZZ）。U-3の実測で確定する。 */
+export const UID_BODY_LIMIT_BYTES = 1 * MiB;
+export const HSR_STATIC_FILE_LIMIT_BYTES = 4 * MiB;
+export const HSR_STATIC_BUNDLE_LIMIT_BYTES = 8 * MiB;
+export const ENKA_STORE_FILE_LIMIT_BYTES = 2 * MiB;
+export const ENKA_STORE_BUNDLE_LIMIT_BYTES = 2 * MiB;
 
 export class BodyLimitError extends Error {
   constructor() {
