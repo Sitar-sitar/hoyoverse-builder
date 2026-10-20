@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # pnpm は指摘検出時にも非ゼロで終わるため、保存した出力の内容でゲートが判定する（通信失敗は不合格）。
+      - name: Audit production dependencies
+        run: |
+          pnpm audit --prod --json > audit.json || true
+          node scripts/audit-gate.mjs audit.json
+
       - name: Run tests
         run: pnpm test
 
@@ -33,7 +39,7 @@ jobs:
         run: pnpm content:check
 
       - name: Test production monitor and release descriptor
-        run: node --test scripts/monitor-production.test.mjs scripts/release-contract.test.mjs
+        run: node --test scripts/monitor-production.test.mjs scripts/release-contract.test.mjs scripts/audit-gate.test.mjs
 
       - name: Test Pages release gates
         run: node --test scripts/pages.test.mjs scripts/wait-production-api.test.mjs scripts/verify-party-appearances.test.mjs
