@@ -8,6 +8,7 @@ import { sources as publicErrorSources } from "../../content/ja/ui/errorsPublic"
 import { sources as adminErrorSources } from "../../content/ja/ui/errorsAdmin";
 import { hasGitHubAdminAllowlist, isGitHubAdminOpenIdAllowed } from "./githubAdminAuth";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter, type RateLimiter, type RateLimitRule } from "./rateLimit";
+import { isMutationOriginAllowed } from "./allowedOrigins";
 
 const t = initTRPC.context<TrpcContext>().create({
   transformer: superjson,
@@ -50,8 +51,26 @@ const globalApiRateLimit = t.middleware(async opts => {
   return next();
 });
 
+/**
+ * 管理session Cookieを持つmutation（publicのlogoutを含む）は、許可Originからの要求だけを受け付ける。
+ * HTTP methodではなくoperation種別で判定する（queryもPOSTで送られるため）。拒否はresolverの前。
+ * 設計: docs/修正設計書_セキュリティ残課題P2P3_2026-10-20.md §5.4
+ */
+const mutationOriginGuard = t.middleware(async opts => {
+  const { ctx, next, type } = opts;
+  if (type === "mutation") {
+    // サーバー内のcreateCaller等でheadersが無い場合はCookieも無いので検証対象外になる。
+    const headers = ctx.req?.headers ?? {};
+    const origin = headers.origin;
+    if (!isMutationOriginAllowed({ cookie: headers.cookie, origin: typeof origin === "string" ? origin : undefined })) {
+      throw new TRPCError({ code: "FORBIDDEN", message: errorMessage("admin.permissionRequired") });
+    }
+  }
+  return next();
+});
+
 // 全 procedure がこの土台を通る。個別上限は各 procedure の `.input(...)` の後に足す。
-const baseProcedure = t.procedure.use(globalApiRateLimit);
+const baseProcedure = t.procedure.use(globalApiRateLimit).use(mutationOriginGuard);
 
 export const publicProcedure = baseProcedure;
 

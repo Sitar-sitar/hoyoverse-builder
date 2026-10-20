@@ -15,16 +15,9 @@ import { createContext } from "./context";
 import { registerGitHubAdminAuthRoutes } from "./githubAdminAuth";
 import { serveStatic, setupVite } from "./vite";
 import { DatabaseConfigError, validateDatabaseConfig } from "./databaseConnection";
+import { allowedOrigins as readAllowedOrigins, CorsConfigError } from "./allowedOrigins";
 
-const DEFAULT_CORS_ORIGINS = ["https://sitar-sitar.github.io"];
-
-function configureCors(app: Express) {
-  const configuredOrigins = (process.env.CORS_ORIGINS ?? "")
-    .split(",")
-    .map(origin => origin.trim())
-    .filter(Boolean);
-  const allowedOrigins = new Set([...DEFAULT_CORS_ORIGINS, ...configuredOrigins]);
-
+function configureCors(app: Express, allowedOrigins: Set<string>) {
   app.use((req, res, next) => {
     // ACAO の有無と値は Origin で決まるため、許可済みかどうかに関係なく常に宣言する。
     // tRPC の応答では tRPC が Vary を上書きするので、createExpressMiddleware の responseMeta でも付ける。
@@ -97,12 +90,14 @@ async function startServer() {
   validateClientIpConfiguration();
   // DB設定の不備は HTTP を受け付ける前に拒否する（getDb の catch で null にして起動を続けない）。
   validateDatabaseConfig();
+  // productionで正式Pages以外のOriginが設定されていれば、HTTPを受け付ける前に拒否する。
+  const origins = readAllowedOrigins();
   const app = express();
   const server = createServer(app);
   const apiOnly = process.env.API_ONLY === "true";
 
   app.disable("x-powered-by");
-  configureCors(app);
+  configureCors(app, origins);
   app.use(maintenanceMiddleware);
   // CORS の後・本文解析の前に置く。濫用時に不要な本文解析をしない。
   configureNonTrpcApiRateLimit(app);
@@ -179,6 +174,7 @@ async function startServer() {
 startServer().catch(error => {
   // 設定不備は固定コードだけを出す。URL・CAのpath・生の解析例外を最上位のログへ渡さない。
   if (error instanceof DatabaseConfigError) console.error(`[Database] Invalid configuration: ${error.code}`);
+  else if (error instanceof CorsConfigError) console.error(`[CORS] Invalid configuration: ${error.code}`);
   else console.error(error);
   process.exitCode = 1;
 });
