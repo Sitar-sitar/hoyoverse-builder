@@ -16,6 +16,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { clientIpFromRequest, rateLimitKeyForUid } from "./_core/rateLimit";
 import { adminProcedure, createProcedureRateLimiter, enforceRateLimit, publicProcedure, router } from "./_core/trpc";
+import { logFailure } from "./_core/safeLog";
 
 // procedure 別のレート制限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(C)）。
 // キャッシュヒットは区別しない。middleware は lookupGameBuild の前に走るため事前に判別できず、
@@ -117,7 +118,7 @@ export const appRouter = router({
         // timeout は付けない（待たない以上は無意味で、DB 側の接続も解放されない）。
         // 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md §4 Phase 46-1
         if (!booleanSetting("API_MIGRATION_PREVIEW") || previewAdmin(ctx)) void recordLookupAnalyticsEvent(input.game, result.cached)
-          .catch(error => console.error("[Analytics] Failed to record lookup:", error));
+          .catch(error => logFailure("Analytics", "record_lookup_failed", error));
         return withLookupPresentation(result);
       }),
   }),
@@ -130,7 +131,7 @@ export const appRouter = router({
       try {
         return await readAdminDisplaySettings();
       } catch (error) {
-        console.error("[DisplaySettings] Failed to load admin display settings:", error);
+        logFailure("DisplaySettings", "load_admin_failed", error);
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.displayLoadFailed") });
       }
     }),
@@ -138,7 +139,7 @@ export const appRouter = router({
       try {
         return await publishDisplaySettings(input.changes);
       } catch (error) {
-        console.error("[DisplaySettings] Failed to save display settings:", error);
+        logFailure("DisplaySettings", "save_failed", error);
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.displaySaveFailed") });
       }
     }),
@@ -153,7 +154,7 @@ export const appRouter = router({
           endAt: input?.endDate ? endOfJst(input.endDate) : undefined,
         });
       } catch (error) {
-        console.error("[Analytics] Failed to load lookup dashboard:", error);
+        logFailure("Analytics", "load_dashboard_failed", error);
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.analyticsUnavailable") });
       }
     }),
@@ -186,7 +187,7 @@ export const appRouter = router({
           });
           return { success: true } as const;
         } catch (error) {
-          console.error("[Feedback] Failed to store translation feedback:", error);
+          logFailure("Feedback", "store_failed", error);
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackSaveFailed") });
         }
       }),
@@ -194,7 +195,7 @@ export const appRouter = router({
       try {
         return await listTranslationFeedback();
       } catch (error) {
-        console.error("[Feedback] Failed to list translation feedback:", error);
+        logFailure("Feedback", "list_failed", error);
         throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackUnavailable") });
       }
     }),
@@ -207,7 +208,7 @@ export const appRouter = router({
           return { success: true } as const;
         } catch (error) {
           if (error instanceof TRPCError) throw error;
-          console.error("[Feedback] Failed to update feedback status:", error);
+          logFailure("Feedback", "update_failed", error);
           throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: errorMessage("admin.feedbackUpdateFailed") });
         }
       }),

@@ -1,5 +1,6 @@
 import { DISPLAY_VARIANTS, LEGACY_VARIANT, isKnownDisplayVariant, sanitizeDisplaySettings, type DisplayVariants } from "@shared/displayVariants";
 import { getDisplaySettingRows, upsertDisplaySettings } from "./db";
+import { logFailure } from "./_core/safeLog";
 
 /**
  * 表示設定のキャッシュ・検証・fail-safe（設計: docs/実装設計書_表示デザインの管理画面切替_2026-09-13.md §4.2.2）。
@@ -32,7 +33,7 @@ export async function readPublicDisplaySettings(): Promise<PublicDisplaySettings
     }
     return { variants, source: "database" };
   } catch (error) {
-    console.error("[DisplaySettings] Failed to load display settings:", error);
+    logFailure("DisplaySettings", "load_public_failed", error);
     return { variants: {}, source: "default" };
   }
 }

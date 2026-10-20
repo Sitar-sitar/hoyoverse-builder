@@ -1,5 +1,6 @@
 import { createPool } from "mysql2";
 import { databaseConnection } from "./_core/databaseConnection";
+import { logFailure } from "./_core/safeLog";
 import { and, count, desc, eq, gte, lte, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertTranslationFeedback, InsertUser, lookupAnalyticsEvents, siteDisplaySettings, translationFeedback, users } from "../drizzle/schema";
@@ -25,7 +26,7 @@ export async function getDb() {
     try {
       _db = drizzle(createDbPool(process.env.DATABASE_URL));
     } catch (error) {
-      console.warn("[Database] Failed to connect:", error);
+      logFailure("Database", "connect_failed", error, { level: "warn" });
       _db = null;
     }
   }
@@ -86,7 +87,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
       set: updateSet,
     });
   } catch (error) {
-    console.error("[Database] Failed to upsert user:", error);
+    logFailure("Database", "upsert_user_failed", error);
     throw error;
   }
 }
@@ -112,7 +113,7 @@ export async function createTranslationFeedback(feedback: InsertTranslationFeedb
   try {
     await db.insert(translationFeedback).values(feedback);
   } catch (error) {
-    console.error("[Database] Failed to save translation feedback:", error);
+    logFailure("Database", "save_feedback_failed", error);
     throw error;
   }
 }

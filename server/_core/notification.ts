@@ -1,5 +1,6 @@
 import { TRPCError } from "@trpc/server";
 import { ENV } from "./env";
+import { logFailure } from "./safeLog";
 
 export type NotificationPayload = {
   title: string;
@@ -97,18 +98,15 @@ export async function notifyOwner(
     });
 
     if (!response.ok) {
-      const detail = await response.text().catch(() => "");
-      console.warn(
-        `[Notification] Failed to notify owner (${response.status} ${response.statusText})${
-          detail ? `: ${detail}` : ""
-        }`
-      );
+      // 上流の本文は読まない・出さない。HTTP statusだけを固定形式で残す。
+      await response.body?.cancel().catch(() => {});
+      logFailure("Notification", "notify_rejected", undefined, { level: "warn", status: response.status });
       return false;
     }
 
     return true;
   } catch (error) {
-    console.warn("[Notification] Error calling notification service:", error);
+    logFailure("Notification", "notify_failed", error, { level: "warn" });
     return false;
   }
 }

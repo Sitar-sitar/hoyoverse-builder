@@ -7,6 +7,7 @@ import { SignJWT, jwtVerify } from "jose";
 import * as db from "../db";
 import { getSessionCookieOptions } from "./cookies";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
+import { logFailure } from "./safeLog";
 
 const GITHUB_AUTHORIZE_URL = "https://github.com/login/oauth/authorize";
 const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
@@ -407,7 +408,7 @@ export function registerGitHubAdminAuthRoutes(app: Express) {
       const token = await createAdminBearerToken(record);
       res.status(200).json({ token, expiresIn: ADMIN_BEARER_TTL_SECONDS });
     } catch (error) {
-      console.error("[GitHub Admin Auth] Exchange failed", error);
+      logFailure("GitHubAdminAuth", "exchange_failed", error);
       res.status(503).json({ error: "Administrator token exchange is unavailable" });
     }
   });

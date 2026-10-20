@@ -6,6 +6,7 @@ import type { Request } from "express";
 import { SignJWT, jwtVerify } from "jose";
 import type { User } from "../../drizzle/schema";
 import * as db from "../db";
+import { logFailure } from "./safeLog";
 import { ENV } from "./env";
 import type {
   ExchangeTokenRequest,
@@ -226,7 +227,7 @@ class SDKServer {
         name,
       };
     } catch (error) {
-      console.warn("[Auth] Session verification failed", String(error));
+      logFailure("Auth", "session_verification_failed", error, { level: "warn" });
       return null;
     }
   }
@@ -302,7 +303,7 @@ class SDKServer {
         });
         user = await db.getUserByOpenId(userInfo.openId);
       } catch (error) {
-        console.error("[Auth] Failed to sync user from OAuth:", error);
+        logFailure("Auth", "sync_user_failed", error);
         throw ForbiddenError("Failed to sync user info");
       }
     }
