@@ -29,6 +29,40 @@ const HSR_TEST_PROPERTIES: Record<string, Record<string, unknown>> = {
 };
 
 describe("MiHoMoデータ正規化", () => {
+  // 再現テスト（2026-10-20）: MiHoMoの画像は相対パス（icon/・image/）で返り、そのまま返すと公開サイト基準で404になっていた。
+  // 設計: docs/修正設計書_HSR_MiHoMo画像URL_2026-10-20.md
+  it("相対パスの画像をStarRailResの絶対URLへ変換し、危険・不明な値は捨てる", () => {
+    const base = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/";
+    const data = normalizeMihomoPayload({
+      player: { uid: "800000002", nickname: "テスト", level: 70 },
+      characters: [{
+        id: "1310", name: "ホタル", level: 80, rank: 1,
+        portrait: "image/character_portrait/1310.png", path: { name: "壊滅" }, element: { name: "炎" },
+        light_cone: { name: "夢が帰り着く場所", level: 80, rank: 1, icon: "icon/light_cone/23025.png" },
+        statistics: [
+          { field: "spd", name: "速度", value: 154, display: "154", percent: false, icon: "icon/property/IconSpeed.png" },
+          { field: "atk", name: "攻撃力", value: 3000, display: "3000", percent: false, icon: "javascript:alert(1)" },
+          { field: "hp", name: "HP", value: 4000, display: "4000", percent: false, icon: "//evil.example/x.png" },
+          { field: "def", name: "防御力", value: 1000, display: "1000", percent: false, icon: "icon/../../secret.png" },
+        ],
+        relics: [
+          { id: "1", name: "頭", set_name: "鉄騎の執行者", level: 15, icon: "icon/relic/118_0.png", main_affix: { name: "HP", value: 705, display: "705", percent: false }, sub_affix: [] },
+          { id: "2", name: "手", set_name: "鉄騎の執行者", level: 15, icon: "data:image/png;base64,AAAA", main_affix: { name: "攻撃力", value: 352, display: "352", percent: false }, sub_affix: [] },
+          { id: "3", name: "胴", set_name: "鉄騎の執行者", level: 15, icon: "http://insecure.example/r.png", main_affix: { name: "撃破特効", value: 0.6, display: "64.8%", percent: true }, sub_affix: [] },
+        ],
+      }],
+    });
+    const character = data.characters[0]!;
+    expect(character.portrait).toBe(`${base}image/character_portrait/1310.png`);
+    expect(character.lightCone?.icon).toBe(`${base}icon/light_cone/23025.png`);
+    expect(character.relics.map(relic => relic.icon)).toEqual([`${base}icon/relic/118_0.png`, null, null]);
+    const statIcon = (name: string) => character.allStats.find(stat => stat.name === name)?.icon;
+    expect(statIcon("速度")).toBe(`${base}icon/property/IconSpeed.png`);
+    expect(statIcon("攻撃力")).toBeNull();
+    expect(statIcon("HP")).toBeNull();
+    expect(statIcon("防御力")).toBeNull();
+  });
+
   it("公開キャラクターの装備と目標達成度を表示モデルに変換する", () => {
     const data = normalizeMihomoPayload({
       player: { uid: "800000001", nickname: "テスト開拓者", level: 70 },
