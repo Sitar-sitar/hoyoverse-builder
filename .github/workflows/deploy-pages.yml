@@ -6,10 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+# workflow全体は読取りだけ。Pagesへの書込みとOIDCはdeploy jobにだけ付ける。
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -22,12 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
-
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
+
+      - name: Confirm build job has no OIDC token access
+        run: test -z "${ACTIONS_ID_TOKEN_REQUEST_URL:-}"
 
       - name: Enable Corepack
         run: corepack enable
@@ -79,14 +80,18 @@ jobs:
         run: node --import tsx scripts/content/releaseManifest.ts
 
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v6
-
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist/pages-artifact
 
   deploy:
+    # job単位で権限を書くと未指定はnoneになるため、checkout用のcontents: readも再指定する。
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -94,9 +99,9 @@ jobs:
     needs: build
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 22
       - name: Recheck API immediately before publication
@@ -106,7 +111,7 @@ jobs:
         run: node scripts/wait-production-api.mjs --check-once
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
       # 公開後の読み取り専用検査。descriptor が workflow 対象SHAを示し API と一致するまで最大120秒待つ。
       # 失敗時も自動revert・DB復元・期待版の書換えは行わない。
       - name: Verify published release
