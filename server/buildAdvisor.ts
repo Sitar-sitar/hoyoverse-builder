@@ -446,6 +446,20 @@ const MIHOMO_FINAL_LABELS: Record<string, string> = {
   spd: _finalLabels.ja("guide.buildAdvisor.finalLabel.spd"),
 };
 
+/**
+ * MiHoMoの画像は StarRailRes 相対のパス（`icon/...`・`image/...`）で返る。そのまま返すと公開サイト基準で404になるため、
+ * StarRailRes の絶対URLへ変換する。https の絶対URLはそのまま、それ以外の形式（http:・data:・プロトコル相対・`..`等）は捨てる。
+ * 設計: docs/修正設計書_HSR_MiHoMo画像URL_2026-10-20.md
+ */
+const MIHOMO_ASSET_BASE = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/";
+const MIHOMO_RELATIVE_ASSET = /^[A-Za-z0-9_\-][A-Za-z0-9_\-./]*$/;
+export function mihomoAssetUrl(value: unknown): string | null {
+  if (typeof value !== "string" || !value) return null;
+  if (value.startsWith("https://")) return value;
+  if (!MIHOMO_RELATIVE_ASSET.test(value) || value.includes("..")) return null;
+  return `${MIHOMO_ASSET_BASE}${value}`;
+}
+
 /** 最終値の一覧を「現在のステータス」として並べる。`statistics` の「基礎HP」等は中身が最終値なので表示名を直す。 */
 function finalAllStatsFor(finals: RawRecord[]): CharacterProfile["allStats"] {
   return finals
@@ -454,7 +468,7 @@ function finalAllStatsFor(finals: RawRecord[]): CharacterProfile["allStats"] {
       const name = MIHOMO_FINAL_LABELS[field] ?? text(stat.name);
       const value = nullableNumber(stat.value);
       const display = field === "sp_rate" && value !== null ? `${((1 + value) * 100).toFixed(1)}%` : statDisplay(stat);
-      return { name, display, icon: text(stat.icon) || null };
+      return { name, display, icon: mihomoAssetUrl(stat.icon) };
     })
     .filter((stat) => stat.name);
 }
@@ -490,7 +504,7 @@ function parseCharacter(source: RawRecord): CharacterProfile {
       slot: hsrSlots[index] ?? text(relic.type ?? relic.slot),
       setName: text(relic.set_name ?? relic.setName),
       level: nullableNumber(relic.level),
-      icon: text(relic.icon) || null,
+      icon: mihomoAssetUrl(relic.icon),
       main: Object.keys(main).length ? { name: text(main.name), display: statDisplay(main) } : null,
       subs: asArray(relic.sub_affix ?? relic.subAffix).map(asRecord).map((sub) => ({ name: text(sub.name), display: statDisplay(sub) })),
     };
@@ -507,7 +521,7 @@ function parseCharacter(source: RawRecord): CharacterProfile {
     name,
     level: nullableNumber(source.level),
     rank: nullableNumber(source.rank),
-    portrait: text(source.portrait ?? source.preview ?? source.icon) || null,
+    portrait: mihomoAssetUrl(source.portrait ?? source.preview ?? source.icon),
     element: text(element.name),
     elementColor: text(element.color) || null,
     path: text(path.name),
@@ -515,7 +529,7 @@ function parseCharacter(source: RawRecord): CharacterProfile {
       name: text(lightCone.name, _providerDisplay.ja("guide.providerDisplay.buildAdvisor.b00011")),
       level: nullableNumber(lightCone.level),
       rank: nullableNumber(lightCone.rank),
-      icon: text(lightCone.icon) || null,
+      icon: mihomoAssetUrl(lightCone.icon),
     } : null,
     relics,
     allStats: finals ? finalAllStatsFor(finals) : [],
