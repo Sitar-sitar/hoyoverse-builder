@@ -77,7 +77,7 @@ describe("GitHub OAuth通信期限（設計 §5.3）", () => {
 
   it("user取得の本文読取が止まった場合も5秒でabortする", async () => {
     vi.useFakeTimers();
-    vi.stubGlobal("fetch", vi.fn(async (_url: string, init?: RequestInit) => ({ ok: true, json: () => hangUntilAbort(init) })));
+    vi.stubGlobal("fetch", vi.fn(async (_url: string, init?: RequestInit) => new Response(new ReadableStream({ start(controller) { init?.signal?.addEventListener("abort", () => controller.error(new DOMException("aborted", "AbortError"))); } }))));
     const pending = fetchGitHubUser("token").catch(error => error);
     await vi.advanceTimersByTimeAsync(OAUTH_REQUEST_TIMEOUT_MS);
     expect((await pending).reason).toBe("oauth_timeout");

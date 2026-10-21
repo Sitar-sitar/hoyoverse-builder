@@ -17,6 +17,8 @@ export const HSR_STATIC_FILE_LIMIT_BYTES = 4 * MiB;
 export const HSR_STATIC_BUNDLE_LIMIT_BYTES = 8 * MiB;
 export const ENKA_STORE_FILE_LIMIT_BYTES = 2 * MiB;
 export const ENKA_STORE_BUNDLE_LIMIT_BYTES = 2 * MiB;
+/** GitHub OAuthのtoken交換・user取得（§5.5）。 */
+export const OAUTH_BODY_LIMIT_BYTES = 1 * MiB;
 
 export class BodyLimitError extends Error {
   constructor() {
