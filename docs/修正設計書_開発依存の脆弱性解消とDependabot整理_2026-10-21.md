@@ -7,7 +7,7 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 - 種別: 修正設計書
 - 対象バージョン: Phase 62（依存整理）
 - 前提コミット: `92952f70f1ce424aa24f8e60d14ae6f02c912fa3`（main、本番API/Pagesと同一）
-- ステータス: ドラフト（§10の利用者判断待ち）
+- ステータス: 実装中（Phase 62。§10 U-1〜U-5は2026-10-21に利用者が全て推奨案(a)で回答）
 - 関連: [セキュリティ残課題の修正設計書（Phase 61）](修正設計書_セキュリティ残課題P2P3_2026-10-20.md)、[実装ログ](実装ログ.md)、[本番運用ガイド](northflank-production.md)
 
 ---
@@ -96,11 +96,11 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 
 ### 4.3 Dependabot設定（`.github/dependabot.yml`）
 
-- npm: `wouter`は全更新を`ignore`（パッチ`patches/wouter@3.7.1.patch`のため。更新するときはパッチを作り直す別作業）。
-- npm: 本設計で見送ったメジャー（U-2・U-3・U-1の結果に応じて`express`・`@types/express`・`nanoid`・`vitest`）を`update-types: ["version-update:semver-major"]`で`ignore`。
-- npm: `esbuild`は`versions: [">=0.26.0"]`を`ignore`。
-- github-actions: U-4で見送る場合、`actions/upload-artifact`のメジャーを`ignore`。
-- security updatesは`ignore`の影響を受けない（GitHubの仕様上、ignoreはversion updatesだけに効く）ことを確認してから入れる。確認できなければ`ignore`を入れず、PRを手動でcloseする運用に留める。
+- GitHubのDependabot options referenceでは、`ignore`はversion updatesだけでなくsecurity updatesにも効く（2026-10-21確認）。このため、全版をignoreすると脆弱性修正まで止まるものはignoreしない。
+- npm: 見送ったメジャー（`express`・`@types/express`・`vitest`）を`update-types: ["version-update:semver-major"]`でignore。脆弱性修正は通常同じメジャー内で出るため、security updatesへの影響は小さい。
+- npm: `wouter`（パッチ固定）と`esbuild`（0.x系）はignoreせず、グループ（frontend-ui・tooling）から外す。単独PRで届いたものをその都度判断する（wouterはパッチの作り直しが必要、esbuildはAPI bundleの確認が必要）。
+- npm: 削除した`framer-motion`・`nanoid`をグループのpatternsから除く。
+- github-actions: `actions/upload-artifact`のメジャーをignore（U-4）。
 
 ### 4.4 推移依存
 
@@ -148,7 +148,7 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 
 ## 10. 未確定・要確認事項
 
-| ID | 論点 | 選択肢 | 推奨 |
+| ID | 論点 | 選択肢 | 推奨（回答: 2026-10-21 全て(a)） |
 | --- | --- | --- | --- |
 | U-1 | vitestの上げ先 | (a) 4.1.12（事前試行済み、Node 20/22/24対応） (b) 5.0.5（#84の系統。Node ^22.12が必要、CIとDockerは22系で可。未試行） | (a)。試行済みで、Critical解消には4で足りる。5は別途 |
 | U-2 | express 5（#79） | (a) 見送り、メジャーをignore (b) 本Phaseで移行（ルーティング・body parser・エラー処理の確認が必要） | (a)。4.22.3は保守中で本番auditも0件。移行は別設計 |
@@ -163,3 +163,5 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 | 日付 | 内容 |
 | --- | --- |
 | 2026-10-21 | 新規作成。前提92952f7でDependabot alerts 75件と開いているPR 10件を照合し、使い捨てworktreeで更新を試行（全依存auditはModerate 2のみ、vitest 4で1件の期限超過）。メジャー更新5件の扱いをU-1〜U-5として利用者判断へ。 |
+| 2026-10-21 | §10 U-1〜U-5の回答（全て推奨案(a)）を記録し、ステータスを実装中へ。 |
+| 2026-10-21 | §4.3を実装に合わせて更新（ignoreはsecurity updatesにも効くため、wouter・esbuildはignoreせずグループから外す）。 |

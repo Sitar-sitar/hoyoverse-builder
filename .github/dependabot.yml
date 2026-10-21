@@ -5,6 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    ignore:
+      - dependency-name: "actions/upload-artifact"
+        update-types: ["version-update:semver-major"]
     groups:
       github-actions:
         patterns:
@@ -15,16 +18,24 @@ updates:
     schedule:
       interval: weekly
     open-pull-requests-limit: 10
+    # Phase 62で見送ったメジャー更新。ignoreはsecurity updatesにも効くが、修正は通常同じメジャー内で出る。
+    # wouter（patches/wouter@3.7.1.patch）とesbuild（0.x）はignoreせずグループから外し、単独PRで判断する。
+    # 設計: docs/修正設計書_開発依存の脆弱性解消とDependabot整理_2026-10-21.md §4.3
+    ignore:
+      - dependency-name: "express"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/express"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vitest"
+        update-types: ["version-update:semver-major"]
     groups:
       frontend-ui:
         patterns:
           - "react"
           - "react-dom"
           - "@radix-ui/*"
-          - "framer-motion"
           - "react-hook-form"
           - "@hookform/*"
-          - "wouter"
           - "next-themes"
           - "lucide-react"
           - "sonner"
@@ -50,7 +61,6 @@ updates:
           - "jose"
           - "cookie"
           - "superjson"
-          - "nanoid"
           - "axios"
           - "dotenv"
         update-types:
@@ -70,7 +80,6 @@ updates:
           - "vite-plugin-*"
           - "@vitejs/*"
           - "vitest"
-          - "esbuild"
           - "typescript"
           - "prettier"
           - "@types/*"
