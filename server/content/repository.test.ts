@@ -40,7 +40,8 @@ describe("repository content maintenance", () => {
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedExternalNames).toEqual([]);
       expect(() => contentCommand(["export", "--language", "zh-TW"])).toThrow();
     } finally { output.mockRestore(); }
-  });
+  // 全コンテンツの検査・出力を同期で行うため約5秒かかる。vitest 4は同期テストの期限超過も失敗にする。
+  }, 30_000);
 
   it("preserves typed history variables and rejects wrong values", () => {
     const result = adoptModule('const e={summary:(name,record)=>`${name}を${record.added.length}案更新`};', "historyTest");
