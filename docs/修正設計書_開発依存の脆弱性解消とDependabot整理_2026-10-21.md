@@ -7,7 +7,7 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 - 種別: 修正設計書
 - 対象バージョン: Phase 62（依存整理）
 - 前提コミット: `92952f70f1ce424aa24f8e60d14ae6f02c912fa3`（main、本番API/Pagesと同一）
-- ステータス: 実装中（Phase 62。§10 U-1〜U-5は2026-10-21に利用者が全て推奨案(a)で回答）
+- ステータス: 実装済み・本番反映済み（Phase 62、PR #136 / main `40c4293`、2026-10-21）。U-1〜U-5は全て推奨案(a)
 - 関連: [セキュリティ残課題の修正設計書（Phase 61）](修正設計書_セキュリティ残課題P2P3_2026-10-20.md)、[実装ログ](実装ログ.md)、[本番運用ガイド](northflank-production.md)
 
 ---
@@ -108,11 +108,11 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 
 ## 5. 既存機能の非破壊（チェックリスト）
 
-- [ ] 3ゲームのUID照会・図鑑・履歴・PT・凸・数値が更新前後で一致（全256名のbaseline比較）。
-- [ ] 公開Pagesの全ルートが表示でき、CSP違反0（Phase 61のCSPを維持）。
-- [ ] 管理画面のログイン・表示（radix・react・tRPCのminor更新の影響確認）。
-- [ ] 本番依存の監査ゲート0件、API build、Pages artifact、release descriptor、公開後検査。
-- [ ] DB schema/data/migrationは変更しない。
+- [x] 3ゲームのUID照会・図鑑・履歴・PT・凸・数値が更新前後で一致（全256名のbaseline比較）。
+- [x] 公開Pagesの全ルートが表示でき、CSP違反0（Phase 61のCSPを維持）。
+- [x] 管理画面のログイン・表示（radix・react・tRPCのminor更新の影響確認）。（2026-10-21: 管理画面の実ログインは行わず、型・UIテスト・公開ページの描画で確認）
+- [x] 本番依存の監査ゲート0件、API build、Pages artifact、release descriptor、公開後検査。
+- [x] DB schema/data/migrationは変更しない。
 
 ## 6. 変更ファイルと差分の粒度
 
@@ -141,10 +141,10 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 
 ## 9. 受け入れ条件
 
-- [ ] Dependabot alerts（open）のCritical・Highが0件。残りはU-5で受け入れたものだけ。
-- [ ] 本番依存の監査ゲート0件、§8の全検証がPASS。
-- [ ] 本番API/Pages同SHAで公開し、公開後検査がPASS。
-- [ ] 取り込んだDependabot PRがcloseされ、見送ったPRは理由付きでclose。§4.3の設定で同じ更新が再提案されない。
+- [x] Dependabot alerts（open）のCritical・Highが0件。残りはU-5で受け入れたものだけ。
+- [x] 本番依存の監査ゲート0件、§8の全検証がPASS。
+- [x] 本番API/Pages同SHAで公開し、公開後検査がPASS。
+- [x] 取り込んだDependabot PRがcloseされ、見送ったPRは理由付きでclose。§4.3の設定で同じ更新が再提案されない。
 
 ## 10. 未確定・要確認事項
 
@@ -165,3 +165,4 @@ Phase 61で本番依存のauditは0件になったが、開発・CI・build用�
 | 2026-10-21 | 新規作成。前提92952f7でDependabot alerts 75件と開いているPR 10件を照合し、使い捨てworktreeで更新を試行（全依存auditはModerate 2のみ、vitest 4で1件の期限超過）。メジャー更新5件の扱いをU-1〜U-5として利用者判断へ。 |
 | 2026-10-21 | §10 U-1〜U-5の回答（全て推奨案(a)）を記録し、ステータスを実装中へ。 |
 | 2026-10-21 | §4.3を実装に合わせて更新（ignoreはsecurity updatesにも効くため、wouter・esbuildはignoreせずグループから外す）。 |
+| 2026-10-21 | 実装済み・本番反映済みへ（PR #136 / main 40c4293）。Dependabot alerts open 0件、open PR 0件。 |
