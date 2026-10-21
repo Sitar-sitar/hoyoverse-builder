@@ -22,6 +22,7 @@ import { records as _zh } from "../content/translations/zh-CN/gameProviders";
 const _content = createLegacyTexts(_sources, _en, _zh);
 import { TRPCError } from "@trpc/server";
 import { runWithLookupCapacity } from "./_core/lookupCapacity";
+import { BodyLimitError, createByteBudget, ENKA_STORE_BUNDLE_LIMIT_BYTES, ENKA_STORE_FILE_LIMIT_BYTES, readBoundedText, UID_BODY_LIMIT_BYTES, type ByteBudget } from "./_core/boundedBody";
 import {
   BuildLookupResult,
   CharacterProfile,
@@ -88,7 +89,8 @@ function apiError(status: number, message: string): TRPCError {
   return new TRPCError({ code: "BAD_GATEWAY", message });
 }
 
-async function fetchJson(url: string): Promise<unknown> {
+/** 本文は上限付きで読む。既定はUID応答の上限。静的カタログはファイル上限とbundleの共有予算を渡す。 */
+async function fetchJson(url: string, limit: { maxBytes: number; budget?: ByteBudget } = { maxBytes: UID_BODY_LIMIT_BYTES }): Promise<unknown> {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 14_000);
   try {
@@ -96,7 +98,7 @@ async function fetchJson(url: string): Promise<unknown> {
       headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
       signal: controller.signal,
     });
-    const raw = await response.text();
+    const raw = await readBoundedText(response, limit);
     const contentType = response.headers.get("content-type") ?? "";
     const payload = contentType.includes("application/json") ? JSON.parse(raw || "{}") : {};
     if (!response.ok) {
@@ -109,6 +111,8 @@ async function fetchJson(url: string): Promise<unknown> {
     return payload;
   } catch (error) {
     if (error instanceof TRPCError) throw error;
+    // 上限超過は既存の上流障害と同じ扱い（静的カタログではloaderの失敗としてLKG・再試行抑止へ進む）。
+    if (error instanceof BodyLimitError) throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.serviceUnavailable") });
     throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.unreachable"), cause: error });
   } finally {
     clearTimeout(timeout);
@@ -300,7 +304,8 @@ function comparisonsFromStats(targets: TargetStatDefinition[], values: Record<st
 
 type GenshinCatalog = { characters: RawRecord; loc: RawRecord };
 const getGenshinCatalog = createTimedLoader("genshin-catalog", async (): Promise<GenshinCatalog> => {
-  const [characters, loc] = await Promise.all([fetchJson(`${ENKA_STORE}/characters.json`), fetchJson(`${ENKA_STORE}/loc.json`)]);
+  const limit = { maxBytes: ENKA_STORE_FILE_LIMIT_BYTES, budget: createByteBudget(ENKA_STORE_BUNDLE_LIMIT_BYTES) };
+  const [characters, loc] = await Promise.all([fetchJson(`${ENKA_STORE}/characters.json`, limit), fetchJson(`${ENKA_STORE}/loc.json`, limit)]);
   return { characters: asRecord(characters), loc: asRecord(loc) };
 });
 
@@ -373,8 +378,9 @@ const ZZZ_PROP_FALLBACKS: Record<string, string> = {
 
 type ZzzCatalog = { avatars: RawRecord; weapons: RawRecord; equipments: RawRecord; locs: RawRecord; property: RawRecord };
 const getZzzCatalog = createTimedLoader("zzz-catalog", async (): Promise<ZzzCatalog> => {
+  const limit = { maxBytes: ENKA_STORE_FILE_LIMIT_BYTES, budget: createByteBudget(ENKA_STORE_BUNDLE_LIMIT_BYTES) };
   const [avatars, weapons, equipments, locs, property] = await Promise.all([
-    fetchJson(`${ENKA_STORE}/zzz/avatars.json`), fetchJson(`${ENKA_STORE}/zzz/weapons.json`), fetchJson(`${ENKA_STORE}/zzz/equipments.json`), fetchJson(`${ENKA_STORE}/zzz/locs.json`), fetchJson(`${ENKA_STORE}/zzz/property.json`),
+    fetchJson(`${ENKA_STORE}/zzz/avatars.json`, limit), fetchJson(`${ENKA_STORE}/zzz/weapons.json`, limit), fetchJson(`${ENKA_STORE}/zzz/equipments.json`, limit), fetchJson(`${ENKA_STORE}/zzz/locs.json`, limit), fetchJson(`${ENKA_STORE}/zzz/property.json`, limit),
   ]);
   return { avatars: asRecord(avatars), weapons: asRecord(weapons), equipments: asRecord(equipments), locs: asRecord(locs), property: asRecord(property) };
 });

@@ -31,6 +31,8 @@
 
 DB schema変更を含まない更新の手順。docsだけの変更でもmain更新はAPIの自動配備を誘発し得るため、同じゲートを通す。
 
+mainへの直接pushはできない（2026-10-20からrulesetでPR必須、承認数0、bypassなし）。緊急の修正も、作業ブランチ→PR→CI（validate・監査ゲート）合格→マージの順で行う。Dependabotの更新もPR経由で同じゲートを通る。
+
 1. PRでテスト・型検査・content検査・APIビルド・Pages buildを確認する（validate-api.yml）。
 2. mainへマージすると、NorthflankがmainをビルドしAPIへ自動配備する。APP_REVISIONは動的参照 ${NF_GIT_SHA}。
 3. Pages workflow（deploy-pages.yml）がAPI healthの対象SHA一致を最大10分待ち、Pages artifactを生成・検証する。forwardでは公開版descriptor（`/hoyoverse-builder/release.json`）を同じartifactへ生成する。

@@ -24,7 +24,6 @@ updates:
           - "framer-motion"
           - "react-hook-form"
           - "@hookform/*"
-          - "recharts"
           - "wouter"
           - "next-themes"
           - "lucide-react"
@@ -62,12 +61,6 @@ updates:
           - "drizzle-orm"
           - "drizzle-kit"
           - "mysql2"
-        update-types:
-          - "minor"
-          - "patch"
-      aws:
-        patterns:
-          - "@aws-sdk/*"
         update-types:
           - "minor"
           - "patch"

@@ -5,8 +5,10 @@ import { sql } from "drizzle-orm";
 import type { Express, Request, Response } from "express";
 import { SignJWT, jwtVerify } from "jose";
 import * as db from "../db";
+import { OAUTH_BODY_LIMIT_BYTES, readBoundedText } from "./boundedBody";
 import { getSessionCookieOptions } from "./cookies";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
+import { logFailure } from "./safeLog";
 
 const GITHUB_AUTHORIZE_URL = "https://github.com/login/oauth/authorize";
 const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
@@ -290,7 +292,8 @@ export async function authenticateGitHubAdminRequest(req: Request) {
 
 /**
  * GitHub との各通信は fetch 開始から JSON 本文の読取完了まで5秒で打ち切る。再送はしない。
- * 設計: docs/修正設計書_運用安定化と保守性改善_2026-10-19.md §5.3
+ * 本文は1 MiBまで（超過は oauth_upstream_failed）。
+ * 設計: docs/修正設計書_運用安定化と保守性改善_2026-10-19.md §5.3、docs/修正設計書_セキュリティ残課題P2P3_2026-10-20.md §5.5
  */
 export const OAUTH_REQUEST_TIMEOUT_MS = 5_000;
 
@@ -312,7 +315,7 @@ async function requestGitHubJson(url: string, init: RequestInit): Promise<unknow
       await response.body?.cancel().catch(() => {});
       throw new OAuthRequestError("oauth_upstream_failed");
     }
-    return await response.json();
+    return JSON.parse(await readBoundedText(response, { maxBytes: OAUTH_BODY_LIMIT_BYTES }));
   } catch (error) {
     if (controller.signal.aborted) throw new OAuthRequestError("oauth_timeout");
     if (error instanceof OAuthRequestError) throw error;
@@ -407,7 +410,7 @@ export function registerGitHubAdminAuthRoutes(app: Express) {
       const token = await createAdminBearerToken(record);
       res.status(200).json({ token, expiresIn: ADMIN_BEARER_TTL_SECONDS });
     } catch (error) {
-      console.error("[GitHub Admin Auth] Exchange failed", error);
+      logFailure("GitHubAdminAuth", "exchange_failed", error);
       res.status(503).json({ error: "Administrator token exchange is unavailable" });
     }
   });
