@@ -25,7 +25,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22
+          node-version: 22.23.4
 
       - name: Confirm build job has no OIDC token access
         run: test -z "${ACTIONS_ID_TOKEN_REQUEST_URL:-}"
@@ -103,7 +103,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22
+          node-version: 22.23.4
       - name: Recheck API immediately before publication
         env:
           HOYOVERSE_PAGES_MODE: ${{ vars.HOYOVERSE_PAGES_MODE }}
