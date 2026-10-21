@@ -13,7 +13,7 @@
 | API service | hoyoverse-api、Dockerfile.northflank（NODE_ENV=productionをimageで固定）、main追随、CI/CD ON、1 instance、Recreate | CI/CD ONは2026-10-08設定・2026-10-09に通常main更新で全経路受入（Phase 57） | 未確認 |
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB | 2026-10-08以前の台帳 | 未確認 |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS | 台帳 2026-10-05〜10-08 | 未確認（最大接続数は未測定） |
-| Migration Job | hoyoverse-db-migrate-shared、manual / Run on image change=Never | 2026-10-08 Phase 56 | 未確認。実行時はAPIと同manifestへ固定する |
+| Migration Job | hoyoverse-db-migrate-shared、manual / Run on image change=Never | 2026-10-21 Phase 63 | imageは本番API `3fed8cf` のbuildタグ `hanging-ship-4355`（registry認証 `hoyoverse-image-pull`）。読取TLS確認 `scripts/db-readonly-check.ts` でDB_CHECK_OK（TLSv1.3・CA検証）。migration実行時は最新APIのbuildへ付け替えてから |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false | 2026-10-09 health | 未確認 |
 | CORS | https://sitar-sitar.github.io（pathを含めない） | 2026-10-09 | 未確認 |
 | Pages変数 | HOYOVERSE_PAGES_MODE=forward、HOYOVERSE_NORTHFLANK_API_BASE_URLは上記API origin | 2026-10-09 | 未確認 |
@@ -85,7 +85,7 @@ mainへの直接pushはできない（2026-10-20からrulesetでPR必須、承�
 | API service | hoyoverse-api、Dockerfile.northflank、main、CI/CD ON、1 instance、Recreate |
 | API資源 | 0.2 shared vCPU / 512 MB / 1 GB |
 | DB | hoyoverse-mysql、MySQL 9.7.2、6 GB、Private / TLS |
-| Migration | hoyoverse-db-migrate-shared、manual / CD OFF。現保存imageは旧P1版。次のmigration実行前にAPIと同manifestへ固定する |
+| Migration | hoyoverse-db-migrate-shared、manual / CD OFF。image は2026-10-21にAPI `3fed8cf` のbuildへ付け替え済み。migration実行前に、そのときのAPI buildへ付け替え→`scripts/db-readonly-check.ts`で読取確認→migrateの順 |
 | 正式revision | 機能受入: 597e13322bf34b76e9642ee61b6773665f09e2bf（Phase 57）。文書を含む後続リリースはAPI healthとGitHub Pages deploymentの同一main SHAを正とする |
 | 通常受付 | API_MAINTENANCE=false / API_MIGRATION_PREVIEW=false |
 | CORS | https://sitar-sitar.github.io（pathを含めない） |
