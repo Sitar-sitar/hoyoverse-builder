@@ -9,7 +9,6 @@ import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { applyBodyParsers, REQUEST_BODY_LIMIT_BYTES, TRPC_MAX_BATCH_SIZE } from "./bodyLimits";
 import { applyRetryAfter, clientIpFromRequest, createRateLimiter } from "./rateLimit";
-import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { registerGitHubAdminAuthRoutes } from "./githubAdminAuth";
@@ -114,14 +113,6 @@ async function startServer() {
   // GitHub App administrator login must be available on the public API
   // because the production frontend is hosted separately on GitHub Pages.
   registerGitHubAdminAuthRoutes(app);
-
-  // Manus-specific routes are only needed by the original full-stack runtime.
-  // Keep legacy OAuth/storage code unloaded entirely in API-only deployments.
-  if (!apiOnly) {
-    registerStorageProxy(app);
-    const { registerOAuthRoutes } = await import("./oauth");
-    registerOAuthRoutes(app);
-  }
 
   app.use(
     "/api/trpc",

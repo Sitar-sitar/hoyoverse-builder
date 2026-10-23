@@ -10,8 +10,6 @@ const LOG_CODES = {
   DisplaySettings: ["load_public_failed", "load_admin_failed", "save_failed"],
   Feedback: ["store_failed", "list_failed", "update_failed"],
   GitHubAdminAuth: ["exchange_failed"],
-  Notification: ["notify_rejected", "notify_failed"],
-  Auth: ["session_verification_failed", "sync_user_failed"],
 } as const;
 
 export type LogArea = keyof typeof LOG_CODES;
