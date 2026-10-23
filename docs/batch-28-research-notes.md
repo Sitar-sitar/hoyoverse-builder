@@ -117,6 +117,13 @@
 - `party-links.mjs --strict` 未対応0件、`audit-characters.mjs --offline` 257/257・経路不一致0・メンバー名未解決0・P2 は既知の2名のみ。
 - ゴールデン比較（作業前 main で snapshot → 変更後 compare）: 差分はフィオニー本人の各セクション、台帳・履歴・カタログの件数と追加行、メタデータの追加行、参加者5名の `partyAppearances` 追加だけ。他キャラの既存行は不変を確認。
 
+## 公開
+
+- 2026-10-23: PR #145（validate・CodeQL・Analyze 成功、Codex レビュー指摘なし）を main へマージ（`4b744ca`、11:18Z）。
+- Pages run `39945142808`: build・同SHAのAPI一致待ち・deploy とも成功。公開後検査は `reason=ok`、expected/observed とも `4b744ca`（11:21:23Z）。
+- 本番表示: ユーザー目視確認済み (2026-10-23)。図鑑でガイド・心象映画・推奨PT3案の表示を確認（別の Claude セッション経由で報告を受領）。
+
 ## 未完了
 
-- 実画面（Chrome）確認・push・PR・本番反映は未実施。
+- UID照会画面でのフィオニー表示は未確認（図鑑のみ目視確認済み）。
+- 参加者6件の見送りの再確認（各本人ガイドの Ver.3.3 追従後）。
