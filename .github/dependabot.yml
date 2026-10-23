@@ -34,22 +34,14 @@ updates:
           - "react"
           - "react-dom"
           - "@radix-ui/*"
-          - "react-hook-form"
-          - "@hookform/*"
           - "next-themes"
           - "lucide-react"
           - "sonner"
-          - "vaul"
           - "cmdk"
           - "embla-carousel-react"
-          - "react-day-picker"
-          - "react-resizable-panels"
-          - "input-otp"
           - "tailwind-merge"
-          - "tailwindcss-animate"
           - "class-variance-authority"
           - "clsx"
-          - "date-fns"
         update-types:
           - "minor"
           - "patch"
@@ -61,7 +53,6 @@ updates:
           - "jose"
           - "cookie"
           - "superjson"
-          - "axios"
           - "dotenv"
         update-types:
           - "minor"
@@ -77,7 +68,6 @@ updates:
       tooling:
         patterns:
           - "vite"
-          - "vite-plugin-*"
           - "@vitejs/*"
           - "vitest"
           - "typescript"
