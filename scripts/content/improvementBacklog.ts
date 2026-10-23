@@ -12,6 +12,7 @@ import { records as providerGuides } from "../../content/guideDefinitions_provid
 import { records as profileGuides } from "../../content/guideDefinitions_profiles";
 import { records as batch17Guides } from "../../content/guideDefinitions_batch17";
 import { records as batch23Guides } from "../../content/guideDefinitions_batch23";
+import { records as batch28Guides } from "../../content/guideDefinitions_batch28";
 import { unresolvedTeamMembers } from "../../content/teams";
 import { unresolvedGenericTeamMembers } from "../../content/genericTeams";
 import { unresolvedConstellationIdentities } from "../../content/constellations";
@@ -22,13 +23,14 @@ import { unresolvedGuideFields } from "../../content/guides";
  * 設計: docs/修正設計書_運用安定化と保守性改善_2026-10-19.md §5.6
  */
 
-// guideRecords（content/guides.ts）と同じ5ファイル。section を生成する authoring module を ownerModule とする。
+// guideRecords（content/guides.ts）と同じ6ファイル。section を生成する authoring module を ownerModule とする。
 export const GUIDE_MODULES = [
   ["content/guideDefinitions_hsr.ts", hsrGuides],
   ["content/guideDefinitions_providers.ts", providerGuides],
   ["content/guideDefinitions_profiles.ts", profileGuides],
   ["content/guideDefinitions_batch17.ts", batch17Guides],
   ["content/guideDefinitions_batch23.ts", batch23Guides],
+  ["content/guideDefinitions_batch28.ts", batch28Guides],
 ] as const;
 
 function git(args: string[]) {

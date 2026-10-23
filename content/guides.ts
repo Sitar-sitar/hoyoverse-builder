@@ -3,6 +3,7 @@ import { records as providers } from "./guideDefinitions_providers";
 import { records as profiles } from "./guideDefinitions_profiles";
 import { records as batch17 } from "./guideDefinitions_batch17";
 import { records as batch23 } from "./guideDefinitions_batch23";
+import { records as batch28 } from "./guideDefinitions_batch28";
 import { canonicalSources } from "./catalog";
 import {
   contentFields,
@@ -24,6 +25,7 @@ export const guideRecords = [
   ...profiles,
   ...batch17,
   ...batch23,
+  ...batch28,
 ];
 export function validateGuides(records: GuideAuthoringRecord[]) {
   const ids = new Set<string>(),
@@ -83,7 +85,7 @@ export function validateGuides(records: GuideAuthoringRecord[]) {
         }),
     });
     if (
-      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17|batch23)\.b\d{5}$/.test(
+      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17|batch23|batch28)\.b\d{5}$/.test(
         record.guideId
       ) ||
       ids.has(record.guideId) ||

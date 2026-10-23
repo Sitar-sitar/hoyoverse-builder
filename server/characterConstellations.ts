@@ -1,4 +1,5 @@
 import { records as curatedRecords } from "../content/constellationCurated";
+import { records as batch28Records } from "../content/constellationBatch28";
 import { projectConstellations } from "./content/constellations";
 import { createLegacyTexts } from "./content/legacyTexts";
 import { sources as _sources } from "../content/ja/guides/characterConstellations";
@@ -72,6 +73,7 @@ const SOURCE = {
 const CURATED: Record<string, CuratedEntry> = {
   ...BATCH23_GENSHIN_CONSTELLATIONS,
   ...projectConstellations(curatedRecords),
+  ...projectConstellations(batch28Records),
 };
 
 const LABELS: Record<CharacterIdentity["game"], LocalizedText> = {

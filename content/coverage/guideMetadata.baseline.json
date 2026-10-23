@@ -1540,6 +1540,12 @@
         "dataAsOf": "2026-09-05",
         "updatedAt": "2026-09-05",
         "sourceLabel": "Game8のVer3.1更新日付きビルド・心象映画・編成情報を照合"
+      },
+      "フィオニー": {
+        "profileId": "curated:batch28:zzz:フィオニー",
+        "dataAsOf": "2026-10-23",
+        "updatedAt": "2026-10-23",
+        "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・編成・心象映画情報を照合"
       }
     }
   },

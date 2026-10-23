@@ -1291,4 +1291,63 @@ export const historyBatches: HistoryBatchRecord[] = [
       v0: "characterName",
     },
   },
+  {
+    batch: 28,
+    content: {
+      eventId: "history.batch.28",
+      date: "2026-10-23T18:00:00+09:00",
+      title: {
+        kind: "textRef",
+        id: "guide.legacy.guideUpdateHistory.b00326",
+      },
+      summary: {
+        kind: "textRef",
+        id: "guide.legacy.guideUpdateHistory.b00327",
+      },
+      changes: [
+        {
+          blockId: "history.block.guide.legacy.guideUpdateHistory.b00328",
+          text: {
+            kind: "textRef",
+            id: "guide.legacy.guideUpdateHistory.b00328",
+          },
+        },
+        {
+          blockId: "history.block.guide.legacy.guideUpdateHistory.b00329",
+          text: {
+            kind: "textRef",
+            id: "guide.legacy.guideUpdateHistory.b00329",
+          },
+        },
+        {
+          blockId: "history.block.guide.legacy.guideUpdateHistory.b00330",
+          text: {
+            kind: "textRef",
+            id: "guide.legacy.guideUpdateHistory.b00330",
+          },
+        },
+        {
+          blockId: "history.block.guide.legacy.guideUpdateHistory.b00331",
+          text: {
+            kind: "textRef",
+            id: "guide.legacy.guideUpdateHistory.b00331",
+          },
+        },
+        {
+          blockId: "history.block.guide.legacy.guideUpdateHistory.b00332",
+          text: {
+            kind: "textRef",
+            id: "guide.legacy.guideUpdateHistory.b00332",
+          },
+        },
+      ],
+      rationale: {
+        kind: "textRef",
+        id: "guide.legacy.guideUpdateHistory.b00333",
+      },
+    },
+    summaryBindings: {
+      v0: "characterName",
+    },
+  },
 ];

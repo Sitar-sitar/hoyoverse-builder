@@ -11,6 +11,7 @@ const _providerDisplay = createProviderDisplayTexts(providerDisplaySources, {}, 
 import {sources as externalDisplaySources} from "../content/ja/guides/externalDisplayFallbacks";
 const _externalDisplay = createLegacyTexts(externalDisplaySources, {}, {});
 import {records as guideRecords} from "../content/guideDefinitions_providers";
+import {records as batch28GuideRecords} from "../content/guideDefinitions_batch28";
 import {projectGuideRegistry} from "./content/guides";
 import {createLegacyTexts as createGuideTemplateTexts} from "./content/legacyTexts";
 import {sources as guideTemplateSources} from "../content/ja/guides/gameProviders_templates";
@@ -490,7 +491,7 @@ function finalZzzStats(catalog: ZzzCatalog, agent: Record<string, number>, weapo
   };
 }
 
-const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegistry(guideRecords, "ZZZ_CHARACTER_GUIDES");
+const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegistry([...guideRecords, ...batch28GuideRecords], "ZZZ_CHARACTER_GUIDES");
 
 
 

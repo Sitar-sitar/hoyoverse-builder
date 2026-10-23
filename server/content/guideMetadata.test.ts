@@ -14,8 +14,8 @@ import { guideMetadataFor } from "../characterGuideMetadata";
 
 describe("character guide metadata authority", () => {
   it("preserves all independent old records, defaults and serialization order", () => {
-    expect(guideMetadataRecords).toHaveLength(256);
-    expect(guideMetadataSections()).toHaveLength(259);
+    expect(guideMetadataRecords).toHaveLength(257);
+    expect(guideMetadataSections()).toHaveLength(260);
     expect(JSON.stringify(projectGuideMetadataRegistry())).toBe(
       JSON.stringify(baseline.records)
     );
