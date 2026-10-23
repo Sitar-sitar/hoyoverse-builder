@@ -1,6 +1,6 @@
 # Northflank本番運用ガイド
 
-更新日: 2026-10-19（Phase 60 A）。本書は「現行運用」「通常更新」「migrationを伴う更新」「切戻し」「過去記録」の順に読む。仕様の正本は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)と[運用安定化設計](修正設計書_運用安定化と保守性改善_2026-10-19.md)、実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ](実装ログ.md)。
+更新日: 2026-10-23（Phase 67：migration手順の書き直し。前回 2026-10-19 Phase 60 A）。本書は「現行運用」「通常更新」「migrationを伴う更新」「切戻し」「過去記録」の順に読む。仕様の正本は[移行設計書](実装設計書_RailwayからNorthflankへの段階移行_2026-10-03.md)と[運用安定化設計](修正設計書_運用安定化と保守性改善_2026-10-19.md)、実取得証拠は[管理台帳](運用管理台帳_Northflank設定_2026-10-05.md)、工程は[実装ログ](実装ログ.md)。
 
 ## 現行運用
 
@@ -58,10 +58,35 @@ mainへの直接pushはできない（2026-10-20からrulesetでPR必須、承�
 
 ## migrationを伴う更新
 
-1. 事前backup・差分・停止範囲を確認する。本番Restoreを通常リリースへ混ぜない。
-2. shared JobをAPIと同じmanifest digestへ固定し、Run commandを個別指定する（既存の適用コマンドは `pnpm exec drizzle-kit migrate`）。保存済みコマンドは準備確認用で、Run開始だけではmigrationにならない。Jobは自動実行しない。
-3. Jobもimage既定でNODE_ENV=productionのため、drizzle.config.tsがDB設定（queryなしURL、CA）を設定生成前に検証する。Northflank側の環境変数でNODE_ENVを上書きしていないことを確認する。
-4. API/Jobの同image・SHAを確認してから、通常更新の3〜6を行う。
+2026-10-23に、自動配備（main追随・CI/CD ON）の構成とPhase 63の実測（Jobのimage付け替え・読取確認）に合わせて書き直した。
+
+### 方針：後方互換のschema変更だけを1リリースで行う
+
+mainへのマージでAPIが自動再配備され、Jobが使う新しいimageも同じマージでビルドされる。このため **migrateより先に新しいAPIコードが古いschemaで動く**（逆順にはできない）。
+
+- 1リリースで行ってよいのは、古いschemaのままでも新しいAPIコードが動く変更だけ（表・列・indexの追加、NULL可または既定値付きの列追加など）。新しいコードは、migrate前の古いschemaでもエラーにならないこと（新しい列を読まない・書かない経路が動くこと）をPRで確認する。
+- 削除・改名・型変更・NOT NULL化などの破壊的変更は、複数リリースに分ける：(1) 追加して新旧両方で動くコード、(2) データ移行、(3) 旧側を使わないコードへ切替、(4) 旧側の削除。各段で本節の手順を繰り返す。
+- 上記で書けない変更（停止が必要なもの）は、本節の対象外として個別に設計する（`API_MAINTENANCE` や自動配備の一時停止を使う場合も、その設計で手順を決める）。
+
+### 事前準備（PRのマージ前）
+
+1. PRで、追加されるmigration（`drizzle/` のSQLと `drizzle/meta/_journal.json`）と、それが後方互換であることを確認する。CIの合格に加え、migrate前の古いschemaで新コードが動く根拠をPRに書く。
+2. registry認証 `hoyoverse-image-pull` のAPI token（Team → API tokens、role `hoyoverse-image-pull`）の期限を確認する。期限切れだとJobが新しいimageを取得できない（2026-10-20に発生）。更新は利用者が行い、値は記録しない。
+3. 本番DBのbackupを取る。Northflankのaddon `hoyoverse-mysql` → Backups で Native dump を手動作成し、成功を確認する（2026-10-07にNative dumpのローカル復元を検証済み。Disk snapshotの復元はNOT_TESTED）。backup名は `pre-migration-<YYYYMMDD>` とし、実装ログへ名前と時刻だけを書く。
+
+### 実施（PRのマージ後）
+
+4. PRをマージし、通常更新どおりAPIの自動再配備（health の revision）とPagesの同SHA公開を確認する。この時点では新コードが古いschemaで動いている。health・公開監視・公開画面が正常であることを確認する（後方互換の確認）。
+5. Northflankで本番APIの最新build（API → Builds の最上段、Deployedのもの）のbuild名を確認する。
+6. Job `hoyoverse-db-migrate-shared` → Edit image source で、image path を `registry.northflank.com/hoyoverse-builder/hoyoverse-api:<build名>`、Credentials を `hoyoverse-image-pull` にし、「Image is accessible」を確認してUpdateする。digestだけの指定は画面で検証できないため、build固有タグで固定し、手順7の出力のrevisionで同一buildを確認する。保存済みCMD（準備確認用のプレースホルダ）・manual・環境変数は変えない。
+7. 読取確認：Job → Run → Preview or override job configuration → Advanced Docker options → Custom command に `node node_modules/tsx/dist/cli.mjs scripts/db-readonly-check.ts` を入れて Run job（このRunだけに適用され保存されない）。Logsに `DB_CHECK_OK connection_ok=1 tls=TLSv1.3 ca_verified=yes node_env=production revision=<APIのhealthと同じSHA>` が出ることを確認する。`DB_CHECK_FAILED:<code>` なら原因を直すまで先へ進まない。Environment variables の欄は秘密値を含むので開かない。
+8. migrate：同じ方法で Custom command に `node node_modules/drizzle-kit/bin.cjs migrate` を入れて Run job（2026-10-06に同形式で成功実績あり）。Logsで `migrations applied successfully` と exit 0 を確認する。`pnpm exec` は使わない（imageは実行ユーザー `node` で動き、`packageManager` のpnpmを実行時にcorepackが取得しようとする可能性があるため）。
+9. 事後確認：手順7の読取確認をもう一度行い、health・公開監視（post-deploy check / 定期run）・新機能の画面（DBを使う管理画面の読取など）を確認する。実装ログへ、backup名、build名、Run ID、出力の要約を書く。
+
+### migrateが失敗したとき
+
+- MySQLのDDLはトランザクションで戻らないため、途中まで適用されている可能性がある。Logsの失敗箇所を確認し、まずは追加のmigrationで前へ直す（forward fix）。後方互換の変更なら、APIは古いschemaのままでも動いているはずなので、急いで復元しない。
+- 本番DBの復元（手順3のbackupからのRestore）は最後の手段とし、利用者の承認を得てから行う。本番への復元手順は未検証（ローカルへのNative dump復元だけ検証済み）なので、実施する場合は先に影響範囲と停止時間を利用者と決める。
 
 ## 切戻し
 
@@ -100,7 +125,7 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 
 1. PRでテスト・型検査・APIビルドを確認し、対象main SHAを確定する。
 2. Northflankで対象mainをビルドする。APP_REVISION build argumentは動的参照 ${NF_GIT_SHA} を維持し、imageへ対象40桁SHAが取り込まれることを確認し、成功したimageをAPIへ配備する。
-3. migrationが必要なら事前backup・差分・停止範囲を確認する。shared JobをAPIと同じmanifest digestへ固定し、Run commandを個別指定する。現在の保存コマンドは準備確認用で、Run開始だけではmigrationにならない。既存migration適用コマンドは pnpm exec drizzle-kit migrate。本番Restoreを通常リリースへ混ぜない。
+3. migrationが必要なら、本書の「migrationを伴う更新」に従う（2026-10-23以降はこちらを正とする。以下の旧手順の記述は当時の記録）。
 4. healthのSHA、通常受付フラグ、DB/TLS、CORS、RPC、probesを確認する。
 5. Pages workflowを対象mainで実行し、forward生成・同SHAゲート・公開画面を確認する。API準備前にworkflowが失敗した場合は、API準備後に再実行する。
 
