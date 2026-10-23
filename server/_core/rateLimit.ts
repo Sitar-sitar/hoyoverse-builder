@@ -64,15 +64,13 @@ export function createRateLimiter(rule: RateLimitRule, maxEntries = DEFAULT_MAX_
 
 /**
  * クライアント IP の確定。
- * Railway は client remote IP を `X-Real-IP` で渡す。Railway 実行時のみこれを信頼し、
- * それ以外の環境では偽装できるヘッダーを一切信頼せず socket address を使う。
+ * CLIENT_IP_SOURCE=northflank のときだけ、信頼する proxy 段数（NORTHFLANK_TRUSTED_PROXY_HOPS）に従って X-Forwarded-For を採用する。
+ * auto / socket では偽装できるヘッダーを一切信頼せず socket address を使う。
  * レート制限のためだけに `app.set("trust proxy", 1)` を入れて Express 全体の挙動を変えることはしない。
  */
-let warnedAboutMissingRealIp = false;
-
 export function validateClientIpConfiguration() {
   const mode = process.env.CLIENT_IP_SOURCE ?? "auto";
-  if (!["auto", "socket", "railway", "northflank"].includes(mode)) throw new Error("Invalid CLIENT_IP_SOURCE");
+  if (!["auto", "socket", "northflank"].includes(mode)) throw new Error("Invalid CLIENT_IP_SOURCE");
   if (mode === "northflank" && !/^[1-5]$/.test(process.env.NORTHFLANK_TRUSTED_PROXY_HOPS ?? "")) throw new Error("NORTHFLANK_TRUSTED_PROXY_HOPS must be 1..5");
   return mode;
 }
@@ -94,22 +92,11 @@ export function clientIpFromRequest(req: Request): string {
     if (northflankFallbacks === 1) console.warn("[RateLimit] Invalid Northflank forwarded IP; using socket address");
     return normalizedIp(req.socket?.remoteAddress ?? "unknown");
   }
-  if (mode === "railway" || (mode === "auto" && process.env.RAILWAY_PROJECT_ID)) {
-    const header = req.headers["x-real-ip"];
-    const candidate = (Array.isArray(header) ? header[0] : header ?? "").trim();
-    if (net.isIP(candidate) > 0) return candidate;
-    if (!warnedAboutMissingRealIp) {
-      warnedAboutMissingRealIp = true;
-      // IP・UID・トークンは本文へ出さない。
-      console.warn("[RateLimit] Railway 実行中に X-Real-IP を取得できなかったため、socket address で判定します。");
-    }
-  }
   return req.socket?.remoteAddress ?? "unknown";
 }
 
-/** テスト専用。`X-Real-IP` 欠落の警告が1回だけであることを検査するために状態を戻す。 */
+/** テスト専用。Northflank の転送IPが不正だったときの警告と計数（northflankFallbacks）を戻す。 */
 export function resetClientIpWarningForTests() {
-  warnedAboutMissingRealIp = false;
   northflankFallbacks = 0;
 }
 

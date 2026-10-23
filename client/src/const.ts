@@ -1,7 +1,5 @@
 import { saveLoginReturnPath } from "./lib/loginReturnPath";
 
-export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
-
 function defaultAdminReturnPath() {
   if (typeof window === "undefined") return "/admin";
   return window.location.pathname.endsWith("/admin/feedback") ? "/admin/feedback" : "/admin";

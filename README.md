@@ -32,6 +32,6 @@
 
 ## 移行履歴
 
-RailwayからNorthflankへ移行しました（2026-10-08 完了判定、24時間連続観察は未達・追加免除の明示例外あり）。過去の検証記録とrailway.tomlは履歴・互換性確認用に保持し、現行配備には使用しません。
+RailwayからNorthflankへ移行しました（2026-10-08 完了判定、24時間連続観察は未達・追加免除の明示例外あり）。過去の検証記録は履歴として保持します。railway.toml と Railway 互換コード（IP判定の railway モード、revision の予備参照）は Phase 68 で削除しました。
 
 本リポジトリはSitar-sitar/Webのhoyoversebuilderブランチを履歴ごと分離したものです。旧URL https://sitar-sitar.github.io/Web/hoyoverse/ はWeb側で本リポジトリへ転送されます。

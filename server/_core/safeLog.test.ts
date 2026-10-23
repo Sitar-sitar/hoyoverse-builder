@@ -48,8 +48,8 @@ describe("logFailure", () => {
 
   it("warnレベルとHTTP statusだけの記録", () => {
     const spy = vi.spyOn(console, "warn").mockImplementation(() => {});
-    logFailure("Notification", "notify_rejected", undefined, { level: "warn", status: 503 });
-    expect(spy).toHaveBeenCalledWith("[Notification] notify_rejected status=503");
+    logFailure("Database", "connect_failed", undefined, { level: "warn", status: 503 });
+    expect(spy).toHaveBeenCalledWith("[Database] connect_failed status=503");
   });
 
   it("任意オブジェクトをconsoleへ渡さない", () => {

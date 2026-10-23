@@ -21,18 +21,6 @@ export async function createContext(
     user = null;
   }
 
-  // Preserve the legacy Manus session flow only for the original full-stack
-  // runtime. The public API does not load the Manus SDK.
-  if (!user && process.env.API_ONLY !== "true") {
-    const { sdk } = await import("./sdk");
-    try {
-      user = await sdk.authenticateRequest(opts.req);
-    } catch {
-      // Authentication is optional for public procedures.
-      user = null;
-    }
-  }
-
   return {
     req: opts.req,
     res: opts.res,
