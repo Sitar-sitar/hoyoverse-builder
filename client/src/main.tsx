@@ -1,5 +1,5 @@
 import { trpc } from "@/lib/trpc";
-import { COOKIE_NAME, UNAUTHED_ERR_MSG } from '@shared/const';
+import { UNAUTHED_ERR_MSG } from '@shared/const';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink, TRPCClientError } from "@trpc/client";
 import { createRoot } from "react-dom/client";
@@ -13,7 +13,6 @@ import {
 } from "./lib/adminSession";
 import { safeTrpcFetch } from "./lib/safeTrpcFetch";
 import "./index.css";
-import { isNextPages } from "./lib/migrationPage";
 
 const queryClient = new QueryClient();
 const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
@@ -62,23 +61,6 @@ const trpcClient = trpc.createClient({
         // token before React renders, so cross-site cookies are not required.
         const adminToken = getAdminBearerToken();
         if (adminToken) return { Authorization: `Bearer ${adminToken}` };
-
-        if (isNextPages) return {};
-
-        // Keep the legacy preview fallback for non-production Manus runtimes.
-        try {
-          const raw = sessionStorage.getItem("manus-cookie");
-          if (raw) {
-            const prefix = `${COOKIE_NAME}=`;
-            const pair = raw.split(";").find(s => s.trim().startsWith(prefix));
-            const token = pair?.trim().slice(prefix.length);
-            if (token) {
-              return { Authorization: `Bearer ${token}` };
-            }
-          }
-        } catch {
-          // sessionStorage unavailable
-        }
         return {};
       },
       fetch(input, init) {

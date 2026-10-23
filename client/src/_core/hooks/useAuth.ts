@@ -1,4 +1,3 @@
-import { isNextPages, scopedStorageKey } from "@/lib/migrationPage";
 import { startLogin } from "@/const";
 import { clearAdminBearerToken } from "@/lib/adminSession";
 import { trpc } from "@/lib/trpc";
@@ -41,28 +40,14 @@ export function useAuth(options?: UseAuthOptions) {
       }
       throw error;
     } finally {
-      // Clear this base's Bearer token. Only the legacy base owns the Manus
-      // fallback; the backend clears its own HttpOnly session cookie.
+      // Clear this base's Bearer token; the backend clears its own HttpOnly session cookie.
       clearAdminBearerToken();
-      try {
-        if (!isNextPages) sessionStorage.removeItem("manus-cookie");
-      } catch {}
       utils.auth.me.setData(undefined, null);
       await utils.auth.me.invalidate();
     }
   }, [logoutMutation, utils]);
 
   const state = useMemo(() => {
-    // Auxiliary copy only. Authentication uses the query result, so a storage
-    // failure (blocked site data, private mode quota) must not stop rendering.
-    try {
-      localStorage.setItem(
-        scopedStorageKey("manus-runtime-user-info"),
-        JSON.stringify(meQuery.data)
-      );
-    } catch {
-      // Ignore storage failures.
-    }
     return {
       user: meQuery.data ?? null,
       loading: meQuery.isLoading || logoutMutation.isPending,
