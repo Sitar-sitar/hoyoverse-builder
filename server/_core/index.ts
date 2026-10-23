@@ -107,7 +107,7 @@ async function startServer() {
   applyBodyParsers(app);
 
   app.get("/api/health", (_req, res) => {
-    res.status(200).json({ ok: true, service: "hoyoverse-builder-api", revision: process.env.APP_REVISION ?? process.env.RAILWAY_GIT_COMMIT_SHA ?? null, maintenance: booleanSetting("API_MAINTENANCE"), migrationPreview: booleanSetting("API_MIGRATION_PREVIEW") });
+    res.status(200).json({ ok: true, service: "hoyoverse-builder-api", revision: process.env.APP_REVISION ?? null, maintenance: booleanSetting("API_MAINTENANCE"), migrationPreview: booleanSetting("API_MIGRATION_PREVIEW") });
   });
 
   // GitHub App administrator login must be available on the public API

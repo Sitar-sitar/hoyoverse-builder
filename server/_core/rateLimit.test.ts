@@ -6,6 +6,7 @@ import {
   createRateLimiter,
   rateLimitKeyForUid,
   resetClientIpWarningForTests,
+  validateClientIpConfiguration,
 } from "./rateLimit";
 
 /** 設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43 */
@@ -84,32 +85,21 @@ describe("クライアント IP の確定", () => {
 
   afterEach(() => {
     delete process.env.RAILWAY_PROJECT_ID;
+    delete process.env.CLIENT_IP_SOURCE;
   });
 
-  it("Railway 実行時は妥当な X-Real-IP を採用し、X-Forwarded-For は無視する", () => {
+  it("auto では RAILWAY_PROJECT_ID があっても X-Real-IP も X-Forwarded-For も信頼しない", () => {
     process.env.RAILWAY_PROJECT_ID = "proj";
-    const ip = clientIpFromRequest(req({
-      headers: { "x-real-ip": "203.0.113.7", "x-forwarded-for": "198.51.100.9, 203.0.113.7" },
-      remoteAddress: "10.0.0.1",
-    }));
-    expect(ip).toBe("203.0.113.7");
-  });
-
-  it("Railway 実行時に X-Real-IP が欠落・不正なら socket address へ戻し、警告は1回だけ出す", () => {
-    process.env.RAILWAY_PROJECT_ID = "proj";
-
-    expect(clientIpFromRequest(req({ remoteAddress: "10.0.0.1" }))).toBe("10.0.0.1");
-    expect(clientIpFromRequest(req({ headers: { "x-real-ip": "not-an-ip" }, remoteAddress: "10.0.0.2" }))).toBe("10.0.0.2");
-    expect(warn).toHaveBeenCalledTimes(1);
-    expect(String(warn.mock.calls[0][0])).not.toContain("10.0.0.1");
-  });
-
-  it("Railway 以外では X-Real-IP も X-Forwarded-For も信頼しない", () => {
     const ip = clientIpFromRequest(req({
       headers: { "x-real-ip": "203.0.113.7", "x-forwarded-for": "198.51.100.9" },
       remoteAddress: "10.0.0.1",
     }));
     expect(ip).toBe("10.0.0.1");
+  });
+
+  it("CLIENT_IP_SOURCE=railway は設定検証で拒否する", () => {
+    process.env.CLIENT_IP_SOURCE = "railway";
+    expect(() => validateClientIpConfiguration()).toThrow("Invalid CLIENT_IP_SOURCE");
   });
 
   it("socket address も取れないときは固定のキーへ落とす", () => {

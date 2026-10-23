@@ -142,9 +142,9 @@ CLIENT_IP_SOURCE=northflank / NORTHFLANK_TRUSTED_PROXY_HOPS=1は、この配備�
 | 残す対象 | 理由 |
 | --- | --- |
 | 移行設計・過去の実装ログ・検証メモ | 当時の構成・結果・例外を追跡するため。現在の設定として読まない |
-| railway.toml | 旧配備の履歴。Northflankの現行設定ではない |
 | scripts/pages.mjsのlegacy/parallel/rollback、旧API変数 | 移行モード互換性。forwardの実アプリはNFへ接続する |
-| IP処理のRailway識別、旧revision環境変数fallback | 旧環境互換コード。現行NFの実測設定とは分離 |
+
+railway.toml、IP処理のRailway識別、旧revision環境変数fallbackは Phase 68 で削除した（[リファクタリング計画書_2026-10-23.md](リファクタリング計画書_2026-10-23.md) R6）。
 
 旧Railway API/MySQLは期限切れでOffline。DB/volumeと旧callbackは保持する。課金・削除は実施していない。受付再開後はNF DBが正本で、Pages変数だけを旧URLへ戻しても安全なrollbackにはならない。逆コピー・全行照合・旧API再開が必要であり未検証。廃止は観察・復元ゲートと別の利用者判断による。
 
