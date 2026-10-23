@@ -89,6 +89,7 @@
 
 ## 英中の扱い
 
+- 利用者指示（2026-10-23）: 今回は日本語のみの更新で良い。英中の翻訳は行わない。
 - 英中レコードは `review: "pending"`・`sourceHash: null`。公開言語は日本語のみのため表示には影響しない。
 - 公式データで確認できたもの: PTメンバー名6名（Enka locs の en/zh-CN）。
 - **日本語と同じ text にした項目（未翻訳）**: 心象映画の名称・本文12件、凸の出典ラベル1件、PTのタイトル・役割・相性・注記・出典ラベル22件（計35件）。翻訳作業の別依頼で扱う。
@@ -110,12 +111,12 @@
 ## 検証
 
 - `pnpm check` PASS、`pnpm content:catalog-index check` / `content:generate` / `content:check` PASS（11,556原文 / 3,674 section）。
-- `pnpm test`: 128ファイル中127 PASS。件数系の期待値（256→257名、共有編成24→27、ID 288→289 など）を実データで確認して更新。残る1件は `content/coverage/baseline.v1.json` の比較で、更新方式の確認待ち（下記）。
+- `pnpm test`: 129ファイル／852件 PASS（skip 1ファイル3件）。件数系の期待値（256→257名、共有編成24→27、ID 288→289 など）は実データで確認して更新し、`server/parties/batch28.test.ts` を追加。
+- 日本語 API baseline（`content/coverage/baseline.v1.json`）: 利用者の「日本語のみの更新で良い」の指示により、ゴールデン比較で差分範囲を確認した後に作り直した（ファイル削除→`content:baseline snapshot`→`compare` PASS）。差分は characterCount 256→257、catalog・ledger・history の digest、`zzz:1641` の追加行、参加者5名（`zzz:1561`・`1581`・`1411`・`1281`・`1151`）の reference digest のみ。5名の guide・constellations digest は不変。`BASELINE_SOURCE_REVISION`（`dbd66e8`、初回採取元）は変更していない。
 - node:test 79件 PASS、`build:api`・Pages build PASS、`git diff --check` PASS。
 - `party-links.mjs --strict` 未対応0件、`audit-characters.mjs --offline` 257/257・経路不一致0・メンバー名未解決0・P2 は既知の2名のみ。
 - ゴールデン比較（作業前 main で snapshot → 変更後 compare）: 差分はフィオニー本人の各セクション、台帳・履歴・カタログの件数と追加行、メタデータの追加行、参加者5名の `partyAppearances` 追加だけ。他キャラの既存行は不変を確認。
 
 ## 未完了
 
-- `content/coverage/baseline.v1.json` の更新（Phase 59 後で初のデータ追加。方式を利用者に確認中）。
 - 実画面（Chrome）確認・push・PR・本番反映は未実施。
