@@ -66,7 +66,7 @@ describe("constellation authoring", () => {
   it("preserves shared traveler entries and separate element forms", () => {
     const projected = projectConstellations(records);
     expect(records).toHaveLength(34);
-    expect(constellationSections()).toHaveLength(260);
+    expect(constellationSections()).toHaveLength(261);
     expect(projected["genshin:10000005"]).toBe(
       projected["genshin:10000007-704"]
     );

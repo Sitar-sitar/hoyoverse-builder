@@ -3413,7 +3413,84 @@ const block3: SourceText[] = [
     "protectedTokens": []
   }
 ];
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, {
+// 第28バッチ（2026-10-23）の履歴文。
+const block4: SourceText[] = [
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00326",
+    "ja": "第28バッチ：ZZZ Ver.3.3 のフィオニーを追加",
+    "context": "guideUpdateHistory: Batch 28 history title",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00327",
+    "ja": "{v0}の確認済みID、個別ビルド、開幕異常掌握の3水準、心象映画6段、実名3名の推奨PT3案を登録しました。",
+    "context": "guideUpdateHistory: Batch 28 history summary; v0 is the character name",
+    "audience": "public",
+    "placeholders": {
+      "v0": "string"
+    },
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00328",
+    "ja": "図鑑とUID照会へ追加",
+    "context": "guideUpdateHistory: Batch 28 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00329",
+    "ja": "ドライバディスク・主ステータス・開幕異常掌握の目標を登録",
+    "context": "guideUpdateHistory: Batch 28 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00330",
+    "ja": "確認済みIDに心象映画6段を登録",
+    "context": "guideUpdateHistory: Batch 28 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00331",
+    "ja": "実名3名の推奨PT3案を共有編成として登録し、参加者6件の連動を記録",
+    "context": "guideUpdateHistory: Batch 28 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00332",
+    "ja": "戦闘中効果を公開プロフィールの現在値から分離",
+    "context": "guideUpdateHistory: Batch 28 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.guideUpdateHistory.b00333",
+    "ja": "実装済みの新エージェントを確認済みIDで案内し、戦闘外の根拠がある値だけを比較対象にするため。",
+    "context": "guideUpdateHistory: Batch 28 history rationale",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, {
   id: "history.character.profile.summary",
   ja: "採用プロファイル: {v0}。公開プロフィールで比較可能な戦闘外の目標値を設定しました。",
   context: "Character history baseline: preserved profile ID summary; v0 is the existing metadata profileId",

@@ -4,8 +4,8 @@ import { contentRepository, plannedSections } from "./repository";
 
 describe("character authoring authority", () => {
   it("tracks every confirmed identity without collecting or translating content", () => {
-    expect(characterRecords).toHaveLength(256);
-    expect(characterSources).toHaveLength(256);
+    expect(characterRecords).toHaveLength(257);
+    expect(characterSources).toHaveLength(257);
     for (const record of characterRecords) {
       expect(record.introduction.status).toBe("notCollected");
       expect(record.skills.status).toBe("notCollected");
@@ -21,7 +21,7 @@ describe("character authoring authority", () => {
       expect(index.catalog.translations.en[source.id]).toBeUndefined();
       expect(index.catalog.translations["zh-CN"][source.id]).toBeUndefined();
     }
-    expect(plannedSections()).toHaveLength(512);
+    expect(plannedSections()).toHaveLength(514);
   });
 
   it("rejects duplicate, unclassified and invalid authoring fields", () => {

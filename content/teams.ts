@@ -3,6 +3,7 @@ import { teams as batch24 } from "./teamBatch24";
 import { teams as batch26 } from "./teamBatch26";
 import { teams as batch27 } from "./teamBatch27";
 import { teams as batch23 } from "./teamBatch23";
+import { teams as batch28 } from "./teamBatch28";
 import { teams as legacy } from "./teamLegacy";
 import { canonicalSources } from "./catalog";
 import type {
@@ -18,6 +19,7 @@ export const teamRecords: TeamAuthoring[] = [
   ...batch26,
   ...batch27,
   ...batch23,
+  ...batch28,
   ...legacy,
 ];
 const ignore = (_value: unknown): TextRef[] => [];

@@ -5376,6 +5376,27 @@ export const records:GuideMetadataAuthoring[]=[
       "updatedAt",
       "sourceLabel"
     ]
+  },
+  {
+    "identityKey": "zzz:1641",
+    "game": "zzz",
+    "name": {
+      "kind": "textRef",
+      "id": "character.zzz.1641.name"
+    },
+    "profileId": "curated:batch28:zzz:フィオニー",
+    "dataAsOf": "2026-10-23",
+    "updatedAt": "2026-10-23",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00024"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
   }
 ];
 export const defaults:Record<Game,GuideMetadataFields>={

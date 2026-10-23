@@ -260,4 +260,6 @@ export const INITIAL_PARTY_REFS: Readonly<Record<string, readonly string[]>> = {
   "zzz:浮波柚葉": ["curated-zzz-浮波柚葉-1","curated-zzz-浮波柚葉-2","curated-zzz-浮波柚葉-3"],
   "zzz:葉瞬光": ["batch15-zzz-葉瞬光-1","batch15-zzz-葉瞬光-2","batch15-zzz-葉瞬光-3"],
   "zzz:潘引壺": ["batch15-zzz-潘引壺-1","batch15-zzz-潘引壺-2","batch15-zzz-潘引壺-3"],
+  // 第28バッチ（2026-10-23）新キャラ初回登録。
+  "zzz:フィオニー": ["team-zzz-フィオニー-b28-1","team-zzz-フィオニー-b28-2","team-zzz-フィオニー-b28-3"],
 };

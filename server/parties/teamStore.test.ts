@@ -27,12 +27,12 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計696件（旧形式672・共有24）で、IDが重複しない", () => {
-    expect(TEAM_STORE.teams).toHaveLength(696);
+  it("合計699件（旧形式672・共有27）で、IDが重複しない", () => {
+    expect(TEAM_STORE.teams).toHaveLength(699);
     expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(672);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
-    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(696);
+    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(699);
   });
 
   it("旧形式の全編成で起点キャラがメンバーにいて、目標補正9件が起点メンバーへ移っている", () => {
@@ -90,8 +90,8 @@ describe("編成マスタ（Phase 1）", () => {
     expect(unreferenced.sort()).toEqual([...ORPHANS].sort());
   });
 
-  it("全256名でセット期日が最新案の期日と一致し、キーの並びが移行前と同じ", () => {
-    expect(allCharacters).toHaveLength(256);
+  it("全257名でセット期日が最新案の期日と一致し、キーの並びが移行前と同じ", () => {
+    expect(allCharacters).toHaveLength(257);
     for (const { game, name } of allCharacters) {
       const set = partyRecommendationsFor(game, name);
       const head = latestOption(set.options);
