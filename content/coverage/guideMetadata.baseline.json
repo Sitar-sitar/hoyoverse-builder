@@ -1184,6 +1184,66 @@
         "dataAsOf": "2026-08-13",
         "updatedAt": "2026-09-08",
         "sourceLabel": "Game8の更新日付き個別ビルド・命ノ星座・PTガイドを照合"
+      },
+      "オデット": {
+        "profileId": "curated:batch29:genshin:オデット",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "アリョーシャ": {
+        "profileId": "curated:batch29:genshin:アリョーシャ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "サンドローネ": {
+        "profileId": "curated:batch29:genshin:サンドローネ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "ニコ": {
+        "profileId": "curated:batch29:genshin:ニコ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "プルーネ": {
+        "profileId": "curated:batch29:genshin:プルーネ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "ローエン": {
+        "profileId": "curated:batch29:genshin:ローエン",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "リンネア": {
+        "profileId": "curated:batch29:genshin:リンネア",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "ファルカ": {
+        "profileId": "curated:batch29:genshin:ファルカ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "兹白": {
+        "profileId": "curated:batch29:genshin:兹白",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "イルーガ": {
+        "profileId": "curated:batch29:genshin:イルーガ",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
       }
     },
     "zzz": {
@@ -1546,6 +1606,12 @@
         "dataAsOf": "2026-10-23",
         "updatedAt": "2026-10-23",
         "sourceLabel": "Game8・GameWithの更新日付き個別ビルド・編成・心象映画情報を照合"
+      },
+      "ロクシー": {
+        "profileId": "curated:batch29:zzz:ロクシー",
+        "dataAsOf": "2026-10-26",
+        "updatedAt": "2026-10-26",
+        "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
       }
     }
   },

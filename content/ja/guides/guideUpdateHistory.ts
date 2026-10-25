@@ -3490,9 +3490,54 @@ const block4: SourceText[] = [
     "protectedTokens": []
   }
 ];
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, {
+export const sources: SourceText[] = [
+...block0,
+...block1,
+...block2,
+...block3,
+...block4,
+{
   id: "history.character.profile.summary",
   ja: "採用プロファイル: {v0}。公開プロフィールで比較可能な戦闘外の目標値を設定しました。",
   context: "Character history baseline: preserved profile ID summary; v0 is the existing metadata profileId",
   audience: "public", placeholders: {v0:"string"}, dependencies: [], protectedTokens: [],
-}];
+},
+{
+    "id": "guide.batch29.b00244",
+    "ja": "第29バッチ：新規キャラクター11名",
+    "context": "batch29 history title",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch29.b00245",
+    "ja": "{v0}の個別ビルド・凸・推奨編成を追加。",
+    "context": "batch29 history summary",
+    "audience": "public",
+    "placeholders": {
+      "v0": "string"
+    },
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch29.b00246",
+    "ja": "確認済みIDでロクシーと原神10名を追加。戦闘中の補正は公開値へ加算しない。",
+    "context": "batch29 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch29.b00247",
+    "ja": "更新日付き個別ガイドと公開ゲームデータを確認し、根拠のない数値目標は登録しない。",
+    "context": "batch29 history rationale",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];

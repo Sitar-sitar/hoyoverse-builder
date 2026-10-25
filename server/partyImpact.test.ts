@@ -16,16 +16,16 @@ describe("推奨PT影響レビュー", () => {
     expect(report.mentioned.every((entry) => entry.owner !== "ホタル")).toBe(true);
   });
 
-  it("カタログ未登録の名前でも言及済みPTを洗い出せる（新キャラクター追加の第一入力）", () => {
+  it("第29バッチ登録後も過去と新規の言及済みPTをカタログ名で洗い出せる", () => {
     const report = partyImpactFor("genshin", "オデット");
-    expect(report.selfStatus).toBe("absent");
-    expect(report.mentioned).toHaveLength(8);
+    expect(report.selfStatus).toBe("curated");
+    expect(report.mentioned).toHaveLength(13);
     expect(report.mentioned.filter((entry) => entry.owner === "イファ")).toHaveLength(2);
     expect(report.mentioned.filter((entry) => entry.owner === "ヴェスナ")).toHaveLength(2);
     expect(report.mentioned.filter((entry) => entry.owner === "ヴォジャニーツァ")).toHaveLength(1);
     expect(report.mentioned.filter((entry) => entry.owner === "ファルザン")).toHaveLength(2);
     expect(report.mentioned.filter((entry) => entry.owner === "ディオナ")).toHaveLength(1);
-    expect(report.mentioned.every((entry) => entry.matchedAs === "upcoming")).toBe(true);
+    expect(report.mentioned.every((entry) => entry.matchedAs === "catalog")).toBe(true);
   });
 
   it("同役割の枠だけが replaceable に入る（HSR）", () => {
@@ -61,7 +61,7 @@ describe("推奨PT影響レビュー", () => {
   it("Markdown はチェックリスト形式で出力する", () => {
     const markdown = formatPartyImpactMarkdown(partyImpactFor("genshin", "オデット"));
     expect(markdown).toContain("### genshin:オデット の推奨PT影響レビュー");
-    expect(markdown).toContain("#### 言及済みPT（8件");
-    expect(markdown.match(/^- \[ \] /gm)?.length).toBe(8);
+    expect(markdown).toContain("#### 言及済みPT（13件");
+    expect(markdown.match(/^- \[ \] /gm)?.length).toBe(13);
   });
 });

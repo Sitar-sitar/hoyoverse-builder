@@ -117,7 +117,7 @@ describe("第12バッチ20名の個別ガイド", () => {
       expect(parties.options.length).toBeLessThanOrEqual(3);
       expect(parties.options.every((option) => option.members.some((member) => member.name.ja === displayName))).toBe(true);
       expect(parties.options.every((option) => option.targetChanges.length === 0)).toBe(true);
-      expect(parties.updatedAt).toBe("2026-08-27");
+      expect(parties.updatedAt).toBe(game === "genshin" && displayName === "コロンビーナ" ? "2026-10-26" : "2026-08-27");
       expect(guideMetadataFor(game, displayName).updatedAt).toBe("2026-08-27");
     });
     expect(partyRecommendationsFor("hsr", "モゼ").options[1]?.members.map((member) => member.name.ja)).toEqual(["飛霄", "モゼ", "ロビン", "アベンチュリン"]);

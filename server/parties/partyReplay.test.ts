@@ -9,27 +9,27 @@ import { refsFor } from "./resolve";
 import { buildTeamStore, TEAM_STORE } from "./teamStore";
 import type { PartyLinkRecord, Team } from "./types";
 
-const key = "genshin:ベネット";
+const key = "genshin:香菱";
 const own = INITIAL_PARTY_REFS[key]!;
 const text = (ja: string) => ({ ja, en: ja, "zh-CN": ja });
 const template = TEAM_STORE.byId.get(own[0]!)!;
 const team = (origin: string, batch: number): Team => ({
   ...template, id: `team-genshin-${origin}-b${batch}-1`, origin, originOrder: 4, shared: true, batch,
-  members: [["ベネット", "回復"], ["香菱", "炎付着"], ["行秋", "水付着"], ["ファルザン", "風支援"]].map(([name, role]) => ({ name: text(name!), role: text(role!) })),
+  members: [["香菱", "回復"], ["ベネット", "炎付着"], ["行秋", "水付着"], ["ファルザン", "風支援"]].map(([name, role]) => ({ name: text(name!), role: text(role!) })),
   targetSummary: text("戦闘中効果は公開値へ加算しない。"),
 });
-const older = team("香菱", 23);
-const fourth = { ...team("ベネット", 24), members: team("ベネット", 24).members.map(member => member.name.ja === "ファルザン" ? { ...member, name: text("フリーナ") } : member) };
+const older = team("ベネット", 23);
+const fourth = { ...team("香菱", 24), members: team("香菱", 24).members.map(member => member.name.ja === "ファルザン" ? { ...member, name: text("フリーナ") } : member) };
 const definition = (batch: number) => ({ ...PARTY_LINK_BATCHES[23]!, batch, date: `2026-10-${batch === 24 ? "20" : batch === 25 ? "21" : "22"}T12:00:00+09:00`, updatedAt: `2026-10-${batch === 24 ? "20" : batch === 25 ? "21" : "22"}` });
-const record = (batch: number, added: string[], removed: string[], owner = "ベネット"): PartyLinkRecord => ({ batch, game: "genshin", owner, added, removed });
+const record = (batch: number, added: string[], removed: string[], owner = "香菱"): PartyLinkRecord => ({ batch, game: "genshin", owner, added, removed });
 const input = (current: readonly string[], changes: PartyLinkRecord[] = [], initial = own): Partial<LinkStatusInput> => ({
   store: buildTeamStore([...TEAM_STORE.teams, older, fourth]),
-  parties: { ...CHARACTER_PARTIES, "genshin:香菱": { refs: refsFor("genshin", "香菱") }, [key]: { refs: current.map(id => ({ team: id })) } },
+  parties: { ...CHARACTER_PARTIES, "genshin:ベネット": { refs: refsFor("genshin", "ベネット") }, [key]: { refs: current.map(id => ({ team: id })) } },
   initialRefs: { ...INITIAL_PARTY_REFS, [key]: initial },
   records: [...PARTY_LINK_RECORDS, ...changes],
   batches: { ...PARTY_LINK_BATCHES, 24: definition(24), 25: definition(25), 26: definition(26) },
   // 所属24 > 編成23でも後日の採用を免除しない（PT-05）。
-  batchOf: (game, name) => game === "genshin" && name === "ベネット" ? 24 : 1,
+  batchOf: (game, name) => game === "genshin" && name === "香菱" ? 24 : 1,
 });
 const withOlder = [...own.slice(0, 2), older.id];
 const withFourth = [...own.slice(0, 2), fourth.id];
@@ -45,14 +45,16 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
   it("初回採用した古い共有編成は変更記録も追補イベントも不要", () => {
     const s = input(withOlder, [], withOlder);
     expect(replayIssues(s)).toEqual([]);
-    expect(linkRecordsFor("genshin", "ベネット", s.records, s.batches)).toEqual([]);
+    expect(linkRecordsFor("genshin", "香菱", s.records, s.batches)).toEqual([]);
   });
 
   it("新キャラの初回採用を固定しないと失敗し、固定すれば追補記録無しで通る", () => {
     const owner = "オデット";
     const initialId = "curated-genshin-ヴェスナ-1";
-    const catalog = { hsr: CHARACTER_GUIDE_CATALOG.hsr, genshin: [...CHARACTER_GUIDE_CATALOG.genshin, owner], zzz: CHARACTER_GUIDE_CATALOG.zzz };
-    const s = { catalog, parties: { ...CHARACTER_PARTIES, [`genshin:${owner}`]: { refs: [{ team: initialId }] } } };
+    const catalog = { hsr: CHARACTER_GUIDE_CATALOG.hsr, genshin: [...CHARACTER_GUIDE_CATALOG.genshin.filter(name => name !== owner), owner], zzz: CHARACTER_GUIDE_CATALOG.zzz };
+    const withoutOwner = Object.fromEntries(Object.entries(INITIAL_PARTY_REFS).filter(([key]) => key !== `genshin:${owner}`));
+    const skipped = TEAM_STORE.teams.filter(team => team.shared && team.id !== initialId && team.members.some(member => member.name.ja === owner)).map(team => ({ team: team.id, reason: "初回登録の否定例で表示を1案に限定", sourceUrl: team.sourceUrl, checkedAt: "2026-10-26" }));
+    const s = { catalog, initialRefs: withoutOwner, parties: { ...CHARACTER_PARTIES, [`genshin:${owner}`]: { refs: [{ team: initialId }], skipped } } };
     expect(replayIssues(s)).toContainEqual(expect.stringMatching(/^E6.*オデット/));
     expect(teamStoreIssues({ ...s, initialRefs: { ...INITIAL_PARTY_REFS, [`genshin:${owner}`]: [initialId] } })).toEqual([]);
     expect(linkRecordsFor("genshin", owner)).toEqual([]);
@@ -65,9 +67,9 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
     expect(replayIssues(input(withOlder))).toContainEqual(expect.stringMatching(/^B7\/E2/));
     const s = input(withOlder, [record(25, [older.id], [own[2]!])]);
     expect(teamStoreIssues(s)).toEqual([]);
-    const events = linkRecordsFor("genshin", "ベネット", s.records, s.batches);
+    const events = linkRecordsFor("genshin", "香菱", s.records, s.batches);
     expect(events).toHaveLength(1);
-    expect(linkEventFor("genshin", "ベネット", events[0]!).summary).toContain("1案");
+    expect(linkEventFor("genshin", "香菱", events[0]!).summary).toContain("1案");
     expect(historyUpdatedAt("2026-10-01", events)).toBe("2026-10-21");
   });
 
@@ -75,7 +77,7 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
     const changes = [record(25, [own[2]!], [older.id]), record(26, [older.id], [own[2]!])];
     const s = input(withOlder, changes, withOlder);
     expect(teamStoreIssues(s)).toEqual([]);
-    expect(linkRecordsFor("genshin", "ベネット", s.records, s.batches).map(entry => entry.record.batch)).toEqual([26, 25]);
+    expect(linkRecordsFor("genshin", "香菱", s.records, s.batches).map(entry => entry.record.batch)).toEqual([26, 25]);
     // 除外時の記録を落とすと最終集合が同じでも再生中の不正遷移を検出する。
     expect(replayIssues(input(withOlder, changes.slice(1), withOlder))).toContainEqual(expect.stringMatching(/^E7/));
   });
@@ -84,13 +86,13 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
     expect(replayIssues(input(withFourth))).toContainEqual(expect.stringMatching(/^B7\/E2/));
     const s = input(withFourth, [record(24, [fourth.id], [own[2]!])]);
     expect(teamStoreIssues(s)).toEqual([]);
-    expect(linkRecordsFor("genshin", "ベネット", s.records, s.batches)).toHaveLength(1);
+    expect(linkRecordsFor("genshin", "香菱", s.records, s.batches)).toHaveLength(1);
   });
 
   it("外した自分起点の旧案を再採用できる", () => {
     const s = input(own, [record(24, [fourth.id], [own[2]!]), record(25, [own[2]!], [fourth.id])]);
     expect(teamStoreIssues(s)).toEqual([]);
-    expect(linkRecordsFor("genshin", "ベネット", s.records, s.batches)).toHaveLength(2);
+    expect(linkRecordsFor("genshin", "香菱", s.records, s.batches)).toHaveLength(2);
   });
 
   it("他起点から自分起点への差し替えも履歴と再生が一致する", () => {
@@ -111,7 +113,7 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
 
   it("明示参照が無いキャラの既定参照の変化も検出する", () => {
     const store = buildTeamStore(TEAM_STORE.teams.filter(entry => entry.id !== own[2]));
-    expect(replayIssues({ store })).toContainEqual(expect.stringMatching(/^E2.*ベネット/));
+    expect(replayIssues({ store })).toContainEqual(expect.stringMatching(/^E2.*香菱/));
   });
 
   it("初期参照の欠落・重複・カタログ外キーを検出する", () => {

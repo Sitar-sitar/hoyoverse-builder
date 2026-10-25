@@ -126,7 +126,7 @@ describe("fixed history authoring", () => {
     ).toThrow("event field");
   });
   it("validates every batch template and binds only the existing name/profile variables", () => {
-    expect(historyBatches).toHaveLength(23);
+    expect(historyBatches).toHaveLength(24);
     const templates = batchHistoryTemplates();
     expect(templates[1]!.summary("テスト名")).toContain("テスト名");
     expect(profileHistoryEvent("hsr", "2026-01-01", "crit").summary).toBe(

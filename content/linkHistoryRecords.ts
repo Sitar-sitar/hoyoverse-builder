@@ -270,4 +270,40 @@ export const linkHistoryRecords: LinkHistoryContent[] = [
       v1: "addedCount",
     },
   },
+
+  {
+    "batch": 29,
+    "date": "2026-10-26T07:46:05+09:00",
+    "updatedAt": "2026-10-26",
+    "sourceNote": {
+      "kind": "textRef",
+      "id": "guide.legacy.parties_linkRecords.b00040"
+    },
+    "title": {
+      "kind": "textRef",
+      "id": "guide.legacy.parties_linkRecords.b00041"
+    },
+    "summary": {
+      "kind": "textRef",
+      "id": "guide.legacy.parties_linkRecords.b00042"
+    },
+    "changes": [
+      {
+        "blockId": "history.partyLink.batch29",
+        "text": {
+          "kind": "textRef",
+          "id": "guide.legacy.parties_linkRecords.b00043"
+        }
+      }
+    ],
+    "rationale": {
+      "kind": "textRef",
+      "id": "guide.legacy.parties_linkRecords.b00044"
+    },
+    "summaryBindings": {
+      "v0": "characterName",
+      "v1": "addedCount",
+      "v2": "removedCount"
+    }
+  }
 ];

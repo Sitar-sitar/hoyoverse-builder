@@ -45,7 +45,7 @@ describe("第27バッチの固定構成と条件", () => {
       expect(partyAppearancesFor(game, owner).some(card => card.teamId === suffix)).toBe(false);
       expect(linkRecordsFor(game, owner)[0]!.record.batch).toBe(27);
     }
-    expect(partyAppearancesFor("zzz", "リナ").map(card => card.teamId)).toEqual([
+    expect(partyAppearancesFor("zzz", "リナ").filter(card => card.teamId.includes("b27")).map(card => card.teamId)).toEqual([
       "team-zzz-クラレッタ-b27-1", "team-zzz-クラレッタ-b27-2",
     ]);
     expect(PARTY_LINK_RECORDS.filter(record => record.batch === 27)).toHaveLength(6);

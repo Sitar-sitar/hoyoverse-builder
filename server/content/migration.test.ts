@@ -7,10 +7,10 @@ import { stageCandidate } from "../../scripts/content/migrate";
 import { legacyProjection, migrateCandidate } from "./migration";
 
 describe("legacy migration preflight", () => {
-  it("preserves all 257 characters, both guide paths, related teams, history and all translations exactly", () => {
+  it("preserves all 268 characters, both guide paths, related teams, history and all translations exactly", () => {
     const input = collectBaseline();
     const candidate = migrateCandidate(input);
-    expect(input.characters).toHaveLength(257);
+    expect(input.characters).toHaveLength(268);
     expect(legacyProjection(candidate)).toEqual(input);
     expect(JSON.stringify(legacyProjection(candidate))).toBe(JSON.stringify(input));
     for (const records of Object.values(candidate.catalog.translations)) {

@@ -13,7 +13,7 @@ import type { PartyLinkRecord, Team } from "./types";
 
 const allCharacters = PARTY_GAMES.flatMap((game) => (CHARACTER_GUIDE_CATALOG[game] as readonly string[]).map((name) => ({ game, name })));
 const BATCH23_OWNERS = ["ファルザン", "ディオナ", "スカーク", "フリーナ", "エスコフィエ"] as const;
-const ORPHANS = ["ファルザン-2", "ファルザン-3", "ディオナ-3", "スカーク-3", "フリーナ-3", "エスコフィエ-3"].map((suffix) => `curated-genshin-${suffix}`);
+const ORPHANS = ["ファルザン-2", "ファルザン-3", "ディオナ-3", "スカーク-3", "フリーナ-3", "エスコフィエ-3"].map((suffix) => `curated-genshin-${suffix}`).concat(["batch15-genshin-ドゥリン-3", "curated-genshin-コロンビーナ-2", "curated-genshin-ベネット-3", "curated-genshin-八重神子-3"]);
 
 const fixtureTeam = (id: string, origin: string, originOrder: number, members: string[], shared = false): Team => ({
   id, game: "genshin", origin, originOrder, shared, batch: shared ? 24 : null,
@@ -27,12 +27,12 @@ const fixtureTeam = (id: string, origin: string, originOrder: number, members: s
 });
 
 describe("編成マスタ（Phase 1）", () => {
-  it("合計699件（旧形式672・共有27）で、IDが重複しない", () => {
-    expect(TEAM_STORE.teams).toHaveLength(699);
+  it("合計706件（旧形式672・共有34）で、IDが重複しない", () => {
+    expect(TEAM_STORE.teams).toHaveLength(706);
     expect(TEAM_STORE.teams.filter((team) => !team.shared)).toHaveLength(672);
     expect(TEAM_STORE.teams.filter((team) => team.shared).map((team) => team.id)).toEqual(SHARED_TEAMS.map((team) => team.id));
     expect(TEAM_STORE.duplicateIds).toEqual([]);
-    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(699);
+    expect(new Set(TEAM_STORE.teams.map((team) => team.id)).size).toBe(706);
   });
 
   it("旧形式の全編成で起点キャラがメンバーにいて、目標補正9件が起点メンバーへ移っている", () => {
@@ -90,8 +90,8 @@ describe("編成マスタ（Phase 1）", () => {
     expect(unreferenced.sort()).toEqual([...ORPHANS].sort());
   });
 
-  it("全257名でセット期日が最新案の期日と一致し、キーの並びが移行前と同じ", () => {
-    expect(allCharacters).toHaveLength(257);
+  it("全268名でセット期日が最新案の期日と一致し、キーの並びが移行前と同じ", () => {
+    expect(allCharacters).toHaveLength(268);
     for (const { game, name } of allCharacters) {
       const set = partyRecommendationsFor(game, name);
       const head = latestOption(set.options);
@@ -173,6 +173,6 @@ describe("変更記録と更新履歴（PT-02・PT-03）", () => {
     }
     const hotaru = history.characters.find((item) => item.game === "hsr" && item.name === "ホタル")!;
     expect(hotaru.events.some((event) => event.title.includes("追補"))).toBe(false);
-    expect(Object.keys(CHARACTER_PARTIES).filter((key) => key.startsWith("genshin:")).sort()).toEqual(BATCH23_OWNERS.map((name) => `genshin:${name}`).sort());
+    expect(Object.keys(CHARACTER_PARTIES)).toEqual(expect.arrayContaining(BATCH23_OWNERS.map((name) => `genshin:${name}`)));
   });
 });

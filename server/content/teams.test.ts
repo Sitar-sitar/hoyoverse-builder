@@ -33,7 +33,7 @@ describe("shared team authoring refs", () => {
     );
   });
   it("supplies one shared definition without exposing ref/identity metadata in the legacy model", () => {
-    expect(teamRecords).toHaveLength(699);
+    expect(teamRecords).toHaveLength(706);
     const projected = projectTeams(teamRecords);
     for (const team of projected) {
       expect(TEAM_STORE.byId.get(team.id)).toEqual(team);
@@ -52,7 +52,7 @@ describe("shared team authoring refs", () => {
         )
       ).toBe(true);
     }
-    expect(teamSections()).toHaveLength(699);
+    expect(teamSections()).toHaveLength(706);
     expect(unresolvedTeamMembers().length).toBeGreaterThan(0);
     expect(
       unresolvedTeamMembers().every(
