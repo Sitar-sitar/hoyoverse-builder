@@ -426,4 +426,55 @@ const block0: SourceText[] = [
     "protectedTokens": []
   }
 ];
-export const sources: SourceText[] = [...block0];
+export const sources: SourceText[] = [
+...block0,
+{
+    "id": "guide.legacy.parties_linkRecords.b00040",
+    "ja": "第29バッチ：新規11名と関連キャラの個別ガイド本文を確認",
+    "context": "batch29 party link history",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.legacy.parties_linkRecords.b00041",
+    "ja": "第29バッチ：推奨編成の連動更新",
+    "context": "batch29 party link history",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.legacy.parties_linkRecords.b00042",
+    "ja": "{v0}の推奨編成を{v1}件追加し、{v2}件を採用枠から外した。",
+    "context": "batch29 party link history",
+    "audience": "public",
+    "placeholders": {
+      "v0": "string",
+      "v1": "number",
+      "v2": "number"
+    },
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.legacy.parties_linkRecords.b00043",
+    "ja": "本人ガイドで同じ実名構成を確認できた5名の採用枠を更新。旧編成マスタとビルド・凸・数値目標は保持する。",
+    "context": "batch29 party link history",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.legacy.parties_linkRecords.b00044",
+    "ja": "新規キャラ側だけでなく参加者本人の出典を照合し、未確認の組み合わせは見送りとして記録する。",
+    "context": "batch29 party link history",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];

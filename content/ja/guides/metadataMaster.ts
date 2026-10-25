@@ -354,4 +354,15 @@ const block0: SourceText[] = [
     "protectedTokens": []
   }
 ];
-export const sources: SourceText[] = [...block0];
+export const sources: SourceText[] = [
+...block0,
+{
+    "id": "guide.legacy.metadataMaster.b00033",
+    "ja": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合",
+    "context": "batch29 evidence label",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];

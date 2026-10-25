@@ -1000,6 +1000,97 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": []
   }
+,
+  {
+    "id": "character.genshin.10000150.name",
+    "ja": "オデット",
+    "context": "genshin character 10000150: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000148.name",
+    "ja": "アリョーシャ",
+    "context": "genshin character 10000148: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000133.name",
+    "ja": "サンドローネ",
+    "context": "genshin character 10000133: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000131.name",
+    "ja": "ニコ",
+    "context": "genshin character 10000131: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000132.name",
+    "ja": "プルーネ",
+    "context": "genshin character 10000132: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000129.name",
+    "ja": "ローエン",
+    "context": "genshin character 10000129: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000130.name",
+    "ja": "リンネア",
+    "context": "genshin character 10000130: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000128.name",
+    "ja": "ファルカ",
+    "context": "genshin character 10000128: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000126.name",
+    "ja": "兹白",
+    "context": "genshin character 10000126: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000127.name",
+    "ja": "イルーガ",
+    "context": "genshin character 10000127: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
 ];
 export const records: Array<CharacterContent & {order:number}> = [
   {
@@ -4089,6 +4180,287 @@ export const records: Array<CharacterContent & {order:number}> = [
     "name": {
       "kind": "textRef",
       "id": "character.genshin.10000026.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  }
+,
+  {
+    "identityKey": "genshin:10000150",
+    "game": "genshin",
+    "order": 112,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000150.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000148",
+    "game": "genshin",
+    "order": 113,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000148.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000133",
+    "game": "genshin",
+    "order": 114,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000133.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000131",
+    "game": "genshin",
+    "order": 115,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000131.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000132",
+    "game": "genshin",
+    "order": 116,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000132.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000129",
+    "game": "genshin",
+    "order": 117,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000129.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000130",
+    "game": "genshin",
+    "order": 118,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000130.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000128",
+    "game": "genshin",
+    "order": 119,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000128.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000126",
+    "game": "genshin",
+    "order": 120,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000126.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000127",
+    "game": "genshin",
+    "order": 121,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000127.name"
     },
     "elementKey": null,
     "roleKey": null,

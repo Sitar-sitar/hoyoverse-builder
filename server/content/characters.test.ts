@@ -4,8 +4,8 @@ import { contentRepository, plannedSections } from "./repository";
 
 describe("character authoring authority", () => {
   it("tracks every confirmed identity without collecting or translating content", () => {
-    expect(characterRecords).toHaveLength(257);
-    expect(characterSources).toHaveLength(257);
+    expect(characterRecords).toHaveLength(268);
+    expect(characterSources).toHaveLength(268);
     for (const record of characterRecords) {
       expect(record.introduction.status).toBe("notCollected");
       expect(record.skills.status).toBe("notCollected");
@@ -18,10 +18,14 @@ describe("character authoring authority", () => {
     const index = contentRepository();
     for (const source of characterSources) {
       expect(index.catalog.sections.find(section => section.id === source.id)?.section).toMatchObject({ status: "registered", data: [{ kind: "textRef", id: source.id }] });
-      expect(index.catalog.translations.en[source.id]).toBeUndefined();
-      expect(index.catalog.translations["zh-CN"][source.id]).toBeUndefined();
+      if (source.context.includes("batch29")) {
+        expect(index.catalog.translations.en[source.id]?.review).toBe("pending");
+      } else expect(index.catalog.translations.en[source.id]).toBeUndefined();
+      if (source.context.includes("batch29")) {
+        expect(index.catalog.translations["zh-CN"][source.id]?.review).toBe("pending");
+      } else expect(index.catalog.translations["zh-CN"][source.id]).toBeUndefined();
     }
-    expect(plannedSections()).toHaveLength(514);
+    expect(plannedSections()).toHaveLength(536);
   });
 
   it("rejects duplicate, unclassified and invalid authoring fields", () => {

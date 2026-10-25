@@ -11,6 +11,8 @@ export type PartyMemberResolution = { kind: PartyMemberKind; canonical: string; 
 
 /** 表記ゆれ → 実在する名前（カタログ名、または NON_CATALOG_PARTY_MEMBERS の派生名）。キーは `game:表記`。 */
 export const PARTY_MEMBER_ALIASES: Record<string, string> = {
+  // genshin-dbの正規名（兹）と日本語攻略記事の表記（茲）。同じ確認済みID 10000126。
+  "genshin:茲白": "兹白",
   // 2026-09-10 の表記統一（設計書 §4.3 ①）で16表記をすべて正規名へ書き換えたため空。
   // 新しい表記ゆれを一時的に受け入れる場合だけここへ足し、データ側を直したら削除する。
 };
@@ -36,10 +38,6 @@ export const NON_CATALOG_PARTY_MEMBERS: Record<string, string> = {
  * 新キャラクター追加時の推奨PT影響レビュー（partyImpact）の第一入力になる。
  */
 export const UPCOMING_PARTY_MEMBERS: Record<string, { mentions: number; checkedAt: string; note?: string }> = {
-  "genshin:茲白": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
-  "genshin:イルーガ": { mentions: 3, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
-  "genshin:オデット": { mentions: 2, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
-  "genshin:リンネア": { mentions: 1, checkedAt: "2026-09-11", note: "実装済み（GameWith 2026-09-10）だが取得元（Enka）にIDが無く、source ID を確定できないためカタログ追加できない。docs/batch-18-research-notes.md 区分3" },
   "zzz:スンナ": { mentions: 1, checkedAt: "2026-09-11", note: "未実装（GameWith キャラ一覧 2026-09-10 の59名に無い）" },
 };
 

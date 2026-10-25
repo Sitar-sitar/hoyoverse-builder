@@ -7,9 +7,9 @@ import { createLegacyTexts } from "./legacyTexts";
 describe("repository content maintenance", () => {
   it("reports information gaps for all characters separately from untranslated source text", () => {
     const sections = plannedSections();
-    expect(sections).toHaveLength(514);
+    expect(sections).toHaveLength(536);
     expect(sections.every(section => section.visibility === "planned" && section.section.status === "notCollected")).toBe(true);
-    expect(new Set(sections.map(section => section.id)).size).toBe(514);
+    expect(new Set(sections.map(section => section.id)).size).toBe(536);
     expect(contentRepository().issues).toEqual([]);
     expect(contentManifest()).toMatchObject({ schemaVersion: 1, translationMode: "preparation", readyLanguages: ["ja"] });
   });
@@ -20,8 +20,8 @@ describe("repository content maintenance", () => {
       expect(contentCommand(["check"])).toBe(0);
       expect(contentCommand(["report", "--", "--format", "json"])).toBe(0);
       const report = JSON.parse(output.mock.calls.at(-1)![0]);
-      expect(report.information.notCollected).toHaveLength(1650);
-      expect(report.unresolvedGuideFields).toHaveLength(284);
+      expect(report.information.notCollected).toHaveLength(1716);
+      expect(report.unresolvedGuideFields).toHaveLength(295);
       expect(report.unresolvedTeamMembers.length).toBeGreaterThan(0);
       expect(report.externalNames.unresolvedCount).toBe(30);
       expect(report.externalNames.entries).toHaveLength(33);
@@ -32,7 +32,7 @@ describe("repository content maintenance", () => {
       expect(contentCommand(["ready", "--language", "en", "--scope", "public"])).toBe(2);
       expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "public"])).toBe(2);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers.length).toBeGreaterThan(0);
-      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedGuides).toHaveLength(284);
+      expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedGuides).toHaveLength(295);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedExternalNames).toHaveLength(30);
       expect(contentCommand(["ready", "--language", "zh-CN", "--scope", "admin"])).toBe(2);
       expect(JSON.parse(output.mock.calls.at(-1)![0]).unresolvedMembers).toEqual([]);

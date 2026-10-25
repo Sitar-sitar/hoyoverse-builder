@@ -51,6 +51,11 @@ export const PARTY_LINK_RECORDS: readonly PartyLinkRecord[] = [
   {"batch":27,"game":"zzz","owner":"クレタ","added":["team-zzz-クラレッタ-b27-2"],"removed":["curated-zzz-クレタ-3"]},
   {"batch":27,"game":"hsr","owner":"ロビン・夏空の歌","added":["team-hsr-ロビン・夏空の歌-b27-1","team-hsr-ロビン・夏空の歌-b27-2","team-hsr-ロビン・夏空の歌-b27-3"],"removed":["curated-hsr-ロビン・夏空の歌-1","team-hsr-姫子・旅立ち-b25-1","team-hsr-アベンチュリン・波と戯れる夏-b24-2"]},
   {"batch":27,"game":"zzz","owner":"クラレッタ","added":["team-zzz-クラレッタ-b27-1","team-zzz-クラレッタ-b27-2","team-zzz-クラレッタ-b27-3"],"removed":["curated-zzz-クラレッタ-1","curated-zzz-クラレッタ-2","curated-zzz-クラレッタ-3"]},
+  {"batch":29,"game":"genshin","owner":"八重神子","added":["team-genshin-サンドローネ-b29-1"],"removed":["curated-genshin-八重神子-3"]},
+  {"batch":29,"game":"genshin","owner":"ドゥリン","added":["team-genshin-プルーネ-b29-1"],"removed":["batch15-genshin-ドゥリン-3"]},
+  {"batch":29,"game":"genshin","owner":"コロンビーナ","added":["team-genshin-リンネア-b29-1"],"removed":["curated-genshin-コロンビーナ-2"]},
+  {"batch":29,"game":"genshin","owner":"ベネット","added":["team-genshin-ファルカ-b29-1"],"removed":["curated-genshin-ベネット-3"]},
+  {"batch":29,"game":"zzz","owner":"クラレッタ","added":["team-zzz-ロクシー-b29-1"],"removed":["team-zzz-クラレッタ-b27-3"]},
 ];
 
 export type LinkRecordEntry = { def: PartyLinkBatch; record: PartyLinkRecord };

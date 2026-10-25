@@ -28,8 +28,8 @@ describe("推奨PTメンバー名の解決", () => {
     expect(resolvePartyMember("genshin", "ナヒーダ")).toEqual({ kind: "catalog", canonical: "ナヒーダ" });
   });
 
-  it("表記ゆれは 2026-09-10 の統一で解消済み（別名表は空）", () => {
-    expect(PARTY_MEMBER_ALIASES).toEqual({});
+  it("旧表記ゆれは解消済みで、第29バッチの兹白だけ確認済みの別名を持つ", () => {
+    expect(PARTY_MEMBER_ALIASES).toEqual({ "genshin:茲白": "兹白" });
     // 旧表記はデータ側から消えており、正規名がカタログとして解決される。
     expect(resolvePartyMember("zzz", "「トリガー」")).toEqual({ kind: "catalog", canonical: "「トリガー」" });
     expect(resolvePartyMember("zzz", "潘引壺")).toEqual({ kind: "catalog", canonical: "潘引壺" });
@@ -48,7 +48,9 @@ describe("推奨PTメンバー名の解決", () => {
   });
 
   it("実装待ちの名前は upcoming として返す", () => {
-    expect(resolvePartyMember("genshin", "オデット").kind).toBe("upcoming");
+    expect(resolvePartyMember("zzz", "スンナ").kind).toBe("upcoming");
+    expect(resolvePartyMember("genshin", "オデット").kind).toBe("catalog");
+    expect(resolvePartyMember("genshin", "茲白")).toEqual({ kind: "alias", canonical: "兹白" });
     // ロビン・夏空の歌（hsr:1512）は第18バッチ（2026-09-11）でカタログへ追加した。派生ではなくカタログ名として解決する。
     expect(resolvePartyMember("hsr", "ロビン・夏空の歌").kind).toBe("catalog");
   });

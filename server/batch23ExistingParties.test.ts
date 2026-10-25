@@ -82,7 +82,8 @@ describe("第23バッチ・既存キャラ側の推奨PT更新", () => {
       for (const option of partyRecommendationsFor("genshin", name).options) {
         const roster = option.members.map((member) => member.name.ja).sort();
         for (const member of option.members) {
-          if (member.name.ja === name || newNames.includes(member.name.ja)) continue;
+          // 第23バッチ時点で未登録だったオデットは第29バッチの採否記録で検証する。
+          if (member.name.ja === name || newNames.includes(member.name.ja) || member.name.ja === "オデット") continue;
           if (!CHARACTER_GUIDE_CATALOG.genshin.some((entry) => entry === member.name.ja)) {
             expect(member.name.ja).toBe("オデット");
             continue;

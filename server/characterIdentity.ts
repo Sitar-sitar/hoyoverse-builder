@@ -1,3 +1,4 @@
+import { BATCH29_CHARACTER_METADATA, BATCH29_ZZZ_CHARACTER } from "../content/characterBatch29";
 import { BATCH23_GENSHIN_CHARACTERS } from "./batch23GenshinData";
 
 export type CharacterGameId = "hsr" | "genshin" | "zzz";
@@ -42,7 +43,9 @@ const CURATED_IDENTITIES: Partial<Record<CharacterGameId, Record<string, Curated
     "8009": { displayName: "開拓者（雷・歓楽）", variantOf: "開拓者" },
     "8010": { displayName: "開拓者（雷・歓楽）", variantOf: "開拓者" },
   },
+  zzz: { [BATCH29_ZZZ_CHARACTER.id]: { displayName: BATCH29_ZZZ_CHARACTER.name, variantOf: null } },
   genshin: {
+    ...Object.fromEntries(Object.entries(BATCH29_CHARACTER_METADATA).map(([id, entry]) => [id, { displayName: entry.name, variantOf: null }])),
     ...Object.fromEntries(Object.entries(BATCH23_GENSHIN_CHARACTERS).map(([id, entry]) => [id, { displayName: entry.name, variantOf: null }])),
     // HoYoVerse 公開のキャラクターID一覧に基づく現在の表示名。
     "10000125": { displayName: "コロンビーナ", variantOf: null },

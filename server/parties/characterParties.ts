@@ -59,10 +59,44 @@ export const CHARACTER_PARTIES: Record<string, CharacterPartyEntry> = {
   "hsr:ギルガメッシュ": {"refs":[{"team":"team-hsr-ロビン・夏空の歌-b27-2"},{"team":"curated-hsr-ギルガメッシュ-1"},{"team":"curated-hsr-ギルガメッシュ-2"}]},
   "hsr:アグライア": {"refs":[{"team":"team-hsr-ロビン・夏空の歌-b27-3"},{"team":"curated-hsr-アグライア-1"},{"team":"curated-hsr-アグライア-2"}]},
   "zzz:クレタ": {"refs":[{"team":"team-zzz-クラレッタ-b27-2"},{"team":"curated-zzz-クレタ-1"},{"team":"curated-zzz-クレタ-2"}]},
-  "zzz:クラレッタ": {"refs":[{"team":"team-zzz-クラレッタ-b27-1"},{"team":"team-zzz-クラレッタ-b27-2"},{"team":"team-zzz-クラレッタ-b27-3"}]},
+  "zzz:クラレッタ": {
+  "refs": [
+    {
+      "team": "team-zzz-クラレッタ-b27-1"
+    },
+    {
+      "team": "team-zzz-クラレッタ-b27-2"
+    },
+    {
+      "team": "team-zzz-ロクシー-b29-1"
+    }
+  ],
+  "skipped": []
+},
   "hsr:キュレネ": {"skipped":[{"team":"team-hsr-ロビン・夏空の歌-b27-3","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://gamewith.jp/houkaistarrail/article/show/517829","checkedAt":"2026-10-09"}]},
   "zzz:ノルムー": {"skipped":[{"team":"team-zzz-クラレッタ-b27-1","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://game8.jp/zenless/760639","checkedAt":"2026-10-09"}]},
-  "zzz:リナ": {"skipped":[{"team":"team-zzz-クラレッタ-b27-1","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://game8.jp/zenless/607799","checkedAt":"2026-10-09"},{"team":"team-zzz-クラレッタ-b27-2","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://game8.jp/zenless/607799","checkedAt":"2026-10-09"}]},
+  "zzz:リナ": {
+  "skipped": [
+    {
+      "team": "team-zzz-クラレッタ-b27-1",
+      "reason": "本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。",
+      "sourceUrl": "https://game8.jp/zenless/607799",
+      "checkedAt": "2026-10-09"
+    },
+    {
+      "team": "team-zzz-クラレッタ-b27-2",
+      "reason": "本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。",
+      "sourceUrl": "https://game8.jp/zenless/607799",
+      "checkedAt": "2026-10-09"
+    },
+    {
+      "team": "team-zzz-ロクシー-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/zenless/607799",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
   "zzz:アンビー": {"skipped":[{"team":"team-zzz-クラレッタ-b27-3","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://game8.jp/zenless/607757","checkedAt":"2026-10-09"}]},
   "zzz:ニコ": {"skipped":[{"team":"team-zzz-クラレッタ-b27-3","reason":"本人ガイドの固定編成と既存の表示枠を照合。起点ガイドの構成差を保持し、今回は本人側の採用を見送る。共有編成は図鑑の別欄で確認できる。","sourceUrl":"https://game8.jp/zenless/607758","checkedAt":"2026-10-09"}]},
   // 第28バッチ（2026-10-23）フィオニー起点の共有編成。参加者本人のガイドに同構成が無いため見送り。
@@ -71,4 +105,216 @@ export const CHARACTER_PARTIES: Record<string, CharacterPartyEntry> = {
   "zzz:浮波柚葉": {"skipped": [{"team": "team-zzz-フィオニー-b28-2", "reason": "本人ガイド（2026-10-23更新）の編成は南宮羽・星見雅、アリス・ビビアン、パイパー・ルーシーでフィオニー・ヴェリナ入りは未掲載。既存3枠を保持する。共有編成は図鑑の別欄で確認できる。", "sourceUrl": "https://game8.jp/zenless/682694", "checkedAt": "2026-10-23"}]},
   "zzz:パイパー": {"skipped": [{"team": "team-zzz-フィオニー-b28-3", "reason": "本人の編成ガイド（2026-07-31更新）はアストラ・バーニス、アストラ・ジェーン、ルーシー・セスの3案でフィオニー入りは未掲載。既存3枠を保持する。共有編成は図鑑の別欄で確認できる。", "sourceUrl": "https://game8.jp/zenless/682651", "checkedAt": "2026-10-23"}]},
   "zzz:ルーシー": {"skipped": [{"team": "team-zzz-フィオニー-b28-3", "reason": "本人ガイド（2026-10-21更新）の初心者編成はパイパー・セスでフィオニー入りは未掲載。既存3枠を保持する。共有編成は図鑑の別欄で確認できる。", "sourceUrl": "https://game8.jp/zenless/622470", "checkedAt": "2026-10-23"}]},
+
+  "genshin:サンドローネ": {
+  "refs": [
+    {
+      "team": "team-genshin-サンドローネ-b29-1"
+    },
+    {
+      "team": "team-genshin-アリョーシャ-b29-1"
+    }
+  ]
+},
+  "genshin:オデット": {
+  "refs": [
+    {
+      "team": "team-genshin-サンドローネ-b29-1"
+    },
+    {
+      "team": "team-genshin-アリョーシャ-b29-1"
+    }
+  ],
+  "skipped": [
+    {
+      "team": "curated-genshin-ヴェスナ-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793984",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "team": "curated-genshin-ヴェスナ-2",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793984",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "team": "curated-genshin-ヴォジャニーツァ-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793984",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
+  "genshin:ニコ": {
+  "refs": [
+    {
+      "team": "team-genshin-サンドローネ-b29-1"
+    },
+    {
+      "team": "team-genshin-プルーネ-b29-1"
+    },
+    {
+      "team": "team-genshin-ローエン-b29-1"
+    }
+  ]
+},
+  "genshin:アリョーシャ": {
+  "refs": [
+    {
+      "team": "team-genshin-アリョーシャ-b29-1"
+    }
+  ]
+},
+  "genshin:プルーネ": {
+  "refs": [
+    {
+      "team": "team-genshin-プルーネ-b29-1"
+    }
+  ]
+},
+  "genshin:ローエン": {
+  "refs": [
+    {
+      "team": "team-genshin-ローエン-b29-1"
+    }
+  ]
+},
+  "genshin:兹白": {
+  "refs": [
+    {
+      "team": "team-genshin-リンネア-b29-1"
+    }
+  ]
+},
+  "genshin:リンネア": {
+  "refs": [
+    {
+      "team": "team-genshin-リンネア-b29-1"
+    }
+  ]
+},
+  "genshin:イルーガ": {
+  "refs": [
+    {
+      "team": "team-genshin-リンネア-b29-1"
+    }
+  ]
+},
+  "genshin:ファルカ": {
+  "refs": [
+    {
+      "team": "team-genshin-ファルカ-b29-1"
+    }
+  ],
+  "skipped": [
+    {
+      "team": "team-genshin-プルーネ-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/366252",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
+  "zzz:ロクシー": {
+  "refs": [
+    {
+      "team": "team-zzz-ロクシー-b29-1"
+    }
+  ]
+},
+  "genshin:八重神子": {
+  "refs": [
+    {
+      "team": "curated-genshin-八重神子-1"
+    },
+    {
+      "team": "curated-genshin-八重神子-2"
+    },
+    {
+      "team": "team-genshin-サンドローネ-b29-1"
+    }
+  ],
+  "skipped": [
+    {
+      "team": "team-genshin-アリョーシャ-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/395523",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
+  "genshin:ドゥリン": {
+  "refs": [
+    {
+      "team": "batch15-genshin-ドゥリン-1"
+    },
+    {
+      "team": "batch15-genshin-ドゥリン-2"
+    },
+    {
+      "team": "team-genshin-プルーネ-b29-1"
+    }
+  ],
+  "skipped": [
+    {
+      "team": "team-genshin-ファルカ-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/707122",
+      "checkedAt": "2026-10-26"
+    },
+    {
+      "team": "team-genshin-ローエン-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/707122",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
+  "genshin:コロンビーナ": {
+  "refs": [
+    {
+      "team": "curated-genshin-コロンビーナ-1"
+    },
+    {
+      "team": "curated-genshin-コロンビーナ-3"
+    },
+    {
+      "team": "team-genshin-リンネア-b29-1"
+    }
+  ]
+},
+  "genshin:ベネット": {
+  "refs": [
+    {
+      "team": "curated-genshin-ベネット-1"
+    },
+    {
+      "team": "curated-genshin-ベネット-2"
+    },
+    {
+      "team": "team-genshin-ファルカ-b29-1"
+    }
+  ]
+},
+  "genshin:ウェンティ": {
+  "skipped": [
+    {
+      "team": "team-genshin-ファルカ-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/352607",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
+  "genshin:シロネン": {
+  "skipped": [
+    {
+      "team": "team-genshin-ローエン-b29-1",
+      "reason": "本人ガイドの編成本文を確認したが、この実名構成を固定案としては確認できないため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/624941",
+      "checkedAt": "2026-10-26"
+    }
+  ]
+},
 };

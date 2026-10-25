@@ -5398,6 +5398,238 @@ export const records:GuideMetadataAuthoring[]=[
       "sourceLabel"
     ]
   }
+,
+  {
+    "identityKey": "genshin:10000150",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000150.name"
+    },
+    "profileId": "curated:batch29:genshin:オデット",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000148",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000148.name"
+    },
+    "profileId": "curated:batch29:genshin:アリョーシャ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000133",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000133.name"
+    },
+    "profileId": "curated:batch29:genshin:サンドローネ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000131",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000131.name"
+    },
+    "profileId": "curated:batch29:genshin:ニコ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000132",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000132.name"
+    },
+    "profileId": "curated:batch29:genshin:プルーネ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000129",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000129.name"
+    },
+    "profileId": "curated:batch29:genshin:ローエン",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000130",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000130.name"
+    },
+    "profileId": "curated:batch29:genshin:リンネア",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000128",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000128.name"
+    },
+    "profileId": "curated:batch29:genshin:ファルカ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000126",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000126.name"
+    },
+    "profileId": "curated:batch29:genshin:兹白",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000127",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000127.name"
+    },
+    "profileId": "curated:batch29:genshin:イルーガ",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "zzz:1621",
+    "game": "zzz",
+    "name": {
+      "kind": "textRef",
+      "id": "character.zzz.1621.name"
+    },
+    "profileId": "curated:batch29:zzz:ロクシー",
+    "dataAsOf": "2026-10-26",
+    "updatedAt": "2026-10-26",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  }
 ];
 export const defaults:Record<Game,GuideMetadataFields>={
   "hsr": {

@@ -262,4 +262,42 @@ export const INITIAL_PARTY_REFS: Readonly<Record<string, readonly string[]>> = {
   "zzz:潘引壺": ["batch15-zzz-潘引壺-1","batch15-zzz-潘引壺-2","batch15-zzz-潘引壺-3"],
   // 第28バッチ（2026-10-23）新キャラ初回登録。
   "zzz:フィオニー": ["team-zzz-フィオニー-b28-1","team-zzz-フィオニー-b28-2","team-zzz-フィオニー-b28-3"],
+
+  "genshin:サンドローネ": [
+  "team-genshin-サンドローネ-b29-1",
+  "team-genshin-アリョーシャ-b29-1"
+],
+  "genshin:オデット": [
+  "team-genshin-サンドローネ-b29-1",
+  "team-genshin-アリョーシャ-b29-1"
+],
+  "genshin:ニコ": [
+  "team-genshin-サンドローネ-b29-1",
+  "team-genshin-プルーネ-b29-1",
+  "team-genshin-ローエン-b29-1"
+],
+  "genshin:アリョーシャ": [
+  "team-genshin-アリョーシャ-b29-1"
+],
+  "genshin:プルーネ": [
+  "team-genshin-プルーネ-b29-1"
+],
+  "genshin:ローエン": [
+  "team-genshin-ローエン-b29-1"
+],
+  "genshin:兹白": [
+  "team-genshin-リンネア-b29-1"
+],
+  "genshin:リンネア": [
+  "team-genshin-リンネア-b29-1"
+],
+  "genshin:イルーガ": [
+  "team-genshin-リンネア-b29-1"
+],
+  "genshin:ファルカ": [
+  "team-genshin-ファルカ-b29-1"
+],
+  "zzz:ロクシー": [
+  "team-zzz-ロクシー-b29-1"
+],
 };

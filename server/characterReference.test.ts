@@ -5,14 +5,14 @@ import { HSR_RUNTIME_PATHS } from "./characterGuideCatalog";
 import { catalogSourceIdFor } from "./characterConstellations";
 
 describe("character reference catalog", () => {
-  it("全257キャラクターをゲーム別に公開する（第28バッチで ZZZ フィオニーを追加）", () => {
+  it("全268キャラクターをゲーム別に公開する（第29バッチで11名を追加）", () => {
     const catalog = characterReferenceCatalog();
-    expect(catalog.total).toBe(257);
-    expect(catalog.reviewed).toBe(257);
+    expect(catalog.total).toBe(268);
+    expect(catalog.reviewed).toBe(268);
     expect(catalog.pending).toBe(0);
     expect(catalog.games.hsr).toHaveLength(86);
-    expect(catalog.games.genshin).toHaveLength(111);
-    expect(catalog.games.zzz).toHaveLength(60);
+    expect(catalog.games.genshin).toHaveLength(121);
+    expect(catalog.games.zzz).toHaveLength(61);
   });
 
   it.each([

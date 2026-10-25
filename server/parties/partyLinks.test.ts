@@ -71,7 +71,8 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
     const team = sharedTeam("team-genshin-ヴェスナ-b24-1", "genshin", "ヴェスナ", 24, [
       ["ヴェスナ", "星拡散アタッカー"], ["オデット", "氷付着"], ["旅人（草）", "草付着"], ["ファルザン", "風耐性低下"],
     ]);
-    expect(owners(uncoveredLinks(withTeam(team)))).toEqual(["ファルザン"]);
+    const upcoming: LinkStatusInput["resolve"] = (game, name) => name === "オデット" ? { kind: "upcoming", canonical: name } : resolvePartyMember(game, name);
+    expect(owners(uncoveredLinks(withTeam(team, { resolve: upcoming })))).toEqual(["ファルザン"]);
     const resolve: LinkStatusInput["resolve"] = (game, name) => name === "オデット" ? { kind: "catalog", canonical: "オデット" } : resolvePartyMember(game, name);
     expect(owners(uncoveredLinks(withTeam(team, { resolve })))).toContain("オデット");
   });
@@ -150,7 +151,9 @@ describe("整合性の否定例", () => {
     const extraLegacy: Team = { ...TEAM_STORE.byId.get("curated-genshin-ベネット-1")!, id: "legacy-extra" };
     const issues = issuesWith({ store: storeWith(extraLegacy) });
     expect(has(issues, "A4")).toBe(true);
-    expect(has(issues, "A6")).toBe(true);
+    const noExplicit = { ...CHARACTER_PARTIES };
+    delete noExplicit["genshin:ベネット"];
+    expect(has(issuesWith({ store: storeWith(extraLegacy), parties: noExplicit }), "A6")).toBe(true);
   });
 
   it("変更記録（E2〜E5）", () => {

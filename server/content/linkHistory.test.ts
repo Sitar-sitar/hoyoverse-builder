@@ -10,8 +10,8 @@ import type { LinkHistoryContent } from "../../shared/content/linkHistory";
 import { adoptLinkHistory } from "../../scripts/content/adoptLinkHistory";
 describe("party link history authoring", () => {
   it("visits every later paragraph and source note and preserves numeric count variables", () => {
-    expect(linkHistoryRecords).toHaveLength(5);
-    expect(linkHistorySections()).toHaveLength(5);
+    expect(linkHistoryRecords).toHaveLength(6);
+    expect(linkHistorySections()).toHaveLength(6);
     const projected = projectLinkHistory();
     for (const record of linkHistoryRecords) {
       const refs = linkHistoryRefs(record);

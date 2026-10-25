@@ -21,10 +21,10 @@ describe("ゲーム横断キャラクター識別", () => {
     });
   });
 
-  it("公開静的カタログの全289件（第23バッチの確認済みID補完・第28バッチの zzz:1641 を含む）をID・非数値名称・画像参照として検証する", () => {
+  it("公開静的カタログの全299件（第23バッチの確認済みID補完・第28バッチの zzz:1641 を含む）をID・非数値名称・画像参照として検証する", () => {
     // 2026-09-11 に281→285件。hsr:1512 / hsr:1513 / zzz:1611 / zzz:1621 を追加（1513・1621 は実装前だが取得元に掲載済み）。
-    // 2026-10-23 に zzz:1641 フィオニーを追加（288→289件）。
-    expect(ACTIVE_CATALOG_IDENTITIES).toHaveLength(289);
+    // 2026-10-23 に zzz:1641 フィオニーを追加（288→299件）。
+    expect(ACTIVE_CATALOG_IDENTITIES).toHaveLength(299);
     for (const entry of ACTIVE_CATALOG_IDENTITIES) {
       const identity = resolveCharacterIdentity(entry.game, entry.sourceId, entry.providerName);
       expect(identity.key, `${entry.game}:${entry.sourceId}`).toBe(`${entry.game}:${entry.sourceId}`);

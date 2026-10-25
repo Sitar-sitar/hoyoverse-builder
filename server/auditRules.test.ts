@@ -57,7 +57,7 @@ describe("監査の判定ロジック", () => {
     expect(summary.upcoming.length).toBeGreaterThan(0);
     expect(summary.upcoming[0]!.mentions).toBeGreaterThanOrEqual(summary.upcoming.at(-1)!.mentions);
     // 実装待ちとして登録した名前だけが出る。
-    expect(summary.upcoming.map((entry) => entry.name)).toContain("オデット");
+    expect(summary.upcoming.map((entry) => entry.name)).toContain("スンナ");
   });
 
   it("P0〜P3 を分類し、P0 は外部メタデータ由来の入力から作る", () => {

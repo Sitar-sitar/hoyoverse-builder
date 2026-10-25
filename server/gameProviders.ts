@@ -1,3 +1,5 @@
+import { BATCH29_ZZZ_CHARACTER } from "../content/characterBatch29";
+import {records as batch29GuideRecords} from "../content/guideDefinitions_batch29";
 import {createLegacyTexts as createremainingDisplaysTexts} from "./content/legacyTexts";
 import {sources as remainingDisplaysSources} from "../content/ja/guides/gameProviders_remainingDisplays";
 const _remainingDisplays = createremainingDisplaysTexts(remainingDisplaysSources, {}, {});
@@ -40,7 +42,7 @@ import {
 import { generatedGenshinGuide, generatedZzzGuide } from "./individualGuides";
 import { partyRecommendationsFor } from "./partyRecommendations";
 import { resolveCharacterIdentity, type CharacterIdentity } from "./characterIdentity";
-import { BATCH23_GENSHIN_CHARACTERS, batch23CharacterForName } from "./batch23GenshinData";
+import { CURATED_GENSHIN_CHARACTERS, curatedGenshinCharacterForName } from "./curatedGenshinCharacters";
 import { constellationProfileFor } from "./characterConstellations";
 import { batch17GuideFor } from "./batch17Guides";
 
@@ -275,7 +277,7 @@ const GI_GUIDE_OVERRIDES: Record<string, GuideDefinition> = projectGuideRegistry
 
 
 export function genshinGuide(name: string, identity?: CharacterIdentity): GuideDefinition {
-  const addition = batch23CharacterForName(name);
+  const addition = curatedGenshinCharacterForName(name);
   if (addition) {
     if (identity && (identity.key !== `genshin:${addition[0]}` || identity.variantOf || !identity.resolved)) {
       return { headline: _content.ja("guide.legacy.gameProviders.b01112"), relicSet: _content.ja("guide.legacy.gameProviders.b01113"), planarSet: _content.ja("guide.legacy.gameProviders.b01114"), mainStats: [], targets: [], targetContext: _content.ja("guide.legacy.gameProviders.b01115") };
@@ -315,7 +317,7 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
   const player = asRecord(root.playerInfo);
   const characters = asArray(root.avatarInfoList).map(asRecord).map((avatar): CharacterProfile => {
     const id = text(avatar.avatarId);
-    const addition = BATCH23_GENSHIN_CHARACTERS[id];
+    const addition = CURATED_GENSHIN_CHARACTERS[id];
     const metadata: RawRecord = { ...(addition ? { Element: addition.element, WeaponType: addition.weaponType, SideIconName: addition.sideIcon } : {}), ...asRecord(catalog.characters[id]) };
     const identity = resolveCharacterIdentity("genshin", id, localized(catalog.loc, metadata.NameTextMapHash));
     const name = identity.displayName;
@@ -354,7 +356,7 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
     const weaponFlat = asRecord(weapon?.flat);
     const weaponInfo = asRecord(weapon?.weapon);
     const guide = genshinGuide(name, identity);
-    const mismatchedAddition = batch23CharacterForName(name)?.[0] !== id && Boolean(batch23CharacterForName(name));
+    const mismatchedAddition = curatedGenshinCharacterForName(name)?.[0] !== id && Boolean(curatedGenshinCharacterForName(name));
     const comparisons = comparisonsFromStats(guide.targets, statValues);
     const recommendations = priorityRecommendations(comparisons);
     return {
@@ -369,6 +371,7 @@ export function normalizeGenshinPayload(payload: unknown, catalog: GenshinCatalo
 }
 
 const ZZZ_ELEMENTS: Record<string, { label: string; color: string }> = {
+  Wind: { label: _content.ja("guide.legacy.gameProviders.b00003"), color: "#65ba9a" },
   Fire: { label: _content.ja("guide.legacy.gameProviders.b01117"), color: "#d45b48" }, Ice: { label: _content.ja("guide.legacy.gameProviders.b01118"), color: "#76c8dc" }, Elec: { label: _content.ja("guide.legacy.gameProviders.b01119"), color: "#a278d2" }, Electric: { label: _content.ja("guide.legacy.gameProviders.b01120"), color: "#a278d2" }, Physical: { label: _content.ja("guide.legacy.gameProviders.b01121"), color: "#a6a6a6" }, Physics: { label: _content.ja("guide.legacy.gameProviders.b01122"), color: "#a6a6a6" }, Ether: { label: _content.ja("guide.legacy.gameProviders.b01123"), color: "#d875ce" },
 };
 const ZZZ_PROFESSIONS: Record<string, string> = { Attack: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00030"), Anomaly: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00031"), Stun: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00032"), Support: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00033"), Defense: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00034"), Rupture: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00035"), Armorer: _providerDisplay.ja("guide.providerDisplay.gameProviders.b00036") };
@@ -491,7 +494,7 @@ function finalZzzStats(catalog: ZzzCatalog, agent: Record<string, number>, weapo
   };
 }
 
-const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegistry([...guideRecords, ...batch28GuideRecords], "ZZZ_CHARACTER_GUIDES");
+const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegistry([...guideRecords, ...batch28GuideRecords, ...batch29GuideRecords], "ZZZ_CHARACTER_GUIDES");
 
 
 
@@ -513,7 +516,10 @@ const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegist
 
 
 
-export function zzzGuide(name: string, profession: string): GuideDefinition {
+export function zzzGuide(name: string, profession: string, identity?: CharacterIdentity): GuideDefinition {
+  if (name === BATCH29_ZZZ_CHARACTER.name && identity && (identity.key !== `zzz:${BATCH29_ZZZ_CHARACTER.id}` || identity.variantOf || !identity.resolved)) {
+    return {headline: _content.ja("guide.legacy.gameProviders.b01112"), relicSet: "", planarSet: "", mainStats: [], targets: [], targetContext: _content.ja("guide.legacy.gameProviders.b01115")};
+  }
   const characterGuide = ZZZ_CHARACTER_GUIDES[name];
   if (characterGuide) return withGuideMetadata("zzz", characterGuide, name);
   return withGuideMetadata("zzz", generatedZzzGuide(name, profession), name);
@@ -527,7 +533,7 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
   const showcase = asRecord(playerInfo.ShowcaseDetail);
   const characters = asArray(showcase.AvatarList).map(asRecord).map((avatar): CharacterProfile => {
     const id = text(avatar.Id);
-    const metadata = asRecord(catalog.avatars[id]);
+    const metadata: RawRecord = { ...(id === BATCH29_ZZZ_CHARACTER.id ? BATCH29_ZZZ_CHARACTER.metadata : {}), ...asRecord(catalog.avatars[id]) };
     const elements = asArray(metadata.ElementTypes).map((value) => text(value)).map((key) => ZZZ_ELEMENTS[key]).filter(Boolean);
     const profession = text(metadata.ProfessionType);
     const identity = resolveCharacterIdentity("zzz", id, zzzName(catalog, metadata.Name, ""));
@@ -561,7 +567,7 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
       const bonusProps = asRecord(asRecord(suits[suitId]).SetBonusProps);
       Object.entries(bonusProps).forEach(([propertyId, rawValue]) => addProperty(equipmentByProperty, propertyId, zzzPropertyValue(catalog, propertyId, number(rawValue))));
     });
-    const guide = zzzGuide(name, profession);
+    const guide = zzzGuide(name, profession, identity);
     const rawWeapon = asRecord(avatar.Weapon);
     const weaponId = text(rawWeapon.Id ?? metadata.WeaponId);
     const weaponMeta = asRecord(catalog.weapons[weaponId]);
@@ -572,7 +578,7 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
       id: identity.sourceId, identity, name, level: number(avatar.Level, null as unknown as number), rank: number(avatar.TalentLevel, null as unknown as number), portrait: iconUrl(text(metadata.Image)) ?? null,
       element: elements.map((element) => element?.label).filter(Boolean).join(" / ") || _externalDisplay.ja("guide.externalDisplayFallbacks.label7"), elementColor: elements[0]?.color ?? "#c28a42", path: (ZZZ_PROFESSIONS[profession] ?? profession) || _externalDisplay.ja("guide.externalDisplayFallbacks.label8"),
       lightCone: weaponId ? { name: zzzName(catalog, weaponMeta.ItemName, _externalDisplay.ja("guide.externalDisplayFallbacks.label5")), level: number(rawWeapon.Level, null as unknown as number), rank: number(rawWeapon.BreakLevel, null as unknown as number), icon: iconUrl(text(weaponMeta.ImagePath)) ?? null } : null,
-      relics, allStats: finalStats.display, statsNote: _externalDisplay.ja("guide.externalDisplayFallbacks.label9"), guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: partyRecommendationsFor("zzz", name), constellations: constellationProfileFor(identity, number(avatar.TalentLevel, null as unknown as number)),
+      relics, allStats: finalStats.display, statsNote: _externalDisplay.ja("guide.externalDisplayFallbacks.label9"), guide, comparisons, recommendations, equipmentActions: equipmentActionsFor(guide, relics, recommendations), partyRecommendations: name === BATCH29_ZZZ_CHARACTER.name && id !== BATCH29_ZZZ_CHARACTER.id ? { gameVersion: "3.3", dataAsOf: "2026-10-26", updatedAt: "2026-10-26", options: [] } : partyRecommendationsFor("zzz", name), constellations: constellationProfileFor(identity, number(avatar.TalentLevel, null as unknown as number)),
     };
   });
   return { player: { uid: text(root.uid, text(profile.Uid)), name: text(profile.Nickname, _externalDisplay.ja("guide.externalDisplayFallbacks.label6")), level: number(profile.Level, null as unknown as number) }, characters };

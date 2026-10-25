@@ -541,6 +541,16 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": []
   }
+,
+  {
+    "id": "character.zzz.1621.name",
+    "ja": "ロクシー",
+    "context": "zzz character 1621: confirmed batch29 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
 ];
 export const records: Array<CharacterContent & {order:number}> = [
   {
@@ -2438,6 +2448,39 @@ export const records: Array<CharacterContent & {order:number}> = [
     "name": {
       "kind": "textRef",
       "id": "character.zzz.1641.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "basic",
+        "dodge",
+        "assist",
+        "special",
+        "chain",
+        "ultimate",
+        "core",
+        "additionalAbility"
+      ]
+    }
+  }
+,
+  {
+    "identityKey": "zzz:1621",
+    "game": "zzz",
+    "order": 61,
+    "name": {
+      "kind": "textRef",
+      "id": "character.zzz.1621.name"
     },
     "elementKey": null,
     "roleKey": null,

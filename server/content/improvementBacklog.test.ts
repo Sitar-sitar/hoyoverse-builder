@@ -111,7 +111,7 @@ describe("現行データでの一覧", () => {
     expect(backlog.summary.externalNames.total).toBe(externalNameReport().unresolvedCount);
     expect(new Set(backlog.items.map(row => row.key)).size).toBe(backlog.items.length);
     // 2026-10-19 時点の現行値（設計 §3.2）1,644 に、第28バッチのフィオニー（キャラ2・装備4）を加えた値。
-    expect(backlog.summary.information.total).toBe(1650);
+    expect(backlog.summary.information.total).toBe(1716);
     expect(backlog.summary.externalNames.total).toBe(30);
   });
 

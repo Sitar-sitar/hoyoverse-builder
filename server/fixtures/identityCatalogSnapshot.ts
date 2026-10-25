@@ -9,3 +9,67 @@ ACTIVE_CATALOG_IDENTITIES.push(
   { game: "genshin", sourceId: "10000143", providerName: "ヴェスナ", portrait: "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Vesna.png" },
   { game: "genshin", sourceId: "10000140", providerName: "ヴォジャニーツァ", portrait: "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Vodyanitsa.png" },
 );
+
+// 第29バッチ・genshin-db固定revisionで確認。
+ACTIVE_CATALOG_IDENTITIES.push(...([
+  {
+    "game": "genshin",
+    "sourceId": "10000150",
+    "providerName": "オデット",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Odette.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000148",
+    "providerName": "アリョーシャ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Alyosha.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000133",
+    "providerName": "サンドローネ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_MarionetteNew.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000131",
+    "providerName": "ニコ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Nicole.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000132",
+    "providerName": "プルーネ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Prune.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000129",
+    "providerName": "ローエン",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Lohen.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000130",
+    "providerName": "リンネア",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Linnea.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000128",
+    "providerName": "ファルカ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Varka.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000126",
+    "providerName": "兹白",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Zibai.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000127",
+    "providerName": "イルーガ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Illuga.png"
+  }
+] satisfies typeof ACTIVE_CATALOG_IDENTITIES));
