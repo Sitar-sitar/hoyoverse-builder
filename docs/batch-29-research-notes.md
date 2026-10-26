@@ -44,7 +44,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/odette.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 「踊らぬ朝に彼女は 己の影を見つめる」 / C2 「雪鳥の見ぬ夢を只 見届けたいだけで」 / C3 「荒れ狂う風を追い ひとり高みへ昇る」 / C4 「燃ゆる青空の中へ 恍惚と堕ちていく」 / C5 「見よ——塵と土の 痛みと別れる時を」 / C6 「さあ手を伸ばして 永遠の空に触れて」。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — アリョーシャ（`genshin:10000148`）
 
@@ -60,7 +60,7 @@
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/alyosha.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 寒谷の轟雷 / C2 遠吠えの合図 / C3 仲間の呼び声 / C4 獲物の回収 / C5 歌鳥の沈黙 / C6 御旗の奪還。
 - 資料不一致: Game8の解説欄に「2凸で印の重ね掛け・熟知」という記述があるが、固定ゲームデータではC2は爆発延長と印の追加付与、C4が回復、C6が2層と元素熟知+100。凸カードと役割注記はゲームデータを採用し、無凸の回復を保証しない。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — サンドローネ（`genshin:10000133`）
 
@@ -75,7 +75,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/sandrone.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 まばゆき黄金は 遠き日の夕暮れ / C2 りりしき影を鏡に 遺して巡る歳月 / C3 あまねく暁を愁えず 月の出を羨まず / C4 ねむたき世事は数にして 昼夜を往来す / C5 ついえし万象の灰と化せど 理のみは通ず / C6 てづから水仙の夢から醒めて 薄明を掴まん。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — ニコ（`genshin:10000131`）
 
@@ -91,7 +91,7 @@
 - 代替武器の追補: 所持していればイベント限定の誓いの明瞳を検討する。現在の恒常入手を保証しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/nicole.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 「大いに愛されし人の子よ、 恐るることなかれ」 / C2 「汝に汝の 行くべき道を示さん」 / C3 「汝の傍に灯を、 行く手に光を」 / C4 「たとえ汝が 何処へ赴こうとも」 / C5 「汝の傍らより語りかけん」 / C6 「迷わず 正しき道を歩むべし」。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — プルーネ（`genshin:10000132`）
 
@@ -106,7 +106,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/prune.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 誓いを立てたあの日から キミを救う旅が始まった / C2 元素の力を抱きしめて さあ荷物をまとめよう / C3 キャラバンと山を越え 巡る景色を眺めながら / C4 振り返ってもいまだ キミの影はないけど / C5 百回敗けたって 明日も来るから / C6 物語はこれでおしまい みんなに話してあげて。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — ローエン（`genshin:10000129`）
 
@@ -121,7 +121,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/lohen.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 哀しき歌を運ぶ あの日のそよ風 / C2 的にするものは 翼を持つすべて / C3 この傷を癒すは 鋭く光る刃だけ / C4 愛は果てた 光や歓びの歌のように / C5 見えざるものと 疑われ得ぬもの / C6 身も心も堕ちて 残るは悦楽のみ。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — リンネア（`genshin:10000130`）
 
@@ -136,7 +136,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/linnea.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 未分類のモノたち / C2 喜びと悲しみの予兆 / C3 ぎゅうぎゅう詰めの一ページ / C4 スペシャリストの第六感 / C5 フェアリーランドの餞別 / C6 ゴールデンビーグルの夢。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — ファルカ（`genshin:10000128`）
 
@@ -151,7 +151,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/varka.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 「友よ、月明かりの下で踊ろう」 / C2 「暁とともに、遠き旅路へ」 / C3 「友よ、もう涙の酒を飲むな」 / C4 「謳え、誰にも奪えない自由を」 / C5 「注げ美酒を、暴君は来りて去りゆく」 / C6 「愛しきモンドよ、変わらぬ姿で」。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — 兹白（`genshin:10000126`）
 
@@ -167,7 +167,7 @@
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/zibai.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 疾く出でて粛然と帰す / C2 生は変じて屍と化する / C3 天法を解き帳を下ろす / C4 魂向かひて身も従ずる / C5 聡きは視たとて論ぜず / C6 天地の人は過客の如し。
 - 表記: 公開ゲームデータの正規名は「兹白」。攻略記事の「茲白」は同じID `10000126` の別表記として監査用aliasへ登録。別人や未登録キャラとして数えない。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### genshin — イルーガ（`genshin:10000127`）
 
@@ -182,7 +182,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - 命ノ星座: [固定revisionの全6段の名称・本文](https://github.com/theBowja/genshin-db/blob/49a6544a6c6ae36089cb42fa591fc46f01de8bcf/src/data/Japanese/constellations/illuga.json)を確認し、表示用の強調markupのみ除去。数値・条件・持続・回数上限は省略せず `content/ja/guides/batch29.ts` に保存。
 - 採用名称: C1 危機を告げる禽 / C2 枝を咥える鹿 / C3 山に吠える羆 / C4 日逐いの狼 / C5 風に嘶く馬 / C6 闇夜の鶯。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ### zzz — ロクシー（`zzz:1621`）
 
@@ -197,7 +197,7 @@
 - 目標補正: PT `targetChanges` と凸 `activeTargetChanges` は空。公開プロフィールの現在値を変更しない。
 - GameWith本文も照合（[個別ガイド](https://gamewith.jp/zenless/560618)）。IV会心率 / V風属性ダメージ / VIエネルギー自動回復を採用。会心率100%は戦闘時目標なので公開値に置き換えない。
 - 心象映画はGame8とGameWithの6段を照合し、表示用に要約。M1耐性-15%・50秒、M2勢い最大3重/スピン最大0.6秒、M4回復回数制限、M6渦の追加回数と倍率を保持。
-- 状態: ローカル実装済み。検証・本番反映の最終結果は本書末尾と実装ログに追記する。
+- 状態: 実装・本番反映済み。公開後の証拠と実UID未検証の境界は本書末尾と実装ログを参照。
 
 ## 推奨PTと参加者連動
 
@@ -264,7 +264,7 @@
 ## 公開・完了判定
 
 - 公開mode: GitHub変数の `HOYOVERSE_PAGES_MODE=forward` を確認。正式画面は `/hoyoverse-builder/app/`、APIは `https://http--hoyoverse-api--s48krvgv8tjs.code.run`。
-- 状態: ローカル実装・検証済み。PR・CI・本番反映・公開後検査は未完了。完了後に対象SHAと検証結果を追記する。
+- 状態: 実装・検証・本番反映完了。PR #159（実装61e9a85、main a5665fdad0d933ddfc9ab0ad319b45fee1f10bc2）。validate/Analyze/CodeQL成功・自動コードレビュー指摘なし。Pages run `40242662319` 成功、API/Pages同SHA、maintenance=false / migrationPreview=false、公開後検査reason=ok。
 
 ### 公開ゲートの依存修正
 
@@ -272,3 +272,9 @@
 - データ変更の検証前半はVitest873件成功（skip3）・node:test79件成功・型/content/API build/forward Pages build/baseline compare成功。依存更新後の再検証と公開証跡は別途追記する。
 
 - 依存修正後: ロック差分はbody-parserのみ、production audit全重大度0件。Vitest873件成功・3件skip（maxWorkers=2）、型/content/API build成功。公開ゲートの例外は追加していない。
+
+### 公開後の受入（2026-10-26）
+
+- 公開カタログ268名・reviewed268/pending0。対象11名のreference全文、計66段の凸、個別履歴を最終routerと比較して完全一致。再開後の再検査も成功。検証スクリプトと証拠はローカルの `tmp/batch29/verifyProduction.ts` / `production-proof.json`（非追跡）へ保存。
+- Chromeの公開図鑑でロクシーとオデットの個別ビルド・根拠不足の固定目標なし表示・PT・凸を確認。オデットの1段から6段への切替も成功。原神121名、ZZZ61名、全体268名の件数を確認。再開直後に一時的なAPI接続エラーが記録されたためコンソールエラー0件とは報告しない。公開API再検査とChrome再読込後の描画は正常。
+- 実UIDショーケースは未検証。英中はpending、公開言語は日本語のみ。単発公開受入と長時間可用性を区別する。次回採番30。
