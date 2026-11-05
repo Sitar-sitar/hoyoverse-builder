@@ -1381,5 +1381,37 @@ export const historyBatches: HistoryBatchRecord[] = [
     "summaryBindings": {
       "v0": "characterName"
     }
+  },
+
+  {
+    "batch": 30,
+    "content": {
+      "eventId": "history.batch.30",
+      "date": "2026-11-05T09:00:00+09:00",
+      "title": {
+        "kind": "textRef",
+        "id": "guide.batch30.b00046"
+      },
+      "summary": {
+        "kind": "textRef",
+        "id": "guide.batch30.b00047"
+      },
+      "changes": [
+        {
+          "blockId": "history.batch30.change",
+          "text": {
+            "kind": "textRef",
+            "id": "guide.batch30.b00048"
+          }
+        }
+      ],
+      "rationale": {
+        "kind": "textRef",
+        "id": "guide.batch30.b00049"
+      }
+    },
+    "summaryBindings": {
+      "v0": "characterName"
+    }
   }
 ];

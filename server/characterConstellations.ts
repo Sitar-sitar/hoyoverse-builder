@@ -1,4 +1,5 @@
 import { records as batch29Records } from "../content/constellationBatch29";
+import { records as batch30Records } from "../content/constellationBatch30";
 import { records as curatedRecords } from "../content/constellationCurated";
 import { records as batch28Records } from "../content/constellationBatch28";
 import { projectConstellations } from "./content/constellations";
@@ -72,11 +73,13 @@ const SOURCE = {
 } as const;
 
 const BATCH29_CONSTELLATIONS = projectConstellations(batch29Records);
+const BATCH30_CONSTELLATIONS = projectConstellations(batch30Records);
 const CURATED: Record<string, CuratedEntry> = {
   ...BATCH23_GENSHIN_CONSTELLATIONS,
   ...projectConstellations(curatedRecords),
   ...projectConstellations(batch28Records),
   ...BATCH29_CONSTELLATIONS,
+  ...BATCH30_CONSTELLATIONS,
 };
 
 const LABELS: Record<CharacterIdentity["game"], LocalizedText> = {
@@ -90,7 +93,7 @@ export function constellationProfileFor(
   rank: number | null
 ): ConstellationProfile {
   const blockedAddition =
-    Boolean(BATCH23_GENSHIN_CONSTELLATIONS[identity.key] || BATCH29_CONSTELLATIONS[identity.key]) &&
+    Boolean(BATCH23_GENSHIN_CONSTELLATIONS[identity.key] || BATCH29_CONSTELLATIONS[identity.key] || BATCH30_CONSTELLATIONS[identity.key]) &&
     (!identity.resolved || Boolean(identity.variantOf));
   const entry = blockedAddition
     ? undefined

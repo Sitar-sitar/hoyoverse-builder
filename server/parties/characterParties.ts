@@ -318,3 +318,151 @@ export const CHARACTER_PARTIES: Record<string, CharacterPartyEntry> = {
   ]
 },
 };
+
+// 第30バッチ（2026-11-05）。新キャラ2名の参照と、既存参加者の見送り記録を既存項目へ追記する。
+const BATCH30_PARTY_REFS: Record<string, CharacterPartyEntry> = {
+  "genshin:ミティヤ": {
+    "refs": [
+      {
+        "team": "team-genshin-ミティヤ-b30-1"
+      },
+      {
+        "team": "team-genshin-ミティヤ-b30-2"
+      },
+      {
+        "team": "team-genshin-ミティヤ-b30-3"
+      }
+    ]
+  },
+  "genshin:バレリー": {
+    "refs": [
+      {
+        "team": "team-genshin-バレリー-b30-1"
+      },
+      {
+        "team": "team-genshin-バレリー-b30-2"
+      },
+      {
+        "team": "team-genshin-ミティヤ-b30-1"
+      }
+    ]
+  }
+};
+const BATCH30_PARTY_SKIPS: Record<string, NonNullable<CharacterPartyEntry["skipped"]>> = {
+  "genshin:八重神子": [
+    {
+      "team": "team-genshin-ミティヤ-b30-1",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:オデット": [
+    {
+      "team": "team-genshin-ミティヤ-b30-1",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    },
+    {
+      "team": "team-genshin-ミティヤ-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    },
+    {
+      "team": "team-genshin-ミティヤ-b30-3",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:サンドローネ": [
+    {
+      "team": "team-genshin-ミティヤ-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:エスコフィエ": [
+    {
+      "team": "team-genshin-ミティヤ-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:セノ": [
+    {
+      "team": "team-genshin-ミティヤ-b30-3",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/794011",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:ヴァレサ": [
+    {
+      "team": "team-genshin-バレリー-b30-1",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:ドゥリン": [
+    {
+      "team": "team-genshin-バレリー-b30-1",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:ニコ": [
+    {
+      "team": "team-genshin-バレリー-b30-1",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:フリンズ": [
+    {
+      "team": "team-genshin-バレリー-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:コロンビーナ": [
+    {
+      "team": "team-genshin-バレリー-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:イネファ": [
+    {
+      "team": "team-genshin-バレリー-b30-2",
+      "reason": "新規キャラ起点の編成として起点本人のガイドで実名構成を確認した。参加者本人のガイドとの照合は今回未実施のため既存の採用枠を保持する。共有編成は図鑑の別欄で表示し、同バージョン中に再確認する。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ],
+  "genshin:バレリー": [
+    {
+      "team": "team-genshin-ミティヤ-b30-3",
+      "reason": "本人ガイドの編成本文（2026-11-05更新）はミティヤ星電導・ヴァレサ過負荷・フリンズ月反応の3案で、セノ入りは未掲載。本人起点の採用枠を保持する。共有編成は図鑑の別欄で確認できる。",
+      "sourceUrl": "https://game8.jp/genshin/793988",
+      "checkedAt": "2026-11-05"
+    }
+  ]
+};
+for (const [key, entry] of Object.entries(BATCH30_PARTY_REFS)) {
+  if (CHARACTER_PARTIES[key]) throw new Error(`第30バッチの参照が既存項目と重複: ${key}`);
+  CHARACTER_PARTIES[key] = entry;
+}
+for (const [key, skipped] of Object.entries(BATCH30_PARTY_SKIPS)) {
+  const entry = CHARACTER_PARTIES[key] ?? (CHARACTER_PARTIES[key] = {});
+  entry.skipped = [...(entry.skipped ?? []), ...skipped];
+}

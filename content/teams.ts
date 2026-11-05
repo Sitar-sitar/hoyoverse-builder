@@ -1,4 +1,5 @@
 import {teams as batch29} from "./teamBatch29";
+import {teams as batch30} from "./teamBatch30";
 import { teams as batch25 } from "./teamBatch25";
 import { teams as batch24 } from "./teamBatch24";
 import { teams as batch26 } from "./teamBatch26";
@@ -20,7 +21,7 @@ export const teamRecords: TeamAuthoring[] = [
   ...batch26,
   ...batch27,
   ...batch23,
-  ...batch28, ...batch29,
+  ...batch28, ...batch29, ...batch30,
   ...legacy,
 ];
 const ignore = (_value: unknown): TextRef[] => [];

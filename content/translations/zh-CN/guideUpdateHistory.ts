@@ -24,4 +24,28 @@ export const records: Record<string, TranslationRecord> = {
   "origin": "legacy",
   "review": "pending"
 },
+  "guide.batch30.b00046": {
+  "text": "第30バッチ：新規キャラクター2名",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
+  "guide.batch30.b00047": {
+  "text": "{v0}の個別ビルド・凸・推奨編成を追加。",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
+  "guide.batch30.b00048": {
+  "text": "確認済みIDで原神Ver.7.2のミティヤ・バレリーを追加。戦闘中の補正は公開値へ加算しない。",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
+  "guide.batch30.b00049": {
+  "text": "更新日付き個別ガイドと公開ゲームデータを確認し、根拠のない数値目標は登録しない。",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
 };

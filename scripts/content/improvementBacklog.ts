@@ -1,4 +1,5 @@
 import { records as batch29Guides } from "../../content/guideDefinitions_batch29";
+import { records as batch30Guides } from "../../content/guideDefinitions_batch30";
 import { execFileSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -33,6 +34,7 @@ export const GUIDE_MODULES = [
   ["content/guideDefinitions_batch23.ts", batch23Guides],
   ["content/guideDefinitions_batch28.ts", batch28Guides],
   ["content/guideDefinitions_batch29.ts", batch29Guides],
+  ["content/guideDefinitions_batch30.ts", batch30Guides],
 ] as const;
 
 function git(args: string[]) {

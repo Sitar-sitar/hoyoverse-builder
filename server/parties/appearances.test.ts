@@ -49,17 +49,17 @@ describe("catalog-only appearances", () => {
       caller.build.reference({ game: "hsr", name: "unknown" })
     ).rejects.toMatchObject({ code: "NOT_FOUND" });
   });
-  it("known current candidates are 28 characters and 40 cards; all 268 have arrays", () => {
+  it("known current candidates are 37 characters and 54 cards; all 270 have arrays", () => {
     const references = Object.values(characterReferenceCatalog().games)
       .flat()
       .map(({ game, name }) => characterReferenceFor(game, name)!);
-    expect(references).toHaveLength(268);
+    expect(references).toHaveLength(270);
     expect(references.filter(ref => ref.partyAppearances.length)).toHaveLength(
-      28
+      37
     );
     expect(
       references.reduce((sum, ref) => sum + ref.partyAppearances.length, 0)
-    ).toBe(40);
+    ).toBe(54);
     expect(partyAppearancesFor("hsr", "ホタル")).toEqual([]);
     expect(characterReferenceFor("hsr", "unknown")).toBeNull();
   });

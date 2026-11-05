@@ -5630,6 +5630,49 @@ export const records:GuideMetadataAuthoring[]=[
       "sourceLabel"
     ]
   }
+,
+  {
+    "identityKey": "genshin:10000136",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000136.name"
+    },
+    "profileId": "curated:batch30:genshin:ミティヤ",
+    "dataAsOf": "2026-11-05",
+    "updatedAt": "2026-11-05",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "genshin:10000137",
+    "game": "genshin",
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000137.name"
+    },
+    "profileId": "curated:batch30:genshin:バレリー",
+    "dataAsOf": "2026-11-05",
+    "updatedAt": "2026-11-05",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00033"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  }
 ];
 export const defaults:Record<Game,GuideMetadataFields>={
   "hsr": {

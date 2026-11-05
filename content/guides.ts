@@ -1,4 +1,5 @@
 import { records as batch29 } from "./guideDefinitions_batch29";
+import { records as batch30 } from "./guideDefinitions_batch30";
 import { records as hsr } from "./guideDefinitions_hsr";
 import { records as providers } from "./guideDefinitions_providers";
 import { records as profiles } from "./guideDefinitions_profiles";
@@ -26,7 +27,7 @@ export const guideRecords = [
   ...profiles,
   ...batch17,
   ...batch23,
-  ...batch28, ...batch29,
+  ...batch28, ...batch29, ...batch30,
 ];
 export function validateGuides(records: GuideAuthoringRecord[]) {
   const ids = new Set<string>(),
@@ -86,7 +87,7 @@ export function validateGuides(records: GuideAuthoringRecord[]) {
         }),
     });
     if (
-      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17|batch23|batch28|batch29)\.b\d{5}$/.test(
+      !/^guide\.authoring\.guideDefinitions_(hsr|providers|profiles|batch17|batch23|batch28|batch29|batch30)\.b\d{5}$/.test(
         record.guideId
       ) ||
       ids.has(record.guideId) ||

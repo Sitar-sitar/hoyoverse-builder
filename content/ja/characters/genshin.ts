@@ -1091,6 +1091,25 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": []
   }
+,
+  {
+    "id": "character.genshin.10000136.name",
+    "ja": "ミティヤ",
+    "context": "genshin character 10000136: confirmed batch30 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "character.genshin.10000137.name",
+    "ja": "バレリー",
+    "context": "genshin character 10000137: confirmed batch30 catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
 ];
 export const records: Array<CharacterContent & {order:number}> = [
   {
@@ -4461,6 +4480,63 @@ export const records: Array<CharacterContent & {order:number}> = [
     "name": {
       "kind": "textRef",
       "id": "character.genshin.10000127.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  }
+,
+  {
+    "identityKey": "genshin:10000136",
+    "game": "genshin",
+    "order": 122,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000136.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "normal",
+        "elementalSkill",
+        "elementalBurst",
+        "passives"
+      ]
+    }
+  },
+  {
+    "identityKey": "genshin:10000137",
+    "game": "genshin",
+    "order": 123,
+    "name": {
+      "kind": "textRef",
+      "id": "character.genshin.10000137.name"
     },
     "elementKey": null,
     "roleKey": null,

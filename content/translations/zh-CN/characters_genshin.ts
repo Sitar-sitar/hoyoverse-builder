@@ -60,4 +60,16 @@ export const records: Record<string, TranslationRecord> = {
   "origin": "legacy",
   "review": "pending"
 },
+  "character.genshin.10000136.name": {
+  "text": "ミティヤ",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
+  "character.genshin.10000137.name": {
+  "text": "バレリー",
+  "sourceHash": null,
+  "origin": "legacy",
+  "review": "pending"
+},
 };
