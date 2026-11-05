@@ -89,4 +89,4 @@
 - データ: `content/characterBatch30.ts`、`content/guideDefinitions_batch30.ts`、`content/constellationBatch30.ts`、`content/teamBatch30.ts`、`content/ja/guides/batch30.ts`（英中は `content/translations/*/batch30.ts` にpending）。名前・メタデータ・履歴・カタログ索引・manifest・基準JSONを同期。
 - サーバー: `server/batch30GenshinData.ts` を既存の確認済みID補完経路（`curatedGenshinCharacters.ts`）へ追加。同名別ID・派生・別ゲームには適用しない。
 - 回帰: `server/batch30Characters.test.ts`（2名の最終lookup/reference/history一致、誤ID拒否、凸本文の数値・条件、270名台帳と連動漏れ0）。既存テストの件数期待値を270名へ更新。
-- 状態: 本書作成時点ではローカル実装・検証済み。公開状態は実装ログ Phase 70 を参照。
+- 状態: 実装・本番反映済み。PR #167 → main `1793181`。Pages run `41963565046` で本番APIの同SHA一致と公開後検査 `reason=ok` を確認（2026-11-05 03:48 UTC）。本番図鑑の目視確認と実UID照会は未実施。
