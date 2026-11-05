@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "sourceRevision": "dbd66e80141d4c4922bf95eaa413420ae692d679",
-  "characterCount": 268,
+  "characterCount": 270,
   "unresolved": [],
   "sections": {
-    "catalog": "a63cc9a318917d48969dc664ab0db173114ddff8f5b912db0b495f7569a1c186",
-    "ledger": "862c9aaf9e64ba1558da9b3a921d9f752727ae9396960285c82baa6388fb94b5",
-    "history": "ea7a012ff217106be012a5d927dcc942f8a29a4594c2d18f81baf99ef2699f3c"
+    "catalog": "4eeceb10b11c3e85deea5b5a9fb193440cc44d5d784ef90497ce72cfec97eaec",
+    "ledger": "fb5d0757e6f3668c72253282080541f9df85c306104dd1ec2d5902c46295bc98",
+    "history": "67243e7896706a9b52c4c24187175bd34cb46a2210e29f6f2b639f47b7de5b9b"
   },
   "characters": {
     "hsr:1305": {
@@ -475,7 +475,7 @@
       "constellations": "63e35ebc429ca5422964e20290fd5df5a1f73a48f4b186772451aaabf197a6c9"
     },
     "genshin:10000116": {
-      "reference": "94609ac5176ed2d19385eb10232efd4a806fdaa51871c921ef4eb89b6297b398",
+      "reference": "2dc988a7d8cb5c3734984661984c56379efd1ccb922d5c716a64cf89109514ee",
       "guide": "a43d59897a772a8a215dc521873af96a4ff38d2c9f5c301d16e9ce56348ff953",
       "constellations": "24361c4b6c5c80c5b39273942fb56091d8c670adb127be417e8c381036b39b0e"
     },
@@ -485,7 +485,7 @@
       "constellations": "2eed9d4a1c1b5561c15dd266ddb8d068fae0e7197fee2b6cacb0d520629b4f3f"
     },
     "genshin:10000111": {
-      "reference": "0d3c783015e2e8308a8fc2b9a1d42989a8d10c042c6aad4e641bf3420de2861b",
+      "reference": "a4914281e4147423ddedc9995ffbda1cf20f6fd8ba8f5b8f0fc1bba6d0fb7a7c",
       "guide": "fc41f61e4c91bdb31ad3a4f22cfbc4a63171f1d3acb23111533debd445f83fd6",
       "constellations": "f5af1b279c78950636bf1c0d689cd415248264d3a7059084427552e70759e73f"
     },
@@ -510,7 +510,7 @@
       "constellations": "8ff0dcf9aa053d6d0bd78d65b68bbbcc44b87a97df75e15629662528a80ca826"
     },
     "genshin:10000112": {
-      "reference": "d1c4b95d0afa4569bf896035b0e8108db3d1cffbe9b2d925ba3843ddf79fd956",
+      "reference": "31ef7f450c1a9b8048f9e63338988192df84e79227cff0867424a9d52bac30b9",
       "guide": "b4d8206f7d912eb930905c8b949b4f30c2e351fac9e0f740f6c62051ab613107",
       "constellations": "bddd10dd37d968e157b58e788dd8ae06c6e7150aff2f1df57842ba1ff12711e1"
     },
@@ -570,7 +570,7 @@
       "constellations": "9b3f87d1bcfc945926729d64b68a6a306259eb00759f876634b0dd439a704a18"
     },
     "genshin:10000125": {
-      "reference": "b49b086a7bfafd867aed5a47ca011c65f79acb2b508013b27d8eab7114d5d5b6",
+      "reference": "0efcd0ac03d7ce39feb98e90ea30102a38da8a0515e425ce239cf55a854f882b",
       "guide": "9fb98fbe32f094357089fc7fbdeb16fa56117e6c864702d620e2c1cdb6cce09a",
       "constellations": "1cff254d16066f8e569531ac3e07513300c1800097f31f79cfe3fb85c36b90ad"
     },
@@ -620,7 +620,7 @@
       "constellations": "2a1c664950a6aeec240863de3b0b84ac8d335b5b91e768abc56c32b840a62a9b"
     },
     "genshin:10000071": {
-      "reference": "7c2b6af6acbf1016eee9bfdb7be1b886924f6d04024fd87386c15f69559469b1",
+      "reference": "c4913c70aec2f6a92fa0d82caa4da83d4bb06e59572e3f9b24ac9e94d7d73fea",
       "guide": "4dd9f27e9bb00fd4adc1d52c2e79ff99967cad554fc4032d7f54603f2666a506",
       "constellations": "84e7b5552963154f1d4898e15092abfd077b00816231d23cbfde5891285420c6"
     },
@@ -660,7 +660,7 @@
       "constellations": "74d350bef3e6dc89d9a5c8cc9b9efbc24d4f46bb004bcdfed272b1f84e40a52c"
     },
     "genshin:10000123": {
-      "reference": "fc475a3e7397489f03a2c6daef7a0bb7523925db11d4a443e22eb423c10d50bb",
+      "reference": "fc29a0f608bf31d4dae94a5383d767ada41a799d0132d4ab1e0a64f8f694414a",
       "guide": "3aba293c7a9a539491733c14156dc4589b572e2cc6b4c0f4d8c53333649c2ebe",
       "constellations": "8d07d94840cb8787a8ed35321928b6e86fa5f49368762d603c18aa9a4668981e"
     },
@@ -725,7 +725,7 @@
       "constellations": "d744c00d0e46d071af093af5736fbcea254606d6952773ee215da9d0760384d7"
     },
     "genshin:10000120": {
-      "reference": "b8c152ca645cce84fdc5d8605b975b77b1d1a344683528161aae164750443f92",
+      "reference": "4d838014c1b1e92e2bb4f0fa42a700001fe7f724f82208ea4c4ff8d75b32a737",
       "guide": "c3e771856f98fd1b71da3a6fb560e3e1af33935c498a0907a712ce41235defa3",
       "constellations": "2225a819105dbb4fe97d63dd8257f922cbda93624289ea9ebd601bea5428a2d9"
     },
@@ -940,7 +940,7 @@
       "constellations": "d963836f852a8726e461486fbcbd14610ff11106fd519c0231c9c6562deb2e96"
     },
     "genshin:10000058": {
-      "reference": "24dc7e8affd1069f9c8fce2a370d90803ab27da635af7e4df9db1d6d611be212",
+      "reference": "0ffe5ddfcdef0c23827a0e94f0e43932943aa596a733a261f8d0f897f9382392",
       "guide": "182c5e87fd0d58bd52a7f7fbf411431b1ee763a72b4ce8bf331982505cbbb82c",
       "constellations": "cfc63aa4e7e271e1680a12d490fb3331bae758307d02eaf332e877b68ef070c3"
     },
@@ -995,7 +995,7 @@
       "constellations": "29533057cd449dff6713b3d22fe0d41704c17842eb91f741aafe240b9fda9723"
     },
     "genshin:10000150": {
-      "reference": "212bb50a4ebd7af14f0b3906ff795e5e34d11c4f6da82d53c0fe38cdde1f57a3",
+      "reference": "6f10e66b62cba1f030cfb3f237f51c09a2dcfd296c14dc84233739e43fd7ce41",
       "guide": "d024f92e2328ead8a54d2a610054ec3a4ace3af7e5a9775c39b471980b9d190f",
       "constellations": "efd1b2b9bdd82cbbf7024ac948e36dc52623d274938a0219bb964db92689a0ee"
     },
@@ -1005,12 +1005,12 @@
       "constellations": "c810f9188f8fdd9c4dbdef59e62412b51347cff084c8be04ab51a7e82a337bf5"
     },
     "genshin:10000133": {
-      "reference": "ba77212e23024b81413b12dd4e9b68d6a82efc666e9f674b40bb383b0c6ecb87",
+      "reference": "ac13c04c9303c27302e52d5c88fe6d4594771e31254d527e1df82927bc7442f1",
       "guide": "e82b3cc4ac8496b822c99ccb223a8c4b1e4a8aa22fd850310fdf29f33722caff",
       "constellations": "698dc1fc50b9e4ab3c7c7b0dab676a5a479f70601cf78906f34012cfa666ada3"
     },
     "genshin:10000131": {
-      "reference": "174f4a2023c8f6a22548e027b352f7339d474f5a4a6c5f09da99083ff61c4753",
+      "reference": "9eae2a12a3d0f8bc3309d65b83d468e2672bd710928b5de78f2a8429609ce4e3",
       "guide": "e46220331080cafc71b95d8d654083a0c48e4b72b1fdf3208e1aff223279e749",
       "constellations": "6a5a33b329ce8f10aa1d74e82e8979d11673aa88f638320dbbbd3cb77adc8fba"
     },
@@ -1043,6 +1043,16 @@
       "reference": "a4646ef50e39acdb251b64da0ca242030b7a2656dc7c96247440abf2c4597108",
       "guide": "e5634c5252a69eb19ecea43a13220591853644d32ee51f7530923120219b4b8e",
       "constellations": "1985d669ff02cf5f8d3c35ec88a52cacca2637b571d07c92c47e953509b7ed3b"
+    },
+    "genshin:10000136": {
+      "reference": "917838468c51ce440fa65053feab22c2a6113e6d0d739f5ed7b91770867dfb93",
+      "guide": "286018d0698464e0b80e6eb16b5ae0716e9dafc88fdeb64decc1099735b3cd18",
+      "constellations": "97b7d3e886f69b6bbbe89bb85ea8088b7a2da971c86ed783759f915a5bd56ee3"
+    },
+    "genshin:10000137": {
+      "reference": "a07ff7b41a65821d05919b5978e368722fdf4b6792a354ae689510b3a86ec233",
+      "guide": "18d9f446602047fd2d180b6d7c8e880519477893465e80adde73600ad176e394",
+      "constellations": "bda41cd6a8dd0be25320be6d5cffd3bfd6471df378dac1196f59ae264652a566"
     },
     "zzz:1041": {
       "reference": "b1411bf43205c5462f70fd7cbfb9c5717990aff79ae278b6e12fd4c84ce0739c",

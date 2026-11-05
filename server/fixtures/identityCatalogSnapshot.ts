@@ -73,3 +73,19 @@ ACTIVE_CATALOG_IDENTITIES.push(...([
     "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Illuga.png"
   }
 ] satisfies typeof ACTIVE_CATALOG_IDENTITIES));
+
+// 第30バッチ・genshin-db固定revisionとEnka公開storeで確認。
+ACTIVE_CATALOG_IDENTITIES.push(...([
+  {
+    "game": "genshin",
+    "sourceId": "10000136",
+    "providerName": "ミティヤ",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Mitya.png"
+  },
+  {
+    "game": "genshin",
+    "sourceId": "10000137",
+    "providerName": "バレリー",
+    "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Valeriy.png"
+  }
+] satisfies typeof ACTIVE_CATALOG_IDENTITIES));

@@ -1,4 +1,5 @@
 import { records as batch29 } from "./constellationBatch29";
+import { records as batch30 } from "./constellationBatch30";
 import { records } from "./constellationBatch17";
 import { records as curated } from "./constellationCurated";
 import { records as batch23 } from "./constellationBatch23";
@@ -69,7 +70,7 @@ export function validateConstellations(values: ConstellationAuthoring[]) {
   const identities = new Set<string>();
   for (const record of values) {
     if (
-      !/^constellation\.(batch17|batch23|batch28|batch29|curated)\.entry\d+$/.test(
+      !/^constellation\.(batch17|batch23|batch28|batch29|batch30|curated)\.entry\d+$/.test(
         record.entryId
       ) ||
       ids.has(record.entryId)
@@ -121,7 +122,7 @@ export function validateConstellations(values: ConstellationAuthoring[]) {
     constellationRefs(record);
   }
 }
-export const constellationRecords = [...records, ...curated, ...batch23, ...batch28, ...batch29];
+export const constellationRecords = [...records, ...curated, ...batch23, ...batch28, ...batch29, ...batch30];
 export function unresolvedConstellationIdentities() {
   return constellationRecords
     .flatMap(record =>

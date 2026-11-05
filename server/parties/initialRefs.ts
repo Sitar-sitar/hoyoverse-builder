@@ -300,4 +300,7 @@ export const INITIAL_PARTY_REFS: Readonly<Record<string, readonly string[]>> = {
   "zzz:ロクシー": [
   "team-zzz-ロクシー-b29-1"
 ],
+  // 第30バッチ（2026-11-05）新キャラ初回登録。
+  "genshin:ミティヤ": ["team-genshin-ミティヤ-b30-1", "team-genshin-ミティヤ-b30-2", "team-genshin-ミティヤ-b30-3"],
+  "genshin:バレリー": ["team-genshin-バレリー-b30-1", "team-genshin-バレリー-b30-2", "team-genshin-ミティヤ-b30-1"],
 };

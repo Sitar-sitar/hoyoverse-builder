@@ -53,7 +53,7 @@ describe("初期参照から全表示参照を再生する（PT-05・PT-06）", 
     const initialId = "curated-genshin-ヴェスナ-1";
     const catalog = { hsr: CHARACTER_GUIDE_CATALOG.hsr, genshin: [...CHARACTER_GUIDE_CATALOG.genshin.filter(name => name !== owner), owner], zzz: CHARACTER_GUIDE_CATALOG.zzz };
     const withoutOwner = Object.fromEntries(Object.entries(INITIAL_PARTY_REFS).filter(([key]) => key !== `genshin:${owner}`));
-    const skipped = TEAM_STORE.teams.filter(team => team.shared && team.id !== initialId && team.members.some(member => member.name.ja === owner)).map(team => ({ team: team.id, reason: "初回登録の否定例で表示を1案に限定", sourceUrl: team.sourceUrl, checkedAt: "2026-10-26" }));
+    const skipped = TEAM_STORE.teams.filter(team => team.shared && team.id !== initialId && team.members.some(member => member.name.ja === owner)).map(team => ({ team: team.id, reason: "初回登録の否定例で表示を1案に限定", sourceUrl: team.sourceUrl, checkedAt: team.dataAsOf }));
     const s = { catalog, initialRefs: withoutOwner, parties: { ...CHARACTER_PARTIES, [`genshin:${owner}`]: { refs: [{ team: initialId }], skipped } } };
     expect(replayIssues(s)).toContainEqual(expect.stringMatching(/^E6.*オデット/));
     expect(teamStoreIssues({ ...s, initialRefs: { ...INITIAL_PARTY_REFS, [`genshin:${owner}`]: [initialId] } })).toEqual([]);

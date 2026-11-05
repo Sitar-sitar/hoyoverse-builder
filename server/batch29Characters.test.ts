@@ -240,17 +240,17 @@ describe("第29バッチ・11名の図鑑と最終API返却", () => {
     expect(alias.partyRecommendations?.options).toEqual([]);
     expect(alias.constellations?.dataStatus).toBe("preparing");
   });
-  it("268名の台帳と編成採否に漏れがない", () => {
+  it("第30バッチ後の270名の台帳と編成採否に漏れがない", () => {
     const ledger = characterUpdateLedger();
     expect(ledger).toMatchObject({
-      total: 268,
-      reviewed: 268,
+      total: 270,
+      reviewed: 270,
       pending: 0,
-      nextBatch: { id: 30, names: [] },
+      nextBatch: { id: 31, names: [] },
     });
     expect(ledger.byGame).toEqual({
       hsr: { total: 86, reviewed: 86, pending: 0 },
-      genshin: { total: 121, reviewed: 121, pending: 0 },
+      genshin: { total: 123, reviewed: 123, pending: 0 },
       zzz: { total: 61, reviewed: 61, pending: 0 },
     });
     expect(teamStoreIssues()).toEqual([]);

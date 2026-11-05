@@ -3539,5 +3539,43 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+{
+    "id": "guide.batch30.b00046",
+    "ja": "第30バッチ：新規キャラクター2名",
+    "context": "batch30 history title",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch30.b00047",
+    "ja": "{v0}の個別ビルド・凸・推奨編成を追加。",
+    "context": "batch30 history summary",
+    "audience": "public",
+    "placeholders": {
+      "v0": "string"
+    },
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch30.b00048",
+    "ja": "確認済みIDで原神Ver.7.2のミティヤ・バレリーを追加。戦闘中の補正は公開値へ加算しない。",
+    "context": "batch30 history change",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+{
+    "id": "guide.batch30.b00049",
+    "ja": "更新日付き個別ガイドと公開ゲームデータを確認し、根拠のない数値目標は登録しない。",
+    "context": "batch30 history rationale",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   }
 ];
