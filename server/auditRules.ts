@@ -33,7 +33,7 @@ const identityFor = (game: CatalogGameId, name: string): CharacterIdentity => {
 export function resolvedGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   if (game === "hsr") return guideFor(name, HSR_RUNTIME_PATHS[name] ?? "", identityFor("hsr", name));
   if (game === "genshin") return genshinGuide(name);
-  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
+  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack", identityFor("zzz", name));
 }
 
 function generatedGuideFor(game: CatalogGameId, name: string): GuideDefinition {

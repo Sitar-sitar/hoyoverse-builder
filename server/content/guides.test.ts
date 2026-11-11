@@ -17,13 +17,13 @@ import { decodeGuideDefinitions } from "../../scripts/content/adoptGuideDefiniti
 
 describe("guide authoring migration", () => {
   it("registers every migrated definition and preserves projection fields", () => {
-    expect(guideRecords).toHaveLength(297);
+    expect(guideRecords).toHaveLength(299);
     expect(
       guideSections().filter(section => section.visibility === "active")
-    ).toHaveLength(297);
+    ).toHaveLength(299);
     expect(
       guideSections().filter(section => section.visibility === "planned")
-    ).toHaveLength(1188);
+    ).toHaveLength(1196);
     for (const record of guideRecords) {
       const projected = record.factory
         ? projectGuideProfile(record)

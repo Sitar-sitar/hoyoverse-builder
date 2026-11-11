@@ -1,3 +1,4 @@
+import { teams as batch31Teams } from "../../content/teamBatch31";
 import {BATCH29_TEAMS} from "./batch29Teams";
 import {BATCH30_TEAMS} from "./batch30Teams";
 import { teams } from "../../content/teamBatch23";
@@ -13,5 +14,6 @@ export const SHARED_TEAMS = [
   ...BATCH25_TEAMS,
   ...BATCH26_TEAMS,
   ...BATCH28_TEAMS, ...BATCH29_TEAMS, ...BATCH30_TEAMS,
+  ...projectTeams(batch31Teams),
   ...projectTeams(teams),
 ];

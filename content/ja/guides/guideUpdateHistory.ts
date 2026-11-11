@@ -3577,5 +3577,43 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "guide.batch31.b00084",
+    "ja": "第31バッチ：星神★アッハとセヴェリアン",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.batch31.b00085",
+    "ja": "{v0}の個別ガイド・推奨編成・凸を新規登録。",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {
+      "v0": "string"
+    },
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.batch31.b00086",
+    "ja": "正式版の性能と装備・編成の根拠を照合した。",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.batch31.b00087",
+    "ja": "公開プロフィールの現在値と戦闘中の効果を分けて表示する。",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   }
 ];

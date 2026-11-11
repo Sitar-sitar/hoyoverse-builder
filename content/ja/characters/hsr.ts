@@ -774,6 +774,15 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "character.hsr.1511.name",
+    "ja": "星神★アッハ",
+    "context": "batch31 hsr:1511 Japanese catalog name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   }
 ];
 export const records: Array<CharacterContent & {order:number}> = [
@@ -3334,6 +3343,36 @@ export const records: Array<CharacterContent & {order:number}> = [
     "name": {
       "kind": "textRef",
       "id": "character.hsr.1502.name"
+    },
+    "elementKey": null,
+    "roleKey": null,
+    "introduction": {
+      "status": "notCollected",
+      "reason": "独立した紹介文が未登録",
+      "requiredKinds": [
+        "introduction"
+      ]
+    },
+    "skills": {
+      "status": "notCollected",
+      "reason": "通常スキルの独立した詳細データは現行カタログに未登録。種類・派生技・効果数値の個別確認が必要。",
+      "requiredKinds": [
+        "basic",
+        "skill",
+        "ultimate",
+        "talent",
+        "technique",
+        "traces"
+      ]
+    }
+  },
+  {
+    "identityKey": "hsr:1511",
+    "game": "hsr",
+    "order": 87,
+    "name": {
+      "kind": "textRef",
+      "id": "character.hsr.1511.name"
     },
     "elementKey": null,
     "roleKey": null,

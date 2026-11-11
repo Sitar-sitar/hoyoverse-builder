@@ -466,3 +466,72 @@ for (const [key, skipped] of Object.entries(BATCH30_PARTY_SKIPS)) {
   const entry = CHARACTER_PARTIES[key] ?? (CHARACTER_PARTIES[key] = {});
   entry.skipped = [...(entry.skipped ?? []), ...skipped];
 }
+
+const BATCH31_PARTY_SKIPS: Record<string, NonNullable<CharacterPartyEntry["skipped"]>> = {
+  "hsr:爻光": [
+    {
+      "team": "team-hsr-星神★アッハ-b31-1",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://game8.jp/houkaistarrail/816234",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "hsr:パール": [
+    {
+      "team": "team-hsr-星神★アッハ-b31-1",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://game8.jp/houkaistarrail/816234",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "zzz:ダイアリン": [
+    {
+      "team": "team-zzz-セヴェリアン-b31-1",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "zzz:千夏": [
+    {
+      "team": "team-zzz-セヴェリアン-b31-1",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "zzz:ノルムー": [
+    {
+      "team": "team-zzz-セヴェリアン-b31-2",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "zzz:アストラ": [
+    {
+      "team": "team-zzz-セヴェリアン-b31-2",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    },
+    {
+      "team": "team-zzz-セヴェリアン-b31-3",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "zzz:ロクシー": [
+    {
+      "team": "team-zzz-セヴェリアン-b31-3",
+      "reason": "新キャラ起点の編成。参加者本人の個別ガイドとの照合まで既存の採用枠を保持する。",
+      "sourceUrl": "https://gamewith.jp/zenless/560560",
+      "checkedAt": "2026-11-11"
+    }
+  ]
+};
+for (const [key, skipped] of Object.entries(BATCH31_PARTY_SKIPS)) {
+  const entry = CHARACTER_PARTIES[key] ?? (CHARACTER_PARTIES[key] = {});
+  entry.skipped = [...(entry.skipped ?? []), ...skipped];
+}

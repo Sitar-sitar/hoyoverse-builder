@@ -1,3 +1,4 @@
+import { records as batch31Guides } from "../content/guideDefinitions_batch31";
 import {createLegacyTexts as createremainingDisplaysTexts} from "./content/legacyTexts";
 import {sources as remainingDisplaysSources} from "../content/ja/guides/buildAdvisor_remainingDisplays";
 const _remainingDisplays = createremainingDisplaysTexts(remainingDisplaysSources, {}, {});
@@ -374,7 +375,7 @@ function statDisplay(stat: RawRecord): string {
  * 同名で複数の実装がある HSR キャラクターの個別ガイド。名前キーの GUIDE_OVERRIDES より優先する。
  * 例: 三月なのかは存護（1001）と巡狩（1224）が同じ providerName で公開されるため、名前キーでは区別できない。
  */
-const GUIDE_OVERRIDES_BY_SOURCE_ID: Record<string, GuideDefinition> = projectGuideRegistry(guideRecords, "GUIDE_OVERRIDES_BY_SOURCE_ID");
+const GUIDE_OVERRIDES_BY_SOURCE_ID: Record<string, GuideDefinition> = projectGuideRegistry([...guideRecords, ...batch31Guides], "GUIDE_OVERRIDES_BY_SOURCE_ID");
 
 export function guideFor(name: string, path: string, identity?: Pick<CharacterIdentity, "variantOf" | "sourceId">): GuideDefinition {
   const bySourceId = identity?.sourceId ? GUIDE_OVERRIDES_BY_SOURCE_ID[identity.sourceId] : undefined;

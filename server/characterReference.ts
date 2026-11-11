@@ -42,7 +42,9 @@ function baseGuideFor(game: CatalogGameId, name: string): GuideDefinition {
   if (game === "genshin") {
     return genshinGuide(name);
   }
-  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
+  const sourceId = catalogSourceIdFor("zzz", name);
+  const identity = sourceId ? resolveCharacterIdentity("zzz", sourceId, name) : undefined;
+  return zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack", identity);
 }
 
 function buildReferenceCatalog() {

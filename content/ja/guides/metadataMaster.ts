@@ -364,5 +364,23 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.metadataMaster.b00034",
+    "ja": "Game8の個別ガイドと正式版ゲームデータ",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "guide.legacy.metadataMaster.b00035",
+    "ja": "GameWithの個別ガイドと正式版ゲームデータ",
+    "context": "第31バッチの公開ガイド",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   }
 ];

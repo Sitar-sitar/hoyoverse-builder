@@ -6,4 +6,16 @@ export const records:Record<string,TranslationRecord>={
   "origin": "legacy",
   "review": "pending"
 },
+  "guide.legacy.metadataMaster.b00034": {
+    "text": "Game8の個別ガイドと正式版ゲームデータ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "guide.legacy.metadataMaster.b00035": {
+    "text": "GameWithの個別ガイドと正式版ゲームデータ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  }
 };

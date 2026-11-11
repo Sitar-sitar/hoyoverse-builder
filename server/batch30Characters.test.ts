@@ -169,7 +169,7 @@ describe("第30バッチ・2名の図鑑と最終API返却", () => {
   });
   it("270名の台帳と編成採否に漏れがない", () => {
     const ledger = characterUpdateLedger();
-    expect(ledger).toMatchObject({ total: 270, reviewed: 270, pending: 0, nextBatch: { id: 31, names: [] } });
+    expect(ledger).toMatchObject({ total: 272, reviewed: 272, pending: 0, nextBatch: { id: 32, names: [] } });
     expect(ledger.byGame.genshin).toEqual({ total: 123, reviewed: 123, pending: 0 });
     expect(teamStoreIssues()).toEqual([]);
     expect(uncoveredLinks()).toEqual([]);

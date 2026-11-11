@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "sourceRevision": "dbd66e80141d4c4922bf95eaa413420ae692d679",
-  "characterCount": 270,
+  "characterCount": 272,
   "unresolved": [],
   "sections": {
-    "catalog": "4eeceb10b11c3e85deea5b5a9fb193440cc44d5d784ef90497ce72cfec97eaec",
-    "ledger": "fb5d0757e6f3668c72253282080541f9df85c306104dd1ec2d5902c46295bc98",
-    "history": "67243e7896706a9b52c4c24187175bd34cb46a2210e29f6f2b639f47b7de5b9b"
+    "catalog": "88c540ef2a41487be0c5eae1511b9e48f17e3457247e93b504fb1f6ab33f416e",
+    "ledger": "d00c3565e6c51b074936e43b05e1273fed0ee7f925d3658b1e01a765327fd25c",
+    "history": "ef8f79071c5537e35d67f0d2dceb74922b72fe688bb29c5ea923a5bb81973cd8"
   },
   "characters": {
     "hsr:1305": {
@@ -160,7 +160,7 @@
       "constellations": "4b42684033c82a442df9e77159909f9d61b708e99ede42eb3e5df2e9b7ffbf41"
     },
     "hsr:1503": {
-      "reference": "8e1d3ce3aff0d2f1874fcbf2071c8b689385f0c7ba7fc4726d5ca2396d47967f",
+      "reference": "146088ee02a34f4c64801492ce85dec53b6cce2a3ce0c55bb70013ee0e7ecb0e",
       "guide": "b91a4897899ea5508b572823780e22ff41e9046c34ae7f0473ddbe27b0ef2d86",
       "constellations": "174dc3ad01af9ee8af8ebdeed9d56d50a38b0dcd60860137da8f4bcf30748500"
     },
@@ -435,9 +435,14 @@
       "constellations": "2baffc6c45b4f41c6a03e805df74abee5b3a833bf17e17b93733428c9afbbc5f"
     },
     "hsr:1502": {
-      "reference": "ee6e8b9c67b92d62484698e340647fe5d6a2eb92e9fc7933674af34782ee90b7",
+      "reference": "4f2ec4b7e3440db741516311c7e6c4ef7c84c2dea7e9eeeb098ae97bd52bbb58",
       "guide": "56eb91a33b058c540ddaeaa909930d518a0e6f69a6d669fc2ba56a7bd378571b",
       "constellations": "89d94f30768c7428382ad539a6eeb3d3ca891cdc985f5c4aa09f9e4ff9acce86"
+    },
+    "hsr:1511": {
+      "reference": "7531c7ff5914ad9253ebea3e6efe3d1676de966cc86f9369b7e345d1a06eb271",
+      "guide": "7e48c920718289c67cec3352aed9ebb8c60f88b90c404e167812b8b7c1b43101",
+      "constellations": "76721d909827f04802bfa3ec3879ef76795b415e65768a2df46d12730c58951a"
     },
     "genshin:10000062": {
       "reference": "2ee9c328b019f3d1ff21aee46226595ce8dfd9debcf601d6d7bfec52b45e1cc2",
@@ -1075,7 +1080,7 @@
       "constellations": "9cbefe1b12bc14c2e6878e2921d333d98e646d9add40a8f73bfc85990f6356af"
     },
     "zzz:1311": {
-      "reference": "98519226763401c4ffaf3483e3c87dfce3c32807902125473adeacf5b8a73ed8",
+      "reference": "a73ee89ed064cc1cccd219e599a55d6839ea75a30e1706b95dbdc7a845d64ab7",
       "guide": "14f7d19932e0bb432a91f5420f2daf696f79904ae5a6322e6421a3c8cfafb87a",
       "constellations": "dd7088a700b8f21c4c2b6ca684e9845e64cd8f0f7aaa8a917358584782e173b2"
     },
@@ -1175,7 +1180,7 @@
       "constellations": "a4f7da82e4def13680f160b416ede5bacebd30981b3ff1478986e3d75ac6770d"
     },
     "zzz:1481": {
-      "reference": "f4c8e4690e6f243ac9ffd5e6d61199ab8c1d03102e1a2cc970f2e9d1f7bbcd73",
+      "reference": "f8e0c44cd0f5009a81f7256e4cdadc2c322378453079787123c0e8c7fe2d6579",
       "guide": "94b82a5e4b8aa9d6d17d54aef40a6adb47b10707f910119be094f37e653ad15b",
       "constellations": "d47dcb01566df6eec7fdf8824358a1aaca8cc34c82bb2f529b749ca04f61d8e3"
     },
@@ -1185,7 +1190,7 @@
       "constellations": "5d2419566f18a44cd4517cbe6db4d597ce976d1c61a95b59002c8b5dcbeaa073"
     },
     "zzz:1571": {
-      "reference": "2ad7c8e391c5dffbcecaed7075b7f1bb0851471326e7df402b176ad9f5e909a2",
+      "reference": "bbe7c45424d666563125832df53e7e04c3d7f78753a46d33590dd2a058eeea2a",
       "guide": "c9f9bffe723ca7cd6b5f3af85ecbd13e3c30269f30121a40f43c92c740f8b1e6",
       "constellations": "5ad57e803194810c84b564ac24cbd77145bd56c8ecc36c974b1aa142464acb15"
     },
@@ -1305,7 +1310,7 @@
       "constellations": "06ee338e47c1410d27566259caa564eeb6aa06cc9a88d78d45d9c555dfc960cf"
     },
     "zzz:1491": {
-      "reference": "3a8d0e163ed4ef3b19d7c141f9046be74f3f4888c5888b3edbcefd42d066c622",
+      "reference": "02bdf60676e2ba57e283fb698049295f696dc553f42f7a039b1b130caccf0e08",
       "guide": "53f73d81e49b5a1c3d8b3d70e17539012efefa962710ca14367cf4a58a6350dc",
       "constellations": "bb2037c1277b333020b9fe091c5d91fe82f8bfd5cd1a51fd653fd3cf5d99b40e"
     },
@@ -1355,9 +1360,14 @@
       "constellations": "21b309264791d3edbfbcfc6a14637770d7134e4fdfb64186bfb7a9e71342504a"
     },
     "zzz:1621": {
-      "reference": "26feb1ed32da40c55d60b5adc82be0a6745226caf8946a21f941083159ec8e3d",
+      "reference": "9f727601aae3738b1ea2845433eb6220e3f65dc9060931be0bc7c2fd381a8820",
       "guide": "694a85c3a1ce0fd948059cc30adc63ff22608851d35d7b7de57f5151a64943cb",
       "constellations": "27ea203c7f4c4434d59f8c0ad01722338461871c838c7a559c1f9f91401a1d40"
+    },
+    "zzz:1631": {
+      "reference": "578062b5f93a7276bc4efc8b492cf3fc47b509aba27b1ff8ec0f209416861fd6",
+      "guide": "e353915efc22a0c90aef76bb9f8b22fa9d252cf88dc6bf3c8460d66af0e24239",
+      "constellations": "916fd174087a8f921e523e3f62eaff2fc7bc9f55e5ddf77c79c952c455c8cfdd"
     }
   }
 }

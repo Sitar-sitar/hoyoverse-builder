@@ -24,6 +24,7 @@ type CuratedIdentity = Pick<CharacterIdentity, "displayName" | "variantOf">;
  */
 const CURATED_IDENTITIES: Partial<Record<CharacterGameId, Record<string, CuratedIdentity>>> = {
   hsr: {
+    "1511": { displayName: "星神★アッハ", variantOf: null },
     "1014": { displayName: "セイバー", variantOf: null },
     "1310": { displayName: "ホタル", variantOf: null },
     "1407": { displayName: "キャストリス", variantOf: null },
@@ -44,7 +45,10 @@ const CURATED_IDENTITIES: Partial<Record<CharacterGameId, Record<string, Curated
     "8009": { displayName: "開拓者（雷・歓楽）", variantOf: "開拓者" },
     "8010": { displayName: "開拓者（雷・歓楽）", variantOf: "開拓者" },
   },
-  zzz: { [BATCH29_ZZZ_CHARACTER.id]: { displayName: BATCH29_ZZZ_CHARACTER.name, variantOf: null } },
+  zzz: {
+    [BATCH29_ZZZ_CHARACTER.id]: { displayName: BATCH29_ZZZ_CHARACTER.name, variantOf: null },
+    "1631": { displayName: "セヴェリアン", variantOf: null },
+  },
   genshin: {
     ...Object.fromEntries(Object.entries(BATCH30_CHARACTER_METADATA).map(([id, entry]) => [id, { displayName: entry.name, variantOf: null }])),
     ...Object.fromEntries(Object.entries(BATCH29_CHARACTER_METADATA).map(([id, entry]) => [id, { displayName: entry.name, variantOf: null }])),
@@ -67,15 +71,19 @@ export function resolveCharacterIdentity(game: CharacterGameId, sourceId: string
   const id = String(sourceId).trim() || "unknown";
   const curated = CURATED_IDENTITIES[game]?.[id];
   const rawName = providerName?.trim() ?? "";
-  const displayName = curated?.displayName ?? (isUsableProviderName(rawName) ? rawName : `未解決のキャラクター（ID ${id}）`);
+  // この2名は正式版で照合したIDからのみ個別データへ接続する。
+  const conflictsWithBatch31 = (game === "hsr" && rawName === CURATED_IDENTITIES.hsr?.["1511"]?.displayName && id !== "1511")
+    || (game === "zzz" && rawName === CURATED_IDENTITIES.zzz?.["1631"]?.displayName && id !== "1631");
+  const usableName = !conflictsWithBatch31 && isUsableProviderName(rawName);
+  const displayName = curated?.displayName ?? (usableName ? rawName : `未解決のキャラクター（ID ${id}）`);
   return {
     game,
     sourceId: id,
     key: `${game}:${id}`,
     displayName,
     variantOf: curated?.variantOf ?? null,
-    resolved: Boolean(curated || isUsableProviderName(rawName)),
-    resolution: curated ? "curated-id-map" : isUsableProviderName(rawName) ? "provider" : "unresolved",
+    resolved: Boolean(curated || usableName),
+    resolution: curated ? "curated-id-map" : usableName ? "provider" : "unresolved",
   };
 }
 
