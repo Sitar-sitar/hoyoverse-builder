@@ -55,6 +55,7 @@ let staticNextRetryAt = 0;
 let staticPending: Promise<StaticIndex> | null = null;
 
 const FALLBACK_META: Record<string, { name: string; element?: string; path?: string }> = {
+  "1511": { name: "", element: "Quantum", path: "Elation" },
   "1014": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00001") }, "1310": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00002") }, "1407": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00003") }, "1506": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00004") }, "1508": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00005") }, "1509": { name: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00006") },
 };
 const ELEMENT_NAMES: Record<string, string> = { Fire: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00007"), Ice: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00008"), Imaginary: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00009"), Physical: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00010"), Quantum: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00011"), Thunder: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00012"), Wind: _providerDisplay.ja("guide.providerDisplay.enkaFallback.b00013") };

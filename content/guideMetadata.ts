@@ -5672,6 +5672,48 @@ export const records:GuideMetadataAuthoring[]=[
       "updatedAt",
       "sourceLabel"
     ]
+  },
+  {
+    "identityKey": "hsr:1511",
+    "game": "hsr",
+    "name": {
+      "kind": "textRef",
+      "id": "character.hsr.1511.name"
+    },
+    "profileId": "curated:batch31:hsr:星神★アッハ",
+    "dataAsOf": "2026-11-11",
+    "updatedAt": "2026-11-11",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00034"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
+  },
+  {
+    "identityKey": "zzz:1631",
+    "game": "zzz",
+    "name": {
+      "kind": "textRef",
+      "id": "character.zzz.1631.name"
+    },
+    "profileId": "curated:batch31:zzz:セヴェリアン",
+    "dataAsOf": "2026-11-11",
+    "updatedAt": "2026-11-11",
+    "sourceLabel": {
+      "kind": "textRef",
+      "id": "guide.legacy.metadataMaster.b00035"
+    },
+    "legacyFieldOrder": [
+      "profileId",
+      "dataAsOf",
+      "updatedAt",
+      "sourceLabel"
+    ]
   }
 ];
 export const defaults:Record<Game,GuideMetadataFields>={

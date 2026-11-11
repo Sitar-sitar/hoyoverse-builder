@@ -5,14 +5,14 @@ import { HSR_RUNTIME_PATHS } from "./characterGuideCatalog";
 import { catalogSourceIdFor } from "./characterConstellations";
 
 describe("character reference catalog", () => {
-  it("全270キャラクターをゲーム別に公開する（第30バッチで2名を追加）", () => {
+  it("全270キャラクターをゲーム別に公開する（第31バッチで2名を追加）", () => {
     const catalog = characterReferenceCatalog();
-    expect(catalog.total).toBe(270);
-    expect(catalog.reviewed).toBe(270);
+    expect(catalog.total).toBe(272);
+    expect(catalog.reviewed).toBe(272);
     expect(catalog.pending).toBe(0);
-    expect(catalog.games.hsr).toHaveLength(86);
+    expect(catalog.games.hsr).toHaveLength(87);
     expect(catalog.games.genshin).toHaveLength(123);
-    expect(catalog.games.zzz).toHaveLength(61);
+    expect(catalog.games.zzz).toHaveLength(62);
   });
 
   it.each([

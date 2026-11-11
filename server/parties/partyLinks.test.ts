@@ -102,7 +102,7 @@ describe("推奨PTの連動ゲート（Phase 2）", () => {
     const parties: Record<string, CharacterPartyEntry> = { ...CHARACTER_PARTIES,
       "hsr:爻光": { ...CHARACTER_PARTIES["hsr:爻光"], refs: [...refsFor("hsr", "爻光").slice(0, 2), { team: converted.id }] },
       "hsr:火花": { refs: [...sparkleRefs.slice(0, 2), { team: converted.id }], skipped: [{ ...skip, team: dropped[0]! }] },
-      "hsr:パール": { ...CHARACTER_PARTIES["hsr:パール"], skipped: [skip] },
+      "hsr:パール": { ...CHARACTER_PARTIES["hsr:パール"], skipped: [...(CHARACTER_PARTIES["hsr:パール"]?.skipped ?? []), skip] },
       "hsr:フォフォ": { ...CHARACTER_PARTIES["hsr:フォフォ"], skipped: [...(CHARACTER_PARTIES["hsr:フォフォ"]?.skipped ?? []), skip] },
     };
     const records: PartyLinkRecord[] = [...PARTY_LINK_RECORDS,

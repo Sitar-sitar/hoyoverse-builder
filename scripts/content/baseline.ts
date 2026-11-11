@@ -30,7 +30,7 @@ export function collectBaseline() {
     const reference = characterReferenceFor(game, name);
     if (!reference) throw new Error(`Catalog reference missing: ${game}:${name}`);
     const guide = game === "hsr" ? guideFor(name, HSR_RUNTIME_PATHS[name] ?? "", identity)
-      : game === "genshin" ? genshinGuide(name) : zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack");
+      : game === "genshin" ? genshinGuide(name) : zzzGuide(name, ZZZ_RUNTIME_PROFESSIONS[name] ?? "Attack", identity);
     return { key, game, name, reference, uidGuide: guide,
       uidConstellations: [0, 6].map(rank => constellationProfileFor(identity, rank)),
       planned: {

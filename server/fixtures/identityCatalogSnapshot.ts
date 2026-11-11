@@ -89,3 +89,9 @@ ACTIVE_CATALOG_IDENTITIES.push(...([
     "portrait": "https://upload-os-bbs.mihoyo.com/game_record/genshin/character_icon/UI_AvatarIcon_Valeriy.png"
   }
 ] satisfies typeof ACTIVE_CATALOG_IDENTITIES));
+
+// 第31バッチ。正式版ゲームデータとEnka画像配信で照合。
+ACTIVE_CATALOG_IDENTITIES.push(
+  { game: "hsr", sourceId: "1511", providerName: "星神★アッハ", portrait: "/ui/hsr/SpriteOutput/AvatarRoundIcon/Avatar/1511.png" },
+  { game: "zzz", sourceId: "1631", providerName: "セヴェリアン", portrait: "/ui/zzz/IconRole1631.png" },
+);

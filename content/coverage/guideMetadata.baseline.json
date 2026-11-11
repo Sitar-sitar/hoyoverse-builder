@@ -516,6 +516,12 @@
         "dataAsOf": "2026-09-07",
         "updatedAt": "2026-09-07",
         "sourceLabel": "Game8の更新日付き個別ビルド・星魂・PTガイドを照合"
+      },
+      "星神★アッハ": {
+        "profileId": "curated:batch31:hsr:星神★アッハ",
+        "dataAsOf": "2026-11-11",
+        "updatedAt": "2026-11-11",
+        "sourceLabel": "Game8の個別ガイドと正式版ゲームデータ"
       }
     },
     "genshin": {
@@ -1624,6 +1630,12 @@
         "dataAsOf": "2026-10-26",
         "updatedAt": "2026-10-26",
         "sourceLabel": "Game8個別ガイド本文と固定revisionの公開ゲームデータを照合"
+      },
+      "セヴェリアン": {
+        "profileId": "curated:batch31:zzz:セヴェリアン",
+        "dataAsOf": "2026-11-11",
+        "updatedAt": "2026-11-11",
+        "sourceLabel": "GameWithの個別ガイドと正式版ゲームデータ"
       }
     }
   },

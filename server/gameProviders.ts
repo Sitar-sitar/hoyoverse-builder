@@ -1,3 +1,4 @@
+import { records as batch31Guides } from "../content/guideDefinitions_batch31";
 import { BATCH29_ZZZ_CHARACTER } from "../content/characterBatch29";
 import {records as batch29GuideRecords} from "../content/guideDefinitions_batch29";
 import {createLegacyTexts as createremainingDisplaysTexts} from "./content/legacyTexts";
@@ -516,11 +517,14 @@ const ZZZ_CHARACTER_GUIDES: Record<string, GuideDefinition> = projectGuideRegist
 
 
 
+const ZZZ_BATCH31_GUIDES = projectGuideRegistry(batch31Guides, "ZZZ_BATCH31_GUIDES");
+
 export function zzzGuide(name: string, profession: string, identity?: CharacterIdentity): GuideDefinition {
   if (name === BATCH29_ZZZ_CHARACTER.name && identity && (identity.key !== `zzz:${BATCH29_ZZZ_CHARACTER.id}` || identity.variantOf || !identity.resolved)) {
     return {headline: _content.ja("guide.legacy.gameProviders.b01112"), relicSet: "", planarSet: "", mainStats: [], targets: [], targetContext: _content.ja("guide.legacy.gameProviders.b01115")};
   }
-  const characterGuide = ZZZ_CHARACTER_GUIDES[name];
+  const guideById = identity?.resolved && !identity.variantOf ? ZZZ_BATCH31_GUIDES[identity.sourceId] : undefined;
+  const characterGuide = guideById ?? ZZZ_CHARACTER_GUIDES[name];
   if (characterGuide) return withGuideMetadata("zzz", characterGuide, name);
   return withGuideMetadata("zzz", generatedZzzGuide(name, profession), name);
 }
@@ -533,7 +537,8 @@ export function normalizeZzzPayload(payload: unknown, catalog: ZzzCatalog): Norm
   const showcase = asRecord(playerInfo.ShowcaseDetail);
   const characters = asArray(showcase.AvatarList).map(asRecord).map((avatar): CharacterProfile => {
     const id = text(avatar.Id);
-    const metadata: RawRecord = { ...(id === BATCH29_ZZZ_CHARACTER.id ? BATCH29_ZZZ_CHARACTER.metadata : {}), ...asRecord(catalog.avatars[id]) };
+    const metadata: RawRecord = { ...(id === BATCH29_ZZZ_CHARACTER.id ? BATCH29_ZZZ_CHARACTER.metadata : {}),
+      ...(id === "1631" ? { ElementTypes: ["Wind"], ProfessionType: "Attack", Image: "/ui/zzz/IconRole1631.png" } : {}), ...asRecord(catalog.avatars[id]) };
     const elements = asArray(metadata.ElementTypes).map((value) => text(value)).map((key) => ZZZ_ELEMENTS[key]).filter(Boolean);
     const profession = text(metadata.ProfessionType);
     const identity = resolveCharacterIdentity("zzz", id, zzzName(catalog, metadata.Name, ""));

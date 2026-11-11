@@ -48,4 +48,28 @@ export const records: Record<string, TranslationRecord> = {
   "origin": "legacy",
   "review": "pending"
 },
+  "guide.batch31.b00084": {
+    "text": "第31バッチ：星神★アッハとセヴェリアン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "guide.batch31.b00085": {
+    "text": "{v0}の個別ガイド・推奨編成・凸を新規登録。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "guide.batch31.b00086": {
+    "text": "正式版の性能と装備・編成の根拠を照合した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "guide.batch31.b00087": {
+    "text": "公開プロフィールの現在値と戦闘中の効果を分けて表示する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  }
 };
