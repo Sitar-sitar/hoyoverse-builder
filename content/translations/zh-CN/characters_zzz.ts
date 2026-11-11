@@ -1,7 +1,7 @@
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
   "character.zzz.1631.name": {
-    "text": "瑟维利安",
+    "text": "赛维里安",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
