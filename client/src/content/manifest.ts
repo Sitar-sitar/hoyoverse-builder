@@ -5,5 +5,6 @@ export const CONTENT_MANIFEST = {
   "translationMode": "preparation",
   "readyLanguages": [
     "ja"
-  ]
+  ],
+  "glossaryGames": []
 } as const;
