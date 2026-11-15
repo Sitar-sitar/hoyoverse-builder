@@ -539,8 +539,9 @@ function enkaStatusError(status: number): TRPCError {
  * Content-Type は必須条件にしない。200 の本文が正しい JSON なら Content-Type が
  * 欠落・誤設定でも従来どおり処理する（A-04）。
  */
-export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData; ttlSeconds: number | null }> {
-  const controller = new AbortController(); const timeout = setTimeout(() => controller.abort(), 14_000);
+export async function fetchEnkaPayload(uid: string, onlyAvatarId?: string): Promise<{ data: LookupData; ttlSeconds: number | null }> {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), onlyAvatarId ? 3_000 : 14_000);
   try {
     const response = await fetch(`https://enka.network/api/hsr/uid/${encodeURIComponent(uid)}/`, { headers: { "User-Agent": "Star-Rail-Build-Advisor/1.0 (personal-use)" }, signal: controller.signal });
     if (!response.ok) throw enkaStatusError(response.status);
@@ -553,11 +554,17 @@ export async function fetchEnkaPayload(uid: string): Promise<{ data: LookupData;
       throw new TRPCError({ code: "BAD_GATEWAY", message: ENKA_UPSTREAM_DOWN_MESSAGE });
     }
 
-    const staticData = await getStaticIndex();
-    const data = normalizeEnkaPayload(payload, staticData);
-    // 200 でも公開中のキャラクターが 0 件なら「見つからない」。空の結果を返さない。
-    if (!data.characters.length) throw new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
-    return { data, ttlSeconds: num(record(payload).ttl) };
+    const root = record(payload);
+    const detail = record(root.detailInfo);
+    const avatars = array(detail.avatarDetailList);
+    // ショーケースが空なら従来通り扱う。補完対象だけが不在なら静的データを取りに行かない。
+    if (!avatars.length) throw new TRPCError({ code: "NOT_FOUND", message: ENKA_NOT_FOUND_MESSAGE });
+    const selected = onlyAvatarId ? avatars.filter(avatar => str(record(avatar).avatarId) === onlyAvatarId) : avatars;
+    const data = normalizeEnkaPayload(
+      { ...root, detailInfo: { ...detail, avatarDetailList: selected } },
+      selected.length ? await getStaticIndex() : EMPTY_STATIC_INDEX
+    );
+    return { data, ttlSeconds: num(root.ttl) };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
     // UID応答の上限超過は上流障害として扱う。ここは既にfallback内なので再fallbackしない。

@@ -35,6 +35,7 @@ type Character = {
   allStats: Array<{ name: string; display: string; icon: string | null }>;
   statsNote?: string;
   statsStatus?: "final" | "unavailable";
+  dataSource?: "MiHoMo" | "Enka";
   guide: { headline: string; relicSet: string; planarSet: string; mainStats: Array<{ slot: string; value: string }>; targetContext?: string; dataAsOf?: string; updatedAt?: string; sourceLabel?: string };
   comparisons: Comparison[];
   recommendations: PriorityRecommendation[];
@@ -100,7 +101,7 @@ export default function Home() {
   const activeRecommendations = useMemo(() => recommendationsFromComparisons(activeComparisons, language), [activeComparisons, language]);
   // HSR は取得元（MiHoMo / Enka）で算出の説明が違うため、サーバーの日本語注記ではなく言語別の文言を出す。
   const statsNote = game === "hsr"
-    ? query.data?.dataSource === "Enka"
+    ? (selected?.dataSource ?? query.data?.dataSource) === "Enka"
       ? t(selected?.statsStatus === "unavailable" ? "enkaStatsUnavailable" : "enkaFinalStatsNote")
       : t(selected?.statsStatus === "unavailable" ? "mihomoStatsUnavailable" : "mihomoFinalStatsNote")
     : selected?.statsNote;
