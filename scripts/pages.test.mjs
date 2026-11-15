@@ -15,6 +15,7 @@ import {
   LEGACY_BASE,
   NEXT_BASE,
   ROUTES,
+  missingRoutes,
 } from "./pages.mjs";
 const env = {
   HOYOVERSE_PAGES_MODE: "parallel",
@@ -200,4 +201,10 @@ test("four artifacts have every route and isolated assets; parallel 404 picks on
     if (path.dirname(directory) !== path.resolve(os.tmpdir()) || !path.basename(directory).startsWith("hb-pages-test-")) throw new Error("Unsafe test cleanup path");
     await rm(directory, { recursive: true, force: true });
   }
+});
+
+test("every client route in App.tsx is in the Pages route manifest", async () => {
+  const app = await readFile(new URL("../client/src/App.tsx", import.meta.url), "utf8");
+  assert.deepEqual(missingRoutes(app), []);
+  assert.deepEqual(missingRoutes('<Route path={"/new-page"} />'), ["new-page"]);
 });
