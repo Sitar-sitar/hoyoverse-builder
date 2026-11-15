@@ -279,6 +279,7 @@ export type CharacterProfile = {
   allStats: Array<{ name: string; display: string; icon: string | null }>;
   statsNote?: string;
   statsStatus?: "final" | "unavailable";
+  dataSource?: BuildLookupResult["dataSource"];
   guide: GuideDefinition;
   comparisons: StatComparison[];
   recommendations: PriorityRecommendation[];
@@ -621,10 +622,28 @@ const FALLBACK_TTL_MS = 4 * 60 * 1000;
 // リバースプロキシの要求上限内で Enka フォールバックを必ず試行できるよう、主取得には短い予算を割り当てる。
 const MIHOMO_PRIMARY_TIMEOUT_MS = 6_000;
 
-function ttlFromPayload(payload: unknown): number {
-  const ttlSeconds = nullableNumber(asRecord(payload).ttl);
+function lookupTtl(ttlSeconds: number | null): number {
   if (ttlSeconds === null) return FALLBACK_TTL_MS;
   return Math.max(60_000, Math.min(ttlSeconds * 1000, 10 * 60 * 1000));
+}
+
+// MiHoMo の公開応答に星神★アッハがまだ含まれない場合は、同じ UID の Enka から補う。
+const AHA_SOURCE_ID = "1511";
+
+async function supplementAha(uid: string, characters: CharacterProfile[]) {
+  if (characters.some(character => character.identity.sourceId === AHA_SOURCE_ID)) {
+    return { characters, ttl: Infinity };
+  }
+  try {
+    const { data, ttlSeconds } = await fetchEnkaPayload(uid, AHA_SOURCE_ID);
+    const aha = data.characters[0];
+    return {
+      characters: aha ? [...characters, { ...aha, dataSource: "Enka" as const }] : characters,
+      ttl: lookupTtl(ttlSeconds),
+    };
+  } catch {
+    return { characters, ttl: 0 };
+  }
 }
 
 async function requestMihomo(uid: string): Promise<BuildLookupResult> {
@@ -660,13 +679,14 @@ async function requestMihomo(uid: string): Promise<BuildLookupResult> {
     if (normalized.characters.every((character) => character.statsStatus === "unavailable")) {
       throw new TRPCError({ code: "BAD_GATEWAY", message: errorMessage("public.finalUnavailable") });
     }
-    const withSource = { ...normalized, dataSource: "MiHoMo" as const };
+    const { characters, ttl } = await supplementAha(uid, normalized.characters);
+    const withSource = { ...normalized, characters, dataSource: "MiHoMo" as const };
     const fetchedAt = new Date().toISOString();
     // 一部のキャラクターだけ最終値が欠けている結果は、再取得で回復し得るためキャッシュへ入れない。
-    if (normalized.characters.some((character) => character.statsStatus === "unavailable")) {
+    if (!ttl || characters.some((character) => character.statsStatus === "unavailable")) {
       return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: fetchedAt };
     }
-    const expiresAt = lookupCache.set(uid, withSource, ttlFromPayload(payload));
+    const expiresAt = lookupCache.set(uid, withSource, Math.min(ttl, lookupTtl(nullableNumber(asRecord(payload).ttl))));
     return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
   } catch (error) {
     if (error instanceof TRPCError) throw error;
@@ -685,7 +705,7 @@ async function requestEnka(uid: string): Promise<BuildLookupResult> {
   if (!isEnkaResultComplete(fallback.data)) {
     return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: fetchedAt };
   }
-  const expiresAt = lookupCache.set(uid, withSource, fallback.ttlSeconds === null ? FALLBACK_TTL_MS : Math.max(60_000, Math.min(fallback.ttlSeconds * 1000, 10 * 60 * 1000)));
+  const expiresAt = lookupCache.set(uid, withSource, lookupTtl(fallback.ttlSeconds));
   return { ...withSource, cached: false, fetchedAt, cacheExpiresAt: new Date(expiresAt).toISOString() };
 }
 

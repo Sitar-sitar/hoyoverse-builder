@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import type { TrpcContext } from "./_core/context";
 import { appRouter } from "./routers";
+import { resetStaticIndexForTests } from "./enkaFallback";
 import { resolveCharacterIdentity } from "./characterIdentity";
 import { teamStoreIssues, uncoveredLinks } from "./parties/linkStatus";
 
@@ -18,9 +19,48 @@ function json(value: unknown) {
   });
 }
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  resetStaticIndexForTests();
+});
 
 describe("第31バッチの図鑑とUID診断", () => {
+  it.each([true, false])("MiHoMoで欠けたアッハをEnkaから補う（Enka成功=%s）", async (enkaAvailable) => {
+    const uid = enkaAvailable ? "831000004" : "831000005";
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      if (url.includes("api.mihomo.me")) {
+        return json({ player: { uid }, characters: [{ id: "1310", name: "ホタル",
+          statistics: [{ field: "spd", name: "速度", value: 149 }] }] });
+      }
+      if (url.includes("/api/hsr/uid/")) {
+        if (!enkaAvailable) return new Response(null, { status: 503 });
+        return json({ detailInfo: { avatarDetailList: [
+          { avatarId: 1310 }, { avatarId: 1511, level: 80, rank: 1 },
+        ] } });
+      }
+      if (url.endsWith("character_promotions.json")) {
+        return json({ "1511": { values: [{ hp: { base: 100 }, atk: { base: 100 },
+          def: { base: 100 }, spd: { base: 163 } }] } });
+      }
+      if (url.endsWith("characters.json")) return json({ "1511": { name: "星神★アッハ" } });
+      if (url.endsWith(".json")) return json({ fixture: {} });
+      throw new Error(`Unexpected fixture request: ${url}`);
+    }));
+
+    const result = await caller.build.lookup({ game: "hsr", uid });
+    expect(result.dataSource).toBe("MiHoMo");
+    expect(result.characters.map(character => character.id)).toEqual(enkaAvailable ? ["1310", "1511"] : ["1310"]);
+    if (enkaAvailable) {
+      expect(result.characters[1]).toMatchObject({
+        dataSource: "Enka", level: 80, rank: 1, statsStatus: "final",
+        comparisons: [{ key: "speed", current: 163 }],
+      });
+    } else {
+      expect(result.cacheExpiresAt).toBe(result.fetchedAt);
+    }
+  });
+
   it.each(["MiHoMo", "Enka"] as const)("星神★アッハの%s経路で公開値と個別ガイドを返す", async (provider) => {
     const uid = provider === "MiHoMo" ? "831000001" : "831000002";
     vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
