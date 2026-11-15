@@ -70,6 +70,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "HoYoverse Builder",
     "zh-CN": "HoYoverse Builder"
   },
+  "ui.components_SiteHeader_glossary1.dictionary1.nav": {
+    "ja": "用語集",
+    "en": "用語集",
+    "zh-CN": "用語集"
+  },
   "ui.components_TranslationFeedbackForm_brand1.literal1": {
     "ja": "TRANSLATION QUALITY",
     "en": "TRANSLATION QUALITY",
@@ -1665,6 +1670,166 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "Updated",
     "zh-CN": "更新日"
   },
+  "ui.pages_Glossary.dictionary1.aliases": {
+    "ja": "別名",
+    "en": "別名",
+    "zh-CN": "別名"
+  },
+  "ui.pages_Glossary.dictionary1.all": {
+    "ja": "すべて",
+    "en": "すべて",
+    "zh-CN": "すべて"
+  },
+  "ui.pages_Glossary.dictionary1.backToList": {
+    "ja": "一覧へ戻る",
+    "en": "一覧へ戻る",
+    "zh-CN": "一覧へ戻る"
+  },
+  "ui.pages_Glossary.dictionary1.category": {
+    "ja": "カテゴリ",
+    "en": "カテゴリ",
+    "zh-CN": "カテゴリ"
+  },
+  "ui.pages_Glossary.dictionary1.categoryLabel": {
+    "ja": "カテゴリ",
+    "en": "カテゴリ",
+    "zh-CN": "カテゴリ"
+  },
+  "ui.pages_Glossary.dictionary1.characters": {
+    "ja": "関連キャラクター",
+    "en": "関連キャラクター",
+    "zh-CN": "関連キャラクター"
+  },
+  "ui.pages_Glossary.dictionary1.count": {
+    "ja": "{count}件",
+    "en": "{count}件",
+    "zh-CN": "{count}件"
+  },
+  "ui.pages_Glossary.dictionary1.dataAsOf": {
+    "ja": "確認日",
+    "en": "確認日",
+    "zh-CN": "確認日"
+  },
+  "ui.pages_Glossary.dictionary1.eyebrow": {
+    "ja": "用語と世界観",
+    "en": "用語と世界観",
+    "zh-CN": "用語と世界観"
+  },
+  "ui.pages_Glossary.dictionary1.failed": {
+    "ja": "用語集を読み込めませんでした。時間をおいて再度お試しください。",
+    "en": "用語集を読み込めませんでした。時間をおいて再度お試しください。",
+    "zh-CN": "用語集を読み込めませんでした。時間をおいて再度お試しください。"
+  },
+  "ui.pages_Glossary.dictionary1.gameGenshin": {
+    "ja": "原神",
+    "en": "原神",
+    "zh-CN": "原神"
+  },
+  "ui.pages_Glossary.dictionary1.gameHsr": {
+    "ja": "崩壊：スターレイル",
+    "en": "崩壊：スターレイル",
+    "zh-CN": "崩壊：スターレイル"
+  },
+  "ui.pages_Glossary.dictionary1.gameLabel": {
+    "ja": "ゲーム",
+    "en": "ゲーム",
+    "zh-CN": "ゲーム"
+  },
+  "ui.pages_Glossary.dictionary1.gameVersion": {
+    "ja": "確認バージョン",
+    "en": "確認バージョン",
+    "zh-CN": "確認バージョン"
+  },
+  "ui.pages_Glossary.dictionary1.gameZzz": {
+    "ja": "ゼンレスゾーンゼロ",
+    "en": "ゼンレスゾーンゼロ",
+    "zh-CN": "ゼンレスゾーンゼロ"
+  },
+  "ui.pages_Glossary.dictionary1.intro": {
+    "ja": "ゲーム固有の用語と世界観を引けます。説明の中の用語を選ぶと、その用語の説明へ移動します。",
+    "en": "ゲーム固有の用語と世界観を引けます。説明の中の用語を選ぶと、その用語の説明へ移動します。",
+    "zh-CN": "ゲーム固有の用語と世界観を引けます。説明の中の用語を選ぶと、その用語の説明へ移動します。"
+  },
+  "ui.pages_Glossary.dictionary1.listLabel": {
+    "ja": "用語一覧",
+    "en": "用語一覧",
+    "zh-CN": "用語一覧"
+  },
+  "ui.pages_Glossary.dictionary1.loading": {
+    "ja": "用語集を読み込んでいます。",
+    "en": "用語集を読み込んでいます。",
+    "zh-CN": "用語集を読み込んでいます。"
+  },
+  "ui.pages_Glossary.dictionary1.mentionedBy": {
+    "ja": "この用語に触れている用語",
+    "en": "この用語に触れている用語",
+    "zh-CN": "この用語に触れている用語"
+  },
+  "ui.pages_Glossary.dictionary1.noMatch": {
+    "ja": "条件に合う用語はありません。",
+    "en": "条件に合う用語はありません。",
+    "zh-CN": "条件に合う用語はありません。"
+  },
+  "ui.pages_Glossary.dictionary1.notFound": {
+    "ja": "この用語は見つかりません。一覧から選んでください。",
+    "en": "この用語は見つかりません。一覧から選んでください。",
+    "zh-CN": "この用語は見つかりません。一覧から選んでください。"
+  },
+  "ui.pages_Glossary.dictionary1.preparing": {
+    "ja": "このゲームの用語集は準備中です。",
+    "en": "このゲームの用語集は準備中です。",
+    "zh-CN": "このゲームの用語集は準備中です。"
+  },
+  "ui.pages_Glossary.dictionary1.reading": {
+    "ja": "よみ",
+    "en": "よみ",
+    "zh-CN": "よみ"
+  },
+  "ui.pages_Glossary.dictionary1.related": {
+    "ja": "関連用語",
+    "en": "関連用語",
+    "zh-CN": "関連用語"
+  },
+  "ui.pages_Glossary.dictionary1.retry": {
+    "ja": "再読み込み",
+    "en": "再読み込み",
+    "zh-CN": "再読み込み"
+  },
+  "ui.pages_Glossary.dictionary1.searchLabel": {
+    "ja": "用語を検索",
+    "en": "用語を検索",
+    "zh-CN": "用語を検索"
+  },
+  "ui.pages_Glossary.dictionary1.searchPlaceholder": {
+    "ja": "用語名・よみ・別名・要約で検索",
+    "en": "用語名・よみ・別名・要約で検索",
+    "zh-CN": "用語名・よみ・別名・要約で検索"
+  },
+  "ui.pages_Glossary.dictionary1.selectHint": {
+    "ja": "一覧から用語を選ぶと、ここに説明が表示されます。",
+    "en": "一覧から用語を選ぶと、ここに説明が表示されます。",
+    "zh-CN": "一覧から用語を選ぶと、ここに説明が表示されます。"
+  },
+  "ui.pages_Glossary.dictionary1.showBody": {
+    "ja": "本文を表示",
+    "en": "本文を表示",
+    "zh-CN": "本文を表示"
+  },
+  "ui.pages_Glossary.dictionary1.sources": {
+    "ja": "出典",
+    "en": "出典",
+    "zh-CN": "出典"
+  },
+  "ui.pages_Glossary.dictionary1.spoilerNote": {
+    "ja": "ストーリーの核心に触れる内容を含みます。",
+    "en": "ストーリーの核心に触れる内容を含みます。",
+    "zh-CN": "ストーリーの核心に触れる内容を含みます。"
+  },
+  "ui.pages_Glossary.dictionary1.title": {
+    "ja": "用語集",
+    "en": "用語集",
+    "zh-CN": "用語集"
+  },
   "ui.pages_GuideHistory_brand1.literal1": {
     "ja": "BUILD GUIDE ARCHIVE",
     "en": "BUILD GUIDE ARCHIVE",
@@ -2136,6 +2301,9 @@ export const UI_VARIABLES: Record<string, Record<string, "string" | "number">> =
     "v0": "string"
   },
   "ui.pages_CharacterCatalog.dictionary1.catalogStatus": {
+    "count": "number"
+  },
+  "ui.pages_Glossary.dictionary1.count": {
     "count": "number"
   },
   "ui.pages_Home_displayflow1.display2": {

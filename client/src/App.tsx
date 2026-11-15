@@ -17,6 +17,7 @@ import { DisplaySettingsProvider, useDisplaySettings, useDisplayVariant } from "
 const Home = lazy(() => import("./pages/Home"));
 const CharacterCatalog = lazy(() => import("./pages/CharacterCatalog"));
 const GuideHistory = lazy(() => import("./pages/GuideHistory"));
+const Glossary = lazy(() => import("./pages/Glossary"));
 const TranslationFeedback = lazy(() => import("./pages/TranslationFeedback"));
 const AdminHome = lazy(() => import("./pages/AdminHome"));
 const FeedbackAdmin = lazy(() => import("./pages/FeedbackAdmin"));
@@ -32,7 +33,7 @@ function AdminLogoutGate() {
 }
 
 /** テーマを切り替えられる公開画面（案 E-2）。管理画面と 404 はライト固定。 */
-export const THEME_SWITCHABLE_PATHS = ["/", "/characters", "/updates", "/feedback"] as const;
+export const THEME_SWITCHABLE_PATHS = ["/", "/characters", "/glossary", "/updates", "/feedback"] as const;
 
 /**
  * 公開4画面かつ colorTheme = switchable のときだけ、利用者の好みのテーマを有効にする（設計 §4.4 E-2、DR-03）。
@@ -71,6 +72,7 @@ function Router() {
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/characters"} component={CharacterCatalog} />
+        <Route path={"/glossary"} component={Glossary} />
         <Route path={"/updates"} component={GuideHistory} />
         <Route path={"/feedback"} component={TranslationFeedback} />
         <Route path={"/admin"} component={AdminHome} />
