@@ -184,8 +184,10 @@ export function glossaryWarnings(game: GlossaryGame, entries: readonly GlossaryE
   return warnings;
 }
 
+// 濁音・半濁音・長音を五十音順に並べるため、コードポイント順ではなく日本語の照合順を使う。
+const japaneseCollator = new Intl.Collator("ja");
 const byReading = (a: GlossaryEntry, b: GlossaryEntry) =>
-  a.reading < b.reading ? -1 : a.reading > b.reading ? 1 : a.id < b.id ? -1 : a.id > b.id ? 1 : 0;
+  japaneseCollator.compare(a.reading, b.reading) || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
 /** 公開 DTO。検査済みの入力を前提にする。 */
 export function buildGlossaryDTO(game: GlossaryGame, entries: readonly GlossaryEntry[], characters: ReadonlyMap<string, GlossaryCharacter>, contentRevision: string): GlossaryDTO {

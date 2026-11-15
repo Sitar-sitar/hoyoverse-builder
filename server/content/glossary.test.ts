@@ -135,6 +135,14 @@ describe("公開 DTO と逆引き", () => {
     expect(dto.categories).toEqual([{ id: "battle", label: "戦闘" }, { id: "world", label: "世界観" }]);
     expect(dto.redirects).toEqual({ alfa: "alpha" });
   });
+  it("よみは濁音・長音を含めて日本語の五十音順に並べる（コードポイント順にしない）", () => {
+    const ordered = buildGlossaryDTO("hsr", [
+      base("kokuu", { name: "甲", reading: "こくう" }),
+      base("gousei", { name: "乙", reading: "ごうせい" }),
+      base("kaado", { name: "丙", reading: "かーど" }),
+    ], characters, "rev");
+    expect(ordered.entries.map(item => item.reading)).toEqual(["かーど", "ごうせい", "こくう"]);
+  });
   it("related を片側に書けば両方に出る", () => {
     expect(entry("alpha").related).toEqual([{ id: "beta", name: "ベータ" }]);
     expect(entry("beta").related).toEqual([{ id: "alpha", name: "アルファ" }]);

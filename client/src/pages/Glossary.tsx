@@ -124,6 +124,9 @@ export default function Glossary() {
   }, []);
 
   useEffect(() => setRevealed(false), [selectedId, game]);
+  // ゲームが変わったら（ボタン・「戻る／進む」のどちらでも）カテゴリ絞り込みを解除する。
+  // 前のゲームにしか無いカテゴリが残ると、一覧が空になるため。
+  useEffect(() => setCategory("all"), [game]);
 
   const selected = selectedId ? byId.get(selectedId) : undefined;
   useEffect(() => {
@@ -142,7 +145,6 @@ export default function Glossary() {
     if (next === game) return;
     setGame(next);
     setSelectedId("");
-    setCategory("all");
     writeUrl(next, "", "push");
   };
 

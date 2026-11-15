@@ -22,10 +22,15 @@ const dto: GlossaryDTO = {
   ],
   redirects: { "old-alpha": "alpha" },
 };
+// 原神は HSR に無いカテゴリ（地名）だけを持つ。
+const genshinDto: GlossaryDTO = {
+  ...dto, game: "genshin", categories: [{ id: "place", label: "地名" }], redirects: {},
+  entries: [{ ...dto.entries[0]!, id: "delta", category: "place", name: "テスト用語丁", reading: "てすとてい", aliases: [], related: [], characters: [] }],
+};
 
-vi.mock("@/content/manifest", () => ({ CONTENT_MANIFEST: { schemaVersion: 1, contentRevision: "rev", translationMode: "preparation", readyLanguages: ["ja"], glossaryGames: ["hsr"] } }));
+vi.mock("@/content/manifest", () => ({ CONTENT_MANIFEST: { schemaVersion: 1, contentRevision: "rev", translationMode: "preparation", readyLanguages: ["ja"], glossaryGames: ["hsr", "genshin"] } }));
 vi.mock("@/lib/trpc", () => ({
-  trpc: { build: { glossary: { useQuery: ({ game }: { game: string }) => ({ isLoading: false, isError: false, data: game === "hsr" ? dto : undefined, refetch: () => undefined }) } } },
+  trpc: { build: { glossary: { useQuery: ({ game }: { game: string }) => ({ isLoading: false, isError: false, data: game === "hsr" ? dto : game === "genshin" ? genshinDto : undefined, refetch: () => undefined }) } } },
 }));
 
 import Glossary from "./Glossary";
@@ -117,6 +122,19 @@ describe("用語集の画面", () => {
     renderAt("?game=zzz");
     expect(screen.getByTestId("glossary-preparing").textContent).toBe("このゲームの用語集は準備中です。");
     const games = within(screen.getByRole("group", { name: "ゲーム" })).getAllByRole("button");
-    expect(games.map((button) => button.textContent)).toEqual(["崩壊：スターレイル"]);
+    expect(games.map((button) => button.textContent)).toEqual(["崩壊：スターレイル", "原神"]);
+  });
+
+  it("「戻る」でゲームが戻ったときは、前のゲームで選んだカテゴリを解除する", async () => {
+    renderAt("?game=hsr");
+    fireEvent.click(within(screen.getByRole("group", { name: "ゲーム" })).getByRole("button", { name: "原神" }));
+    fireEvent.click(screen.getByRole("button", { name: "地名" }));
+    expect(within(screen.getByTestId("glossary-list")).getAllByRole("link")).toHaveLength(1);
+    await act(async () => {
+      window.history.back();
+      await new Promise((resolve) => setTimeout(resolve, 30));
+    });
+    expect(window.location.search).toBe("?game=hsr");
+    expect(within(screen.getByTestId("glossary-list")).getAllByRole("link")).toHaveLength(2);
   });
 });
