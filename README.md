@@ -18,6 +18,7 @@
 | `pnpm test` | テスト（Vitest） |
 | `pnpm content:check` | 日本語正本・UI文言gateの構造検査 |
 | `pnpm content:backlog --format json\|md [--baseline <file>]` | 情報不足・外部名称境界の作業一覧（読み取り専用） |
+| `pnpm glossary:sync` / `pnpm glossary:report` | 用語集の検査・生成物の同期／警告と件数の表示（手順は[用語集の更新手順](content/glossary/README.md)） |
 | `pnpm build:api` | APIビルド |
 
 [環境変数例](.env.api.example)は本番APIの雛形です。productionではDATABASE_URLにqueryを付けず、DATABASE_SSL_CA_FILEが必須です（不備はHTTP受付前に起動を止めます）。資格情報はNorthflankの秘密設定で管理し、Gitへ保存しません。
