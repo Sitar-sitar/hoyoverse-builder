@@ -49,6 +49,7 @@ describe("用語集の画面", () => {
     renderAt("?game=hsr");
     const nav = within(screen.getByTestId("site-header")).getByRole("navigation", { name: "サイト内の移動" });
     expect(within(nav).getByRole("link", { name: "用語集" }).getAttribute("aria-current")).toBe("page");
+    expect(screen.getByTestId("glossary-editing-notice").textContent).toBe("この用語集は編集中です。収録している用語はまだ一部で、順次追加します。");
     const list = screen.getByTestId("glossary-list");
     expect(within(list).getAllByRole("link").map((link) => link.getAttribute("href"))).toEqual(["/glossary?game=hsr&term=alpha", "/glossary?game=hsr&term=beta"]);
     expect(screen.getByText("2件")).toBeTruthy();

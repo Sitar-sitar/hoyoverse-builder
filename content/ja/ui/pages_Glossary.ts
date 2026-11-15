@@ -289,5 +289,14 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "ui.pages_Glossary.dictionary1.editingNotice",
+    "ja": "この用語集は編集中です。収録している用語はまだ一部で、順次追加します。",
+    "context": "pages_Glossary UI dictionary field editingNotice",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   }
 ];

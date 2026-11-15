@@ -1710,6 +1710,11 @@ export const UI_TEXT: Record<string, {ja: string; en: string; "zh-CN": string}> 
     "en": "確認日",
     "zh-CN": "確認日"
   },
+  "ui.pages_Glossary.dictionary1.editingNotice": {
+    "ja": "この用語集は編集中です。収録している用語はまだ一部で、順次追加します。",
+    "en": "この用語集は編集中です。収録している用語はまだ一部で、順次追加します。",
+    "zh-CN": "この用語集は編集中です。収録している用語はまだ一部で、順次追加します。"
+  },
   "ui.pages_Glossary.dictionary1.eyebrow": {
     "ja": "用語と世界観",
     "en": "用語と世界観",

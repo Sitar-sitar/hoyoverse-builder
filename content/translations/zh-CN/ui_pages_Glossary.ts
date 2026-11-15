@@ -191,5 +191,11 @@ export const records: Record<string, TranslationRecord> = {
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
+  },
+  "ui.pages_Glossary.dictionary1.editingNotice": {
+    "text": "この用語集は編集中です。収録している用語はまだ一部で、順次追加します。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
   }
 };

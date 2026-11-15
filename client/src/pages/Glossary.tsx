@@ -25,6 +25,7 @@ const copyText = uiDictionary({
   eyebrow: "ui.pages_Glossary.dictionary1.eyebrow",
   title: "ui.pages_Glossary.dictionary1.title",
   intro: "ui.pages_Glossary.dictionary1.intro",
+  editingNotice: "ui.pages_Glossary.dictionary1.editingNotice",
   gameLabel: "ui.pages_Glossary.dictionary1.gameLabel",
   gameHsr: "ui.pages_Glossary.dictionary1.gameHsr",
   gameGenshin: "ui.pages_Glossary.dictionary1.gameGenshin",
@@ -214,6 +215,7 @@ export default function Glossary() {
           <p className="detail-mono text-[10px] text-amber-800">{copy.eyebrow}</p>
           <h1 className="display-serif mt-3 text-5xl font-semibold tracking-[-.045em] sm:text-6xl">{copy.title}</h1>
           <p className="mt-5 max-w-2xl font-serif text-base leading-7 text-stone-600">{copy.intro}</p>
+          <p role="note" className="mt-4 inline-block border border-amber-700/60 bg-amber-50 px-3 py-2 text-xs leading-5 text-amber-900" data-testid="glossary-editing-notice">{copy.editingNotice}</p>
         </section>
 
         {AVAILABLE_GAMES.length > 0 && (
