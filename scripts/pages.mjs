@@ -8,6 +8,7 @@ export const NEXT_BASE = `${LEGACY_BASE}app/`;
 export const ROUTES = [
   "",
   "characters",
+  "glossary",
   "updates",
   "feedback",
   "admin",
@@ -17,6 +18,12 @@ export const ROUTES = [
 ];
 const origin = "https://sitar-sitar.github.io";
 const root = fileURLToPath(new URL("../", import.meta.url));
+
+export function missingRoutes(appSource) {
+  return [...appSource.matchAll(/path=\{"([^"}]+)"\}/g)]
+    .map(match => match[1].slice(1))
+    .filter(route => route !== "404" && !ROUTES.includes(route));
+}
 
 export function apiUrl(value) {
   if (!value || value !== value.trim())
@@ -152,10 +159,7 @@ export async function assembleArtifact(directory, mode, legacy, next) {
 async function main() {
   const { mode, plans } = buildPlan(process.env);
   const app = await readFile(path.join(root, "client/src/App.tsx"), "utf8");
-  const declared = [...app.matchAll(/path=\{"([^"}]+)"\}/g)]
-    .map(match => match[1].slice(1))
-    .filter(route => route !== "404");
-  if (declared.some(route => !ROUTES.includes(route)))
+  if (missingRoutes(app).length)
     throw new Error("A client route is missing from the Pages route manifest");
   if (process.argv.includes("--verify")) {
     for (const plan of plans) await verifyApi(plan, process.env.GITHUB_SHA);
