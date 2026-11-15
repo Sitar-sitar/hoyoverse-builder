@@ -396,7 +396,7 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
 
   for (const contribution of [...relicContributions, ...relicSets.list, ...traces.list, ...rankContributions]) {
     const classified = classify(staticData.properties, contribution);
-    if (classified.kind === "base") continue; // Base* は光円錐 _flat.props からの基礎値上書きとして既に消費済み
+    if (classified.kind === "base") continue; // 基礎値は別に合成し、加算・倍率の集計から除く
     if (classified.kind === "ratio") { totals[classified.component].ratio += classified.value; continue; }
     if (classified.kind === "flat") { totals[classified.component].flat += classified.value; continue; }
     if (classified.kind === "stat") { statTotals[classified.key] = (statTotals[classified.key] ?? 0) + classified.value; continue; }
@@ -411,7 +411,11 @@ function computeFinalStats(avatar: RawRecord, staticData: StaticIndex, relicCont
   const baseHP = charBaseline.hp + lcBaseline.hp;
   const baseAttack = charBaseline.attack + lcBaseline.attack;
   const baseDefense = charBaseline.defense + lcBaseline.defense;
-  const baseSpeed = charBaseline.speed + lcBaseline.speedBonus;
+  // Enka の光円錐 props に基礎速度がある場合は、同じ重畳効果を加算済みとして扱う。
+  const coneBaseSpeed = coneFlatContributions.some(item => item.type === "BaseSpeed")
+    ? lcBaseline.speedBonus
+    : rankContributions.filter(item => item.type === "BaseSpeed").reduce((sum, item) => sum + item.value, 0);
+  const baseSpeed = charBaseline.speed + coneBaseSpeed;
 
   const map: Partial<Record<StatKey, number>> = {
     hp: baseHP * (1 + totals.hp.ratio) + totals.hp.flat,
@@ -462,7 +466,7 @@ function comparisonForKey(target: TargetStatDefinition, finalMap: Partial<Record
   return {
     ...target,
     current,
-    currentDisplay: current === null ? _providerComparison.ja("guide.providerComparison.enkaFallback.b00002") : _providerComparison.ja("guide.providerComparison.enkaFallback.b00003", {v0:String(current.toFixed(target.unit === "%" ? 1 : 0)),v1:String(target.unit)}),
+    currentDisplay: current === null ? _providerComparison.ja("guide.providerComparison.enkaFallback.b00002") : _providerComparison.ja("guide.providerComparison.enkaFallback.b00003", {v0:target.key === "speed" ? String(Math.trunc(current)) : current.toFixed(target.unit === "%" ? 1 : 0),v1:String(target.unit)}),
     achieved: {
       "厳選": current === null ? null : meetsTarget(current, target.targets["厳選"]),
       "目標": current === null ? null : meetsTarget(current, target.targets["目標"]),
