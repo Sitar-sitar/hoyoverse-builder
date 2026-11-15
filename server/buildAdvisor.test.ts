@@ -789,6 +789,44 @@ describe("Enka経路の遺物サブ・セット効果（Phase D）", () => {
     expect(statOf(fourPiece, "速度")).toBe("98.0");
   });
 
+  it.each([
+    { rank: 1, flatSpeed: null, expected: 176.652, display: "176" },
+    { rank: 3, flatSpeed: null, expected: 181.132, display: "181" },
+    { rank: 3, flatSpeed: 16, expected: 181.132, display: "181" },
+  ])("光円錐の基礎速度を倍率前に反映する（重畳$rank、props=$flatSpeed）", ({ rank, flatSpeed, expected, display }) => {
+    const stats = STATIC.characterPromotions["1310"].values[0];
+    const index = {
+      ...STATIC,
+      characterPromotions: { "1511": { values: [{ ...stats, spd: { base: 94 } }] } },
+      lightConeRanks: { "23065": { properties: [12, 14, 16, 18, 20].map(value => [{ type: "BaseSpeed", value }]) } },
+      relicSets: {
+        ...STATIC.relicSets,
+        "133": { properties: [[{ type: "SpeedAddedRatio", value: 0.06 }], []] },
+        "329": { properties: [[{ type: "SpeedAddedRatio", value: 0.06 }]] },
+      },
+    };
+    const props = [
+      { type: "BaseHP", value: 952.56 },
+      { type: "BaseAttack", value: 582.12 },
+      { type: "BaseDefence", value: 529.2 },
+    ];
+    if (flatSpeed !== null) props.push({ type: "BaseSpeed", value: flatSpeed });
+    const data = normalizeEnkaPayload({
+      detailInfo: { avatarDetailList: [{
+        avatarId: 1511, level: 80, promotion: 0,
+        equipment: { tid: 23065, rank, _flat: { props } },
+        relicList: [
+          relic("133", 1, [{ type: "SpeedDelta", value: 57.932 }]), relic("133", 2, []),
+          relic("329", 5, []), relic("329", 6, []),
+        ],
+      }] },
+    }, index);
+    const speed = data.characters[0]?.comparisons.find(item => item.key === "speed");
+    expect(speed?.current).toBeCloseTo(expected, 5);
+    expect(speed?.currentDisplay).toBe(`算出 ${display}`);
+    expect(speed?.achieved["厳選"]).toBe(true);
+  });
+
   it("条件付き効果しか持たないセット（properties が空）は乗らない（E2）", () => {
     const data = normalizeEnkaPayload(payloadWith([
       relic("110", 1, [{ type: "HPDelta", value: 1 }]), relic("110", 2, [{ type: "HPDelta", value: 1 }]),
