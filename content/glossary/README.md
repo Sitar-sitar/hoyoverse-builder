@@ -94,7 +94,34 @@ pnpm test
 2. `pnpm glossary:report` … 警告（リンク付け忘れ候補・孤立した用語・確認日が古い用語）を確認し、必要なら直して 1 に戻る。警告は失敗扱いにならない。
 3. `pnpm check` と `pnpm test` を通す。生成物も一緒にコミットする。
 
-## 5. 書き方の規則
+### pnpm が使えない環境で実行するとき
+
+`pnpm` が PATH に無い端末では、リポジトリ直下で次のように `node` から直接実行する（中身は同じ）。
+
+| pnpm のコマンド | 代わりに実行するコマンド |
+| --- | --- |
+| `pnpm glossary:sync` | `node --import tsx scripts/content/glossary.ts sync` |
+| `pnpm glossary:report` | `node --import tsx scripts/content/glossary.ts report` |
+| `pnpm content:check` | `node --import tsx scripts/content/commands.ts check` |
+| `pnpm check` | `node node_modules/typescript/bin/tsc --noEmit` |
+| `pnpm test` | `node node_modules/vitest/vitest.mjs run` |
+
+`pnpm test` 相当でワーカーの起動タイムアウトが出る端末では、末尾に `--maxWorkers=4` を付ける。
+
+## 5. 本番に出す
+
+用語集のデータは、main へマージすると GitHub Pages の自動公開に乗って本番へ出る。用語データだけの変更でも次の順で進める。
+
+1. 作業ブランチを切ってコミットする（`content/glossary/*.ts` と生成物を一緒に入れる。生成物が無いと CI の `content:check` が「生成物が入力と一致しません」で失敗する）。
+2. push して main 向けの PR を作り、CI（`validate`・CodeQL）が通るのを待つ。
+3. PR を main へマージする。マージで「Deploy HoYoverse Builder to GitHub Pages」が動くので、成功を確認する（GitHub の Actions 画面、または `gh run list --branch main --workflow deploy-pages.yml --limit 1`）。
+4. 本番で表示を確かめる: `https://sitar-sitar.github.io/hoyoverse-builder/app/glossary?game=<hsr|genshin|zzz>&term=<用語ID>` を開き、本文・リンク・関連キャラクター・出典が出ること。そのゲームの最初の 1 件を入れたときは、ヘッダーの「用語集」とゲーム切替にそのゲームが出ることも確かめる。
+
+- 公開が失敗しても、それまでの本番はそのまま動き続ける。失敗した run のログを見て直し、もう一度マージする。
+- 新しい画面（ルート）を足したときは `scripts/pages.mjs` の `ROUTES` にも追加する（用語データの追加だけなら不要）。
+- 用語集の更新は更新履歴（`/updates`）に載せない（§6）。
+
+## 6. 書き方の規則
 
 - 本文は**自分の言葉で要約**する。ゲーム内テキスト・攻略サイトの文章を写さない。
 - 出典が確認できない内容は書かない。推測・考察は書かない（公式に明かされていない点は「明かされていない」と書く）。
@@ -108,7 +135,7 @@ pnpm test
   - `sources` には公式を先に、補助の Wiki を後に書く。
 - 用語集の更新は更新履歴（`/updates`）に載せない（初版の方針、設計書 §10 U-5）。
 
-## 6. エラーが出たとき
+## 7. エラーが出たとき
 
 エラーは `ゲーム / 用語ID: 項目: 内容。直し方` の形で表示される。`pnpm glossary:sync` と `pnpm content:check`（`pnpm build` の先頭で必ず走る）の両方で同じ検査が行われる。
 
