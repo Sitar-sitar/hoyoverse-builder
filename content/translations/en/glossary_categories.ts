@@ -1,0 +1,10 @@
+// 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
+import type { TranslationRecord } from "../../../shared/content/types";
+export const records: Record<string, TranslationRecord> = {
+  "term.category.faction": {
+    "text": "組織・勢力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  }
+};

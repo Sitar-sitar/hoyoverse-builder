@@ -17,6 +17,9 @@ import { systemRouter } from "./_core/systemRouter";
 import { clientIpFromRequest, rateLimitKeyForUid } from "./_core/rateLimit";
 import { adminProcedure, createProcedureRateLimiter, enforceRateLimit, publicProcedure, router } from "./_core/trpc";
 import { logFailure } from "./_core/safeLog";
+import { contentManifest } from "./content/repository";
+import { GLOSSARY_INPUTS, buildGlossaryDTO, glossaryCharacterIndex, type GlossaryGame } from "./content/glossary";
+import type { GlossaryDTO } from "@shared/content/glossary";
 
 // procedure 別のレート制限（設計: docs/修正設計書_公開API保護と外部API耐障害性_2026-09-19.md Phase 43(C)）。
 // キャッシュヒットは区別しない。middleware は lookupGameBuild の前に走るため事前に判別できず、
@@ -69,7 +72,18 @@ const displayPublishInput = z.object({
   });
 });
 
-const startOfJst = (date: string) => new Date(`${date}T00:00:00.000+09:00`);
+// 用語集はデプロイ単位で不変なので、ゲームごとに 1 回だけ組み立てる。
+const glossaryCache = new Map<GlossaryGame, GlossaryDTO>();
+function publicGlossary(game: GlossaryGame): GlossaryDTO {
+  let dto = glossaryCache.get(game);
+  if (!dto) {
+    dto = buildGlossaryDTO(game, GLOSSARY_INPUTS[game], glossaryCharacterIndex(), contentManifest().contentRevision);
+    glossaryCache.set(game, dto);
+  }
+  return dto;
+}
+
+const startOfJst =(date: string) => new Date(`${date}T00:00:00.000+09:00`);
 const endOfJst = (date: string) => new Date(`${date}T23:59:59.999+09:00`);
 
 export const appRouter = router({
@@ -99,6 +113,10 @@ export const appRouter = router({
         }
         return withPresentation(result);
       }),
+    // 用語集（設計: docs/実装設計書_ゲーム内用語集の基盤_2026-11-15.md §4.7.1）。入力検証・回数制限は reference と同じ扱い。
+    glossary: publicProcedure
+      .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]) }))
+      .query(({ input }) => publicGlossary(input.game)),
     lookup: publicProcedure
       .input(z.object({ game: z.enum(["hsr", "genshin", "zzz"]), uid: z.string().trim().regex(/^\d{8,10}$/, errorMessage("public.uidInvalid")) }).superRefine(({ game, uid }, ctx) => {
         if (game !== "zzz" && !/^\d{9,10}$/.test(uid)) {

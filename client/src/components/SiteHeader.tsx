@@ -1,4 +1,5 @@
 import { uiText } from "@/content/ui";
+import { CONTENT_MANIFEST } from "@/content/manifest";
 import { useLanguage, type TranslationKey } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -11,7 +12,10 @@ import { Link } from "wouter";
  * 色は外枠が定義する `--game-accent` を使い、無ければ共通の amber にする。
  */
 
-export type SitePage = "lookup" | "catalog" | "updates" | "feedback";
+export type SitePage = "lookup" | "catalog" | "glossary" | "updates" | "feedback";
+
+/** 用語が 1 件以上あるゲームがあるときだけ「用語集」を出す（用語集設計 §4.7.3）。 */
+const GLOSSARY_ENABLED = (CONTENT_MANIFEST.glossaryGames as readonly string[]).length > 0;
 export type SiteGame = "hsr" | "genshin" | "zzz";
 
 const GAME_MARKS: Record<SiteGame, { mark: string; name: TranslationKey }> = {
@@ -33,13 +37,15 @@ export default function SiteHeader({ activePage, game, children }: SiteHeaderPro
   const menuId = useId();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const feedbackSource = activePage === "updates" ? "/updates" : "/";
-  const items: Array<{ page: SitePage | "admin"; href: string; label: string }> = [
+  const allItems: Array<{ page: SitePage | "admin"; href: string; label: string }> = [
     { page: "lookup", href: "/", label: t("siteNavLookup") },
     { page: "catalog", href: "/characters", label: t("siteNavCatalog") },
+    { page: "glossary", href: "/glossary", label: uiText("ui.components_SiteHeader_glossary1.dictionary1.nav") },
     { page: "updates", href: "/updates", label: t("updates") },
     { page: "feedback", href: `/feedback?source=${feedbackSource}`, label: t("translationFeedback") },
     { page: "admin", href: "/admin", label: t("adminAccess") },
   ];
+  const items = allItems.filter((item) => GLOSSARY_ENABLED || item.page !== "glossary");
 
   function closeWithEscape(event: KeyboardEvent) {
     if (event.key !== "Escape" || !open) return;
