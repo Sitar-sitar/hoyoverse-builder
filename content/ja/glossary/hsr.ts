@@ -51,7 +51,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.energy-regeneration-rate.body",
-    "ja": "[[energy|EP]]を回復する際の量に関係する。[[relics|遺物]]や[[light-cone|光円錐]]などで調整できる。\n\n効果の説明に固定量の回復とある場合などは個別の記述を確認しよう。",
+    "ja": "[[energy|EP]]を回復する際の量に関係する。[[relics|遺物]]や[[light-cone|光円錐]]などで調整できる。\n\n一部の味方による[[energy|EP]]回復は、この効率の影響を受けない。",
     "context": "glossary hsr term energy-regeneration-rate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
