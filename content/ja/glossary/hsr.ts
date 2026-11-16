@@ -2,6 +2,67 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.hsr.energy.name",
+    "ja": "EP",
+    "context": "glossary hsr term energy: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.energy.summary",
+    "ja": "必殺技を発動するためにキャラクターごとに蓄えるエネルギー。",
+    "context": "glossary hsr term energy: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.energy.body",
+    "ja": "攻撃や被弾などで蓄積し、必要量がたまると必殺技を発動できる。\n\n味方全体で共有する[[skill-point|SP]]とは別の資源。回復量には[[energy-regeneration-rate]]が関わる。",
+    "context": "glossary hsr term energy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-regeneration-rate]]",
+      "[[skill-point|"
+    ]
+  },
+  {
+    "id": "term.hsr.energy-regeneration-rate.name",
+    "ja": "EP回復効率",
+    "context": "glossary hsr term energy-regeneration-rate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.energy-regeneration-rate.summary",
+    "ja": "獲得するEPの回復量に関わるステータス。",
+    "context": "glossary hsr term energy-regeneration-rate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.energy-regeneration-rate.body",
+    "ja": "[[energy|EP]]を回復する際の量に関係する。[[relics|遺物]]や[[light-cone|光円錐]]などで調整できる。\n\n一部の味方による[[energy|EP]]回復は、この効率の影響を受けない。",
+    "context": "glossary hsr term energy-regeneration-rate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy|",
+      "[[light-cone|",
+      "[[relics|"
+    ]
+  },
+  {
     "id": "term.hsr.relics.name",
     "ja": "遺物",
     "context": "glossary hsr term relics: Japanese official term name",
@@ -88,6 +149,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.crit-dmg.name",
+    "ja": "会心ダメージ",
+    "context": "glossary hsr term crit-dmg: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crit-dmg.summary",
+    "ja": "会心が発生した際のダメージに関わるステータス。",
+    "context": "glossary hsr term crit-dmg: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crit-dmg.body",
+    "ja": "会心が発生したときのダメージに関係する。発生確率に関わる[[crit-rate|会心率]]とは別の値。\n\n[[relics|遺物]]や味方の能力で調整できる。",
+    "context": "glossary hsr term crit-dmg: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate|",
+      "[[relics|"
+    ]
+  },
+  {
+    "id": "term.hsr.crit-rate.name",
+    "ja": "会心率",
+    "context": "glossary hsr term crit-rate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crit-rate.summary",
+    "ja": "会心が発生する確率に関わるステータス。",
+    "context": "glossary hsr term crit-rate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crit-rate.body",
+    "ja": "会心が発生する確率に関係する。発生時のダメージを決める[[crit-dmg|会心ダメージ]]とは別の値。\n\n攻撃やダメージの種類によって会心の扱いが異なるため、スキルの説明も確認しよう。",
+    "context": "glossary hsr term crit-rate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-dmg|"
+    ]
+  },
+  {
     "id": "term.hsr.traces.name",
     "ja": "軌跡",
     "context": "glossary hsr term traces: Japanese official term name",
@@ -113,6 +233,96 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.break-effect.name",
+    "ja": "撃破特効",
+    "context": "glossary hsr term break-effect: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.break-effect.summary",
+    "ja": "弱点撃破に関係するダメージや効果を強めるステータス。",
+    "context": "glossary hsr term break-effect: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.break-effect.body",
+    "ja": "[[weakness-break]]で発生するダメージや、属性に応じた撃破効果に関係する。\n\n[[weakness-break-efficiency]]は[[toughness]]の削りやすさに関係する別の効果。[[super-break-damage]]にも関係する。",
+    "context": "glossary hsr term break-effect: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[super-break-damage]]",
+      "[[toughness]]",
+      "[[weakness-break-efficiency]]",
+      "[[weakness-break]]"
+    ]
+  },
+  {
+    "id": "term.hsr.effect-res.name",
+    "ja": "効果抵抗",
+    "context": "glossary hsr term effect-res: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.effect-res.summary",
+    "ja": "受ける効果に抵抗する確率に関わるステータス。",
+    "context": "glossary hsr term effect-res: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.effect-res.body",
+    "ja": "デバフなどを受ける際の抵抗に関係する。付与側の[[effect-hit-rate|効果命中]]とは異なる。\n\n抵抗できるかは効果ごとに異なり、固定確率など個別の条件にも注意が必要。",
+    "context": "glossary hsr term effect-res: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[effect-hit-rate|"
+    ]
+  },
+  {
+    "id": "term.hsr.effect-hit-rate.name",
+    "ja": "効果命中",
+    "context": "glossary hsr term effect-hit-rate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.effect-hit-rate.summary",
+    "ja": "敵への効果付与の成功率に関わるステータス。",
+    "context": "glossary hsr term effect-hit-rate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.effect-hit-rate.body",
+    "ja": "敵にデバフなどを付与する際の成功率に関係する。効果の基礎確率や対象の[[effect-res|効果抵抗]]なども結果に影響する。\n\nすべての効果に適用されるわけではないため、各能力の条件を確認しよう。",
+    "context": "glossary hsr term effect-hit-rate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[effect-res|"
+    ]
   },
   {
     "id": "term.hsr.action-order.name",
@@ -144,6 +354,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.action-advance-and-delay.name",
+    "ja": "行動順短縮・遅延",
+    "context": "glossary hsr term action-advance-and-delay: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.action-advance-and-delay.summary",
+    "ja": "対象の次の行動を早めたり遅らせたりする効果。",
+    "context": "glossary hsr term action-advance-and-delay: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.action-advance-and-delay.body",
+    "ja": "[[action-order|行動順]]を直接変える効果。短縮は次の行動を早め、遅延は遅らせる。\n\n[[speed|速度]]の変更とは別の効果で、実際の順番はほかの対象や効果によっても変わる。",
+    "context": "glossary hsr term action-advance-and-delay: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[action-order|",
+      "[[speed|"
+    ]
+  },
+  {
+    "id": "term.hsr.damage-over-time.name",
+    "ja": "持続ダメージ",
+    "context": "glossary hsr term damage-over-time: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.damage-over-time.summary",
+    "ja": "状態の継続中に所定のタイミングで発生するダメージ。",
+    "context": "glossary hsr term damage-over-time: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.damage-over-time.body",
+    "ja": "燃焼、感電、裂創、風化などの状態によって発生するダメージ。[[weakness-break|弱点撃破]]によって付与されるものもある。\n\n発生のタイミングや継続期間は効果の説明で確認できる。",
+    "context": "glossary hsr term damage-over-time: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[weakness-break|"
+    ]
+  },
+  {
     "id": "term.hsr.weakness-break.name",
     "ja": "弱点撃破",
     "context": "glossary hsr term weakness-break: Japanese official term name",
@@ -170,6 +439,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[toughness]]"
+    ]
+  },
+  {
+    "id": "term.hsr.weakness-break-efficiency.name",
+    "ja": "弱点撃破効率",
+    "context": "glossary hsr term weakness-break-efficiency: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.weakness-break-efficiency.summary",
+    "ja": "敵の靭性を削る効率に関わる効果。",
+    "context": "glossary hsr term weakness-break-efficiency: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.weakness-break-efficiency.body",
+    "ja": "値が上がると、対象となる攻撃で削れる[[toughness]]が増え、[[weakness-break]]を狙いやすくなる。\n\n[[break-effect]]は撃破時のダメージなどに関係する別のステータス。",
+    "context": "glossary hsr term weakness-break-efficiency: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[break-effect]]",
+      "[[toughness]]",
+      "[[weakness-break]]"
     ]
   },
   {
@@ -316,6 +616,63 @@ export const sources: SourceText[] = [
       "[[action-order]]",
       "[[relics]]"
     ]
+  },
+  {
+    "id": "term.hsr.super-break-damage.name",
+    "ja": "超撃破ダメージ",
+    "context": "glossary hsr term super-break-damage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.super-break-damage.summary",
+    "ja": "スキルの効果によって削靭値などから発生するダメージ。",
+    "context": "glossary hsr term super-break-damage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.super-break-damage.body",
+    "ja": "対応する能力がある場合に発生するダメージで、[[break-effect]]などが関係する。通常は[[weakness-break]]状態の敵への攻撃が条件となる能力がある。\n\nダリアの結界のように、撃破前の敵にも超撃破ダメージを与えられる能力があるため、発動条件は各スキルの説明を確認しよう。",
+    "context": "glossary hsr term super-break-damage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[break-effect]]",
+      "[[weakness-break]]"
+    ]
+  },
+  {
+    "id": "term.hsr.follow-up-attack.name",
+    "ja": "追加攻撃",
+    "context": "glossary hsr term follow-up-attack: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.follow-up-attack.summary",
+    "ja": "能力に記された条件を満たすと発動する攻撃。",
+    "context": "glossary hsr term follow-up-attack: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.follow-up-attack.body",
+    "ja": "キャラクターや装備の能力に定められた条件を満たした際に発動する攻撃。自分の通常の行動以外のタイミングでも発動するものがある。\n\n不死途は味方による特定の敵への攻撃をきっかけに追加攻撃を行う。",
+    "context": "glossary hsr term follow-up-attack: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.genius-society.name",
