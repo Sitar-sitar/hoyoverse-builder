@@ -1,6 +1,42 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.hsr.energy.name": {
+    "text": "EP",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.energy.summary": {
+    "text": "必殺技を発動するためにキャラクターごとに蓄えるエネルギー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.energy.body": {
+    "text": "攻撃や被弾などで蓄積し、必要量がたまると必殺技を発動できる。\n\n味方全体で共有する[[skill-point|SP]]とは別の資源。回復量には[[energy-regeneration-rate]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.energy-regeneration-rate.name": {
+    "text": "EP回復効率",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.energy-regeneration-rate.summary": {
+    "text": "獲得するEPの回復量に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.energy-regeneration-rate.body": {
+    "text": "[[energy|EP]]を回復する際の量に関係する。[[relics|遺物]]や[[light-cone|光円錐]]などで調整できる。\n\n効果の説明に固定量の回復とある場合などは個別の記述を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.relics.name": {
     "text": "遺物",
     "sourceHash": null,
@@ -55,6 +91,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.crit-dmg.name": {
+    "text": "会心ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crit-dmg.summary": {
+    "text": "会心が発生した際のダメージに関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crit-dmg.body": {
+    "text": "会心が発生したときのダメージに関係する。発生確率に関わる[[crit-rate|会心率]]とは別の値。\n\n[[relics|遺物]]や味方の能力で調整できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crit-rate.name": {
+    "text": "会心率",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crit-rate.summary": {
+    "text": "会心が発生する確率に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crit-rate.body": {
+    "text": "会心が発生する確率に関係する。発生時のダメージを決める[[crit-dmg|会心ダメージ]]とは別の値。\n\n攻撃やダメージの種類によって会心の扱いが異なるため、スキルの説明も確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.traces.name": {
     "text": "軌跡",
     "sourceHash": null,
@@ -69,6 +141,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.traces.body": {
     "text": "素材を使ってキャラクターの能力を強化したり、追加能力やステータスを解放したりする育成要素。\n\n育成ガイドでは軌跡の育成進度を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.break-effect.name": {
+    "text": "撃破特効",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.break-effect.summary": {
+    "text": "弱点撃破に関係するダメージや効果を強めるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.break-effect.body": {
+    "text": "[[weakness-break]]で発生するダメージや、属性に応じた撃破効果に関係する。\n\n[[weakness-break-efficiency]]は靭性の削りやすさに関係する別の効果。[[super-break-damage]]にも関係する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-res.name": {
+    "text": "効果抵抗",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-res.summary": {
+    "text": "受ける効果に抵抗する確率に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-res.body": {
+    "text": "デバフなどを受ける際の抵抗に関係する。付与側の[[effect-hit-rate|効果命中]]とは異なる。\n\n抵抗できるかは効果ごとに異なり、固定確率など個別の条件にも注意が必要。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-hit-rate.name": {
+    "text": "効果命中",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-hit-rate.summary": {
+    "text": "敵への効果付与の成功率に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effect-hit-rate.body": {
+    "text": "敵にデバフなどを付与する際の成功率に関係する。効果の基礎確率や対象の[[effect-res|効果抵抗]]なども結果に影響する。\n\nすべての効果に適用されるわけではないため、各能力の条件を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -91,6 +217,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.action-advance-and-delay.name": {
+    "text": "行動順短縮・遅延",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.action-advance-and-delay.summary": {
+    "text": "対象の次の行動を早めたり遅らせたりする効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.action-advance-and-delay.body": {
+    "text": "[[action-order|行動順]]を直接変える効果。短縮は次の行動を早め、遅延は遅らせる。\n\n[[speed|速度]]の変更とは別の効果で、実際の順番はほかの対象や効果によっても変わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-over-time.name": {
+    "text": "持続ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-over-time.summary": {
+    "text": "状態の継続中に所定のタイミングで発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-over-time.body": {
+    "text": "燃焼、感電、裂創、風化などの状態によって発生するダメージ。[[weakness-break|弱点撃破]]によって付与されるものもある。\n\n発生のタイミングや継続期間は効果の説明で確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.weakness-break.name": {
     "text": "弱点撃破",
     "sourceHash": null,
@@ -105,6 +267,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.weakness-break.body": {
     "text": "敵の[[toughness]]を0にすると発生する。撃破時にはダメージを与え、属性に応じた効果が発生する。\n\n例えば物理属性では裂創、氷属性では凍結を付与する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.weakness-break-efficiency.name": {
+    "text": "弱点撃破効率",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.weakness-break-efficiency.summary": {
+    "text": "敵の靭性を削る効率に関わる効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.weakness-break-efficiency.body": {
+    "text": "値が上がると、対象となる攻撃で削れる[[toughness]]が増え、[[weakness-break]]を狙いやすくなる。\n\n[[break-effect]]は撃破時のダメージなどに関係する別のステータス。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -195,6 +375,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.speed.body": {
     "text": "速度は[[action-order]]に影響し、値が高いほど一般に次の行動が早く回ってくる。[[relics]]などで調整できる。\n\n行動順を直接変えるスキルもあるため、速度だけで順番が決まるわけではない。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.super-break-damage.name": {
+    "text": "超撃破ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.super-break-damage.summary": {
+    "text": "スキルの効果によって削靭値などから発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.super-break-damage.body": {
+    "text": "対応する能力がある場合に発生するダメージで、[[break-effect]]などが関係する。通常は[[weakness-break]]状態の敵への攻撃が条件となる能力がある。\n\nダリアの結界のように、撃破前の敵にも超撃破ダメージを与えられる能力があるため、発動条件は各スキルの説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.follow-up-attack.name": {
+    "text": "追加攻撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.follow-up-attack.summary": {
+    "text": "能力に記された条件を満たすと発動する攻撃。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.follow-up-attack.body": {
+    "text": "キャラクターや装備の能力に定められた条件を満たした際に発動する攻撃。自分の通常の行動以外のタイミングでも発動するものがある。\n\n不死途は味方による特定の敵への攻撃をきっかけに追加攻撃を行う。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
