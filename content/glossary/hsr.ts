@@ -1661,7 +1661,7 @@ export const entries: GlossaryEntry[] = [
     reading: "じゃくてんふよ",
     summary: "能力によって敵に属性の弱点を加えること。",
     body: "一部の能力は敵に新たな[[enemy-weakness|弱点属性]]を付与できる。[[toughness|靭性]]を削る際に関わるが、付与する属性や持続条件は能力によって異なる。",
-    sources: [{ label: "公式 崩壊：スターレイル 更新情報", url: "https://prtimes.jp/main/html/rd/p/000000092.000096124.html" }],
+    sources: [{ label: "公式 崩壊：スターレイル 更新情報", url: "https://prtimes.jp/main/html/rd/p/000000203.000096124.html" }],
     gameVersion: "4.7",
     dataAsOf: "2026-11-18",
   },
