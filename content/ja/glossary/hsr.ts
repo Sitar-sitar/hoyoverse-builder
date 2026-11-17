@@ -2,6 +2,36 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.hsr.aha-moment.name",
+    "ja": "アッハタイム",
+    "context": "glossary hsr term aha-moment: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aha-moment.summary",
+    "ja": "愉悦の運命に関わる戦闘中の仕組み。",
+    "context": "glossary hsr term aha-moment: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aha-moment.body",
+    "ja": "[[path|愉悦の運命]]に関わる戦闘中の仕組み。キャラクターの能力によって発動や効果が変わり、終了後に「爆笑の褒美」を得る例もある。[[punchline|爆笑ネタ]]との関係は各能力を確認しよう。",
+    "context": "glossary hsr term aha-moment: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[path|",
+      "[[punchline|"
+    ]
+  },
+  {
     "id": "term.hsr.energy.name",
     "ja": "EP",
     "context": "glossary hsr term energy: Japanese official term name",
@@ -21,14 +51,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.energy.body",
-    "ja": "攻撃や被弾などで蓄積し、必要量がたまると必殺技を発動できる。\n\n味方全体で共有する[[skill-point|SP]]とは別の資源。回復量には[[energy-regeneration-rate]]が関わる。",
+    "ja": "攻撃や被弾などで蓄積し、必要量がたまると[[ultimate|必殺技]]を発動できる。\n\n味方全体で共有する[[skill-point|SP]]とは別の資源。回復量には[[energy-regeneration-rate]]が関わる。",
     "context": "glossary hsr term energy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[energy-regeneration-rate]]",
-      "[[skill-point|"
+      "[[skill-point|",
+      "[[ultimate|"
     ]
   },
   {
@@ -82,13 +113,106 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.relics.body",
-    "ja": "キャラクターに装備するアイテム。メインステータスやサブステータスを持ち、装備の組み合わせによる効果もある。\n\n[[planar-ornaments|次元界オーナメント]]も遺物の一種。育成ガイドで進度を、スマート装備画面で装備プランやステータスを確認できる。",
+    "ja": "キャラクターに装備するアイテム。[[relic-main-stat|メインステータス]]や[[relic-sub-stat|サブステータス]]を持ち、装備の組み合わせによる効果もある。\n\n[[planar-ornaments|次元界オーナメント]]も遺物の一種。育成ガイドで進度を、スマート装備画面で装備プランやステータスを確認できる。",
     "context": "glossary hsr term relics: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[planar-ornaments|"
+      "[[planar-ornaments|",
+      "[[relic-main-stat|",
+      "[[relic-sub-stat|"
+    ]
+  },
+  {
+    "id": "term.hsr.relic-synthesis.name",
+    "ja": "遺物合成",
+    "context": "glossary hsr term relic-synthesis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-synthesis.summary",
+    "ja": "素材を使って遺物を作る仕組み。",
+    "context": "glossary hsr term relic-synthesis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-synthesis.body",
+    "ja": "素材を使い、指定したセットや部位の[[relics|遺物]]を作る仕組み。[[self-modeling-resin|自塑樹脂]]を使うと、メイン・サブステータスを指定できる。必要数や利用条件はゲーム内で確認しよう。",
+    "context": "glossary hsr term relic-synthesis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics|",
+      "[[self-modeling-resin|"
+    ]
+  },
+  {
+    "id": "term.hsr.herta-space-station.name",
+    "ja": "宇宙ステーション「ヘルタ」",
+    "context": "glossary hsr term herta-space-station: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.herta-space-station.summary",
+    "ja": "物語の序盤に訪れる宇宙ステーション。",
+    "context": "glossary hsr term herta-space-station: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.herta-space-station.body",
+    "ja": "開拓者が物語の序盤に訪れる宇宙ステーション。[[genius-society|天才クラブ]]のヘルタに関わり、[[astral-express|星穹列車]]の旅の出発点のひとつとなる。",
+    "context": "glossary hsr term herta-space-station: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[astral-express|",
+      "[[genius-society|"
+    ]
+  },
+  {
+    "id": "term.hsr.cosmic-fragment.name",
+    "ja": "宇宙の欠片",
+    "context": "glossary hsr term cosmic-fragment: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cosmic-fragment.summary",
+    "ja": "模擬宇宙などの挑戦中に使う資源。",
+    "context": "glossary hsr term cosmic-fragment: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cosmic-fragment.body",
+    "ja": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得・使用する資源。[[blessing|祝福]]に関わる選択などに使う場面がある。利用できる用途は挑戦中に確認しよう。",
+    "context": "glossary hsr term cosmic-fragment: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[blessing|",
+      "[[divergent-universe]]",
+      "[[simulated-universe]]"
     ]
   },
   {
@@ -141,13 +265,44 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.skill-point.body",
-    "ja": "味方で共有するポイント。通常攻撃で回復し、戦闘スキルを使うと消費するのが基本。\n\nスキルや特殊な行動には例外もあるので、各キャラクターの説明も確認しよう。[[action-order]]に合わせてやりくりすると戦闘スキルを使いやすい。",
+    "ja": "味方で共有するポイント。[[basic-attack|通常攻撃]]で回復し、[[skill|戦闘スキル]]を使うと消費するのが基本。\n\nスキルや特殊な行動には例外もあるので、各キャラクターの説明も確認しよう。[[action-order]]に合わせてやりくりすると戦闘スキルを使いやすい。",
     "context": "glossary hsr term skill-point: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[action-order]]"
+      "[[action-order]]",
+      "[[basic-attack|",
+      "[[skill|"
+    ]
+  },
+  {
+    "id": "term.hsr.amphoreus.name",
+    "ja": "オンパロス",
+    "context": "glossary hsr term amphoreus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.amphoreus.summary",
+    "ja": "星穹列車が旅する謎に包まれた世界。",
+    "context": "glossary hsr term amphoreus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.amphoreus.body",
+    "ja": "[[astral-express|星穹列車]]が開拓の旅で訪れる世界。公式紹介では外部から観測できない謎の天体として語られ、住民は「タイタン」と呼ばれる神を信仰している。",
+    "context": "glossary hsr term amphoreus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[astral-express|"
     ]
   },
   {
@@ -170,12 +325,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.divergent-universe.body",
-    "ja": "[[simulated-universe]]に関わる新プロジェクト。スクリューガムが主導し、祝福の組み合わせによって「方程式」を解放する仕組みなどがある。\n\n挑戦の条件や報酬はゲーム内で確認できる。",
+    "ja": "[[simulated-universe]]に関わる新プロジェクト。スクリューガムが主導し、[[blessing|祝福]]の組み合わせによって「[[equation|方程式]]」を解放する仕組みなどがある。\n\n挑戦の条件や報酬はゲーム内で確認できる。",
     "context": "glossary hsr term divergent-universe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[blessing|",
+      "[[equation|",
       "[[simulated-universe]]"
     ]
   },
@@ -239,6 +396,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.trailblaze-power.name",
+    "ja": "開拓力",
+    "context": "glossary hsr term trailblaze-power: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.trailblaze-power.summary",
+    "ja": "素材を獲得する際などに使う資源。",
+    "context": "glossary hsr term trailblaze-power: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.trailblaze-power.body",
+    "ja": "時間とともに回復する資源。[[calyx|疑似花萼]]などの報酬獲得に使う。[[reserved-trailblaze-power|予備開拓力]]は別に蓄積される。回復や上限の詳細はゲーム内で確認できる。",
+    "context": "glossary hsr term trailblaze-power: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[calyx|",
+      "[[reserved-trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.serendipity-eidolon.name",
+    "ja": "奇縁星魂",
+    "context": "glossary hsr term serendipity-eidolon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.serendipity-eidolon.summary",
+    "ja": "対象キャラクターの追加スキルを解放する育成要素。",
+    "context": "glossary hsr term serendipity-eidolon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.serendipity-eidolon.body",
+    "ja": "対応キャラクターを所持し、そのキャラクターに対応する奇縁星魂を解放すると、追加スキルを獲得できる。通常の[[eidolon|星魂]]とは別の育成要素として、対象や解放条件をゲーム内で確認しよう。",
+    "context": "glossary hsr term serendipity-eidolon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[eidolon|"
+    ]
+  },
+  {
     "id": "term.hsr.memosprite.name",
     "ja": "記憶の精霊",
     "context": "glossary hsr term memosprite: Japanese official term name",
@@ -268,6 +484,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.calyx.name",
+    "ja": "疑似花萼",
+    "context": "glossary hsr term calyx: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.calyx.summary",
+    "ja": "育成素材などを獲得できるステージ。",
+    "context": "glossary hsr term calyx: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.calyx.body",
+    "ja": "[[trailblaze-power|開拓力]]を使って報酬を獲得するステージ。「金」と「赤」があり、選ぶ蕾によって得られる素材が異なる。赤の一部では[[traces|軌跡]]素材を獲得できる。",
+    "context": "glossary hsr term calyx: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[traces|",
+      "[[trailblaze-power|"
+    ]
+  },
+  {
     "id": "term.hsr.traces.name",
     "ja": "軌跡",
     "context": "glossary hsr term traces: Japanese official term name",
@@ -293,6 +539,94 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.curio.name",
+    "ja": "奇物",
+    "context": "glossary hsr term curio: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.curio.summary",
+    "ja": "模擬宇宙などの挑戦中に獲得する特殊なアイテム。",
+    "context": "glossary hsr term curio: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.curio.body",
+    "ja": "[[simulated-universe]]や[[divergent-universe]]の挑戦に影響する特殊なアイテム。効果はそれぞれ異なり、有利なものだけでなく扱いに注意が必要なものもある。",
+    "context": "glossary hsr term curio: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[divergent-universe]]",
+      "[[simulated-universe]]"
+    ]
+  },
+  {
+    "id": "term.hsr.buff.name",
+    "ja": "強化状態",
+    "context": "glossary hsr term buff: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.buff.summary",
+    "ja": "ステータス上昇など、対象に有利に働く効果。",
+    "context": "glossary hsr term buff: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.buff.body",
+    "ja": "攻撃力の上昇など、対象に有利に働く状態や効果。効果の内容や継続時間は能力によって異なる。[[debuff|デバフ]]とは区別して確認しよう。",
+    "context": "glossary hsr term buff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[debuff|"
+    ]
+  },
+  {
+    "id": "term.hsr.stagnant-shadow.name",
+    "ja": "凝結虚影",
+    "context": "glossary hsr term stagnant-shadow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stagnant-shadow.summary",
+    "ja": "キャラクターの昇格素材を獲得できるステージ。",
+    "context": "glossary hsr term stagnant-shadow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stagnant-shadow.body",
+    "ja": "敵に挑み、[[trailblaze-power|開拓力]]を使ってキャラクターの昇格に必要な素材を獲得できるステージ。必要な素材に対応した場所を選ぼう。",
+    "context": "glossary hsr term stagnant-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[trailblaze-power|"
+    ]
   },
   {
     "id": "term.hsr.pure-fiction.name",
@@ -344,12 +678,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.break-effect.body",
-    "ja": "[[weakness-break]]で発生するダメージや、属性に応じた撃破効果に関係する。\n\n[[weakness-break-efficiency]]は[[toughness]]の削りやすさに関係する別の効果。[[super-break-damage]]にも関係する。",
+    "ja": "[[weakness-break]]で発生するダメージや、[[element|属性]]に応じた撃破効果に関係する。\n\n[[weakness-break-efficiency]]は[[toughness]]の削りやすさに関係する別の効果。[[super-break-damage]]にも関係する。",
     "context": "glossary hsr term break-effect: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[element|",
       "[[super-break-damage]]",
       "[[toughness]]",
       "[[weakness-break-efficiency]]",
@@ -376,12 +711,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.effect-res.body",
-    "ja": "デバフなどを受ける際の抵抗に関係する。付与側の[[effect-hit-rate|効果命中]]とは異なる。\n\n抵抗できるかは効果ごとに異なり、固定確率など個別の条件にも注意が必要。",
+    "ja": "[[debuff|デバフ]]などを受ける際の抵抗に関係する。付与側の[[effect-hit-rate|効果命中]]とは異なる。\n\n抵抗できるかは効果ごとに異なり、固定確率など個別の条件にも注意が必要。",
     "context": "glossary hsr term effect-res: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[debuff|",
       "[[effect-hit-rate|"
     ]
   },
@@ -405,12 +741,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.effect-hit-rate.body",
-    "ja": "敵にデバフなどを付与する際の成功率に関係する。効果の基礎確率や対象の[[effect-res|効果抵抗]]なども結果に影響する。\n\nすべての効果に適用されるわけではないため、各能力の条件を確認しよう。",
+    "ja": "敵に[[debuff|デバフ]]などを付与する際の成功率に関係する。効果の基礎確率や対象の[[effect-res|効果抵抗]]なども結果に影響する。\n\nすべての効果に適用されるわけではないため、各能力の条件を確認しよう。",
     "context": "glossary hsr term effect-hit-rate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[debuff|",
       "[[effect-res|"
     ]
   },
@@ -434,13 +771,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.action-order.body",
-    "ja": "戦闘画面のアクションバーで味方と敵の行動予定を確認できる。[[speed]]のほか、行動順を早める・遅らせる効果によって変化する。\n\n必殺技など、通常の行動順とは異なるタイミングで使える行動もある。",
+    "ja": "戦闘画面のアクションバーで味方と敵の行動予定を確認できる。[[speed]]のほか、行動順を早める・遅らせる効果によって変化する。\n\n[[ultimate|必殺技]]など、通常の行動順とは異なるタイミングで使える行動もある。",
     "context": "glossary hsr term action-order: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[speed]]"
+      "[[speed]]",
+      "[[ultimate|"
     ]
   },
   {
@@ -474,6 +812,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.crowd-control.name",
+    "ja": "行動不能状態",
+    "context": "glossary hsr term crowd-control: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crowd-control.summary",
+    "ja": "対象の行動を制限する状態。",
+    "context": "glossary hsr term crowd-control: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.crowd-control.body",
+    "ja": "凍結など、対象の行動を制限する状態。解除の条件や持続時間は状態ごとに異なる。[[debuff|デバフ]]への抵抗や解除が関わる場合もあるため、能力の説明を確認しよう。",
+    "context": "glossary hsr term crowd-control: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[debuff|"
+    ]
+  },
+  {
     "id": "term.hsr.memory-of-chaos.name",
     "ja": "混沌の記憶",
     "context": "glossary hsr term memory-of-chaos: Japanese official term name",
@@ -504,6 +871,66 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.toughness-reduction.name",
+    "ja": "削靭値",
+    "context": "glossary hsr term toughness-reduction: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.toughness-reduction.summary",
+    "ja": "攻撃などによって敵の靭性を削る量。",
+    "context": "glossary hsr term toughness-reduction: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.toughness-reduction.body",
+    "ja": "攻撃などが敵の[[toughness|靭性]]を削る量。攻撃や能力によって異なり、[[weakness-break-efficiency|弱点撃破効率]]などの影響を受ける。個々の条件は能力説明を確認しよう。",
+    "context": "glossary hsr term toughness-reduction: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[toughness|",
+      "[[weakness-break-efficiency|"
+    ]
+  },
+  {
+    "id": "term.hsr.relic-sub-stat.name",
+    "ja": "サブステータス",
+    "context": "glossary hsr term relic-sub-stat: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-sub-stat.summary",
+    "ja": "遺物に付く追加のステータス。",
+    "context": "glossary hsr term relic-sub-stat: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-sub-stat.body",
+    "ja": "[[relics|遺物]]に付く追加のステータス。強化によって新たに付いたり、既存の値が上がったりする。[[relic-main-stat|メインステータス]]とは別に表示される。",
+    "context": "glossary hsr term relic-sub-stat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relic-main-stat|",
+      "[[relics|"
+    ]
+  },
+  {
     "id": "term.hsr.planar-ornaments.name",
     "ja": "次元界オーナメント",
     "context": "glossary hsr term planar-ornaments: Japanese official term name",
@@ -523,12 +950,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.planar-ornaments.body",
-    "ja": "キャラクターに装備する[[relics|遺物]]の一種。次元界オーブと連結縄の2部位があり、組み合わせによりセット効果を得られる。\n\nゲーム内ではオーナメントを獲得できるコンテンツやイベントが用意されている。",
+    "ja": "キャラクターに装備する[[relics|遺物]]の一種。次元界オーブと連結縄の2部位があり、組み合わせにより[[relic-set-effect|セット効果]]を得られる。\n\nゲーム内ではオーナメントを獲得できるコンテンツやイベントが用意されている。",
     "context": "glossary hsr term planar-ornaments: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[relic-set-effect|",
       "[[relics|"
     ]
   },
@@ -562,6 +990,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.self-modeling-resin.name",
+    "ja": "自塑樹脂",
+    "context": "glossary hsr term self-modeling-resin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.self-modeling-resin.summary",
+    "ja": "遺物合成でメイン・サブステータスの指定に使うアイテム。",
+    "context": "glossary hsr term self-modeling-resin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.self-modeling-resin.body",
+    "ja": "[[relic-synthesis|遺物合成]]で使うアイテム。作成する遺物の[[relic-main-stat|メインステータス]]や[[relic-sub-stat|サブステータス]]を指定できる。指定できる候補や必要数は合成画面で確認しよう。",
+    "context": "glossary hsr term self-modeling-resin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relic-main-stat|",
+      "[[relic-sub-stat|",
+      "[[relic-synthesis|"
+    ]
+  },
+  {
     "id": "term.hsr.weakness-break.name",
     "ja": "弱点撃破",
     "context": "glossary hsr term weakness-break: Japanese official term name",
@@ -581,12 +1040,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.weakness-break.body",
-    "ja": "敵の[[toughness]]を0にすると発生する。撃破時にはダメージを与え、属性に応じた効果が発生する。\n\n例えば物理属性では裂創、氷属性では凍結を付与する。",
+    "ja": "敵の[[toughness]]を0にすると発生する。撃破時にはダメージを与え、[[element|属性]]に応じた効果が発生する。\n\n例えば物理属性では裂創、氷属性では凍結を付与する。",
     "context": "glossary hsr term weakness-break: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[element|",
       "[[toughness]]"
     ]
   },
@@ -622,6 +1082,98 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.enemy-weakness.name",
+    "ja": "弱点属性",
+    "context": "glossary hsr term enemy-weakness: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.enemy-weakness.summary",
+    "ja": "敵の靭性を削る際に関わる属性。",
+    "context": "glossary hsr term enemy-weakness: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.enemy-weakness.body",
+    "ja": "敵ごとに設定された[[element|属性]]。基本的に対応する属性の攻撃で[[toughness|靭性]]を削り、0にすると[[weakness-break|弱点撃破]]が発生する。能力によっては属性が一致しなくても靭性を削れる。",
+    "context": "glossary hsr term enemy-weakness: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|",
+      "[[toughness|",
+      "[[weakness-break|"
+    ]
+  },
+  {
+    "id": "term.hsr.blessing.name",
+    "ja": "祝福",
+    "context": "glossary hsr term blessing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.blessing.summary",
+    "ja": "模擬宇宙などの挑戦中に獲得する効果。",
+    "context": "glossary hsr term blessing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.blessing.body",
+    "ja": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "context": "glossary hsr term blessing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[divergent-universe]]",
+      "[[equation|",
+      "[[simulated-universe]]"
+    ]
+  },
+  {
+    "id": "term.hsr.cavern-of-corrosion.name",
+    "ja": "侵蝕トンネル",
+    "context": "glossary hsr term cavern-of-corrosion: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cavern-of-corrosion.summary",
+    "ja": "トンネル遺物を獲得できるステージ。",
+    "context": "glossary hsr term cavern-of-corrosion: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cavern-of-corrosion.body",
+    "ja": "敵に挑み、[[trailblaze-power|開拓力]]を使ってトンネル[[relics|遺物]]を獲得するステージ。場所によって獲得できる遺物のセットが異なる。",
+    "context": "glossary hsr term cavern-of-corrosion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics|",
+      "[[trailblaze-power|"
+    ]
+  },
+  {
     "id": "term.hsr.toughness.name",
     "ja": "靭性",
     "context": "glossary hsr term toughness: Japanese official term name",
@@ -641,13 +1193,45 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.toughness.body",
-    "ja": "敵のHPとは別に表示されるゲージ。弱点属性の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
+    "ja": "敵のHPとは別に表示されるゲージ。[[enemy-weakness|弱点属性]]の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
     "context": "glossary hsr term toughness: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[enemy-weakness|",
       "[[weakness-break]]"
+    ]
+  },
+  {
+    "id": "term.hsr.wishful-resin.name",
+    "ja": "遂願樹脂",
+    "context": "glossary hsr term wishful-resin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wishful-resin.summary",
+    "ja": "かつて遺物合成でサブステータスの指定に使われていたアイテム。",
+    "context": "glossary hsr term wishful-resin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wishful-resin.body",
+    "ja": "かつて[[relic-synthesis|遺物合成]]時の[[relic-sub-stat|サブステータス]]指定に使われたアイテム。Ver.3.5で[[self-modeling-resin|自塑樹脂]]へ統合され、所持分も自動で変換された。現在の合成には自塑樹脂を使う。",
+    "context": "glossary hsr term wishful-resin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relic-sub-stat|",
+      "[[relic-synthesis|",
+      "[[self-modeling-resin|"
     ]
   },
   {
@@ -829,6 +1413,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.relic-set-effect.name",
+    "ja": "セット効果",
+    "context": "glossary hsr term relic-set-effect: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-set-effect.summary",
+    "ja": "同じセットの遺物を組み合わせたときに得られる効果。",
+    "context": "glossary hsr term relic-set-effect: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-set-effect.body",
+    "ja": "同じセットの[[relics|遺物]]を所定の数だけ装備したときに発動する効果。トンネル遺物と[[planar-ornaments|次元界オーナメント]]では必要な装備数や効果をそれぞれ確認しよう。",
+    "context": "glossary hsr term relic-set-effect: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[relics|"
+    ]
+  },
+  {
     "id": "term.hsr.xianzhou-alliance.name",
     "ja": "仙舟同盟",
     "context": "glossary hsr term xianzhou-alliance: Japanese official term name",
@@ -859,6 +1473,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.skill.name",
+    "ja": "戦闘スキル",
+    "context": "glossary hsr term skill: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skill.summary",
+    "ja": "キャラクターが戦闘中に使う固有の能力。",
+    "context": "glossary hsr term skill: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skill.body",
+    "ja": "キャラクターが戦闘中に使う能力。基本的には味方で共有する[[skill-point|SP]]を消費する。攻撃、味方の強化、回復などの効果はキャラクターごとに異なる。",
+    "context": "glossary hsr term skill: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[skill-point|"
+    ]
+  },
+  {
+    "id": "term.hsr.element.name",
+    "ja": "属性",
+    "context": "glossary hsr term element: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.element.summary",
+    "ja": "キャラクターや攻撃などに設定される分類。",
+    "context": "glossary hsr term element: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.element.body",
+    "ja": "物理・炎・氷・雷・風・量子・虚数の7種類がある。攻撃の属性と敵の[[enemy-weakness|弱点属性]]が合うと、通常は[[toughness|靭性]]を削れる。",
+    "context": "glossary hsr term element: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemy-weakness|",
+      "[[toughness|"
+    ]
+  },
+  {
     "id": "term.hsr.speed.name",
     "ja": "速度",
     "context": "glossary hsr term speed: Japanese official term name",
@@ -886,6 +1559,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[action-order]]",
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.healing.name",
+    "ja": "治癒",
+    "context": "glossary hsr term healing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.healing.summary",
+    "ja": "対象のHPを回復する効果。",
+    "context": "glossary hsr term healing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.healing.body",
+    "ja": "対象のHPを回復する効果。回復の対象や量、発動条件はキャラクターの能力などによって異なる。[[shield|バリア]]は受けるダメージを防ぐ別の効果。",
+    "context": "glossary hsr term healing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[shield|"
     ]
   },
   {
@@ -938,12 +1640,73 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.follow-up-attack.body",
-    "ja": "キャラクターや装備の能力に定められた条件を満たした際に発動する攻撃。自分の通常の行動以外のタイミングでも発動するものがある。\n\n不死途は味方による特定の敵への攻撃をきっかけに追加攻撃を行う。",
+    "ja": "キャラクターや装備の能力に定められた条件を満たした際に発動する攻撃。自分の通常の行動以外のタイミングでも発動するものがある。\n\n不死途は[[talent|天賦]]によって、味方による特定の敵への攻撃をきっかけに追加攻撃を行う。",
     "context": "glossary hsr term follow-up-attack: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
+    "protectedTokens": [
+      "[[talent|"
+    ]
+  },
+  {
+    "id": "term.hsr.basic-attack.name",
+    "ja": "通常攻撃",
+    "context": "glossary hsr term basic-attack: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.basic-attack.summary",
+    "ja": "戦闘中に使う基本的な攻撃。",
+    "context": "glossary hsr term basic-attack: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.basic-attack.body",
+    "ja": "戦闘中に使用する基本的な攻撃。通常は[[skill-point|SP]]を回復する。強化された通常攻撃など、効果や扱いが異なる場合は各能力の説明を確認しよう。",
+    "context": "glossary hsr term basic-attack: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[skill-point|"
+    ]
+  },
+  {
+    "id": "term.hsr.debuff.name",
+    "ja": "デバフ",
+    "context": "glossary hsr term debuff: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.debuff.summary",
+    "ja": "対象の能力を下げるなど、不利に働く効果。",
+    "context": "glossary hsr term debuff: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.debuff.body",
+    "ja": "能力の低下など、対象に不利に働く効果。付与には[[effect-hit-rate|効果命中]]や[[effect-res|効果抵抗]]が関係するものがあるが、能力によって条件は異なる。",
+    "context": "glossary hsr term debuff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[effect-hit-rate|",
+      "[[effect-res|"
+    ]
   },
   {
     "id": "term.hsr.genius-society.name",
@@ -976,6 +1739,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.talent.name",
+    "ja": "天賦",
+    "context": "glossary hsr term talent: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.talent.summary",
+    "ja": "キャラクター固有の、条件に応じて働く能力。",
+    "context": "glossary hsr term talent: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.talent.body",
+    "ja": "キャラクターが持つ固有の能力。発動条件と効果はそれぞれ異なり、条件を満たすと[[follow-up-attack|追加攻撃]]を行うものもある。[[traces|軌跡]]画面で能力の詳細を確認できる。戦闘前に使う能力には[[technique|秘技]]がある。",
+    "context": "glossary hsr term talent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[follow-up-attack|",
+      "[[technique|",
+      "[[traces|"
+    ]
+  },
+  {
     "id": "term.hsr.nameless.name",
     "ja": "ナナシビト",
     "context": "glossary hsr term nameless: Japanese official term name",
@@ -1005,6 +1799,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.punchline.name",
+    "ja": "爆笑ネタ",
+    "context": "glossary hsr term punchline: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.punchline.summary",
+    "ja": "愉悦の運命に関わる戦闘中の資源。",
+    "context": "glossary hsr term punchline: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.punchline.body",
+    "ja": "[[path|愉悦の運命]]に関わる能力などで獲得する資源。キャラクターによって獲得や利用の方法が異なり、[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "context": "glossary hsr term punchline: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aha-moment|",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.shield.name",
+    "ja": "バリア",
+    "context": "glossary hsr term shield: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shield.summary",
+    "ja": "受けるダメージを防ぐ効果。",
+    "context": "glossary hsr term shield: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shield.body",
+    "ja": "対象に付与され、受けるダメージを防ぐ効果。耐久量や持続時間、付与できる対象は能力によって異なる。[[healing|治癒]]によるHP回復とは異なる。",
+    "context": "glossary hsr term shield: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[healing|"
+    ]
+  },
+  {
     "id": "term.hsr.light-cone.name",
     "ja": "光円錐",
     "context": "glossary hsr term light-cone: Japanese official term name",
@@ -1031,6 +1884,122 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[path]]"
+    ]
+  },
+  {
+    "id": "term.hsr.technique.name",
+    "ja": "秘技",
+    "context": "glossary hsr term technique: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.technique.summary",
+    "ja": "戦闘に入る前に使うキャラクター固有の能力。",
+    "context": "glossary hsr term technique: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.technique.body",
+    "ja": "フィールド上で戦闘前に使用できる能力。戦闘開始時に効果を発揮するものなどがあり、効果や条件はキャラクターごとに異なる。",
+    "context": "glossary hsr term technique: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ultimate.name",
+    "ja": "必殺技",
+    "context": "glossary hsr term ultimate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ultimate.summary",
+    "ja": "必要なエネルギーをためて使うキャラクター固有の能力。",
+    "context": "glossary hsr term ultimate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ultimate.body",
+    "ja": "必要な[[energy|EP]]などがたまると使用できる能力。通常の[[action-order|行動順]]とは異なるタイミングで使える。必要な資源や効果はキャラクターごとに確認しよう。",
+    "context": "glossary hsr term ultimate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[action-order|",
+      "[[energy|"
+    ]
+  },
+  {
+    "id": "term.hsr.penacony.name",
+    "ja": "ピノコニー",
+    "context": "glossary hsr term penacony: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony.summary",
+    "ja": "星穹列車が訪れる「宴の星」。",
+    "context": "glossary hsr term penacony: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony.body",
+    "ja": "[[astral-express|星穹列車]]の仲間たちが招待を受けて訪れる「宴の星」。宇宙の各地から客が集まるリゾートとして知られる。",
+    "context": "glossary hsr term penacony: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[astral-express|"
+    ]
+  },
+  {
+    "id": "term.hsr.equation.name",
+    "ja": "方程式",
+    "context": "glossary hsr term equation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.equation.summary",
+    "ja": "階差宇宙で祝福の組み合わせにより解放する仕組み。",
+    "context": "glossary hsr term equation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.equation.body",
+    "ja": "[[divergent-universe]]に登場する仕組み。指定された運命の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
+    "context": "glossary hsr term equation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[blessing|",
+      "[[divergent-universe]]"
     ]
   },
   {
@@ -1064,6 +2033,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.relic-main-stat.name",
+    "ja": "メインステータス",
+    "context": "glossary hsr term relic-main-stat: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-main-stat.summary",
+    "ja": "遺物の主となるステータス。",
+    "context": "glossary hsr term relic-main-stat: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.relic-main-stat.body",
+    "ja": "[[relics|遺物]]に付く主なステータス。候補は装備する部位によって異なり、遺物の強化で数値が上がる。[[relic-sub-stat|サブステータス]]とは別に表示される。",
+    "context": "glossary hsr term relic-main-stat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relic-sub-stat|",
+      "[[relics|"
+    ]
+  },
+  {
     "id": "term.hsr.simulated-universe.name",
     "ja": "模擬宇宙",
     "context": "glossary hsr term simulated-universe: Japanese official term name",
@@ -1091,6 +2090,124 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[divergent-universe]]",
       "[[genius-society]]"
+    ]
+  },
+  {
+    "id": "term.hsr.jarilo-vi.name",
+    "ja": "ヤリーロ-VI",
+    "context": "glossary hsr term jarilo-vi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.jarilo-vi.summary",
+    "ja": "星穹列車が訪れる世界のひとつ。",
+    "context": "glossary hsr term jarilo-vi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.jarilo-vi.body",
+    "ja": "[[astral-express|星穹列車]]の仲間たちが開拓の旅で訪れる世界。寒さに覆われた地で、開拓者たちはさまざまな人々と出会う。",
+    "context": "glossary hsr term jarilo-vi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[astral-express|"
+    ]
+  },
+  {
+    "id": "term.hsr.elation-damage.name",
+    "ja": "愉悦ダメージ",
+    "context": "glossary hsr term elation-damage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation-damage.summary",
+    "ja": "「愉悦」に関わる能力で発生するダメージ。",
+    "context": "glossary hsr term elation-damage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation-damage.body",
+    "ja": "[[path|愉悦の運命]]に関わる能力などで発生するダメージ。発生条件や効果はキャラクターごとに異なる。[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "context": "glossary hsr term elation-damage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aha-moment|",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.reserved-trailblaze-power.name",
+    "ja": "予備開拓力",
+    "context": "glossary hsr term reserved-trailblaze-power: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reserved-trailblaze-power.summary",
+    "ja": "通常の開拓力とは別に蓄積される資源。",
+    "context": "glossary hsr term reserved-trailblaze-power: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reserved-trailblaze-power.body",
+    "ja": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "context": "glossary hsr term reserved-trailblaze-power: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.echo-of-war.name",
+    "ja": "歴戦余韻",
+    "context": "glossary hsr term echo-of-war: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.echo-of-war.summary",
+    "ja": "強敵に挑み、育成素材などを獲得できるコンテンツ。",
+    "context": "glossary hsr term echo-of-war: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.echo-of-war.body",
+    "ja": "強敵との戦闘に挑み、[[trailblaze-power|開拓力]]を使って報酬を受け取るコンテンツ。[[traces|軌跡]]の強化に使う素材などが手に入る。報酬の受取条件はゲーム内で確認しよう。",
+    "context": "glossary hsr term echo-of-war: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[traces|",
+      "[[trailblaze-power|"
     ]
   }
 ];
