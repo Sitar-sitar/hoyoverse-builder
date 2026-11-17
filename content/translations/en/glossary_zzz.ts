@@ -1,6 +1,42 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.zzz.flinch.name": {
+    "text": "畏縮",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flinch.summary": {
+    "text": "強撃に伴って付与される状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flinch.body": {
+    "text": "[[assault]]の発生に伴う効果。効果中は敵が受ける[[daze]]が増加し、[[stun]]を狙いやすくなる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly.name": {
+    "text": "異常",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly.summary": {
+    "text": "状態異常を活用する役割を中心とする特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly.body": {
+    "text": "[[specialty|特性]]のひとつ。[[attribute-anomaly|状態異常]]の付与やダメージを活用するエージェントが属する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.anomaly-mastery.name": {
     "text": "異常掌握",
     "sourceHash": null,
@@ -33,6 +69,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.anomaly-proficiency.body": {
     "text": "[[attribute-anomaly|状態異常]]によるダメージに影響する。[[anomaly-mastery]]は異常蓄積効率に関わる別のステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hdd.name": {
+    "text": "H.D.D",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hdd.summary": {
+    "text": "ホロウの探索や通信に関わるシステム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hdd.body": {
+    "text": "主人公たちが[[hollow]]内の探索に利用するシステム。ナビ[[bangboo|ボンプ]]のイアスを介した案内などに使う。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -73,6 +127,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.expert-challenge.name": {
+    "text": "エキスパート挑戦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.expert-challenge.summary": {
+    "text": "コアスキルの育成素材などを得る挑戦。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.expert-challenge.body": {
+    "text": "強敵に挑み、[[core-skill]]の強化に使う素材などを獲得する。必要な素材に対応する敵を選んで挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.w-engine.name": {
     "text": "音動機",
     "sourceHash": null,
@@ -87,6 +159,96 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.w-engine.body": {
     "text": "[[agent]]に装備してステータスを補う。音動機の効果には、装備者の[[specialty]]に関する発動条件がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-dmg.name": {
+    "text": "会心ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-dmg.summary": {
+    "text": "会心発生時のダメージに関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-dmg.body": {
+    "text": "会心が発生したときのダメージに影響する。[[crit-rate]]は会心の発生確率に関わる別のステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-rate.name": {
+    "text": "会心率",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-rate.summary": {
+    "text": "対象の攻撃などで会心が発生する確率。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.crit-rate.body": {
+    "text": "会心が発生する確率に関わるステータス。会心発生時のダメージには[[crit-dmg]]も関係する。会心の可否はダメージの種類によって異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.evasive-assist.name": {
+    "text": "回避支援",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.evasive-assist.summary": {
+    "text": "味方への交代時に敵の攻撃を回避する支援行動。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.evasive-assist.body": {
+    "text": "敵の攻撃に合わせて控えの味方へ交代し、攻撃を回避する支援行動。発動後は条件に応じて[[assist-follow-up]]につなげられる。[[defensive-assist]]とは異なる支援行動。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shock.name": {
+    "text": "感電",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shock.summary": {
+    "text": "電気属性の状態異常による効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shock.body": {
+    "text": "電気属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、敵が攻撃を受けると電気属性ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deadly-assault.name": {
+    "text": "危局強襲戦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deadly-assault.summary": {
+    "text": "強敵に挑戦し、スコアを目指す戦闘コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deadly-assault.body": {
+    "text": "[[agent]]を編成して強敵と戦うコンテンツ。挑戦内容や期間ごとの条件を確認して編成を組む。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -127,6 +289,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.assault.name": {
+    "text": "強撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.assault.summary": {
+    "text": "物理属性の状態異常で発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.assault.body": {
+    "text": "物理属性の[[attribute-anomaly|状態異常]]が発生すると敵に物理ダメージを与え、[[flinch]]を付与する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.attack.name": {
+    "text": "強攻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.attack.summary": {
+    "text": "ダメージを与える役割を中心とする特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.attack.body": {
+    "text": "[[specialty|特性]]のひとつ。攻撃によるダメージを得意とするエージェントが属する。具体的な戦い方は[[agent]]ごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.quick-assist.name": {
     "text": "クイック支援",
     "sourceHash": null,
@@ -141,6 +339,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.quick-assist.body": {
     "text": "攻撃を受けて吹き飛ばされたときや、スキルによって発動できる支援行動。控えの[[agent]]に切り替えて攻撃する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.stun-specialty.name": {
+    "text": "撃破",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.stun-specialty.summary": {
+    "text": "敵のブレイクを狙う役割を中心とする特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.stun-specialty.body": {
+    "text": "[[specialty|特性]]のひとつ。[[daze]]を蓄積し、敵を[[stun]]させる役割を得意とする。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -163,6 +379,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.core-passive.name": {
+    "text": "コアパッシブ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.core-passive.summary": {
+    "text": "エージェント固有のコアスキルの一部。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.core-passive.body": {
+    "text": "[[core-skill]]を構成する能力のひとつ。素材を使ってコアスキルを強化すると、対応する効果が向上する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.disorder.name": {
     "text": "混沌",
     "sourceHash": null,
@@ -177,6 +411,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.disorder.body": {
     "text": "敵に発生している[[attribute-anomaly|属性異常]]に、異なる属性の状態異常が重なると混沌が発生する。効果やダメージは元の状態異常などに左右される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shatter.name": {
+    "text": "砕氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shatter.summary": {
+    "text": "凍結が解除されたときなどに発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shatter.body": {
+    "text": "[[freeze]]に関連する氷属性ダメージ。敵が凍結から解放されたときなどに発生する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.support.name": {
+    "text": "支援",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.support.summary": {
+    "text": "味方の能力補助などを担う特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.support.body": {
+    "text": "[[specialty|特性]]のひとつ。味方の強化などを担うエージェントが属する。支援の方法は[[agent]]ごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.assist-follow-up.name": {
+    "text": "支援突撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.assist-follow-up.summary": {
+    "text": "支援行動からつなげるエージェント固有の攻撃。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.assist-follow-up.body": {
+    "text": "[[defensive-assist]]や[[evasive-assist]]の後に、所定の操作で発動する攻撃。操作や効果は[[agent]]のスキル説明を確認する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -217,6 +505,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.impact.name": {
+    "text": "衝撃力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.impact.summary": {
+    "text": "攻撃によるブレイク値の蓄積に影響するステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.impact.body": {
+    "text": "攻撃時に与える[[daze]]に影響する。敵を[[stun|ブレイク]]しやすくしたい場合に注目するステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.attribute-anomaly.name": {
     "text": "属性異常",
     "sourceHash": null,
@@ -231,6 +537,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.attribute-anomaly.body": {
     "text": "攻撃で[[attribute|属性]]の異常蓄積値を溜めると、属性に応じた状態異常が発生する。状態異常ダメージには[[anomaly-proficiency]]が、蓄積効率には[[anomaly-mastery]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly-buildup.name": {
+    "text": "状態異常蓄積値",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly-buildup.summary": {
+    "text": "状態異常を発生させるために蓄積する値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.anomaly-buildup.body": {
+    "text": "属性のある攻撃などで敵に蓄積する値。一定量に達すると対応する[[attribute-anomaly|状態異常]]が発生する。[[anomaly-mastery]]は蓄積効率に関わる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -271,6 +595,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.corruption.name": {
+    "text": "侵蝕",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.corruption.summary": {
+    "text": "エーテル属性の状態異常による継続ダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.corruption.body": {
+    "text": "エーテル属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的にエーテル属性ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hollow-zero.name": {
     "text": "零号ホロウ",
     "sourceHash": null,
@@ -285,6 +627,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hollow-zero.body": {
     "text": "[[hollow]]の調査に挑むコンテンツ。調査を通してさまざまな戦闘や出来事に遭遇する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.frostbite.name": {
+    "text": "霜寒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.frostbite.summary": {
+    "text": "氷属性の状態異常に伴う効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.frostbite.body": {
+    "text": "氷属性の[[attribute-anomaly|状態異常]]に伴って付与される効果。効果中、対象が受ける会心ダメージに影響する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -307,6 +667,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.additional-ability.name": {
+    "text": "追加能力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.additional-ability.summary": {
+    "text": "編成などの条件を満たすと発動する能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.additional-ability.body": {
+    "text": "[[core-skill]]のひとつ。チーム内の[[specialty|特性]]や陣営など、[[agent]]ごとに定められた条件を満たすと効果を発揮する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.decibels.name": {
     "text": "デシベル値",
     "sourceHash": null,
@@ -321,6 +699,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.decibels.body": {
     "text": "戦闘中の行動などで蓄積し、必要量に達すると[[ultimate]]を発動できる。値はエージェントごとに管理される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freeze.name": {
+    "text": "凍結",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freeze.summary": {
+    "text": "氷属性の状態異常によって敵の行動を制限する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freeze.body": {
+    "text": "氷属性の[[attribute-anomaly|状態異常]]によって発生する。凍結が終了すると[[shatter]]によるダメージが発生する。敵の種類によって凍結の扱いは異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -361,6 +757,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.burn.name": {
+    "text": "熱傷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.burn.summary": {
+    "text": "炎属性の状態異常による継続ダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.burn.body": {
+    "text": "炎属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的に炎属性ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.phaethon.name": {
+    "text": "パエトーン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.phaethon.summary": {
+    "text": "主人公たちがプロキシとして使う名前。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.phaethon.body": {
+    "text": "[[proxy|プロキシ]]として活動する主人公たちの名前。[[sixth-street]]のビデオ屋を拠点に、[[hdd]]などを使ってホロウ内の活動を案内する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.defensive-assist.name": {
     "text": "パリィ支援",
     "sourceHash": null,
@@ -375,6 +807,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.defensive-assist.body": {
     "text": "敵の攻撃に合わせて味方へ切り替え、攻撃を受け止める支援行動。支援ポイントや攻撃の種類など、発動条件に注意する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weathering.name": {
+    "text": "風化",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weathering.summary": {
+    "text": "風属性の状態異常による効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weathering.body": {
+    "text": "風属性の[[attribute-anomaly|状態異常]]により発生する。別の状態異常との組み合わせでは[[disorder|混沌]]の代わりに[[turbulence]]が関わる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -415,6 +865,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.daze.name": {
+    "text": "ブレイク値",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.daze.summary": {
+    "text": "敵をブレイクさせるために蓄積する値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.daze.body": {
+    "text": "攻撃などによって敵に蓄積し、上限に達すると[[stun]]が発生する。[[impact]]は蓄積に影響するステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.proxy.name": {
     "text": "プロキシ",
     "sourceHash": null,
@@ -447,6 +915,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.signal-search.body": {
     "text": "チャンネルを選んで[[agent]]や[[w-engine]]などを獲得する仕組み。提供内容や受信確率はチャンネルごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.defense.name": {
+    "text": "防護",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.defense.summary": {
+    "text": "防御や味方の保護などを担う特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.defense.body": {
+    "text": "[[specialty|特性]]のひとつ。味方の生存を助ける能力などを持つエージェントが属する。効果は[[agent]]ごとに異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -487,6 +973,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.rupture.name": {
+    "text": "命破",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rupture.summary": {
+    "text": "透徹ダメージなどを活用する特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rupture.body": {
+    "text": "[[specialty|特性]]のひとつ。透徹ダメージを扱うエージェントが属する。詳しい能力や使用するリソースは[[agent]]ごとに確認する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.combat-simulation.name": {
+    "text": "模擬実戦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.combat-simulation.summary": {
+    "text": "育成素材などを獲得するための戦闘コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.combat-simulation.body": {
+    "text": "敵との戦闘に挑み、[[agent]]の育成に使う素材などを獲得する。必要な素材に応じて挑戦内容を選ぶ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.sub-stat.name": {
     "text": "サブステータス",
     "sourceHash": null,
@@ -501,6 +1023,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.sub-stat.body": {
     "text": "[[drive-disc]]の[[main-stat]]に加えて付くステータス。強化によって追加または強化される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.turbulence.name": {
+    "text": "乱流",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.turbulence.summary": {
+    "text": "風化と他の状態異常の組み合わせで発生する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.turbulence.body": {
+    "text": "[[weathering]]と別の[[attribute-anomaly|状態異常]]を組み合わせると発生する。風化を含まない組み合わせの[[disorder]]とは別の効果。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
