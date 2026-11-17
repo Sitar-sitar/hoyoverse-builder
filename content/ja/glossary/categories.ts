@@ -20,6 +20,15 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.category.content",
+    "ja": "コンテンツ",
+    "context": "glossary category content: category label shown as a filter",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.category.world",
     "ja": "世界観",
     "context": "glossary category world: category label shown as a filter",
@@ -32,6 +41,15 @@ export const sources: SourceText[] = [
     "id": "term.category.faction",
     "ja": "組織・勢力",
     "context": "glossary category faction: category label shown as a filter",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.category.place",
+    "ja": "地名",
+    "context": "glossary category place: category label shown as a filter",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],

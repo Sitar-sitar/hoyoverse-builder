@@ -13,6 +13,12 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.category.content": {
+    "text": "コンテンツ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.category.world": {
     "text": "世界観",
     "sourceHash": null,
@@ -21,6 +27,12 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.category.faction": {
     "text": "組織・勢力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.category.place": {
+    "text": "地名",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
