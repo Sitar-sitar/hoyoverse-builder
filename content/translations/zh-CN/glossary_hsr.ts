@@ -55,6 +55,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.character-training-guide.name": {
+    "text": "育成ガイド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-training-guide.summary": {
+    "text": "キャラクターの育成進度や素材を確認する機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-training-guide.body": {
+    "text": "キャラクターのレベル、[[light-cone|光円錐]]、[[traces|軌跡]]、[[relics|遺物]]の育成進度を確認できる機能。育成対象を設定すると必要な素材も確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.relics.name": {
     "text": "遺物",
     "sourceHash": null,
@@ -69,6 +87,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.relics.body": {
     "text": "キャラクターに装備するアイテム。メインステータスやサブステータスを持ち、装備の組み合わせによる効果もある。\n\n育成ガイドで進度を、スマート装備画面で装備プランやステータスを確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-enhancement.name": {
+    "text": "遺物強化",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-enhancement.summary": {
+    "text": "遺物のレベルを上げる育成。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-enhancement.body": {
+    "text": "素材を使って[[relics|遺物]]のレベルを上げる。[[relic-main-stat|メインステータス]]が上昇し、一定の強化段階では[[relic-sub-stat|サブステータス]]の追加や上昇も発生する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -127,6 +163,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.swarm-disaster.name": {
+    "text": "宇宙の蝗害",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swarm-disaster.summary": {
+    "text": "模擬宇宙の拡張コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swarm-disaster.body": {
+    "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。専用の仕組みを使いながらエリアを進み、試練に挑む。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.path.name": {
     "text": "運命",
     "sourceHash": null,
@@ -145,6 +199,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hp.name": {
+    "text": "HP",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hp.summary": {
+    "text": "キャラクターの生存に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hp.body": {
+    "text": "ダメージを受けると減少する値。HPが尽きると戦闘不能になる。[[healing|治癒]]で回復でき、[[shield|バリア]]は受けるダメージを防ぐ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.skill-point.name": {
     "text": "SP",
     "sourceHash": null,
@@ -159,6 +231,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.skill-point.body": {
     "text": "味方で共有するポイント。通常攻撃で回復し、戦闘スキルを使うと消費するのが基本。\n\nスキルや特殊な行動には例外もあるので、各キャラクターの説明も確認しよう。[[action-order]]に合わせてやりくりすると戦闘スキルを使いやすい。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gold-and-gears.name": {
+    "text": "黄金と機械",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gold-and-gears.summary": {
+    "text": "模擬宇宙の拡張コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gold-and-gears.body": {
+    "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。サイコロ面を組み合わせ、専用の仕組みを使って挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okushitsu.name": {
+    "text": "憶質",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okushitsu.summary": {
+    "text": "記憶の精霊に関わる能力で使われる用語。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okushitsu.body": {
+    "text": "[[memosprite|記憶の精霊]]に関わる能力で使われる用語。公式紹介では長夜月が獲得し、「長夜」の戦闘能力に関わる例が示されている。蓄積や利用の条件は能力ごとに確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -235,6 +343,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.trailblaze-mission.name": {
+    "text": "開拓クエスト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-mission.summary": {
+    "text": "物語の進行に関わるクエスト。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-mission.body": {
+    "text": "[[astral-express|星穹列車]]の旅に関わるクエスト。進行に応じて新たな世界を訪れる。[[finalitys-vision|終焉の視界]]で一部を先行体験できる場合もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.trailblaze-power.name": {
     "text": "開拓力",
     "sourceHash": null,
@@ -249,6 +375,96 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.trailblaze-power.body": {
     "text": "時間とともに回復する資源。[[calyx|疑似花萼]]などの報酬獲得に使う。[[reserved-trailblaze-power|予備開拓力]]は別に蓄積される。回復や上限の詳細はゲーム内で確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-level.name": {
+    "text": "開拓レベル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-level.summary": {
+    "text": "ゲームの進行に関わるレベル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-level.body": {
+    "text": "開拓者の進行に関わるレベル。クエストや各種コンテンツの参加条件になる場合がある。[[equilibrium-level|均衡レベル]]とは別の指標。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.true-damage.name": {
+    "text": "確定ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.true-damage.summary": {
+    "text": "特定の能力の効果で発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.true-damage.body": {
+    "text": "能力の効果などによって発生するダメージ。公式紹介ではキュレネの結界中に味方のダメージをきっかけとして追加発生する例がある。発生条件はそれぞれの能力を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.masked-fools.name": {
+    "text": "仮面の愚者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.masked-fools.summary": {
+    "text": "物語に登場する勢力のひとつ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.masked-fools.body": {
+    "text": "宇宙のさまざまな勢力とともに物語に登場する集まり。[[nexus-amphoreus|二相楽園]]に関する公式発表でもその名が紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shock.name": {
+    "text": "感電",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shock.summary": {
+    "text": "雷属性の持続ダメージに関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shock.body": {
+    "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。雷属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishpower.name": {
+    "text": "願力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishpower.summary": {
+    "text": "星神★アッハの能力に関わる資源。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishpower.body": {
+    "text": "星神★アッハの能力に関わる戦闘中の資源。公式紹介では味方が蓄積に関わり、最大になると必殺技を発動できるとされる。[[energy|EP]]や[[punchline|爆笑ネタ]]とは区別しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -325,6 +541,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.base-speed.name": {
+    "text": "基礎速度",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.base-speed.summary": {
+    "text": "速度を構成する基礎となる値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.base-speed.body": {
+    "text": "キャラクターの[[speed|速度]]を考える際に基礎となる値。速度の割合上昇と固定値の加算は扱いが異なる。[[light-cone|光円錐]]などの個別効果や戦闘中の変化は、各能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.curio.name": {
     "text": "奇物",
     "sourceHash": null,
@@ -339,6 +573,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.curio.body": {
     "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦に影響する特殊なアイテム。効果はそれぞれ異なり、有利なものだけでなく扱いに注意が必要なものもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-ascension.name": {
+    "text": "キャラクター昇格",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-ascension.summary": {
+    "text": "キャラクターのレベル上限を引き上げる育成。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-ascension.body": {
+    "text": "育成素材などを使ってキャラクターを昇格させ、レベル上限を引き上げる。昇格素材の一部は[[stagnant-shadow|凝結虚影]]で獲得できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -397,6 +649,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.imprisonment.name": {
+    "text": "禁錮",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.imprisonment.summary": {
+    "text": "対象の行動順などに影響する状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.imprisonment.body": {
+    "text": "虚数属性の[[weakness-break|弱点撃破]]などで付与される状態。対象の[[action-advance-and-delay|行動順を遅らせる]]効果に関わる。状態の詳しい条件は能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equilibrium-level.name": {
+    "text": "均衡レベル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equilibrium-level.summary": {
+    "text": "敵やステージの難易度に関わるレベル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equilibrium-level.body": {
+    "text": "敵や一部ステージの難易度に関わるレベル。[[trailblaze-level|開拓レベル]]とは異なり、試練に関係する。対象となるコンテンツや条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.break-effect.name": {
     "text": "撃破特効",
     "sourceHash": null,
@@ -447,6 +735,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.effect-hit-rate.body": {
     "text": "敵にデバフなどを付与する際の成功率に関係する。効果の基礎確率や対象の[[effect-res|効果抵抗]]なども結果に影響する。\n\nすべての効果に適用されるわけではないため、各能力の条件を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.attack.name": {
+    "text": "攻撃力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.attack.summary": {
+    "text": "能力の効果量に関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.attack.body": {
+    "text": "攻撃などの効果量を決める際に参照されるステータス。能力によっては[[hp|HP]]や[[defense|防御力]]などを参照するため、各能力の説明を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -667,6 +973,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.finalitys-vision.name": {
+    "text": "終焉の視界",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.finalitys-vision.summary": {
+    "text": "一部コンテンツの先行体験に関わる機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.finalitys-vision.body": {
+    "text": "参加条件となる進行を満たしていない場合にも、一部のコンテンツを先行体験できる機能。対象や条件はゲーム内で確認しよう。物語を先に体験する場合は内容に注意。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.blessing.name": {
     "text": "祝福",
     "sourceHash": null,
@@ -721,6 +1045,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.credit.name": {
+    "text": "信用ポイント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.credit.summary": {
+    "text": "育成や各種操作などで使うゲーム内通貨。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.credit.body": {
+    "text": "キャラクターや[[light-cone|光円錐]]の育成など、さまざまな場面で使うゲーム内通貨。[[calyx|疑似花萼]]などの報酬で獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.wishful-resin.name": {
     "text": "遂願樹脂",
     "sourceHash": null,
@@ -753,6 +1095,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.interastral-peace-corporation.body": {
     "text": "通称「カンパニー」。公式発表ではジェイドがその高級幹部として紹介されている。\n\n[[astral-express]]や[[xianzhou-alliance]]など、さまざまな勢力とともに物語に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-smart-equip.name": {
+    "text": "スマート装備",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-smart-equip.summary": {
+    "text": "遺物の装備プランを選べる機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-smart-equip.body": {
+    "text": "キャラクターの[[relics|遺物]]画面で、システムおすすめやカスタムなどのプランを選べる機能。[[effective-substats|有効サブステータス]]数なども確認できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -793,6 +1153,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.star-rail-special-pass.name": {
+    "text": "星軌専用チケット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.star-rail-special-pass.summary": {
+    "text": "イベント跳躍などに使うチケット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.star-rail-special-pass.body": {
+    "text": "イベント[[warp|跳躍]]などで使用するチケット。[[star-rail-pass|星軌チケット]]とは使用先が異なるため、対象の跳躍画面で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.star-rail-pass.name": {
+    "text": "星軌チケット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.star-rail-pass.summary": {
+    "text": "対応する跳躍で使うチケット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.star-rail-pass.body": {
+    "text": "一部の[[warp|跳躍]]で使用するチケット。[[star-rail-special-pass|星軌専用チケット]]とは使用先が異なるため、跳躍画面で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.astral-express.name": {
     "text": "星穹列車",
     "sourceHash": null,
@@ -807,6 +1203,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.astral-express.body": {
     "text": "開拓者が乗り、宇宙に広がる未知の世界を巡る列車。[[nameless|ナナシビト]]たちとともに開拓の旅を続ける。\n\n[[aeon|星神]]や[[path|運命]]にまつわる物語の入口にもなる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellar-jade.name": {
+    "text": "星玉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellar-jade.summary": {
+    "text": "跳躍用チケットとの交換などに使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellar-jade.body": {
+    "text": "[[warp|跳躍]]に使うチケットの交換などに使えるアイテム。クエストや各種コンテンツの報酬などで獲得できる。交換先や必要数はゲーム内で確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -883,6 +1297,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.xianzhou-luofu.name": {
+    "text": "仙舟「羅浮」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-luofu.summary": {
+    "text": "仙舟同盟に属する仙舟のひとつ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-luofu.body": {
+    "text": "[[xianzhou-alliance|仙舟同盟]]に属し、[[astral-express|星穹列車]]の旅の舞台となる仙舟。公式紹介では仙舟「羅浮」として登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.skill.name": {
     "text": "戦闘スキル",
     "sourceHash": null,
@@ -915,6 +1347,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.element.body": {
     "text": "物理・炎・氷・雷・風・量子・虚数の7種類がある。攻撃の属性と敵の[[enemy-weakness|弱点属性]]が合うと、通常は[[toughness|靭性]]を削れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.type-resistance.name": {
+    "text": "属性耐性",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.type-resistance.summary": {
+    "text": "属性ごとのダメージに関わる耐性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.type-resistance.body": {
+    "text": "対象が受ける[[element|属性]]ごとのダメージに関わる値。[[resistance-penetration|属性耐性貫通]]や耐性を下げる効果は、属性を確認して使おう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.resistance-penetration.name": {
+    "text": "属性耐性貫通",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.resistance-penetration.summary": {
+    "text": "攻撃時に対象の属性耐性を貫通する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.resistance-penetration.body": {
+    "text": "対象の[[type-resistance|属性耐性]]を貫通する効果。対応する[[element|属性]]や継続時間は能力の説明を確認しよう。対象の防御力に関わる[[defense-ignore|防御力無視]]とは別の効果。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -955,6 +1423,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.outgoing-healing-boost.name": {
+    "text": "治癒量",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outgoing-healing-boost.summary": {
+    "text": "HPを回復する効果の量。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outgoing-healing-boost.body": {
+    "text": "[[healing|治癒]]によって回復するHPの量。能力の参照値や治癒に関する効果などによって変化する。対象や回復条件は能力ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.super-break-damage.name": {
     "text": "超撃破ダメージ",
     "sourceHash": null,
@@ -969,6 +1455,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.super-break-damage.body": {
     "text": "対応する能力がある場合に発生するダメージで、[[break-effect]]などが関係する。通常は[[weakness-break]]状態の敵への攻撃が条件となる能力がある。\n\nダリアの結界のように、撃破前の敵にも超撃破ダメージを与えられる能力があるため、発動条件は各スキルの説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.superimposition.name": {
+    "text": "重畳",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.superimposition.summary": {
+    "text": "光円錐のスキル効果の段階を上げる育成。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.superimposition.body": {
+    "text": "[[light-cone|光円錐]]の重畳ランクを上げ、そのスキル効果を強化する育成。対応する同名の光円錐や専用素材を使う。[[light-cone-ascension|昇格]]やレベル強化とは別。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp.name": {
+    "text": "跳躍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp.summary": {
+    "text": "キャラクターや光円錐の獲得に関わる仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp.body": {
+    "text": "[[star-rail-pass|星軌チケット]]や[[star-rail-special-pass|星軌専用チケット]]などを使い、キャラクターや[[light-cone|光円錐]]を獲得する仕組み。種類ごとに使用するチケットや提供内容が異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1063,6 +1585,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.frozen.name": {
+    "text": "凍結",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.frozen.summary": {
+    "text": "対象の行動を制限する状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.frozen.body": {
+    "text": "[[crowd-control|行動不能状態]]のひとつ。氷属性の[[weakness-break|弱点撃破]]などで付与される。効果の発生や解除の条件は能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.nameless.name": {
     "text": "ナナシビト",
     "sourceHash": null,
@@ -1081,6 +1621,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.planarcadia.name": {
+    "text": "二相楽園",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planarcadia.summary": {
+    "text": "星穹列車の旅に登場する世界。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planarcadia.body": {
+    "text": "[[astral-express|星穹列車]]の旅に登場する世界。公式発表では「幻月遊儀」を舞台に、さまざまな勢力が集う場所として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.burn.name": {
+    "text": "燃焼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.burn.summary": {
+    "text": "炎属性の持続ダメージに関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.burn.body": {
+    "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。炎属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fuel.name": {
+    "text": "燃料",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fuel.summary": {
+    "text": "開拓力の回復に使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fuel.body": {
+    "text": "[[trailblaze-power|開拓力]]を回復するために使用できるアイテム。獲得できる場面や使用条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.punchline.name": {
     "text": "爆笑ネタ",
     "sourceHash": null,
@@ -1095,6 +1689,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.punchline.body": {
     "text": "[[path|愉悦の運命]]に関わる能力などで獲得する資源。キャラクターによって獲得や利用の方法が異なり、[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.certified-banger.name": {
+    "text": "爆笑の褒美",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.certified-banger.summary": {
+    "text": "愉悦のキャラクターに関わる強化効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.certified-banger.body": {
+    "text": "[[path|愉悦の運命]]に関わる強化効果。[[aha-moment|アッハタイム]]終了後に得られるものなどがあり、内容や獲得条件はキャラクターごとに異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1135,6 +1747,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.light-cone-ascension.name": {
+    "text": "光円錐の昇格",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-ascension.summary": {
+    "text": "光円錐のレベル上限を引き上げる育成。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-ascension.body": {
+    "text": "素材などを使って[[light-cone|光円錐]]を昇格させ、レベル上限を引き上げる。スキル効果の段階を上げる[[superimposition|重畳]]とは別の育成。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.technique.name": {
     "text": "秘技",
     "sourceHash": null,
@@ -1149,6 +1779,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.technique.body": {
     "text": "フィールド上で戦闘前に使用できる能力。戦闘開始時に効果を発揮するものなどがあり、効果や条件はキャラクターごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-vulnerability.name": {
+    "text": "被ダメージアップ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-vulnerability.summary": {
+    "text": "対象が受けるダメージを増やす効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-vulnerability.body": {
+    "text": "対象が受けるダメージに影響する効果。[[damage-boost|与ダメージアップ]]と記載の対象や条件が異なるため、能力説明を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1189,6 +1837,132 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.wind-shear.name": {
+    "text": "風化",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wind-shear.summary": {
+    "text": "風属性の持続ダメージに関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wind-shear.body": {
+    "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。風属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unknowable-domain.name": {
+    "text": "不可知域",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unknowable-domain.summary": {
+    "text": "模擬宇宙の拡張コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unknowable-domain.body": {
+    "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。セプターを集め、対応するコンポーネントを装着して能力を強化しながら挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog.name": {
+    "text": "ベロブルグ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog.summary": {
+    "text": "ヤリーロ-VIにある都市。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog.body": {
+    "text": "[[jarilo-vi|ヤリーロ-VI]]で[[astral-express|星穹列車]]の仲間たちが訪れる都市。開拓の旅で人々と出会い、この世界の物語を体験する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.variable-dice.name": {
+    "text": "変数サイコロ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.variable-dice.summary": {
+    "text": "強化済み遺物のサブステータスの強化配分を調整するアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.variable-dice.body": {
+    "text": "レベル15まで強化した[[relics|遺物]]の[[relic-sub-stat|サブステータス]]の強化回数をランダムに再分配するアイテム。再分配の前後から保存する結果を選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense.name": {
+    "text": "防御力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense.summary": {
+    "text": "受けるダメージなどに関わるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense.body": {
+    "text": "受けるダメージに関わるステータス。能力の効果量を決めるために参照される場合もある。敵の防御力を下げる[[defense-reduction|防御力ダウン]]とは区別しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-reduction.name": {
+    "text": "防御力ダウン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-reduction.summary": {
+    "text": "対象の防御力を下げる効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-reduction.body": {
+    "text": "対象の[[defense|防御力]]を下げる[[debuff|デバフ]]。対象や持続時間は能力によって異なる。攻撃時に防御力の一部を無視する[[defense-ignore|防御力無視]]とは異なる効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-ignore.name": {
+    "text": "防御力無視",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-ignore.summary": {
+    "text": "攻撃時に対象の防御力の一部を無視する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.defense-ignore.body": {
+    "text": "攻撃のダメージを計算する際、対象の[[defense|防御力]]の一部を無視する効果。対象に付与して防御力を下げる[[defense-reduction|防御力ダウン]]とは区別される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.equation.name": {
     "text": "方程式",
     "sourceHash": null,
@@ -1203,6 +1977,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.equation.body": {
     "text": "[[divergent-universe]]に登場する仕組み。指定された運命の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.immersifier.name": {
+    "text": "没入器",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.immersifier.summary": {
+    "text": "次元界オーナメントの獲得に使えるアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.immersifier.body": {
+    "text": "[[simulated-universe|模擬宇宙]]などの報酬で[[planar-ornaments|次元界オーナメント]]を受け取る際、[[trailblaze-power|開拓力]]の代わりに使用できるアイテム。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1261,6 +2053,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.entanglement.name": {
+    "text": "もつれ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.entanglement.summary": {
+    "text": "対象の行動順や付加ダメージに関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.entanglement.body": {
+    "text": "量子属性の[[weakness-break|弱点撃破]]などで付与される状態。[[action-advance-and-delay|行動順の遅延]]や付加ダメージに関わる。[[damage-over-time|持続ダメージ]]とは区別しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.jarilo-vi.name": {
     "text": "ヤリーロ-VI",
     "sourceHash": null,
@@ -1279,6 +2089,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.effective-substats.name": {
+    "text": "有効サブステータス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effective-substats.summary": {
+    "text": "装備プランで確認できる遺物サブステータスの情報。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.effective-substats.body": {
+    "text": "[[relic-smart-equip|スマート装備]]などで確認できる[[relic-sub-stat|サブステータス]]の情報。プランやキャラクターに応じた表示を確認し、装備を選ぶ際の参考にできる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-skill.name": {
+    "text": "愉悦スキル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-skill.summary": {
+    "text": "愉悦の運命に関わるキャラクターの能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-skill.body": {
+    "text": "[[path|愉悦の運命]]に関わるキャラクターの能力。[[aha-moment|アッハタイム]]中に発動するほか、能力によって別のタイミングで発動する場合もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.elation-damage.name": {
     "text": "愉悦ダメージ",
     "sourceHash": null,
@@ -1293,6 +2139,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.elation-damage.body": {
     "text": "[[path|愉悦の運命]]に関わる能力などで発生するダメージ。発生条件や効果はキャラクターごとに異なる。[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yuetsudo.name": {
+    "text": "愉悦度",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yuetsudo.summary": {
+    "text": "愉悦に関わる戦闘中の値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yuetsudo.body": {
+    "text": "[[path|愉悦の運命]]に関わる戦闘中の値。公式紹介では爻光の能力によって味方の愉悦度が上昇する例が示されている。具体的な条件は各能力を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-boost.name": {
+    "text": "与ダメージアップ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-boost.summary": {
+    "text": "与えるダメージを増やす効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.damage-boost.body": {
+    "text": "キャラクターなどが与えるダメージを高める効果。対象の[[element|属性]]や攻撃の種類が限定される場合があるため、各能力の説明を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1329,6 +2211,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.echo-of-war.body": {
     "text": "強敵との戦闘に挑み、[[trailblaze-power|開拓力]]を使って報酬を受け取るコンテンツ。[[traces|軌跡]]の強化に使う素材などが手に入る。報酬の受取条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bleed.name": {
+    "text": "裂創",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bleed.summary": {
+    "text": "物理属性の持続ダメージに関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bleed.body": {
+    "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。物理属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
