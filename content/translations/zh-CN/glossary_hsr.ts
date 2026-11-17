@@ -91,6 +91,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.divergent-universe.name": {
+    "text": "階差宇宙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.divergent-universe.summary": {
+    "text": "スクリューガムが主導した模擬宇宙に関わる新たなプロジェクト。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.divergent-universe.body": {
+    "text": "[[simulated-universe]]に関わる新プロジェクト。スクリューガムが主導し、祝福の組み合わせによって「方程式」を解放する仕組みなどがある。\n\n挑戦の条件や報酬はゲーム内で確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.crit-dmg.name": {
     "text": "会心ダメージ",
     "sourceHash": null,
@@ -127,6 +145,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.memosprite.name": {
+    "text": "記憶の精霊",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memosprite.summary": {
+    "text": "「記憶」の運命を歩むキャラクターが扱う召喚物。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memosprite.body": {
+    "text": "[[path|記憶の運命]]を歩むキャラクターが扱う召喚物。精霊によって得意なことや戦闘中の役割が異なる。\n\n公式発表では、アグライアが精霊ラフトラを召喚し、連携攻撃を行う例が紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.traces.name": {
     "text": "軌跡",
     "sourceHash": null,
@@ -141,6 +177,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.traces.body": {
     "text": "素材を使ってキャラクターの能力を強化したり、追加能力やステータスを解放したりする育成要素。\n\n育成ガイドでは軌跡の育成進度を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pure-fiction.name": {
+    "text": "虚構叙事",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pure-fiction.summary": {
+    "text": "編成を整えてステージに挑む挑戦コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pure-fiction.body": {
+    "text": "ゲーム内の挑戦コンテンツのひとつ。敵との戦闘に挑み、ステージごとの条件に応じた報酬を目指す。\n\n[[memory-of-chaos]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -235,6 +289,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.memory-of-chaos.name": {
+    "text": "混沌の記憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-of-chaos.summary": {
+    "text": "忘却の庭にある挑戦コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-of-chaos.body": {
+    "text": "「忘却の庭」にある挑戦コンテンツ。編成を整えてステージに挑み、条件に応じた報酬を目指す。\n\n[[pure-fiction]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planar-ornaments.name": {
+    "text": "次元界オーナメント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planar-ornaments.summary": {
+    "text": "キャラクターに装備する遺物の一種。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planar-ornaments.body": {
+    "text": "キャラクターに装備する[[relics|遺物]]の一種。次元界オーブと連結縄の2部位があり、組み合わせによりセット効果を得られる。\n\nゲーム内ではオーナメントを獲得できるコンテンツやイベントが用意されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.damage-over-time.name": {
     "text": "持続ダメージ",
     "sourceHash": null,
@@ -307,6 +397,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.interastral-peace-corporation.name": {
+    "text": "スターピースカンパニー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.interastral-peace-corporation.summary": {
+    "text": "銀河を舞台に活動する組織で、カンパニーとも呼ばれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.interastral-peace-corporation.body": {
+    "text": "通称「カンパニー」。公式発表ではジェイドがその高級幹部として紹介されている。\n\n[[astral-express]]や[[xianzhou-alliance]]など、さまざまな勢力とともに物語に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.stellaron.name": {
     "text": "星核",
     "sourceHash": null,
@@ -321,6 +429,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.stellaron.body": {
     "text": "銀河のさまざまな世界に危機をもたらす存在。仙舟「羅浮」でも星核による危機が公式の人物紹介で言及されている。\n\nその性質や個々の事件にまつわる詳細は、物語を進めながら確かめられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunters.name": {
+    "text": "星核ハンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunters.summary": {
+    "text": "カフカや銀狼などが所属する謎の多い組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunters.body": {
+    "text": "カフカや銀狼などが所属する、謎の多い組織。公式紹介では銀狼がその一員として紹介されている。\n\n名称に[[stellaron]]を含む。組織の詳しい目的は物語を進めながら確かめられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.astral-express.name": {
+    "text": "星穹列車",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.astral-express.summary": {
+    "text": "開拓者たちが乗り、銀河の世界を巡る列車。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.astral-express.body": {
+    "text": "開拓者が乗り、宇宙に広がる未知の世界を巡る列車。[[nameless|ナナシビト]]たちとともに開拓の旅を続ける。\n\n[[aeon|星神]]や[[path|運命]]にまつわる物語の入口にもなる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -357,6 +501,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.aeon.body": {
     "text": "[[path]]と関わる強大な存在。たとえば[[genius-society]]は「知恵」の星神ヌースに見いだされた天才たちの集まりとして紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-alliance.name": {
+    "text": "仙舟同盟",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-alliance.summary": {
+    "text": "仙舟「羅浮」などに関わる、物語に登場する勢力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-alliance.body": {
+    "text": "仙舟「羅浮」などに関わる勢力。[[astral-express]]や[[interastral-peace-corporation|カンパニー]]とともに、さまざまな世界の物語に登場する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -433,6 +595,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.nameless.name": {
+    "text": "ナナシビト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless.summary": {
+    "text": "開拓の旅を続け、世界をつなぐ者たちの呼称。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless.body": {
+    "text": "開拓の旅に出て、さまざまな世界をつなぐ者たち。[[astral-express]]の仲間と関わりが深い。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.light-cone.name": {
     "text": "光円錐",
     "sourceHash": null,
@@ -447,6 +627,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.light-cone.body": {
     "text": "キャラクターに装備し、ステータスや能力を補う。[[path]]に対応する光円錐を選ぶことが育成のポイント。\n\n育成ガイドではキャラクターの光円錐の育成進度を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.apocalyptic-shadow.name": {
+    "text": "末日の幻影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.apocalyptic-shadow.summary": {
+    "text": "強敵に挑む常設の挑戦コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.apocalyptic-shadow.body": {
+    "text": "Ver.2.3で追加された常設コンテンツ。ステージに挑み、条件に応じた報酬を目指す。\n\n[[memory-of-chaos]]・[[pure-fiction]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.simulated-universe.name": {
+    "text": "模擬宇宙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.simulated-universe.summary": {
+    "text": "天才クラブの会員たちが開発に携わった宇宙のシミュレーション。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.simulated-universe.body": {
+    "text": "[[genius-society]]の会員たちが共同開発に関わったプロジェクト。ゲーム内では様々な試練に挑戦できる。\n\n関連する新プロジェクトとして[[divergent-universe]]がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
