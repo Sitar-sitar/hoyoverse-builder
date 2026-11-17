@@ -127,6 +127,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.character-event-warp.name": {
+    "text": "イベント跳躍・キャラクター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-event-warp.summary": {
+    "text": "期間中に特定キャラクターの出現率が上がる跳躍。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.character-event-warp.body": {
+    "text": "開催期間中に特定のキャラクターを獲得できる[[warp|跳躍]]の区分。[[star-rail-special-pass|星軌専用チケット]]を使用する。提供内容や期間は各跳躍の詳細を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-event-warp.name": {
+    "text": "イベント跳躍・光円錐",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-event-warp.summary": {
+    "text": "期間中に特定の光円錐を獲得できる跳躍。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-event-warp.body": {
+    "text": "開催期間中に特定の[[light-cone|光円錐]]を獲得できる[[warp|跳躍]]の区分。[[character-event-warp|イベント跳躍・キャラクター]]とは提供内容が異なる。詳しい条件は跳躍画面で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.herta-space-station.name": {
     "text": "宇宙ステーション「ヘルタ」",
     "sourceHash": null,
@@ -195,6 +231,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.path.body": {
     "text": "世界観では[[aeon]]と関わる概念として語られる。戦闘ではキャラクターや[[light-cone]]の分類としても表示される。\n\n同じ言葉でも、物語の中で語られる意味と戦闘上の分類を分けて読むとわかりやすい。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.switch-path.name": {
+    "text": "運命切替",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.switch-path.summary": {
+    "text": "対応キャラクターの運命を切り替える機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.switch-path.body": {
+    "text": "対応キャラクターの[[path|運命]]を切り替える機能。開拓者には異なる運命が用意されている。使用できる運命や切替条件はキャラクター画面で確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -357,6 +411,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.trailblaze-mission.body": {
     "text": "[[astral-express|星穹列車]]の旅に関わるクエスト。進行に応じて新たな世界を訪れる。[[finalitys-vision|終焉の視界]]で一部を先行体験できる場合もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-continuance.name": {
+    "text": "開拓クエスト・幕間",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-continuance.summary": {
+    "text": "開拓の旅に関わる物語を描くクエストの区分。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-continuance.body": {
+    "text": "[[trailblaze-mission|開拓クエスト]]に関連する物語を描くクエストの区分。公式のお知らせでは[[penacony|ピノコニー]]や[[xianzhou-luofu|仙舟「羅浮」]]を舞台とした幕間が紹介されている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1081,6 +1153,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.interastral-peace-guide.name": {
+    "text": "スターピースガイド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.interastral-peace-guide.summary": {
+    "text": "ゲーム内の挑戦や育成の情報を確認できる画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.interastral-peace-guide.body": {
+    "text": "さまざまなコンテンツや報酬を確認するためのゲーム内ガイド。[[survival-index|生存手引書]]から[[calyx|疑似花萼]]や[[cavern-of-corrosion|侵蝕トンネル]]などのステージを選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.interastral-peace-corporation.name": {
     "text": "スターピースカンパニー",
     "sourceHash": null,
@@ -1261,6 +1351,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.survival-index.name": {
+    "text": "生存手引書",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.survival-index.summary": {
+    "text": "育成素材を獲得できるステージへの案内。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.survival-index.body": {
+    "text": "[[interastral-peace-guide|スターピースガイド]]内の案内。[[calyx|疑似花萼]]、[[stagnant-shadow|凝結虚影]]、[[cavern-of-corrosion|侵蝕トンネル]]、[[echo-of-war|歴戦余韻]]などの挑戦先を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.relic-set-effect.name": {
     "text": "セット効果",
     "sourceHash": null,
@@ -1405,6 +1513,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.travel-log.name": {
+    "text": "旅記録",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.travel-log.summary": {
+    "text": "イベントなどの情報を確認するゲーム内画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.travel-log.body": {
+    "text": "ゲーム内イベントなどの案内や進行状況を確認する画面。対象イベントの参加条件や報酬、開催期間を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.healing.name": {
     "text": "治癒",
     "sourceHash": null,
@@ -1531,6 +1657,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.as-ive-written.name": {
+    "text": "紡がれた物語",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.as-ive-written.summary": {
+    "text": "オンパロスの英雄物語を閲覧できるコンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.as-ive-written.body": {
+    "text": "[[amphoreus|オンパロス]]の物語に関わるコンテンツ。[[trailblaze-mission|開拓クエスト]]などで得た「無名の追憶」を使ってカードを解放し、英雄物語を閲覧できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.daily-training.name": {
+    "text": "デイリー訓練",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.daily-training.summary": {
+    "text": "日々の行動や目標に応じて報酬を受け取る仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.daily-training.body": {
+    "text": "日々の目標に取り組み、条件を満たして報酬を受け取る仕組み。[[interastral-peace-guide|スターピースガイド]]から進捗を確認できる。目標や報酬はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.debuff.name": {
     "text": "デバフ",
     "sourceHash": null,
@@ -1599,6 +1761,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.frozen.body": {
     "text": "[[crowd-control|行動不能状態]]のひとつ。氷属性の[[weakness-break|弱点撃破]]などで付与される。効果の発生や解除の条件は能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.companion-mission.name": {
+    "text": "同行クエスト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.companion-mission.summary": {
+    "text": "登場人物に関わる物語を体験するクエスト。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.companion-mission.body": {
+    "text": "登場人物に関わる物語を体験できるクエスト。[[trailblaze-mission|開拓クエスト]]とは別の区分として登場し、受注条件や内容は各クエストで確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.insight-mode.name": {
+    "text": "洞察モード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.insight-mode.summary": {
+    "text": "階差宇宙の挑戦を補助するモード。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.insight-mode.body": {
+    "text": "[[divergent-universe|階差宇宙]]で選べるモード。味方の与ダメージや被ダメージに補助が入り、エリアに入ると[[blessing|祝福]]などを獲得できる。公式Ver.3.0案内では、このモードでのクリア時は階差宇宙の称号を獲得できないとしている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1909,6 +2107,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.forgotten-hall.name": {
+    "text": "忘却の庭",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.forgotten-hall.summary": {
+    "text": "ステージごとの条件を満たして報酬を目指す挑戦コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.forgotten-hall.body": {
+    "text": "編成を整えて複数のステージに挑戦するコンテンツ。[[memory-of-chaos|混沌の記憶]]は忘却の庭に含まれる挑戦のひとつ。ステージの条件や報酬はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.defense.name": {
     "text": "防御力",
     "sourceHash": null,
@@ -1959,6 +2175,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.defense-ignore.body": {
     "text": "攻撃のダメージを計算する際、対象の[[defense|防御力]]の一部を無視する効果。対象に付与して防御力を下げる[[defense-reduction|防御力ダウン]]とは区別される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.adventure-mission.name": {
+    "text": "冒険クエスト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.adventure-mission.summary": {
+    "text": "各地の人物や出来事に関わるクエスト。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.adventure-mission.body": {
+    "text": "各地の人物や出来事に関わるクエスト。[[trailblaze-mission|開拓クエスト]]とは別に表示され、内容や受注条件はクエストごとに異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
