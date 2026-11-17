@@ -469,6 +469,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.destruction.name": {
+    "text": "壊滅",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.destruction.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.destruction.body": {
+    "text": "[[path|運命]]の一つ。壊滅の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。攻撃を担うキャラクターもいるが、能力は各キャラクターで異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.true-damage.name": {
     "text": "確定ダメージ",
     "sourceHash": null,
@@ -555,6 +573,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.serendipity-eidolon.body": {
     "text": "対応キャラクターを所持し、そのキャラクターに対応する奇縁星魂を解放すると、追加スキルを獲得できる。通常の[[eidolon|星魂]]とは別の育成要素として、対象や解放条件をゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.remembrance.name": {
+    "text": "記憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.remembrance.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.remembrance.body": {
+    "text": "[[path|運命]]の一つ。記憶の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[memosprite|記憶の精霊]]と共に戦うキャラクターがいる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -721,6 +757,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.nihility.name": {
+    "text": "虚無",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nihility.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nihility.body": {
+    "text": "[[path|運命]]の一つ。虚無の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。敵に[[debuff|デバフ]]を付与するキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.imprisonment.name": {
     "text": "禁錮",
     "sourceHash": null,
@@ -771,6 +825,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.break-effect.body": {
     "text": "[[weakness-break]]で発生するダメージや、属性に応じた撃破効果に関係する。\n\n[[weakness-break-efficiency]]は靭性の削りやすさに関係する別の効果。[[super-break-damage]]にも関係する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.field.name": {
+    "text": "結界",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.field.summary": {
+    "text": "キャラクターの能力などによって戦闘中に展開される効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.field.body": {
+    "text": "能力によって戦闘中に展開される効果。例えば千冶・刃の結界には敵が受けるダメージを増やす効果がある。継続条件や効果は能力ごとに異なる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1045,6 +1117,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.weakness-implant.name": {
+    "text": "弱点付与",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.weakness-implant.summary": {
+    "text": "能力によって敵に属性の弱点を加えること。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.weakness-implant.body": {
+    "text": "一部の能力は敵に新たな[[enemy-weakness|弱点属性]]を付与できる。[[toughness|靭性]]を削る際に関わるが、付与する属性や持続条件は能力によって異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.finalitys-vision.name": {
     "text": "終焉の視界",
     "sourceHash": null,
@@ -1077,6 +1167,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.blessing.body": {
     "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hunt.name": {
+    "text": "巡狩",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hunt.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hunt.body": {
+    "text": "[[path|運命]]の一つ。巡狩の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。単体への攻撃を得意とするキャラクターもいる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1441,6 +1549,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.treasure.name": {
+    "text": "戦利品",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.treasure.summary": {
+    "text": "探索中に見つけて報酬を獲得できる宝箱など。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.treasure.body": {
+    "text": "フィールドの探索中に見つけられる宝箱など。開けると報酬を獲得できる。場所や獲得条件はエリアごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.element.name": {
     "text": "属性",
     "sourceHash": null,
@@ -1513,6 +1639,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.preservation.name": {
+    "text": "存護",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.preservation.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.preservation.body": {
+    "text": "[[path|運命]]の一つ。存護の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[shield|バリア]]などで味方を守るキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.travel-log.name": {
     "text": "旅記録",
     "sourceHash": null,
@@ -1527,6 +1671,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.travel-log.body": {
     "text": "ゲーム内イベントなどの案内や進行状況を確認する画面。対象イベントの参加条件や報酬、開催期間を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.erudition.name": {
+    "text": "知恵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.erudition.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.erudition.body": {
+    "text": "[[path|運命]]の一つ。知恵の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。複数の敵への攻撃を得意とするキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.charge.name": {
+    "text": "チャージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.charge.summary": {
+    "text": "キャラクターの能力などで蓄積し、消費されることがある要素。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.charge.body": {
+    "text": "一部の能力には、条件を満たすと特殊なチャージを獲得するものがある。獲得方法、上限、消費先は能力によって異なるため、各能力の説明を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1621,6 +1801,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.harmony.name": {
+    "text": "調和",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.harmony.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.harmony.body": {
+    "text": "[[path|運命]]の一つ。調和の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方を支援する能力を持つキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.follow-up-attack.name": {
     "text": "追加攻撃",
     "sourceHash": null,
@@ -1635,6 +1833,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.follow-up-attack.body": {
     "text": "キャラクターや装備の能力に定められた条件を満たした際に発動する攻撃。自分の通常の行動以外のタイミングでも発動するものがある。\n\n不死途は味方による特定の敵への攻撃をきっかけに追加攻撃を行う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.extra-turn.name": {
+    "text": "追加ターン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.extra-turn.summary": {
+    "text": "能力の効果によって追加で得られるターン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.extra-turn.body": {
+    "text": "キャラクターの能力などによって追加で得られるターン。発生条件やその間に使える能力は、それぞれの説明を確認しよう。通常の行動順を早める[[action-advance-and-delay|行動順の前倒し]]とは区別して読む。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1819,6 +2035,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.nameless-glory.name": {
+    "text": "ナナシビトの褒章",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless-glory.summary": {
+    "text": "ナナシの勲功で有料解放できる追加報酬。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless-glory.body": {
+    "text": "ナナシの勲功の有料報酬枠。解放すると勲功レベルに応じて追加の報酬を受け取れる。内容や購入条件はゲーム内の案内を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.planarcadia.name": {
     "text": "二相楽園",
     "sourceHash": null,
@@ -1963,6 +2197,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.light-cone-manifest.name": {
+    "text": "光円錐プレゼンス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-manifest.summary": {
+    "text": "流光の残照を光円錐と交換できるショップ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.light-cone-manifest.body": {
+    "text": "[[lucent-afterglow|流光の残照]]を使って[[light-cone|光円錐]]を交換できるショップ。交換対象や必要数はゲーム内のショップ画面を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.technique.name": {
     "text": "秘技",
     "sourceHash": null,
@@ -2049,6 +2301,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.wind-shear.body": {
     "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。風属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.additional-damage.name": {
+    "text": "付加ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.additional-damage.summary": {
+    "text": "能力の効果により、攻撃などに伴って発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.additional-damage.body": {
+    "text": "能力の条件を満たしたときなどに発生するダメージ。発生条件や参照するステータスは能力ごとに異なる。[[follow-up-attack|追加攻撃]]とは別の用語なので、効果の表記を確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2197,6 +2467,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.abundance.name": {
+    "text": "豊穣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.abundance.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.abundance.body": {
+    "text": "[[path|運命]]の一つ。豊穣の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方の[[hp|HP]]を回復する能力を持つキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.equation.name": {
     "text": "方程式",
     "sourceHash": null,
@@ -2341,6 +2629,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.elation.name": {
+    "text": "愉悦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation.summary": {
+    "text": "キャラクターや光円錐を分類する運命の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation.body": {
+    "text": "[[path|運命]]の一つ。愉悦の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[elation-damage|愉悦ダメージ]]を扱うキャラクターがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.elation-skill.name": {
     "text": "愉悦スキル",
     "sourceHash": null,
@@ -2427,6 +2733,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.reserved-trailblaze-power.body": {
     "text": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lucent-afterglow.name": {
+    "text": "流光の残照",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lucent-afterglow.summary": {
+    "text": "光円錐プレゼンスでの交換に使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lucent-afterglow.body": {
+    "text": "[[light-cone-manifest|光円錐プレゼンス]]で[[light-cone|光円錐]]との交換に使うアイテム。[[echo-of-war|歴戦余韻]]などの報酬で入手できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
