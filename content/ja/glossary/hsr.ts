@@ -392,14 +392,23 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.path.body",
-    "ja": "世界観では[[aeon]]と関わる概念として語られる。戦闘ではキャラクターや[[light-cone]]の分類としても表示される。\n\n同じ言葉でも、物語の中で語られる意味と戦闘上の分類を分けて読むとわかりやすい。",
+    "ja": "世界観では[[aeon]]と関わる概念として語られる。戦闘ではキャラクターや[[light-cone]]の分類としても表示される。\n\n戦闘上の分類には[[destruction|壊滅]]、[[the-hunt|巡狩]]、[[erudition|知恵]]、[[harmony|調和]]、[[nihility|虚無]]、[[preservation|存護]]、[[abundance|豊穣]]、[[remembrance|記憶]]、[[elation|愉悦]]がある。物語で語られる意味と戦闘上の分類を分けて読むとわかりやすい。",
     "context": "glossary hsr term path: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[abundance|",
       "[[aeon]]",
-      "[[light-cone]]"
+      "[[destruction|",
+      "[[elation|",
+      "[[erudition|",
+      "[[harmony|",
+      "[[light-cone]]",
+      "[[nihility|",
+      "[[preservation|",
+      "[[remembrance|",
+      "[[the-hunt|"
     ]
   },
   {
@@ -791,6 +800,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.destruction.name",
+    "ja": "壊滅",
+    "context": "glossary hsr term destruction: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.destruction.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term destruction: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.destruction.body",
+    "ja": "[[path|運命]]の一つ。壊滅の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。攻撃を担うキャラクターもいるが、能力は各キャラクターで異なる。",
+    "context": "glossary hsr term destruction: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.true-damage.name",
     "ja": "確定ダメージ",
     "context": "glossary hsr term true-damage: Japanese official term name",
@@ -936,6 +975,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[eidolon|"
+    ]
+  },
+  {
+    "id": "term.hsr.remembrance.name",
+    "ja": "記憶",
+    "context": "glossary hsr term remembrance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.remembrance.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term remembrance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.remembrance.body",
+    "ja": "[[path|運命]]の一つ。記憶の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[memosprite|記憶の精霊]]と共に戦うキャラクターがいる。",
+    "context": "glossary hsr term remembrance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[memosprite|",
+      "[[path|"
     ]
   },
   {
@@ -1205,6 +1275,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.nihility.name",
+    "ja": "虚無",
+    "context": "glossary hsr term nihility: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nihility.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term nihility: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nihility.body",
+    "ja": "[[path|運命]]の一つ。虚無の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。敵に[[debuff|デバフ]]を付与するキャラクターもいる。",
+    "context": "glossary hsr term nihility: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[debuff|",
+      "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.imprisonment.name",
     "ja": "禁錮",
     "context": "glossary hsr term imprisonment: Japanese official term name",
@@ -1295,6 +1396,33 @@ export const sources: SourceText[] = [
       "[[weakness-break-efficiency]]",
       "[[weakness-break]]"
     ]
+  },
+  {
+    "id": "term.hsr.field.name",
+    "ja": "結界",
+    "context": "glossary hsr term field: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.field.summary",
+    "ja": "キャラクターの能力などによって戦闘中に展開される効果。",
+    "context": "glossary hsr term field: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.field.body",
+    "ja": "能力によって戦闘中に展開される効果。例えば千冶・刃の結界には敵が受けるダメージを増やす効果がある。継続条件や効果は能力ごとに異なる。",
+    "context": "glossary hsr term field: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.effect-res.name",
@@ -1756,6 +1884,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.weakness-implant.name",
+    "ja": "弱点付与",
+    "context": "glossary hsr term weakness-implant: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.weakness-implant.summary",
+    "ja": "能力によって敵に属性の弱点を加えること。",
+    "context": "glossary hsr term weakness-implant: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.weakness-implant.body",
+    "ja": "一部の能力は敵に新たな[[enemy-weakness|弱点属性]]を付与できる。[[toughness|靭性]]を削る際に関わるが、付与する属性や持続条件は能力によって異なる。",
+    "context": "glossary hsr term weakness-implant: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemy-weakness|",
+      "[[toughness|"
+    ]
+  },
+  {
     "id": "term.hsr.finalitys-vision.name",
     "ja": "終焉の視界",
     "context": "glossary hsr term finalitys-vision: Japanese official term name",
@@ -1811,6 +1969,36 @@ export const sources: SourceText[] = [
       "[[divergent-universe]]",
       "[[equation|",
       "[[simulated-universe]]"
+    ]
+  },
+  {
+    "id": "term.hsr.the-hunt.name",
+    "ja": "巡狩",
+    "context": "glossary hsr term the-hunt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-hunt.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term the-hunt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-hunt.body",
+    "ja": "[[path|運命]]の一つ。巡狩の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。単体への攻撃を得意とするキャラクターもいる。",
+    "context": "glossary hsr term the-hunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[path|"
     ]
   },
   {
@@ -2417,6 +2605,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.treasure.name",
+    "ja": "戦利品",
+    "context": "glossary hsr term treasure: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.treasure.summary",
+    "ja": "探索中に見つけて報酬を獲得できる宝箱など。",
+    "context": "glossary hsr term treasure: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.treasure.body",
+    "ja": "フィールドの探索中に見つけられる宝箱など。開けると[[stellar-jade|星玉]]などの報酬を獲得できる。場所や獲得条件はエリアごとに異なる。",
+    "context": "glossary hsr term treasure: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stellar-jade|"
+    ]
+  },
+  {
     "id": "term.hsr.element.name",
     "ja": "属性",
     "context": "glossary hsr term element: Japanese official term name",
@@ -2539,6 +2756,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.preservation.name",
+    "ja": "存護",
+    "context": "glossary hsr term preservation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.preservation.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term preservation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.preservation.body",
+    "ja": "[[path|運命]]の一つ。存護の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[shield|バリア]]などで味方を守るキャラクターもいる。",
+    "context": "glossary hsr term preservation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[path|",
+      "[[shield|"
+    ]
+  },
+  {
     "id": "term.hsr.travel-log.name",
     "ja": "旅記録",
     "context": "glossary hsr term travel-log: Japanese official term name",
@@ -2565,6 +2813,65 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[stellar-jade|"
+    ]
+  },
+  {
+    "id": "term.hsr.erudition.name",
+    "ja": "知恵",
+    "context": "glossary hsr term erudition: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.erudition.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term erudition: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.erudition.body",
+    "ja": "[[path|運命]]の一つ。知恵の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。複数の敵への攻撃を得意とするキャラクターもいる。",
+    "context": "glossary hsr term erudition: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.charge.name",
+    "ja": "チャージ",
+    "context": "glossary hsr term charge: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.charge.summary",
+    "ja": "キャラクターの能力などで蓄積し、消費されることがある要素。",
+    "context": "glossary hsr term charge: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.charge.body",
+    "ja": "一部の[[skill|戦闘スキル]]や能力には、条件を満たすと特殊なチャージを獲得するものがある。獲得方法、上限、消費先は能力によって異なるため、各能力の説明を確認しよう。",
+    "context": "glossary hsr term charge: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[skill|"
     ]
   },
   {
@@ -2647,13 +2954,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.super-break-damage.body",
-    "ja": "対応する能力がある場合に発生するダメージで、[[break-effect]]などが関係する。通常は[[weakness-break]]状態の敵への攻撃が条件となる能力がある。\n\nダリアの結界のように、撃破前の敵にも超撃破ダメージを与えられる能力があるため、発動条件は各スキルの説明を確認しよう。",
+    "ja": "対応する能力がある場合に発生するダメージで、[[break-effect]]などが関係する。通常は[[weakness-break]]状態の敵への攻撃が条件となる能力がある。\n\nダリアの[[field|結界]]のように、撃破前の敵にも超撃破ダメージを与えられる能力があるため、発動条件は各スキルの説明を確認しよう。",
     "context": "glossary hsr term super-break-damage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[break-effect]]",
+      "[[field|",
       "[[weakness-break]]"
     ]
   },
@@ -2719,6 +3027,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.harmony.name",
+    "ja": "調和",
+    "context": "glossary hsr term harmony: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.harmony.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term harmony: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.harmony.body",
+    "ja": "[[path|運命]]の一つ。調和の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方を支援する能力を持つキャラクターもいる。",
+    "context": "glossary hsr term harmony: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.follow-up-attack.name",
     "ja": "追加攻撃",
     "context": "glossary hsr term follow-up-attack: Japanese official term name",
@@ -2745,6 +3083,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[talent|"
+    ]
+  },
+  {
+    "id": "term.hsr.extra-turn.name",
+    "ja": "追加ターン",
+    "context": "glossary hsr term extra-turn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.extra-turn.summary",
+    "ja": "能力の効果によって追加で得られるターン。",
+    "context": "glossary hsr term extra-turn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.extra-turn.body",
+    "ja": "キャラクターの能力などによって追加で得られるターン。発生条件やその間に使える能力は、それぞれの説明を確認しよう。通常の行動順を早める[[action-advance-and-delay|行動順の前倒し]]とは区別して読む。",
+    "context": "glossary hsr term extra-turn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[action-advance-and-delay|"
     ]
   },
   {
@@ -3045,6 +3412,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.nameless-glory.name",
+    "ja": "ナナシビトの褒章",
+    "context": "glossary hsr term nameless-glory: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nameless-glory.summary",
+    "ja": "ナナシの勲功で有料解放できる追加報酬。",
+    "context": "glossary hsr term nameless-glory: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nameless-glory.body",
+    "ja": "ナナシの勲功の有料報酬枠。解放すると勲功レベルに応じて[[light-cone|光円錐]]などの追加報酬を受け取れる。内容や購入条件はゲーム内の案内を確認しよう。",
+    "context": "glossary hsr term nameless-glory: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|"
+    ]
+  },
+  {
     "id": "term.hsr.planarcadia.name",
     "ja": "二相楽園",
     "context": "glossary hsr term planarcadia: Japanese official term name",
@@ -3283,6 +3679,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.light-cone-manifest.name",
+    "ja": "光円錐プレゼンス",
+    "context": "glossary hsr term light-cone-manifest: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.light-cone-manifest.summary",
+    "ja": "流光の残照を光円錐と交換できるショップ。",
+    "context": "glossary hsr term light-cone-manifest: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.light-cone-manifest.body",
+    "ja": "[[lucent-afterglow|流光の残照]]を使って[[light-cone|光円錐]]を交換できるショップ。交換対象や必要数はゲーム内のショップ画面を確認しよう。",
+    "context": "glossary hsr term light-cone-manifest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone|",
+      "[[lucent-afterglow|"
+    ]
+  },
+  {
     "id": "term.hsr.technique.name",
     "ja": "秘技",
     "context": "glossary hsr term technique: Japanese official term name",
@@ -3425,6 +3851,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[damage-over-time|",
       "[[weakness-break|"
+    ]
+  },
+  {
+    "id": "term.hsr.additional-damage.name",
+    "ja": "付加ダメージ",
+    "context": "glossary hsr term additional-damage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.additional-damage.summary",
+    "ja": "能力の効果により、攻撃などに伴って発生するダメージ。",
+    "context": "glossary hsr term additional-damage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.additional-damage.body",
+    "ja": "能力の条件を満たしたときなどに発生するダメージ。発生条件や参照するステータスは能力ごとに異なる。[[follow-up-attack|追加攻撃]]とは別の用語なので、効果の表記を確認しよう。",
+    "context": "glossary hsr term additional-damage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[follow-up-attack|"
     ]
   },
   {
@@ -3665,6 +4120,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.abundance.name",
+    "ja": "豊穣",
+    "context": "glossary hsr term abundance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.abundance.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term abundance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.abundance.body",
+    "ja": "[[path|運命]]の一つ。豊穣の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方の[[hp|HP]]を回復する能力を持つキャラクターもいる。",
+    "context": "glossary hsr term abundance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hp|",
+      "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.equation.name",
     "ja": "方程式",
     "context": "glossary hsr term equation: Japanese official term name",
@@ -3836,13 +4322,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.entanglement.body",
-    "ja": "量子属性の[[weakness-break|弱点撃破]]などで付与される状態。[[action-advance-and-delay|行動順の遅延]]や付加ダメージに関わる。[[damage-over-time|持続ダメージ]]とは区別しよう。",
+    "ja": "量子属性の[[weakness-break|弱点撃破]]などで付与される状態。[[action-advance-and-delay|行動順の遅延]]や[[additional-damage|付加ダメージ]]に関わる。[[damage-over-time|持続ダメージ]]とは区別しよう。",
     "context": "glossary hsr term entanglement: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[action-advance-and-delay|",
+      "[[additional-damage|",
       "[[damage-over-time|",
       "[[weakness-break|"
     ]
@@ -3904,6 +4391,37 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[relic-smart-equip|",
       "[[relic-sub-stat|"
+    ]
+  },
+  {
+    "id": "term.hsr.elation.name",
+    "ja": "愉悦",
+    "context": "glossary hsr term elation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation.summary",
+    "ja": "キャラクターや光円錐を分類する運命の一つ。",
+    "context": "glossary hsr term elation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation.body",
+    "ja": "[[path|運命]]の一つ。愉悦の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[elation-damage|愉悦ダメージ]]を扱うキャラクターがいる。",
+    "context": "glossary hsr term elation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elation-damage|",
+      "[[light-cone|",
+      "[[path|"
     ]
   },
   {
@@ -4051,6 +4569,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.lucent-afterglow.name",
+    "ja": "流光の残照",
+    "context": "glossary hsr term lucent-afterglow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lucent-afterglow.summary",
+    "ja": "光円錐プレゼンスでの交換に使うアイテム。",
+    "context": "glossary hsr term lucent-afterglow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lucent-afterglow.body",
+    "ja": "[[light-cone-manifest|光円錐プレゼンス]]で[[light-cone|光円錐]]との交換に使うアイテム。[[echo-of-war|歴戦余韻]]などの報酬で入手できる。",
+    "context": "glossary hsr term lucent-afterglow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[echo-of-war|",
+      "[[light-cone-manifest|",
+      "[[light-cone|"
     ]
   },
   {
