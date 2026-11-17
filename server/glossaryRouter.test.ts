@@ -11,6 +11,9 @@ vi.mock("../content/glossary/hsr", () => ({
   ] satisfies GlossaryEntry[],
 }));
 
+// 実データの登録状況に依存せず、空のゲームを検証する。
+vi.mock("../content/glossary/zzz", () => ({ entries: [] }));
+
 import { appRouter } from "./routers";
 import { contentManifest } from "./content/repository";
 
