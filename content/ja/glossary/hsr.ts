@@ -222,6 +222,67 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.character-event-warp.name",
+    "ja": "イベント跳躍・キャラクター",
+    "context": "glossary hsr term character-event-warp: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.character-event-warp.summary",
+    "ja": "期間中に特定キャラクターの出現率が上がる跳躍。",
+    "context": "glossary hsr term character-event-warp: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.character-event-warp.body",
+    "ja": "開催期間中に特定のキャラクターを獲得できる[[warp|跳躍]]の区分。[[star-rail-special-pass|星軌専用チケット]]を使用する。提供内容や期間は各跳躍の詳細を確認しよう。",
+    "context": "glossary hsr term character-event-warp: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[star-rail-special-pass|",
+      "[[warp|"
+    ]
+  },
+  {
+    "id": "term.hsr.light-cone-event-warp.name",
+    "ja": "イベント跳躍・光円錐",
+    "context": "glossary hsr term light-cone-event-warp: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.light-cone-event-warp.summary",
+    "ja": "期間中に特定の光円錐を獲得できる跳躍。",
+    "context": "glossary hsr term light-cone-event-warp: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.light-cone-event-warp.body",
+    "ja": "開催期間中に特定の[[light-cone|光円錐]]を獲得できる[[warp|跳躍]]の区分。[[character-event-warp|イベント跳躍・キャラクター]]とは提供内容が異なる。詳しい条件は跳躍画面で確認しよう。",
+    "context": "glossary hsr term light-cone-event-warp: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[character-event-warp|",
+      "[[light-cone|",
+      "[[warp|"
+    ]
+  },
+  {
     "id": "term.hsr.herta-space-station.name",
     "ja": "宇宙ステーション「ヘルタ」",
     "context": "glossary hsr term herta-space-station: Japanese official term name",
@@ -339,6 +400,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[aeon]]",
       "[[light-cone]]"
+    ]
+  },
+  {
+    "id": "term.hsr.switch-path.name",
+    "ja": "運命切替",
+    "context": "glossary hsr term switch-path: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.switch-path.summary",
+    "ja": "対応キャラクターの運命を切り替える機能。",
+    "context": "glossary hsr term switch-path: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.switch-path.body",
+    "ja": "対応キャラクターの[[path|運命]]を切り替える機能。開拓者には異なる運命が用意されている。使用できる運命や切替条件はキャラクター画面で確認しよう。",
+    "context": "glossary hsr term switch-path: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[path|"
     ]
   },
   {
@@ -599,14 +689,46 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.trailblaze-mission.body",
-    "ja": "[[astral-express|星穹列車]]の旅に関わるクエスト。進行に応じて新たな世界を訪れる。[[finalitys-vision|終焉の視界]]で一部を先行体験できる場合もある。",
+    "ja": "[[astral-express|星穹列車]]の旅に関わるクエスト。関連する物語を描く[[trailblaze-continuance|幕間]]もある。進行に応じて新たな世界を訪れる。[[finalitys-vision|終焉の視界]]で一部を先行体験できる場合もある。",
     "context": "glossary hsr term trailblaze-mission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[astral-express|",
-      "[[finalitys-vision|"
+      "[[finalitys-vision|",
+      "[[trailblaze-continuance|"
+    ]
+  },
+  {
+    "id": "term.hsr.trailblaze-continuance.name",
+    "ja": "開拓クエスト・幕間",
+    "context": "glossary hsr term trailblaze-continuance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.trailblaze-continuance.summary",
+    "ja": "開拓の旅に関わる物語を描くクエストの区分。",
+    "context": "glossary hsr term trailblaze-continuance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.trailblaze-continuance.body",
+    "ja": "[[trailblaze-mission|開拓クエスト]]に関連する物語を描くクエストの区分。公式のお知らせでは[[penacony|ピノコニー]]や[[xianzhou-luofu|仙舟「羅浮」]]を舞台とした幕間が紹介されている。",
+    "context": "glossary hsr term trailblaze-continuance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|",
+      "[[trailblaze-mission|",
+      "[[xianzhou-luofu|"
     ]
   },
   {
@@ -1374,13 +1496,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.memory-of-chaos.body",
-    "ja": "「忘却の庭」にある挑戦コンテンツ。編成を整えてステージに挑み、敵を倒すまでにかかったラウンド数などの条件を満たして報酬を目指す。\n\n[[pure-fiction]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
+    "ja": "[[forgotten-hall|忘却の庭]]にある挑戦コンテンツ。編成を整えてステージに挑み、敵を倒すまでにかかったラウンド数などの条件を満たして報酬を目指す。\n\n[[pure-fiction]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
     "context": "glossary hsr term memory-of-chaos: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[apocalyptic-shadow]]",
+      "[[forgotten-hall|",
       "[[pure-fiction]]"
     ]
   },
@@ -1813,6 +1936,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.interastral-peace-guide.name",
+    "ja": "スターピースガイド",
+    "context": "glossary hsr term interastral-peace-guide: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.interastral-peace-guide.summary",
+    "ja": "ゲーム内の挑戦や育成の情報を確認できる画面。",
+    "context": "glossary hsr term interastral-peace-guide: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.interastral-peace-guide.body",
+    "ja": "さまざまなコンテンツや報酬を確認するためのゲーム内ガイド。[[survival-index|生存手引書]]から[[calyx|疑似花萼]]や[[cavern-of-corrosion|侵蝕トンネル]]などのステージを選べる。",
+    "context": "glossary hsr term interastral-peace-guide: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[calyx|",
+      "[[cavern-of-corrosion|",
+      "[[survival-index|"
+    ]
+  },
+  {
     "id": "term.hsr.interastral-peace-corporation.name",
     "ja": "スターピースカンパニー",
     "context": "glossary hsr term interastral-peace-corporation: Japanese official term name",
@@ -2110,6 +2264,39 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.survival-index.name",
+    "ja": "生存手引書",
+    "context": "glossary hsr term survival-index: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.survival-index.summary",
+    "ja": "育成素材を獲得できるステージへの案内。",
+    "context": "glossary hsr term survival-index: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.survival-index.body",
+    "ja": "[[interastral-peace-guide|スターピースガイド]]内の案内。[[calyx|疑似花萼]]、[[stagnant-shadow|凝結虚影]]、[[cavern-of-corrosion|侵蝕トンネル]]、[[echo-of-war|歴戦余韻]]などの挑戦先を確認できる。",
+    "context": "glossary hsr term survival-index: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[calyx|",
+      "[[cavern-of-corrosion|",
+      "[[echo-of-war|",
+      "[[interastral-peace-guide|",
+      "[[stagnant-shadow|"
+    ]
+  },
+  {
     "id": "term.hsr.relic-set-effect.name",
     "ja": "セット効果",
     "context": "glossary hsr term relic-set-effect: Japanese official term name",
@@ -2352,6 +2539,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.travel-log.name",
+    "ja": "旅記録",
+    "context": "glossary hsr term travel-log: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.travel-log.summary",
+    "ja": "イベントなどの情報を確認するゲーム内画面。",
+    "context": "glossary hsr term travel-log: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.travel-log.body",
+    "ja": "ゲーム内イベントなどの案内や進行状況を確認する画面。イベントによっては[[stellar-jade|星玉]]などの報酬がある。参加条件や開催期間は各イベントで確認しよう。",
+    "context": "glossary hsr term travel-log: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stellar-jade|"
+    ]
+  },
+  {
     "id": "term.hsr.healing.name",
     "ja": "治癒",
     "context": "glossary hsr term healing: Japanese official term name",
@@ -2561,6 +2777,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.as-ive-written.name",
+    "ja": "紡がれた物語",
+    "context": "glossary hsr term as-ive-written: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.as-ive-written.summary",
+    "ja": "オンパロスの英雄物語を閲覧できるコンテンツ。",
+    "context": "glossary hsr term as-ive-written: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.as-ive-written.body",
+    "ja": "[[amphoreus|オンパロス]]の物語に関わるコンテンツ。[[trailblaze-mission|開拓クエスト]]などで得た「無名の追憶」を使ってカードを解放し、英雄物語を閲覧できる。",
+    "context": "glossary hsr term as-ive-written: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|",
+      "[[trailblaze-mission|"
+    ]
+  },
+  {
+    "id": "term.hsr.daily-training.name",
+    "ja": "デイリー訓練",
+    "context": "glossary hsr term daily-training: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.daily-training.summary",
+    "ja": "日々の行動や目標に応じて報酬を受け取る仕組み。",
+    "context": "glossary hsr term daily-training: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.daily-training.body",
+    "ja": "日々の目標に取り組み、条件を満たして報酬を受け取る仕組み。[[interastral-peace-guide|スターピースガイド]]から進捗を確認できる。目標や報酬はゲーム内で確認しよう。",
+    "context": "glossary hsr term daily-training: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[interastral-peace-guide|"
+    ]
+  },
+  {
     "id": "term.hsr.debuff.name",
     "ja": "デバフ",
     "context": "glossary hsr term debuff: Japanese official term name",
@@ -2679,6 +2954,65 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[crowd-control|",
       "[[weakness-break|"
+    ]
+  },
+  {
+    "id": "term.hsr.companion-mission.name",
+    "ja": "同行クエスト",
+    "context": "glossary hsr term companion-mission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.companion-mission.summary",
+    "ja": "登場人物に関わる物語を体験するクエスト。",
+    "context": "glossary hsr term companion-mission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.companion-mission.body",
+    "ja": "登場人物に関わる物語を体験できるクエスト。[[trailblaze-mission|開拓クエスト]]とは別の区分として登場し、受注条件や内容は各クエストで確認できる。",
+    "context": "glossary hsr term companion-mission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[trailblaze-mission|"
+    ]
+  },
+  {
+    "id": "term.hsr.insight-mode.name",
+    "ja": "洞察モード",
+    "context": "glossary hsr term insight-mode: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.insight-mode.summary",
+    "ja": "階差宇宙の挑戦を補助するモード。",
+    "context": "glossary hsr term insight-mode: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.insight-mode.body",
+    "ja": "[[divergent-universe|階差宇宙]]で選べるモード。味方の与ダメージや被ダメージに補助が入り、エリアに入ると[[blessing|祝福]]などを獲得できる。公式Ver.3.0案内では、このモードでのクリア時は階差宇宙の称号を獲得できないとしている。",
+    "context": "glossary hsr term insight-mode: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[blessing|",
+      "[[divergent-universe|"
     ]
   },
   {
@@ -3183,6 +3517,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.forgotten-hall.name",
+    "ja": "忘却の庭",
+    "context": "glossary hsr term forgotten-hall: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.forgotten-hall.summary",
+    "ja": "ステージごとの条件を満たして報酬を目指す挑戦コンテンツ。",
+    "context": "glossary hsr term forgotten-hall: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.forgotten-hall.body",
+    "ja": "編成を整えて複数のステージに挑戦するコンテンツ。[[memory-of-chaos|混沌の記憶]]は忘却の庭に含まれる挑戦のひとつ。ステージの条件や報酬はゲーム内で確認しよう。",
+    "context": "glossary hsr term forgotten-hall: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[memory-of-chaos|"
+    ]
+  },
+  {
     "id": "term.hsr.defense.name",
     "ja": "防御力",
     "context": "glossary hsr term defense: Japanese official term name",
@@ -3270,6 +3633,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[defense-reduction|",
       "[[defense|"
+    ]
+  },
+  {
+    "id": "term.hsr.adventure-mission.name",
+    "ja": "冒険クエスト",
+    "context": "glossary hsr term adventure-mission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.adventure-mission.summary",
+    "ja": "各地の人物や出来事に関わるクエスト。",
+    "context": "glossary hsr term adventure-mission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.adventure-mission.body",
+    "ja": "各地の人物や出来事に関わるクエスト。[[trailblaze-mission|開拓クエスト]]とは別に表示され、内容や受注条件はクエストごとに異なる。",
+    "context": "glossary hsr term adventure-mission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[trailblaze-mission|"
     ]
   },
   {
