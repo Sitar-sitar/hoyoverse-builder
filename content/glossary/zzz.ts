@@ -24,7 +24,7 @@ export const entries: GlossaryEntry[] = [
     "name": "特性",
     "reading": "とくせい",
     "summary": "エージェントの戦闘上の役割を表す分類。",
-    "body": "[[agent]]や[[w-engine]]には特性が設定されている。強攻、撃破、異常などがあり、[[w-engine|音動機]]の効果の発動条件にも関わる。",
+    "body": "[[agent]]や[[w-engine]]には特性が設定されている。[[attack]]、[[stun-specialty|撃破]]、[[anomaly|異常]]などがあり、[[w-engine|音動機]]の効果の発動条件にも関わる。",
     "sources": [
       {
         "label": "公式 Ver.3.3 アップデート",
@@ -32,7 +32,7 @@ export const entries: GlossaryEntry[] = [
       }
     ],
     "gameVersion": "3.3",
-    "dataAsOf": "2026-11-17"
+    "dataAsOf": "2026-11-18"
   },
   {
     "id": "stun",
@@ -40,7 +40,7 @@ export const entries: GlossaryEntry[] = [
     "name": "ブレイク",
     "reading": "ぶれいく",
     "summary": "敵のブレイク値を蓄積して発生させる状態。",
-    "body": "攻撃で敵のブレイク値を蓄積し、上限に達するとブレイク状態になる。敵は一定時間行動を制限され、[[stun-dmg-multiplier]]に応じて受けるダメージが増える。",
+    "body": "攻撃で敵の[[daze]]を蓄積し、上限に達するとブレイク状態になる。敵は一定時間行動を制限され、[[stun-dmg-multiplier]]に応じて受けるダメージが増える。",
     "sources": [
       {
         "label": "プロキシノート 戦闘システム（補助）",
@@ -48,7 +48,7 @@ export const entries: GlossaryEntry[] = [
       }
     ],
     "gameVersion": "3.3",
-    "dataAsOf": "2026-11-17"
+    "dataAsOf": "2026-11-18"
   },
   {
     "id": "stun-dmg-multiplier",
@@ -88,7 +88,7 @@ export const entries: GlossaryEntry[] = [
     "name": "混沌",
     "reading": "こんとん",
     "summary": "異なる属性異常が関わって発生する追加効果。",
-    "body": "継続中の[[attribute-anomaly|状態異常]]に別の属性の状態異常を発生させると、条件に応じて混沌が発生する。風属性を含む組み合わせは乱流となる。混沌のダメージは先に発生した状態異常などに左右される。",
+    "body": "継続中の[[attribute-anomaly|状態異常]]に別の属性の状態異常を発生させると、条件に応じて混沌が発生する。風属性を含む組み合わせは[[turbulence]]となる。混沌のダメージは先に発生した状態異常などに左右される。",
     "sources": [
       {
         "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
@@ -96,7 +96,7 @@ export const entries: GlossaryEntry[] = [
       }
     ],
     "gameVersion": "3.3",
-    "dataAsOf": "2026-11-17"
+    "dataAsOf": "2026-11-18"
   },
   {
     "id": "anomaly-proficiency",
@@ -279,7 +279,9 @@ export const entries: GlossaryEntry[] = [
     "category": "growth",
     "name": "基礎ステータス",
     "reading": "きそすてーたす",
-    "aliases": ["メインステータス"],
+    "aliases": [
+      "メインステータス"
+    ],
     "summary": "ドライバディスクの主なステータス。",
     "body": "[[drive-disc]]が持つ主なステータス。装備する部位により付く種類が異なり、ディスクを強化すると数値が上がる。",
     "sources": [
@@ -296,7 +298,9 @@ export const entries: GlossaryEntry[] = [
     "category": "growth",
     "name": "ランダムステータス",
     "reading": "らんだむすてーたす",
-    "aliases": ["サブステータス"],
+    "aliases": [
+      "サブステータス"
+    ],
     "summary": "ドライバディスクに付く追加ステータス。",
     "body": "[[drive-disc]]の[[main-stat]]に加えて付くステータス。強化によって追加または強化される。",
     "sources": [
@@ -330,7 +334,7 @@ export const entries: GlossaryEntry[] = [
     "name": "コアスキル",
     "reading": "こあすきる",
     "summary": "エージェント固有の能力に関わる育成要素。",
-    "body": "[[agent]]ごとに設定された能力。素材を使った強化や、編成条件を満たしたときに発動する追加能力がある。",
+    "body": "[[agent]]ごとに設定された能力。素材を使った強化や、編成条件を満たしたときに発動する[[additional-ability]]がある。",
     "sources": [
       {
         "label": "公式 Ver.2.5 アップデート",
@@ -338,7 +342,7 @@ export const entries: GlossaryEntry[] = [
       }
     ],
     "gameVersion": "3.3",
-    "dataAsOf": "2026-11-17"
+    "dataAsOf": "2026-11-18"
   },
   {
     "id": "bangboo",
@@ -426,7 +430,7 @@ export const entries: GlossaryEntry[] = [
     "name": "プロキシ",
     "reading": "ぷろきし",
     "summary": "ホロウ内の活動を導く専門家。",
-    "body": "[[hollow]]に入る人々を導く仕事をする人。主人公たちはパエトーンという名のプロキシとしても活動している。",
+    "body": "[[hollow]]に入る人々を導く仕事をする人。主人公たちは[[phaethon]]という名のプロキシとしても活動している。",
     "sources": [
       {
         "label": "HoYoWiki Random Play",
@@ -434,7 +438,7 @@ export const entries: GlossaryEntry[] = [
       }
     ],
     "gameVersion": "3.3",
-    "dataAsOf": "2026-11-17"
+    "dataAsOf": "2026-11-18"
   },
   {
     "id": "ethereal",
@@ -483,5 +487,485 @@ export const entries: GlossaryEntry[] = [
     ],
     "gameVersion": "3.3",
     "dataAsOf": "2026-11-17"
+  },
+  {
+    "id": "assault",
+    "category": "battle",
+    "name": "強撃",
+    "reading": "きょうげき",
+    "summary": "物理属性の状態異常で発生するダメージ。",
+    "body": "物理属性の[[attribute-anomaly|状態異常]]が発生すると敵に物理ダメージを与え、[[flinch]]を付与する。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "flinch",
+    "category": "battle",
+    "name": "畏縮",
+    "reading": "いしゅく",
+    "summary": "強撃に伴って付与される状態。",
+    "body": "[[assault]]の発生に伴う効果。効果中は敵が受ける[[daze]]が増加し、[[stun]]を狙いやすくなる。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "burn",
+    "category": "battle",
+    "name": "熱傷",
+    "reading": "ねっしょう",
+    "summary": "炎属性の状態異常による継続ダメージ。",
+    "body": "炎属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的に炎属性ダメージを与える。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "shock",
+    "category": "battle",
+    "name": "感電",
+    "reading": "かんでん",
+    "summary": "電気属性の状態異常による効果。",
+    "body": "電気属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、敵が攻撃を受けると電気属性ダメージを与える。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "corruption",
+    "category": "battle",
+    "name": "侵蝕",
+    "reading": "しんしょく",
+    "summary": "エーテル属性の状態異常による継続ダメージ。",
+    "body": "エーテル属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的にエーテル属性ダメージを与える。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "freeze",
+    "category": "battle",
+    "name": "凍結",
+    "reading": "とうけつ",
+    "summary": "氷属性の状態異常によって敵の行動を制限する効果。",
+    "body": "氷属性の[[attribute-anomaly|状態異常]]によって発生する。凍結が終了すると[[shatter]]によるダメージが発生する。敵の種類によって凍結の扱いは異なる。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "shatter",
+    "category": "battle",
+    "name": "砕氷",
+    "reading": "さいひょう",
+    "summary": "凍結が解除されたときなどに発生するダメージ。",
+    "body": "[[freeze]]に関連する氷属性ダメージ。敵が凍結から解放されたときなどに発生する。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "frostbite",
+    "category": "battle",
+    "name": "霜寒",
+    "reading": "そうかん",
+    "summary": "氷属性の状態異常に伴う効果。",
+    "body": "氷属性の[[attribute-anomaly|状態異常]]に伴って付与される効果。効果中、対象が受ける[[crit-dmg]]に影響する。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "weathering",
+    "category": "battle",
+    "name": "風化",
+    "reading": "ふうか",
+    "summary": "風属性の状態異常による効果。",
+    "body": "風属性の[[attribute-anomaly|状態異常]]により発生する。別の状態異常との組み合わせでは[[disorder|混沌]]の代わりに[[turbulence]]が関わる。",
+    "sources": [
+      {
+        "label": "Game8 風属性の効果（補助）",
+        "url": "https://game8.jp/zenless/781164"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "turbulence",
+    "category": "battle",
+    "name": "乱流",
+    "reading": "らんりゅう",
+    "summary": "風化と他の状態異常の組み合わせで発生する効果。",
+    "body": "[[weathering]]と別の[[attribute-anomaly|状態異常]]を組み合わせると発生する。風化を含まない組み合わせの[[disorder]]とは別の効果。",
+    "sources": [
+      {
+        "label": "Game8 風属性の効果（補助）",
+        "url": "https://game8.jp/zenless/781164"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "anomaly-buildup",
+    "category": "battle",
+    "name": "状態異常蓄積値",
+    "reading": "じょうたいいじょうちくせきち",
+    "summary": "状態異常を発生させるために蓄積する値。",
+    "body": "属性のある攻撃などで敵に蓄積する値。一定量に達すると対応する[[attribute-anomaly|状態異常]]が発生する。[[anomaly-mastery]]は蓄積効率に関わる。",
+    "sources": [
+      {
+        "label": "ゼンレスゾーンゼロ Wiki 状態異常（補助）",
+        "url": "https://wikiwiki.jp/zenless/状態異常"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "daze",
+    "category": "battle",
+    "name": "ブレイク値",
+    "reading": "ぶれいくち",
+    "summary": "敵をブレイクさせるために蓄積する値。",
+    "body": "攻撃などによって敵に蓄積し、上限に達すると[[stun]]が発生する。[[impact]]は蓄積に影響するステータス。",
+    "sources": [
+      {
+        "label": "プロキシノート（補助）",
+        "url": "https://wikiwiki.jp/zenless/プロキシノート"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "impact",
+    "category": "battle",
+    "name": "衝撃力",
+    "reading": "しょうげきりょく",
+    "summary": "攻撃によるブレイク値の蓄積に影響するステータス。",
+    "body": "攻撃時に与える[[daze]]に影響する。敵を[[stun|ブレイク]]しやすくしたい場合に注目するステータス。",
+    "sources": [
+      {
+        "label": "ファミ通 ステータス解説（補助）",
+        "url": "https://www.famitsu.com/article/202407/9520?page=1"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "evasive-assist",
+    "category": "battle",
+    "name": "回避支援",
+    "reading": "かいひしえん",
+    "summary": "味方への交代時に敵の攻撃を回避する支援行動。",
+    "body": "敵の攻撃に合わせて控えの味方へ交代し、攻撃を回避する支援行動。発動後は条件に応じて[[assist-follow-up]]につなげられる。[[defensive-assist]]とは異なる支援行動。",
+    "sources": [
+      {
+        "label": "GameWith 極限支援（補助）",
+        "url": "https://gamewith.jp/zenless/455959"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "assist-follow-up",
+    "category": "battle",
+    "name": "支援突撃",
+    "reading": "しえんとつげき",
+    "summary": "支援行動からつなげるエージェント固有の攻撃。",
+    "body": "[[defensive-assist]]や[[evasive-assist]]の後に、所定の操作で発動する攻撃。操作や効果は[[agent]]のスキル説明を確認する。",
+    "sources": [
+      {
+        "label": "GameWith 極限支援（補助）",
+        "url": "https://gamewith.jp/zenless/455959"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "attack",
+    "category": "battle",
+    "name": "強攻",
+    "reading": "きょうこう",
+    "summary": "ダメージを与える役割を中心とする特性。",
+    "body": "[[specialty|特性]]のひとつ。攻撃によるダメージを得意とするエージェントが属する。具体的な戦い方は[[agent]]ごとに異なる。",
+    "sources": [
+      {
+        "label": "Game8 特性の一覧（補助）",
+        "url": "https://game8.jp/zenless/622958"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "stun-specialty",
+    "category": "battle",
+    "name": "撃破",
+    "reading": "げきは",
+    "summary": "敵のブレイクを狙う役割を中心とする特性。",
+    "body": "[[specialty|特性]]のひとつ。[[daze]]を蓄積し、敵を[[stun]]させる役割を得意とする。",
+    "sources": [
+      {
+        "label": "Game8 特性の一覧（補助）",
+        "url": "https://game8.jp/zenless/622958"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "anomaly",
+    "category": "battle",
+    "name": "異常",
+    "reading": "いじょう",
+    "summary": "状態異常を活用する役割を中心とする特性。",
+    "body": "[[specialty|特性]]のひとつ。[[attribute-anomaly|状態異常]]の付与やダメージを活用するエージェントが属する。",
+    "sources": [
+      {
+        "label": "Game8 特性の一覧（補助）",
+        "url": "https://game8.jp/zenless/622958"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "support",
+    "category": "battle",
+    "name": "支援",
+    "reading": "しえん",
+    "summary": "味方の能力補助などを担う特性。",
+    "body": "[[specialty|特性]]のひとつ。味方の強化などを担うエージェントが属する。支援の方法は[[agent]]ごとに異なる。",
+    "sources": [
+      {
+        "label": "Game8 特性の一覧（補助）",
+        "url": "https://game8.jp/zenless/622958"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "defense",
+    "category": "battle",
+    "name": "防護",
+    "reading": "ぼうご",
+    "summary": "防御や味方の保護などを担う特性。",
+    "body": "[[specialty|特性]]のひとつ。味方の生存を助ける能力などを持つエージェントが属する。効果は[[agent]]ごとに異なる。",
+    "sources": [
+      {
+        "label": "Game8 特性の一覧（補助）",
+        "url": "https://game8.jp/zenless/622958"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "rupture",
+    "category": "battle",
+    "name": "命破",
+    "reading": "めいは",
+    "summary": "透徹ダメージなどを活用する特性。",
+    "body": "[[specialty|特性]]のひとつ。透徹ダメージを扱うエージェントが属する。詳しい能力や使用するリソースは[[agent]]ごとに確認する。",
+    "sources": [
+      {
+        "label": "公式 Ver.2.5 更新情報",
+        "url": "https://zenless.hoyoverse.com/ja-jp/news/161728"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "additional-ability",
+    "category": "growth",
+    "name": "追加能力",
+    "reading": "ついかのうりょく",
+    "summary": "編成などの条件を満たすと発動する能力。",
+    "body": "[[core-skill]]のひとつ。チーム内の[[specialty|特性]]や陣営など、[[agent]]ごとに定められた条件を満たすと効果を発揮する。",
+    "sources": [
+      {
+        "label": "HoYoWiki ヒューゴ・ヴラド",
+        "url": "https://wiki.hoyolab.com/pc/zzz/entry/707?lang=ja-jp"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "core-passive",
+    "category": "growth",
+    "name": "コアパッシブ",
+    "reading": "こあぱっしぶ",
+    "summary": "エージェント固有のコアスキルの一部。",
+    "body": "[[core-skill]]を構成する能力のひとつ。素材を使ってコアスキルを強化すると、対応する効果が向上する。",
+    "sources": [
+      {
+        "label": "HoYoWiki ヒューゴ・ヴラド",
+        "url": "https://wiki.hoyolab.com/pc/zzz/entry/707?lang=ja-jp"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "crit-rate",
+    "category": "battle",
+    "name": "会心率",
+    "reading": "かいしんりつ",
+    "summary": "対象の攻撃などで会心が発生する確率。",
+    "body": "会心が発生する確率に関わるステータス。会心発生時のダメージには[[crit-dmg]]も関係する。会心の可否はダメージの種類によって異なる。",
+    "sources": [
+      {
+        "label": "ファミ通 ステータス解説（補助）",
+        "url": "https://www.famitsu.com/article/202407/9520?page=1"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "crit-dmg",
+    "category": "battle",
+    "name": "会心ダメージ",
+    "reading": "かいしんだめーじ",
+    "summary": "会心発生時のダメージに関わるステータス。",
+    "body": "会心が発生したときのダメージに影響する。[[crit-rate]]は会心の発生確率に関わる別のステータス。",
+    "sources": [
+      {
+        "label": "ファミ通 ステータス解説（補助）",
+        "url": "https://www.famitsu.com/article/202407/9520?page=1"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "deadly-assault",
+    "category": "content",
+    "name": "危局強襲戦",
+    "reading": "ききょくきょうしゅうせん",
+    "summary": "強敵に挑戦し、スコアを目指す戦闘コンテンツ。",
+    "body": "[[agent]]を編成して強敵と戦うコンテンツ。挑戦内容や期間ごとの条件を確認して編成を組む。",
+    "sources": [
+      {
+        "label": "公式 Ver.1.4 更新情報",
+        "url": "https://zenless.hoyoverse.com/ja-jp/news/127445"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "combat-simulation",
+    "category": "content",
+    "name": "模擬実戦",
+    "reading": "もぎじっせん",
+    "summary": "育成素材などを獲得するための戦闘コンテンツ。",
+    "body": "敵との戦闘に挑み、[[agent]]の育成に使う素材などを獲得する。必要な素材に応じて挑戦内容を選ぶ。",
+    "sources": [
+      {
+        "label": "公式 Ver.1.4 更新情報",
+        "url": "https://zenless.hoyoverse.com/ja-jp/news/127445"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "expert-challenge",
+    "category": "content",
+    "name": "エキスパート挑戦",
+    "reading": "えきすぱーとちょうせん",
+    "summary": "コアスキルの育成素材などを得る挑戦。",
+    "body": "強敵に挑み、[[core-skill]]の強化に使う素材などを獲得する。必要な素材に対応する敵を選んで挑戦する。",
+    "sources": [
+      {
+        "label": "公式 Ver.2.5 更新情報",
+        "url": "https://zenless.hoyoverse.com/ja-jp/news/161728"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "hdd",
+    "category": "world",
+    "name": "H.D.D",
+    "reading": "えいちでぃーでぃー",
+    "summary": "ホロウの探索や通信に関わるシステム。",
+    "body": "主人公たちが[[hollow]]内の探索に利用するシステム。ナビ[[bangboo|ボンプ]]のイアスを介した案内などに使う。",
+    "sources": [
+      {
+        "label": "HoYoWiki Random Play",
+        "url": "https://wiki.hoyolab.com/pc/zzz/entry/96?lang=ja-jp"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
+  },
+  {
+    "id": "phaethon",
+    "category": "world",
+    "name": "パエトーン",
+    "reading": "ぱえとーん",
+    "summary": "主人公たちがプロキシとして使う名前。",
+    "body": "[[proxy|プロキシ]]として活動する主人公たちの名前。[[sixth-street]]のビデオ屋を拠点に、[[hdd]]などを使って[[hollow]]内の活動を案内する。",
+    "sources": [
+      {
+        "label": "HoYoWiki Random Play",
+        "url": "https://wiki.hoyolab.com/pc/zzz/entry/96?lang=ja-jp"
+      }
+    ],
+    "gameVersion": "3.3",
+    "dataAsOf": "2026-11-18"
   }
 ];
