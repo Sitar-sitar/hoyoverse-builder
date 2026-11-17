@@ -21,12 +21,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.aha-moment.body",
-    "ja": "[[path|愉悦の運命]]に関わる戦闘中の仕組み。キャラクターの能力によって発動や効果が変わり、終了後に「爆笑の褒美」を得る例もある。[[punchline|爆笑ネタ]]との関係は各能力を確認しよう。",
+    "ja": "[[path|愉悦の運命]]に関わる戦闘中の仕組み。キャラクターの能力によって発動や効果が変わり、終了後に[[certified-banger|爆笑の褒美]]を得る例もある。[[punchline|爆笑ネタ]]との関係は各能力を確認しよう。",
     "context": "glossary hsr term aha-moment: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[certified-banger|",
       "[[path|",
       "[[punchline|"
     ]
@@ -208,12 +209,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.relic-synthesis.body",
-    "ja": "素材を使い、指定したセットや部位の[[relics|遺物]]を作る仕組み。[[self-modeling-resin|自塑樹脂]]を使うと、メイン・サブステータスを指定できる。必要数や利用条件はゲーム内で確認しよう。",
+    "ja": "素材を使い、指定したセットや部位の[[relics|遺物]]を作る仕組み。[[self-modeling-resin|自塑樹脂]]を使うと、[[relic-main-stat|メイン]]・[[relic-sub-stat|サブステータス]]を指定できる。必要数や利用条件はゲーム内で確認しよう。",
     "context": "glossary hsr term relic-synthesis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[relic-main-stat|",
+      "[[relic-sub-stat|",
       "[[relics|",
       "[[self-modeling-resin|"
     ]
@@ -773,14 +776,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.wishpower.body",
-    "ja": "星神★アッハの能力に関わる戦闘中の資源。公式紹介では味方が蓄積に関わり、最大になると必殺技を発動できるとされる。[[energy|EP]]や[[punchline|爆笑ネタ]]とは区別しよう。",
+    "ja": "星神★アッハの能力に関わる戦闘中の資源。公式紹介では味方が蓄積に関わり、最大になると[[ultimate|必殺技]]を発動できるとされる。[[energy|EP]]や[[punchline|爆笑ネタ]]とは区別しよう。",
     "context": "glossary hsr term wishpower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[energy|",
-      "[[punchline|"
+      "[[punchline|",
+      "[[ultimate|"
     ]
   },
   {
@@ -1009,12 +1013,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.buff.body",
-    "ja": "攻撃力の上昇など、対象に有利に働く状態や効果。効果の内容や継続時間は能力によって異なる。[[debuff|デバフ]]とは区別して確認しよう。",
+    "ja": "[[attack|攻撃力]]の上昇など、対象に有利に働く状態や効果。効果の内容や継続時間は能力によって異なる。[[debuff|デバフ]]とは区別して確認しよう。",
     "context": "glossary hsr term buff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[attack|",
       "[[debuff|"
     ]
   },
@@ -1339,13 +1344,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.crowd-control.body",
-    "ja": "凍結など、対象の行動を制限する状態。解除の条件や持続時間は状態ごとに異なる。[[debuff|デバフ]]への抵抗や解除が関わる場合もあるため、能力の説明を確認しよう。",
+    "ja": "[[frozen|凍結]]など、対象の行動を制限する状態。解除の条件や持続時間は状態ごとに異なる。[[debuff|デバフ]]への抵抗や解除が関わる場合もあるため、能力の説明を確認しよう。",
     "context": "glossary hsr term crowd-control: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[debuff|"
+      "[[debuff|",
+      "[[frozen|"
     ]
   },
   {
@@ -1734,13 +1740,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.toughness.body",
-    "ja": "敵のHPとは別に表示されるゲージ。[[enemy-weakness|弱点属性]]の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
+    "ja": "敵の[[hp|HP]]とは別に表示されるゲージ。[[enemy-weakness|弱点属性]]の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
     "context": "glossary hsr term toughness: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[enemy-weakness|",
+      "[[hp|",
       "[[weakness-break]]"
     ]
   },
@@ -2152,14 +2159,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.xianzhou-alliance.body",
-    "ja": "仙舟「羅浮」などに関わる勢力。[[astral-express]]や[[interastral-peace-corporation|カンパニー]]とともに、さまざまな世界の物語に登場する。",
+    "ja": "[[xianzhou-luofu|仙舟「羅浮」]]などに関わる勢力。[[astral-express]]や[[interastral-peace-corporation|カンパニー]]とともに、さまざまな世界の物語に登場する。",
     "context": "glossary hsr term xianzhou-alliance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[astral-express]]",
-      "[[interastral-peace-corporation|"
+      "[[interastral-peace-corporation|",
+      "[[xianzhou-luofu|"
     ]
   },
   {
@@ -2301,13 +2309,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.resistance-penetration.body",
-    "ja": "対象の[[type-resistance|属性耐性]]を貫通する効果。対応する[[element|属性]]や継続時間は能力の説明を確認しよう。対象の防御力に関わる[[defense-ignore|防御力無視]]とは別の効果。",
+    "ja": "対象の[[type-resistance|属性耐性]]を貫通する効果。対応する[[element|属性]]や継続時間は能力の説明を確認しよう。対象の[[defense|防御力]]に関わる[[defense-ignore|防御力無視]]とは別の効果。",
     "context": "glossary hsr term resistance-penetration: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[defense-ignore|",
+      "[[defense|",
       "[[element|",
       "[[type-resistance|"
     ]
@@ -2362,12 +2371,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.healing.body",
-    "ja": "対象のHPを回復する効果。回復の対象や量、発動条件はキャラクターの能力などによって異なる。[[shield|バリア]]は受けるダメージを防ぐ別の効果。",
+    "ja": "対象の[[hp|HP]]を回復する効果。回復の対象や量、発動条件はキャラクターの能力などによって異なる。[[shield|バリア]]は受けるダメージを防ぐ別の効果。",
     "context": "glossary hsr term healing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[hp|",
       "[[shield|"
     ]
   },
@@ -2391,13 +2401,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.outgoing-healing-boost.body",
-    "ja": "[[healing|治癒]]によって回復するHPの量。能力の参照値や治癒に関する効果などによって変化する。対象や回復条件は能力ごとに確認しよう。",
+    "ja": "[[healing|治癒]]によって回復する[[hp|HP]]の量。能力の参照値や治癒に関する効果などによって変化する。対象や回復条件は能力ごとに確認しよう。",
     "context": "glossary hsr term outgoing-healing-boost: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[healing|"
+      "[[healing|",
+      "[[hp|"
     ]
   },
   {
@@ -2867,13 +2878,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.shield.body",
-    "ja": "対象に付与され、受けるダメージを防ぐ効果。耐久量や持続時間、付与できる対象は能力によって異なる。[[healing|治癒]]によるHP回復とは異なる。",
+    "ja": "対象に付与され、受けるダメージを防ぐ効果。耐久量や持続時間、付与できる対象は能力によって異なる。[[healing|治癒]]による[[hp|HP]]回復とは異なる。",
     "context": "glossary hsr term shield: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[healing|"
+      "[[healing|",
+      "[[hp|"
     ]
   },
   {
@@ -3280,14 +3292,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.equation.body",
-    "ja": "[[divergent-universe]]に登場する仕組み。指定された運命の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
+    "ja": "[[divergent-universe]]に登場する仕組み。指定された[[path|運命]]の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
     "context": "glossary hsr term equation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[blessing|",
-      "[[divergent-universe]]"
+      "[[divergent-universe]]",
+      "[[path|"
     ]
   },
   {
