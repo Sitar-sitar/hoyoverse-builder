@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.hsr.aha-moment.name": {
+    "text": "アッハタイム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aha-moment.summary": {
+    "text": "愉悦の運命に関わる戦闘中の仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aha-moment.body": {
+    "text": "[[path|愉悦の運命]]に関わる戦闘中の仕組み。キャラクターの能力によって発動や効果が変わり、終了後に「爆笑の褒美」を得る例もある。[[punchline|爆笑ネタ]]との関係は各能力を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.energy.name": {
     "text": "EP",
     "sourceHash": null,
@@ -55,6 +73,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.relic-synthesis.name": {
+    "text": "遺物合成",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-synthesis.summary": {
+    "text": "素材を使って遺物を作る仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-synthesis.body": {
+    "text": "素材を使い、指定したセットや部位の[[relics|遺物]]を作る仕組み。[[self-modeling-resin|自塑樹脂]]を使うと、メイン・サブステータスを指定できる。必要数や利用条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.herta-space-station.name": {
+    "text": "宇宙ステーション「ヘルタ」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.herta-space-station.summary": {
+    "text": "物語の序盤に訪れる宇宙ステーション。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.herta-space-station.body": {
+    "text": "開拓者が物語の序盤に訪れる宇宙ステーション。[[genius-society|天才クラブ]]のヘルタに関わり、[[astral-express|星穹列車]]の旅の出発点のひとつとなる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cosmic-fragment.name": {
+    "text": "宇宙の欠片",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cosmic-fragment.summary": {
+    "text": "模擬宇宙などの挑戦中に使う資源。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cosmic-fragment.body": {
+    "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得・使用する資源。[[blessing|祝福]]に関わる選択などに使う場面がある。利用できる用途は挑戦中に確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.path.name": {
     "text": "運命",
     "sourceHash": null,
@@ -87,6 +159,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.skill-point.body": {
     "text": "味方で共有するポイント。通常攻撃で回復し、戦闘スキルを使うと消費するのが基本。\n\nスキルや特殊な行動には例外もあるので、各キャラクターの説明も確認しよう。[[action-order]]に合わせてやりくりすると戦闘スキルを使いやすい。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus.name": {
+    "text": "オンパロス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus.summary": {
+    "text": "星穹列車が旅する謎に包まれた世界。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus.body": {
+    "text": "[[astral-express|星穹列車]]が開拓の旅で訪れる世界。公式紹介では外部から観測できない謎の天体として語られ、住民は「タイタン」と呼ばれる神を信仰している。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -145,6 +235,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.trailblaze-power.name": {
+    "text": "開拓力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-power.summary": {
+    "text": "素材を獲得する際などに使う資源。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.trailblaze-power.body": {
+    "text": "時間とともに回復する資源。[[calyx|疑似花萼]]などの報酬獲得に使う。[[reserved-trailblaze-power|予備開拓力]]は別に蓄積される。回復や上限の詳細はゲーム内で確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.serendipity-eidolon.name": {
+    "text": "奇縁星魂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.serendipity-eidolon.summary": {
+    "text": "対象キャラクターの追加スキルを解放する育成要素。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.serendipity-eidolon.body": {
+    "text": "対応キャラクターを所持し、そのキャラクターに対応する奇縁星魂を解放すると、追加スキルを獲得できる。通常の[[eidolon|星魂]]とは別の育成要素として、対象や解放条件をゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.memosprite.name": {
     "text": "記憶の精霊",
     "sourceHash": null,
@@ -163,6 +289,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.calyx.name": {
+    "text": "疑似花萼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.calyx.summary": {
+    "text": "育成素材などを獲得できるステージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.calyx.body": {
+    "text": "[[trailblaze-power|開拓力]]を使って報酬を獲得するステージ。「金」と「赤」があり、選ぶ蕾によって得られる素材が異なる。赤の一部では[[traces|軌跡]]素材を獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.traces.name": {
     "text": "軌跡",
     "sourceHash": null,
@@ -177,6 +321,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.traces.body": {
     "text": "素材を使ってキャラクターの能力を強化したり、追加能力やステータスを解放したりする育成要素。\n\n育成ガイドでは軌跡の育成進度を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.curio.name": {
+    "text": "奇物",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.curio.summary": {
+    "text": "模擬宇宙などの挑戦中に獲得する特殊なアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.curio.body": {
+    "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦に影響する特殊なアイテム。効果はそれぞれ異なり、有利なものだけでなく扱いに注意が必要なものもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.buff.name": {
+    "text": "強化状態",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.buff.summary": {
+    "text": "ステータス上昇など、対象に有利に働く効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.buff.body": {
+    "text": "攻撃力の上昇など、対象に有利に働く状態や効果。効果の内容や継続時間は能力によって異なる。[[debuff|デバフ]]とは区別して確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stagnant-shadow.name": {
+    "text": "凝結虚影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stagnant-shadow.summary": {
+    "text": "キャラクターの昇格素材を獲得できるステージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stagnant-shadow.body": {
+    "text": "敵に挑み、[[trailblaze-power|開拓力]]を使ってキャラクターの昇格に必要な素材を獲得できるステージ。必要な素材に対応した場所を選ぼう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -289,6 +487,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.crowd-control.name": {
+    "text": "行動不能状態",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crowd-control.summary": {
+    "text": "対象の行動を制限する状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.crowd-control.body": {
+    "text": "凍結など、対象の行動を制限する状態。解除の条件や持続時間は状態ごとに異なる。[[debuff|デバフ]]への抵抗や解除が関わる場合もあるため、能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.memory-of-chaos.name": {
     "text": "混沌の記憶",
     "sourceHash": null,
@@ -303,6 +519,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.memory-of-chaos.body": {
     "text": "「忘却の庭」にある挑戦コンテンツ。編成を整えてステージに挑み、条件に応じた報酬を目指す。\n\n[[pure-fiction]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.toughness-reduction.name": {
+    "text": "削靭値",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.toughness-reduction.summary": {
+    "text": "攻撃などによって敵の靭性を削る量。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.toughness-reduction.body": {
+    "text": "攻撃などが敵の[[toughness|靭性]]を削る量。攻撃や能力によって異なり、[[weakness-break-efficiency|弱点撃破効率]]などの影響を受ける。個々の条件は能力説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-sub-stat.name": {
+    "text": "サブステータス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-sub-stat.summary": {
+    "text": "遺物に付く追加のステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-sub-stat.body": {
+    "text": "[[relics|遺物]]に付く追加のステータス。強化によって新たに付いたり、既存の値が上がったりする。[[relic-main-stat|メインステータス]]とは別に表示される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -343,6 +595,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.self-modeling-resin.name": {
+    "text": "自塑樹脂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.self-modeling-resin.summary": {
+    "text": "遺物合成でメイン・サブステータスの指定に使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.self-modeling-resin.body": {
+    "text": "[[relic-synthesis|遺物合成]]で使うアイテム。作成する遺物の[[relic-main-stat|メインステータス]]や[[relic-sub-stat|サブステータス]]を指定できる。指定できる候補や必要数は合成画面で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.weakness-break.name": {
     "text": "弱点撃破",
     "sourceHash": null,
@@ -379,6 +649,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.enemy-weakness.name": {
+    "text": "弱点属性",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.enemy-weakness.summary": {
+    "text": "敵の靭性を削る際に関わる属性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.enemy-weakness.body": {
+    "text": "敵ごとに設定された[[element|属性]]。基本的に対応する属性の攻撃で[[toughness|靭性]]を削り、0にすると[[weakness-break|弱点撃破]]が発生する。能力によっては属性が一致しなくても靭性を削れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.blessing.name": {
+    "text": "祝福",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.blessing.summary": {
+    "text": "模擬宇宙などの挑戦中に獲得する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.blessing.body": {
+    "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cavern-of-corrosion.name": {
+    "text": "侵蝕トンネル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cavern-of-corrosion.summary": {
+    "text": "トンネル遺物を獲得できるステージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cavern-of-corrosion.body": {
+    "text": "敵に挑み、[[trailblaze-power|開拓力]]を使ってトンネル[[relics|遺物]]を獲得するステージ。場所によって獲得できる遺物のセットが異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.toughness.name": {
     "text": "靭性",
     "sourceHash": null,
@@ -393,6 +717,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.toughness.body": {
     "text": "敵のHPとは別に表示されるゲージ。弱点属性の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishful-resin.name": {
+    "text": "遂願樹脂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishful-resin.summary": {
+    "text": "かつて遺物合成でサブステータスの指定に使われていたアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wishful-resin.body": {
+    "text": "かつて[[relic-synthesis|遺物合成]]時の[[relic-sub-stat|サブステータス]]指定に使われたアイテム。Ver.3.5で[[self-modeling-resin|自塑樹脂]]へ統合され、所持分も自動で変換された。現在の合成には自塑樹脂を使う。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -505,6 +847,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.relic-set-effect.name": {
+    "text": "セット効果",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-set-effect.summary": {
+    "text": "同じセットの遺物を組み合わせたときに得られる効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-set-effect.body": {
+    "text": "同じセットの[[relics|遺物]]を所定の数だけ装備したときに発動する効果。トンネル遺物と[[planar-ornaments|次元界オーナメント]]では必要な装備数や効果をそれぞれ確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.xianzhou-alliance.name": {
     "text": "仙舟同盟",
     "sourceHash": null,
@@ -523,6 +883,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.skill.name": {
+    "text": "戦闘スキル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skill.summary": {
+    "text": "キャラクターが戦闘中に使う固有の能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skill.body": {
+    "text": "キャラクターが戦闘中に使う能力。基本的には味方で共有する[[skill-point|SP]]を消費する。攻撃、味方の強化、回復などの効果はキャラクターごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.element.name": {
+    "text": "属性",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.element.summary": {
+    "text": "キャラクターや攻撃などに設定される分類。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.element.body": {
+    "text": "物理・炎・氷・雷・風・量子・虚数の7種類がある。攻撃の属性と敵の[[enemy-weakness|弱点属性]]が合うと、通常は[[toughness|靭性]]を削れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.speed.name": {
     "text": "速度",
     "sourceHash": null,
@@ -537,6 +933,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.speed.body": {
     "text": "速度は[[action-order]]に影響し、値が高いほど一般に次の行動が早く回ってくる。[[relics]]などで調整できる。\n\n行動順を直接変えるスキルもあるため、速度だけで順番が決まるわけではない。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.healing.name": {
+    "text": "治癒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.healing.summary": {
+    "text": "対象のHPを回復する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.healing.body": {
+    "text": "対象のHPを回復する効果。回復の対象や量、発動条件はキャラクターの能力などによって異なる。[[shield|バリア]]は受けるダメージを防ぐ別の効果。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -577,6 +991,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.basic-attack.name": {
+    "text": "通常攻撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.basic-attack.summary": {
+    "text": "戦闘中に使う基本的な攻撃。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.basic-attack.body": {
+    "text": "戦闘中に使用する基本的な攻撃。通常は[[skill-point|SP]]を回復する。強化された通常攻撃など、効果や扱いが異なる場合は各能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.debuff.name": {
+    "text": "デバフ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.debuff.summary": {
+    "text": "対象の能力を下げるなど、不利に働く効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.debuff.body": {
+    "text": "能力の低下など、対象に不利に働く効果。付与には[[effect-hit-rate|効果命中]]や[[effect-res|効果抵抗]]が関係するものがあるが、能力によって条件は異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.genius-society.name": {
     "text": "天才クラブ",
     "sourceHash": null,
@@ -591,6 +1041,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.genius-society.body": {
     "text": "「知恵」の星神ヌースの目に留まった天才が会員になる集まり。会員には番号があり、公式の紹介ではマダム・ヘルタが#83、ルアン・メェイが#81とされている。\n\n会員の出身や研究分野、目指すものはそれぞれ異なり、多くはひとりで研究を続けている。組織として一緒に活動するというより、ヌースに選ばれたという点でつながった集まりに近い。\n\n「模擬宇宙」は、ヘルタ、ルアン・メェイ、スクリューガム、スティーブンという天才クラブの会員たちが共同で開発したものとされている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.talent.name": {
+    "text": "天賦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.talent.summary": {
+    "text": "キャラクター固有の、条件に応じて働く能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.talent.body": {
+    "text": "キャラクターが持つ固有の能力。発動条件と効果はそれぞれ異なり、条件を満たすと[[follow-up-attack|追加攻撃]]を行うものもある。[[traces|軌跡]]画面で能力の詳細を確認できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -613,6 +1081,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.punchline.name": {
+    "text": "爆笑ネタ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.punchline.summary": {
+    "text": "愉悦の運命に関わる戦闘中の資源。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.punchline.body": {
+    "text": "[[path|愉悦の運命]]に関わる能力などで獲得する資源。キャラクターによって獲得や利用の方法が異なり、[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shield.name": {
+    "text": "バリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shield.summary": {
+    "text": "受けるダメージを防ぐ効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shield.body": {
+    "text": "対象に付与され、受けるダメージを防ぐ効果。耐久量や持続時間、付与できる対象は能力によって異なる。[[healing|治癒]]によるHP回復とは異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.light-cone.name": {
     "text": "光円錐",
     "sourceHash": null,
@@ -627,6 +1131,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.light-cone.body": {
     "text": "キャラクターに装備し、ステータスや能力を補う。[[path]]に対応する光円錐を選ぶことが育成のポイント。\n\n育成ガイドではキャラクターの光円錐の育成進度を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.technique.name": {
+    "text": "秘技",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.technique.summary": {
+    "text": "戦闘に入る前に使うキャラクター固有の能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.technique.body": {
+    "text": "フィールド上で戦闘前に使用できる能力。戦闘開始時に効果を発揮するものなどがあり、効果や条件はキャラクターごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ultimate.name": {
+    "text": "必殺技",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ultimate.summary": {
+    "text": "必要なエネルギーをためて使うキャラクター固有の能力。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ultimate.body": {
+    "text": "必要な[[energy|EP]]などがたまると使用できる能力。通常の[[action-order|行動順]]とは異なるタイミングで使える。必要な資源や効果はキャラクターごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony.name": {
+    "text": "ピノコニー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony.summary": {
+    "text": "星穹列車が訪れる「宴の星」。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony.body": {
+    "text": "[[astral-express|星穹列車]]の仲間たちが招待を受けて訪れる「宴の星」。宇宙の各地から客が集まるリゾートとして知られる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equation.name": {
+    "text": "方程式",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equation.summary": {
+    "text": "階差宇宙で祝福の組み合わせにより解放する仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.equation.body": {
+    "text": "[[divergent-universe]]に登場する仕組み。指定された運命の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -649,6 +1225,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.relic-main-stat.name": {
+    "text": "メインステータス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-main-stat.summary": {
+    "text": "遺物の主となるステータス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.relic-main-stat.body": {
+    "text": "[[relics|遺物]]に付く主なステータス。候補は装備する部位によって異なり、遺物の強化で数値が上がる。[[relic-sub-stat|サブステータス]]とは別に表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.simulated-universe.name": {
     "text": "模擬宇宙",
     "sourceHash": null,
@@ -663,6 +1257,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.simulated-universe.body": {
     "text": "[[genius-society]]の会員たちが共同開発に関わったプロジェクト。ゲーム内では様々な試練に挑戦できる。\n\n関連する新プロジェクトとして[[divergent-universe]]がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.jarilo-vi.name": {
+    "text": "ヤリーロ-VI",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.jarilo-vi.summary": {
+    "text": "星穹列車が訪れる世界のひとつ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.jarilo-vi.body": {
+    "text": "[[astral-express|星穹列車]]の仲間たちが開拓の旅で訪れる世界。寒さに覆われた地で、開拓者たちはさまざまな人々と出会う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-damage.name": {
+    "text": "愉悦ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-damage.summary": {
+    "text": "「愉悦」に関わる能力で発生するダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-damage.body": {
+    "text": "[[path|愉悦の運命]]に関わる能力などで発生するダメージ。発生条件や効果はキャラクターごとに異なる。[[aha-moment|アッハタイム]]に関わる能力もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reserved-trailblaze-power.name": {
+    "text": "予備開拓力",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reserved-trailblaze-power.summary": {
+    "text": "通常の開拓力とは別に蓄積される資源。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reserved-trailblaze-power.body": {
+    "text": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.echo-of-war.name": {
+    "text": "歴戦余韻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.echo-of-war.summary": {
+    "text": "強敵に挑み、育成素材などを獲得できるコンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.echo-of-war.body": {
+    "text": "強敵との戦闘に挑み、[[trailblaze-power|開拓力]]を使って報酬を受け取るコンテンツ。[[traces|軌跡]]の強化に使う素材などが手に入る。報酬の受取条件はゲーム内で確認しよう。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
