@@ -39,8 +39,11 @@ export function collectBaseline() {
       },
     };
   }));
+  // The baseline preserves the original history; newer site announcements are tested separately.
+  const history = guideUpdateHistory();
+  const baselineHistory = { ...history, siteEvents: history.siteEvents.filter(event => !(event.date === "2026-11-18T12:00:00+09:00" && event.title === "用語集の収録内容を拡充")) };
   return { sourceRevision: BASELINE_SOURCE_REVISION, characters, unresolved,
-    catalog: characterReferenceCatalog(), ledger: characterUpdateLedger(), history: guideUpdateHistory() };
+    catalog: characterReferenceCatalog(), ledger: characterUpdateLedger(), history: baselineHistory };
 }
 
 export function baselineDigests(data = collectBaseline()) {
