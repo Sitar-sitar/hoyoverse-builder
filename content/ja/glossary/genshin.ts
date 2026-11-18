@@ -2,6 +2,35 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.genshin.inazuma.name",
+    "ja": "稲妻",
+    "context": "glossary genshin term inazuma: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.inazuma.summary",
+    "ja": "テイワットにある島々からなる地域。",
+    "context": "glossary genshin term inazuma: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.inazuma.body",
+    "ja": "[[teyvat]]の地域の一つ。公式の世界紹介では島々からなる国として紹介される。",
+    "context": "glossary genshin term inazuma: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
+    ]
+  },
+  {
     "id": "term.genshin.constellation.name",
     "ja": "命ノ星座",
     "context": "glossary genshin term constellation: Japanese official term name",
@@ -261,6 +290,93 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]",
       "[[quicken|"
+    ]
+  },
+  {
+    "id": "term.genshin.lunar-bloom.name",
+    "ja": "月開花",
+    "context": "glossary genshin term lunar-bloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-bloom.summary",
+    "ja": "開花に関連する月反応。",
+    "context": "glossary genshin term lunar-bloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-bloom.body",
+    "ja": "一部キャラクターの効果によって、チームが起こす[[bloom]]を月開花へ変化させられる。",
+    "context": "glossary genshin term lunar-bloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bloom]]"
+    ]
+  },
+  {
+    "id": "term.genshin.lunar-charged.name",
+    "ja": "月感電",
+    "context": "glossary genshin term lunar-charged: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-charged.summary",
+    "ja": "感電に関連する月反応。",
+    "context": "glossary genshin term lunar-charged: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-charged.body",
+    "ja": "一部キャラクターの効果によって、チームが起こす感電を月感電へ変化させられる。[[elemental-reaction]]に関連する。",
+    "context": "glossary genshin term lunar-charged: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-reaction]]"
+    ]
+  },
+  {
+    "id": "term.genshin.lunar-crystallize.name",
+    "ja": "月結晶",
+    "context": "glossary genshin term lunar-crystallize: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-crystallize.summary",
+    "ja": "結晶に関連する月反応。",
+    "context": "glossary genshin term lunar-crystallize: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lunar-crystallize.body",
+    "ja": "[[crystallize]]に関連する月反応。一部キャラクターはチーム内でこの反応を発動させられる。",
+    "context": "glossary genshin term lunar-crystallize: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crystallize]]"
     ]
   },
   {
@@ -675,6 +791,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sumeru.name",
+    "ja": "スメール",
+    "context": "glossary genshin term sumeru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sumeru.summary",
+    "ja": "テイワットにある地域。",
+    "context": "glossary genshin term sumeru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sumeru.body",
+    "ja": "[[teyvat]]の地域の一つ。雨林や砂漠のある国として紹介されている。",
+    "context": "glossary genshin term sumeru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
+    ]
+  },
+  {
     "id": "term.genshin.artifact.name",
     "ja": "聖遺物",
     "context": "glossary genshin term artifact: Japanese official term name",
@@ -959,13 +1104,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.teyvat.body",
-    "ja": "[[element|七つの元素]]が絡み合う世界。モンドや璃月など、それぞれ異なる文化を持つ地域がある。",
+    "ja": "[[element|七つの元素]]が絡み合う世界。[[mondstadt]]や[[liyue]]など、それぞれ異なる文化を持つ地域がある。",
     "context": "glossary genshin term teyvat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[element|"
+      "[[element|",
+      "[[liyue]]",
+      "[[mondstadt]]"
     ]
   },
   {
@@ -1019,14 +1166,73 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.talent.body",
-    "ja": "通常攻撃、[[elemental-skill]]、[[elemental-burst]]などの能力や固有の効果を指す。一部の天賦は素材を使ってレベルを上げられる。",
+    "ja": "[[normal-attack]]、[[elemental-skill]]、[[elemental-burst]]などの能力や固有の効果を指す。一部の天賦は素材を使ってレベルを上げられる。",
     "context": "glossary genshin term talent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
       "[[elemental-burst]]",
-      "[[elemental-skill]]"
+      "[[elemental-skill]]",
+      "[[normal-attack]]"
+    ]
+  },
+  {
+    "id": "term.genshin.natlan.name",
+    "ja": "ナタ",
+    "context": "glossary genshin term natlan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.natlan.summary",
+    "ja": "テイワットにある地域。",
+    "context": "glossary genshin term natlan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.natlan.body",
+    "ja": "[[teyvat]]の地域の一つ。公式の更新情報で聖火競技場などが登場する。",
+    "context": "glossary genshin term natlan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.nod-krai.name",
+    "ja": "ナド・クライ",
+    "context": "glossary genshin term nod-krai: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nod-krai.summary",
+    "ja": "テイワットの北に位置する地域。",
+    "context": "glossary genshin term nod-krai: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nod-krai.body",
+    "ja": "[[teyvat]]の地域の一つ。公式更新情報では鍛造武器や現地の人物が紹介されている。",
+    "context": "glossary genshin term nod-krai: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
     ]
   },
   {
@@ -1088,6 +1294,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]",
       "[[original-resin]]"
+    ]
+  },
+  {
+    "id": "term.genshin.fontaine.name",
+    "ja": "フォンテーヌ",
+    "context": "glossary genshin term fontaine: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fontaine.summary",
+    "ja": "テイワットにある地域。",
+    "context": "glossary genshin term fontaine: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fontaine.body",
+    "ja": "[[teyvat]]の地域の一つ。水に関わる景観を持つ地域として紹介されている。",
+    "context": "glossary genshin term fontaine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
     ]
   },
   {
@@ -1169,8 +1404,38 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.god.body",
-    "ja": "[[teyvat]]の歴史に登場する存在。公式の璃月紹介では岩の魔神に言及している。",
+    "ja": "[[teyvat]]の歴史に登場する存在。公式の[[liyue]]紹介では岩の魔神に言及している。",
     "context": "glossary genshin term god: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]",
+      "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.mondstadt.name",
+    "ja": "モンド",
+    "context": "glossary genshin term mondstadt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mondstadt.summary",
+    "ja": "テイワットにある都市・地域。",
+    "context": "glossary genshin term mondstadt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mondstadt.body",
+    "ja": "[[teyvat]]の地域の一つ。公式の世界紹介では自由の都として紹介される。",
+    "context": "glossary genshin term mondstadt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1227,12 +1492,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.nightsouls-blessing.body",
-    "ja": "ナタの一部キャラクターが入る状態。発動方法や効果はキャラクターによって異なり、[[nightsoul-burst]]とは別の仕組み。",
+    "ja": "[[natlan]]の一部キャラクターが入る状態。発動方法や効果はキャラクターによって異なり、[[nightsoul-burst]]とは別の仕組み。",
     "context": "glossary genshin term nightsouls-blessing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[natlan]]",
       "[[nightsoul-burst]]"
     ]
   },
@@ -1256,12 +1522,13 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.nightsoul-burst.body",
-    "ja": "チーム内のナタのキャラクターに関わる仕組みで、発生時にキャラクターの[[talent]]などが反応する。[[nightsouls-blessing|夜魂の加護]]とは別の仕組み。",
+    "ja": "チーム内の[[natlan]]のキャラクターに関わる仕組みで、発生時にキャラクターの[[talent]]などが反応する。[[nightsouls-blessing|夜魂の加護]]とは別の仕組み。",
     "context": "glossary genshin term nightsoul-burst: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[natlan]]",
       "[[nightsouls-blessing|",
       "[[talent]]"
     ]
@@ -1293,6 +1560,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[elemental-reaction]]"
+    ]
+  },
+  {
+    "id": "term.genshin.liyue.name",
+    "ja": "璃月",
+    "context": "glossary genshin term liyue: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.liyue.summary",
+    "ja": "テイワットにある港を中心とした地域。",
+    "context": "glossary genshin term liyue: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.liyue.body",
+    "ja": "[[teyvat]]の地域の一つ。公式の世界紹介では港を擁する商業都市として紹介される。",
+    "context": "glossary genshin term liyue: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[teyvat]]"
     ]
   },
   {

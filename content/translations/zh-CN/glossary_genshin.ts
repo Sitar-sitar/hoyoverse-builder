@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.genshin.inazuma.name": {
+    "text": "稲妻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.inazuma.summary": {
+    "text": "テイワットにある島々からなる地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.inazuma.body": {
+    "text": "[[teyvat]]の地域の一つ。公式の世界紹介では島々からなる国として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.constellation.name": {
     "text": "命ノ星座",
     "sourceHash": null,
@@ -159,6 +177,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.spread.body": {
     "text": "[[quicken|激化状態]]に草が作用すると発生し、反応を起こした草元素攻撃の基礎ダメージを増加させる。[[elemental-mastery]]も増加量に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-bloom.name": {
+    "text": "月開花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-bloom.summary": {
+    "text": "開花に関連する月反応。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-bloom.body": {
+    "text": "一部キャラクターの効果によって、チームが起こす[[bloom]]を月開花へ変化させられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-charged.name": {
+    "text": "月感電",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-charged.summary": {
+    "text": "感電に関連する月反応。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-charged.body": {
+    "text": "一部キャラクターの効果によって、チームが起こす感電を月感電へ変化させられる。[[elemental-reaction]]に関連する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-crystallize.name": {
+    "text": "月結晶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-crystallize.summary": {
+    "text": "結晶に関連する月反応。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lunar-crystallize.body": {
+    "text": "[[crystallize]]に関連する月反応。一部キャラクターはチーム内でこの反応を発動させられる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -415,6 +487,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sumeru.name": {
+    "text": "スメール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sumeru.summary": {
+    "text": "テイワットにある地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sumeru.body": {
+    "text": "[[teyvat]]の地域の一つ。雨林や砂漠のある国として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.artifact.name": {
     "text": "聖遺物",
     "sourceHash": null,
@@ -631,6 +721,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.natlan.name": {
+    "text": "ナタ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.natlan.summary": {
+    "text": "テイワットにある地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.natlan.body": {
+    "text": "[[teyvat]]の地域の一つ。公式の更新情報で聖火競技場などが登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nod-krai.name": {
+    "text": "ナド・クライ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nod-krai.summary": {
+    "text": "テイワットの北に位置する地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nod-krai.body": {
+    "text": "[[teyvat]]の地域の一つ。公式更新情報では鍛造武器や現地の人物が紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.condensed-resin.name": {
     "text": "濃縮樹脂",
     "sourceHash": null,
@@ -663,6 +789,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.domain.body": {
     "text": "挑戦できる場所の一つ。種類によって獲得できる報酬が異なり、[[artifact]]を入手できる秘境もある。報酬の受け取りには[[original-resin]]を使う場合がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fontaine.name": {
+    "text": "フォンテーヌ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fontaine.summary": {
+    "text": "テイワットにある地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fontaine.body": {
+    "text": "[[teyvat]]の地域の一つ。水に関わる景観を持つ地域として紹介されている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -717,6 +861,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.god.body": {
     "text": "[[teyvat]]の歴史に登場する存在。公式の璃月紹介では岩の魔神に言及している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mondstadt.name": {
+    "text": "モンド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mondstadt.summary": {
+    "text": "テイワットにある都市・地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mondstadt.body": {
+    "text": "[[teyvat]]の地域の一つ。公式の世界紹介では自由の都として紹介される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -789,6 +951,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.melt.body": {
     "text": "炎と氷による[[elemental-reaction]]。反応を起こした攻撃のダメージを増幅し、後から作用した元素によって倍率が異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.liyue.name": {
+    "text": "璃月",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.liyue.summary": {
+    "text": "テイワットにある港を中心とした地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.liyue.body": {
+    "text": "[[teyvat]]の地域の一つ。公式の世界紹介では港を擁する商業都市として紹介される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

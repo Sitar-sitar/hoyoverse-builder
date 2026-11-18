@@ -1,5 +1,10 @@
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "guide.glossary.20261118b.title": {"text": "3ゲームの用語集を更新", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118b.summary": {"text": "崩壊：スターレイル・原神・ゼンレスゾーンゼロの用語を追加しました。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118b.change": {"text": "スターレイル30件、原神10件、ゼンレスゾーンゼロ30件を追加。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118b.rationale": {"text": "ゲームごとの世界観や育成・探索の情報を調べやすくするため。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+
   "guide.glossary.20261118.title": {"text": "用語集の収録内容を拡充", "sourceHash": null, "origin": "legacy", "review": "pending"},
   "guide.glossary.20261118.summary": {"text": "原神の戦闘・育成・探索に関する用語を追加しました。", "sourceHash": null, "origin": "legacy", "review": "pending"},
   "guide.glossary.20261118.change": {"text": "原神の用語を20件追加し、3ゲームの用語集を利用できます。", "sourceHash": null, "origin": "legacy", "review": "pending"},
