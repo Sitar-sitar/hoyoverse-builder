@@ -217,6 +217,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.cloud-knights.name": {
+    "text": "雲騎軍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cloud-knights.summary": {
+    "text": "仙舟同盟を守る武装組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cloud-knights.body": {
+    "text": "[[xianzhou-alliance]]の軍。各仙舟に軍があり、公式紹介では素裳や彦卿が所属する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-cloud-quintet.name": {
+    "text": "雲上の五騎士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-cloud-quintet.summary": {
+    "text": "仙舟の歴史に名を残す五人の騎士。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-cloud-quintet.body": {
+    "text": "公式キャラクター紹介では鏡流が伝説の雲上の五騎士の一人として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.path.name": {
     "text": "運命",
     "sourceHash": null,
@@ -393,6 +429,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.crit-rate.body": {
     "text": "会心が発生する確率に関係する。発生時のダメージを決める[[crit-dmg|会心ダメージ]]とは別の値。\n\n攻撃やダメージの種類によって会心の扱いが異なるため、スキルの説明も確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stargazer-navalia.name": {
+    "text": "廻星港",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stargazer-navalia.summary": {
+    "text": "仙舟「羅浮」の星槎製造に関わる港。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stargazer-navalia.body": {
+    "text": "[[xianzhou-luofu]]の区域。[[starskiff]]の製造に関わる場所として紹介される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -739,6 +793,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.jade-abacus.name": {
+    "text": "玉兆",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.jade-abacus.summary": {
+    "text": "仙舟で使われる計算技術。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.jade-abacus.body": {
+    "text": "[[xianzhou-alliance]]で発明された晶石コンピューター。[[divination-commission]]の情報処理や推演にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.pure-fiction.name": {
     "text": "虚構叙事",
     "sourceHash": null,
@@ -847,6 +919,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.ambrosial-arbor.name": {
+    "text": "建木",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ambrosial-arbor.summary": {
+    "text": "仙舟「羅浮」の歴史に関わる巨木。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ambrosial-arbor.body": {
+    "text": "[[xianzhou-luofu]]の歴史に登場する樹木。公式資料では長命や仙舟の発展との関わりが語られている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.effect-res.name": {
     "text": "効果抵抗",
     "sourceHash": null,
@@ -897,6 +987,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.attack.body": {
     "text": "攻撃などの効果量を決める際に参照されるステータス。能力によっては[[hp|HP]]や[[defense|防御力]]などを参照するため、各能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.artisanship-commission.name": {
+    "text": "工造司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.artisanship-commission.summary": {
+    "text": "仙舟のものづくりに関わる組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.artisanship-commission.body": {
+    "text": "[[xianzhou-luofu]]にある組織で、[[stargazer-navalia]]は[[starskiff]]の製造に関わる場所。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -955,6 +1063,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.foxian.name": {
+    "text": "狐族",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.foxian.summary": {
+    "text": "仙舟に暮らす種族の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.foxian.body": {
+    "text": "[[xianzhou-alliance]]に暮らす種族。公式紹介では御空や椒丘などが狐族として登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.memory-of-chaos.name": {
     "text": "混沌の記憶",
     "sourceHash": null,
@@ -969,6 +1095,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.memory-of-chaos.body": {
     "text": "「忘却の庭」にある挑戦コンテンツ。編成を整えてステージに挑み、条件に応じた報酬を目指す。\n\n[[pure-fiction]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.heliobus.name": {
+    "text": "歳陽",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.heliobus.summary": {
+    "text": "固定された形を持たない生命体。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.heliobus.body": {
+    "text": "公式資料では、他者に寄生し感情を糧にする存在として紹介される。[[ten-lords-commission]]とも関係がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1063,6 +1207,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.vidyadhara.name": {
+    "text": "持明族",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.vidyadhara.summary": {
+    "text": "仙舟に暮らす種族の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.vidyadhara.body": {
+    "text": "[[xianzhou-alliance]]に暮らす種族。公式資料では、長い寿命の後に生まれ変わる仕組みが紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.weakness-break.name": {
     "text": "弱点撃破",
     "sourceHash": null,
@@ -1153,6 +1315,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.ten-lords-commission.name": {
+    "text": "十王司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ten-lords-commission.summary": {
+    "text": "仙舟「羅浮」の判官たちが属する組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ten-lords-commission.body": {
+    "text": "[[xianzhou-luofu]]の組織。雪衣や寒鴉、見習い判官のフォフォが公式紹介に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.blessing.name": {
     "text": "祝福",
     "sourceHash": null,
@@ -1167,6 +1347,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.blessing.body": {
     "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outworlders.name": {
+    "text": "殊俗の民",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outworlders.summary": {
+    "text": "仙舟に滞在する異世界出身者。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outworlders.body": {
+    "text": "[[xianzhou-luofu]]には商売や学問などのために訪れる、さまざまな世界の人々がいる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1441,6 +1639,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.starskiff.name": {
+    "text": "星槎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.starskiff.summary": {
+    "text": "仙舟で使われる船。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.starskiff.body": {
+    "text": "[[xianzhou-luofu]]内の移動などに使われる船。[[sky-faring-commission]]の業務や[[stargazer-navalia]]と関係する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.central-starskiff-haven.name": {
+    "text": "星槎海中枢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.central-starskiff-haven.summary": {
+    "text": "仙舟「羅浮」の港や商業の中心地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.central-starskiff-haven.body": {
+    "text": "[[xianzhou-luofu]]の区域。[[starskiff]]が行き交う場所で、商業や交通の拠点となっている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.aeon.name": {
     "text": "星神",
     "sourceHash": null,
@@ -1495,6 +1729,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.xianzhou-yuque.name": {
+    "text": "仙舟「玉闕」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-yuque.summary": {
+    "text": "仙舟同盟に属する仙舟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-yuque.body": {
+    "text": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式資料では玉闕にも[[divination-commission]]があるとされる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-xuling.name": {
+    "text": "仙舟「虚陵」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-xuling.summary": {
+    "text": "仙舟同盟に属する仙舟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-xuling.body": {
+    "text": "[[xianzhou-alliance]]の歴史に登場する仙舟。公式資料には災害時に他の仙舟が救援した記録がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-zhuming.name": {
+    "text": "仙舟「朱明」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-zhuming.summary": {
+    "text": "仙舟同盟に属する仙舟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-zhuming.body": {
+    "text": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式紹介では雲璃が朱明の剣士として登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-natives.name": {
+    "text": "仙舟人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-natives.summary": {
+    "text": "仙舟に暮らす長命の人々。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-natives.body": {
+    "text": "[[xianzhou-alliance]]に暮らす人々。公式資料では、成長後に老化が止まる長命種として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.xianzhou-alliance.name": {
     "text": "仙舟同盟",
     "sourceHash": null,
@@ -1509,6 +1815,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.xianzhou-alliance.body": {
     "text": "仙舟「羅浮」などに関わる勢力。[[astral-express]]や[[interastral-peace-corporation|カンパニー]]とともに、さまざまな世界の物語に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-fanghu.name": {
+    "text": "仙舟「方壺」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-fanghu.summary": {
+    "text": "仙舟同盟に属する仙舟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-fanghu.body": {
+    "text": "[[xianzhou-alliance]]の歴史に登場する仙舟。公式資料には他の仙舟と連携した戦いが記されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-yaoqing.name": {
+    "text": "仙舟「曜青」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-yaoqing.summary": {
+    "text": "仙舟同盟に属する仙舟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.xianzhou-yaoqing.body": {
+    "text": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式紹介では飛霄や椒丘が曜青の出身・所属として登場する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1563,6 +1905,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.treasure.body": {
     "text": "フィールドの探索中に見つけられる宝箱など。開けると報酬を獲得できる。場所や獲得条件はエリアごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wingweavers.name": {
+    "text": "造翼者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wingweavers.summary": {
+    "text": "仙舟の歴史に登場する種族。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wingweavers.body": {
+    "text": "公式資料では[[xianzhou-alliance]]と長く争ってきた有翼の種族として紹介される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1657,6 +2017,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.divination-commission.name": {
+    "text": "太卜司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.divination-commission.summary": {
+    "text": "仙舟で占いや情報の推演を担う組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.divination-commission.body": {
+    "text": "[[xianzhou-luofu]]では符玄が長を務める。航路や出来事を占う仕事に携わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.travel-log.name": {
     "text": "旅記録",
     "sourceHash": null,
@@ -1675,6 +2053,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.alchemy-commission.name": {
+    "text": "丹鼎司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.alchemy-commission.summary": {
+    "text": "仙舟の医療に関わる組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.alchemy-commission.body": {
+    "text": "[[xianzhou-luofu]]では医士の霊砂が司鼎を務める。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.erudition.name": {
     "text": "知恵",
     "sourceHash": null,
@@ -1689,6 +2085,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.erudition.body": {
     "text": "[[path|運命]]の一つ。知恵の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。複数の敵への攻撃を得意とするキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.realm-keeping-commission.name": {
+    "text": "地衡司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.realm-keeping-commission.summary": {
+    "text": "仙舟で住民の生活に関わる業務を担う組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.realm-keeping-commission.body": {
+    "text": "[[xianzhou-luofu]]の[[exalting-sanctum]]に分部があり、災害対応などの仕事を担う。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1801,6 +2215,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.exalting-sanctum.name": {
+    "text": "長楽天",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.exalting-sanctum.summary": {
+    "text": "仙舟「羅浮」の居住区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.exalting-sanctum.body": {
+    "text": "[[xianzhou-luofu]]にある、人々が暮らす区域の一つ。[[realm-keeping-commission]]の分部も置かれている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.harmony.name": {
     "text": "調和",
     "sourceHash": null,
@@ -1891,6 +2323,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.seven-arbiter-generals.name": {
+    "text": "帝弓七天将",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.seven-arbiter-generals.summary": {
+    "text": "仙舟に関わる将軍たち。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.seven-arbiter-generals.body": {
+    "text": "公式紹介では[[xianzhou-luofu]]の景元や[[xianzhou-yaoqing]]の飛霄が名を連ねる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.daily-training.name": {
     "text": "デイリー訓練",
     "sourceHash": null,
@@ -1941,6 +2391,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.genius-society.body": {
     "text": "「知恵」の星神ヌースの目に留まった天才が会員になる集まり。会員には番号があり、公式の紹介ではマダム・ヘルタが#83、ルアン・メェイが#81とされている。\n\n会員の出身や研究分野、目指すものはそれぞれ異なり、多くはひとりで研究を続けている。組織として一緒に活動するというより、ヌースに選ばれたという点でつながった集まりに近い。\n\n「模擬宇宙」は、ヘルタ、ルアン・メェイ、スクリューガム、スティーブンという天才クラブの会員たちが共同で開発したものとされている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sky-faring-commission.name": {
+    "text": "天舶司",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sky-faring-commission.summary": {
+    "text": "仙舟の航行や貿易に関わる組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sky-faring-commission.body": {
+    "text": "[[xianzhou-luofu]]では御空が主司を務める。停雲が代表を務める商団も関係する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2521,6 +2989,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.borisin.name": {
+    "text": "歩離人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.borisin.summary": {
+    "text": "仙舟同盟と長く争ってきた種族。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.borisin.body": {
+    "text": "[[xianzhou-alliance]]の歴史に登場する長命種。公式資料では、犬類に似た身体的特徴を持つと紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck.name": {
+    "text": "魔陰の身",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck.summary": {
+    "text": "仙舟の長命種に関わる状態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck.body": {
+    "text": "[[xianzhou-alliance]]の歴史で言及される状態。長命とともに現れる問題として公式資料に記されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.apocalyptic-shadow.name": {
     "text": "末日の幻影",
     "sourceHash": null,
@@ -2737,6 +3241,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.cloudford.name": {
+    "text": "流雲渡",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cloudford.summary": {
+    "text": "仙舟「羅浮」の貨物輸送に関わる港。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cloudford.body": {
+    "text": "[[xianzhou-luofu]]の区域。さまざまな世界からの貨物を扱う港として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.lucent-afterglow.name": {
     "text": "流光の残照",
     "sourceHash": null,
@@ -2751,6 +3273,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.lucent-afterglow.body": {
     "text": "[[light-cone-manifest|光円錐プレゼンス]]で[[light-cone|光円錐]]との交換に使うアイテム。[[echo-of-war|歴戦余韻]]などの報酬で入手できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-elder.name": {
+    "text": "龍尊",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-elder.summary": {
+    "text": "持明族に関わる尊長。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.high-elder.body": {
+    "text": "[[vidyadhara]]の歴史に登場する役割。公式資料では仙舟の歴史や建造物に龍尊の名が記されている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

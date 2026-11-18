@@ -373,6 +373,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.cloud-knights.name",
+    "ja": "雲騎軍",
+    "context": "glossary hsr term cloud-knights: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cloud-knights.summary",
+    "ja": "仙舟同盟を守る武装組織。",
+    "context": "glossary hsr term cloud-knights: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cloud-knights.body",
+    "ja": "[[xianzhou-alliance]]の軍。各仙舟に軍があり、公式紹介では素裳や彦卿が所属する。",
+    "context": "glossary hsr term cloud-knights: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.high-cloud-quintet.name",
+    "ja": "雲上の五騎士",
+    "context": "glossary hsr term high-cloud-quintet: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.high-cloud-quintet.summary",
+    "ja": "仙舟の歴史に名を残す五人の騎士。",
+    "context": "glossary hsr term high-cloud-quintet: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.high-cloud-quintet.body",
+    "ja": "[[xianzhou-alliance]]の歴史に名を残す集まり。公式紹介では鏡流が一人として紹介される。",
+    "context": "glossary hsr term high-cloud-quintet: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.path.name",
     "ja": "運命",
     "context": "glossary hsr term path: Japanese official term name",
@@ -676,6 +734,36 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[crit-dmg|"
+    ]
+  },
+  {
+    "id": "term.hsr.stargazer-navalia.name",
+    "ja": "廻星港",
+    "context": "glossary hsr term stargazer-navalia: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stargazer-navalia.summary",
+    "ja": "仙舟「羅浮」の星槎製造に関わる港。",
+    "context": "glossary hsr term stargazer-navalia: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stargazer-navalia.body",
+    "ja": "[[xianzhou-luofu]]の区域。[[starskiff]]の製造に関わる場所として紹介される。",
+    "context": "glossary hsr term stargazer-navalia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[starskiff]]",
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -1245,6 +1333,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.jade-abacus.name",
+    "ja": "玉兆",
+    "context": "glossary hsr term jade-abacus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.jade-abacus.summary",
+    "ja": "仙舟で使われる計算技術。",
+    "context": "glossary hsr term jade-abacus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.jade-abacus.body",
+    "ja": "[[xianzhou-alliance]]で発明された晶石コンピューター。[[divination-commission]]の情報処理や推演にも関わる。",
+    "context": "glossary hsr term jade-abacus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[divination-commission]]",
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.pure-fiction.name",
     "ja": "虚構叙事",
     "context": "glossary hsr term pure-fiction: Japanese official term name",
@@ -1425,6 +1543,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.ambrosial-arbor.name",
+    "ja": "建木",
+    "context": "glossary hsr term ambrosial-arbor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ambrosial-arbor.summary",
+    "ja": "仙舟「羅浮」の歴史に関わる巨木。",
+    "context": "glossary hsr term ambrosial-arbor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ambrosial-arbor.body",
+    "ja": "[[xianzhou-luofu]]の歴史に登場する樹木。公式資料では長命や仙舟の発展との関わりが語られている。",
+    "context": "glossary hsr term ambrosial-arbor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.effect-res.name",
     "ja": "効果抵抗",
     "context": "glossary hsr term effect-res: Japanese official term name",
@@ -1512,6 +1659,37 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[defense|",
       "[[hp|"
+    ]
+  },
+  {
+    "id": "term.hsr.artisanship-commission.name",
+    "ja": "工造司",
+    "context": "glossary hsr term artisanship-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.artisanship-commission.summary",
+    "ja": "仙舟のものづくりに関わる組織。",
+    "context": "glossary hsr term artisanship-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.artisanship-commission.body",
+    "ja": "[[xianzhou-luofu]]にある組織で、[[stargazer-navalia]]は[[starskiff]]の製造に関わる場所。",
+    "context": "glossary hsr term artisanship-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stargazer-navalia]]",
+      "[[starskiff]]",
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -1605,6 +1783,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.foxian.name",
+    "ja": "狐族",
+    "context": "glossary hsr term foxian: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.foxian.summary",
+    "ja": "仙舟に暮らす種族の一つ。",
+    "context": "glossary hsr term foxian: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.foxian.body",
+    "ja": "[[xianzhou-alliance]]に暮らす種族。公式紹介では御空や椒丘などが狐族として登場する。",
+    "context": "glossary hsr term foxian: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.memory-of-chaos.name",
     "ja": "混沌の記憶",
     "context": "glossary hsr term memory-of-chaos: Japanese official term name",
@@ -1633,6 +1840,35 @@ export const sources: SourceText[] = [
       "[[apocalyptic-shadow]]",
       "[[forgotten-hall|",
       "[[pure-fiction]]"
+    ]
+  },
+  {
+    "id": "term.hsr.heliobus.name",
+    "ja": "歳陽",
+    "context": "glossary hsr term heliobus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.heliobus.summary",
+    "ja": "固定された形を持たない生命体。",
+    "context": "glossary hsr term heliobus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.heliobus.body",
+    "ja": "公式資料では、他者に寄生し感情を糧にする存在として紹介される。[[ten-lords-commission]]とも関係がある。",
+    "context": "glossary hsr term heliobus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[ten-lords-commission]]"
     ]
   },
   {
@@ -1790,6 +2026,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.vidyadhara.name",
+    "ja": "持明族",
+    "context": "glossary hsr term vidyadhara: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.vidyadhara.summary",
+    "ja": "仙舟に暮らす種族の一つ。",
+    "context": "glossary hsr term vidyadhara: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.vidyadhara.body",
+    "ja": "[[xianzhou-alliance]]に暮らす種族。公式資料では、長い寿命の後に生まれ変わる仕組みが紹介される。",
+    "context": "glossary hsr term vidyadhara: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.weakness-break.name",
     "ja": "弱点撃破",
     "context": "glossary hsr term weakness-break: Japanese official term name",
@@ -1941,6 +2206,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.ten-lords-commission.name",
+    "ja": "十王司",
+    "context": "glossary hsr term ten-lords-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ten-lords-commission.summary",
+    "ja": "仙舟「羅浮」の判官たちが属する組織。",
+    "context": "glossary hsr term ten-lords-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ten-lords-commission.body",
+    "ja": "[[xianzhou-luofu]]の組織。雪衣や寒鴉、見習い判官のフォフォが公式紹介に登場する。",
+    "context": "glossary hsr term ten-lords-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.blessing.name",
     "ja": "祝福",
     "context": "glossary hsr term blessing: Japanese official term name",
@@ -1969,6 +2263,35 @@ export const sources: SourceText[] = [
       "[[divergent-universe]]",
       "[[equation|",
       "[[simulated-universe]]"
+    ]
+  },
+  {
+    "id": "term.hsr.outworlders.name",
+    "ja": "殊俗の民",
+    "context": "glossary hsr term outworlders: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.outworlders.summary",
+    "ja": "仙舟に滞在する異世界出身者。",
+    "context": "glossary hsr term outworlders: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.outworlders.body",
+    "ja": "[[xianzhou-luofu]]には商売や学問などのために訪れる、さまざまな世界の人々がいる。",
+    "context": "glossary hsr term outworlders: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -2422,6 +2745,67 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.starskiff.name",
+    "ja": "星槎",
+    "context": "glossary hsr term starskiff: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.starskiff.summary",
+    "ja": "仙舟で使われる船。",
+    "context": "glossary hsr term starskiff: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.starskiff.body",
+    "ja": "[[xianzhou-luofu]]内の移動などに使われる船。[[sky-faring-commission]]の業務や[[stargazer-navalia]]と関係する。",
+    "context": "glossary hsr term starskiff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sky-faring-commission]]",
+      "[[stargazer-navalia]]",
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
+    "id": "term.hsr.central-starskiff-haven.name",
+    "ja": "星槎海中枢",
+    "context": "glossary hsr term central-starskiff-haven: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.central-starskiff-haven.summary",
+    "ja": "仙舟「羅浮」の港や商業の中心地。",
+    "context": "glossary hsr term central-starskiff-haven: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.central-starskiff-haven.body",
+    "ja": "[[xianzhou-luofu]]の区域。[[starskiff]]が行き交う場所で、商業や交通の拠点となっている。",
+    "context": "glossary hsr term central-starskiff-haven: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[starskiff]]",
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.aeon.name",
     "ja": "星神",
     "context": "glossary hsr term aeon: Japanese official term name",
@@ -2515,6 +2899,123 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.xianzhou-yuque.name",
+    "ja": "仙舟「玉殿」",
+    "context": "glossary hsr term xianzhou-yuque: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-yuque.summary",
+    "ja": "仙舟同盟に属する仙舟。",
+    "context": "glossary hsr term xianzhou-yuque: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-yuque.body",
+    "ja": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式資料では玉闕にも[[divination-commission]]があるとされる。",
+    "context": "glossary hsr term xianzhou-yuque: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[divination-commission]]",
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.xianzhou-xuling.name",
+    "ja": "仙舟「虚陵」",
+    "context": "glossary hsr term xianzhou-xuling: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-xuling.summary",
+    "ja": "仙舟同盟に属する仙舟。",
+    "context": "glossary hsr term xianzhou-xuling: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-xuling.body",
+    "ja": "[[xianzhou-alliance]]の歴史に登場する仙舟。公式資料には災害時に他の仙舟が救援した記録がある。",
+    "context": "glossary hsr term xianzhou-xuling: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.xianzhou-zhuming.name",
+    "ja": "仙舟「朱明」",
+    "context": "glossary hsr term xianzhou-zhuming: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-zhuming.summary",
+    "ja": "仙舟同盟に属する仙舟。",
+    "context": "glossary hsr term xianzhou-zhuming: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-zhuming.body",
+    "ja": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式紹介では雲璃が朱明の剣士として登場する。",
+    "context": "glossary hsr term xianzhou-zhuming: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.xianzhou-natives.name",
+    "ja": "仙舟人",
+    "context": "glossary hsr term xianzhou-natives: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-natives.summary",
+    "ja": "仙舟に暮らす長命の人々。",
+    "context": "glossary hsr term xianzhou-natives: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-natives.body",
+    "ja": "[[xianzhou-alliance]]に暮らす人々。公式資料では、成長後に老化が止まる長命種として紹介される。",
+    "context": "glossary hsr term xianzhou-natives: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.xianzhou-alliance.name",
     "ja": "仙舟同盟",
     "context": "glossary hsr term xianzhou-alliance: Japanese official term name",
@@ -2543,6 +3044,64 @@ export const sources: SourceText[] = [
       "[[astral-express]]",
       "[[interastral-peace-corporation|",
       "[[xianzhou-luofu|"
+    ]
+  },
+  {
+    "id": "term.hsr.xianzhou-fanghu.name",
+    "ja": "仙舟「方壺」",
+    "context": "glossary hsr term xianzhou-fanghu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-fanghu.summary",
+    "ja": "仙舟同盟に属する仙舟。",
+    "context": "glossary hsr term xianzhou-fanghu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-fanghu.body",
+    "ja": "[[xianzhou-alliance]]の歴史に登場する仙舟。公式資料には他の仙舟と連携した戦いが記されている。",
+    "context": "glossary hsr term xianzhou-fanghu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.xianzhou-yaoqing.name",
+    "ja": "仙舟「曜青」",
+    "context": "glossary hsr term xianzhou-yaoqing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-yaoqing.summary",
+    "ja": "仙舟同盟に属する仙舟。",
+    "context": "glossary hsr term xianzhou-yaoqing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.xianzhou-yaoqing.body",
+    "ja": "[[xianzhou-alliance]]を構成する仙舟の一つ。公式紹介では飛霄や椒丘が曜青の出身・所属として登場する。",
+    "context": "glossary hsr term xianzhou-yaoqing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
     ]
   },
   {
@@ -2631,6 +3190,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[stellar-jade|"
+    ]
+  },
+  {
+    "id": "term.hsr.wingweavers.name",
+    "ja": "造翼者",
+    "context": "glossary hsr term wingweavers: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wingweavers.summary",
+    "ja": "仙舟の歴史に登場する種族。",
+    "context": "glossary hsr term wingweavers: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wingweavers.body",
+    "ja": "公式資料では[[xianzhou-alliance]]と長く争ってきた有翼の種族として紹介される。",
+    "context": "glossary hsr term wingweavers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
     ]
   },
   {
@@ -2787,6 +3375,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.divination-commission.name",
+    "ja": "太卜司",
+    "context": "glossary hsr term divination-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.divination-commission.summary",
+    "ja": "仙舟で占いや情報の推演を担う組織。",
+    "context": "glossary hsr term divination-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.divination-commission.body",
+    "ja": "[[xianzhou-luofu]]では符玄が長を務める。航路や出来事を占う仕事に携わる。",
+    "context": "glossary hsr term divination-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.travel-log.name",
     "ja": "旅記録",
     "context": "glossary hsr term travel-log: Japanese official term name",
@@ -2813,6 +3430,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[stellar-jade|"
+    ]
+  },
+  {
+    "id": "term.hsr.alchemy-commission.name",
+    "ja": "丹鼎司",
+    "context": "glossary hsr term alchemy-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.alchemy-commission.summary",
+    "ja": "仙舟の医療に関わる組織。",
+    "context": "glossary hsr term alchemy-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.alchemy-commission.body",
+    "ja": "[[xianzhou-luofu]]では医士の霊砂が司鼎を務める。",
+    "context": "glossary hsr term alchemy-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -2843,6 +3489,36 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[light-cone|",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.realm-keeping-commission.name",
+    "ja": "地衡司",
+    "context": "glossary hsr term realm-keeping-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.realm-keeping-commission.summary",
+    "ja": "仙舟で住民の生活に関わる業務を担う組織。",
+    "context": "glossary hsr term realm-keeping-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.realm-keeping-commission.body",
+    "ja": "[[xianzhou-luofu]]の[[exalting-sanctum]]に分部があり、災害対応などの仕事を担う。",
+    "context": "glossary hsr term realm-keeping-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[exalting-sanctum]]",
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -3027,6 +3703,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.exalting-sanctum.name",
+    "ja": "長楽天",
+    "context": "glossary hsr term exalting-sanctum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.exalting-sanctum.summary",
+    "ja": "仙舟「羅浮」の居住区。",
+    "context": "glossary hsr term exalting-sanctum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.exalting-sanctum.body",
+    "ja": "[[xianzhou-luofu]]にある、人々が暮らす区域の一つ。[[realm-keeping-commission]]の分部も置かれている。",
+    "context": "glossary hsr term exalting-sanctum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[realm-keeping-commission]]",
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.harmony.name",
     "ja": "調和",
     "context": "glossary hsr term harmony: Japanese official term name",
@@ -3174,6 +3880,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.seven-arbiter-generals.name",
+    "ja": "帝弓七天将",
+    "context": "glossary hsr term seven-arbiter-generals: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.seven-arbiter-generals.summary",
+    "ja": "仙舟に関わる将軍たち。",
+    "context": "glossary hsr term seven-arbiter-generals: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.seven-arbiter-generals.body",
+    "ja": "公式紹介では[[xianzhou-luofu]]の景元や[[xianzhou-yaoqing]]の飛霄が名を連ねる。",
+    "context": "glossary hsr term seven-arbiter-generals: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]",
+      "[[xianzhou-yaoqing]]"
+    ]
+  },
+  {
     "id": "term.hsr.daily-training.name",
     "ja": "デイリー訓練",
     "context": "glossary hsr term daily-training: Japanese official term name",
@@ -3260,6 +3996,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[aeon|",
       "[[simulated-universe]]"
+    ]
+  },
+  {
+    "id": "term.hsr.sky-faring-commission.name",
+    "ja": "天舶司",
+    "context": "glossary hsr term sky-faring-commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sky-faring-commission.summary",
+    "ja": "仙舟の航行や貿易に関わる組織。",
+    "context": "glossary hsr term sky-faring-commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sky-faring-commission.body",
+    "ja": "[[xianzhou-luofu]]では御空が主司を務める。停雲が代表を務める商団も関係する。",
+    "context": "glossary hsr term sky-faring-commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -4213,6 +4978,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.borisin.name",
+    "ja": "歩離人",
+    "context": "glossary hsr term borisin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.borisin.summary",
+    "ja": "仙舟同盟と長く争ってきた種族。",
+    "context": "glossary hsr term borisin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.borisin.body",
+    "ja": "[[xianzhou-alliance]]の歴史に登場する長命種。公式資料では、犬類に似た身体的特徴を持つと紹介される。",
+    "context": "glossary hsr term borisin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.mara-struck.name",
+    "ja": "魔陰の身",
+    "context": "glossary hsr term mara-struck: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mara-struck.summary",
+    "ja": "仙舟の長命種に関わる状態。",
+    "context": "glossary hsr term mara-struck: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mara-struck.body",
+    "ja": "[[xianzhou-alliance]]の歴史で言及される状態。長命とともに現れる問題として公式資料に記されている。",
+    "context": "glossary hsr term mara-struck: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-alliance]]"
+    ]
+  },
+  {
     "id": "term.hsr.apocalyptic-shadow.name",
     "ja": "末日の幻影",
     "context": "glossary hsr term apocalyptic-shadow: Japanese official term name",
@@ -4572,6 +5395,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.cloudford.name",
+    "ja": "流雲渡",
+    "context": "glossary hsr term cloudford: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cloudford.summary",
+    "ja": "仙舟「羅浮」の貨物輸送に関わる港。",
+    "context": "glossary hsr term cloudford: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cloudford.body",
+    "ja": "[[xianzhou-luofu]]の区域。さまざまな世界からの貨物を扱う港として紹介される。",
+    "context": "glossary hsr term cloudford: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.lucent-afterglow.name",
     "ja": "流光の残照",
     "context": "glossary hsr term lucent-afterglow: Japanese official term name",
@@ -4600,6 +5452,35 @@ export const sources: SourceText[] = [
       "[[echo-of-war|",
       "[[light-cone-manifest|",
       "[[light-cone|"
+    ]
+  },
+  {
+    "id": "term.hsr.high-elder.name",
+    "ja": "龍尊",
+    "context": "glossary hsr term high-elder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.high-elder.summary",
+    "ja": "持明族に関わる尊長。",
+    "context": "glossary hsr term high-elder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.high-elder.body",
+    "ja": "[[vidyadhara]]の歴史に登場する役割。公式資料では仙舟の歴史や建造物に龍尊の名が記されている。",
+    "context": "glossary hsr term high-elder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[vidyadhara]]"
     ]
   },
   {

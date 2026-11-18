@@ -1,5 +1,10 @@
 import type { SourceText } from "../../../shared/content/types";
 const block0: SourceText[] = [
+  {"id": "guide.glossary.20261118b.title", "ja": "3ゲームの用語集を更新", "context": "用語集の追加更新 title", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": ["3"]},
+  {"id": "guide.glossary.20261118b.summary", "ja": "崩壊：スターレイル・原神・ゼンレスゾーンゼロの用語を追加しました。", "context": "用語集の追加更新 summary", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
+  {"id": "guide.glossary.20261118b.change", "ja": "スターレイル30件、原神10件、ゼンレスゾーンゼロ30件を追加。", "context": "用語集の追加更新 change", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": ["30", "10"]},
+  {"id": "guide.glossary.20261118b.rationale", "ja": "ゲームごとの世界観や育成・探索の情報を調べやすくするため。", "context": "用語集の追加更新 rationale", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
+
   {"id": "guide.glossary.20261118.title", "ja": "用語集の収録内容を拡充", "context": "用語集の更新履歴 title", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
   {"id": "guide.glossary.20261118.summary", "ja": "原神の戦闘・育成・探索に関する用語を追加しました。", "context": "用語集の更新履歴 summary", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
   {"id": "guide.glossary.20261118.change", "ja": "原神の用語を20件追加し、3ゲームの用語集を利用できます。", "context": "用語集の更新履歴 change", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": ["20"]},
