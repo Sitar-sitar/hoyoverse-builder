@@ -18,9 +18,10 @@ import { adoptHistoryRecords } from "../../scripts/content/adoptHistoryRecords";
 
 describe("fixed history authoring", () => {
   it("keeps every event and later paragraph attached to its stable references", () => {
-    expect(historyRecords).toHaveLength(26);
+    expect(historyRecords).toHaveLength(27);
     const projected = staticHistoryEvents();
-    expect(projected.siteEvents).toHaveLength(17);
+    expect(projected.siteEvents).toHaveLength(18);
+    expect(projected.siteEvents[0]).toMatchObject({ title: "用語集の収録内容を拡充", games: ["hsr", "genshin", "zzz"], changes: ["原神の用語を20件追加し、3ゲームの用語集を利用できます。"] });
     expect(
       Object.values(projected.characterEvents)
         .flatMap(game => Object.values(game!))

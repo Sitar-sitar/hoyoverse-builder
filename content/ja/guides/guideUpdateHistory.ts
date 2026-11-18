@@ -1,5 +1,10 @@
 import type { SourceText } from "../../../shared/content/types";
 const block0: SourceText[] = [
+  {"id": "guide.glossary.20261118.title", "ja": "用語集の収録内容を拡充", "context": "用語集の更新履歴 title", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
+  {"id": "guide.glossary.20261118.summary", "ja": "原神の戦闘・育成・探索に関する用語を追加しました。", "context": "用語集の更新履歴 summary", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
+  {"id": "guide.glossary.20261118.change", "ja": "原神の用語を20件追加し、3ゲームの用語集を利用できます。", "context": "用語集の更新履歴 change", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": ["20"]},
+  {"id": "guide.glossary.20261118.rationale", "ja": "ゲーム内の仕組みや育成情報を調べやすくするため。", "context": "用語集の更新履歴 rationale", "audience": "public", "placeholders": {}, "dependencies": [], "protectedTokens": []},
+
   {
     "id": "guide.legacy.guideUpdateHistory.b00001",
     "ja": "ホタルの推奨PTを更新",

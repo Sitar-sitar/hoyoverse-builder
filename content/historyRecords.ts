@@ -1,5 +1,6 @@
 import type { HistoryRecord } from "../shared/content/domains";
 export const historyRecords: HistoryRecord[] = [
+  {"content": {"eventId": "history.event.glossary.20261118", "date": "2026-11-18T12:00:00+09:00", "title": {"kind": "textRef", "id": "guide.glossary.20261118.title"}, "summary": {"kind": "textRef", "id": "guide.glossary.20261118.summary"}, "changes": [{"blockId": "history.block.glossary.20261118.change", "text": {"kind": "textRef", "id": "guide.glossary.20261118.change"}}], "rationale": {"kind": "textRef", "id": "guide.glossary.20261118.rationale"}}, "scope": "site", "games": ["hsr", "genshin", "zzz"], "legacyFieldOrder": ["date", "scope", "games", "title", "summary", "changes", "rationale"]},
   {
     content: {
       eventId: "history.event.guide.legacy.guideUpdateHistory.b00001",

@@ -1,5 +1,10 @@
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "guide.glossary.20261118.title": {"text": "用語集の収録内容を拡充", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118.summary": {"text": "原神の戦闘・育成・探索に関する用語を追加しました。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118.change": {"text": "原神の用語を20件追加し、3ゲームの用語集を利用できます。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+  "guide.glossary.20261118.rationale": {"text": "ゲーム内の仕組みや育成情報を調べやすくするため。", "sourceHash": null, "origin": "legacy", "review": "pending"},
+
   "guide.batch29.b00244": {
   "text": "第29バッチ：新規キャラクター11名",
   "sourceHash": null,
