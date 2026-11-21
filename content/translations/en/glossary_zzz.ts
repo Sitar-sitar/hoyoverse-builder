@@ -433,6 +433,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kanpa.name": {
+    "text": "看破",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kanpa.summary": {
+    "text": "敵の行動を中断した際に発動する効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kanpa.body": {
+    "text": "敵のスキル発動中に中断レベルの高いスキルを命中させ、その行動の中断に成功すると発動する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kikaijin.name": {
+    "text": "機械人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kikaijin.summary": {
+    "text": "人の姿に似た自動機械。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kikaijin.body": {
+    "text": "人型の自動機械を指す。高度な論理コアやAIを持ち、自我を備えた個体もいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.deadly-assault.name": {
     "text": "危局強襲戦",
     "sourceHash": null,
@@ -465,6 +501,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.main-stat.body": {
     "text": "[[drive-disc]]が持つ主なステータス。装備する部位により付く種類が異なり、ディスクを強化すると数値が上がる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyarotto.name": {
+    "text": "キャロット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyarotto.summary": {
+    "text": "ホロウ内部の構造を示す地図データ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyarotto.body": {
+    "text": "変化するホロウの内部を進むための情報。探索や統計を基に作られる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyuuto-kanraku.name": {
+    "text": "旧都陥落",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyuuto-kanraku.summary": {
+    "text": "旧エリー都が放棄されることになった事件。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyuuto-kanraku.body": {
+    "text": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -523,6 +595,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kyousei-hollow.name": {
+    "text": "共生ホロウ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyousei-hollow.summary": {
+    "text": "既存のホロウから派生して生じるホロウ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyousei-hollow.body": {
+    "text": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.quick-assist.name": {
     "text": "クイック支援",
     "sourceHash": null,
@@ -577,6 +667,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.gensei-hollow.name": {
+    "text": "原生ホロウ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gensei-hollow.summary": {
+    "text": "共生ホロウを生み出す規模に成長したホロウ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gensei-hollow.body": {
+    "text": "大型ホロウとも呼ばれる。一定以上に成長すると共生ホロウを生むようになる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.core-skill.name": {
     "text": "コアスキル",
     "sourceHash": null,
@@ -609,6 +717,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.core-passive.body": {
     "text": "[[core-skill]]を構成する能力のひとつ。素材を使ってコアスキルを強化すると、対応する効果が向上する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.name": {
+    "text": "輝磁",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.summary": {
+    "text": "エーテルの遮断に使われる材料。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.body": {
+    "text": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.name": {
+    "text": "輝嶺石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.summary": {
+    "text": "加工すると輝磁になる鉱石。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.body": {
+    "text": "ラマニアンホロウで採れる特殊な鉱石。加工後の輝磁はエーテルの遮断に用いられる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

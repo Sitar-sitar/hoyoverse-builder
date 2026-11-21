@@ -37,6 +37,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.commission.name": {
+    "text": "依頼任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.commission.summary": {
+    "text": "日々挑戦できる任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.commission.body": {
+    "text": "敵の討伐や人物からの依頼などがあり、達成すると報酬を受け取れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.bloom.name": {
     "text": "開花",
     "sourceHash": null,
@@ -451,6 +469,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.shuuren-point.name": {
+    "text": "修練ポイント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shuuren-point.summary": {
+    "text": "探索や任務などで得られるポイント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shuuren-point.body": {
+    "text": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vaporize.name": {
     "text": "蒸発",
     "sourceHash": null,
@@ -555,6 +591,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.artifact-transmuter.body": {
     "text": "[[artifact]]の抽出や、[[sanctifying-elixir]]を使った聖遺物との交換に使用する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.name": {
+    "text": "世界任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.summary": {
+    "text": "探索などを通して受注する任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.body": {
+    "text": "各地の人物や探索に関わる任務。地域の仕掛けや探索範囲の解放につながるものもある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -681,6 +735,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.teyvat.body": {
     "text": "[[element|七つの元素]]が絡み合う世界。モンドや璃月など、それぞれ異なる文化を持つ地域がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.name": {
+    "text": "伝説任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.summary": {
+    "text": "キャラクターに焦点を当てた任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.body": {
+    "text": "キャラクターごとの物語を楽しめる任務。一部は他の任務の進行条件や挑戦の解放に関わる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

@@ -859,6 +859,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.kaitakureki.name",
+    "ja": "開拓歴",
+    "context": "glossary hsr term kaitakureki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kaitakureki.summary",
+    "ja": "星穹列車で使われる暦。",
+    "context": "glossary hsr term kaitakureki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kaitakureki.body",
+    "ja": "星穹列車が使用する暦で、開拓の星神の故郷に由来するとされる。一年は十二の暦月に分かれる。",
+    "context": "glossary hsr term kaitakureki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.trailblaze-level.name",
     "ja": "開拓レベル",
     "context": "glossary hsr term trailblaze-level: Japanese official term name",
@@ -1304,6 +1331,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.kyoukankaku-biikon.name",
+    "ja": "共感覚ビーコン",
+    "context": "glossary hsr term kyoukankaku-biikon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kyoukankaku-biikon.summary",
+    "ja": "異なる言語の意思疎通を助ける技術。",
+    "context": "glossary hsr term kyoukankaku-biikon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kyoukankaku-biikon.body",
+    "ja": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。",
+    "context": "glossary hsr term kyoukankaku-biikon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.stagnant-shadow.name",
     "ja": "凝結虚影",
     "context": "glossary hsr term stagnant-shadow: Japanese official term name",
@@ -1391,6 +1445,33 @@ export const sources: SourceText[] = [
       "[[apocalyptic-shadow]]",
       "[[memory-of-chaos]]"
     ]
+  },
+  {
+    "id": "term.hsr.kyosuu-no-ki.name",
+    "ja": "虚数の樹",
+    "context": "glossary hsr term kyosuu-no-ki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kyosuu-no-ki.summary",
+    "ja": "宇宙の構造を樹にたとえる理論。",
+    "context": "glossary hsr term kyosuu-no-ki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kyosuu-no-ki.body",
+    "ja": "異なる時空の世界を樹にたとえて捉える宇宙に関する理論。",
+    "context": "glossary hsr term kyosuu-no-ki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.nihility.name",
@@ -1810,6 +1891,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[xianzhou-alliance]]"
     ]
+  },
+  {
+    "id": "term.hsr.kohakuki.name",
+    "ja": "琥珀紀",
+    "context": "glossary hsr term kohakuki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kohakuki.summary",
+    "ja": "銀河で広く使われる暦。",
+    "context": "glossary hsr term kohakuki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kohakuki.body",
+    "ja": "スターピースカンパニーが広めた暦。存護の星神が鎚を振るうごとに新しい紀が始まり、一紀の長さは一定ではない。",
+    "context": "glossary hsr term kohakuki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.memory-of-chaos.name",

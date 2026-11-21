@@ -60,6 +60,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.commission.name",
+    "ja": "依頼任務",
+    "context": "glossary genshin term commission: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.commission.summary",
+    "ja": "日々挑戦できる任務。",
+    "context": "glossary genshin term commission: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.commission.body",
+    "ja": "敵の討伐や人物からの依頼などがあり、達成すると報酬を受け取れる。",
+    "context": "glossary genshin term commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.bloom.name",
     "ja": "開花",
     "context": "glossary genshin term bloom: Japanese official term name",
@@ -733,6 +760,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.shuuren-point.name",
+    "ja": "修練ポイント",
+    "context": "glossary genshin term shuuren-point: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.shuuren-point.summary",
+    "ja": "探索や任務などで得られるポイント。",
+    "context": "glossary genshin term shuuren-point: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.shuuren-point.body",
+    "ja": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "context": "glossary genshin term shuuren-point: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.vaporize.name",
     "ja": "蒸発",
     "context": "glossary genshin term vaporize: Japanese official term name",
@@ -904,6 +958,33 @@ export const sources: SourceText[] = [
       "[[artifact]]",
       "[[sanctifying-elixir]]"
     ]
+  },
+  {
+    "id": "term.genshin.world-quest.name",
+    "ja": "世界任務",
+    "context": "glossary genshin term world-quest: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.world-quest.summary",
+    "ja": "探索などを通して受注する任務。",
+    "context": "glossary genshin term world-quest: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.world-quest.body",
+    "ja": "各地の人物や探索に関わる任務。地域の仕掛けや探索範囲の解放につながるものもある。",
+    "context": "glossary genshin term world-quest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.world-level.name",
@@ -1114,6 +1195,33 @@ export const sources: SourceText[] = [
       "[[liyue]]",
       "[[mondstadt]]"
     ]
+  },
+  {
+    "id": "term.genshin.story-quest.name",
+    "ja": "伝説任務",
+    "context": "glossary genshin term story-quest: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.story-quest.summary",
+    "ja": "キャラクターに焦点を当てた任務。",
+    "context": "glossary genshin term story-quest: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.story-quest.body",
+    "ja": "キャラクターごとの物語を楽しめる任務。一部は他の任務の進行条件や挑戦の解放に関わる。",
+    "context": "glossary genshin term story-quest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.original-resin.name",

@@ -705,6 +705,60 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kanpa.name",
+    "ja": "看破",
+    "context": "glossary zzz term kanpa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kanpa.summary",
+    "ja": "敵の行動を中断した際に発動する効果。",
+    "context": "glossary zzz term kanpa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kanpa.body",
+    "ja": "敵のスキル発動中に中断レベルの高いスキルを命中させ、その行動の中断に成功すると発動する。",
+    "context": "glossary zzz term kanpa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kikaijin.name",
+    "ja": "機械人",
+    "context": "glossary zzz term kikaijin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kikaijin.summary",
+    "ja": "人の姿に似た自動機械。",
+    "context": "glossary zzz term kikaijin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kikaijin.body",
+    "ja": "人型の自動機械を指す。高度な論理コアやAIを持ち、自我を備えた個体もいる。",
+    "context": "glossary zzz term kikaijin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.deadly-assault.name",
     "ja": "危局強襲戦",
     "context": "glossary zzz term deadly-assault: Japanese official term name",
@@ -761,6 +815,60 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]"
     ]
+  },
+  {
+    "id": "term.zzz.kyarotto.name",
+    "ja": "キャロット",
+    "context": "glossary zzz term kyarotto: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyarotto.summary",
+    "ja": "ホロウ内部の構造を示す地図データ。",
+    "context": "glossary zzz term kyarotto: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyarotto.body",
+    "ja": "変化するホロウの内部を進むための情報。探索や統計を基に作られる。",
+    "context": "glossary zzz term kyarotto: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyuuto-kanraku.name",
+    "ja": "旧都陥落",
+    "context": "glossary zzz term kyuuto-kanraku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyuuto-kanraku.summary",
+    "ja": "旧エリー都が放棄されることになった事件。",
+    "context": "glossary zzz term kyuuto-kanraku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyuuto-kanraku.body",
+    "ja": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "context": "glossary zzz term kyuuto-kanraku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.ex-special-attack.name",
@@ -852,6 +960,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kyousei-hollow.name",
+    "ja": "共生ホロウ",
+    "context": "glossary zzz term kyousei-hollow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyousei-hollow.summary",
+    "ja": "既存のホロウから派生して生じるホロウ。",
+    "context": "glossary zzz term kyousei-hollow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyousei-hollow.body",
+    "ja": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。",
+    "context": "glossary zzz term kyousei-hollow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.quick-assist.name",
     "ja": "クイック支援",
     "context": "glossary zzz term quick-assist: Japanese official term name",
@@ -941,6 +1076,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.gensei-hollow.name",
+    "ja": "原生ホロウ",
+    "context": "glossary zzz term gensei-hollow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gensei-hollow.summary",
+    "ja": "共生ホロウを生み出す規模に成長したホロウ。",
+    "context": "glossary zzz term gensei-hollow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gensei-hollow.body",
+    "ja": "大型ホロウとも呼ばれる。一定以上に成長すると共生ホロウを生むようになる。",
+    "context": "glossary zzz term gensei-hollow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.core-skill.name",
     "ja": "コアスキル",
     "context": "glossary zzz term core-skill: Japanese official term name",
@@ -998,6 +1160,60 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[core-skill]]"
     ]
+  },
+  {
+    "id": "term.zzz.kouji.name",
+    "ja": "輝磁",
+    "context": "glossary zzz term kouji: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kouji.summary",
+    "ja": "エーテルの遮断に使われる材料。",
+    "context": "glossary zzz term kouji: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kouji.body",
+    "ja": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "context": "glossary zzz term kouji: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.name",
+    "ja": "輝嶺石",
+    "context": "glossary zzz term koureiseki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.summary",
+    "ja": "加工すると輝磁になる鉱石。",
+    "context": "glossary zzz term koureiseki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.body",
+    "ja": "ラマニアンホロウで採れる特殊な鉱石。加工後の輝磁はエーテルの遮断に用いられる。",
+    "context": "glossary zzz term koureiseki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.disorder.name",

@@ -505,6 +505,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.kaitakureki.name": {
+    "text": "開拓歴",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kaitakureki.summary": {
+    "text": "星穹列車で使われる暦。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kaitakureki.body": {
+    "text": "星穹列車が使用する暦で、開拓の星神の故郷に由来するとされる。一年は十二の暦月に分かれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.trailblaze-level.name": {
     "text": "開拓レベル",
     "sourceHash": null,
@@ -775,6 +793,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.kyoukankaku-biikon.name": {
+    "text": "共感覚ビーコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyoukankaku-biikon.summary": {
+    "text": "異なる言語の意思疎通を助ける技術。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyoukankaku-biikon.body": {
+    "text": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.stagnant-shadow.name": {
     "text": "凝結虚影",
     "sourceHash": null,
@@ -825,6 +861,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.pure-fiction.body": {
     "text": "ゲーム内の挑戦コンテンツのひとつ。敵との戦闘に挑み、ステージごとの条件に応じた報酬を目指す。\n\n[[memory-of-chaos]]・[[apocalyptic-shadow]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyosuu-no-ki.name": {
+    "text": "虚数の樹",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyosuu-no-ki.summary": {
+    "text": "宇宙の構造を樹にたとえる理論。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyosuu-no-ki.body": {
+    "text": "異なる時空の世界を樹にたとえて捉える宇宙に関する理論。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1077,6 +1131,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.foxian.body": {
     "text": "[[xianzhou-alliance]]に暮らす種族。公式紹介では御空や椒丘などが狐族として登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kohakuki.name": {
+    "text": "琥珀紀",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kohakuki.summary": {
+    "text": "銀河で広く使われる暦。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kohakuki.body": {
+    "text": "スターピースカンパニーが広めた暦。存護の星神が鎚を振るうごとに新しい紀が始まり、一紀の長さは一定ではない。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
