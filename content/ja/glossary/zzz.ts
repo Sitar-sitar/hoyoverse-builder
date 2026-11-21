@@ -1056,7 +1056,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.kyuuto-kanraku.body",
-    "ja": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "ja": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term kyuuto-kanraku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1172,7 +1172,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.kyousei-hollow.body",
-    "ja": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。",
+    "ja": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term kyousei-hollow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1486,7 +1486,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.kouji.body",
-    "ja": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "ja": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term kouji: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1513,7 +1513,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.koureiseki.body",
-    "ja": "衛非地区は輝嶺石の主要な産地で、輝磁製品の加工も行われている。",
+    "ja": "衛非地区は輝嶺石の主要な産地で、輝磁製品の加工も行われている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term koureiseki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2038,7 +2038,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.new-eridu-public-security.body",
-    "ja": "各種の事務手続きや、市民からの要望に応じた支援を行う。",
+    "ja": "各種の事務手続きや、市民からの要望に応じた支援を行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term new-eridu-public-security: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2403,7 +2403,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.cheesetopia.body",
-    "ja": "[[blazewood]]にある施設。カリュドーンの子に関わる場所。",
+    "ja": "[[blazewood]]にある施設。カリュドーンの子に関わる場所。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term cheesetopia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2459,7 +2459,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.lumina-security-branch.body",
-    "ja": "[[lumina-square]]にある[[new-eridu-public-security]]の分署。",
+    "ja": "[[lumina-square]]にある[[new-eridu-public-security]]の分署。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term lumina-security-branch: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2489,7 +2489,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.training-course.body",
-    "ja": "調査員向けの講座。公式更新情報では専用画面の操作改善が案内されている。",
+    "ja": "調査員向けの講座。公式更新情報では専用画面の操作改善が案内されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term training-course: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2606,7 +2606,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.enemies.body",
-    "ja": "敵対ターゲットに関する項目。公式更新情報では関連するアチーブメントが案内されている。",
+    "ja": "敵対ターゲットに関する項目。公式更新情報では関連するアチーブメントが案内されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term enemies: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3140,7 +3140,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.blazewood.body",
-    "ja": "郊外の町で、カリュドーンの子が活動する地域。",
+    "ja": "郊外の町で、カリュドーンの子が活動する地域。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term blazewood: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3772,7 +3772,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.notorious-hunt.body",
-    "ja": "強敵との戦闘に挑む。チーム編成時には人数や育成状況に応じたヒントが表示される。",
+    "ja": "強敵との戦闘に挑む。チーム編成時には人数や育成状況に応じたヒントが表示される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term notorious-hunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3918,7 +3918,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.zzz.lumina-square.body",
-    "ja": "治安局の施設やHIAキャリアセンターがある街区。",
+    "ja": "治安局の施設やHIAキャリアセンターがある街区。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term lumina-square: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},

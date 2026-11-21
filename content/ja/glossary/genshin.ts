@@ -164,7 +164,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.commission.body",
-    "ja": "敵の討伐や人物からの依頼などがあり、達成すると報酬を受け取れる。",
+    "ja": "敵の討伐や人物からの依頼などがあり、達成すると報酬を受け取れる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term commission: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1306,7 +1306,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.shuuren-point.body",
-    "ja": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "ja": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term shuuren-point: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1618,7 +1618,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.world-quest.body",
-    "ja": "各地の人物や探索に関わる任務。地域の仕掛けや探索範囲の解放につながるものもある。",
+    "ja": "各地の人物や探索に関わる任務。地域の仕掛けや探索範囲の解放につながるものもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term world-quest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2223,7 +2223,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.genshin.story-quest.body",
-    "ja": "キャラクターごとの物語を楽しめる任務。一部は他の任務の進行条件や挑戦の解放に関わる。",
+    "ja": "キャラクターごとの物語を楽しめる任務。一部は他の任務の進行条件や挑戦の解放に関わる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term story-quest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
