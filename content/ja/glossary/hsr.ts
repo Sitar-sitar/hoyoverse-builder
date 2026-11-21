@@ -60,6 +60,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.captain-of-tempestuous-waves.name",
+    "ja": "荒海を越える船長",
+    "context": "glossary hsr term captain-of-tempestuous-waves: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.captain-of-tempestuous-waves.summary",
+    "ja": "会心ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term captain-of-tempestuous-waves: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.captain-of-tempestuous-waves.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は会心ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term captain-of-tempestuous-waves: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.wastelander-of-banditry-desert.name",
+    "ja": "荒地で盗みを働く廃土客",
+    "context": "glossary hsr term wastelander-of-banditry-desert: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wastelander-of-banditry-desert.summary",
+    "ja": "虚数属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term wastelander-of-banditry-desert: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.wastelander-of-banditry-desert.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は虚数属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term wastelander-of-banditry-desert: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.energy.name",
     "ja": "EP",
     "context": "glossary hsr term energy: Japanese official term name",
@@ -850,6 +908,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hero-of-triumphant-song.name",
+    "ja": "凱歌を揚げる英雄",
+    "context": "glossary hsr term hero-of-triumphant-song: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hero-of-triumphant-song.summary",
+    "ja": "侵蝕トンネルで入手できるトンネル遺物。",
+    "context": "glossary hsr term hero-of-triumphant-song: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hero-of-triumphant-song.body",
+    "ja": "[[cavern-of-corrosion]]・弦歌の路をクリアすると獲得できる[[relics]]の一つ。",
+    "context": "glossary hsr term hero-of-triumphant-song: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[cavern-of-corrosion]]",
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.divergent-universe.name",
     "ja": "階差宇宙",
     "context": "glossary hsr term divergent-universe: Japanese official term name",
@@ -1180,6 +1268,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.messenger-traversing-hackerspace.name",
+    "ja": "仮想空間を漫遊するメッセンジャー",
+    "context": "glossary hsr term messenger-traversing-hackerspace: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.messenger-traversing-hackerspace.summary",
+    "ja": "速度に関わるトンネル遺物セット。",
+    "context": "glossary hsr term messenger-traversing-hackerspace: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.messenger-traversing-hackerspace.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term messenger-traversing-hackerspace: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.underworld.name",
     "ja": "下層部",
     "context": "glossary hsr term underworld: Japanese official term name",
@@ -1206,6 +1323,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.kamiwaza-wo-tankyusuru-meisho.name",
+    "ja": "神業を探求する名匠",
+    "context": "glossary hsr term kamiwaza-wo-tankyusuru-meisho: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kamiwaza-wo-tankyusuru-meisho.summary",
+    "ja": "最大HPに関わるトンネル遺物セット。",
+    "context": "glossary hsr term kamiwaza-wo-tankyusuru-meisho: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.kamiwaza-wo-tankyusuru-meisho.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は最大HPに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term kamiwaza-wo-tankyusuru-meisho: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -1918,6 +2064,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.musketeer-of-wild-wheat.name",
+    "ja": "草の穂ガンマン",
+    "context": "glossary hsr term musketeer-of-wild-wheat: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.musketeer-of-wild-wheat.summary",
+    "ja": "攻撃力に関わるトンネル遺物セット。",
+    "context": "glossary hsr term musketeer-of-wild-wheat: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.musketeer-of-wild-wheat.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term musketeer-of-wild-wheat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.clock-studios-theme-park.name",
     "ja": "クラークフィルムランド",
     "context": "glossary hsr term clock-studios-theme-park: Japanese official term name",
@@ -2152,6 +2327,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.iron-cavalry-against-the-scourge.name",
+    "ja": "蝗害を一掃せし鉄騎",
+    "context": "glossary hsr term iron-cavalry-against-the-scourge: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.iron-cavalry-against-the-scourge.summary",
+    "ja": "撃破特効に関わるトンネル遺物セット。",
+    "context": "glossary hsr term iron-cavalry-against-the-scourge: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.iron-cavalry-against-the-scourge.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term iron-cavalry-against-the-scourge: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.effect-res.name",
     "ja": "効果抵抗",
     "context": "glossary hsr term effect-res: Japanese official term name",
@@ -2239,6 +2443,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[defense|",
       "[[hp|"
+    ]
+  },
+  {
+    "id": "term.hsr.koseki-kagayaku-maho-shojo.name",
+    "ja": "功績輝く魔法少女",
+    "context": "glossary hsr term koseki-kagayaku-maho-shojo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.koseki-kagayaku-maho-shojo.summary",
+    "ja": "会心ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term koseki-kagayaku-maho-shojo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.koseki-kagayaku-maho-shojo.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は会心ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term koseki-kagayaku-maho-shojo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -2625,6 +2858,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[relic-set-effect|",
       "[[relics|"
+    ]
+  },
+  {
+    "id": "term.hsr.pioneer-diver-of-dead-waters.name",
+    "ja": "死水に潜る先駆者",
+    "context": "glossary hsr term pioneer-diver-of-dead-waters: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.pioneer-diver-of-dead-waters.summary",
+    "ja": "デバフを受けた敵への与ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term pioneer-diver-of-dead-waters: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.pioneer-diver-of-dead-waters.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果はデバフを受けた敵への与ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term pioneer-diver-of-dead-waters: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -3072,6 +3334,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[light-cone|",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.knight-of-purity-palace.name",
+    "ja": "純庭教会の聖騎士",
+    "context": "glossary hsr term knight-of-purity-palace: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.knight-of-purity-palace.summary",
+    "ja": "防御力に関わるトンネル遺物セット。",
+    "context": "glossary hsr term knight-of-purity-palace: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.knight-of-purity-palace.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は防御力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term knight-of-purity-palace: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -4564,6 +4855,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.scholar-lost-in-erudition.name",
+    "ja": "知識の海に溺れる学者",
+    "context": "glossary hsr term scholar-lost-in-erudition: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.scholar-lost-in-erudition.summary",
+    "ja": "会心率に関わるトンネル遺物セット。",
+    "context": "glossary hsr term scholar-lost-in-erudition: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.scholar-lost-in-erudition.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は会心率に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term scholar-lost-in-erudition: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.bloodbathed-battlefront.name",
     "ja": "「血染めの戦端」クレムノス",
     "context": "glossary hsr term bloodbathed-battlefront: Japanese official term name",
@@ -4649,6 +4969,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[hp|",
       "[[shield|"
+    ]
+  },
+  {
+    "id": "term.hsr.eagle-of-twilight-line.name",
+    "ja": "昼夜の狭間を翔ける鷹",
+    "context": "glossary hsr term eagle-of-twilight-line: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.eagle-of-twilight-line.summary",
+    "ja": "風属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term eagle-of-twilight-line: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.eagle-of-twilight-line.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は風属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term eagle-of-twilight-line: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -5099,6 +5448,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.savior-of-creation.name",
+    "ja": "天地再創の救世主",
+    "context": "glossary hsr term savior-of-creation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.savior-of-creation.summary",
+    "ja": "会心率に関わるトンネル遺物セット。",
+    "context": "glossary hsr term savior-of-creation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.savior-of-creation.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は会心率に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term savior-of-creation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.sky-faring-commission.name",
     "ja": "天舶司",
     "context": "glossary hsr term sky-faring-commission: Japanese official term name",
@@ -5156,6 +5534,35 @@ export const sources: SourceText[] = [
       "[[follow-up-attack|",
       "[[technique|",
       "[[traces|"
+    ]
+  },
+  {
+    "id": "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.name",
+    "ja": "天命に従う旅の卜者",
+    "context": "glossary hsr term tenmei-ni-shitagau-tabi-no-bokusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.summary",
+    "ja": "速度に関わるトンネル遺物セット。",
+    "context": "glossary hsr term tenmei-ni-shitagau-tabi-no-bokusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term tenmei-ni-shitagau-tabi-no-bokusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -5419,6 +5826,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[light-cone|"
+    ]
+  },
+  {
+    "id": "term.hsr.champion-of-streetwise-boxing.name",
+    "ja": "成り上がりチャンピオン",
+    "context": "glossary hsr term champion-of-streetwise-boxing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.champion-of-streetwise-boxing.summary",
+    "ja": "物理ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term champion-of-streetwise-boxing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.champion-of-streetwise-boxing.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は物理ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term champion-of-streetwise-boxing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -5955,6 +6391,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.the-wind-soaring-valorous.name",
+    "ja": "風雲を薙ぎ払う勇烈",
+    "context": "glossary hsr term the-wind-soaring-valorous: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-wind-soaring-valorous.summary",
+    "ja": "攻撃力に関わるトンネル遺物セット。",
+    "context": "glossary hsr term the-wind-soaring-valorous: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-wind-soaring-valorous.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-wind-soaring-valorous: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.wind-shear.name",
     "ja": "風化",
     "context": "glossary hsr term wind-shear: Japanese official term name",
@@ -6012,6 +6477,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.prisoner-in-deep-confinement.name",
+    "ja": "深い牢獄の囚人",
+    "context": "glossary hsr term prisoner-in-deep-confinement: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.prisoner-in-deep-confinement.summary",
+    "ja": "攻撃力に関わるトンネル遺物セット。",
+    "context": "glossary hsr term prisoner-in-deep-confinement: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.prisoner-in-deep-confinement.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term prisoner-in-deep-confinement: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.additional-damage.name",
     "ja": "付加ダメージ",
     "context": "glossary hsr term additional-damage: Japanese official term name",
@@ -6067,6 +6561,64 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[simulated-universe|"
+    ]
+  },
+  {
+    "id": "term.hsr.sacerdos-relived-ordeal.name",
+    "ja": "再び苦難の道を歩む司祭",
+    "context": "glossary hsr term sacerdos-relived-ordeal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sacerdos-relived-ordeal.summary",
+    "ja": "速度に関わるトンネル遺物セット。",
+    "context": "glossary hsr term sacerdos-relived-ordeal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sacerdos-relived-ordeal.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sacerdos-relived-ordeal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.guard-of-wuthering-snow.name",
+    "ja": "吹雪と対峙する兵士",
+    "context": "glossary hsr term guard-of-wuthering-snow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.guard-of-wuthering-snow.summary",
+    "ja": "被ダメージの軽減に関わるトンネル遺物セット。",
+    "context": "glossary hsr term guard-of-wuthering-snow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.guard-of-wuthering-snow.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は被ダメージの軽減に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term guard-of-wuthering-snow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -6363,6 +6915,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.poet-of-mourning-collapse.name",
+    "ja": "亡国の悲哀を詠う詩人",
+    "context": "glossary hsr term poet-of-mourning-collapse: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.poet-of-mourning-collapse.summary",
+    "ja": "侵蝕トンネルで入手できるトンネル遺物。",
+    "context": "glossary hsr term poet-of-mourning-collapse: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.poet-of-mourning-collapse.body",
+    "ja": "[[cavern-of-corrosion]]・弦歌の路をクリアすると獲得できる[[relics]]の一つ。",
+    "context": "glossary hsr term poet-of-mourning-collapse: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[cavern-of-corrosion]]",
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.abundance.name",
     "ja": "豊穣",
     "context": "glossary hsr term abundance: Japanese official term name",
@@ -6422,6 +7004,93 @@ export const sources: SourceText[] = [
       "[[blessing|",
       "[[divergent-universe]]",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.longevous-disciple.name",
+    "ja": "宝命長存の蒔者",
+    "context": "glossary hsr term longevous-disciple: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.longevous-disciple.summary",
+    "ja": "最大HPに関わるトンネル遺物セット。",
+    "context": "glossary hsr term longevous-disciple: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.longevous-disciple.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は最大HPに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term longevous-disciple: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.genius-of-brilliant-stars.name",
+    "ja": "星の如く輝く天才",
+    "context": "glossary hsr term genius-of-brilliant-stars: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.genius-of-brilliant-stars.summary",
+    "ja": "量子属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term genius-of-brilliant-stars: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.genius-of-brilliant-stars.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は量子属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term genius-of-brilliant-stars: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.hoshimeguru-navigator-shiken.name",
+    "ja": "星巡るナビゲーター「シケン」",
+    "context": "glossary hsr term hoshimeguru-navigator-shiken: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hoshimeguru-navigator-shiken.summary",
+    "ja": "攻撃力に関わるトンネル遺物セット。",
+    "context": "glossary hsr term hoshimeguru-navigator-shiken: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hoshimeguru-navigator-shiken.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hoshimeguru-navigator-shiken: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -6989,6 +7658,93 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hunter-of-glacial-forest.name",
+    "ja": "雪の密林の狩人",
+    "context": "glossary hsr term hunter-of-glacial-forest: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hunter-of-glacial-forest.summary",
+    "ja": "氷属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term hunter-of-glacial-forest: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hunter-of-glacial-forest.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は氷属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hunter-of-glacial-forest: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.watchmaker-master-of-dream-machinations.name",
+    "ja": "夢を弄ぶ時計屋",
+    "context": "glossary hsr term watchmaker-master-of-dream-machinations: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.watchmaker-master-of-dream-machinations.summary",
+    "ja": "撃破特効に関わるトンネル遺物セット。",
+    "context": "glossary hsr term watchmaker-master-of-dream-machinations: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.watchmaker-master-of-dream-machinations.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term watchmaker-master-of-dream-machinations: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.firesmith-of-lava-forging.name",
+    "ja": "溶岩で鍛造する火匠",
+    "context": "glossary hsr term firesmith-of-lava-forging: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.firesmith-of-lava-forging.summary",
+    "ja": "炎属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term firesmith-of-lava-forging: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.firesmith-of-lava-forging.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は炎属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term firesmith-of-lava-forging: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.damage-boost.name",
     "ja": "与ダメージアップ",
     "context": "glossary hsr term damage-boost: Japanese official term name",
@@ -7044,6 +7800,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.band-of-sizzling-thunder.name",
+    "ja": "雷鳴轟くバンド",
+    "context": "glossary hsr term band-of-sizzling-thunder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.band-of-sizzling-thunder.summary",
+    "ja": "雷属性ダメージに関わるトンネル遺物セット。",
+    "context": "glossary hsr term band-of-sizzling-thunder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.band-of-sizzling-thunder.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は雷属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term band-of-sizzling-thunder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -7106,6 +7891,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.passerby-of-wandering-cloud.name",
+    "ja": "流雲無痕の過客",
+    "context": "glossary hsr term passerby-of-wandering-cloud: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.passerby-of-wandering-cloud.summary",
+    "ja": "治癒量に関わるトンネル遺物セット。",
+    "context": "glossary hsr term passerby-of-wandering-cloud: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.passerby-of-wandering-cloud.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は治癒量に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term passerby-of-wandering-cloud: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
+    ]
+  },
+  {
     "id": "term.hsr.garden-of-recollection.name",
     "ja": "流光憶庭",
     "context": "glossary hsr term garden-of-recollection: Japanese official term name",
@@ -7164,6 +7978,35 @@ export const sources: SourceText[] = [
       "[[echo-of-war|",
       "[[light-cone-manifest|",
       "[[light-cone|"
+    ]
+  },
+  {
+    "id": "term.hsr.thief-of-shooting-meteor.name",
+    "ja": "流星の跡を追う怪盗",
+    "context": "glossary hsr term thief-of-shooting-meteor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.thief-of-shooting-meteor.summary",
+    "ja": "撃破特効に関わるトンネル遺物セット。",
+    "context": "glossary hsr term thief-of-shooting-meteor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.thief-of-shooting-meteor.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term thief-of-shooting-meteor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   },
   {
@@ -7283,6 +8126,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[damage-over-time|",
       "[[weakness-break|"
+    ]
+  },
+  {
+    "id": "term.hsr.warrior-goddess-of-sun-and-thunder.name",
+    "ja": "烈陽と雷鳴の武神",
+    "context": "glossary hsr term warrior-goddess-of-sun-and-thunder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warrior-goddess-of-sun-and-thunder.summary",
+    "ja": "速度に関わるトンネル遺物セット。",
+    "context": "glossary hsr term warrior-goddess-of-sun-and-thunder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warrior-goddess-of-sun-and-thunder.body",
+    "ja": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term warrior-goddess-of-sun-and-thunder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[relics]]"
     ]
   }
 ];

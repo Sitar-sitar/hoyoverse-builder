@@ -2,6 +2,35 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.genshin.aubade-of-morningstar-and-moon.name",
+    "ja": "暁の星と月の歌",
+    "context": "glossary genshin term aubade-of-morningstar-and-moon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.aubade-of-morningstar-and-moon.summary",
+    "ja": "月反応に関係する聖遺物セット。",
+    "context": "glossary genshin term aubade-of-morningstar-and-moon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.aubade-of-morningstar-and-moon.body",
+    "ja": "2セット効果で[[elemental-mastery]]が上がる。4セット効果は待機中の装備者の月反応ダメージを強化し、月兆レベルの条件を満たすとさらに強化する。",
+    "context": "glossary genshin term aubade-of-morningstar-and-moon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.action-card.name",
     "ja": "アクションカード",
     "context": "glossary genshin term action-card: Japanese official term name",
@@ -57,6 +86,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.bond-of-life.name",
+    "ja": "命の契約",
+    "context": "glossary genshin term bond-of-life: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bond-of-life.summary",
+    "ja": "武器や聖遺物の効果に参照される値。",
+    "context": "glossary genshin term bond-of-life: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bond-of-life.body",
+    "ja": "一部の武器や[[artifact]]は命の契約の有無や増減を効果の条件とする。",
+    "context": "glossary genshin term bond-of-life: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
     ]
   },
   {
@@ -199,6 +257,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.golden-troupe.name",
+    "ja": "黄金の劇団",
+    "context": "glossary genshin term golden-troupe: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.golden-troupe.summary",
+    "ja": "元素スキルダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term golden-troupe: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.golden-troupe.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素スキルダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term golden-troupe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.bloom.name",
     "ja": "開花",
     "context": "glossary genshin term bloom: Japanese official term name",
@@ -227,6 +314,36 @@ export const sources: SourceText[] = [
       "[[burgeon]]",
       "[[elemental-reaction]]",
       "[[hyperbloom]]"
+    ]
+  },
+  {
+    "id": "term.genshin.scroll-of-hero.name",
+    "ja": "灰燼の都に立つ英雄の絵巻",
+    "context": "glossary genshin term scroll-of-hero: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scroll-of-hero.summary",
+    "ja": "夜魂バーストや元素反応に関わる聖遺物セット。",
+    "context": "glossary genshin term scroll-of-hero: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scroll-of-hero.body",
+    "ja": "2セット効果は付近のチーム内キャラクターが[[nightsoul-burst]]を起こすと装備者の元素エネルギーを回復する。4セット効果は元素反応に応じて味方の元素ダメージを強化し、[[nightsouls-blessing]]中は追加効果がある。",
+    "context": "glossary genshin term scroll-of-hero: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[nightsoul-burst]]",
+      "[[nightsouls-blessing]]"
     ]
   },
   {
@@ -259,6 +376,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.fragment-of-harmonic-whimsy.name",
+    "ja": "諧律奇想の断章",
+    "context": "glossary genshin term fragment-of-harmonic-whimsy: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fragment-of-harmonic-whimsy.summary",
+    "ja": "命の契約の増減に関係する聖遺物セット。",
+    "context": "glossary genshin term fragment-of-harmonic-whimsy: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fragment-of-harmonic-whimsy.body",
+    "ja": "2セット効果で攻撃力が上がる。4セット効果は命の契約の数値が増減すると与ダメージが上がり、最大3層まで重ねられる。",
+    "context": "glossary genshin term fragment-of-harmonic-whimsy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.swirl.name",
     "ja": "拡散",
     "context": "glossary genshin term swirl: Japanese official term name",
@@ -286,6 +430,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]"
     ]
+  },
+  {
+    "id": "term.genshin.a-day-carved-from-rising-winds.name",
+    "ja": "風立ちの日",
+    "context": "glossary genshin term a-day-carved-from-rising-winds: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.a-day-carved-from-rising-winds.summary",
+    "ja": "攻撃命中による強化効果を持つ聖遺物セット。",
+    "context": "glossary genshin term a-day-carved-from-rising-winds: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.a-day-carved-from-rising-winds.body",
+    "ja": "2セット効果で攻撃力が上がる。4セット効果は通常攻撃・重撃・元素スキル・元素爆発の命中で攻撃力を強化し、魔女の課題をクリアした装備者には追加効果がある。",
+    "context": "glossary genshin term a-day-carved-from-rising-winds: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.wind-catcher.name",
@@ -367,6 +538,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thundering-fury.name",
+    "ja": "雷のような怒り",
+    "context": "glossary genshin term thundering-fury: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thundering-fury.summary",
+    "ja": "雷元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term thundering-fury: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thundering-fury.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は雷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term thundering-fury: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.vision.name",
@@ -626,6 +826,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.noblesse-oblige.name",
+    "ja": "旧貴族のしつけ",
+    "context": "glossary genshin term noblesse-oblige: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.noblesse-oblige.summary",
+    "ja": "元素爆発ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term noblesse-oblige: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.noblesse-oblige.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素爆発ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term noblesse-oblige: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.midlander-billet.name",
     "ja": "境土の原型",
     "context": "glossary genshin term midlander-billet: Japanese official term name",
@@ -651,6 +880,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gilded-dreams.name",
+    "ja": "金メッキの夢",
+    "context": "glossary genshin term gilded-dreams: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gilded-dreams.summary",
+    "ja": "元素熟知に関わる聖遺物セット。",
+    "context": "glossary genshin term gilded-dreams: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gilded-dreams.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term gilded-dreams: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.envisaged-echoes.name",
@@ -1122,6 +1380,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.gladiators-finale.name",
+    "ja": "剣闘士のフィナーレ",
+    "context": "glossary genshin term gladiators-finale: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gladiators-finale.summary",
+    "ja": "攻撃力に関わる聖遺物セット。",
+    "context": "glossary genshin term gladiators-finale: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gladiators-finale.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term gladiators-finale: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.obsidian-codex.name",
+    "ja": "黒曜の秘典",
+    "context": "glossary genshin term obsidian-codex: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.obsidian-codex.summary",
+    "ja": "夜魂の加護と夜魂値に関わる聖遺物セット。",
+    "context": "glossary genshin term obsidian-codex: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.obsidian-codex.body",
+    "ja": "2セット効果はフィールド上の装備者が[[nightsouls-blessing]]状態にある時の与ダメージを強化する。4セット効果はフィールド上で[[nightsoul-points]]を消費すると会心率が上がる。",
+    "context": "glossary genshin term obsidian-codex: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[nightsoul-points]]",
+      "[[nightsouls-blessing]]"
+    ]
+  },
+  {
     "id": "term.genshin.saikouchi-kensaku.name",
     "ja": "採鉱地検索",
     "context": "glossary genshin term saikouchi-kensaku: Japanese official term name",
@@ -1147,6 +1464,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.desert-pavilion-chronicle.name",
+    "ja": "砂上の楼閣の史話",
+    "context": "glossary genshin term desert-pavilion-chronicle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.desert-pavilion-chronicle.summary",
+    "ja": "風元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term desert-pavilion-chronicle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.desert-pavilion-chronicle.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term desert-pavilion-chronicle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.nre-menu-30.name",
@@ -1428,6 +1774,91 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.deepwood-memories.name",
+    "ja": "深林の記憶",
+    "context": "glossary genshin term deepwood-memories: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.deepwood-memories.summary",
+    "ja": "草元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term deepwood-memories: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.deepwood-memories.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は草元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term deepwood-memories: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep-galleries.name",
+    "ja": "深廊の終曲",
+    "context": "glossary genshin term finale-of-the-deep-galleries: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep-galleries.summary",
+    "ja": "氷元素と元素エネルギーに関係する聖遺物セット。",
+    "context": "glossary genshin term finale-of-the-deep-galleries: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep-galleries.body",
+    "ja": "2セット効果で氷元素ダメージが上がる。4セット効果は装備者の元素エネルギーが0の時、通常攻撃と元素爆発のダメージを強化する。",
+    "context": "glossary genshin term finale-of-the-deep-galleries: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.viridescent-venerer.name",
+    "ja": "翠緑の影",
+    "context": "glossary genshin term viridescent-venerer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.viridescent-venerer.summary",
+    "ja": "風元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term viridescent-venerer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.viridescent-venerer.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term viridescent-venerer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.sumeru.name",
     "ja": "スメール",
     "context": "glossary genshin term sumeru: Japanese official term name",
@@ -1534,6 +1965,35 @@ export const sources: SourceText[] = [
     "id": "term.genshin.artifact-strongbox.body",
     "ja": "[[artifact]]のセットを入手するシステム。交換対象のセットは更新によって追加される。",
     "context": "glossary genshin term artifact-strongbox: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.sanctifying-dust.name",
+    "ja": "聖啓の塵",
+    "context": "glossary genshin term sanctifying-dust: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sanctifying-dust.summary",
+    "ja": "星5聖遺物の追加ステータスの強化を再分配する消耗品。",
+    "context": "glossary genshin term sanctifying-dust: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sanctifying-dust.body",
+    "ja": "星5[[artifact]]の追加ステータスの強化効果をランダムに再分配できる。",
+    "context": "glossary genshin term sanctifying-dust: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1655,6 +2115,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.emblem-of-severed-fate.name",
+    "ja": "絶縁の旗印",
+    "context": "glossary genshin term emblem-of-severed-fate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emblem-of-severed-fate.summary",
+    "ja": "元素チャージ効率に関わる聖遺物セット。",
+    "context": "glossary genshin term emblem-of-severed-fate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emblem-of-severed-fate.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素チャージ効率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term emblem-of-severed-fate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.transient-resin.name",
     "ja": "刹那樹脂",
     "context": "glossary genshin term transient-resin: Japanese official term name",
@@ -1680,6 +2169,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenacity-of-the-millelith.name",
+    "ja": "千岩牢固",
+    "context": "glossary genshin term tenacity-of-the-millelith: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenacity-of-the-millelith.summary",
+    "ja": "HPに関わる聖遺物セット。",
+    "context": "glossary genshin term tenacity-of-the-millelith: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenacity-of-the-millelith.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tenacity-of-the-millelith: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.vial-of-adeptal-speed.name",
@@ -1738,6 +2256,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.pale-flame.name",
+    "ja": "蒼白の炎",
+    "context": "glossary genshin term pale-flame: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pale-flame.summary",
+    "ja": "物理ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term pale-flame: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pale-flame.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は物理ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pale-flame: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.equipment-card.name",
     "ja": "装備カード",
     "context": "glossary genshin term equipment-card: Japanese official term name",
@@ -1767,6 +2314,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.wanderers-troupe.name",
+    "ja": "大地を流浪する楽団",
+    "context": "glossary genshin term wanderers-troupe: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wanderers-troupe.summary",
+    "ja": "元素熟知に関わる聖遺物セット。",
+    "context": "glossary genshin term wanderers-troupe: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wanderers-troupe.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wanderers-troupe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.tansakudo.name",
     "ja": "探索度",
     "context": "glossary genshin term tansakudo: Japanese official term name",
@@ -1792,6 +2368,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bloodstained-chivalry.name",
+    "ja": "血染めの騎士道",
+    "context": "glossary genshin term bloodstained-chivalry: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bloodstained-chivalry.summary",
+    "ja": "物理ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term bloodstained-chivalry: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bloodstained-chivalry.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は物理ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term bloodstained-chivalry: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.ley-line-disorder.name",
@@ -1997,6 +2602,64 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heart-of-depth.name",
+    "ja": "沈淪の心",
+    "context": "glossary genshin term heart-of-depth: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heart-of-depth.summary",
+    "ja": "水元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term heart-of-depth: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heart-of-depth.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は水元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term heart-of-depth: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.shimenawas-reminiscence.name",
+    "ja": "追憶のしめ縄",
+    "context": "glossary genshin term shimenawas-reminiscence: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.shimenawas-reminiscence.summary",
+    "ja": "攻撃力に関わる聖遺物セット。",
+    "context": "glossary genshin term shimenawas-reminiscence: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.shimenawas-reminiscence.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term shimenawas-reminiscence: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
   },
   {
     "id": "term.genshin.normal-attack.name",
@@ -2405,6 +3068,33 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.unfinished-reverie.name",
+    "ja": "遂げられなかった想い",
+    "context": "glossary genshin term unfinished-reverie: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.unfinished-reverie.summary",
+    "ja": "燃焼状態の敵の有無に関係する聖遺物セット。",
+    "context": "glossary genshin term unfinished-reverie: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.unfinished-reverie.body",
+    "ja": "2セット効果で攻撃力が上がる。4セット効果の与ダメージ上昇は戦闘状態や付近の燃焼状態の敵の有無によって変化する。",
+    "context": "glossary genshin term unfinished-reverie: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.toshi-hyouban.name",
     "ja": "都市評判",
     "context": "glossary genshin term toshi-hyouban: Japanese official term name",
@@ -2426,6 +3116,33 @@ export const sources: SourceText[] = [
     "id": "term.genshin.toshi-hyouban.body",
     "ja": "地域の任務や探索などで評判を高めると、レシピや道具の設計図などを受け取れる。",
     "context": "glossary genshin term toshi-hyouban: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.long-nights-oath.name",
+    "ja": "長き夜の誓い",
+    "context": "glossary genshin term long-nights-oath: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.long-nights-oath.summary",
+    "ja": "落下攻撃のダメージを強化する聖遺物セット。",
+    "context": "glossary genshin term long-nights-oath: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.long-nights-oath.body",
+    "ja": "2セット効果で落下攻撃ダメージが上昇する。4セット効果は落下攻撃、重撃または元素スキルが命中すると、落下攻撃を強化する効果を獲得する。",
+    "context": "glossary genshin term long-nights-oath: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -2548,6 +3265,64 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]",
       "[[original-resin]]"
+    ]
+  },
+  {
+    "id": "term.genshin.blizzard-strayer.name",
+    "ja": "氷風を彷徨う勇士",
+    "context": "glossary genshin term blizzard-strayer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blizzard-strayer.summary",
+    "ja": "氷元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term blizzard-strayer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blizzard-strayer.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は氷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term blizzard-strayer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.marechaussee-hunter.name",
+    "ja": "ファントムハンター",
+    "context": "glossary genshin term marechaussee-hunter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.marechaussee-hunter.summary",
+    "ja": "通常攻撃と重撃のダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term marechaussee-hunter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.marechaussee-hunter.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は通常攻撃と重撃のダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term marechaussee-hunter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
     ]
   },
   {
@@ -2750,6 +3525,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.crimson-witch-of-flames.name",
+    "ja": "燃え盛る炎の魔女",
+    "context": "glossary genshin term crimson-witch-of-flames: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.crimson-witch-of-flames.summary",
+    "ja": "炎元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term crimson-witch-of-flames: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.crimson-witch-of-flames.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は炎元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term crimson-witch-of-flames: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.replica.name",
     "ja": "模本",
     "context": "glossary genshin term replica: Japanese official term name",
@@ -2898,6 +3702,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.archaic-petra.name",
+    "ja": "悠久の磐岩",
+    "context": "glossary genshin term archaic-petra: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.archaic-petra.summary",
+    "ja": "岩元素ダメージに関わる聖遺物セット。",
+    "context": "glossary genshin term archaic-petra: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.archaic-petra.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は岩元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term archaic-petra: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
+    ]
+  },
+  {
     "id": "term.genshin.melt.name",
     "ja": "溶解",
     "context": "glossary genshin term melt: Japanese official term name",
@@ -2924,6 +3757,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[elemental-reaction]]"
+    ]
+  },
+  {
+    "id": "term.genshin.flower-of-paradise-lost.name",
+    "ja": "楽園の絶花",
+    "context": "glossary genshin term flower-of-paradise-lost: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flower-of-paradise-lost.summary",
+    "ja": "元素熟知に関わる聖遺物セット。",
+    "context": "glossary genshin term flower-of-paradise-lost: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flower-of-paradise-lost.body",
+    "ja": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term flower-of-paradise-lost: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact]]"
     ]
   },
   {

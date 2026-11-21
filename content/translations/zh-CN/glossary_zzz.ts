@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.zzz.dawns-bloom.name": {
+    "text": "暁に咲く花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dawns-bloom.summary": {
+    "text": "通常攻撃の与ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dawns-bloom.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は通常攻撃の与ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.encrypted-master-tape.name": {
     "text": "暗号化マスターテープ",
     "sourceHash": null,
@@ -127,6 +145,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.woodpecker-electro.name": {
+    "text": "ウッドペッカー・エレクトロ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.woodpecker-electro.summary": {
+    "text": "会心率に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.woodpecker-electro.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は会心率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.yunkui-summit.name": {
     "text": "雲嶽山",
     "sourceHash": null,
@@ -141,6 +177,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.yunkui-summit.body": {
     "text": "公式キャラクター一覧で、儀玄や橘福福などが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.yunkui-tales.name": {
+    "text": "雲嶽は我に似たり",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.yunkui-tales.summary": {
+    "text": "HPに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.yunkui-tales.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -343,6 +397,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.inferno-metal.name": {
+    "text": "炎獄のヘヴィメタル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.inferno-metal.summary": {
+    "text": "炎属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.inferno-metal.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は炎属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.orbit-rail.name": {
     "text": "オービットレール",
     "sourceHash": null,
@@ -393,6 +465,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.snack-box.body": {
     "text": "Roarin' Brekkiesで引くとデータカードと報酬を獲得できる。占い・スクラッチと利用回数を共有する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.branch-blade-song.name": {
+    "text": "折枝の刀歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.branch-blade-song.summary": {
+    "text": "定期掃討で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.branch-blade-song.body": {
+    "text": "Ver.1.4で追加された「モンスター・デュエット」に挑戦すると獲得できる[[drive-disc]]の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -577,6 +667,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.wind-salon.name": {
+    "text": "風鳴りのサロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wind-salon.summary": {
+    "text": "区域防衛で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wind-salon.body": {
+    "text": "[[routine-cleanup]]の「パイロット&アーマード」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.sons-of-calydon.name": {
     "text": "カリュドーンの子",
     "sourceHash": null,
@@ -757,6 +865,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.polar-metal.name": {
+    "text": "極地のヘヴィメタル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.polar-metal.summary": {
+    "text": "氷属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.polar-metal.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は氷属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.routine-cleanup.name": {
     "text": "区域防衛",
     "sourceHash": null,
@@ -829,6 +955,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.chaos-jazz.name": {
+    "text": "ケイオス・ジャズ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.chaos-jazz.summary": {
+    "text": "異常マスタリーに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.chaos-jazz.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.stun-specialty.name": {
     "text": "撃破",
     "sourceHash": null,
@@ -843,6 +987,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.stun-specialty.body": {
     "text": "[[specialty|特性]]のひとつ。[[daze]]を蓄積し、敵を[[stun]]させる役割を得意とする。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moonlight-lullaby.name": {
+    "text": "月光騎士の讃歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moonlight-lullaby.summary": {
+    "text": "エネルギー自動回復に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moonlight-lullaby.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -973,6 +1135,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.notes-from-the-chained.name": {
+    "text": "獄中の手記",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.notes-from-the-chained.summary": {
+    "text": "氷属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.notes-from-the-chained.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は氷属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.disorder.name": {
     "text": "混沌",
     "sourceHash": null,
@@ -987,6 +1167,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.disorder.body": {
     "text": "敵に発生している[[attribute-anomaly|属性異常]]に、異なる属性の状態異常が重なると混沌が発生する。効果やダメージは元の状態異常などに左右される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.chaotic-metal.name": {
+    "text": "混沌のヘヴィメタル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.chaotic-metal.summary": {
+    "text": "エーテル属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.chaotic-metal.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はエーテル属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1099,6 +1297,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shadow-harmony.name": {
+    "text": "シャドウハーモニー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shadow-harmony.summary": {
+    "text": "Ver.1.6で追加されたドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shadow-harmony.body": {
+    "text": "Ver.1.6の公式更新情報で追加が案内された[[drive-disc]]。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.cunning-hares.name": {
     "text": "邪兎屋",
     "sourceHash": null,
@@ -1113,6 +1329,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.cunning-hares.body": {
     "text": "[[hollow]]の調査などの依頼を引き受ける。公式紹介ではニコやアンビーが所属している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fanged-metal.name": {
+    "text": "獣牙のヘヴィメタル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fanged-metal.summary": {
+    "text": "物理属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fanged-metal.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は物理属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1149,6 +1383,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.shiyu-defense.body": {
     "text": "[[agent]]を編成し、敵との戦闘に挑むコンテンツ。ステージごとの条件や敵の特性に合わせて編成を考える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-water-ballad.name": {
+    "text": "純白の行歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-water-ballad.summary": {
+    "text": "区域防衛で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-water-ballad.body": {
+    "text": "[[routine-cleanup]]の「幻惑と鉄壁」に挑戦すると獲得できる[[drive-disc]]の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1221,6 +1473,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.bounty-board.body": {
     "text": "[[proxy-network]]に参加した後、同じチャンネルのプロキシと代行依頼をやり取りできる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shockstar-disco.name": {
+    "text": "ショックスター・ディスコ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shockstar-disco.summary": {
+    "text": "衝撃力に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shockstar-disco.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は衝撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1369,6 +1639,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.swing-jazz.name": {
+    "text": "スイング・ジャズ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.swing-jazz.summary": {
+    "text": "エネルギー自動回復に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.swing-jazz.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.stars-of-lyra.name": {
     "text": "スターズ・オブ・リラ",
     "sourceHash": null,
@@ -1383,6 +1671,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.stars-of-lyra.body": {
     "text": "公式キャラクター一覧で、アストラ・ヤオやイヴリンが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.astral-voice.name": {
+    "text": "静寂のアストラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.astral-voice.summary": {
+    "text": "定期掃討で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.astral-voice.body": {
+    "text": "Ver.1.4で追加された「モンスター・デュエット」に挑戦すると獲得できる[[drive-disc]]の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1477,6 +1783,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.soul-rock.name": {
+    "text": "ソウル・ロック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.soul-rock.summary": {
+    "text": "防御力に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.soul-rock.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.attribute.name": {
     "text": "属性",
     "sourceHash": null,
@@ -1491,6 +1815,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.attribute.body": {
     "text": "[[agent]]や攻撃には属性があり、敵の属性耐性や[[attribute-anomaly]]と関係する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.king-of-the-summit.name": {
+    "text": "大山を統べる者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.king-of-the-summit.summary": {
+    "text": "攻撃によるブレイク値に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.king-of-the-summit.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は攻撃によるブレイク値を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1545,6 +1887,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.lumina-security-branch.body": {
     "text": "[[lumina-square]]にある[[new-eridu-public-security]]の分署。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.feathered-fate.name": {
+    "text": "契る翼の運命",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.feathered-fate.summary": {
+    "text": "異常マスタリーに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.feathered-fate.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1747,6 +2107,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.thorned-rose.name": {
+    "text": "棘まとう薔薇",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thorned-rose.summary": {
+    "text": "防御力に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thorned-rose.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.drive-disc.name": {
     "text": "ドライバディスク",
     "sourceHash": null,
@@ -1819,6 +2197,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.phaethons-melody.name": {
+    "text": "「パエトーン」の歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.phaethons-melody.summary": {
+    "text": "Ver.1.6で追加されたドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.phaethons-melody.body": {
+    "text": "Ver.1.6の公式更新情報で追加が案内された[[drive-disc]]。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.battery-charge.name": {
     "text": "バッテリー",
     "sourceHash": null,
@@ -1833,6 +2229,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.battery-charge.body": {
     "text": "[[combat-simulation]]などの挑戦に関係する資源。足りない場合は[[reserve-battery]]を使って補充できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puffer-electro.name": {
+    "text": "パファー・エレクトロ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puffer-electro.summary": {
+    "text": "貫通率に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puffer-electro.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は貫通率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1887,6 +2301,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.weathering.body": {
     "text": "風属性の[[attribute-anomaly|状態異常]]により発生する。別の状態異常との組み合わせでは[[disorder|混沌]]の代わりに[[turbulence]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freedom-blues.name": {
+    "text": "フリーダム・ブルース",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freedom-blues.summary": {
+    "text": "異常マスタリーに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.freedom-blues.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2053,6 +2485,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.proto-punk.name": {
+    "text": "プロト・パンク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proto-punk.summary": {
+    "text": "シールド生成量に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proto-punk.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はシールド生成量を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thunder-metal.name": {
+    "text": "霹靂のヘヴィメタル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thunder-metal.summary": {
+    "text": "電気属性ダメージに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thunder-metal.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は電気属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.signal-search.name": {
     "text": "変調",
     "sourceHash": null,
@@ -2139,6 +2607,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.polychrome.body": {
     "text": "イベント報酬や更新時の補償などで獲得できる。[[signal-search]]に関係するアイテムの交換にも使われる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hormone-punk.name": {
+    "text": "ホルモン・パンク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hormone-punk.summary": {
+    "text": "攻撃力に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hormone-punk.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2341,6 +2827,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.bunny-in-wonderland.name": {
+    "text": "雪うさぎワンダーランド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bunny-in-wonderland.summary": {
+    "text": "HPに関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bunny-in-wonderland.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dawn-travelogue.name": {
+    "text": "夜明けの紀行",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dawn-travelogue.summary": {
+    "text": "区域防衛で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dawn-travelogue.body": {
+    "text": "[[routine-cleanup]]の「パイロット&アーマード」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.notorious-hunt.name": {
     "text": "要警戒狩り",
     "sourceHash": null,
@@ -2427,6 +2949,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.turbulence.body": {
     "text": "[[weathering]]と別の[[attribute-anomaly|状態異常]]を組み合わせると発生する。風化を含まない組み合わせの[[disorder]]とは別の効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shining-aria.name": {
+    "text": "流光のアリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shining-aria.summary": {
+    "text": "区域防衛で獲得できるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shining-aria.body": {
+    "text": "[[routine-cleanup]]の「幻惑と鉄壁」に挑戦すると獲得できる[[drive-disc]]の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
