@@ -664,7 +664,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.golden-theater.body",
-    "ja": "[[administrative-district]]の劇場。長い歴史を持つ文化施設。",
+    "ja": "[[administrative-district]]の劇場。長い歴史を持つ文化施設。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term golden-theater: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -809,7 +809,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.backwater-pass.body",
-    "ja": "[[belobog|ベロブルグ]]のかつての商業街。裂界の拡大により往時の賑わいを失った。",
+    "ja": "[[belobog|ベロブルグ]]のかつての商業街。裂界の拡大により往時の賑わいを失った。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term backwater-pass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1138,7 +1138,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.underworld.body",
-    "ja": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。",
+    "ja": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term underworld: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1346,7 +1346,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.robot-settlement.body",
-    "ja": "[[belobog|ベロブルグ]]の地下にあり、機械と人々が暮らす集落。",
+    "ja": "[[belobog|ベロブルグ]]の地下にあり、機械と人々が暮らす集落。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term robot-settlement: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1552,7 +1552,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.old-weapon-testing-ground.body",
-    "ja": "かつて自動機械の組み立てに使われた場所。後に競技の会場としても利用された。",
+    "ja": "かつて自動機械の組み立てに使われた場所。後に競技の会場としても利用された。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term old-weapon-testing-ground: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1609,7 +1609,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.kyoukankaku-biikon.body",
-    "ja": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。",
+    "ja": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term kyoukankaku-biikon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1665,7 +1665,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.administrative-district.body",
-    "ja": "[[belobog|ベロブルグ]]の地上にある区域。都市の政治や文化の中心となっている。",
+    "ja": "[[belobog|ベロブルグ]]の地上にある区域。都市の政治や文化の中心となっている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term administrative-district: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1902,7 +1902,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.qlipoth-fort.body",
-    "ja": "[[belobog|ベロブルグ]]の大守護者の住居であり、指揮の拠点となる建物。",
+    "ja": "[[belobog|ベロブルグ]]の大守護者の住居であり、指揮の拠点となる建物。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term qlipoth-fort: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1931,7 +1931,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.goethe-hotel.body",
-    "ja": "[[administrative-district]]にある宿泊施設。",
+    "ja": "[[administrative-district]]にある宿泊施設。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term goethe-hotel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2020,7 +2020,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.architects.body",
-    "ja": "[[belobog|ベロブルグ]]を築き、地上の都市の統治に関わる人々。",
+    "ja": "[[belobog|ベロブルグ]]を築き、地上の都市の統治に関わる人々。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term architects: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2078,7 +2078,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.outlying-snow-plains.body",
-    "ja": "[[belobog|ベロブルグ]]の外に広がる雪の地域。厳しい寒さに覆われている。",
+    "ja": "[[belobog|ベロブルグ]]の外に広がる雪の地域。厳しい寒さに覆われている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term outlying-snow-plains: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2496,7 +2496,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.supply-zone.body",
-    "ja": "宇宙ステーション「ヘルタ」の区域。電力設備や鉄道のプラットフォームがある。",
+    "ja": "宇宙ステーション「ヘルタ」の区域。電力設備や鉄道のプラットフォームがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term supply-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2523,7 +2523,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.corridor-of-fading-echoes.body",
-    "ja": "[[belobog|ベロブルグ]]の裂界の深部へ続く場所。防衛線や旧来の司令部がある。",
+    "ja": "[[belobog|ベロブルグ]]の裂界の深部へ続く場所。防衛線や旧来の司令部がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term corridor-of-fading-echoes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2855,7 +2855,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.storage-zone.body",
-    "ja": "宇宙ステーション「ヘルタ」の区域。研究対象の奇物を調べる実験室などがある。",
+    "ja": "宇宙ステーション「ヘルタ」の区域。研究対象の奇物を調べる実験室などがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term storage-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2913,7 +2913,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.master-control-zone.body",
-    "ja": "宇宙ステーション「ヘルタ」の中枢。監視設備やヘルタのオフィスがある。",
+    "ja": "宇宙ステーション「ヘルタ」の中枢。監視設備やヘルタのオフィスがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term master-control-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2999,7 +2999,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.overworld.body",
-    "ja": "[[belobog|ベロブルグ]]の地上部分。建創者たちが都市を治め、行政区などがある。",
+    "ja": "[[belobog|ベロブルグ]]の地上部分。建創者たちが都市を治め、行政区などがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term overworld: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3028,7 +3028,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.silvermane-guard-restricted-zone.body",
-    "ja": "[[belobog|ベロブルグ]]にある区域。シルバーメインが駐屯し、防衛にあたっている。",
+    "ja": "[[belobog|ベロブルグ]]にある区域。シルバーメインが駐屯し、防衛にあたっている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term silvermane-guard-restricted-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4012,7 +4012,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.pillars-of-creation.body",
-    "ja": "かつて巨大な機械が建造された場所。[[belobog|ベロブルグ]]の人々が再び集まり作業を行う。",
+    "ja": "かつて巨大な機械が建造された場所。[[belobog|ベロブルグ]]の人々が再び集まり作業を行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term pillars-of-creation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4223,7 +4223,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.great-mine.body",
-    "ja": "[[belobog|ベロブルグ]]の地下に広がる鉱山。資源を巡る争いも起きている。",
+    "ja": "[[belobog|ベロブルグ]]の地下に広がる鉱山。資源を巡る争いも起きている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term great-mine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5112,7 +5112,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.everwinter-hill.body",
-    "ja": "[[belobog|ベロブルグ]]の北にあり、厳しい氷雪に覆われた地。",
+    "ja": "[[belobog|ベロブルグ]]の北にあり、厳しい氷雪に覆われた地。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term everwinter-hill: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5199,7 +5199,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.natashas-clinic.body",
-    "ja": "[[boulder-town]]で人々の治療を担う診療所。",
+    "ja": "[[boulder-town]]で人々の治療を担う診療所。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term natashas-clinic: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5727,7 +5727,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.fight-club.body",
-    "ja": "[[boulder-town]]にある施設。試合を観戦できる場として人々が集まる。",
+    "ja": "[[boulder-town]]にある施設。試合を観戦できる場として人々が集まる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term fight-club: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5900,7 +5900,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.base-zone.body",
-    "ja": "宇宙ステーション「ヘルタ」の区域。来訪者を迎える受付や医療設備が置かれている。",
+    "ja": "宇宙ステーション「ヘルタ」の区域。来訪者を迎える受付や医療設備が置かれている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term base-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5957,7 +5957,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.belobog-museum.body",
-    "ja": "[[belobog|ベロブルグ]]の歴史や文化に関わる展示品を収蔵する。",
+    "ja": "[[belobog|ベロブルグ]]の歴史や文化に関わる展示品を収蔵する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term belobog-museum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6344,7 +6344,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.boulder-town.body",
-    "ja": "[[belobog|ベロブルグ]]の地下にある鉱業の町。診療所やファイトクラブがある。",
+    "ja": "[[belobog|ベロブルグ]]の地下にある鉱業の町。診療所やファイトクラブがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term boulder-town: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6819,7 +6819,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.rivet-town.body",
-    "ja": "[[belobog|ベロブルグ]]の地下にあった町。裂界の脅威により住民は避難した。",
+    "ja": "[[belobog|ベロブルグ]]の地下にあった町。裂界の脅威により住民は避難した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term rivet-town: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
