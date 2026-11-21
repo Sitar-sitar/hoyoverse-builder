@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.hsr.dewlight-pavilion.name": {
+    "text": "朝露の館",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dewlight-pavilion.summary": {
+    "text": "ピノコニーのファミリーに関わる館。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dewlight-pavilion.body": {
+    "text": "ファミリーの各家系の代表が集まる施設。招待客以外の立ち入りは制限されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.aha-moment.name": {
     "text": "アッハタイム",
     "sourceHash": null,
@@ -289,6 +307,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.janusopolis.name": {
+    "text": "「運命の深淵」ヤヌサポリス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.janusopolis.summary": {
+    "text": "門と道のタイタンを信仰する都市国家。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.janusopolis.body": {
+    "text": "[[amphoreus|オンパロス]]にある都市国家。厄災の後、神殿の廃墟が残る。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okhema.name": {
+    "text": "「永遠の聖都」オクヘイマ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okhema.summary": {
+    "text": "オンパロスの都市国家。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.okhema.body": {
+    "text": "[[amphoreus|オンパロス]]で「世を背負う」タイタンを信仰する都市国家。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.hp.name": {
     "text": "HP",
     "sourceHash": null,
@@ -325,6 +379,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.golden-theater.name": {
+    "text": "黄金シアター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.golden-theater.summary": {
+    "text": "ベロブルグ行政区にある劇場。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.golden-theater.body": {
+    "text": "[[administrative-district]]の劇場。長い歴史を持つ文化施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.gold-and-gears.name": {
     "text": "黄金と機械",
     "sourceHash": null,
@@ -339,6 +411,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.gold-and-gears.body": {
     "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。サイコロ面を組み合わせ、専用の仕組みを使って挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.golden-hour.name": {
+    "text": "黄金の刻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.golden-hour.summary": {
+    "text": "ピノコニーの夢境にある賑やかな区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.golden-hour.body": {
+    "text": "[[penacony|ピノコニー]]の夢境にある街。宴や音楽が絶えない繁華な場所。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -375,6 +465,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.amphoreus.body": {
     "text": "[[astral-express|星穹列車]]が開拓の旅で訪れる世界。公式紹介では外部から観測できない謎の天体として語られ、住民は「タイタン」と呼ばれる神を信仰している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.backwater-pass.name": {
+    "text": "外縁通路",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.backwater-pass.summary": {
+    "text": "裂界に侵食されたかつての商業街。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.backwater-pass.body": {
+    "text": "[[belobog|ベロブルグ]]のかつての商業街。裂界の拡大により往時の賑わいを失った。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -559,6 +667,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.underworld.name": {
+    "text": "下層部",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.underworld.summary": {
+    "text": "ベロブルグの地下に広がる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.underworld.body": {
+    "text": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.masked-fools.name": {
     "text": "仮面の愚者",
     "sourceHash": null,
@@ -667,6 +793,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.robot-settlement.name": {
+    "text": "機械集落",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.robot-settlement.summary": {
+    "text": "人と機械が共存する地下の集落。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.robot-settlement.body": {
+    "text": "[[belobog|ベロブルグ]]の地下にあり、機械と人々が暮らす集落。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.calyx.name": {
     "text": "疑似花萼",
     "sourceHash": null,
@@ -721,6 +865,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.radiant-feldspar.name": {
+    "text": "暉長石号",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.radiant-feldspar.summary": {
+    "text": "ピノコニーの空を航行する船。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.radiant-feldspar.body": {
+    "text": "[[penacony|ピノコニー]]の空を飛ぶ船。星穹列車の一行が招待を受けて訪れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.curio.name": {
     "text": "奇物",
     "sourceHash": null,
@@ -757,6 +919,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.old-weapon-testing-ground.name": {
+    "text": "旧武器実験場",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.old-weapon-testing-ground.summary": {
+    "text": "ベロブルグのかつての武器製造施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.old-weapon-testing-ground.body": {
+    "text": "かつて自動機械の組み立てに使われた場所。後に競技の会場としても利用された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.buff.name": {
     "text": "強化状態",
     "sourceHash": null,
@@ -775,6 +955,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.kyoukankaku-biikon.name": {
+    "text": "共感覚ビーコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyoukankaku-biikon.summary": {
+    "text": "異なる言語の意思疎通を助ける技術。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kyoukankaku-biikon.body": {
+    "text": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.stagnant-shadow.name": {
     "text": "凝結虚影",
     "sourceHash": null,
@@ -789,6 +987,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.stagnant-shadow.body": {
     "text": "敵に挑み、[[trailblaze-power|開拓力]]を使ってキャラクターの昇格に必要な素材を獲得できるステージ。必要な素材に対応した場所を選ぼう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.administrative-district.name": {
+    "text": "行政区",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.administrative-district.summary": {
+    "text": "ベロブルグの行政と文化の中心地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.administrative-district.body": {
+    "text": "[[belobog|ベロブルグ]]の地上にある区域。都市の政治や文化の中心となっている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skysplitter.name": {
+    "text": "競鋒艦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skysplitter.summary": {
+    "text": "仙舟「羅浮」で訪れる艦。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skysplitter.body": {
+    "text": "[[xianzhou-luofu]]で探索できる区域の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -883,6 +1117,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.clock-studios-theme-park.name": {
+    "text": "クラークフィルムランド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.clock-studios-theme-park.summary": {
+    "text": "クロックボーイを題材とした映画のテーマパーク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.clock-studios-theme-park.body": {
+    "text": "[[penacony|ピノコニー]]の人気キャラクターを題材にした映画・映像のテーマパーク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.qlipoth-fort.name": {
+    "text": "クリフォト城",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.qlipoth-fort.summary": {
+    "text": "ベロブルグの大守護者が執務する城。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.qlipoth-fort.body": {
+    "text": "[[belobog|ベロブルグ]]の大守護者の住居であり、指揮の拠点となる建物。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.goethe-hotel.name": {
+    "text": "ゲーテホテル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.goethe-hotel.summary": {
+    "text": "ベロブルグ行政区のホテル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.goethe-hotel.body": {
+    "text": "[[administrative-district]]にある宿泊施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.break-effect.name": {
     "text": "撃破特効",
     "sourceHash": null,
@@ -919,6 +1207,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.architects.name": {
+    "text": "建創者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.architects.summary": {
+    "text": "ベロブルグの建設や統治に関わる人々。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.architects.body": {
+    "text": "[[belobog|ベロブルグ]]を築き、地上の都市の統治に関わる人々。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.ambrosial-arbor.name": {
     "text": "建木",
     "sourceHash": null,
@@ -933,6 +1239,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.ambrosial-arbor.body": {
     "text": "[[xianzhou-luofu]]の歴史に登場する樹木。公式資料では長命や仙舟の発展との関わりが語られている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outlying-snow-plains.name": {
+    "text": "郊外雪原",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outlying-snow-plains.summary": {
+    "text": "ベロブルグの城門の外に広がる雪原。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.outlying-snow-plains.body": {
+    "text": "[[belobog|ベロブルグ]]の外に広がる雪の地域。厳しい寒さに覆われている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1117,6 +1441,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.authors-gratitude.name": {
+    "text": "作者のお礼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.authors-gratitude.summary": {
+    "text": "紡がれた物語に関わる報酬。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.authors-gratitude.body": {
+    "text": "[[as-ive-written]]で対応する報酬を受け取れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.toughness-reduction.name": {
     "text": "削靭値",
     "sourceHash": null,
@@ -1149,6 +1491,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.relic-sub-stat.body": {
     "text": "[[relics|遺物]]に付く追加のステータス。強化によって新たに付いたり、既存の値が上がったりする。[[relic-main-stat|メインステータス]]とは別に表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.supply-zone.name": {
+    "text": "サポート部分",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.supply-zone.summary": {
+    "text": "宇宙ステーションの設備や輸送に関わる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.supply-zone.body": {
+    "text": "宇宙ステーション「ヘルタ」の区域。電力設備や鉄道のプラットフォームがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.corridor-of-fading-echoes.name": {
+    "text": "残響回廊",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.corridor-of-fading-echoes.summary": {
+    "text": "ベロブルグの裂界の奥へ続く区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.corridor-of-fading-echoes.body": {
+    "text": "[[belobog|ベロブルグ]]の裂界の深部へ続く場所。防衛線や旧来の司令部がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1333,6 +1711,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.storage-zone.name": {
+    "text": "収容部分",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.storage-zone.summary": {
+    "text": "宇宙ステーションの収蔵・研究に関わる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.storage-zone.body": {
+    "text": "宇宙ステーション「ヘルタ」の区域。研究対象の奇物を調べる実験室などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.blessing.name": {
     "text": "祝福",
     "sourceHash": null,
@@ -1347,6 +1743,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.blessing.body": {
     "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.master-control-zone.name": {
+    "text": "主制御部分",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.master-control-zone.summary": {
+    "text": "宇宙ステーションの中枢となる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.master-control-zone.body": {
+    "text": "宇宙ステーション「ヘルタ」の中枢。監視設備やヘルタのオフィスがある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1383,6 +1797,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-hunt.body": {
     "text": "[[path|運命]]の一つ。巡狩の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。単体への攻撃を得意とするキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.overworld.name": {
+    "text": "上層部",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.overworld.summary": {
+    "text": "ベロブルグの地上にある区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.overworld.body": {
+    "text": "[[belobog|ベロブルグ]]の地上部分。建創者たちが都市を治め、行政区などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.silvermane-guard-restricted-zone.name": {
+    "text": "シルバーメイン禁区",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.silvermane-guard-restricted-zone.summary": {
+    "text": "シルバーメインが守る制限区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.silvermane-guard-restricted-zone.body": {
+    "text": "[[belobog|ベロブルグ]]にある区域。シルバーメインが駐屯し、防衛にあたっている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1437,6 +1887,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.credit.body": {
     "text": "キャラクターや[[light-cone|光円錐]]の育成など、さまざまな場面で使うゲーム内通貨。[[calyx|疑似花萼]]などの報酬で獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fyxestroll-garden.name": {
+    "text": "綏園",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fyxestroll-garden.summary": {
+    "text": "仙舟「羅浮」で訪れる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fyxestroll-garden.body": {
+    "text": "[[xianzhou-luofu]]の区域。凝結虚影や侵蝕トンネルの挑戦もある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1509,6 +1977,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.relic-smart-equip.body": {
     "text": "キャラクターの[[relics|遺物]]画面で、システムおすすめやカスタムなどのプランを選べる機能。[[effective-substats|有効サブステータス]]数なども確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.soulglad-scorchsand.name": {
+    "text": "スラーダ™熱砂オーディション会場",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.soulglad-scorchsand.summary": {
+    "text": "調和セレモニーのオーディション会場。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.soulglad-scorchsand.body": {
+    "text": "[[penacony|ピノコニー]]の「熱砂の刻」にある、挑戦者が集まる会場。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1909,6 +2395,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.vortex-of-genesis.name": {
+    "text": "創世の渦心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.vortex-of-genesis.summary": {
+    "text": "オンパロスの創世に関わる聖地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.vortex-of-genesis.body": {
+    "text": "[[amphoreus|オンパロス]]にある、大波に隠された世界の起点とされる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pillars-of-creation.name": {
+    "text": "造物の柱",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pillars-of-creation.summary": {
+    "text": "ベロブルグの建造に関わる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pillars-of-creation.body": {
+    "text": "かつて巨大な機械が建造された場所。[[belobog|ベロブルグ]]の人々が再び集まり作業を行う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.wingweavers.name": {
     "text": "造翼者",
     "sourceHash": null,
@@ -2017,6 +2539,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.great-mine.name": {
+    "text": "大鉱区",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.great-mine.summary": {
+    "text": "ベロブルグの地下にある鉱山。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.great-mine.body": {
+    "text": "[[belobog|ベロブルグ]]の地下に広がる鉱山。資源を巡る争いも起きている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.titan.name": {
+    "text": "タイタン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.titan.summary": {
+    "text": "オンパロスの人々が信仰する神々。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.titan.body": {
+    "text": "[[amphoreus|オンパロス]]の都市国家で信仰される存在。世を背負うものや、紛争、門と道を司るものなどがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.divination-commission.name": {
     "text": "太卜司",
     "sourceHash": null,
@@ -2103,6 +2661,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.realm-keeping-commission.body": {
     "text": "[[xianzhou-luofu]]の[[exalting-sanctum]]に分部があり、災害対応などの仕事を担う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-childs-dream.name": {
+    "text": "稚児の夢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-childs-dream.summary": {
+    "text": "ピノコニーの夢境にある区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-childs-dream.body": {
+    "text": "歪んだ記憶から形作られた夢の領域。[[penacony|ピノコニー]]で訪れる場所の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bloodbathed-battlefront.name": {
+    "text": "「血染めの戦端」クレムノス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bloodbathed-battlefront.summary": {
+    "text": "紛争のタイタンに関わるクレムノスの区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bloodbathed-battlefront.body": {
+    "text": "[[amphoreus|オンパロス]]で訪れる、紛争のタイタンに関わる都市国家。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2485,6 +3079,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.everwinter-hill.name": {
+    "text": "常冬峰",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.everwinter-hill.summary": {
+    "text": "ベロブルグ北方に位置する場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.everwinter-hill.body": {
+    "text": "[[belobog|ベロブルグ]]の北にあり、厳しい氷雪に覆われた地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-edge.name": {
+    "text": "ドリームボーダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-edge.summary": {
+    "text": "ピノコニーにある建設途中の夢の街。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-edge.body": {
+    "text": "[[penacony|ピノコニー]]で夢を築く建築家たちが集まる区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreamflux-reef.name": {
+    "text": "ドリームリーフ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreamflux-reef.summary": {
+    "text": "ピノコニーの夢境にある区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreamflux-reef.body": {
+    "text": "[[penacony|ピノコニー]]で訪れる夢境の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.natashas-clinic.name": {
+    "text": "ナターシャの診療所",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.natashas-clinic.summary": {
+    "text": "ボルダータウンにある診療所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.natashas-clinic.body": {
+    "text": "[[boulder-town]]で人々の治療を担う診療所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.nameless.name": {
     "text": "ナナシビト",
     "sourceHash": null,
@@ -2755,6 +3421,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.paperfold-university.name": {
+    "text": "折り紙の大学",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.paperfold-university.summary": {
+    "text": "ピノコニーの大学。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.paperfold-university.body": {
+    "text": "[[penacony|ピノコニー]]にある大学。夢境の内外に人材を送り出す学びの場。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony-grand-theater.name": {
+    "text": "ピノコニー大劇場",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony-grand-theater.summary": {
+    "text": "ピノコニーの調和セレモニーの舞台。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony-grand-theater.body": {
+    "text": "[[penacony|ピノコニー]]の大劇場。ファミリーが建設した、調和セレモニーの会場。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fight-club.name": {
+    "text": "ファイトクラブ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fight-club.summary": {
+    "text": "ボルダータウンの試合会場。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fight-club.body": {
+    "text": "[[boulder-town]]にある施設。試合を観戦できる場として人々が集まる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.wind-shear.name": {
     "text": "風化",
     "sourceHash": null,
@@ -2769,6 +3489,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.wind-shear.body": {
     "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。風属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.seclusion-zone.name": {
+    "text": "封鎖部分",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.seclusion-zone.summary": {
+    "text": "宇宙ステーション「ヘルタ」にある区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.seclusion-zone.body": {
+    "text": "宇宙ステーション「ヘルタ」で探索できる区域の一つ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2809,6 +3547,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.strife-ruins-kremnos.name": {
+    "text": "「紛争の爪痕」クレムノス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.strife-ruins-kremnos.summary": {
+    "text": "紛争のタイタンに関わる都市国家。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.strife-ruins-kremnos.body": {
+    "text": "[[amphoreus|オンパロス]]にある、紛争のタイタンを崇める都市国家の廃墟。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.base-zone.name": {
+    "text": "ベース部分",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.base-zone.summary": {
+    "text": "宇宙ステーションの受付などがある区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.base-zone.body": {
+    "text": "宇宙ステーション「ヘルタ」の区域。来訪者を迎える受付や医療設備が置かれている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.belobog.name": {
     "text": "ベロブルグ",
     "sourceHash": null,
@@ -2823,6 +3597,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.belobog.body": {
     "text": "[[jarilo-vi|ヤリーロ-VI]]で[[astral-express|星穹列車]]の仲間たちが訪れる都市。開拓の旅で人々と出会い、この世界の物語を体験する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-museum.name": {
+    "text": "ベロブルグ歴史文化博物館",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-museum.summary": {
+    "text": "ベロブルグの歴史に関する展示施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-museum.body": {
+    "text": "[[belobog|ベロブルグ]]の歴史や文化に関わる展示品を収蔵する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2989,6 +3781,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.the-reverie-reality.name": {
+    "text": "ホテル・レバリー-現実",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-reverie-reality.summary": {
+    "text": "ピノコニーにある現実のホテル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-reverie-reality.body": {
+    "text": "[[penacony|ピノコニー]]の現実と夢の接点に位置するホテル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-reverie-dreamscape.name": {
+    "text": "ホテル・レバリー-夢境",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-reverie-dreamscape.summary": {
+    "text": "夢境に映し出されたホテル・レバリー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-reverie-dreamscape.body": {
+    "text": "[[the-reverie-reality|現実のホテル]]に対応する夢境の区域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.borisin.name": {
     "text": "歩離人",
     "sourceHash": null,
@@ -3003,6 +3831,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.borisin.body": {
     "text": "[[xianzhou-alliance]]の歴史に登場する長命種。公式資料では、犬類に似た身体的特徴を持つと紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.boulder-town.name": {
+    "text": "ボルダータウン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.boulder-town.summary": {
+    "text": "ベロブルグの地下にある町。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.boulder-town.body": {
+    "text": "[[belobog|ベロブルグ]]の地下にある鉱業の町。診療所やファイトクラブがある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3039,6 +3885,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.apocalyptic-shadow.body": {
     "text": "Ver.2.3で追加された常設コンテンツ。ステージに挑み、条件に応じた報酬を目指す。\n\n[[memory-of-chaos]]・[[pure-fiction]]とともに「星拓きモード」が追加されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless-memory.name": {
+    "text": "無名の追憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless-memory.summary": {
+    "text": "紡がれた物語のカード解放に使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nameless-memory.body": {
+    "text": "オンパロスの開拓クエストなどで獲得し、[[as-ive-written]]のカード解放に使用する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3129,6 +3993,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.effective-substats.body": {
     "text": "[[relic-smart-equip|スマート装備]]などで確認できる[[relic-sub-stat|サブステータス]]の情報。プランやキャラクターに応じた表示を確認し、装備を選ぶ際の参考にできる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shackling-prison.name": {
+    "text": "幽囚獄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shackling-prison.summary": {
+    "text": "仙舟にある罪人を収容する施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shackling-prison.body": {
+    "text": "[[xianzhou-luofu]]で訪れる牢獄。仙舟人と持明族によって築かれた。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3237,6 +4119,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.reserved-trailblaze-power.body": {
     "text": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rivet-town.name": {
+    "text": "リベットタウン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rivet-town.summary": {
+    "text": "かつて交易や機械製造で栄えた町。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rivet-town.body": {
+    "text": "[[belobog|ベロブルグ]]の地下にあった町。裂界の脅威により住民は避難した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

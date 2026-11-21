@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.genshin.action-card.name": {
+    "text": "アクションカード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.action-card.summary": {
+    "text": "七聖召喚で使用するカードの種類。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.action-card.body": {
+    "text": "[[genius-invokation-tcg]]の対戦で使うカード。さまざまな効果を持つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.inazuma.name": {
     "text": "稲妻",
     "sourceHash": null,
@@ -33,6 +51,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.constellation.body": {
     "text": "キャラクターごとに設定された六つの星座。対応する命ノ星座を解放すると、能力の追加や[[talent]]の強化などを得られる。一般に解放数を「凸」で表す。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.event-card.name": {
+    "text": "イベントカード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.event-card.summary": {
+    "text": "七聖召喚に登場するカード。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.event-card.body": {
+    "text": "[[genius-invokation-tcg]]で使うカードの種類。カードごとに効果や必要な元素サイコロが異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dream-solvent.name": {
+    "text": "異夢の溶媒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dream-solvent.summary": {
+    "text": "合成台の変転に使う素材。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dream-solvent.body": {
+    "text": "合成台の変転画面で、同じ武器種の原型を別の種類へ変換する際などに使う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.commission.name": {
+    "text": "依頼任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.commission.summary": {
+    "text": "日々挑戦できる任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.commission.body": {
+    "text": "敵の討伐や人物からの依頼などがあり、達成すると報酬を受け取れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-treasure-compass.name": {
+    "text": "岩のトレジャーコンパス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-treasure-compass.summary": {
+    "text": "璃月の宝箱を探す道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-treasure-compass.body": {
+    "text": "使用すると璃月で近くの宝箱の位置へ案内する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -91,6 +181,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.wind-catcher.name": {
+    "text": "風捕りの瓶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wind-catcher.summary": {
+    "text": "風の種を集めて風域を作る道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wind-catcher.body": {
+    "text": "装備中に風の種を集め、使用するとその場に一定時間の風域を発生させる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wind-glider.name": {
+    "text": "風の翼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wind-glider.summary": {
+    "text": "滑翔の際に使う翼の外観。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wind-glider.body": {
+    "text": "都市評判の報酬などとして異なる外観を獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-treasure-compass.name": {
+    "text": "風のトレジャーコンパス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-treasure-compass.summary": {
+    "text": "モンドの宝箱を探す道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-treasure-compass.body": {
+    "text": "使用するとモンドで近くの宝箱の位置へ案内する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vision.name": {
     "text": "神の目",
     "sourceHash": null,
@@ -105,6 +249,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.vision.body": {
     "text": "[[teyvat]]において、人間の[[element|元素]]を操る力は神の目となって現れると公式の開発者説明で語られている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ornamental-fish.name": {
+    "text": "観賞魚",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ornamental-fish.summary": {
+    "text": "洞天の池で飼うことができる魚。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ornamental-fish.body": {
+    "text": "[[fishing]]で獲得できる魚の一種。霊沼雲池で飼育できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.iwa-hitomi-kyouseiseki.name": {
+    "text": "岩神の瞳の共鳴石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.iwa-hitomi-kyouseiseki.summary": {
+    "text": "未取得の岩神の瞳を探す道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.iwa-hitomi-kyouseiseki.body": {
+    "text": "使用すると璃月で未取得の岩神の瞳のおおよその位置を地図に表示する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -127,6 +307,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.battle-pass.name": {
+    "text": "紀行",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.battle-pass.summary": {
+    "text": "任務を進めて報酬を得られる仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.battle-pass.body": {
+    "text": "デイリーやウィークリー、シーズンの任務で紀行経験値を獲得し、報酬を受け取る。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.battle-pass-exp.name": {
+    "text": "紀行経験",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.battle-pass-exp.summary": {
+    "text": "紀行任務で獲得する経験値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.battle-pass-exp.body": {
+    "text": "[[battle-pass]]の任務を達成すると獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sanctifying-elixir.name": {
     "text": "祈聖のエリクシル",
     "sourceHash": null,
@@ -141,6 +357,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.sanctifying-elixir.body": {
     "text": "[[artifact-transmuter]]で消費し、指定したセットや部位の[[artifact]]との交換に使える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gift-set.name": {
+    "text": "ギフトセット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gift-set.summary": {
+    "text": "仲間の好みに関わる調度品セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gift-set.body": {
+    "text": "[[serenitea-pot]]の編集画面では、セットを好む仲間を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.character-card.name": {
+    "text": "キャラカード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.character-card.summary": {
+    "text": "七聖召喚の対戦で使用するカード。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.character-card.body": {
+    "text": "[[genius-invokation-tcg]]に登場するカード。キャラクターや敵などのカードがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.midlander-billet.name": {
+    "text": "境土の原型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.midlander-billet.summary": {
+    "text": "武器の種類ごとに存在する原型。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.midlander-billet.body": {
+    "text": "合成台の変転画面では、同じ武器種の原型と相互に変換できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -325,6 +595,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.elemental-dice.name": {
+    "text": "元素サイコロ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.elemental-dice.summary": {
+    "text": "七聖召喚の行動に用いるサイコロ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.elemental-dice.body": {
+    "text": "[[genius-invokation-tcg]]でカードの使用やスキル発動などのコストに関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.elemental-mastery.name": {
     "text": "元素熟知",
     "sourceHash": null,
@@ -415,6 +703,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.saikouchi-kensaku.name": {
+    "text": "採鉱地検索",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.saikouchi-kensaku.summary": {
+    "text": "鍛冶屋から採鉱地の情報を得る機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.saikouchi-kensaku.body": {
+    "text": "モンドや璃月の鍛冶屋に尋ねると、採鉱地の情報がマップに表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nre-menu-30.name": {
+    "text": "三〇式・携帯式栄養袋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nre-menu-30.summary": {
+    "text": "バッグを開かずに料理を使うための道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nre-menu-30.body": {
+    "text": "回復料理と蘇生料理をそれぞれ登録でき、キャラクターの状態に応じて切り替わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.parametric-transformer.name": {
     "text": "参量物質変化器",
     "sourceHash": null,
@@ -429,6 +753,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.parametric-transformer.body": {
     "text": "ドロップアイテムや採集物を投入し、物質変化によって育成アイテムなどを得る。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.genius-invokation-tcg.name": {
+    "text": "七聖召喚",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.genius-invokation-tcg.summary": {
+    "text": "カードを使って対戦するコンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.genius-invokation-tcg.body": {
+    "text": "キャラカードやアクションカード、元素サイコロを用いるカード対戦。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -451,6 +793,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.juumin-request.name": {
+    "text": "住民リクエスト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.juumin-request.summary": {
+    "text": "住民の依頼を達成して評判を高める活動。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.juumin-request.body": {
+    "text": "都市評判に関わる活動。住民からのリクエストに応える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shuuren-point.name": {
+    "text": "修練ポイント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shuuren-point.summary": {
+    "text": "探索や任務などで得られるポイント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shuuren-point.body": {
+    "text": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vaporize.name": {
     "text": "蒸発",
     "sourceHash": null,
@@ -465,6 +843,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.vaporize.body": {
     "text": "炎と水による[[elemental-reaction]]。反応を起こした攻撃のダメージを増幅し、後から作用した元素によって倍率が異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitea-pot.name": {
+    "text": "塵歌壺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitea-pot.summary": {
+    "text": "洞天に調度品を配置して楽しむシステム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitea-pot.body": {
+    "text": "洞天に家具などを配置できる。仲間を招待したり、配置を模本として記録したりできる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -487,6 +883,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.trust-rank.name": {
+    "text": "信頼ランク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.trust-rank.summary": {
+    "text": "塵歌壺の進行に関わるランク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.trust-rank.body": {
+    "text": "[[serenitea-pot]]の信頼ランクが上がると、調度品製作に関する利点などを得られる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sumeru.name": {
     "text": "スメール",
     "sourceHash": null,
@@ -501,6 +915,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.sumeru.body": {
     "text": "[[teyvat]]の地域の一つ。雨林や砂漠のある国として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.artifact-box.name": {
+    "text": "聖遺箱",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.artifact-box.summary": {
+    "text": "聖遺物廻聖で選ぶ聖遺物セットの箱。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.artifact-box.body": {
+    "text": "[[artifact-strongbox]]の画面で、獲得したい聖遺物セットに対応する箱を選択できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -559,6 +991,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.fragile-resin.name": {
+    "text": "脆弱樹脂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fragile-resin.summary": {
+    "text": "樹脂の補充に関わるアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fragile-resin.body": {
+    "text": "一部の報酬受取画面では、濃縮樹脂がない場合に使用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.name": {
+    "text": "世界任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.summary": {
+    "text": "探索などを通して受注する任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.world-quest.body": {
+    "text": "各地の人物や探索に関わる任務。地域の仕掛けや探索範囲の解放につながるものもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.world-level.name": {
     "text": "世界ランク",
     "sourceHash": null,
@@ -573,6 +1041,96 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.world-level.body": {
     "text": "上昇すると魔物やボスのレベル、挑戦の難易度、報酬に影響する。上げるために[[adventure-rank]]や突破任務の条件がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.transient-resin.name": {
+    "text": "刹那樹脂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.transient-resin.summary": {
+    "text": "樹脂の補充に関わるアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.transient-resin.body": {
+    "text": "一部の報酬受取画面では、濃縮樹脂がない場合に使用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vial-of-adeptal-speed.name": {
+    "text": "仙速瓶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vial-of-adeptal-speed.summary": {
+    "text": "調度品の製作に使える道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vial-of-adeptal-speed.body": {
+    "text": "[[serenitea-pot]]の調度品製作で使用でき、製作中の品を受け取るために使う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.adepti-seekers-stove.name": {
+    "text": "仙人探しの美食家",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.adepti-seekers-stove.summary": {
+    "text": "携帯式の調理用の鍋を設置する道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.adepti-seekers-stove.body": {
+    "text": "使用するとキャラクターの前に料理用の鍋が現れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.equipment-card.name": {
+    "text": "装備カード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.equipment-card.summary": {
+    "text": "七聖召喚に登場するカード。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.equipment-card.body": {
+    "text": "[[genius-invokation-tcg]]で使用するカードの種類。武器などのカードがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tansakudo.name": {
+    "text": "探索度",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tansakudo.summary": {
+    "text": "地域ごとの探索状況を表す指標。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tansakudo.body": {
+    "text": "宝箱の発見、神の瞳の収集、ワープポイントの開放などで上がり、マップで確認できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -649,6 +1207,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.furnishing.name": {
+    "text": "調度品",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.furnishing.summary": {
+    "text": "塵歌壺の洞天に配置できる家具など。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.furnishing.body": {
+    "text": "[[serenitea-pot]]の洞天を飾る品。製作や洞天百貨などで入手できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.furnishing-blueprint.name": {
+    "text": "調度品設計図",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.furnishing-blueprint.summary": {
+    "text": "調度品の製作に用いる設計図。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.furnishing-blueprint.body": {
+    "text": "[[furnishing]]の製作に関わる設計図。[[realm-depot]]などで入手できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.archive-geography.name": {
+    "text": "地理誌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.archive-geography.summary": {
+    "text": "図鑑に収録される地理に関する記録。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.archive-geography.body": {
+    "text": "パイモンメニューから開く図鑑で確認できる項目の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.normal-attack.name": {
     "text": "通常攻撃",
     "sourceHash": null,
@@ -667,6 +1279,96 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.fishing.name": {
+    "text": "釣り",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing.summary": {
+    "text": "釣り場で魚を獲得する遊び。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing.body": {
+    "text": "釣り竿と餌を用いて魚を釣る。釣った魚は加工や釣り協会での交換に利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-bait.name": {
+    "text": "釣り餌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-bait.summary": {
+    "text": "魚を釣る際に選ぶ餌。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-bait.body": {
+    "text": "[[fishing]]では釣り竿とともに餌を選び、釣り場で使う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-association.name": {
+    "text": "釣り協会",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-association.summary": {
+    "text": "魚とアイテムを交換できる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-association.body": {
+    "text": "[[fishing]]で獲得した魚を、さまざまなアイテムと交換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-rod.name": {
+    "text": "釣り竿",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-rod.summary": {
+    "text": "釣りに使う道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-rod.body": {
+    "text": "[[fishing]]を行うために用意する道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-point.name": {
+    "text": "釣り場",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-point.summary": {
+    "text": "魚を釣ることができる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fishing-point.body": {
+    "text": "[[fishing]]を行う水域。マップピンを使って場所を記録できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.teyvat.name": {
     "text": "テイワット",
     "sourceHash": null,
@@ -681,6 +1383,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.teyvat.body": {
     "text": "[[element|七つの元素]]が絡み合う世界。モンドや璃月など、それぞれ異なる文化を持つ地域がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.name": {
+    "text": "伝説任務",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.summary": {
+    "text": "キャラクターに焦点を当てた任務。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.story-quest.body": {
+    "text": "キャラクターごとの物語を楽しめる任務。一部は他の任務の進行条件や挑戦の解放に関わる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -717,6 +1437,96 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.talent.body": {
     "text": "通常攻撃、[[elemental-skill]]、[[elemental-burst]]などの能力や固有の効果を指す。一部の天賦は素材を使ってレベルを上げられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-music.name": {
+    "text": "洞天音楽",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-music.summary": {
+    "text": "塵歌壺の曲目を確認できる機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-music.body": {
+    "text": "未獲得の曲目や対応する旋曜玉帛のあるエリアを確認でき、一部の曲を試聴できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-layout.name": {
+    "text": "洞天形態",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-layout.summary": {
+    "text": "塵歌壺で利用できる洞天の形態。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-layout.body": {
+    "text": "[[serenitea-pot]]には複数の洞天形態があり、対応する道具を使って開放できるものもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-depot.name": {
+    "text": "洞天百貨",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-depot.summary": {
+    "text": "塵歌壺で調度品などを購入できる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.realm-depot.body": {
+    "text": "[[serenitea-pot]]で使う調度品や設計図を購入できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toubatsu-kenshou.name": {
+    "text": "討伐懸賞",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toubatsu-kenshou.summary": {
+    "text": "対象の敵を討伐して評判を高める依頼。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toubatsu-kenshou.body": {
+    "text": "都市評判に関わる活動。指定された討伐対象を倒して評判を獲得する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toshi-hyouban.name": {
+    "text": "都市評判",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toshi-hyouban.summary": {
+    "text": "各地域の活動に応じて報酬を得られる仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toshi-hyouban.body": {
+    "text": "地域の任務や探索などで評判を高めると、レシピや道具の設計図などを受け取れる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -793,6 +1603,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.kaze-hitomi-kyouseiseki.name": {
+    "text": "風神の瞳の共鳴石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kaze-hitomi-kyouseiseki.summary": {
+    "text": "未取得の風神の瞳を探す道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kaze-hitomi-kyouseiseki.body": {
+    "text": "使用するとモンドで未取得の風神の瞳のおおよその位置を地図に表示する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fontaine.name": {
     "text": "フォンテーヌ",
     "sourceHash": null,
@@ -847,6 +1675,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.portable-waypoint.name": {
+    "text": "ポケットワープポイント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.portable-waypoint.summary": {
+    "text": "一時的なワープ先を設置する道具。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.portable-waypoint.body": {
+    "text": "使用した場所に一時的なワープポイントを設置できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.god.name": {
     "text": "魔神",
     "sourceHash": null,
@@ -861,6 +1707,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.god.body": {
     "text": "[[teyvat]]の歴史に登場する存在。公式の璃月紹介では岩の魔神に言及している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.namecard.name": {
+    "text": "名刺の飾り紋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.namecard.summary": {
+    "text": "プロフィールに設定できる飾り紋。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.namecard.body": {
+    "text": "都市評判の報酬などで獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.replica.name": {
+    "text": "模本",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.replica.summary": {
+    "text": "洞天の調度品配置を記録する機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.replica.body": {
+    "text": "[[serenitea-pot]]の対象エリアの配置を記録する。番号を使い、条件を満たした別の洞天で配置を再現できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -969,6 +1851,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.liyue.body": {
     "text": "[[teyvat]]の地域の一つ。公式の世界紹介では港を擁する商業都市として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pool-of-sapphire-grace.name": {
+    "text": "霊沼雲池",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pool-of-sapphire-grace.summary": {
+    "text": "観賞魚を飼うための洞天の池。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pool-of-sapphire-grace.body": {
+    "text": "[[ornamental-fish]]を飼うことができる。璃月の釣り協会で交換できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

@@ -199,6 +199,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.agent-story.name": {
+    "text": "エージェント秘話",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.agent-story.summary": {
+    "text": "エージェントに焦点を当てた物語。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.agent-story.body": {
+    "text": "エージェントに関わる物語を体験できる。進行が別コンテンツの参加条件となることもある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ethereal.name": {
     "text": "エーテリアス",
     "sourceHash": null,
@@ -253,6 +271,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.energy-district.name": {
+    "text": "エネルギー区",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.energy-district.summary": {
+    "text": "ロスカリファに追加されたエリア。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.energy-district.body": {
+    "text": "[[roskhalifa]]で探索できるエリアの一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-chronicles.name": {
+    "text": "エリー・クロニクル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-chronicles.summary": {
+    "text": "過去のイベントを体験できる機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-chronicles.body": {
+    "text": "限定期間が終了したイベントが収録され、引き続き内容を体験できる。期間限定報酬は期限後には受け取れない。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-weekly.name": {
+    "text": "エリー週記",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-weekly.summary": {
+    "text": "週ごとの任務を確認できる項目。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eridu-weekly.body": {
+    "text": "毎週更新される任務の内容を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.new-eridu-city-fund.name": {
     "text": "エリーファンド",
     "sourceHash": null,
@@ -267,6 +339,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.new-eridu-city-fund.body": {
     "text": "有効期間中にファンドレベルを上げると、プランに応じた報酬を獲得できる。育成素材などが含まれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.orbit-rail.name": {
+    "text": "オービットレール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.orbit-rail.summary": {
+    "text": "ロスカリファで使える移動手段。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.orbit-rail.body": {
+    "text": "空間移動の能力を利用して目的の場所へ素早く移動する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -289,6 +379,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.snack-box.name": {
+    "text": "おやつボックス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.snack-box.summary": {
+    "text": "ロスカリファで引けるボックス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.snack-box.body": {
+    "text": "Roarin' Brekkiesで引くとデータカードと報酬を獲得できる。占い・スクラッチと利用回数を共有する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.w-engine.name": {
     "text": "音動機",
     "sourceHash": null,
@@ -303,6 +411,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.w-engine.body": {
     "text": "[[agent]]に装備してステータスを補う。音動機の効果には、装備者の[[specialty]]に関する発動条件がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-warehouse.name": {
+    "text": "音動機倉庫",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-warehouse.summary": {
+    "text": "所持する音動機に関わる倉庫画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-warehouse.body": {
+    "text": "倉庫から開ける画面。音動機のリサイクルを利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-channel.name": {
+    "text": "音動機チャンネル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-channel.summary": {
+    "text": "音動機を獲得できる変調の種類。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-channel.body": {
+    "text": "[[signal-search|変調]]のチャンネルの一つ。対象の音動機を獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-residual-chip.name": {
+    "text": "音動機の残余チップ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-residual-chip.summary": {
+    "text": "音動機のリサイクルなどで得られるアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-residual-chip.body": {
+    "text": "A級音動機を分解する際に改良ランクに応じて獲得でき、音動機マスターチップとの交換にも使える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-recycling.name": {
+    "text": "音動機のリサイクル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-recycling.summary": {
+    "text": "音動機を分解する機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.w-engine-recycling.body": {
+    "text": "六分街のホビーショップや音動機倉庫で利用できる。A級音動機の分解では改良ランクに応じた残余チップを得られる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -469,6 +649,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kyuuto-kanraku.name": {
+    "text": "旧都陥落",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyuuto-kanraku.summary": {
+    "text": "旧エリー都が放棄されることになった事件。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyuuto-kanraku.body": {
+    "text": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ex-special-attack.name": {
     "text": "強化特殊スキル",
     "sourceHash": null,
@@ -523,6 +721,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kyousei-hollow.name": {
+    "text": "共生ホロウ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyousei-hollow.summary": {
+    "text": "既存のホロウから派生して生じるホロウ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyousei-hollow.body": {
+    "text": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.partner-archive.name": {
+    "text": "協力者ファイル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.partner-archive.summary": {
+    "text": "エージェントとの交流に関わる画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.partner-archive.body": {
+    "text": "信頼システムに関わる画面。エージェントの「お誘いへGO」などを利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.routine-cleanup.name": {
+    "text": "区域防衛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.routine-cleanup.summary": {
+    "text": "ドライバディスクなどの報酬を得られる挑戦。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.routine-cleanup.body": {
+    "text": "挑戦をクリアしてドライバディスクなどを獲得できる。エーテル電池を使う直接クリアにも対応する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.quick-assist.name": {
     "text": "クイック支援",
     "sourceHash": null,
@@ -537,6 +789,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.quick-assist.body": {
     "text": "攻撃を受けて吹き飛ばされたときや、スキルによって発動できる支援行動。控えの[[agent]]に切り替えて攻撃する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.quick-handbook.name": {
+    "text": "クイック手帳",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.quick-handbook.summary": {
+    "text": "作戦や資源などを確認する画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.quick-handbook.body": {
+    "text": "作戦の情報を確認でき、バッテリーなどの所持数も表示される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -577,6 +847,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hollow-zero-bounty.name": {
+    "text": "懸賞依頼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hollow-zero-bounty.summary": {
+    "text": "零号ホロウの報酬に関わる依頼。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hollow-zero-bounty.body": {
+    "text": "[[lost-void]]の懸賞依頼ではシャドウ結晶のデータが進行に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.core-skill.name": {
     "text": "コアスキル",
     "sourceHash": null,
@@ -609,6 +897,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.core-passive.body": {
     "text": "[[core-skill]]を構成する能力のひとつ。素材を使ってコアスキルを強化すると、対応する効果が向上する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo-coin.name": {
+    "text": "コインナ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo-coin.summary": {
+    "text": "ボンプラネットの進行に使うアイテム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo-coin.body": {
+    "text": "[[interboo]]に提出するとアカウントレベルを上げられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.name": {
+    "text": "輝磁",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.summary": {
+    "text": "エーテルの遮断に使われる材料。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kouji.body": {
+    "text": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.name": {
+    "text": "輝嶺石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.summary": {
+    "text": "加工すると輝磁になる鉱石。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koureiseki.body": {
+    "text": "ラマニアンホロウで採れる特殊な鉱石。加工後の輝磁はエーテルの遮断に用いられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.withered-domain.name": {
+    "text": "枯渇の都",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.withered-domain.summary": {
+    "text": "零号ホロウの調査に関わるコンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.withered-domain.body": {
+    "text": "零号ホロウにおける挑戦の一つ。調査ポイントに関する報酬がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -649,6 +1009,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.sunken-corridor.name": {
+    "text": "サンクン・コリドー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sunken-corridor.summary": {
+    "text": "ロスカリファに追加されたエリア。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sunken-corridor.body": {
+    "text": "[[roskhalifa]]で探索できるエリアの一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.central-computing-department.name": {
+    "text": "算理中枢局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.central-computing-department.summary": {
+    "text": "ロスカリファに追加されたエリア。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.central-computing-department.body": {
+    "text": "[[roscaelifer]]で探索できるエリアの一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.support.name": {
     "text": "支援",
     "sourceHash": null,
@@ -681,6 +1077,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.assist-follow-up.body": {
     "text": "[[defensive-assist]]や[[evasive-assist]]の後に、所定の操作で発動する攻撃。操作や効果は[[agent]]のスキル説明を確認する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shadow-crystal-data.name": {
+    "text": "シャドウ結晶のデータ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shadow-crystal-data.summary": {
+    "text": "迷いの地の懸賞依頼に関わるデータ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shadow-crystal-data.body": {
+    "text": "[[lost-void]]の懸賞依頼の進行に使われるデータ。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -847,6 +1261,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.new-eridu-public-security.name": {
+    "text": "新エリー都治安局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.new-eridu-public-security.summary": {
+    "text": "新エリー都の秩序を守る公的機関。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.new-eridu-public-security.body": {
+    "text": "各種の事務手続きや、市民からの要望に応じた支援を行う。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.singular-leak.name": {
+    "text": "シンギュラ・リーク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.singular-leak.summary": {
+    "text": "周囲の空間や対象に変化をもたらす現象。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.singular-leak.body": {
+    "text": "発生すると周囲の空間、物体、敵に変化が生じる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.mindscape-cinema.name": {
     "text": "心象映画",
     "sourceHash": null,
@@ -879,6 +1329,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.corruption.body": {
     "text": "エーテル属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的にエーテル属性ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hangout.name": {
+    "text": "親友とのお出かけ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hangout.summary": {
+    "text": "エージェントとの交流イベント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hangout.body": {
+    "text": "対応するエージェントを招集し、必要なストーリーを進めることで開放される。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -919,6 +1387,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.select-store.name": {
+    "text": "セレクトストア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.select-store.summary": {
+    "text": "指定アイテムでエージェントなどを交換できるショップ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.select-store.body": {
+    "text": "一部のS級エージェント、S級音動機や音動機マスターチップを交換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hollow-zero.name": {
     "text": "零号ホロウ",
     "sourceHash": null,
@@ -933,6 +1419,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hollow-zero.body": {
     "text": "[[hollow]]の調査に挑むコンテンツ。調査を通してさまざまな戦闘や出来事に遭遇する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.panoramic-view-terminal.name": {
+    "text": "全域視野端末権限",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.panoramic-view-terminal.summary": {
+    "text": "ロスカリファの監視カメラを利用する権限。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.panoramic-view-terminal.body": {
+    "text": "監視カメラから広い視野を得て、対象をスキャンし情報にアクセスできる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.early-access.name": {
+    "text": "先行上映",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.early-access.summary": {
+    "text": "一部ストーリーを先行して体験できる機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.early-access.body": {
+    "text": "条件を満たすと、一部メインストーリーをクイック体験できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -973,6 +1495,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.cheesetopia.name": {
+    "text": "ダイナー「チートピア」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cheesetopia.summary": {
+    "text": "ブレイズウッドにあるダイナー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cheesetopia.body": {
+    "text": "[[blazewood]]にある施設。カリュドーンの子に関わる場所。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hollow-special-operations-section-6.name": {
     "text": "対ホロウ6課",
     "sourceHash": null,
@@ -987,6 +1527,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hollow-special-operations-section-6.body": {
     "text": "公式キャラクター紹介に登場する組織。月城柳は副課長として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumina-security-branch.name": {
+    "text": "治安局ルミナ分署",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumina-security-branch.summary": {
+    "text": "ルミナスクエアにある治安局の施設。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumina-security-branch.body": {
+    "text": "[[lumina-square]]にある[[new-eridu-public-security]]の分署。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.training-course.name": {
+    "text": "調査員講座",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.training-course.summary": {
+    "text": "調査員向けの挑戦コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.training-course.body": {
+    "text": "調査員向けの講座。公式更新情報では専用画面の操作改善が案内されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.investigation-points.name": {
+    "text": "調査ポイント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.investigation-points.summary": {
+    "text": "零号ホロウの調査に関わるポイント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.investigation-points.body": {
+    "text": "零号ホロウの調査で獲得するポイント。[[withered-domain]]に週間の獲得上限が設けられている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1023,6 +1617,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.denny.body": {
     "text": "[[agent]]や[[w-engine]]の育成などに使う。イベントやショップの報酬としても獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.enemies.name": {
+    "text": "敵対ターゲット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.enemies.summary": {
+    "text": "エネミーに関わる情報を確認できる項目。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.enemies.body": {
+    "text": "敵対ターゲットに関する項目。公式更新情報では関連するアチーブメントが案内されている。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1081,6 +1693,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.exclusive-channel.name": {
+    "text": "独占チャンネル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exclusive-channel.summary": {
+    "text": "限定エージェントを獲得できる変調の種類。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exclusive-channel.body": {
+    "text": "[[signal-search|変調]]のチャンネルの一つ。開催中の対象エージェントを獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.special-invitation.name": {
     "text": "特別招待状",
     "sourceHash": null,
@@ -1131,6 +1761,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.drive-disc.body": {
     "text": "[[agent]]に装備するディスク。[[main-stat]]や[[sub-stat]]を持ち、同じセットを組み合わせるとセット効果が発動する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.inspector-mewmew.name": {
+    "text": "にゃんきち長官",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.inspector-mewmew.summary": {
+    "text": "街区で探索に関する挑戦を案内する存在。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.inspector-mewmew.body": {
+    "text": "各街区のノートを通じ、依頼やボンプ修理などの挑戦とメダルに関わる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1207,6 +1855,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.booastrum.name": {
+    "text": "ブーアストラム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.booastrum.summary": {
+    "text": "ロスカリファにある探索エリア。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.booastrum.body": {
+    "text": "[[roskhalifa]]のエリア。探索を進めるとボンプラネットのコンテンツを開放できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.weathering.name": {
     "text": "風化",
     "sourceHash": null,
@@ -1279,6 +1945,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.blazewood.name": {
+    "text": "ブレイズウッド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blazewood.summary": {
+    "text": "郊外の旧油田エリアにある町。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blazewood.body": {
+    "text": "郊外の町で、カリュドーンの子が活動する地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.proxy.name": {
     "text": "プロキシ",
     "sourceHash": null,
@@ -1315,6 +1999,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.proxy-promotion-guide.name": {
+    "text": "プロキシ昇格ガイド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proxy-promotion-guide.summary": {
+    "text": "プロキシ昇格の条件や進行を案内する機能。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proxy-promotion-guide.body": {
+    "text": "昇格条件を満たすと通知され、関連する任務へ移動できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.proxy-network.name": {
     "text": "プロキシチャンネル",
     "sourceHash": null,
@@ -1329,6 +2031,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.proxy-network.body": {
     "text": "チャンネルを作成したり参加したりして、チャットや[[deadly-assault|危局強襲戦]]の戦績共有を行える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proxy-file.name": {
+    "text": "プロキシファイル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proxy-file.summary": {
+    "text": "プロキシの進行情報を確認する画面。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.proxy-file.body": {
+    "text": "プロキシの名声昇格に関する特典や昇格ガイドを確認できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1387,6 +2107,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hobby-shop.name": {
+    "text": "ホビーショップ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hobby-shop.summary": {
+    "text": "六分街にある音動機を扱う店。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hobby-shop.body": {
+    "text": "[[sixth-street]]にあり、音動機のリサイクルを利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.polychrome.name": {
     "text": "ポリクローム",
     "sourceHash": null,
@@ -1437,6 +2175,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.bangboo.body": {
     "text": "さまざまな用途を持つ存在。戦闘に同行するものや、[[hollow]]の探索を助けるものがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-channel.name": {
+    "text": "ボンプチャンネル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-channel.summary": {
+    "text": "ボンプを獲得できる変調の種類。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-channel.body": {
+    "text": "「優秀なパートナー」などのチャンネルでボンプを獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-drone.name": {
+    "text": "ボンプドローン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-drone.summary": {
+    "text": "イアスを操作して利用するドローン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangboo-drone.body": {
+    "text": "移動や対象への干渉が可能。チャージとチャージ爆破のスキルを持つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo.name": {
+    "text": "ボンプラネット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo.summary": {
+    "text": "ロスカリファの探索に関わるシステム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.interboo.body": {
+    "text": "[[booastrum]]の探索でコンテンツが開放され、コインナを提出してアカウントレベルを上げられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void.name": {
+    "text": "迷いの地",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void.summary": {
+    "text": "零号ホロウの常設コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void.body": {
+    "text": "異なる武装やレゾブレムを使い、戦闘を進める。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1531,6 +2341,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.notorious-hunt.name": {
+    "text": "要警戒狩り",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.notorious-hunt.summary": {
+    "text": "強敵に挑む常設コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.notorious-hunt.body": {
+    "text": "強敵との戦闘に挑む。チーム編成時には人数や育成状況に応じたヒントが表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.reserve-battery.name": {
     "text": "予備バッテリー",
     "sourceHash": null,
@@ -1545,6 +2373,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.reserve-battery.body": {
     "text": "[[battery-charge]]が不足したときに補充へ使える。バッテリーが上限に達している間は時間とともに蓄積する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void-license.name": {
+    "text": "ライセンスレベル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void-license.summary": {
+    "text": "迷いの地の進行に関わるレベル。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lost-void-license.body": {
+    "text": "[[lost-void]]で上げることで、ボンプなどを獲得できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1585,6 +2431,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.lumina-square.name": {
+    "text": "ルミナスクエア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumina-square.summary": {
+    "text": "新エリー都にある街区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumina-square.body": {
+    "text": "治安局の施設やHIAキャリアセンターがある街区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonium.name": {
+    "text": "レゾブレム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonium.summary": {
+    "text": "零号ホロウで特殊効果を得られる要素。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonium.body": {
+    "text": "[[lost-void]]では武装とともに特殊な効果をもたらし、エージェントの戦闘を助ける。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.chain-attack.name": {
     "text": "連携スキル",
     "sourceHash": null,
@@ -1599,6 +2481,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.chain-attack.body": {
     "text": "行動可能な味方がいる状態で[[stun|ブレイク]]中の敵に重撃を当てると発動できる。スキルによって別の発動方法を持つ場合もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roscaelifer.name": {
+    "text": "ロスカリファ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roscaelifer.summary": {
+    "text": "新エリー都から隔絶された空域機密特区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roscaelifer.body": {
+    "text": "ブーアストラムなどのエリアがある。ロゼッタデータの産出に関わる場所。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

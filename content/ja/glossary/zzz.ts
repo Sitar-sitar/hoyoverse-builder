@@ -329,6 +329,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.agent-story.name",
+    "ja": "エージェント秘話",
+    "context": "glossary zzz term agent-story: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.agent-story.summary",
+    "ja": "エージェントに焦点を当てた物語。",
+    "context": "glossary zzz term agent-story: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.agent-story.body",
+    "ja": "エージェントに関わる物語を体験できる。進行が別コンテンツの参加条件となることもある。",
+    "context": "glossary zzz term agent-story: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.ethereal.name",
     "ja": "エーテリアス",
     "context": "glossary zzz term ethereal: Japanese official term name",
@@ -416,6 +443,89 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.energy-district.name",
+    "ja": "エネルギー区",
+    "context": "glossary zzz term energy-district: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.energy-district.summary",
+    "ja": "ロスカリファに追加されたエリア。",
+    "context": "glossary zzz term energy-district: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.energy-district.body",
+    "ja": "[[roscaelifer]]で探索できるエリアの一つ。",
+    "context": "glossary zzz term energy-district: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[roscaelifer]]"
+    ]
+  },
+  {
+    "id": "term.zzz.eridu-chronicles.name",
+    "ja": "エリー・クロニクル",
+    "context": "glossary zzz term eridu-chronicles: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eridu-chronicles.summary",
+    "ja": "過去のイベントを体験できる機能。",
+    "context": "glossary zzz term eridu-chronicles: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eridu-chronicles.body",
+    "ja": "一部のイベントは限定期間の終了後に収録され、引き続き内容を体験できる。期間限定報酬は期限後には受け取れない。",
+    "context": "glossary zzz term eridu-chronicles: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eridu-weekly.name",
+    "ja": "エリー週記",
+    "context": "glossary zzz term eridu-weekly: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eridu-weekly.summary",
+    "ja": "週ごとの任務を確認できる項目。",
+    "context": "glossary zzz term eridu-weekly: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eridu-weekly.body",
+    "ja": "毎週更新される任務の内容を確認できる。",
+    "context": "glossary zzz term eridu-weekly: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.new-eridu-city-fund.name",
     "ja": "エリーファンド",
     "context": "glossary zzz term new-eridu-city-fund: Japanese official term name",
@@ -443,6 +553,33 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.orbit-rail.name",
+    "ja": "オービットレール",
+    "context": "glossary zzz term orbit-rail: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.orbit-rail.summary",
+    "ja": "ロスカリファで使える移動手段。",
+    "context": "glossary zzz term orbit-rail: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.orbit-rail.body",
+    "ja": "空間移動の能力を利用して目的の場所へ素早く移動する。",
+    "context": "glossary zzz term orbit-rail: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.obol-squad.name",
     "ja": "オボルス小隊",
     "context": "glossary zzz term obol-squad: Japanese official term name",
@@ -464,6 +601,33 @@ export const sources: SourceText[] = [
     "id": "term.zzz.obol-squad.body",
     "ja": "公式キャラクター一覧で、11号やオルペウス＆「鬼火」などが所属する陣営として紹介される。",
     "context": "glossary zzz term obol-squad: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.snack-box.name",
+    "ja": "おやつボックス",
+    "context": "glossary zzz term snack-box: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.snack-box.summary",
+    "ja": "ロスカリファで引けるボックス。",
+    "context": "glossary zzz term snack-box: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.snack-box.body",
+    "ja": "Roarin' Brekkiesで引くとデータカードと報酬を獲得できる。占い・スクラッチと利用回数を共有する。",
+    "context": "glossary zzz term snack-box: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -498,6 +662,116 @@ export const sources: SourceText[] = [
       "[[agent]]",
       "[[specialty]]"
     ]
+  },
+  {
+    "id": "term.zzz.w-engine-warehouse.name",
+    "ja": "音動機倉庫",
+    "context": "glossary zzz term w-engine-warehouse: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-warehouse.summary",
+    "ja": "所持する音動機に関わる倉庫画面。",
+    "context": "glossary zzz term w-engine-warehouse: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-warehouse.body",
+    "ja": "倉庫から開ける画面。音動機のリサイクルを利用できる。",
+    "context": "glossary zzz term w-engine-warehouse: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-channel.name",
+    "ja": "音動機チャンネル",
+    "context": "glossary zzz term w-engine-channel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-channel.summary",
+    "ja": "音動機を獲得できる変調の種類。",
+    "context": "glossary zzz term w-engine-channel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-channel.body",
+    "ja": "[[signal-search|変調]]のチャンネルの一つ。対象の音動機を獲得できる。",
+    "context": "glossary zzz term w-engine-channel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[signal-search|"
+    ]
+  },
+  {
+    "id": "term.zzz.w-engine-residual-chip.name",
+    "ja": "音動機の残余チップ",
+    "context": "glossary zzz term w-engine-residual-chip: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-residual-chip.summary",
+    "ja": "音動機のリサイクルなどで得られるアイテム。",
+    "context": "glossary zzz term w-engine-residual-chip: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-residual-chip.body",
+    "ja": "A級音動機を分解する際に改良ランクに応じて獲得でき、音動機マスターチップとの交換にも使える。",
+    "context": "glossary zzz term w-engine-residual-chip: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-recycling.name",
+    "ja": "音動機のリサイクル",
+    "context": "glossary zzz term w-engine-recycling: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-recycling.summary",
+    "ja": "音動機を分解する機能。",
+    "context": "glossary zzz term w-engine-recycling: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.w-engine-recycling.body",
+    "ja": "六分街のホビーショップや音動機倉庫で利用できる。A級音動機の分解では改良ランクに応じた残余チップを得られる。",
+    "context": "glossary zzz term w-engine-recycling: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.w-engine-master-chip.name",
@@ -763,6 +1037,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kyuuto-kanraku.name",
+    "ja": "旧都陥落",
+    "context": "glossary zzz term kyuuto-kanraku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyuuto-kanraku.summary",
+    "ja": "旧エリー都が放棄されることになった事件。",
+    "context": "glossary zzz term kyuuto-kanraku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyuuto-kanraku.body",
+    "ja": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "context": "glossary zzz term kyuuto-kanraku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.ex-special-attack.name",
     "ja": "強化特殊スキル",
     "context": "glossary zzz term ex-special-attack: Japanese official term name",
@@ -852,6 +1153,87 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kyousei-hollow.name",
+    "ja": "共生ホロウ",
+    "context": "glossary zzz term kyousei-hollow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyousei-hollow.summary",
+    "ja": "既存のホロウから派生して生じるホロウ。",
+    "context": "glossary zzz term kyousei-hollow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyousei-hollow.body",
+    "ja": "既存のホロウに由来して発生する。街中で生じて住民に被害を及ぼすこともある。",
+    "context": "glossary zzz term kyousei-hollow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.partner-archive.name",
+    "ja": "協力者ファイル",
+    "context": "glossary zzz term partner-archive: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.partner-archive.summary",
+    "ja": "エージェントとの交流に関わる画面。",
+    "context": "glossary zzz term partner-archive: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.partner-archive.body",
+    "ja": "信頼システムに関わる画面。エージェントの「お誘いへGO」などを利用できる。",
+    "context": "glossary zzz term partner-archive: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.routine-cleanup.name",
+    "ja": "区域防衛",
+    "context": "glossary zzz term routine-cleanup: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.routine-cleanup.summary",
+    "ja": "ドライバディスクなどの報酬を得られる挑戦。",
+    "context": "glossary zzz term routine-cleanup: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.routine-cleanup.body",
+    "ja": "挑戦をクリアしてドライバディスクなどを獲得できる。エーテル電池を使う直接クリアにも対応する。",
+    "context": "glossary zzz term routine-cleanup: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.quick-assist.name",
     "ja": "クイック支援",
     "context": "glossary zzz term quick-assist: Japanese official term name",
@@ -879,6 +1261,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[agent]]"
     ]
+  },
+  {
+    "id": "term.zzz.quick-handbook.name",
+    "ja": "クイック手帳",
+    "context": "glossary zzz term quick-handbook: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.quick-handbook.summary",
+    "ja": "作戦や資源などを確認する画面。",
+    "context": "glossary zzz term quick-handbook: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.quick-handbook.body",
+    "ja": "作戦の情報を確認でき、バッテリーなどの所持数も表示される。",
+    "context": "glossary zzz term quick-handbook: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.krampus-compliance-authority.name",
@@ -941,6 +1350,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hollow-zero-bounty.name",
+    "ja": "懸賞依頼",
+    "context": "glossary zzz term hollow-zero-bounty: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hollow-zero-bounty.summary",
+    "ja": "零号ホロウの報酬に関わる依頼。",
+    "context": "glossary zzz term hollow-zero-bounty: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hollow-zero-bounty.body",
+    "ja": "[[lost-void]]の懸賞依頼ではシャドウ結晶のデータが進行に関わる。",
+    "context": "glossary zzz term hollow-zero-bounty: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[lost-void]]"
+    ]
+  },
+  {
     "id": "term.zzz.core-skill.name",
     "ja": "コアスキル",
     "context": "glossary zzz term core-skill: Japanese official term name",
@@ -998,6 +1436,116 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[core-skill]]"
     ]
+  },
+  {
+    "id": "term.zzz.interboo-coin.name",
+    "ja": "コインナ",
+    "context": "glossary zzz term interboo-coin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.interboo-coin.summary",
+    "ja": "ボンプラネットの進行に使うアイテム。",
+    "context": "glossary zzz term interboo-coin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.interboo-coin.body",
+    "ja": "[[interboo]]に提出するとアカウントレベルを上げられる。",
+    "context": "glossary zzz term interboo-coin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[interboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.kouji.name",
+    "ja": "輝磁",
+    "context": "glossary zzz term kouji: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kouji.summary",
+    "ja": "エーテルの遮断に使われる材料。",
+    "context": "glossary zzz term kouji: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kouji.body",
+    "ja": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "context": "glossary zzz term kouji: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.name",
+    "ja": "輝嶺石",
+    "context": "glossary zzz term koureiseki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.summary",
+    "ja": "衛非地区などで採れる鉱石。",
+    "context": "glossary zzz term koureiseki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koureiseki.body",
+    "ja": "衛非地区は輝嶺石の主要な産地で、輝磁製品の加工も行われている。",
+    "context": "glossary zzz term koureiseki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.withered-domain.name",
+    "ja": "枯渇の都",
+    "context": "glossary zzz term withered-domain: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.withered-domain.summary",
+    "ja": "零号ホロウの調査に関わるコンテンツ。",
+    "context": "glossary zzz term withered-domain: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.withered-domain.body",
+    "ja": "零号ホロウにおける挑戦の一つ。調査ポイントに関する報酬がある。",
+    "context": "glossary zzz term withered-domain: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.disorder.name",
@@ -1059,6 +1607,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.sunken-corridor.name",
+    "ja": "サンクン・コリドー",
+    "context": "glossary zzz term sunken-corridor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sunken-corridor.summary",
+    "ja": "ロスカリファに追加されたエリア。",
+    "context": "glossary zzz term sunken-corridor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sunken-corridor.body",
+    "ja": "[[roscaelifer]]で探索できるエリアの一つ。",
+    "context": "glossary zzz term sunken-corridor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[roscaelifer]]"
+    ]
+  },
+  {
+    "id": "term.zzz.central-computing-department.name",
+    "ja": "算理中枢局",
+    "context": "glossary zzz term central-computing-department: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.central-computing-department.summary",
+    "ja": "ロスカリファに追加されたエリア。",
+    "context": "glossary zzz term central-computing-department: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.central-computing-department.body",
+    "ja": "[[roscaelifer]]で探索できるエリアの一つ。",
+    "context": "glossary zzz term central-computing-department: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[roscaelifer]]"
+    ]
+  },
+  {
     "id": "term.zzz.support.name",
     "ja": "支援",
     "context": "glossary zzz term support: Japanese official term name",
@@ -1117,6 +1723,35 @@ export const sources: SourceText[] = [
       "[[agent]]",
       "[[defensive-assist]]",
       "[[evasive-assist]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shadow-crystal-data.name",
+    "ja": "シャドウ結晶のデータ",
+    "context": "glossary zzz term shadow-crystal-data: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shadow-crystal-data.summary",
+    "ja": "迷いの地の懸賞依頼に関わるデータ。",
+    "context": "glossary zzz term shadow-crystal-data: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shadow-crystal-data.body",
+    "ja": "[[lost-void]]の懸賞依頼の進行に使われるデータ。",
+    "context": "glossary zzz term shadow-crystal-data: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[lost-void]]"
     ]
   },
   {
@@ -1384,6 +2019,60 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.new-eridu-public-security.name",
+    "ja": "新エリー都治安局",
+    "context": "glossary zzz term new-eridu-public-security: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.new-eridu-public-security.summary",
+    "ja": "新エリー都の秩序を守る公的機関。",
+    "context": "glossary zzz term new-eridu-public-security: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.new-eridu-public-security.body",
+    "ja": "各種の事務手続きや、市民からの要望に応じた支援を行う。",
+    "context": "glossary zzz term new-eridu-public-security: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.singular-leak.name",
+    "ja": "シンギュラ・リーク",
+    "context": "glossary zzz term singular-leak: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.singular-leak.summary",
+    "ja": "周囲の空間や対象に変化をもたらす現象。",
+    "context": "glossary zzz term singular-leak: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.singular-leak.body",
+    "ja": "発生すると周囲の空間、物体、敵に変化が生じる。",
+    "context": "glossary zzz term singular-leak: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.mindscape-cinema.name",
     "ja": "心象映画",
     "context": "glossary zzz term mindscape-cinema: Japanese official term name",
@@ -1442,6 +2131,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hangout.name",
+    "ja": "親友とのお出かけ",
+    "context": "glossary zzz term hangout: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hangout.summary",
+    "ja": "エージェントとの交流イベント。",
+    "context": "glossary zzz term hangout: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hangout.body",
+    "ja": "対応するエージェントを招集し、必要なストーリーを進めることで開放される。",
+    "context": "glossary zzz term hangout: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.agent-trust.name",
     "ja": "信頼関係",
     "context": "glossary zzz term agent-trust: Japanese official term name",
@@ -1498,6 +2214,33 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.select-store.name",
+    "ja": "セレクトストア",
+    "context": "glossary zzz term select-store: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.select-store.summary",
+    "ja": "指定アイテムでエージェントなどを交換できるショップ。",
+    "context": "glossary zzz term select-store: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.select-store.body",
+    "ja": "一部のS級エージェント、S級音動機や音動機マスターチップを交換できる。",
+    "context": "glossary zzz term select-store: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.hollow-zero.name",
     "ja": "零号ホロウ",
     "context": "glossary zzz term hollow-zero: Japanese official term name",
@@ -1525,6 +2268,60 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[hollow]]"
     ]
+  },
+  {
+    "id": "term.zzz.panoramic-view-terminal.name",
+    "ja": "全域視野端末権限",
+    "context": "glossary zzz term panoramic-view-terminal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.panoramic-view-terminal.summary",
+    "ja": "ロスカリファの監視カメラを利用する権限。",
+    "context": "glossary zzz term panoramic-view-terminal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.panoramic-view-terminal.body",
+    "ja": "監視カメラから広い視野を得て、対象をスキャンし情報にアクセスできる。",
+    "context": "glossary zzz term panoramic-view-terminal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.early-access.name",
+    "ja": "先行上映",
+    "context": "glossary zzz term early-access: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.early-access.summary",
+    "ja": "一部ストーリーを先行して体験できる機能。",
+    "context": "glossary zzz term early-access: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.early-access.body",
+    "ja": "条件を満たすと、一部メインストーリーをクイック体験できる。",
+    "context": "glossary zzz term early-access: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.frostbite.name",
@@ -1587,6 +2384,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.cheesetopia.name",
+    "ja": "ダイナー「チートピア」",
+    "context": "glossary zzz term cheesetopia: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cheesetopia.summary",
+    "ja": "ブレイズウッドにあるダイナー。",
+    "context": "glossary zzz term cheesetopia: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cheesetopia.body",
+    "ja": "[[blazewood]]にある施設。カリュドーンの子に関わる場所。",
+    "context": "glossary zzz term cheesetopia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[blazewood]]"
+    ]
+  },
+  {
     "id": "term.zzz.hollow-special-operations-section-6.name",
     "ja": "対ホロウ6課",
     "context": "glossary zzz term hollow-special-operations-section-6: Japanese official term name",
@@ -1612,6 +2438,92 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumina-security-branch.name",
+    "ja": "治安局ルミナ分署",
+    "context": "glossary zzz term lumina-security-branch: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumina-security-branch.summary",
+    "ja": "ルミナスクエアにある治安局の施設。",
+    "context": "glossary zzz term lumina-security-branch: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumina-security-branch.body",
+    "ja": "[[lumina-square]]にある[[new-eridu-public-security]]の分署。",
+    "context": "glossary zzz term lumina-security-branch: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[lumina-square]]",
+      "[[new-eridu-public-security]]"
+    ]
+  },
+  {
+    "id": "term.zzz.training-course.name",
+    "ja": "調査員講座",
+    "context": "glossary zzz term training-course: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.training-course.summary",
+    "ja": "調査員向けの挑戦コンテンツ。",
+    "context": "glossary zzz term training-course: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.training-course.body",
+    "ja": "調査員向けの講座。公式更新情報では専用画面の操作改善が案内されている。",
+    "context": "glossary zzz term training-course: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.investigation-points.name",
+    "ja": "調査ポイント",
+    "context": "glossary zzz term investigation-points: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.investigation-points.summary",
+    "ja": "零号ホロウの調査に関わるポイント。",
+    "context": "glossary zzz term investigation-points: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.investigation-points.body",
+    "ja": "零号ホロウの調査で獲得するポイント。[[withered-domain]]に週間の獲得上限が設けられている。",
+    "context": "glossary zzz term investigation-points: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[withered-domain]]"
+    ]
   },
   {
     "id": "term.zzz.additional-ability.name",
@@ -1673,6 +2585,33 @@ export const sources: SourceText[] = [
       "[[agent]]",
       "[[w-engine]]"
     ]
+  },
+  {
+    "id": "term.zzz.enemies.name",
+    "ja": "敵対ターゲット",
+    "context": "glossary zzz term enemies: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.enemies.summary",
+    "ja": "エネミーに関わる情報を確認できる項目。",
+    "context": "glossary zzz term enemies: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.enemies.body",
+    "ja": "敵対ターゲットに関する項目。公式更新情報では関連するアチーブメントが案内されている。",
+    "context": "glossary zzz term enemies: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.decibels.name",
@@ -1768,6 +2707,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.exclusive-channel.name",
+    "ja": "独占チャンネル",
+    "context": "glossary zzz term exclusive-channel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exclusive-channel.summary",
+    "ja": "限定エージェントを獲得できる変調の種類。",
+    "context": "glossary zzz term exclusive-channel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exclusive-channel.body",
+    "ja": "[[signal-search|変調]]のチャンネルの一つ。開催中の対象エージェントを獲得できる。",
+    "context": "glossary zzz term exclusive-channel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[signal-search|"
+    ]
+  },
+  {
     "id": "term.zzz.special-invitation.name",
     "ja": "特別招待状",
     "context": "glossary zzz term special-invitation: Japanese official term name",
@@ -1855,6 +2823,33 @@ export const sources: SourceText[] = [
       "[[main-stat]]",
       "[[sub-stat]]"
     ]
+  },
+  {
+    "id": "term.zzz.inspector-mewmew.name",
+    "ja": "にゃんきち長官",
+    "context": "glossary zzz term inspector-mewmew: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.inspector-mewmew.summary",
+    "ja": "街区で探索に関する挑戦を案内する存在。",
+    "context": "glossary zzz term inspector-mewmew: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.inspector-mewmew.body",
+    "ja": "各街区のノートを通じ、依頼やボンプ修理などの挑戦とメダルに関わる。",
+    "context": "glossary zzz term inspector-mewmew: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.burn.name",
@@ -1974,6 +2969,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent|"
+    ]
+  },
+  {
+    "id": "term.zzz.booastrum.name",
+    "ja": "ブーアストラム",
+    "context": "glossary zzz term booastrum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.booastrum.summary",
+    "ja": "ロスカリファにある探索エリア。",
+    "context": "glossary zzz term booastrum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.booastrum.body",
+    "ja": "[[roscaelifer]]のエリア。探索を進めるとボンプラネットのコンテンツを開放できる。",
+    "context": "glossary zzz term booastrum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[roscaelifer]]"
     ]
   },
   {
@@ -2097,6 +3121,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.blazewood.name",
+    "ja": "ブレイズウッド",
+    "context": "glossary zzz term blazewood: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blazewood.summary",
+    "ja": "郊外の旧油田エリアにある町。",
+    "context": "glossary zzz term blazewood: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blazewood.body",
+    "ja": "郊外の町で、カリュドーンの子が活動する地域。",
+    "context": "glossary zzz term blazewood: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.proxy.name",
     "ja": "プロキシ",
     "context": "glossary zzz term proxy: Japanese official term name",
@@ -2156,6 +3207,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.proxy-promotion-guide.name",
+    "ja": "プロキシ昇格ガイド",
+    "context": "glossary zzz term proxy-promotion-guide: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proxy-promotion-guide.summary",
+    "ja": "プロキシ昇格の条件や進行を案内する機能。",
+    "context": "glossary zzz term proxy-promotion-guide: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proxy-promotion-guide.body",
+    "ja": "昇格条件を満たすと通知され、関連する任務へ移動できる。",
+    "context": "glossary zzz term proxy-promotion-guide: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.proxy-network.name",
     "ja": "プロキシチャンネル",
     "context": "glossary zzz term proxy-network: Japanese official term name",
@@ -2183,6 +3261,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[deadly-assault|"
     ]
+  },
+  {
+    "id": "term.zzz.proxy-file.name",
+    "ja": "プロキシファイル",
+    "context": "glossary zzz term proxy-file: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proxy-file.summary",
+    "ja": "プロキシの進行情報を確認する画面。",
+    "context": "glossary zzz term proxy-file: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proxy-file.body",
+    "ja": "プロキシの名声昇格に関する特典や昇格ガイドを確認できる。",
+    "context": "glossary zzz term proxy-file: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.signal-search.name",
@@ -2274,6 +3379,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hobby-shop.name",
+    "ja": "ホビーショップ",
+    "context": "glossary zzz term hobby-shop: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hobby-shop.summary",
+    "ja": "六分街にある音動機を扱う店。",
+    "context": "glossary zzz term hobby-shop: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hobby-shop.body",
+    "ja": "[[sixth-street]]にあり、音動機のリサイクルを利用できる。",
+    "context": "glossary zzz term hobby-shop: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sixth-street]]"
+    ]
+  },
+  {
     "id": "term.zzz.polychrome.name",
     "ja": "ポリクローム",
     "context": "glossary zzz term polychrome: Japanese official term name",
@@ -2360,6 +3494,116 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[hollow]]"
     ]
+  },
+  {
+    "id": "term.zzz.bangboo-channel.name",
+    "ja": "ボンプチャンネル",
+    "context": "glossary zzz term bangboo-channel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangboo-channel.summary",
+    "ja": "ボンプを獲得できる変調の種類。",
+    "context": "glossary zzz term bangboo-channel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangboo-channel.body",
+    "ja": "「優秀なパートナー」などのチャンネルでボンプを獲得できる。",
+    "context": "glossary zzz term bangboo-channel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangboo-drone.name",
+    "ja": "ボンプドローン",
+    "context": "glossary zzz term bangboo-drone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangboo-drone.summary",
+    "ja": "イアスを操作して利用するドローン。",
+    "context": "glossary zzz term bangboo-drone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangboo-drone.body",
+    "ja": "移動や対象への干渉が可能。チャージとチャージ爆破のスキルを持つ。",
+    "context": "glossary zzz term bangboo-drone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.interboo.name",
+    "ja": "ボンプラネット",
+    "context": "glossary zzz term interboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.interboo.summary",
+    "ja": "ロスカリファの探索に関わるシステム。",
+    "context": "glossary zzz term interboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.interboo.body",
+    "ja": "[[booastrum]]の探索でコンテンツが開放され、コインナを提出してアカウントレベルを上げられる。",
+    "context": "glossary zzz term interboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[booastrum]]"
+    ]
+  },
+  {
+    "id": "term.zzz.lost-void.name",
+    "ja": "迷いの地",
+    "context": "glossary zzz term lost-void: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lost-void.summary",
+    "ja": "零号ホロウの常設コンテンツ。",
+    "context": "glossary zzz term lost-void: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lost-void.body",
+    "ja": "異なる武装やレゾブレムを使い、戦闘を進める。",
+    "context": "glossary zzz term lost-void: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.master-tape.name",
@@ -2509,6 +3753,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.notorious-hunt.name",
+    "ja": "要警戒狩り",
+    "context": "glossary zzz term notorious-hunt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.notorious-hunt.summary",
+    "ja": "強敵に挑む常設コンテンツ。",
+    "context": "glossary zzz term notorious-hunt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.notorious-hunt.body",
+    "ja": "強敵との戦闘に挑む。チーム編成時には人数や育成状況に応じたヒントが表示される。",
+    "context": "glossary zzz term notorious-hunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.reserve-battery.name",
     "ja": "予備バッテリー",
     "context": "glossary zzz term reserve-battery: Japanese official term name",
@@ -2535,6 +3806,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[battery-charge]]"
+    ]
+  },
+  {
+    "id": "term.zzz.lost-void-license.name",
+    "ja": "ライセンスレベル",
+    "context": "glossary zzz term lost-void-license: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lost-void-license.summary",
+    "ja": "迷いの地の進行に関わるレベル。",
+    "context": "glossary zzz term lost-void-license: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lost-void-license.body",
+    "ja": "[[lost-void]]で上げることで、ボンプなどを獲得できる。",
+    "context": "glossary zzz term lost-void-license: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[lost-void]]"
     ]
   },
   {
@@ -2599,6 +3899,62 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.lumina-square.name",
+    "ja": "ルミナスクエア",
+    "context": "glossary zzz term lumina-square: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumina-square.summary",
+    "ja": "新エリー都にある街区。",
+    "context": "glossary zzz term lumina-square: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumina-square.body",
+    "ja": "治安局の施設やHIAキャリアセンターがある街区。",
+    "context": "glossary zzz term lumina-square: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonium.name",
+    "ja": "レゾブレム",
+    "context": "glossary zzz term resonium: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonium.summary",
+    "ja": "零号ホロウで特殊効果を得られる要素。",
+    "context": "glossary zzz term resonium: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonium.body",
+    "ja": "[[lost-void]]では武装とともに特殊な効果をもたらし、エージェントの戦闘を助ける。",
+    "context": "glossary zzz term resonium: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[lost-void]]"
+    ]
+  },
+  {
     "id": "term.zzz.chain-attack.name",
     "ja": "連携スキル",
     "context": "glossary zzz term chain-attack: Japanese official term name",
@@ -2626,6 +3982,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[stun|"
     ]
+  },
+  {
+    "id": "term.zzz.roscaelifer.name",
+    "ja": "ロスカリファ",
+    "context": "glossary zzz term roscaelifer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roscaelifer.summary",
+    "ja": "新エリー都から隔絶された空域機密特区。",
+    "context": "glossary zzz term roscaelifer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roscaelifer.body",
+    "ja": "ブーアストラムなどのエリアがある。ロゼッタデータの産出に関わる場所。",
+    "context": "glossary zzz term roscaelifer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.sixth-street.name",
