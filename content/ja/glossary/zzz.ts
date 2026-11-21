@@ -2,6 +2,35 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.zzz.dawns-bloom.name",
+    "ja": "暁に咲く花",
+    "context": "glossary zzz term dawns-bloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dawns-bloom.summary",
+    "ja": "通常攻撃の与ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term dawns-bloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dawns-bloom.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は通常攻撃の与ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term dawns-bloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.encrypted-master-tape.name",
     "ja": "暗号化マスターテープ",
     "context": "glossary zzz term encrypted-master-tape: Japanese official term name",
@@ -208,6 +237,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.woodpecker-electro.name",
+    "ja": "ウッドペッカー・エレクトロ",
+    "context": "glossary zzz term woodpecker-electro: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.woodpecker-electro.summary",
+    "ja": "会心率に関わるドライバディスク。",
+    "context": "glossary zzz term woodpecker-electro: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.woodpecker-electro.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は会心率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term woodpecker-electro: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.yunkui-summit.name",
     "ja": "雲嶽山",
     "context": "glossary zzz term yunkui-summit: Japanese official term name",
@@ -234,6 +292,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent|"
+    ]
+  },
+  {
+    "id": "term.zzz.yunkui-tales.name",
+    "ja": "雲嶽は我に似たり",
+    "context": "glossary zzz term yunkui-tales: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yunkui-tales.summary",
+    "ja": "HPに関わるドライバディスク。",
+    "context": "glossary zzz term yunkui-tales: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yunkui-tales.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term yunkui-tales: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -553,6 +640,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.inferno-metal.name",
+    "ja": "炎獄のヘヴィメタル",
+    "context": "glossary zzz term inferno-metal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.inferno-metal.summary",
+    "ja": "炎属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term inferno-metal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.inferno-metal.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は炎属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term inferno-metal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.orbit-rail.name",
     "ja": "オービットレール",
     "context": "glossary zzz term orbit-rail: Japanese official term name",
@@ -632,6 +748,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.branch-blade-song.name",
+    "ja": "折枝の刀歌",
+    "context": "glossary zzz term branch-blade-song: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.branch-blade-song.summary",
+    "ja": "定期掃討で獲得できるドライバディスク。",
+    "context": "glossary zzz term branch-blade-song: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.branch-blade-song.body",
+    "ja": "Ver.1.4で追加された「モンスター・デュエット」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term branch-blade-song: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
   },
   {
     "id": "term.zzz.w-engine.name",
@@ -921,6 +1066,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.wind-salon.name",
+    "ja": "風鳴りのサロン",
+    "context": "glossary zzz term wind-salon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wind-salon.summary",
+    "ja": "区域防衛で獲得できるドライバディスク。",
+    "context": "glossary zzz term wind-salon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wind-salon.body",
+    "ja": "[[routine-cleanup]]の「パイロット&アーマード」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term wind-salon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]",
+      "[[routine-cleanup]]"
+    ]
+  },
+  {
     "id": "term.zzz.sons-of-calydon.name",
     "ja": "カリュドーンの子",
     "context": "glossary zzz term sons-of-calydon: Japanese official term name",
@@ -1207,6 +1382,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.polar-metal.name",
+    "ja": "極地のヘヴィメタル",
+    "context": "glossary zzz term polar-metal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.polar-metal.summary",
+    "ja": "氷属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term polar-metal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.polar-metal.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は氷属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term polar-metal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.routine-cleanup.name",
     "ja": "区域防衛",
     "context": "glossary zzz term routine-cleanup: Japanese official term name",
@@ -1319,6 +1523,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.chaos-jazz.name",
+    "ja": "ケイオス・ジャズ",
+    "context": "glossary zzz term chaos-jazz: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chaos-jazz.summary",
+    "ja": "異常マスタリーに関わるドライバディスク。",
+    "context": "glossary zzz term chaos-jazz: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chaos-jazz.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term chaos-jazz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.stun-specialty.name",
     "ja": "撃破",
     "context": "glossary zzz term stun-specialty: Japanese official term name",
@@ -1347,6 +1580,35 @@ export const sources: SourceText[] = [
       "[[daze]]",
       "[[specialty|",
       "[[stun]]"
+    ]
+  },
+  {
+    "id": "term.zzz.moonlight-lullaby.name",
+    "ja": "月光騎士の讃歌",
+    "context": "glossary zzz term moonlight-lullaby: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.moonlight-lullaby.summary",
+    "ja": "エネルギー自動回復に関わるドライバディスク。",
+    "context": "glossary zzz term moonlight-lullaby: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.moonlight-lullaby.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term moonlight-lullaby: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -1548,6 +1810,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.notes-from-the-chained.name",
+    "ja": "獄中の手記",
+    "context": "glossary zzz term notes-from-the-chained: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.notes-from-the-chained.summary",
+    "ja": "氷属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term notes-from-the-chained: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.notes-from-the-chained.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は氷属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term notes-from-the-chained: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.disorder.name",
     "ja": "混沌",
     "context": "glossary zzz term disorder: Japanese official term name",
@@ -1575,6 +1866,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[attribute-anomaly|",
       "[[turbulence]]"
+    ]
+  },
+  {
+    "id": "term.zzz.chaotic-metal.name",
+    "ja": "混沌のヘヴィメタル",
+    "context": "glossary zzz term chaotic-metal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chaotic-metal.summary",
+    "ja": "エーテル属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term chaotic-metal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chaotic-metal.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はエーテル属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term chaotic-metal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -1755,6 +2075,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.shadow-harmony.name",
+    "ja": "シャドウハーモニー",
+    "context": "glossary zzz term shadow-harmony: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shadow-harmony.summary",
+    "ja": "Ver.1.6で追加されたドライバディスク。",
+    "context": "glossary zzz term shadow-harmony: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shadow-harmony.body",
+    "ja": "Ver.1.6の公式更新情報で追加が案内された[[drive-disc]]。",
+    "context": "glossary zzz term shadow-harmony: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.cunning-hares.name",
     "ja": "邪兎屋",
     "context": "glossary zzz term cunning-hares: Japanese official term name",
@@ -1781,6 +2130,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[hollow]]"
+    ]
+  },
+  {
+    "id": "term.zzz.fanged-metal.name",
+    "ja": "獣牙のヘヴィメタル",
+    "context": "glossary zzz term fanged-metal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fanged-metal.summary",
+    "ja": "物理属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term fanged-metal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fanged-metal.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は物理属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term fanged-metal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -1840,6 +2218,36 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent]]"
+    ]
+  },
+  {
+    "id": "term.zzz.white-water-ballad.name",
+    "ja": "純白の行歌",
+    "context": "glossary zzz term white-water-ballad: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.white-water-ballad.summary",
+    "ja": "区域防衛で獲得できるドライバディスク。",
+    "context": "glossary zzz term white-water-ballad: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.white-water-ballad.body",
+    "ja": "[[routine-cleanup]]の「幻惑と鉄壁」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term white-water-ballad: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]",
+      "[[routine-cleanup]]"
     ]
   },
   {
@@ -1960,6 +2368,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[proxy-network]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shockstar-disco.name",
+    "ja": "ショックスター・ディスコ",
+    "context": "glossary zzz term shockstar-disco: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shockstar-disco.summary",
+    "ja": "衝撃力に関わるドライバディスク。",
+    "context": "glossary zzz term shockstar-disco: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shockstar-disco.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は衝撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shockstar-disco: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -2187,6 +2624,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.swing-jazz.name",
+    "ja": "スイング・ジャズ",
+    "context": "glossary zzz term swing-jazz: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.swing-jazz.summary",
+    "ja": "エネルギー自動回復に関わるドライバディスク。",
+    "context": "glossary zzz term swing-jazz: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.swing-jazz.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term swing-jazz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.stars-of-lyra.name",
     "ja": "スターズ・オブ・リラ",
     "context": "glossary zzz term stars-of-lyra: Japanese official term name",
@@ -2212,6 +2678,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.astral-voice.name",
+    "ja": "静寂のアストラ",
+    "context": "glossary zzz term astral-voice: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.astral-voice.summary",
+    "ja": "定期掃討で獲得できるドライバディスク。",
+    "context": "glossary zzz term astral-voice: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.astral-voice.body",
+    "ja": "Ver.1.4で追加された「モンスター・デュエット」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term astral-voice: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
   },
   {
     "id": "term.zzz.select-store.name",
@@ -2354,6 +2849,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.soul-rock.name",
+    "ja": "ソウル・ロック",
+    "context": "glossary zzz term soul-rock: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.soul-rock.summary",
+    "ja": "防御力に関わるドライバディスク。",
+    "context": "glossary zzz term soul-rock: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.soul-rock.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term soul-rock: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.attribute.name",
     "ja": "属性",
     "context": "glossary zzz term attribute: Japanese official term name",
@@ -2381,6 +2905,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[agent]]",
       "[[attribute-anomaly]]"
+    ]
+  },
+  {
+    "id": "term.zzz.king-of-the-summit.name",
+    "ja": "大山を統べる者",
+    "context": "glossary zzz term king-of-the-summit: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.king-of-the-summit.summary",
+    "ja": "攻撃によるブレイク値に関わるドライバディスク。",
+    "context": "glossary zzz term king-of-the-summit: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.king-of-the-summit.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は攻撃によるブレイク値を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term king-of-the-summit: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -2467,6 +3020,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[lumina-square]]",
       "[[new-eridu-public-security]]"
+    ]
+  },
+  {
+    "id": "term.zzz.feathered-fate.name",
+    "ja": "契る翼の運命",
+    "context": "glossary zzz term feathered-fate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.feathered-fate.summary",
+    "ja": "異常マスタリーに関わるドライバディスク。",
+    "context": "glossary zzz term feathered-fate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.feathered-fate.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term feathered-fate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -2794,6 +3376,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.thorned-rose.name",
+    "ja": "棘まとう薔薇",
+    "context": "glossary zzz term thorned-rose: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thorned-rose.summary",
+    "ja": "防御力に関わるドライバディスク。",
+    "context": "glossary zzz term thorned-rose: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thorned-rose.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term thorned-rose: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.drive-disc.name",
     "ja": "ドライバディスク",
     "context": "glossary zzz term drive-disc: Japanese official term name",
@@ -2913,6 +3524,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.phaethons-melody.name",
+    "ja": "「パエトーン」の歌",
+    "context": "glossary zzz term phaethons-melody: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.phaethons-melody.summary",
+    "ja": "Ver.1.6で追加されたドライバディスク。",
+    "context": "glossary zzz term phaethons-melody: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.phaethons-melody.body",
+    "ja": "Ver.1.6の公式更新情報で追加が案内された[[drive-disc]]。",
+    "context": "glossary zzz term phaethons-melody: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.battery-charge.name",
     "ja": "バッテリー",
     "context": "glossary zzz term battery-charge: Japanese official term name",
@@ -2940,6 +3580,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[combat-simulation]]",
       "[[reserve-battery]]"
+    ]
+  },
+  {
+    "id": "term.zzz.puffer-electro.name",
+    "ja": "パファー・エレクトロ",
+    "context": "glossary zzz term puffer-electro: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.puffer-electro.summary",
+    "ja": "貫通率に関わるドライバディスク。",
+    "context": "glossary zzz term puffer-electro: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.puffer-electro.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は貫通率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term puffer-electro: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -3029,6 +3698,35 @@ export const sources: SourceText[] = [
       "[[attribute-anomaly|",
       "[[disorder|",
       "[[turbulence]]"
+    ]
+  },
+  {
+    "id": "term.zzz.freedom-blues.name",
+    "ja": "フリーダム・ブルース",
+    "context": "glossary zzz term freedom-blues: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.freedom-blues.summary",
+    "ja": "異常マスタリーに関わるドライバディスク。",
+    "context": "glossary zzz term freedom-blues: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.freedom-blues.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term freedom-blues: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -3290,6 +3988,64 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.proto-punk.name",
+    "ja": "プロト・パンク",
+    "context": "glossary zzz term proto-punk: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proto-punk.summary",
+    "ja": "シールド生成量に関わるドライバディスク。",
+    "context": "glossary zzz term proto-punk: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.proto-punk.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はシールド生成量を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term proto-punk: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.thunder-metal.name",
+    "ja": "霹靂のヘヴィメタル",
+    "context": "glossary zzz term thunder-metal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thunder-metal.summary",
+    "ja": "電気属性ダメージに関わるドライバディスク。",
+    "context": "glossary zzz term thunder-metal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thunder-metal.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は電気属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term thunder-metal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.signal-search.name",
     "ja": "変調",
     "context": "glossary zzz term signal-search: Japanese official term name",
@@ -3434,6 +4190,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[signal-search]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hormone-punk.name",
+    "ja": "ホルモン・パンク",
+    "context": "glossary zzz term hormone-punk: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hormone-punk.summary",
+    "ja": "攻撃力に関わるドライバディスク。",
+    "context": "glossary zzz term hormone-punk: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hormone-punk.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hormone-punk: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -3753,6 +4538,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.bunny-in-wonderland.name",
+    "ja": "雪うさぎワンダーランド",
+    "context": "glossary zzz term bunny-in-wonderland: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bunny-in-wonderland.summary",
+    "ja": "HPに関わるドライバディスク。",
+    "context": "glossary zzz term bunny-in-wonderland: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bunny-in-wonderland.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bunny-in-wonderland: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.dawn-travelogue.name",
+    "ja": "夜明けの紀行",
+    "context": "glossary zzz term dawn-travelogue: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dawn-travelogue.summary",
+    "ja": "区域防衛で獲得できるドライバディスク。",
+    "context": "glossary zzz term dawn-travelogue: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dawn-travelogue.body",
+    "ja": "[[routine-cleanup]]の「パイロット&アーマード」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term dawn-travelogue: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]",
+      "[[routine-cleanup]]"
+    ]
+  },
+  {
     "id": "term.zzz.notorious-hunt.name",
     "ja": "要警戒狩り",
     "context": "glossary zzz term notorious-hunt: Japanese official term name",
@@ -3896,6 +4740,36 @@ export const sources: SourceText[] = [
       "[[attribute-anomaly|",
       "[[disorder]]",
       "[[weathering]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shining-aria.name",
+    "ja": "流光のアリア",
+    "context": "glossary zzz term shining-aria: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shining-aria.summary",
+    "ja": "区域防衛で獲得できるドライバディスク。",
+    "context": "glossary zzz term shining-aria: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shining-aria.body",
+    "ja": "[[routine-cleanup]]の「幻惑と鉄壁」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "context": "glossary zzz term shining-aria: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]",
+      "[[routine-cleanup]]"
     ]
   },
   {

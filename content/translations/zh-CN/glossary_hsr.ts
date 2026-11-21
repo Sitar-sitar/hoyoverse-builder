@@ -37,6 +37,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.captain-of-tempestuous-waves.name": {
+    "text": "荒海を越える船長",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.captain-of-tempestuous-waves.summary": {
+    "text": "会心ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.captain-of-tempestuous-waves.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は会心ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wastelander-of-banditry-desert.name": {
+    "text": "荒地で盗みを働く廃土客",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wastelander-of-banditry-desert.summary": {
+    "text": "虚数属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.wastelander-of-banditry-desert.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は虚数属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.energy.name": {
     "text": "EP",
     "sourceHash": null,
@@ -505,6 +541,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hero-of-triumphant-song.name": {
+    "text": "凱歌を揚げる英雄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hero-of-triumphant-song.summary": {
+    "text": "侵蝕トンネルで入手できるトンネル遺物。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hero-of-triumphant-song.body": {
+    "text": "[[cavern-of-corrosion]]・弦歌の路をクリアすると獲得できる[[relics]]の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.divergent-universe.name": {
     "text": "階差宇宙",
     "sourceHash": null,
@@ -703,6 +757,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.messenger-traversing-hackerspace.name": {
+    "text": "仮想空間を漫遊するメッセンジャー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.messenger-traversing-hackerspace.summary": {
+    "text": "速度に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.messenger-traversing-hackerspace.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.underworld.name": {
     "text": "下層部",
     "sourceHash": null,
@@ -717,6 +789,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.underworld.body": {
     "text": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kamiwaza-wo-tankyusuru-meisho.name": {
+    "text": "神業を探求する名匠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kamiwaza-wo-tankyusuru-meisho.summary": {
+    "text": "最大HPに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.kamiwaza-wo-tankyusuru-meisho.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は最大HPに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1153,6 +1243,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.musketeer-of-wild-wheat.name": {
+    "text": "草の穂ガンマン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.musketeer-of-wild-wheat.summary": {
+    "text": "攻撃力に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.musketeer-of-wild-wheat.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.clock-studios-theme-park.name": {
     "text": "クラークフィルムランド",
     "sourceHash": null,
@@ -1297,6 +1405,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.iron-cavalry-against-the-scourge.name": {
+    "text": "蝗害を一掃せし鉄騎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.iron-cavalry-against-the-scourge.summary": {
+    "text": "撃破特効に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.iron-cavalry-against-the-scourge.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.effect-res.name": {
     "text": "効果抵抗",
     "sourceHash": null,
@@ -1347,6 +1473,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.attack.body": {
     "text": "攻撃などの効果量を決める際に参照されるステータス。能力によっては[[hp|HP]]や[[defense|防御力]]などを参照するため、各能力の説明を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.koseki-kagayaku-maho-shojo.name": {
+    "text": "功績輝く魔法少女",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.koseki-kagayaku-maho-shojo.summary": {
+    "text": "会心ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.koseki-kagayaku-maho-shojo.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は会心ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1581,6 +1725,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.planar-ornaments.body": {
     "text": "キャラクターに装備する[[relics|遺物]]の一種。次元界オーブと連結縄の2部位があり、組み合わせによりセット効果を得られる。\n\nゲーム内ではオーナメントを獲得できるコンテンツやイベントが用意されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pioneer-diver-of-dead-waters.name": {
+    "text": "死水に潜る先駆者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pioneer-diver-of-dead-waters.summary": {
+    "text": "デバフを受けた敵への与ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.pioneer-diver-of-dead-waters.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果はデバフを受けた敵への与ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1851,6 +2013,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-hunt.body": {
     "text": "[[path|運命]]の一つ。巡狩の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。単体への攻撃を得意とするキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.knight-of-purity-palace.name": {
+    "text": "純庭教会の聖騎士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.knight-of-purity-palace.summary": {
+    "text": "防御力に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.knight-of-purity-palace.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は防御力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2755,6 +2935,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.scholar-lost-in-erudition.name": {
+    "text": "知識の海に溺れる学者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.scholar-lost-in-erudition.summary": {
+    "text": "会心率に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.scholar-lost-in-erudition.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は会心率に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.bloodbathed-battlefront.name": {
     "text": "「血染めの戦端」クレムノス",
     "sourceHash": null,
@@ -2805,6 +3003,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.healing.body": {
     "text": "対象のHPを回復する効果。回復の対象や量、発動条件はキャラクターの能力などによって異なる。[[shield|バリア]]は受けるダメージを防ぐ別の効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.eagle-of-twilight-line.name": {
+    "text": "昼夜の狭間を翔ける鷹",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.eagle-of-twilight-line.summary": {
+    "text": "風属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.eagle-of-twilight-line.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は風属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3079,6 +3295,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.savior-of-creation.name": {
+    "text": "天地再創の救世主",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.savior-of-creation.summary": {
+    "text": "会心率に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.savior-of-creation.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は会心率に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.sky-faring-commission.name": {
     "text": "天舶司",
     "sourceHash": null,
@@ -3111,6 +3345,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.talent.body": {
     "text": "キャラクターが持つ固有の能力。発動条件と効果はそれぞれ異なり、条件を満たすと[[follow-up-attack|追加攻撃]]を行うものもある。[[traces|軌跡]]画面で能力の詳細を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.name": {
+    "text": "天命に従う旅の卜者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.summary": {
+    "text": "速度に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3273,6 +3525,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.nameless-glory.body": {
     "text": "ナナシの勲功の有料報酬枠。解放すると勲功レベルに応じて追加の報酬を受け取れる。内容や購入条件はゲーム内の案内を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.champion-of-streetwise-boxing.name": {
+    "text": "成り上がりチャンピオン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.champion-of-streetwise-boxing.summary": {
+    "text": "物理ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.champion-of-streetwise-boxing.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は物理ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3601,6 +3871,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.the-wind-soaring-valorous.name": {
+    "text": "風雲を薙ぎ払う勇烈",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-wind-soaring-valorous.summary": {
+    "text": "攻撃力に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-wind-soaring-valorous.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.wind-shear.name": {
     "text": "風化",
     "sourceHash": null,
@@ -3637,6 +3925,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.prisoner-in-deep-confinement.name": {
+    "text": "深い牢獄の囚人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.prisoner-in-deep-confinement.summary": {
+    "text": "攻撃力に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.prisoner-in-deep-confinement.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.additional-damage.name": {
     "text": "付加ダメージ",
     "sourceHash": null,
@@ -3669,6 +3975,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.unknowable-domain.body": {
     "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。セプターを集め、対応するコンポーネントを装着して能力を強化しながら挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sacerdos-relived-ordeal.name": {
+    "text": "再び苦難の道を歩む司祭",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sacerdos-relived-ordeal.summary": {
+    "text": "速度に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sacerdos-relived-ordeal.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guard-of-wuthering-snow.name": {
+    "text": "吹雪と対峙する兵士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guard-of-wuthering-snow.summary": {
+    "text": "被ダメージの軽減に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guard-of-wuthering-snow.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は被ダメージの軽減に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3853,6 +4195,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.poet-of-mourning-collapse.name": {
+    "text": "亡国の悲哀を詠う詩人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.poet-of-mourning-collapse.summary": {
+    "text": "侵蝕トンネルで入手できるトンネル遺物。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.poet-of-mourning-collapse.body": {
+    "text": "[[cavern-of-corrosion]]・弦歌の路をクリアすると獲得できる[[relics]]の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.abundance.name": {
     "text": "豊穣",
     "sourceHash": null,
@@ -3885,6 +4245,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.equation.body": {
     "text": "[[divergent-universe]]に登場する仕組み。指定された運命の[[blessing|祝福]]を組み合わせることで方程式を展開し、対応する効果を得られる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.longevous-disciple.name": {
+    "text": "宝命長存の蒔者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.longevous-disciple.summary": {
+    "text": "最大HPに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.longevous-disciple.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は最大HPに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.genius-of-brilliant-stars.name": {
+    "text": "星の如く輝く天才",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.genius-of-brilliant-stars.summary": {
+    "text": "量子属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.genius-of-brilliant-stars.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は量子属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hoshimeguru-navigator-shiken.name": {
+    "text": "星巡るナビゲーター「シケン」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hoshimeguru-navigator-shiken.summary": {
+    "text": "攻撃力に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hoshimeguru-navigator-shiken.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4231,6 +4645,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hunter-of-glacial-forest.name": {
+    "text": "雪の密林の狩人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hunter-of-glacial-forest.summary": {
+    "text": "氷属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hunter-of-glacial-forest.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は氷属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.watchmaker-master-of-dream-machinations.name": {
+    "text": "夢を弄ぶ時計屋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.watchmaker-master-of-dream-machinations.summary": {
+    "text": "撃破特効に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.watchmaker-master-of-dream-machinations.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firesmith-of-lava-forging.name": {
+    "text": "溶岩で鍛造する火匠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firesmith-of-lava-forging.summary": {
+    "text": "炎属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firesmith-of-lava-forging.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は炎属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.damage-boost.name": {
     "text": "与ダメージアップ",
     "sourceHash": null,
@@ -4263,6 +4731,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.reserved-trailblaze-power.body": {
     "text": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.band-of-sizzling-thunder.name": {
+    "text": "雷鳴轟くバンド",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.band-of-sizzling-thunder.summary": {
+    "text": "雷属性ダメージに関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.band-of-sizzling-thunder.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は雷属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4303,6 +4789,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.passerby-of-wandering-cloud.name": {
+    "text": "流雲無痕の過客",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.passerby-of-wandering-cloud.summary": {
+    "text": "治癒量に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.passerby-of-wandering-cloud.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は治癒量に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.garden-of-recollection.name": {
     "text": "流光憶庭",
     "sourceHash": null,
@@ -4335,6 +4839,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.lucent-afterglow.body": {
     "text": "[[light-cone-manifest|光円錐プレゼンス]]で[[light-cone|光円錐]]との交換に使うアイテム。[[echo-of-war|歴戦余韻]]などの報酬で入手できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thief-of-shooting-meteor.name": {
+    "text": "流星の跡を追う怪盗",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thief-of-shooting-meteor.summary": {
+    "text": "撃破特効に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thief-of-shooting-meteor.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は撃破特効に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4407,6 +4929,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.bleed.body": {
     "text": "対象に[[damage-over-time|持続ダメージ]]を与える状態のひとつ。物理属性の[[weakness-break|弱点撃破]]などで付与される。発生のタイミングや持続時間は効果ごとに確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warrior-goddess-of-sun-and-thunder.name": {
+    "text": "烈陽と雷鳴の武神",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warrior-goddess-of-sun-and-thunder.summary": {
+    "text": "速度に関わるトンネル遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warrior-goddess-of-sun-and-thunder.body": {
+    "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

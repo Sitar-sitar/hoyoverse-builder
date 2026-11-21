@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.genshin.aubade-of-morningstar-and-moon.name": {
+    "text": "暁の星と月の歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.aubade-of-morningstar-and-moon.summary": {
+    "text": "月反応に関係する聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.aubade-of-morningstar-and-moon.body": {
+    "text": "2セット効果で[[elemental-mastery]]が上がる。4セット効果は待機中の装備者の月反応ダメージを強化し、月兆レベルの条件を満たすとさらに強化する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.action-card.name": {
     "text": "アクションカード",
     "sourceHash": null,
@@ -33,6 +51,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.inazuma.body": {
     "text": "[[teyvat]]の地域の一つ。公式の世界紹介では島々からなる国として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bond-of-life.name": {
+    "text": "命の契約",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bond-of-life.summary": {
+    "text": "武器や聖遺物の効果に参照される値。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bond-of-life.body": {
+    "text": "一部の武器や[[artifact]]は命の契約の有無や増減を効果の条件とする。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -127,6 +163,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.golden-troupe.name": {
+    "text": "黄金の劇団",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.golden-troupe.summary": {
+    "text": "元素スキルダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.golden-troupe.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素スキルダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.bloom.name": {
     "text": "開花",
     "sourceHash": null,
@@ -141,6 +195,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.bloom.body": {
     "text": "草と水の[[elemental-reaction]]で草原核が生成される。草原核は一定時間後に爆発し、雷や炎が作用するとそれぞれ[[hyperbloom]]や[[burgeon]]が起こる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scroll-of-hero.name": {
+    "text": "灰燼の都に立つ英雄の絵巻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scroll-of-hero.summary": {
+    "text": "夜魂バーストや元素反応に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scroll-of-hero.body": {
+    "text": "2セット効果は付近のチーム内キャラクターが[[nightsoul-burst]]を起こすと装備者の元素エネルギーを回復する。4セット効果は元素反応に応じて味方の元素ダメージを強化し、[[nightsouls-blessing]]中は追加効果がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -163,6 +235,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.fragment-of-harmonic-whimsy.name": {
+    "text": "諧律奇想の断章",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fragment-of-harmonic-whimsy.summary": {
+    "text": "命の契約の増減に関係する聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fragment-of-harmonic-whimsy.body": {
+    "text": "2セット効果で攻撃力が上がる。4セット効果は命の契約の数値が増減すると与ダメージが上がり、最大3層まで重ねられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.swirl.name": {
     "text": "拡散",
     "sourceHash": null,
@@ -177,6 +267,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.swirl.body": {
     "text": "風が炎・水・雷・氷と反応すると発生し、対応する元素のダメージを与え、その元素を周囲に広げる。反応ダメージには発動者のレベルや[[elemental-mastery]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.a-day-carved-from-rising-winds.name": {
+    "text": "風立ちの日",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.a-day-carved-from-rising-winds.summary": {
+    "text": "攻撃命中による強化効果を持つ聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.a-day-carved-from-rising-winds.body": {
+    "text": "2セット効果で攻撃力が上がる。4セット効果は通常攻撃・重撃・元素スキル・元素爆発の命中で攻撃力を強化し、魔女の課題をクリアした装備者には追加効果がある。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -231,6 +339,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.anemo-treasure-compass.body": {
     "text": "使用するとモンドで近くの宝箱の位置へ案内する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundering-fury.name": {
+    "text": "雷のような怒り",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundering-fury.summary": {
+    "text": "雷元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundering-fury.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は雷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -397,6 +523,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.noblesse-oblige.name": {
+    "text": "旧貴族のしつけ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.noblesse-oblige.summary": {
+    "text": "元素爆発ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.noblesse-oblige.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素爆発ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.midlander-billet.name": {
     "text": "境土の原型",
     "sourceHash": null,
@@ -411,6 +555,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.midlander-billet.body": {
     "text": "合成台の変転画面では、同じ武器種の原型と相互に変換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gilded-dreams.name": {
+    "text": "金メッキの夢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gilded-dreams.summary": {
+    "text": "元素熟知に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gilded-dreams.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -703,6 +865,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.gladiators-finale.name": {
+    "text": "剣闘士のフィナーレ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gladiators-finale.summary": {
+    "text": "攻撃力に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gladiators-finale.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.obsidian-codex.name": {
+    "text": "黒曜の秘典",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.obsidian-codex.summary": {
+    "text": "夜魂の加護と夜魂値に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.obsidian-codex.body": {
+    "text": "2セット効果はフィールド上の装備者が[[nightsouls-blessing]]状態にある時の与ダメージを強化する。4セット効果はフィールド上で[[nightsoul-points]]を消費すると会心率が上がる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.saikouchi-kensaku.name": {
     "text": "採鉱地検索",
     "sourceHash": null,
@@ -717,6 +915,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.saikouchi-kensaku.body": {
     "text": "モンドや璃月の鍛冶屋に尋ねると、採鉱地の情報がマップに表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.desert-pavilion-chronicle.name": {
+    "text": "砂上の楼閣の史話",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.desert-pavilion-chronicle.summary": {
+    "text": "風元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.desert-pavilion-chronicle.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -901,6 +1117,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.deepwood-memories.name": {
+    "text": "深林の記憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.deepwood-memories.summary": {
+    "text": "草元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.deepwood-memories.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は草元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep-galleries.name": {
+    "text": "深廊の終曲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep-galleries.summary": {
+    "text": "氷元素と元素エネルギーに関係する聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep-galleries.body": {
+    "text": "2セット効果で氷元素ダメージが上がる。4セット効果は装備者の元素エネルギーが0の時、通常攻撃と元素爆発のダメージを強化する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.viridescent-venerer.name": {
+    "text": "翠緑の影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.viridescent-venerer.summary": {
+    "text": "風元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.viridescent-venerer.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sumeru.name": {
     "text": "スメール",
     "sourceHash": null,
@@ -969,6 +1239,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.artifact-strongbox.body": {
     "text": "[[artifact]]のセットを入手するシステム。交換対象のセットは更新によって追加される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sanctifying-dust.name": {
+    "text": "聖啓の塵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sanctifying-dust.summary": {
+    "text": "星5聖遺物の追加ステータスの強化を再分配する消耗品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sanctifying-dust.body": {
+    "text": "星5[[artifact]]の追加ステータスの強化効果をランダムに再分配できる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1045,6 +1333,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.emblem-of-severed-fate.name": {
+    "text": "絶縁の旗印",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emblem-of-severed-fate.summary": {
+    "text": "元素チャージ効率に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emblem-of-severed-fate.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素チャージ効率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.transient-resin.name": {
     "text": "刹那樹脂",
     "sourceHash": null,
@@ -1059,6 +1365,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.transient-resin.body": {
     "text": "一部の報酬受取画面では、濃縮樹脂がない場合に使用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenacity-of-the-millelith.name": {
+    "text": "千岩牢固",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenacity-of-the-millelith.summary": {
+    "text": "HPに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenacity-of-the-millelith.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1099,6 +1423,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.pale-flame.name": {
+    "text": "蒼白の炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pale-flame.summary": {
+    "text": "物理ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pale-flame.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は物理ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.equipment-card.name": {
     "text": "装備カード",
     "sourceHash": null,
@@ -1117,6 +1459,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.wanderers-troupe.name": {
+    "text": "大地を流浪する楽団",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wanderers-troupe.summary": {
+    "text": "元素熟知に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wanderers-troupe.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.tansakudo.name": {
     "text": "探索度",
     "sourceHash": null,
@@ -1131,6 +1491,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.tansakudo.body": {
     "text": "宝箱の発見、神の瞳の収集、ワープポイントの開放などで上がり、マップで確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodstained-chivalry.name": {
+    "text": "血染めの騎士道",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodstained-chivalry.summary": {
+    "text": "物理ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodstained-chivalry.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は物理ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1257,6 +1635,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.archive-geography.body": {
     "text": "パイモンメニューから開く図鑑で確認できる項目の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-depth.name": {
+    "text": "沈淪の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-depth.summary": {
+    "text": "水元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-depth.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は水元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shimenawas-reminiscence.name": {
+    "text": "追憶のしめ縄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shimenawas-reminiscence.summary": {
+    "text": "攻撃力に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.shimenawas-reminiscence.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は攻撃力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1513,6 +1927,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.unfinished-reverie.name": {
+    "text": "遂げられなかった想い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.unfinished-reverie.summary": {
+    "text": "燃焼状態の敵の有無に関係する聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.unfinished-reverie.body": {
+    "text": "2セット効果で攻撃力が上がる。4セット効果の与ダメージ上昇は戦闘状態や付近の燃焼状態の敵の有無によって変化する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.toshi-hyouban.name": {
     "text": "都市評判",
     "sourceHash": null,
@@ -1527,6 +1959,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.toshi-hyouban.body": {
     "text": "地域の任務や探索などで評判を高めると、レシピや道具の設計図などを受け取れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.long-nights-oath.name": {
+    "text": "長き夜の誓い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.long-nights-oath.summary": {
+    "text": "落下攻撃のダメージを強化する聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.long-nights-oath.body": {
+    "text": "2セット効果で落下攻撃ダメージが上昇する。4セット効果は落下攻撃、重撃または元素スキルが命中すると、落下攻撃を強化する効果を獲得する。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1599,6 +2049,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.domain.body": {
     "text": "挑戦できる場所の一つ。種類によって獲得できる報酬が異なり、[[artifact]]を入手できる秘境もある。報酬の受け取りには[[original-resin]]を使う場合がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blizzard-strayer.name": {
+    "text": "氷風を彷徨う勇士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blizzard-strayer.summary": {
+    "text": "氷元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blizzard-strayer.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は氷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.marechaussee-hunter.name": {
+    "text": "ファントムハンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.marechaussee-hunter.summary": {
+    "text": "通常攻撃と重撃のダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.marechaussee-hunter.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は通常攻撃と重撃のダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1729,6 +2215,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.crimson-witch-of-flames.name": {
+    "text": "燃え盛る炎の魔女",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.crimson-witch-of-flames.summary": {
+    "text": "炎元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.crimson-witch-of-flames.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は炎元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.replica.name": {
     "text": "模本",
     "sourceHash": null,
@@ -1819,6 +2323,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.archaic-petra.name": {
+    "text": "悠久の磐岩",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.archaic-petra.summary": {
+    "text": "岩元素ダメージに関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.archaic-petra.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は岩元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.melt.name": {
     "text": "溶解",
     "sourceHash": null,
@@ -1833,6 +2355,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.melt.body": {
     "text": "炎と氷による[[elemental-reaction]]。反応を起こした攻撃のダメージを増幅し、後から作用した元素によって倍率が異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flower-of-paradise-lost.name": {
+    "text": "楽園の絶花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flower-of-paradise-lost.summary": {
+    "text": "元素熟知に関わる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flower-of-paradise-lost.body": {
+    "text": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
