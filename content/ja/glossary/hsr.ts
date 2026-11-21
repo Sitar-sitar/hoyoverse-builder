@@ -2,6 +2,33 @@
 import type { SourceText } from "../../../shared/content/types";
 export const sources: SourceText[] = [
   {
+    "id": "term.hsr.dewlight-pavilion.name",
+    "ja": "朝露の館",
+    "context": "glossary hsr term dewlight-pavilion: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dewlight-pavilion.summary",
+    "ja": "ピノコニーのファミリーに関わる館。",
+    "context": "glossary hsr term dewlight-pavilion: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dewlight-pavilion.body",
+    "ja": "ファミリーの各家系の代表が集まる施設。招待客以外の立ち入りは制限されている。",
+    "context": "glossary hsr term dewlight-pavilion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.aha-moment.name",
     "ja": "アッハタイム",
     "context": "glossary hsr term aha-moment: Japanese official term name",
@@ -499,6 +526,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.janusopolis.name",
+    "ja": "「運命の深淵」ヤヌサポリス",
+    "context": "glossary hsr term janusopolis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.janusopolis.summary",
+    "ja": "門と道のタイタンを信仰する都市国家。",
+    "context": "glossary hsr term janusopolis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.janusopolis.body",
+    "ja": "[[amphoreus|オンパロス]]にある都市国家。厄災の後、神殿の廃墟が残る。",
+    "context": "glossary hsr term janusopolis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
+    ]
+  },
+  {
+    "id": "term.hsr.okhema.name",
+    "ja": "「永遠の聖都」オクヘイマ",
+    "context": "glossary hsr term okhema: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.okhema.summary",
+    "ja": "オンパロスの都市国家。",
+    "context": "glossary hsr term okhema: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.okhema.body",
+    "ja": "[[amphoreus|オンパロス]]で「世を背負う」タイタンを信仰する都市国家。",
+    "context": "glossary hsr term okhema: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
+    ]
+  },
+  {
     "id": "term.hsr.hp.name",
     "ja": "HP",
     "context": "glossary hsr term hp: Japanese official term name",
@@ -560,6 +645,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.golden-theater.name",
+    "ja": "黄金シアター",
+    "context": "glossary hsr term golden-theater: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.golden-theater.summary",
+    "ja": "ベロブルグ行政区にある劇場。",
+    "context": "glossary hsr term golden-theater: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.golden-theater.body",
+    "ja": "[[administrative-district]]の劇場。長い歴史を持つ文化施設。",
+    "context": "glossary hsr term golden-theater: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[administrative-district]]"
+    ]
+  },
+  {
     "id": "term.hsr.gold-and-gears.name",
     "ja": "黄金と機械",
     "context": "glossary hsr term gold-and-gears: Japanese official term name",
@@ -586,6 +700,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[simulated-universe|"
+    ]
+  },
+  {
+    "id": "term.hsr.golden-hour.name",
+    "ja": "黄金の刻",
+    "context": "glossary hsr term golden-hour: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.golden-hour.summary",
+    "ja": "ピノコニーの夢境にある賑やかな区域。",
+    "context": "glossary hsr term golden-hour: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.golden-hour.body",
+    "ja": "[[penacony|ピノコニー]]の夢境にある街。宴や音楽が絶えない繁華な場所。",
+    "context": "glossary hsr term golden-hour: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
     ]
   },
   {
@@ -644,6 +787,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[astral-express|"
+    ]
+  },
+  {
+    "id": "term.hsr.backwater-pass.name",
+    "ja": "外縁通路",
+    "context": "glossary hsr term backwater-pass: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.backwater-pass.summary",
+    "ja": "裂界に侵食されたかつての商業街。",
+    "context": "glossary hsr term backwater-pass: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.backwater-pass.body",
+    "ja": "[[belobog|ベロブルグ]]のかつての商業街。裂界の拡大により往時の賑わいを失った。",
+    "context": "glossary hsr term backwater-pass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -859,33 +1031,6 @@ export const sources: SourceText[] = [
     ]
   },
   {
-    "id": "term.hsr.kaitakureki.name",
-    "ja": "開拓歴",
-    "context": "glossary hsr term kaitakureki: Japanese official term name",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kaitakureki.summary",
-    "ja": "星穹列車で使われる暦。",
-    "context": "glossary hsr term kaitakureki: one-sentence summary shown in the list and link hints",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kaitakureki.body",
-    "ja": "星穹列車が使用する暦で、開拓の星神の故郷に由来するとされる。一年は十二の暦月に分かれる。",
-    "context": "glossary hsr term kaitakureki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
     "id": "term.hsr.trailblaze-level.name",
     "ja": "開拓レベル",
     "context": "glossary hsr term trailblaze-level: Japanese official term name",
@@ -971,6 +1116,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.underworld.name",
+    "ja": "下層部",
+    "context": "glossary hsr term underworld: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.underworld.summary",
+    "ja": "ベロブルグの地下に広がる区域。",
+    "context": "glossary hsr term underworld: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.underworld.body",
+    "ja": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。",
+    "context": "glossary hsr term underworld: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -1153,6 +1327,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.robot-settlement.name",
+    "ja": "機械集落",
+    "context": "glossary hsr term robot-settlement: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.robot-settlement.summary",
+    "ja": "人と機械が共存する地下の集落。",
+    "context": "glossary hsr term robot-settlement: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.robot-settlement.body",
+    "ja": "[[belobog|ベロブルグ]]の地下にあり、機械と人々が暮らす集落。",
+    "context": "glossary hsr term robot-settlement: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
     "id": "term.hsr.calyx.name",
     "ja": "疑似花萼",
     "context": "glossary hsr term calyx: Japanese official term name",
@@ -1242,6 +1445,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.radiant-feldspar.name",
+    "ja": "暉長石号",
+    "context": "glossary hsr term radiant-feldspar: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.radiant-feldspar.summary",
+    "ja": "ピノコニーの空を航行する船。",
+    "context": "glossary hsr term radiant-feldspar: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.radiant-feldspar.body",
+    "ja": "[[penacony|ピノコニー]]の空を飛ぶ船。星穹列車の一行が招待を受けて訪れる。",
+    "context": "glossary hsr term radiant-feldspar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
     "id": "term.hsr.curio.name",
     "ja": "奇物",
     "context": "glossary hsr term curio: Japanese official term name",
@@ -1299,6 +1531,33 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[stagnant-shadow|"
     ]
+  },
+  {
+    "id": "term.hsr.old-weapon-testing-ground.name",
+    "ja": "旧武器実験場",
+    "context": "glossary hsr term old-weapon-testing-ground: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.old-weapon-testing-ground.summary",
+    "ja": "ベロブルグのかつての武器製造施設。",
+    "context": "glossary hsr term old-weapon-testing-ground: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.old-weapon-testing-ground.body",
+    "ja": "かつて自動機械の組み立てに使われた場所。後に競技の会場としても利用された。",
+    "context": "glossary hsr term old-weapon-testing-ground: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.buff.name",
@@ -1387,6 +1646,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.administrative-district.name",
+    "ja": "行政区",
+    "context": "glossary hsr term administrative-district: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.administrative-district.summary",
+    "ja": "ベロブルグの行政と文化の中心地。",
+    "context": "glossary hsr term administrative-district: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.administrative-district.body",
+    "ja": "[[belobog|ベロブルグ]]の地上にある区域。都市の政治や文化の中心となっている。",
+    "context": "glossary hsr term administrative-district: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.skysplitter.name",
+    "ja": "競鋒艦",
+    "context": "glossary hsr term skysplitter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skysplitter.summary",
+    "ja": "仙舟「羅浮」で訪れる艦。",
+    "context": "glossary hsr term skysplitter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skysplitter.body",
+    "ja": "[[xianzhou-luofu]]で探索できる区域の一つ。",
+    "context": "glossary hsr term skysplitter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
+    ]
+  },
+  {
     "id": "term.hsr.jade-abacus.name",
     "ja": "玉兆",
     "context": "glossary hsr term jade-abacus: Japanese official term name",
@@ -1445,33 +1762,6 @@ export const sources: SourceText[] = [
       "[[apocalyptic-shadow]]",
       "[[memory-of-chaos]]"
     ]
-  },
-  {
-    "id": "term.hsr.kyosuu-no-ki.name",
-    "ja": "虚数の樹",
-    "context": "glossary hsr term kyosuu-no-ki: Japanese official term name",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kyosuu-no-ki.summary",
-    "ja": "宇宙の構造を樹にたとえる理論。",
-    "context": "glossary hsr term kyosuu-no-ki: one-sentence summary shown in the list and link hints",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kyosuu-no-ki.body",
-    "ja": "異なる時空の世界を樹にたとえて捉える宇宙に関する理論。",
-    "context": "glossary hsr term kyosuu-no-ki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
   },
   {
     "id": "term.hsr.nihility.name",
@@ -1564,6 +1854,93 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.clock-studios-theme-park.name",
+    "ja": "クラークフィルムランド",
+    "context": "glossary hsr term clock-studios-theme-park: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.clock-studios-theme-park.summary",
+    "ja": "クロックボーイを題材とした映画のテーマパーク。",
+    "context": "glossary hsr term clock-studios-theme-park: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.clock-studios-theme-park.body",
+    "ja": "[[penacony|ピノコニー]]の人気キャラクターを題材にした映画・映像のテーマパーク。",
+    "context": "glossary hsr term clock-studios-theme-park: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.qlipoth-fort.name",
+    "ja": "クリフォト城",
+    "context": "glossary hsr term qlipoth-fort: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.qlipoth-fort.summary",
+    "ja": "ベロブルグの大守護者が執務する城。",
+    "context": "glossary hsr term qlipoth-fort: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.qlipoth-fort.body",
+    "ja": "[[belobog|ベロブルグ]]の大守護者の住居であり、指揮の拠点となる建物。",
+    "context": "glossary hsr term qlipoth-fort: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.goethe-hotel.name",
+    "ja": "ゲーテホテル",
+    "context": "glossary hsr term goethe-hotel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.goethe-hotel.summary",
+    "ja": "ベロブルグ行政区のホテル。",
+    "context": "glossary hsr term goethe-hotel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.goethe-hotel.body",
+    "ja": "[[administrative-district]]にある宿泊施設。",
+    "context": "glossary hsr term goethe-hotel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[administrative-district]]"
+    ]
+  },
+  {
     "id": "term.hsr.break-effect.name",
     "ja": "撃破特効",
     "context": "glossary hsr term break-effect: Japanese official term name",
@@ -1624,6 +2001,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.architects.name",
+    "ja": "建創者",
+    "context": "glossary hsr term architects: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.architects.summary",
+    "ja": "ベロブルグの建設や統治に関わる人々。",
+    "context": "glossary hsr term architects: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.architects.body",
+    "ja": "[[belobog|ベロブルグ]]を築き、地上の都市の統治に関わる人々。",
+    "context": "glossary hsr term architects: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
     "id": "term.hsr.ambrosial-arbor.name",
     "ja": "建木",
     "context": "glossary hsr term ambrosial-arbor: Japanese official term name",
@@ -1650,6 +2056,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[xianzhou-luofu]]"
+    ]
+  },
+  {
+    "id": "term.hsr.outlying-snow-plains.name",
+    "ja": "郊外雪原",
+    "context": "glossary hsr term outlying-snow-plains: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.outlying-snow-plains.summary",
+    "ja": "ベロブルグの城門の外に広がる雪原。",
+    "context": "glossary hsr term outlying-snow-plains: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.outlying-snow-plains.body",
+    "ja": "[[belobog|ベロブルグ]]の外に広がる雪の地域。厳しい寒さに覆われている。",
+    "context": "glossary hsr term outlying-snow-plains: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -1893,33 +2328,6 @@ export const sources: SourceText[] = [
     ]
   },
   {
-    "id": "term.hsr.kohakuki.name",
-    "ja": "琥珀紀",
-    "context": "glossary hsr term kohakuki: Japanese official term name",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kohakuki.summary",
-    "ja": "銀河で広く使われる暦。",
-    "context": "glossary hsr term kohakuki: one-sentence summary shown in the list and link hints",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.kohakuki.body",
-    "ja": "スターピースカンパニーが広めた暦。存護の星神が鎚を振るうごとに新しい紀が始まり、一紀の長さは一定ではない。",
-    "context": "glossary hsr term kohakuki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
     "id": "term.hsr.memory-of-chaos.name",
     "ja": "混沌の記憶",
     "context": "glossary hsr term memory-of-chaos: Japanese official term name",
@@ -1980,6 +2388,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.authors-gratitude.name",
+    "ja": "作者のお礼",
+    "context": "glossary hsr term authors-gratitude: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.authors-gratitude.summary",
+    "ja": "紡がれた物語に関わる報酬。",
+    "context": "glossary hsr term authors-gratitude: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.authors-gratitude.body",
+    "ja": "[[as-ive-written]]で対応する報酬を受け取れる。",
+    "context": "glossary hsr term authors-gratitude: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[as-ive-written]]"
+    ]
+  },
+  {
     "id": "term.hsr.toughness-reduction.name",
     "ja": "削靭値",
     "context": "glossary hsr term toughness-reduction: Japanese official term name",
@@ -2037,6 +2474,62 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[relic-main-stat|",
       "[[relics|"
+    ]
+  },
+  {
+    "id": "term.hsr.supply-zone.name",
+    "ja": "サポート部分",
+    "context": "glossary hsr term supply-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.supply-zone.summary",
+    "ja": "宇宙ステーションの設備や輸送に関わる区域。",
+    "context": "glossary hsr term supply-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.supply-zone.body",
+    "ja": "宇宙ステーション「ヘルタ」の区域。電力設備や鉄道のプラットフォームがある。",
+    "context": "glossary hsr term supply-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.corridor-of-fading-echoes.name",
+    "ja": "残響回廊",
+    "context": "glossary hsr term corridor-of-fading-echoes: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.corridor-of-fading-echoes.summary",
+    "ja": "ベロブルグの裂界の奥へ続く区域。",
+    "context": "glossary hsr term corridor-of-fading-echoes: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.corridor-of-fading-echoes.body",
+    "ja": "[[belobog|ベロブルグ]]の裂界の深部へ続く場所。防衛線や旧来の司令部がある。",
+    "context": "glossary hsr term corridor-of-fading-echoes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -2343,6 +2836,33 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.storage-zone.name",
+    "ja": "収容部分",
+    "context": "glossary hsr term storage-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.storage-zone.summary",
+    "ja": "宇宙ステーションの収蔵・研究に関わる区域。",
+    "context": "glossary hsr term storage-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.storage-zone.body",
+    "ja": "宇宙ステーション「ヘルタ」の区域。研究対象の奇物を調べる実験室などがある。",
+    "context": "glossary hsr term storage-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.blessing.name",
     "ja": "祝福",
     "context": "glossary hsr term blessing: Japanese official term name",
@@ -2372,6 +2892,33 @@ export const sources: SourceText[] = [
       "[[equation|",
       "[[simulated-universe]]"
     ]
+  },
+  {
+    "id": "term.hsr.master-control-zone.name",
+    "ja": "主制御部分",
+    "context": "glossary hsr term master-control-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.master-control-zone.summary",
+    "ja": "宇宙ステーションの中枢となる区域。",
+    "context": "glossary hsr term master-control-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.master-control-zone.body",
+    "ja": "宇宙ステーション「ヘルタ」の中枢。監視設備やヘルタのオフィスがある。",
+    "context": "glossary hsr term master-control-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.outworlders.name",
@@ -2430,6 +2977,64 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[light-cone|",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.overworld.name",
+    "ja": "上層部",
+    "context": "glossary hsr term overworld: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.overworld.summary",
+    "ja": "ベロブルグの地上にある区域。",
+    "context": "glossary hsr term overworld: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.overworld.body",
+    "ja": "[[belobog|ベロブルグ]]の地上部分。建創者たちが都市を治め、行政区などがある。",
+    "context": "glossary hsr term overworld: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.silvermane-guard-restricted-zone.name",
+    "ja": "シルバーメイン禁区",
+    "context": "glossary hsr term silvermane-guard-restricted-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.silvermane-guard-restricted-zone.summary",
+    "ja": "シルバーメインが守る制限区域。",
+    "context": "glossary hsr term silvermane-guard-restricted-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.silvermane-guard-restricted-zone.body",
+    "ja": "[[belobog|ベロブルグ]]にある区域。シルバーメインが駐屯し、防衛にあたっている。",
+    "context": "glossary hsr term silvermane-guard-restricted-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -2521,6 +3126,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[calyx|",
       "[[light-cone|"
+    ]
+  },
+  {
+    "id": "term.hsr.fyxestroll-garden.name",
+    "ja": "綏園",
+    "context": "glossary hsr term fyxestroll-garden: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fyxestroll-garden.summary",
+    "ja": "仙舟「羅浮」で訪れる区域。",
+    "context": "glossary hsr term fyxestroll-garden: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fyxestroll-garden.body",
+    "ja": "[[xianzhou-luofu]]の区域。凝結虚影や侵蝕トンネルの挑戦もある。",
+    "context": "glossary hsr term fyxestroll-garden: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -2643,6 +3277,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[effective-substats|",
       "[[relics|"
+    ]
+  },
+  {
+    "id": "term.hsr.soulglad-scorchsand.name",
+    "ja": "スラーダ™熱砂オーディション会場",
+    "context": "glossary hsr term soulglad-scorchsand: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.soulglad-scorchsand.summary",
+    "ja": "調和セレモニーのオーディション会場。",
+    "context": "glossary hsr term soulglad-scorchsand: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.soulglad-scorchsand.body",
+    "ja": "[[penacony|ピノコニー]]の「熱砂の刻」にある、挑戦者が集まる会場。",
+    "context": "glossary hsr term soulglad-scorchsand: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
     ]
   },
   {
@@ -3301,6 +3964,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.vortex-of-genesis.name",
+    "ja": "創世の渦心",
+    "context": "glossary hsr term vortex-of-genesis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.vortex-of-genesis.summary",
+    "ja": "オンパロスの創世に関わる聖地。",
+    "context": "glossary hsr term vortex-of-genesis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.vortex-of-genesis.body",
+    "ja": "[[amphoreus|オンパロス]]にある、大波に隠された世界の起点とされる場所。",
+    "context": "glossary hsr term vortex-of-genesis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
+    ]
+  },
+  {
+    "id": "term.hsr.pillars-of-creation.name",
+    "ja": "造物の柱",
+    "context": "glossary hsr term pillars-of-creation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.pillars-of-creation.summary",
+    "ja": "ベロブルグの建造に関わる場所。",
+    "context": "glossary hsr term pillars-of-creation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.pillars-of-creation.body",
+    "ja": "かつて巨大な機械が建造された場所。[[belobog|ベロブルグ]]の人々が再び集まり作業を行う。",
+    "context": "glossary hsr term pillars-of-creation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
     "id": "term.hsr.wingweavers.name",
     "ja": "造翼者",
     "context": "glossary hsr term wingweavers: Japanese official term name",
@@ -3483,6 +4204,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.great-mine.name",
+    "ja": "大鉱区",
+    "context": "glossary hsr term great-mine: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.great-mine.summary",
+    "ja": "ベロブルグの地下にある鉱山。",
+    "context": "glossary hsr term great-mine: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.great-mine.body",
+    "ja": "[[belobog|ベロブルグ]]の地下に広がる鉱山。資源を巡る争いも起きている。",
+    "context": "glossary hsr term great-mine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.titan.name",
+    "ja": "タイタン",
+    "context": "glossary hsr term titan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.titan.summary",
+    "ja": "オンパロスの人々が信仰する神々。",
+    "context": "glossary hsr term titan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.titan.body",
+    "ja": "[[amphoreus|オンパロス]]の都市国家で信仰される存在。世を背負うものや、紛争、門と道を司るものなどがいる。",
+    "context": "glossary hsr term titan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
+    ]
+  },
+  {
     "id": "term.hsr.divination-commission.name",
     "ja": "太卜司",
     "context": "glossary hsr term divination-commission: Japanese official term name",
@@ -3627,6 +4406,64 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[exalting-sanctum]]",
       "[[xianzhou-luofu]]"
+    ]
+  },
+  {
+    "id": "term.hsr.a-childs-dream.name",
+    "ja": "稚児の夢",
+    "context": "glossary hsr term a-childs-dream: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-childs-dream.summary",
+    "ja": "ピノコニーの夢境にある区域。",
+    "context": "glossary hsr term a-childs-dream: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-childs-dream.body",
+    "ja": "歪んだ記憶から形作られた夢の領域。[[penacony|ピノコニー]]で訪れる場所の一つ。",
+    "context": "glossary hsr term a-childs-dream: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.bloodbathed-battlefront.name",
+    "ja": "「血染めの戦端」クレムノス",
+    "context": "glossary hsr term bloodbathed-battlefront: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.bloodbathed-battlefront.summary",
+    "ja": "紛争のタイタンに関わるクレムノスの区域。",
+    "context": "glossary hsr term bloodbathed-battlefront: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.bloodbathed-battlefront.body",
+    "ja": "[[amphoreus|オンパロス]]で訪れる、紛争のタイタンに関わる都市国家。",
+    "context": "glossary hsr term bloodbathed-battlefront: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
     ]
   },
   {
@@ -4256,6 +5093,122 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.everwinter-hill.name",
+    "ja": "常冬峰",
+    "context": "glossary hsr term everwinter-hill: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.everwinter-hill.summary",
+    "ja": "ベロブルグ北方に位置する場所。",
+    "context": "glossary hsr term everwinter-hill: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.everwinter-hill.body",
+    "ja": "[[belobog|ベロブルグ]]の北にあり、厳しい氷雪に覆われた地。",
+    "context": "glossary hsr term everwinter-hill: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.dreams-edge.name",
+    "ja": "ドリームボーダー",
+    "context": "glossary hsr term dreams-edge: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreams-edge.summary",
+    "ja": "ピノコニーにある建設途中の夢の街。",
+    "context": "glossary hsr term dreams-edge: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreams-edge.body",
+    "ja": "[[penacony|ピノコニー]]で夢を築く建築家たちが集まる区域。",
+    "context": "glossary hsr term dreams-edge: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.dreamflux-reef.name",
+    "ja": "ドリームリーフ",
+    "context": "glossary hsr term dreamflux-reef: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreamflux-reef.summary",
+    "ja": "ピノコニーの夢境にある区域。",
+    "context": "glossary hsr term dreamflux-reef: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreamflux-reef.body",
+    "ja": "[[penacony|ピノコニー]]で訪れる夢境の一つ。",
+    "context": "glossary hsr term dreamflux-reef: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.natashas-clinic.name",
+    "ja": "ナターシャの診療所",
+    "context": "glossary hsr term natashas-clinic: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.natashas-clinic.summary",
+    "ja": "ボルダータウンにある診療所。",
+    "context": "glossary hsr term natashas-clinic: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.natashas-clinic.body",
+    "ja": "[[boulder-town]]で人々の治療を担う診療所。",
+    "context": "glossary hsr term natashas-clinic: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[boulder-town]]"
+    ]
+  },
+  {
     "id": "term.hsr.nameless.name",
     "ja": "ナナシビト",
     "context": "glossary hsr term nameless: Japanese official term name",
@@ -4697,6 +5650,93 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.paperfold-university.name",
+    "ja": "ピノコニー折り紙大学",
+    "context": "glossary hsr term paperfold-university: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.paperfold-university.summary",
+    "ja": "ピノコニーの大学。",
+    "context": "glossary hsr term paperfold-university: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.paperfold-university.body",
+    "ja": "[[penacony|ピノコニー]]にある大学。夢境の内外に人材を送り出す学びの場。",
+    "context": "glossary hsr term paperfold-university: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.penacony-grand-theater.name",
+    "ja": "ピノコニー大劇場",
+    "context": "glossary hsr term penacony-grand-theater: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony-grand-theater.summary",
+    "ja": "ピノコニーの調和セレモニーの舞台。",
+    "context": "glossary hsr term penacony-grand-theater: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony-grand-theater.body",
+    "ja": "[[penacony|ピノコニー]]の大劇場。ファミリーが建設した、調和セレモニーの会場。",
+    "context": "glossary hsr term penacony-grand-theater: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.fight-club.name",
+    "ja": "ファイトクラブ",
+    "context": "glossary hsr term fight-club: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fight-club.summary",
+    "ja": "ボルダータウンの試合会場。",
+    "context": "glossary hsr term fight-club: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fight-club.body",
+    "ja": "[[boulder-town]]にある施設。試合を観戦できる場として人々が集まる。",
+    "context": "glossary hsr term fight-club: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[boulder-town]]"
+    ]
+  },
+  {
     "id": "term.hsr.wind-shear.name",
     "ja": "風化",
     "context": "glossary hsr term wind-shear: Japanese official term name",
@@ -4725,6 +5765,33 @@ export const sources: SourceText[] = [
       "[[damage-over-time|",
       "[[weakness-break|"
     ]
+  },
+  {
+    "id": "term.hsr.seclusion-zone.name",
+    "ja": "封鎖部分",
+    "context": "glossary hsr term seclusion-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.seclusion-zone.summary",
+    "ja": "宇宙ステーション「ヘルタ」にある区域。",
+    "context": "glossary hsr term seclusion-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.seclusion-zone.body",
+    "ja": "宇宙ステーション「ヘルタ」で探索できる区域の一つ。",
+    "context": "glossary hsr term seclusion-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.additional-damage.name",
@@ -4785,6 +5852,62 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.strife-ruins-kremnos.name",
+    "ja": "「紛争の爪痕」クレムノス",
+    "context": "glossary hsr term strife-ruins-kremnos: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.strife-ruins-kremnos.summary",
+    "ja": "紛争のタイタンに関わる都市国家。",
+    "context": "glossary hsr term strife-ruins-kremnos: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.strife-ruins-kremnos.body",
+    "ja": "[[amphoreus|オンパロス]]にある、紛争のタイタンを崇める都市国家の廃墟。",
+    "context": "glossary hsr term strife-ruins-kremnos: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[amphoreus|"
+    ]
+  },
+  {
+    "id": "term.hsr.base-zone.name",
+    "ja": "ベース部分",
+    "context": "glossary hsr term base-zone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.base-zone.summary",
+    "ja": "宇宙ステーションの受付などがある区域。",
+    "context": "glossary hsr term base-zone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.base-zone.body",
+    "ja": "宇宙ステーション「ヘルタ」の区域。来訪者を迎える受付や医療設備が置かれている。",
+    "context": "glossary hsr term base-zone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.belobog.name",
     "ja": "ベロブルグ",
     "context": "glossary hsr term belobog: Japanese official term name",
@@ -4812,6 +5935,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[astral-express|",
       "[[jarilo-vi|"
+    ]
+  },
+  {
+    "id": "term.hsr.belobog-museum.name",
+    "ja": "ベロブルグ歴史文化博物館",
+    "context": "glossary hsr term belobog-museum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.belobog-museum.summary",
+    "ja": "ベロブルグの歴史に関する展示施設。",
+    "context": "glossary hsr term belobog-museum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.belobog-museum.body",
+    "ja": "[[belobog|ベロブルグ]]の歴史や文化に関わる展示品を収蔵する。",
+    "context": "glossary hsr term belobog-museum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -5086,6 +6238,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.the-reverie-reality.name",
+    "ja": "ホテル・レバリー-現実",
+    "context": "glossary hsr term the-reverie-reality: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-reverie-reality.summary",
+    "ja": "ピノコニーにある現実のホテル。",
+    "context": "glossary hsr term the-reverie-reality: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-reverie-reality.body",
+    "ja": "[[penacony|ピノコニー]]の現実と夢の接点に位置するホテル。",
+    "context": "glossary hsr term the-reverie-reality: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-reverie-dreamscape.name",
+    "ja": "ホテル・レバリー-夢境",
+    "context": "glossary hsr term the-reverie-dreamscape: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-reverie-dreamscape.summary",
+    "ja": "夢境に映し出されたホテル・レバリー。",
+    "context": "glossary hsr term the-reverie-dreamscape: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-reverie-dreamscape.body",
+    "ja": "[[the-reverie-reality|現実のホテル]]に対応する夢境の区域。",
+    "context": "glossary hsr term the-reverie-dreamscape: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[the-reverie-reality|"
+    ]
+  },
+  {
     "id": "term.hsr.borisin.name",
     "ja": "歩離人",
     "context": "glossary hsr term borisin: Japanese official term name",
@@ -5112,6 +6322,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[xianzhou-alliance]]"
+    ]
+  },
+  {
+    "id": "term.hsr.boulder-town.name",
+    "ja": "ボルダータウン",
+    "context": "glossary hsr term boulder-town: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.boulder-town.summary",
+    "ja": "ベロブルグの地下にある町。",
+    "context": "glossary hsr term boulder-town: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.boulder-town.body",
+    "ja": "[[belobog|ベロブルグ]]の地下にある鉱業の町。診療所やファイトクラブがある。",
+    "context": "glossary hsr term boulder-town: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
@@ -5171,6 +6410,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[memory-of-chaos]]",
       "[[pure-fiction]]"
+    ]
+  },
+  {
+    "id": "term.hsr.nameless-memory.name",
+    "ja": "無名の追憶",
+    "context": "glossary hsr term nameless-memory: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nameless-memory.summary",
+    "ja": "紡がれた物語のカード解放に使うアイテム。",
+    "context": "glossary hsr term nameless-memory: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nameless-memory.body",
+    "ja": "オンパロスの開拓クエストなどで獲得し、[[as-ive-written]]のカード解放に使用する。",
+    "context": "glossary hsr term nameless-memory: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[as-ive-written]]"
     ]
   },
   {
@@ -5322,6 +6590,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[relic-smart-equip|",
       "[[relic-sub-stat|"
+    ]
+  },
+  {
+    "id": "term.hsr.shackling-prison.name",
+    "ja": "幽囚獄",
+    "context": "glossary hsr term shackling-prison: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shackling-prison.summary",
+    "ja": "仙舟にある罪人を収容する施設。",
+    "context": "glossary hsr term shackling-prison: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shackling-prison.body",
+    "ja": "[[xianzhou-luofu]]で訪れる牢獄。仙舟人と持明族によって築かれた。",
+    "context": "glossary hsr term shackling-prison: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[xianzhou-luofu]]"
     ]
   },
   {
@@ -5500,6 +6797,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.rivet-town.name",
+    "ja": "リベットタウン",
+    "context": "glossary hsr term rivet-town: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rivet-town.summary",
+    "ja": "かつて交易や機械製造で栄えた町。",
+    "context": "glossary hsr term rivet-town: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rivet-town.body",
+    "ja": "[[belobog|ベロブルグ]]の地下にあった町。裂界の脅威により住民は避難した。",
+    "context": "glossary hsr term rivet-town: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[belobog|"
     ]
   },
   {
