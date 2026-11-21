@@ -153,6 +153,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.anomaly-arbitration.name",
+    "ja": "異相の仲裁",
+    "context": "glossary hsr term anomaly-arbitration: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.anomaly-arbitration.summary",
+    "ja": "3つの試練と最終ステージで構成される高難度コンテンツ。",
+    "context": "glossary hsr term anomaly-arbitration: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.anomaly-arbitration.body",
+    "ja": "Ver.3.6で追加された、定期的に更新される高難度の試練コンテンツ。「均衡」の仲裁官とのチェスの対局をモチーフに、3つの試練ステージと1つの最終ステージで構成される。試練ステージでは3つの編成を組んで挑み、すべてをクリアすると最終ステージに挑戦できる。解放には[[forgotten-hall|忘却の庭]]・[[memory-of-chaos|混沌の記憶]]など既存の高難度コンテンツのクリアが条件になる。",
+    "context": "glossary hsr term anomaly-arbitration: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[forgotten-hall|",
+      "[[memory-of-chaos|"
+    ]
+  },
+  {
     "id": "term.hsr.relics.name",
     "ja": "遺物",
     "context": "glossary hsr term relics: Japanese official term name",
@@ -809,13 +839,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.backwater-pass.body",
-    "ja": "[[belobog|ベロブルグ]]のかつての商業街。裂界の拡大により往時の賑わいを失った。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[belobog|ベロブルグ]]のかつての商業街。[[fragmentum|裂界]]の拡大により往時の賑わいを失った。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term backwater-pass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[belobog|"
+      "[[belobog|",
+      "[[fragmentum|"
     ]
   },
   {
@@ -1087,6 +1118,36 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[light-cone|",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.counter.name",
+    "ja": "カウンター",
+    "context": "glossary hsr term counter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.counter.summary",
+    "ja": "攻撃を受けた際に反撃する仕組み。",
+    "context": "glossary hsr term counter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.counter.body",
+    "ja": "攻撃を受けたときに反撃する仕組み。[[follow-up-attack|追加攻撃]]の一種として扱われ、自身のターン外にもダメージを与えられる。クラーラや雲璃が得意とし、敵に狙われるほど発動の機会が増えるため、[[taunt|挑発]]と組み合わせる運用もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term counter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[follow-up-attack|",
+      "[[taunt|"
     ]
   },
   {
@@ -1609,12 +1670,15 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.kyoukankaku-biikon.body",
-    "ja": "異なる世界の言葉を理解するための技術。天才クラブの会員が原型を作り、博識学会が復元した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "異なる世界の言葉を理解するための技術。[[genius-society|天才クラブ]]の会員が原型を作り、[[intelligentsia-guild|博識学会]]が復元した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term kyoukankaku-biikon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
-    "protectedTokens": []
+    "protectedTokens": [
+      "[[genius-society|",
+      "[[intelligentsia-guild|"
+    ]
   },
   {
     "id": "term.hsr.stagnant-shadow.name",
@@ -2523,13 +2587,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.corridor-of-fading-echoes.body",
-    "ja": "[[belobog|ベロブルグ]]の裂界の深部へ続く場所。防衛線や旧来の司令部がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[belobog|ベロブルグ]]の[[fragmentum|裂界]]の深部へ続く場所。防衛線や旧来の司令部がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term corridor-of-fading-echoes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[belobog|"
+      "[[belobog|",
+      "[[fragmentum|"
     ]
   },
   {
@@ -2950,6 +3015,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.galaxy-rangers.name",
+    "ja": "巡海レンジャー",
+    "context": "glossary hsr term galaxy-rangers: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.galaxy-rangers.summary",
+    "ja": "「巡狩」を信仰し、宇宙を放浪して悪を討つ者たちの集団。",
+    "context": "glossary hsr term galaxy-rangers: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.galaxy-rangers.body",
+    "ja": "「[[the-hunt|巡狩]]」の[[aeon|星神]]・嵐を信仰し、悪を討ち弱きを助けることを信条とする放浪者たちの集団。組織としての統制は緩く、メンバーは宇宙各地を単独で放浪しながら活動する。ブートヒルや乱破が所属している。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term galaxy-rangers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[the-hunt|"
+    ]
+  },
+  {
     "id": "term.hsr.the-hunt.name",
     "ja": "巡狩",
     "context": "glossary hsr term the-hunt: Japanese official term name",
@@ -3035,6 +3130,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.emanator.name",
+    "ja": "使令",
+    "context": "glossary hsr term emanator: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.emanator.summary",
+    "ja": "星神から直接力を分け与えられた、星神の代理人。",
+    "context": "glossary hsr term emanator: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.emanator.body",
+    "ja": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。[[aeon|星神]]に認められた者だけが就くことができ、力は並の「[[path|運命]]」の行人を遥かに上回る。「[[destruction|壊滅]]」の絶滅大君や、仙舟の将軍である景元などが知られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term emanator: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[destruction|",
+      "[[path|"
     ]
   },
   {
@@ -4617,6 +4743,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.taunt.name",
+    "ja": "挑発",
+    "context": "glossary hsr term taunt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.taunt.summary",
+    "ja": "敵の攻撃対象を特定のキャラクターに引きつける効果。",
+    "context": "glossary hsr term taunt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.taunt.body",
+    "ja": "敵の攻撃対象を特定のキャラクターに引きつける効果。挑発を受けた敵は、挑発したキャラクターを狙って攻撃するようになる。耐久力の高いキャラクターが攻撃を引き受けることで味方を守れるほか、攻撃を受けることで発動する[[counter|カウンター]]とも相性がいい。ブートヒルの「九死の決闘」では、対象の敵が挑発状態と見なされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term taunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[counter|"
+    ]
+  },
+  {
     "id": "term.hsr.warp.name",
     "ja": "跳躍",
     "context": "glossary hsr term warp: Japanese official term name",
@@ -5355,6 +5510,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.intelligentsia-guild.name",
+    "ja": "博識学会",
+    "context": "glossary hsr term intelligentsia-guild: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.intelligentsia-guild.summary",
+    "ja": "ヌースを信仰し、知識の共有と普及に尽力する学術組織。",
+    "context": "glossary hsr term intelligentsia-guild: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.intelligentsia-guild.body",
+    "ja": "「[[erudition|知恵]]」の[[aeon|星神]]ヌースを信仰する学術組織。知識は共有されるべきだという理念のもと、知識を求める人を広く受け入れ、全宇宙への知識の普及に尽力している。選ばれた天才だけが招かれる[[genius-society|天才クラブ]]とは対照的な組織で、Dr.レイシオをはじめ多くの学者が所属する。",
+    "context": "glossary hsr term intelligentsia-guild: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[erudition|",
+      "[[genius-society|"
+    ]
+  },
+  {
     "id": "term.hsr.punchline.name",
     "ja": "爆笑ネタ",
     "context": "glossary hsr term punchline: Japanese official term name",
@@ -5442,6 +5628,38 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[healing|",
       "[[hp|"
+    ]
+  },
+  {
+    "id": "term.hsr.antimatter-legion.name",
+    "ja": "反物質レギオン",
+    "context": "glossary hsr term antimatter-legion: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.antimatter-legion.summary",
+    "ja": "「壊滅」の星神ナヌークに仕え、文明の破壊を進める軍団。",
+    "context": "glossary hsr term antimatter-legion: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.antimatter-legion.body",
+    "ja": "「[[destruction|壊滅]]」の[[aeon|星神]]ナヌークに仕える軍団。文明と生命の破壊を目的として宇宙各地を襲い、物語の序盤では[[herta-space-station|宇宙ステーション「ヘルタ」]]への襲撃が描かれた。指揮官格として、ナヌークから力を分け与えられた「絶滅大君」と呼ばれる[[emanator|使令]]がいる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term antimatter-legion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[destruction|",
+      "[[emanator|",
+      "[[herta-space-station|"
     ]
   },
   {
@@ -6413,6 +6631,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.currency-wars.name",
+    "ja": "マネーウォーズ",
+    "context": "glossary hsr term currency-wars: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.currency-wars.summary",
+    "ja": "10名を前衛・後衛に配置して戦う常設コンテンツ。",
+    "context": "glossary hsr term currency-wars: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.currency-wars.body",
+    "ja": "Ver.3.7で追加された常設コンテンツ。正式名称は「マネーウォーズ・ゼロサムゲーム」。10名のキャラクターを前衛と後衛に分けて配置し、通常の戦闘とは異なるルールで戦う。[[interastral-peace-corporation|スターピースカンパニー]]の戦略投資部に関わる物語から始まり、シーズン制で内容が更新される。",
+    "context": "glossary hsr term currency-wars: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[interastral-peace-corporation|"
+    ]
+  },
+  {
     "id": "term.hsr.nameless-memory.name",
     "ja": "無名の追憶",
     "context": "glossary hsr term nameless-memory: Japanese official term name",
@@ -6819,13 +7066,14 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.rivet-town.body",
-    "ja": "[[belobog|ベロブルグ]]の地下にあった町。裂界の脅威により住民は避難した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[belobog|ベロブルグ]]の地下にあった町。[[fragmentum|裂界]]の脅威により住民は避難した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term rivet-town: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[belobog|"
+      "[[belobog|",
+      "[[fragmentum|"
     ]
   },
   {
@@ -6855,6 +7103,36 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[xianzhou-luofu]]"
+    ]
+  },
+  {
+    "id": "term.hsr.garden-of-recollection.name",
+    "ja": "流光憶庭",
+    "context": "glossary hsr term garden-of-recollection: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.garden-of-recollection.summary",
+    "ja": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
+    "context": "glossary hsr term garden-of-recollection: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.garden-of-recollection.body",
+    "ja": "「[[remembrance|記憶]]」の[[aeon|星神]]・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。英語名に基づく「ガーデン・オブ・リコレクション」の名でも呼ばれる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term garden-of-recollection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[remembrance|"
     ]
   },
   {
@@ -6945,6 +7223,36 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[traces|",
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.fragmentum.name",
+    "ja": "裂界",
+    "context": "glossary hsr term fragmentum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fragmentum.summary",
+    "ja": "星核の侵蝕によって生じる、現実から切り離された領域。",
+    "context": "glossary hsr term fragmentum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fragmentum.body",
+    "ja": "[[stellaron|星核]]がもたらす侵蝕現象によって生じる領域。内部では地形や生態が変質し、裂界の生物が徘徊する。[[jarilo-vi|ヤリーロ-VI]]では、その活性化に伴って裂界が広がり、人々の生活圏を脅かしてきた。探索では、育成素材を得る挑戦が裂界の中に現れることもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term fragmentum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[jarilo-vi|",
+      "[[stellaron|"
     ]
   },
   {
