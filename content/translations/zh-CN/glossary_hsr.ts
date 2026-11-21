@@ -91,6 +91,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.anomaly-arbitration.name": {
+    "text": "異相の仲裁",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.anomaly-arbitration.summary": {
+    "text": "3つの試練と最終ステージで構成される高難度コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.anomaly-arbitration.body": {
+    "text": "Ver.3.6で追加された、定期的に更新される高難度の試練コンテンツ。「均衡」の仲裁官とのチェスの対局をモチーフに、3つの試練ステージと1つの最終ステージで構成される。試練ステージでは3つの編成を組んで挑み、すべてをクリアすると最終ステージに挑戦できる。解放には[[forgotten-hall|忘却の庭]]・[[memory-of-chaos|混沌の記憶]]など既存の高難度コンテンツのクリアが条件になる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.relics.name": {
     "text": "遺物",
     "sourceHash": null,
@@ -645,6 +663,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.destruction.body": {
     "text": "[[path|運命]]の一つ。壊滅の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。攻撃を担うキャラクターもいるが、能力は各キャラクターで異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.counter.name": {
+    "text": "カウンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.counter.summary": {
+    "text": "攻撃を受けた際に反撃する仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.counter.body": {
+    "text": "攻撃を受けたときに反撃する仕組み。[[follow-up-attack|追加攻撃]]の一種として扱われ、自身のターン外にもダメージを与えられる。クラーラや雲璃が得意とし、敵に狙われるほど発動の機会が増えるため、[[taunt|挑発]]と組み合わせる運用もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1783,6 +1819,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.galaxy-rangers.name": {
+    "text": "巡海レンジャー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.galaxy-rangers.summary": {
+    "text": "「巡狩」を信仰し、宇宙を放浪して悪を討つ者たちの集団。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.galaxy-rangers.body": {
+    "text": "「巡狩」の星神・嵐を信仰し、悪を討ち弱きを助けることを信条とする放浪者たちの集団。組織としての統制は緩く、メンバーは宇宙各地を単独で放浪しながら活動する。ブートヒルや乱破が所属している。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.the-hunt.name": {
     "text": "巡狩",
     "sourceHash": null,
@@ -1833,6 +1887,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.silvermane-guard-restricted-zone.body": {
     "text": "[[belobog|ベロブルグ]]にある区域。シルバーメインが駐屯し、防衛にあたっている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.emanator.name": {
+    "text": "使令",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.emanator.summary": {
+    "text": "星神から直接力を分け与えられた、星神の代理人。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.emanator.body": {
+    "text": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。星神に認められた者だけが就くことができ、力は並の「運命」の行人を遥かに上回る。「壊滅」の絶滅大君や、仙舟の将軍である景元などが知られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2791,6 +2863,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.taunt.name": {
+    "text": "挑発",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.taunt.summary": {
+    "text": "敵の攻撃対象を特定のキャラクターに引きつける効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.taunt.body": {
+    "text": "敵の攻撃対象を特定のキャラクターに引きつける効果。挑発を受けた敵は、挑発したキャラクターを狙って攻撃するようになる。耐久力の高いキャラクターが攻撃を引き受けることで味方を守れるほか、攻撃を受けることで発動する[[counter|カウンター]]とも相性がいい。ブートヒルの「九死の決闘」では、対象の敵が挑発状態と見なされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.warp.name": {
     "text": "跳躍",
     "sourceHash": null,
@@ -3241,6 +3331,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.intelligentsia-guild.name": {
+    "text": "博識学会",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.intelligentsia-guild.summary": {
+    "text": "ヌースを信仰し、知識の共有と普及に尽力する学術組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.intelligentsia-guild.body": {
+    "text": "「知恵」の星神ヌースを信仰する学術組織。知識は共有されるべきだという理念のもと、知識を求める人を広く受け入れ、全宇宙への知識の普及に尽力している。選ばれた天才だけが招かれる[[genius-society|天才クラブ]]とは対照的な組織で、Dr.レイシオをはじめ多くの学者が所属する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.punchline.name": {
     "text": "爆笑ネタ",
     "sourceHash": null,
@@ -3291,6 +3399,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.shield.body": {
     "text": "対象に付与され、受けるダメージを防ぐ効果。耐久量や持続時間、付与できる対象は能力によって異なる。[[healing|治癒]]によるHP回復とは異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.antimatter-legion.name": {
+    "text": "反物質レギオン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.antimatter-legion.summary": {
+    "text": "「壊滅」の星神ナヌークに仕え、文明の破壊を進める軍団。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.antimatter-legion.body": {
+    "text": "「壊滅」の星神ナヌークに仕える軍団。文明と生命の破壊を目的として宇宙各地を襲い、物語の序盤では宇宙ステーション「ヘルタ」への襲撃が描かれた。指揮官格として、ナヌークから力を分け与えられた「絶滅大君」と呼ばれる[[emanator|使令]]がいる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3889,6 +4015,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.currency-wars.name": {
+    "text": "マネーウォーズ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.currency-wars.summary": {
+    "text": "10名を前衛・後衛に配置して戦う常設コンテンツ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.currency-wars.body": {
+    "text": "Ver.3.7で追加された常設コンテンツ。正式名称は「マネーウォーズ・ゼロサムゲーム」。10名のキャラクターを前衛と後衛に分けて配置し、通常の戦闘とは異なるルールで戦う。[[interastral-peace-corporation|スターピースカンパニー]]の戦略投資部に関わる物語から始まり、シーズン制で内容が更新される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.nameless-memory.name": {
     "text": "無名の追憶",
     "sourceHash": null,
@@ -4159,6 +4303,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.garden-of-recollection.name": {
+    "text": "流光憶庭",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.garden-of-recollection.summary": {
+    "text": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.garden-of-recollection.body": {
+    "text": "「記憶」の星神・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。英語名に基づく「ガーデン・オブ・リコレクション」の名でも呼ばれる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.lucent-afterglow.name": {
     "text": "流光の残照",
     "sourceHash": null,
@@ -4209,6 +4371,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.echo-of-war.body": {
     "text": "強敵との戦闘に挑み、[[trailblaze-power|開拓力]]を使って報酬を受け取るコンテンツ。[[traces|軌跡]]の強化に使う素材などが手に入る。報酬の受取条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fragmentum.name": {
+    "text": "裂界",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fragmentum.summary": {
+    "text": "星核の侵蝕によって生じる、現実から切り離された領域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fragmentum.body": {
+    "text": "[[stellaron|星核]]がもたらす侵蝕現象によって生じる領域。内部では地形や生態が変質し、裂界の生物が徘徊する。[[jarilo-vi|ヤリーロ-VI]]では星核の活性化に伴って裂界が広がり、人々の生活圏を脅かしてきた。探索では、育成素材を得る挑戦が裂界の中に現れることもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
