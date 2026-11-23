@@ -198,6 +198,11 @@ Pages公開時に必要なActions変数:
 - [x] NFのmaintenance=false / migrationPreview=falseで正式RPC/OAuth受付を確認。API CI/CD OFF、Job CD OFF。
 - [x] 正式PagesのUID/OAuth/管理保存・再起動保持・未認証管理API拒否を確認。旧新並行試験全項目のPASSとはしない。
 - [x] 利用者承認の既存dump採用復旧、全行hash/DB objects照合、正規受付再開、forwardを記録。旧DB最終照合はNOT_TESTED。
+- [x] 2026-11-23: 通常DBユーザーを事故後の新パスワードへ更新し、旧パスワードを破棄。APIの新規接続と管理者再ログインを確認（下記履歴参照）。
+- [ ] Registry用API tokenを再発行し、`hoyoverse-image-pull` へ登録する。
+- [ ] 移行Job `hoyoverse-db-migrate-shared` の新パスワードでのDB接続を `SELECT 1` で確認する。
+- [ ] 管理者・root・残り2ユーザーのDB資格情報を、Northflankサポートの回答後に更新する。
+- [ ] 旧Job `hoyoverse-db-migrate` に残る接続情報の扱いを確認する。
 
 設定変更時は、対象service/addon/job、変更前後の非秘密値、時刻、実行者、backup、revision、確認結果を更新履歴に追記する。秘密値は「更新済み / 未確認」のみ記録する。
 
@@ -455,3 +460,34 @@ Pages公開時に必要なActions変数:
 - Vitest 583/583、Node 33/33、型検査、API/Pagesビルド、設計検証PASS。公開全256名は650ms間隔で照合し、既存履歴と対象外データの非破壊を確認。
 - 手動build・deploy・Pages dispatchなし。実UID・Job実行・復元・長時間監視は対象外で未実施。
 - 完了文書も通常PRで公開し、最終mainとAPI/Pagesの同SHAを確認する。skip設定はNorthflank再配備を防ぐ保証として使わない。
+
+## 2026-11-21〜23 Northflankセキュリティ事故対応（進行中）
+
+Northflankの2026-10-30事故（公式報告 https://northflank.com/blog/incident-report-october-30-security-incident ）を受けた資格情報更新の記録。本アプリの秘密値が実際に流出したかは未確認。DB名・ユーザー名・秘密値は記録しない。
+
+### 完了
+
+- 2026-11-21: GitHub App client secretを更新し、旧secretを削除。ADMIN_SESSION_SECRETを更新。管理者再ログインを確認。旧セッションの拒否は直接検証していない。
+- 2026-11-23 19:56 JST: 更新前のNative dump `pre-db-user-rotation-20261123` を取得（Completed、3.62 KB、59秒）。Restoreは未実施。
+- 2026-11-23: 通常DBユーザーをSQLで更新。`RETAIN CURRENT PASSWORD` で新旧併用し、APIのDATABASE_URLを更新後、`DISCARD OLD PASSWORD` を実行。`password_last_changed=2026-11-23`、secondary passwordなしを確認。
+- 破棄後、API podから新規TLS接続（64文字hex、`SELECT 1`、connection_ok）と管理者ポータルの再ログインを確認。
+
+### Rotate secrets失敗の調査
+
+- 2026-11-21 12:59:50〜13:01:53 JSTのNorthflank Rotate secretsはFailed。Finaliseは未実行。
+- 2026-11-23の `mysql.user` 確認で、失敗時刻以降のパスワード変更とsecondary passwordは全ユーザーでなし。部分変更の形跡なし。
+- 失敗原因は未確定。2026-10-08に通常ユーザーをSQLで直接変更したことによる、Northflank保持値とのずれを候補としてサポートへ確認する。
+- 管理者パスワードはConnection detailsの値で接続可能。
+
+### 2026-11-23 本番影響
+
+- 約20:27〜22:31 JST、APIのDATABASE_URLのパスワードが1文字多い65文字で保存され、APIのDB接続が `ER_ACCESS_DENIED_ERROR` で失敗。管理者ログインと公開サイトの表示設定・言語設定の読み込みに影響した。healthはDBを確認しないため200のままだった。
+- DB側の値を再設定し（RETAINなしで旧secondaryを維持）、同じ値をAPIと移行Jobへ保存して復旧。22:31:45 JSTに新podが起動。
+- 再発防止: DATABASE_URL更新後は再配備直後にAPI podからDB接続を確認する。health 200をDB正常の根拠にしない。パスワードの生成から貼り付けの間に別の内容をコピーしない。RETAIN状態で再設定するときは `RETAIN CURRENT PASSWORD` を付けない。
+
+### 未完了
+
+- 移行Jobは `The credentials cannot access this external image` で起動せず、新パスワードでのDB接続は未確認。実装ログ上、Registry token `hoyoverse-image-pull-2026-10-21` の期限は2026-11-20 18:05で、期限切れが有力（事故によるtoken失効の影響も否定しない）。
+- 管理者・root・残り2ユーザーは事故前のパスワードのまま。Northflankの内部利用の有無が不明なため、サポート回答まで変更しない。
+- Northflankサポートの回答は未確認（確認時にGmail接続が無効）。追加調査結果の送付も利用者側で未確認。
+- 長時間の安定性、本アプリの秘密値流出の有無は未確認。
