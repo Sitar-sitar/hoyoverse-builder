@@ -19,6 +19,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.devilboo.name": {
+    "text": "アクマデボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.devilboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.devilboo.body": {
+    "text": "編成に加えられる[[bangboo]]。空中から追尾弾を撃ち、エーテルダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avocaboo.name": {
+    "text": "アボカドボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avocaboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avocaboo.body": {
+    "text": "編成に加えられる[[bangboo]]。ジュース弾に触れたメンバーのHPを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.amillion.name": {
+    "text": "アミリオン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.amillion.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.amillion.body": {
+    "text": "編成に加えられる[[bangboo]]。機関銃で物理ダメージを与える。[[cunning-hares]]と組むと敵の数に応じて連携攻撃を強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hailstorm-shrine.name": {
     "text": "あられ落つ星殿",
     "sourceHash": null,
@@ -177,6 +231,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.woodpecker-electro.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は会心率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.urutora-neivu.name": {
+    "text": "ウルトラネイヴ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.urutora-neivu.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.urutora-neivu.body": {
+    "text": "編成に加えられる[[bangboo]]。飛行しながら炎の射撃を行う。[[roscaelifer]]陣営の編成でエネルギー回復を支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cryboo.name": {
+    "text": "ウルリンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cryboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cryboo.body": {
+    "text": "編成に加えられる[[bangboo]]。爆弾を投げて炎ダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -451,6 +541,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.blazing-laurel.name": {
+    "text": "炎心の桂冠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blazing-laurel.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blazing-laurel.body": {
+    "text": "「[[stun-specialty]]」向けの[[w-engine]]。[[ex-special-attack]]や[[chain-attack]]などに応じて[[stun]]蓄積を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.orbit-rail.name": {
     "text": "オービットレール",
     "sourceHash": null,
@@ -469,6 +577,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.oshi-shi.name": {
+    "text": "オシシ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.oshi-shi.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.oshi-shi.body": {
+    "text": "編成に加えられる[[bangboo]]。跳ね返る石の球で複数の敵を攻撃できる。[[yunkui-summit]]との編成で与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sumoboo.name": {
+    "text": "オスモウボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sumoboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sumoboo.body": {
+    "text": "編成に加えられる[[bangboo]]。跳び上がって落下打撃を放ち、敵の動作を中断しやすい。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.obol-squad.name": {
     "text": "オボルス小隊",
     "sourceHash": null,
@@ -483,6 +627,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.obol-squad.body": {
     "text": "公式キャラクター一覧で、11号やオルペウス＆「鬼火」などが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.luckyboo.name": {
+    "text": "オマネキボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.luckyboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.luckyboo.body": {
+    "text": "編成に加えられる[[bangboo]]。コインを投げつける連続攻撃で物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -721,6 +883,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.brawlerboo.name": {
+    "text": "カクトウボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.brawlerboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.brawlerboo.body": {
+    "text": "編成に加えられる[[bangboo]]。浮遊中に味方が重撃を当てると、急降下して炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.wind-salon.name": {
     "text": "風鳴りのサロン",
     "sourceHash": null,
@@ -739,6 +919,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.baddieboo.name": {
+    "text": "カチコミボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.baddieboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.baddieboo.body": {
+    "text": "編成に加えられる[[bangboo]]。ロケットランチャーや火炎瓶で炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.snap.name": {
+    "text": "カチャコ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.snap.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.snap.body": {
+    "text": "編成に加えられる[[bangboo]]。味方の回避反撃や支援行動を撮影し、撮影したメンバーの与ダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharkboo.name": {
+    "text": "ガブットボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharkboo.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharkboo.body": {
+    "text": "編成に加えられる[[bangboo]]。追尾トラップを設置し、敵に氷ダメージを与えて[[attribute-anomaly]]蓄積を増やす。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kara-no-naka-no-tamashii.name": {
     "text": "殻の中の魂",
     "sourceHash": null,
@@ -753,6 +987,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.kara-no-naka-no-tamashii.body": {
     "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.agent-gulliver.name": {
+    "text": "ガリバー隊員",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.agent-gulliver.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.agent-gulliver.body": {
+    "text": "編成に加えられる[[bangboo]]。前方への射撃で電気ダメージを与え、[[attribute-anomaly]]を蓄積させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -793,6 +1045,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.booressure.name": {
+    "text": "キアツデボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.booressure.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.booressure.body": {
+    "text": "編成に加えられる[[bangboo]]。泡を作り、泡に触れたメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.deadly-assault.name": {
     "text": "危局強襲戦",
     "sourceHash": null,
@@ -807,6 +1077,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.deadly-assault.body": {
     "text": "[[agent]]を編成して強敵と戦うコンテンツ。挑戦内容や期間ごとの条件を確認して編成を組む。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.knightboo.name": {
+    "text": "キシドウボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.knightboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.knightboo.body": {
+    "text": "編成に加えられる[[bangboo]]。ナイトスターを出し、触れたメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -991,6 +1279,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.ice-jade-teapot.name": {
+    "text": "玉壺青氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ice-jade-teapot.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ice-jade-teapot.body": {
+    "text": "「[[stun-specialty]]」向けの[[w-engine]]。通常攻撃の命中で蓄積を得て[[impact]]を強化し、一定の蓄積から味方の与ダメージも伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kinran-no-kokoro.name": {
     "text": "金襴の心",
     "sourceHash": null,
@@ -1063,6 +1369,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.magnetiboo.name": {
+    "text": "クッツキボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetiboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetiboo.body": {
+    "text": "編成に加えられる[[bangboo]]。敵を引き寄せて物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.krampus-compliance-authority.name": {
     "text": "クランプスの黒枝",
     "sourceHash": null,
@@ -1113,6 +1437,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.chaos-jazz.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.unfettered-game-ball.name": {
+    "text": "ゲームボール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.unfettered-game-ball.summary": {
+    "text": "支援向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.unfettered-game-ball.body": {
+    "text": "「[[support]]」向けの[[w-engine]]。装備者が[[attribute]]相性で有利な攻撃を当てると、味方の[[crit-rate]]を支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1225,6 +1567,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.safety.name": {
+    "text": "ゴアンゼン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.safety.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.safety.body": {
+    "text": "編成に加えられる[[bangboo]]。ドリルを使った物理攻撃を行う。[[belobog-heavy-industries]]との編成で連携攻撃が強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.interboo-coin.name": {
     "text": "コインナ",
     "sourceHash": null,
@@ -1257,6 +1617,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.kouji.body": {
     "text": "輝嶺石を加工して作る特殊な材料。ホロウ探索用の装備などに使われる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-restrained.name": {
+    "text": "拘縛されし者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-restrained.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-restrained.body": {
+    "text": "「[[stun-specialty]]」向けの[[w-engine]]。攻撃を当てることで通常攻撃のダメージと[[stun]]蓄積を段階的に強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1351,6 +1729,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kosan.name": {
+    "text": "コサン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kosan.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kosan.body": {
+    "text": "編成に加えられる[[bangboo]]。応援で出場中のメンバーを回復し、[[angels-of-delusion]]との編成では攻撃力も支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.disorder.name": {
     "text": "混沌",
     "sourceHash": null,
@@ -1401,6 +1797,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.shatter.body": {
     "text": "[[freeze]]に関連する氷属性ダメージ。敵が凍結から解放されたときなどに発生する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.overtimeboo.name": {
+    "text": "サビザンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.overtimeboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.overtimeboo.body": {
+    "text": "編成に加えられる[[bangboo]]。パソコンデスクをぶつけて物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1621,6 +2035,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.severed-innocence.name": {
+    "text": "純然たる犠牲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.severed-innocence.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.severed-innocence.body": {
+    "text": "「[[attack]]」向けの[[w-engine]]。Ver.1.6の限定[[w-engine]]として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.white-water-ballad.name": {
     "text": "純白の行歌",
     "sourceHash": null,
@@ -1819,6 +2251,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.red-moccus.name": {
+    "text": "真紅のモックス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.red-moccus.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.red-moccus.body": {
+    "text": "編成に加えられる[[bangboo]]。バイクで遠くの敵を手前に押し寄せる。[[sons-of-calydon]]と組むと攻撃を強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.heartstring-nocturne.name": {
+    "text": "心弦のノクターン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.heartstring-nocturne.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.heartstring-nocturne.body": {
+    "text": "「[[attack]]」向けの[[w-engine]]。[[crit-dmg]]を上げ、条件を満たすと[[chain-attack]]や[[ultimate]]で炎耐性を一部無視できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.mindscape-cinema.name": {
     "text": "心象映画",
     "sourceHash": null,
@@ -1941,6 +2409,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.starlight-visor.body": {
     "text": "「命破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.boollseye.name": {
+    "text": "ズバットボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.boollseye.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.boollseye.body": {
+    "text": "編成に加えられる[[bangboo]]。ダーツを投げて物理ダメージを与える。刺突タイプの味方と組むと連携攻撃が強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.excaliboo.name": {
+    "text": "セイケンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.excaliboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.excaliboo.body": {
+    "text": "編成に加えられる[[bangboo]]。剣を使った物理攻撃を行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2179,6 +2683,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.spectral-gaze.name": {
+    "text": "奪魂の瞑目",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.spectral-gaze.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.spectral-gaze.body": {
+    "text": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.1.6の限定[[w-engine]]として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exploreboo.name": {
+    "text": "タンケンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exploreboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exploreboo.body": {
+    "text": "編成に加えられる[[bangboo]]。採掘結果に応じて、HP回復、シールド、エネルギー回復支援のいずれかを行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lumina-security-branch.name": {
     "text": "治安局ルミナ分署",
     "sourceHash": null,
@@ -2269,6 +2809,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.officer-cui.name": {
+    "text": "ツェイ巡査",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.officer-cui.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.officer-cui.body": {
+    "text": "編成に加えられる[[bangboo]]。噛みつきによる物理攻撃を行う。[[special-response-team]]との編成で追加攻撃が出ることがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.tsumi-toraeru-rogoku.name": {
     "text": "罪捕らえる牢獄",
     "sourceHash": null,
@@ -2283,6 +2841,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.tsumi-toraeru-rogoku.body": {
     "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deep-sea-visitor.name": {
+    "text": "ディープシー・ビジター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deep-sea-visitor.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deep-sea-visitor.body": {
+    "text": "「[[attack]]」向けの[[w-engine]]。氷ダメージを強化し、通常攻撃や氷のダッシュ攻撃を当てると[[crit-rate]]を上げられる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2575,6 +3151,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hellfire-gears.name": {
+    "text": "燃獄ギア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hellfire-gears.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hellfire-gears.body": {
+    "text": "「[[stun-specialty]]」向けの[[w-engine]]。控えにいる間のエネルギー回復を助け、[[ex-special-attack]]を使うと[[impact]]が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.flamemaker-shaker.name": {
     "text": "バーニング・シェイカー",
     "sourceHash": null,
@@ -2647,6 +3241,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.steel-cushion.name": {
+    "text": "鋼の肉球",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.steel-cushion.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.steel-cushion.body": {
+    "text": "「[[attack]]」向けの[[w-engine]]。物理ダメージを強化し、背後から攻撃を当てると与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.paperboo.name": {
+    "text": "ハコイリボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.paperboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.paperboo.body": {
+    "text": "編成に加えられる[[bangboo]]。段ボール箱で偽装し、敵の攻撃を受けるなどの条件で爆発して物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.battery-charge.name": {
     "text": "バッテリー",
     "sourceHash": null,
@@ -2665,6 +3295,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.butler.name": {
+    "text": "バトラー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.butler.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.butler.body": {
+    "text": "編成に加えられる[[bangboo]]。作ったお茶菓子でメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.puffer-electro.name": {
     "text": "パファー・エレクトロ",
     "sourceHash": null,
@@ -2679,6 +3327,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.puffer-electro.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は貫通率を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rocketboo.name": {
+    "text": "ハヤスギボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rocketboo.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rocketboo.body": {
+    "text": "編成に加えられる[[bangboo]]。ロケットで突進し、爆発で周囲に炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2719,6 +3385,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.byaku-burikku.name": {
+    "text": "ビャークブリック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.byaku-burikku.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.byaku-burikku.body": {
+    "text": "編成に加えられる[[bangboo]]。浮遊ビットのレーザーで物理ダメージと[[stun]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electroboo.name": {
+    "text": "ビリビリボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electroboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electroboo.body": {
+    "text": "編成に加えられる[[bangboo]]。突進後に電撃を繰り出し、電気系の[[attribute-anomaly]]を蓄積させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.booastrum.name": {
     "text": "ブーアストラム",
     "sourceHash": null,
@@ -2755,6 +3457,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.fusion-compiler.name": {
+    "text": "複合コンパイラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fusion-compiler.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fusion-compiler.body": {
+    "text": "「[[anomaly]]」向けの[[w-engine]]。攻撃力を上げ、特殊スキルや[[ex-special-attack]]の使用で[[anomaly-proficiency]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bagboo.name": {
+    "text": "フクロノボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bagboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bagboo.body": {
+    "text": "編成に加えられる[[bangboo]]。二丁の包丁による連続斬撃で物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.plugboo.name": {
+    "text": "プラグノボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.plugboo.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.plugboo.body": {
+    "text": "編成に加えられる[[bangboo]]。電磁砲で電気ダメージを与える。電気系の編成では連携時の[[attribute-anomaly]]蓄積を伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.freedom-blues.name": {
     "text": "フリーダム・ブルース",
     "sourceHash": null,
@@ -2769,6 +3525,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.freedom-blues.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-brimstone.name": {
+    "text": "ブリムストーン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-brimstone.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-brimstone.body": {
+    "text": "「[[attack]]」向けの[[w-engine]]。通常攻撃やダッシュ攻撃、回避反撃を当てるたびに攻撃力を積み上げられる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3007,6 +3781,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.penguinboo.name": {
+    "text": "ペンギンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.penguinboo.summary": {
+    "text": "戦闘に同行するA級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.penguinboo.body": {
+    "text": "編成に加えられる[[bangboo]]。氷の刃で敵を斬り、氷ダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.signal-search.name": {
     "text": "変調",
     "sourceHash": null,
@@ -3205,6 +3997,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mercury.name": {
+    "text": "マーキュリー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mercury.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mercury.body": {
+    "text": "編成に加えられる[[bangboo]]。乗り物を呼び、火炎放射で炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lost-void.name": {
     "text": "迷いの地",
     "sourceHash": null,
@@ -3241,6 +4051,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.miss-esme.name": {
+    "text": "ミス・エスメ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miss-esme.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miss-esme.body": {
+    "text": "編成に加えられる[[bangboo]]。メンバーが触れるとHPまたはエネルギーが回復するアイテムを生成する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.rupture.name": {
     "text": "命破",
     "sourceHash": null,
@@ -3273,6 +4101,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.mezameshi-tsubasa-no-seika.body": {
     "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.meme.name": {
+    "text": "メメ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.meme.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.meme.body": {
+    "text": "編成に加えられる[[bangboo]]。飛剣で物理攻撃を行う。葉瞬光と組むと「剣」に関わる追加効果を得られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3475,6 +4321,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.bangvolver.name": {
+    "text": "リボルバボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangvolver.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bangvolver.body": {
+    "text": "編成に加えられる[[bangboo]]。装填された弾の種類により、射撃の威力や挙動が変わる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.shining-aria.name": {
     "text": "流光のアリア",
     "sourceHash": null,
@@ -3507,6 +4371,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.lumina-square.body": {
     "text": "治安局の施設やHIAキャリアセンターがある街区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonaboo.name": {
+    "text": "レゾナンボンプ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonaboo.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.resonaboo.body": {
+    "text": "編成に加えられる[[bangboo]]。ブラックホールで敵を引き寄せつつ、エーテルダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3597,6 +4479,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.ro-de-utaiagerareru-yume.body": {
     "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.robin.name": {
+    "text": "ロビン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.robin.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.robin.body": {
+    "text": "編成に加えられる[[bangboo]]。カードの種類によりダメージや[[stun]]蓄積、[[attribute-anomaly]]蓄積が変わる。[[mockingbird]]との編成では出場メンバーの[[specialty]]によってカードを固定できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

@@ -1,6 +1,6 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { SourceText } from "../../../shared/content/types";
-export const sources: SourceText[] = [
+const block0: SourceText[] = [
   {
     "id": "term.genshin.aubade-of-morningstar-and-moon.name",
     "ja": "暁の星と月の歌",
@@ -57,6 +57,64 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[genius-invokation-tcg]]"
+    ]
+  },
+  {
+    "id": "term.genshin.amakumo-fruit.name",
+    "ja": "天雲草の実",
+    "context": "glossary genshin term amakumo-fruit: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.amakumo-fruit.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term amakumo-fruit: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.amakumo-fruit.body",
+    "ja": "[[inazuma]]で採れる育成素材。セイライ島の天雲峠周辺に多い。雷電将軍や綺良々の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term amakumo-fruit: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
+    ]
+  },
+  {
+    "id": "term.genshin.small-lamp-grass.name",
+    "ja": "イグサ",
+    "context": "glossary genshin term small-lamp-grass: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.small-lamp-grass.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term small-lamp-grass: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.small-lamp-grass.body",
+    "ja": "[[mondstadt]]で採れる育成素材。夜間に淡く光る植物で、囁きの森などに生える。アンバーやフィッシュルの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term small-lamp-grass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
     ]
   },
   {
@@ -257,6 +315,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.valberry.name",
+    "ja": "ヴァルベリー",
+    "context": "glossary genshin term valberry: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.valberry.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term valberry: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.valberry.body",
+    "ja": "[[mondstadt]]で採れる育成素材。望風山地周辺に生える実。リサやノエルの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term valberry: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
+    ]
+  },
+  {
     "id": "term.genshin.vivid-notions.name",
     "ja": "ヴィヴィッド・ハート",
     "context": "glossary genshin term vivid-notions: Japanese official term name",
@@ -315,6 +402,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sea-ganoderma.name",
+    "ja": "ウミレイシ",
+    "context": "glossary genshin term sea-ganoderma: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sea-ganoderma.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term sea-ganoderma: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sea-ganoderma.body",
+    "ja": "[[inazuma]]で採れる育成素材。島々の浅瀬などに生える。楓原万葉や八重神子の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sea-ganoderma: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
+    ]
+  },
+  {
     "id": "term.genshin.golden-troupe.name",
     "ja": "黄金の劇団",
     "context": "glossary genshin term golden-troupe: Japanese official term name",
@@ -341,6 +457,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.onikabuto.name",
+    "ja": "オニカブトムシ",
+    "context": "glossary genshin term onikabuto: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.onikabuto.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term onikabuto: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.onikabuto.body",
+    "ja": "[[inazuma]]で採れる育成素材。木の幹や岩壁にとまっている昆虫。荒瀧一斗や鹿野院平蔵の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term onikabuto: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
     ]
   },
   {
@@ -657,6 +802,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.kalpalata-lotus.name",
+    "ja": "カルパラタ蓮",
+    "context": "glossary genshin term kalpalata-lotus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kalpalata-lotus.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term kalpalata-lotus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kalpalata-lotus.body",
+    "ja": "[[sumeru]]で採れる育成素材。森林地帯の崖に生える。ナヒーダやドリーの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kalpalata-lotus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
+    "id": "term.genshin.withering-purpurbloom.name",
+    "ja": "枯れ紫菖",
+    "context": "glossary genshin term withering-purpurbloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.withering-purpurbloom.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term withering-purpurbloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.withering-purpurbloom.body",
+    "ja": "[[natlan]]で採れる育成素材。花翼の集の集落周辺などで採集できる。チャスカの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term withering-purpurbloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
+    ]
+  },
+  {
     "id": "term.genshin.ornamental-fish.name",
     "ja": "観賞魚",
     "context": "glossary genshin term ornamental-fish: Japanese official term name",
@@ -739,6 +942,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.skysplit-gembloom.name",
+    "ja": "岩裂の花",
+    "context": "glossary genshin term skysplit-gembloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block1: SourceText[] = [
+  {
+    "id": "term.genshin.skysplit-gembloom.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term skysplit-gembloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.skysplit-gembloom.body",
+    "ja": "[[natlan]]で採れる育成素材。豊穣の邦の周辺などで採集できる。ヴァレサの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term skysplit-gembloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
     ]
   },
   {
@@ -1025,6 +1260,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.wolfhook.name",
+    "ja": "ググプラム",
+    "context": "glossary genshin term wolfhook: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wolfhook.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term wolfhook: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wolfhook.body",
+    "ja": "[[mondstadt]]で採れる育成素材。奔狼領の茂みや樹木の根元で集められる。レザーやミカの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wolfhook: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
+    ]
+  },
+  {
     "id": "term.genshin.spread.name",
     "ja": "草激化",
     "context": "glossary genshin term spread: Japanese official term name",
@@ -1052,6 +1316,64 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]",
       "[[quicken|"
+    ]
+  },
+  {
+    "id": "term.genshin.glowing-hornshroom.name",
+    "ja": "蛍光ツノキノコ",
+    "context": "glossary genshin term glowing-hornshroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.glowing-hornshroom.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term glowing-hornshroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.glowing-hornshroom.body",
+    "ja": "[[natlan]]で採れる育成素材。謎煙の主の集落周辺などに生える。オロルンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term glowing-hornshroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
+    ]
+  },
+  {
+    "id": "term.genshin.silk-flower.name",
+    "ja": "霓裳花",
+    "context": "glossary genshin term silk-flower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silk-flower.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term silk-flower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silk-flower.body",
+    "ja": "[[liyue]]で採れる育成素材。璃月港や望舒旅館の周辺に咲く。行秋や胡桃の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term silk-flower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
     ]
   },
   {
@@ -1196,6 +1518,64 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendrobium.name",
+    "ja": "血石華",
+    "context": "glossary genshin term dendrobium: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendrobium.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term dendrobium: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendrobium.body",
+    "ja": "[[inazuma]]で採れる育成素材。名椎の浜などの戦場跡に咲く赤い花。九条裟羅や千織の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dendrobium: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
+    ]
+  },
+  {
+    "id": "term.genshin.quenepa-berry.name",
+    "ja": "ケネパベリー",
+    "context": "glossary genshin term quenepa-berry: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.quenepa-berry.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term quenepa-berry: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.quenepa-berry.body",
+    "ja": "[[natlan]]で採れる育成素材。テケメカンの谷周辺などで採集でき、カチーナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term quenepa-berry: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
+    ]
   },
   {
     "id": "term.genshin.quicken.name",
@@ -1541,7 +1921,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.genshin.obsidian-codex.body",
     "ja": "2セット効果はフィールド上の装備者が[[nightsouls-blessing]]状態にある時の与ダメージを強化する。4セット効果はフィールド上で[[nightsoul-points]]を消費すると会心率が上がる。",
@@ -1552,6 +1935,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[nightsoul-points]]",
       "[[nightsouls-blessing]]"
+    ]
+  },
+  {
+    "id": "term.genshin.lakelight-lily.name",
+    "ja": "湖光の鈴蘭",
+    "context": "glossary genshin term lakelight-lily: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lakelight-lily.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term lakelight-lily: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lakelight-lily.body",
+    "ja": "[[fontaine]]で採れる育成素材。エリニュス山林の水辺などに生える。フリーナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term lakelight-lily: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
     ]
   },
   {
@@ -1698,6 +2110,93 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.nilotpala-lotus.name",
+    "ja": "サウマラタ蓮",
+    "context": "glossary genshin term nilotpala-lotus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nilotpala-lotus.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term nilotpala-lotus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nilotpala-lotus.body",
+    "ja": "[[sumeru]]で採れる育成素材。森林地帯の水辺に生える。ティナリやレイラの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nilotpala-lotus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
+    "id": "term.genshin.saurian-claw-succulent.name",
+    "ja": "サウリアンサキュレント",
+    "context": "glossary genshin term saurian-claw-succulent: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.saurian-claw-succulent.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term saurian-claw-succulent: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.saurian-claw-succulent.body",
+    "ja": "[[natlan]]で採れる育成素材。懸木の民の集落周辺などで見つかる。キィニチの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term saurian-claw-succulent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
+    ]
+  },
+  {
+    "id": "term.genshin.sand-grease-pupa.name",
+    "ja": "砂脂蛹",
+    "context": "glossary genshin term sand-grease-pupa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sand-grease-pupa.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term sand-grease-pupa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sand-grease-pupa.body",
+    "ja": "[[sumeru]]で採れる育成素材。千尋の砂漠の地下通路などで採集できる。アルハイゼンやディシアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sand-grease-pupa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
     "id": "term.genshin.desert-pavilion-chronicle.name",
     "ja": "砂上の楼閣の史話",
     "context": "glossary genshin term desert-pavilion-chronicle: Japanese official term name",
@@ -1724,6 +2223,64 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.trishiraite.name",
+    "ja": "サングイト",
+    "context": "glossary genshin term trishiraite: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.trishiraite.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term trishiraite: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.trishiraite.body",
+    "ja": "[[sumeru]]で採れる育成素材。蒼漠の囿土で鉱床を割って集める。セトスの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term trishiraite: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
+    "id": "term.genshin.sango-pearl.name",
+    "ja": "珊瑚真珠",
+    "context": "glossary genshin term sango-pearl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sango-pearl.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term sango-pearl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sango-pearl.body",
+    "ja": "[[inazuma]]で採れる育成素材。海祇島では珊瑚の上などに見つかる。珊瑚宮心海やゴローの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sango-pearl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
     ]
   },
   {
@@ -1808,6 +2365,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.brilliant-chrysanthemum.name",
+    "ja": "シャクギク",
+    "context": "glossary genshin term brilliant-chrysanthemum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.brilliant-chrysanthemum.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term brilliant-chrysanthemum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.brilliant-chrysanthemum.body",
+    "ja": "[[natlan]]で採れる育成素材。聖火競技場の周辺などに咲く。シロネンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term brilliant-chrysanthemum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
+    ]
+  },
+  {
     "id": "term.genshin.charged-attack.name",
     "ja": "重撃",
     "context": "glossary genshin term charged-attack: Japanese official term name",
@@ -1890,6 +2476,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.crystal-marrow.name",
+    "ja": "晶化骨髄",
+    "context": "glossary genshin term crystal-marrow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.crystal-marrow.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term crystal-marrow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.crystal-marrow.body",
+    "ja": "[[inazuma]]で採れる育成素材。ヤシオリ島の大蛇の骨の周辺などで採集できる。早柚やアーロイの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term crystal-marrow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
+    ]
   },
   {
     "id": "term.genshin.eye-of-perception.name",
@@ -2261,6 +2876,38 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
+  }
+];
+
+const block3: SourceText[] = [
+  {
+    "id": "term.genshin.scarab.name",
+    "ja": "聖金虫",
+    "context": "glossary genshin term scarab: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scarab.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term scarab: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scarab.body",
+    "ja": "[[sumeru]]で採れる育成素材。砂漠の地上や遺跡内で捕まえられる昆虫。セノの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term scarab: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
   },
   {
     "id": "term.genshin.sanctifying-dust.name",
@@ -2349,6 +2996,64 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.qingxin.name",
+    "ja": "清心",
+    "context": "glossary genshin term qingxin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.qingxin.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term qingxin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.qingxin.body",
+    "ja": "[[liyue]]で採れる育成素材。高い岩山の頂上などに生える。甘雨や魈の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term qingxin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
+    "id": "term.genshin.clearwater-jade.name",
+    "ja": "清水玉",
+    "context": "glossary genshin term clearwater-jade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.clearwater-jade.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term clearwater-jade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.clearwater-jade.body",
+    "ja": "[[liyue]]で採れる育成素材。沈玉の谷で採れる鉱物。閑雲の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term clearwater-jade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
     "id": "term.genshin.splendor-of-tranquil-waters.name",
     "ja": "静水流転の輝き",
     "context": "glossary genshin term splendor-of-tranquil-waters: Japanese official term name",
@@ -2375,6 +3080,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.starconch.name",
+    "ja": "星螺",
+    "context": "glossary genshin term starconch: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.starconch.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term starconch: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.starconch.body",
+    "ja": "[[liyue]]で採れる育成素材。海岸の砂浜で拾える貝殻。タルタリヤや夜蘭の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term starconch: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
     ]
   },
   {
@@ -2431,6 +3165,122 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[adventure-rank]]"
+    ]
+  },
+  {
+    "id": "term.genshin.henna-berry.name",
+    "ja": "赤念の実",
+    "context": "glossary genshin term henna-berry: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.henna-berry.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term henna-berry: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.henna-berry.body",
+    "ja": "[[sumeru]]で採れる育成素材。砂漠のサボテンに実る。キャンディスやファルザンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term henna-berry: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
+    "id": "term.genshin.cor-lapis.name",
+    "ja": "石珀",
+    "context": "glossary genshin term cor-lapis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cor-lapis.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term cor-lapis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cor-lapis.body",
+    "ja": "[[liyue]]で採れる育成素材。琥牢山などで鉱床を叩き割って集める。鍾離や重雲の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cor-lapis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
+    "id": "term.genshin.cecilia.name",
+    "ja": "セシリアの花",
+    "context": "glossary genshin term cecilia: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cecilia.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term cecilia: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cecilia.body",
+    "ja": "[[mondstadt]]で採れる育成素材。星拾いの崖で採集できる。ウェンティやアルベドの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cecilia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
+    ]
+  },
+  {
+    "id": "term.genshin.jueyun-chili.name",
+    "ja": "絶雲の唐辛子",
+    "context": "glossary genshin term jueyun-chili: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.jueyun-chili.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term jueyun-chili: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.jueyun-chili.body",
+    "ja": "[[liyue]]で採れる育成素材。軽策荘などに実る。香菱やヨォーヨの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term jueyun-chili: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
     ]
   },
   {
@@ -2749,6 +3599,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.beryl-conch.name",
+    "ja": "蒼晶螺",
+    "context": "glossary genshin term beryl-conch: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.beryl-conch.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term beryl-conch: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.beryl-conch.body",
+    "ja": "[[fontaine]]で採れる育成素材。水中などで拾える貝で、シャルロットやエスコフィエの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term beryl-conch: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
+    ]
+  },
+  {
     "id": "term.genshin.dawning-frost.name",
     "ja": "霜辰",
     "context": "glossary genshin term dawning-frost: Japanese official term name",
@@ -2892,6 +3771,65 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.subdetection-unit.name",
+    "ja": "探測ユニット・子機",
+    "context": "glossary genshin term subdetection-unit: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.subdetection-unit.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term subdetection-unit: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.subdetection-unit.body",
+    "ja": "[[fontaine]]で採れる育成素材。フォンテーヌ科学院周辺などにいる機械の子機。リオセスリの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term subdetection-unit: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
+    ]
+  },
+  {
+    "id": "term.genshin.dandelion-seed.name",
+    "ja": "蒲公英の種",
+    "context": "glossary genshin term dandelion-seed: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dandelion-seed.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term dandelion-seed: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dandelion-seed.body",
+    "ja": "[[mondstadt]]で採れる育成素材。風[[element]]を当てて種を飛ばすと採集できる。ジンやエウルアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dandelion-seed: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element]]",
+      "[[mondstadt]]"
+    ]
+  },
+  {
     "id": "term.genshin.bloodstained-chivalry.name",
     "ja": "血染めの騎士道",
     "context": "glossary genshin term bloodstained-chivalry: Japanese official term name",
@@ -2899,7 +3837,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.genshin.bloodstained-chivalry.summary",
     "ja": "物理ダメージに関わる聖遺物セット。",
@@ -3619,6 +4560,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.mourning-flower.name",
+    "ja": "悼霊花",
+    "context": "glossary genshin term mourning-flower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mourning-flower.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term mourning-flower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mourning-flower.body",
+    "ja": "[[sumeru]]で採れる育成素材。蒼漠の囿土の水辺などに咲く。カーヴェの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mourning-flower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
     "id": "term.genshin.unfinished-reverie.name",
     "ja": "遂げられなかった想い",
     "context": "glossary genshin term unfinished-reverie: Japanese official term name",
@@ -3673,6 +4643,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.calla-lily.name",
+    "ja": "ドドリアン",
+    "context": "glossary genshin term calla-lily: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.calla-lily.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term calla-lily: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.calla-lily.body",
+    "ja": "[[mondstadt]]で採れる育成素材。池や湖の岸辺に生える。ディオナやガイアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term calla-lily: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
+    ]
+  },
+  {
     "id": "term.genshin.long-nights-oath.name",
     "ja": "長き夜の誓い",
     "context": "glossary genshin term long-nights-oath: Japanese official term name",
@@ -3698,6 +4697,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.naku-weed.name",
+    "ja": "鳴草",
+    "context": "glossary genshin term naku-weed: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.naku-weed.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term naku-weed: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.naku-weed.body",
+    "ja": "[[inazuma]]で採れる育成素材。たたら砂などで採集できる。宵宮や久岐忍の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term naku-weed: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
+    ]
   },
   {
     "id": "term.genshin.natlan.name",
@@ -3755,6 +4783,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.sprayfeather-gill.name",
+    "ja": "波しぶきのエラ",
+    "context": "glossary genshin term sprayfeather-gill: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sprayfeather-gill.summary",
+    "ja": "ナタの特産品。",
+    "context": "glossary genshin term sprayfeather-gill: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block5: SourceText[] = [
+  {
+    "id": "term.genshin.sprayfeather-gill.body",
+    "ja": "[[natlan]]で採れる育成素材。流泉の衆周辺などの水辺で採集できる。ムアラニの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sprayfeather-gill: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[natlan]]"
     ]
   },
   {
@@ -3818,6 +4878,64 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.spring-of-the-first-dewdrop.name",
+    "ja": "初露の源",
+    "context": "glossary genshin term spring-of-the-first-dewdrop: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.spring-of-the-first-dewdrop.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term spring-of-the-first-dewdrop: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.spring-of-the-first-dewdrop.body",
+    "ja": "[[fontaine]]で採れる育成素材。モルテ地区の水中で集められる。ナヴィアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term spring-of-the-first-dewdrop: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
+    ]
+  },
+  {
+    "id": "term.genshin.padisarah.name",
+    "ja": "パティサラ",
+    "context": "glossary genshin term padisarah: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.padisarah.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term padisarah: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.padisarah.body",
+    "ja": "[[sumeru]]で採れる育成素材。スメールシティなどで採集できる花。ニィロウの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term padisarah: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
     "id": "term.genshin.flower-wreathed-feathers.name",
     "ja": "花飾りの羽",
     "context": "glossary genshin term flower-wreathed-feathers: Japanese official term name",
@@ -3844,6 +4962,36 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.sakura-bloom.name",
+    "ja": "緋櫻毬",
+    "context": "glossary genshin term sakura-bloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sakura-bloom.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term sakura-bloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sakura-bloom.body",
+    "ja": "[[inazuma]]で採れる育成素材。鳴神島で舞う花びらに雷[[element]]を当てて採集する。神里綾華や神里綾人の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sakura-bloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element]]",
+      "[[inazuma]]"
     ]
   },
   {
@@ -3961,6 +5109,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.windwheel-aster.name",
+    "ja": "風車アスター",
+    "context": "glossary genshin term windwheel-aster: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.windwheel-aster.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term windwheel-aster: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.windwheel-aster.body",
+    "ja": "[[mondstadt]]で採れる育成素材。風立ちの地などで採集できる花。ベネットやスクロースの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term windwheel-aster: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
     ]
   },
   {
@@ -4190,6 +5367,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.philanemo-mushroom.name",
+    "ja": "慕風のマッシュルーム",
+    "context": "glossary genshin term philanemo-mushroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.philanemo-mushroom.summary",
+    "ja": "モンドの特産品。",
+    "context": "glossary genshin term philanemo-mushroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.philanemo-mushroom.body",
+    "ja": "[[mondstadt]]で採れる育成素材。建物の壁や屋根の縁に生えるキノコ。バーバラやモナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term philanemo-mushroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[mondstadt]]"
     ]
   },
   {
@@ -4485,6 +5691,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.noctilucous-jade.name",
+    "ja": "夜泊石",
+    "context": "glossary genshin term noctilucous-jade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.noctilucous-jade.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term noctilucous-jade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.noctilucous-jade.body",
+    "ja": "[[liyue]]で採れる育成素材。明蘊町などで鉱石を割って集める。北斗や煙緋の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term noctilucous-jade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
     "id": "term.genshin.fang-of-the-mountain-king.name",
     "ja": "山の王の長牙",
     "context": "glossary genshin term fang-of-the-mountain-king: Japanese official term name",
@@ -4540,6 +5775,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  }
+];
+
+const block6: SourceText[] = [
+  {
+    "id": "term.genshin.fluorescent-fungus.name",
+    "ja": "ユウトウタケ",
+    "context": "glossary genshin term fluorescent-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fluorescent-fungus.summary",
+    "ja": "稲妻の特産品。",
+    "context": "glossary genshin term fluorescent-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fluorescent-fungus.body",
+    "ja": "[[inazuma]]で採れる育成素材。鶴観に生える光るキノコ。トーマの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fluorescent-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[inazuma]]"
     ]
   },
   {
@@ -4659,6 +5926,151 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.lumitoile.name",
+    "ja": "ルエトワール",
+    "context": "glossary genshin term lumitoile: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lumitoile.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term lumitoile: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lumitoile.body",
+    "ja": "[[fontaine]]で採れる育成素材。水中の構造物や岸辺で見つかる。ヌヴィレットの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term lumitoile: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
+    ]
+  },
+  {
+    "id": "term.genshin.rukkhashava-mushrooms.name",
+    "ja": "ルッカデヴァータダケ",
+    "context": "glossary genshin term rukkhashava-mushrooms: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rukkhashava-mushrooms.summary",
+    "ja": "スメールの特産品。",
+    "context": "glossary genshin term rukkhashava-mushrooms: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rukkhashava-mushrooms.body",
+    "ja": "[[sumeru]]で採れる育成素材。樹木の上や周囲でも見つかるキノコ。コレイや放浪者の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term rukkhashava-mushrooms: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[sumeru]]"
+    ]
+  },
+  {
+    "id": "term.genshin.lumidouce-bell.name",
+    "ja": "ルミドゥースベル",
+    "context": "glossary genshin term lumidouce-bell: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lumidouce-bell.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term lumidouce-bell: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lumidouce-bell.body",
+    "ja": "[[fontaine]]で採れる育成素材。地上の草地などに咲く花。リネットやシュヴルーズの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term lumidouce-bell: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
+    ]
+  },
+  {
+    "id": "term.genshin.violetgrass.name",
+    "ja": "琉璃袋",
+    "context": "glossary genshin term violetgrass: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.violetgrass.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term violetgrass: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.violetgrass.body",
+    "ja": "[[liyue]]で採れる育成素材。主に崖の斜面に生える。七七や白朮の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term violetgrass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
+    "id": "term.genshin.glaze-lily.name",
+    "ja": "琉璃百合",
+    "context": "glossary genshin term glaze-lily: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.glaze-lily.summary",
+    "ja": "璃月の特産品。",
+    "context": "glossary genshin term glaze-lily: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.glaze-lily.body",
+    "ja": "[[liyue]]で採れる育成素材。軽策荘や璃月港で採集できる。凝光や雲菫の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term glaze-lily: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[liyue]]"
+    ]
+  },
+  {
     "id": "term.genshin.pool-of-sapphire-grace.name",
     "ja": "霊沼雲池",
     "context": "glossary genshin term pool-of-sapphire-grace: Japanese official term name",
@@ -4685,6 +6097,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[ornamental-fish]]"
+    ]
+  },
+  {
+    "id": "term.genshin.rainbow-rose.name",
+    "ja": "レインボーローズ",
+    "context": "glossary genshin term rainbow-rose: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainbow-rose.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term rainbow-rose: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainbow-rose.body",
+    "ja": "[[fontaine]]で採れる育成素材。フォンテーヌ廷の周辺などで採集できる。リネやアルレッキーノの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term rainbow-rose: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[fontaine]]"
     ]
   },
   {
@@ -4744,5 +6185,37 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
+  },
+  {
+    "id": "term.genshin.romaritime-flower.name",
+    "ja": "ロマリタイムフラワー",
+    "context": "glossary genshin term romaritime-flower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.romaritime-flower.summary",
+    "ja": "フォンテーヌの特産品。",
+    "context": "glossary genshin term romaritime-flower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.romaritime-flower.body",
+    "ja": "[[fontaine]]で採れる育成素材。地上で閉じている花には水[[element]]を当てると採集できる。フレミネやシグウィンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term romaritime-flower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element]]",
+      "[[fontaine]]"
+    ]
   }
 ];
+
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6];
