@@ -470,6 +470,60 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.ankoku-no-ushio-no-majuu.name",
+    "ja": "暗黒の潮の魔獣",
+    "context": "glossary hsr term ankoku-no-ushio-no-majuu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ankoku-no-ushio-no-majuu.summary",
+    "ja": "物理・風・量子が弱点の強敵。",
+    "context": "glossary hsr term ankoku-no-ushio-no-majuu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ankoku-no-ushio-no-majuu.body",
+    "ja": "暗黒の潮の造物の一種で、強敵。弱点は物理・風・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ankoku-no-ushio-no-majuu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ankoku-no-ushio-no-yaiba.name",
+    "ja": "暗黒の潮の刃",
+    "context": "glossary hsr term ankoku-no-ushio-no-yaiba: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ankoku-no-ushio-no-yaiba.summary",
+    "ja": "雷・量子・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term ankoku-no-ushio-no-yaiba: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ankoku-no-ushio-no-yaiba.body",
+    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ankoku-no-ushio-no-yaiba: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.obsidian-of-dread.name",
     "ja": "黯淡な黒曜",
     "context": "glossary hsr term obsidian-of-dread: Japanese official term name",
@@ -973,6 +1027,90 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.voidranger-distorter.name",
+    "ja": "ヴォイドレンジャー・改ざん",
+    "context": "glossary hsr term voidranger-distorter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block1: SourceText[] = [
+  {
+    "id": "term.hsr.voidranger-distorter.summary",
+    "ja": "風・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term voidranger-distorter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-distorter.body",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term voidranger-distorter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-tramper.name",
+    "ja": "ヴォイドレンジャー・蹂躙",
+    "context": "glossary hsr term voidranger-tramper: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-tramper.summary",
+    "ja": "物理・風・虚数が弱点の強敵。",
+    "context": "glossary hsr term voidranger-tramper: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-tramper.body",
+    "ja": "反物質レギオンに属する強敵。弱点は物理・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term voidranger-tramper: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-reaver.name",
+    "ja": "ヴォイドレンジャー・略奪",
+    "context": "glossary hsr term voidranger-reaver: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-reaver.summary",
+    "ja": "物理・雷が弱点の通常エネミー。",
+    "context": "glossary hsr term voidranger-reaver: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.voidranger-reaver.body",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は物理・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term voidranger-reaver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.the-great-cosmic-enterprise.name",
     "ja": "宇宙一の大商い！",
     "context": "glossary hsr term the-great-cosmic-enterprise: Japanese official term name",
@@ -1004,6 +1142,60 @@ const block0: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.ice-out-of-space.name",
+    "ja": "宇宙からの氷",
+    "context": "glossary hsr term ice-out-of-space: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ice-out-of-space.summary",
+    "ja": "炎・風・量子が弱点の強敵。",
+    "context": "glossary hsr term ice-out-of-space: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ice-out-of-space.body",
+    "ja": "裂界造物の一種で、強敵。弱点は炎・風・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ice-out-of-space: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fire-out-of-space.name",
+    "ja": "宇宙からの炎",
+    "context": "glossary hsr term fire-out-of-space: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fire-out-of-space.summary",
+    "ja": "物理・氷・量子が弱点の強敵。",
+    "context": "glossary hsr term fire-out-of-space: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fire-out-of-space.body",
+    "ja": "裂界造物の一種で、強敵。弱点は物理・氷・量子。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term fire-out-of-space: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.herta-space-station.name",
@@ -1043,10 +1235,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.hsr.cosmic-fragment.summary",
     "ja": "模擬宇宙などの挑戦中に使う資源。",
@@ -1784,6 +1973,33 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.everwinter-shadewalker.name",
+    "ja": "永冬の災影",
+    "context": "glossary hsr term everwinter-shadewalker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.everwinter-shadewalker.summary",
+    "ja": "物理・炎・量子が弱点の通常エネミー。",
+    "context": "glossary hsr term everwinter-shadewalker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.everwinter-shadewalker.body",
+    "ja": "ヤリーロ-Ⅵに関連する裂界造物で、通常エネミー。弱点は物理・炎・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term everwinter-shadewalker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.skill-point.name",
     "ja": "SP",
     "context": "glossary hsr term skill-point: Japanese official term name",
@@ -1831,7 +2047,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.hsr.eyes-of-the-prey.body",
     "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。[[effect-hit-rate]]と[[damage-over-time]]を上げる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -1936,6 +2155,33 @@ const block1: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.name",
+    "ja": "黄金の血の記憶の精霊・オフィス",
+    "context": "glossary hsr term ougon-no-chi-no-kioku-no-seirei-ofisu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.summary",
+    "ja": "物理・炎・氷が弱点の強敵。",
+    "context": "glossary hsr term ougon-no-chi-no-kioku-no-seirei-ofisu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.body",
+    "ja": "黄金の血の記憶の精霊の一種で、強敵。弱点は物理・炎・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ougon-no-chi-no-kioku-no-seirei-ofisu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.golden-hour.name",
@@ -2077,10 +2323,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.hsr.broken-keel.body",
     "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[effect-res]]が10%上がる。装備者の[[effect-res]]が30%以上なら、味方全体の[[crit-dmg]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -2611,6 +2854,33 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.cocolia-mother-of-deception.name",
+    "ja": "カカリア・虚妄の母",
+    "context": "glossary hsr term cocolia-mother-of-deception: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cocolia-mother-of-deception.summary",
+    "ja": "炎・雷・量子が弱点の週ボス。",
+    "context": "glossary hsr term cocolia-mother-of-deception: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cocolia-mother-of-deception.body",
+    "ja": "ヤリーロ-Ⅵに登場する週ボス。弱点は炎・雷・量子。物理・氷・風属性への耐性と、凍結・行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term cocolia-mother-of-deception: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.true-damage.name",
     "ja": "確定ダメージ",
     "context": "glossary hsr term true-damage: Japanese official term name",
@@ -2791,7 +3061,10 @@ const block2: SourceText[] = [
       "[[fragmentum]]",
       "[[light-cone]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.hsr.lies-dance-on-the-breeze.name",
     "ja": "風に揺蕩う虚言",
@@ -3101,10 +3374,7 @@ const block2: SourceText[] = [
       "[[supply-zone]]",
       "[[traces]]"
     ]
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.hsr.shock.name",
     "ja": "感電",
@@ -3225,6 +3495,87 @@ const block3: SourceText[] = [
       "[[memosprite|",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-shell-of-fury.name",
+    "ja": "記憶域ミーム「怒りの抜け殻」",
+    "context": "glossary hsr term memory-zone-meme-shell-of-fury: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-shell-of-fury.summary",
+    "ja": "雷・量子・虚数が弱点の強敵。",
+    "context": "glossary hsr term memory-zone-meme-shell-of-fury: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-shell-of-fury.body",
+    "ja": "記憶域ミームの一種で、強敵。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term memory-zone-meme-shell-of-fury: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-heartbreaker.name",
+    "ja": "記憶域ミーム「砕け散った心」",
+    "context": "glossary hsr term memory-zone-meme-heartbreaker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-heartbreaker.summary",
+    "ja": "炎・氷・雷が弱点の通常エネミー。",
+    "context": "glossary hsr term memory-zone-meme-heartbreaker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-heartbreaker.body",
+    "ja": "記憶域ミームの一種で、通常エネミー。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term memory-zone-meme-heartbreaker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-something-unto-death.name",
+    "ja": "記憶域ミーム「死へ向かうのは何物」",
+    "context": "glossary hsr term memory-zone-meme-something-unto-death: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-something-unto-death.summary",
+    "ja": "炎・風・虚数が弱点のボス。",
+    "context": "glossary hsr term memory-zone-meme-something-unto-death: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memory-zone-meme-something-unto-death.body",
+    "ja": "記憶域ミームの一種で、ボス。弱点は炎・風・虚数。凍結と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term memory-zone-meme-something-unto-death: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.memosprite.name",
@@ -3712,7 +4063,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.hsr.night-of-fright.summary",
     "ja": "「豊穣」の★5光円錐。",
@@ -4011,6 +4365,33 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.imaginary-weaver.name",
+    "ja": "虚数の葉を織る者",
+    "context": "glossary hsr term imaginary-weaver: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.imaginary-weaver.summary",
+    "ja": "物理・雷・量子が弱点の通常エネミー。",
+    "context": "glossary hsr term imaginary-weaver: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.imaginary-weaver.body",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は物理・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term imaginary-weaver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.nihility.name",
     "ja": "虚無",
     "context": "glossary hsr term nihility: Japanese official term name",
@@ -4115,10 +4496,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.hsr.welcome-to-the-cosmic-city.summary",
     "ja": "「愉悦」の★5光円錐。",
@@ -4233,6 +4611,60 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[trailblaze-level|"
     ]
+  },
+  {
+    "id": "term.hsr.aurumaton-spectral-envoy.name",
+    "ja": "金人・勾魂",
+    "context": "glossary hsr term aurumaton-spectral-envoy: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aurumaton-spectral-envoy.summary",
+    "ja": "物理・雷・虚数が弱点の強敵。",
+    "context": "glossary hsr term aurumaton-spectral-envoy: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aurumaton-spectral-envoy.body",
+    "ja": "仙舟「羅浮」の機巧で、強敵。弱点は物理・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term aurumaton-spectral-envoy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aurumaton-gatekeeper.name",
+    "ja": "金人・門番",
+    "context": "glossary hsr term aurumaton-gatekeeper: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aurumaton-gatekeeper.summary",
+    "ja": "雷・風・量子が弱点の強敵。",
+    "context": "glossary hsr term aurumaton-gatekeeper: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aurumaton-gatekeeper.body",
+    "ja": "仙舟「羅浮」の機巧で、強敵。弱点は雷・風・量子。虚数属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term aurumaton-gatekeeper: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.celestial-section.name",
@@ -4647,7 +5079,10 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.hsr.izumo-gensei-and-takama-divine-realm.body",
     "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -5121,10 +5556,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.hsr.artisanship-commission.body",
     "ja": "[[xianzhou-luofu]]にある組織で、[[stargazer-navalia]]は[[starskiff]]の製造に関わる場所。",
@@ -5633,6 +6065,36 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.skarakabaz.name",
+    "ja": "砕星王虫・スキャラカバズ（模造）",
+    "context": "glossary hsr term skarakabaz: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skarakabaz.summary",
+    "ja": "物理・氷・虚数が弱点の週ボス。",
+    "context": "glossary hsr term skarakabaz: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.skarakabaz.body",
+    "ja": "スウォームに属する週ボス（模造個体）。弱点は物理・氷・虚数。量子属性への耐性と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term skarakabaz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block6: SourceText[] = [
+  {
     "id": "term.hsr.heliobus.name",
     "ja": "歳陽",
     "context": "glossary hsr term heliobus: Japanese official term name",
@@ -5873,6 +6335,33 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.sunlight-gryphon.name",
+    "ja": "サンライトグリフォン",
+    "context": "glossary hsr term sunlight-gryphon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sunlight-gryphon.summary",
+    "ja": "物理・量子・虚数が弱点の強敵。",
+    "context": "glossary hsr term sunlight-gryphon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sunlight-gryphon.body",
+    "ja": "晨昏の奇獣に属する強敵。弱点は物理・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sunlight-gryphon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.lingering-tear.name",
     "ja": "残涙",
     "context": "glossary hsr term lingering-tear: Japanese official term name",
@@ -5967,6 +6456,60 @@ const block5: SourceText[] = [
       "[[relic-set-effect|",
       "[[relics|"
     ]
+  },
+  {
+    "id": "term.hsr.warp-trotter.name",
+    "ja": "次元プーマン",
+    "context": "glossary hsr term warp-trotter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warp-trotter.summary",
+    "ja": "物理・量子・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term warp-trotter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warp-trotter.body",
+    "ja": "銀河各地に現れる通常エネミー。弱点は物理・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term warp-trotter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.name",
+    "ja": "至高、極陽、天空の化身",
+    "context": "glossary hsr term shikou-kyokuyou-tenkuu-no-keshin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.summary",
+    "ja": "物理・氷・量子が弱点の週ボス。",
+    "context": "glossary hsr term shikou-kyokuyou-tenkuu-no-keshin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.body",
+    "ja": "タイタンの眷属に属する週ボス。弱点は物理・氷・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shikou-kyokuyou-tenkuu-no-keshin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.tatters-of-thought.name",
@@ -6157,10 +6700,7 @@ const block5: SourceText[] = [
       "[[weakness-break|",
       "[[wind-shear|"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.hsr.self-modeling-resin.name",
     "ja": "自塑樹脂",
@@ -6225,6 +6765,60 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.automaton-direwolf.name",
+    "ja": "自動機兵・ヴォルク",
+    "context": "glossary hsr term automaton-direwolf: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.automaton-direwolf.summary",
+    "ja": "氷・雷・虚数が弱点の強敵。",
+    "context": "glossary hsr term automaton-direwolf: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.automaton-direwolf.body",
+    "ja": "ヤリーロ-Ⅵの自動機兵で、強敵。弱点は氷・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term automaton-direwolf: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.automaton-grizzly.name",
+    "ja": "自動機兵・グリズリー",
+    "context": "glossary hsr term automaton-grizzly: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.automaton-grizzly.summary",
+    "ja": "炎・氷・雷が弱点の強敵。",
+    "context": "glossary hsr term automaton-grizzly: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.automaton-grizzly.body",
+    "ja": "ヤリーロ-Ⅵの自動機兵で、強敵。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term automaton-grizzly: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.vidyadhara.name",
     "ja": "持明族",
     "context": "glossary hsr term vidyadhara: Japanese official term name",
@@ -6252,6 +6846,33 @@ const block6: SourceText[] = [
     "protectedTokens": [
       "[[xianzhou-alliance]]"
     ]
+  },
+  {
+    "id": "term.hsr.searing-prowler.name",
+    "ja": "灼焔徘徊者",
+    "context": "glossary hsr term searing-prowler: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.searing-prowler.summary",
+    "ja": "氷・雷・虚数が弱点の強敵。",
+    "context": "glossary hsr term searing-prowler: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.searing-prowler.body",
+    "ja": "裂界造物の一種で、強敵。弱点は氷・雷・虚数。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term searing-prowler: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.weakness-break.name",
@@ -6471,7 +7092,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.hsr.nail-of-the-beast-coffin.summary",
     "ja": "キャラクターの昇格に使う★4素材。",
@@ -6525,6 +7149,60 @@ const block6: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.aventurine-of-stratagems.name",
+    "ja": "「十の石心」博戯の砂金石",
+    "context": "glossary hsr term aventurine-of-stratagems: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aventurine-of-stratagems.summary",
+    "ja": "物理・氷・雷が弱点のボス。",
+    "context": "glossary hsr term aventurine-of-stratagems: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.aventurine-of-stratagems.body",
+    "ja": "スターピースカンパニーに属するボス。弱点は物理・氷・雷。虚数属性への耐性と行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term aventurine-of-stratagems: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.doomsday-beast.name",
+    "ja": "終末獣",
+    "context": "glossary hsr term doomsday-beast: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.doomsday-beast.summary",
+    "ja": "物理・炎・氷・風が弱点の週ボス。",
+    "context": "glossary hsr term doomsday-beast: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.doomsday-beast.body",
+    "ja": "反物質レギオンに属する週ボス。弱点は物理・炎・氷・風。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term doomsday-beast: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.storage-zone.name",
@@ -6583,6 +7261,33 @@ const block6: SourceText[] = [
       "[[equation|",
       "[[simulated-universe]]"
     ]
+  },
+  {
+    "id": "term.hsr.guardian-shadow.name",
+    "ja": "守護者の影",
+    "context": "glossary hsr term guardian-shadow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.guardian-shadow.summary",
+    "ja": "物理・風・量子が弱点の強敵。",
+    "context": "glossary hsr term guardian-shadow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.guardian-shadow.body",
+    "ja": "裂界造物の一種で、強敵。弱点は物理・風・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term guardian-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.arrow-of-the-beast-hunter.name",
@@ -7048,6 +7753,33 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.shouro-tennin.name",
+    "ja": "承露天人",
+    "context": "glossary hsr term shouro-tennin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shouro-tennin.summary",
+    "ja": "物理・氷・雷が弱点の強敵。",
+    "context": "glossary hsr term shouro-tennin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shouro-tennin.body",
+    "ja": "仙舟「羅浮」に現れる強敵。弱点は物理・氷・雷。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shouro-tennin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.its-showtime.name",
     "ja": "ショーの始まり",
     "context": "glossary hsr term its-showtime: Japanese official term name",
@@ -7079,6 +7811,33 @@ const block6: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.shirubaamein-ikan.name",
+    "ja": "シルバーメイン・尉官",
+    "context": "glossary hsr term shirubaamein-ikan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shirubaamein-ikan.summary",
+    "ja": "物理・氷・虚数が弱点の強敵。",
+    "context": "glossary hsr term shirubaamein-ikan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shirubaamein-ikan.body",
+    "ja": "ヤリーロ-Ⅵのシルバーメインに属する強敵。弱点は物理・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shirubaamein-ikan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.silvermane-guard-restricted-zone.name",
@@ -7175,10 +7934,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.hsr.silvermane-badge.summary",
     "ja": "敵のドロップで手に入る★2の育成素材。",
@@ -7337,7 +8093,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.hsr.toughness.body",
     "ja": "敵の[[hp|HP]]とは別に表示されるゲージ。[[enemy-weakness|弱点属性]]の攻撃で削ることができ、0になると[[weakness-break]]が発生する。\n\nスキルによっては弱点属性を無視して削るものもある。",
@@ -7565,6 +8324,60 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.svarog.name",
+    "ja": "スヴァローグ",
+    "context": "glossary hsr term svarog: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.svarog.summary",
+    "ja": "炎・雷・風が弱点のボス。",
+    "context": "glossary hsr term svarog: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.svarog.body",
+    "ja": "ヤリーロ-Ⅵに登場するボス。弱点は炎・雷・風。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term svarog: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.swarm-true-sting.name",
+    "ja": "スウォーム・真蟄虫",
+    "context": "glossary hsr term swarm-true-sting: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.swarm-true-sting.summary",
+    "ja": "氷・量子・虚数が弱点のボス。",
+    "context": "glossary hsr term swarm-true-sting: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.swarm-true-sting.body",
+    "ja": "スウォーム（蟄虫の群れ）に属するボス。弱点は氷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term swarm-true-sting: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.interastral-peace-guide.name",
     "ja": "スターピースガイド",
     "context": "glossary hsr term interastral-peace-guide: Japanese official term name",
@@ -7684,6 +8497,33 @@ const block7: SourceText[] = [
       "[[planar-ornaments|",
       "[[yuetsudo]]"
     ]
+  },
+  {
+    "id": "term.hsr.storm.name",
+    "ja": "ストーム",
+    "context": "glossary hsr term storm: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.storm.summary",
+    "ja": "炎・氷・虚数が弱点の強敵。",
+    "context": "glossary hsr term storm: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.storm.body",
+    "ja": "裂界造物の一種で、強敵。弱点は炎・氷・虚数。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term storm: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.relic-smart-equip.name",
@@ -7834,6 +8674,33 @@ const block7: SourceText[] = [
     "protectedTokens": [
       "[[stellaron|"
     ]
+  },
+  {
+    "id": "term.hsr.stellaron-hunter-sam.name",
+    "ja": "「星核ハンター」サム",
+    "context": "glossary hsr term stellaron-hunter-sam: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stellaron-hunter-sam.summary",
+    "ja": "雷・量子・虚数が弱点のボス。",
+    "context": "glossary hsr term stellaron-hunter-sam: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.stellaron-hunter-sam.body",
+    "ja": "星核ハンターの一員で、ボスとして登場する。弱点は雷・量子・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term stellaron-hunter-sam: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.starfire-essence.name",
@@ -8187,10 +9054,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.hsr.survival-index.body",
     "ja": "[[interastral-peace-guide|スターピースガイド]]内の案内。[[calyx|疑似花萼]]、[[stagnant-shadow|凝結虚影]]、[[cavern-of-corrosion|侵蝕トンネル]]、[[echo-of-war|歴戦余韻]]などの挑戦先を確認できる。",
@@ -8237,7 +9101,10 @@ const block8: SourceText[] = [
       "[[supply-zone]]",
       "[[traces]]"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.hsr.divine-amber.name",
     "ja": "聖なる琥珀",
@@ -9216,10 +10083,7 @@ const block8: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.hsr.preservation.name",
     "ja": "存護",
@@ -9259,7 +10123,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.hsr.great-mine.summary",
     "ja": "ベロブルグの地下にある鉱山。",
@@ -10245,10 +11112,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.hsr.taunt.summary",
     "ja": "敵の攻撃対象を特定のキャラクターに引きつける効果。",
@@ -10286,7 +11150,10 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.hsr.warp.body",
     "ja": "[[star-rail-pass|星軌チケット]]や[[star-rail-special-pass|星軌専用チケット]]などを使い、キャラクターや[[light-cone|光円錐]]を獲得する仕組み。種類ごとに使用するチケットや提供内容が異なる。",
@@ -11160,6 +12027,60 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.tenbatsu-no-senpei.name",
+    "ja": "天罰の先兵",
+    "context": "glossary hsr term tenbatsu-no-senpei: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenbatsu-no-senpei.summary",
+    "ja": "氷・雷・量子が弱点の強敵。",
+    "context": "glossary hsr term tenbatsu-no-senpei: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenbatsu-no-senpei.body",
+    "ja": "タイタンの眷属に属する強敵。弱点は氷・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term tenbatsu-no-senpei: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenbatsu-no-toushi.name",
+    "ja": "天罰の闘士",
+    "context": "glossary hsr term tenbatsu-no-toushi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenbatsu-no-toushi.summary",
+    "ja": "雷・量子・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term tenbatsu-no-toushi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tenbatsu-no-toushi.body",
+    "ja": "タイタンの眷属に属する通常エネミー。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term tenbatsu-no-toushi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.talent.name",
     "ja": "天賦",
     "context": "glossary hsr term talent: Japanese official term name",
@@ -11250,7 +12171,10 @@ const block10: SourceText[] = [
       "[[path|",
       "[[weakness-break]]"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.hsr.quid-pro-quo.name",
     "ja": "等価交換",
@@ -11268,10 +12192,7 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block11: SourceText[] = [
+  },
   {
     "id": "term.hsr.quid-pro-quo.body",
     "ja": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。装備者のターン開始時、[[energy]]が少ない他の味方のうち1人の[[energy]]を回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -11808,6 +12729,87 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.naitomea-gekidan-ekusesu-uerudan.name",
+    "ja": "ナイトメア劇団・エクセスウェルダン",
+    "context": "glossary hsr term naitomea-gekidan-ekusesu-uerudan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-ekusesu-uerudan.summary",
+    "ja": "炎・雷・風が弱点の強敵。",
+    "context": "glossary hsr term naitomea-gekidan-ekusesu-uerudan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-ekusesu-uerudan.body",
+    "ja": "ナイトメア劇団に属する強敵。弱点は炎・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term naitomea-gekidan-ekusesu-uerudan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-sweet-gorilla.name",
+    "ja": "ナイトメア劇団・スウィート・ゴリラ",
+    "context": "glossary hsr term naitomea-gekidan-sweet-gorilla: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-sweet-gorilla.summary",
+    "ja": "物理・炎・虚数が弱点の強敵。",
+    "context": "glossary hsr term naitomea-gekidan-sweet-gorilla: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-sweet-gorilla.body",
+    "ja": "ナイトメア劇団に属する強敵。弱点は物理・炎・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term naitomea-gekidan-sweet-gorilla: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-soda-dog.name",
+    "ja": "ナイトメア劇団・ソーダドッグ",
+    "context": "glossary hsr term naitomea-gekidan-soda-dog: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-soda-dog.summary",
+    "ja": "物理・雷・風が弱点の通常エネミー。",
+    "context": "glossary hsr term naitomea-gekidan-soda-dog: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.naitomea-gekidan-soda-dog.body",
+    "ja": "ナイトメア劇団に属する通常エネミー。弱点は物理・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term naitomea-gekidan-soda-dog: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.to-evernights-stars.name",
     "ja": "長き夜に輝く星へ",
     "context": "glossary hsr term to-evernights-stars: Japanese official term name",
@@ -12190,7 +13192,10 @@ const block11: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block13: SourceText[] = [
   {
     "id": "term.hsr.ninja-record-sound-hunt.summary",
     "ja": "「壊滅」の★4光円錐。",
@@ -12306,10 +13311,7 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[trailblaze-power|"
     ]
-  }
-];
-
-const block12: SourceText[] = [
+  },
   {
     "id": "term.hsr.a-little-getaway.name",
     "ja": "バカンスのひと時",
@@ -12596,6 +13598,33 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hatou-no-fujin.name",
+    "ja": "波濤の夫人",
+    "context": "glossary hsr term hatou-no-fujin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hatou-no-fujin.summary",
+    "ja": "物理・炎・雷が弱点の強敵。",
+    "context": "glossary hsr term hatou-no-fujin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hatou-no-fujin.body",
+    "ja": "淵底のセイレーンに属する強敵。弱点は物理・炎・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hatou-no-fujin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.the-flower-remembers.name",
     "ja": "花は忘れない",
     "context": "glossary hsr term the-flower-remembers: Japanese official term name",
@@ -12659,6 +13688,33 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.baryon.name",
+    "ja": "バリオン",
+    "context": "glossary hsr term baryon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.baryon.summary",
+    "ja": "氷・風が弱点の通常エネミー。",
+    "context": "glossary hsr term baryon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.baryon.body",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term baryon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.multiplication.name",
     "ja": "蕃殖",
     "context": "glossary hsr term multiplication: Japanese official term name",
@@ -12689,6 +13745,33 @@ const block12: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.nikador.name",
+    "ja": "蛮神、狂王、紛争の化身",
+    "context": "glossary hsr term nikador: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nikador.summary",
+    "ja": "氷・雷・量子が弱点のボス。",
+    "context": "glossary hsr term nikador: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.nikador.body",
+    "ja": "タイタンの眷属に属するボス。弱点は氷・雷・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term nikador: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.antimatter-legion.name",
@@ -12905,6 +13988,33 @@ const block12: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.shadow-of-feixiao.name",
+    "ja": "「飛霄」の影",
+    "context": "glossary hsr term shadow-of-feixiao: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadow-of-feixiao.summary",
+    "ja": "物理・炎・量子が弱点の週ボス。",
+    "context": "glossary hsr term shadow-of-feixiao: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadow-of-feixiao.body",
+    "ja": "仙舟「羅浮」に登場する週ボス。弱点は物理・炎・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shadow-of-feixiao: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.damage-vulnerability.name",
     "ja": "被ダメージアップ",
     "context": "glossary hsr term damage-vulnerability: Japanese official term name",
@@ -13100,7 +14210,10 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block14: SourceText[] = [
   {
     "id": "term.hsr.chordal-mirage.body",
     "ja": "キャラクターがレベル上限を解放する際に使う★4素材。主な入手先は[[stagnant-shadow]]「[[penacony-grand-theater]]」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -13332,10 +14445,7 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block13: SourceText[] = [
+  },
   {
     "id": "term.hsr.fermata.summary",
     "ja": "「虚無」の★4光円錐。",
@@ -13479,6 +14589,33 @@ const block13: SourceText[] = [
     "protectedTokens": [
       "[[simulated-universe|"
     ]
+  },
+  {
+    "id": "term.hsr.phantylia-the-undying.name",
+    "ja": "不死の神実・幻朧",
+    "context": "glossary hsr term phantylia-the-undying: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.phantylia-the-undying.summary",
+    "ja": "雷・風・虚数が弱点の週ボス。",
+    "context": "glossary hsr term phantylia-the-undying: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.phantylia-the-undying.body",
+    "ja": "反物質レギオンに属する週ボス。弱点は雷・風・虚数。凍結と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term phantylia-the-undying: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.sacerdos-relived-ordeal.name",
@@ -14083,6 +15220,36 @@ const block13: SourceText[] = [
     "protectedTokens": [
       "[[trailblaze-mission|"
     ]
+  }
+];
+
+const block15: SourceText[] = [
+  {
+    "id": "term.hsr.howling-coffin.name",
+    "ja": "咆哮の棺",
+    "context": "glossary hsr term howling-coffin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.howling-coffin.summary",
+    "ja": "雷・風・虚数が弱点の強敵。",
+    "context": "glossary hsr term howling-coffin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.howling-coffin.body",
+    "ja": "仙舟「羅浮」に現れる強敵。弱点は雷・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term howling-coffin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.poet-of-mourning-collapse.name",
@@ -14144,6 +15311,33 @@ const block13: SourceText[] = [
       "[[light-cone|",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.abundant-ebon-deer.name",
+    "ja": "豊穣の玄鹿",
+    "context": "glossary hsr term abundant-ebon-deer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.abundant-ebon-deer.summary",
+    "ja": "炎・氷・量子が弱点のボス。",
+    "context": "glossary hsr term abundant-ebon-deer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.abundant-ebon-deer.body",
+    "ja": "仙舟「羅浮」に登場するボス。弱点は炎・氷・量子。雷・風属性への耐性と、凍結・禁錮への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term abundant-ebon-deer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.seed-of-abundance.name",
@@ -14345,10 +15539,7 @@ const block13: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block14: SourceText[] = [
+  },
   {
     "id": "term.hsr.hoshimeguru-navigator-shiken.body",
     "ja": "[[relics]]のセットの一つ。2セット効果は攻撃力に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -14479,6 +15670,33 @@ const block14: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hoolay.name",
+    "ja": "歩離人の戦首・呼雷",
+    "context": "glossary hsr term hoolay: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hoolay.summary",
+    "ja": "物理・炎・風が弱点のボス。",
+    "context": "glossary hsr term hoolay: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hoolay.body",
+    "ja": "仙舟「羅浮」の歩離人を率いるボス。弱点は物理・炎・風。凍結・禁錮・量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hoolay: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.borisin-teeth.name",
     "ja": "歩離の犬牙",
     "context": "glossary hsr term borisin-teeth: Japanese official term name",
@@ -14537,6 +15755,33 @@ const block14: SourceText[] = [
     "protectedTokens": [
       "[[belobog|"
     ]
+  },
+  {
+    "id": "term.hsr.mara-struck-soldier.name",
+    "ja": "魔陰の身・兵卒",
+    "context": "glossary hsr term mara-struck-soldier: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mara-struck-soldier.summary",
+    "ja": "炎・氷・量子が弱点の通常エネミー。",
+    "context": "glossary hsr term mara-struck-soldier: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mara-struck-soldier.body",
+    "ja": "仙舟「羅浮」に現れる通常エネミー。弱点は炎・氷・量子。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term mara-struck-soldier: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.mara-struck.name",
@@ -14980,7 +16225,10 @@ const block14: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block16: SourceText[] = [
   {
     "id": "term.hsr.a-glass-of-the-besotted-era.summary",
     "ja": "キャラクターの昇格に使う★4素材。",
@@ -15061,6 +16309,33 @@ const block14: SourceText[] = [
       "[[relic-sub-stat|",
       "[[relics|"
     ]
+  },
+  {
+    "id": "term.hsr.meteor-eagle.name",
+    "ja": "メテオイーグル",
+    "context": "glossary hsr term meteor-eagle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.meteor-eagle.summary",
+    "ja": "風・量子・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term meteor-eagle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.meteor-eagle.body",
+    "ja": "晨昏の奇獣に属する通常エネミー。弱点は風・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term meteor-eagle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.thus-burns-the-dawn.name",
@@ -15289,6 +16564,33 @@ const block14: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.yakuo-hiden-tanrensha.name",
+    "ja": "薬王秘伝・鍛錬者",
+    "context": "glossary hsr term yakuo-hiden-tanrensha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.yakuo-hiden-tanrensha.summary",
+    "ja": "氷・風・虚数が弱点の強敵。",
+    "context": "glossary hsr term yakuo-hiden-tanrensha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.yakuo-hiden-tanrensha.body",
+    "ja": "仙舟「羅浮」の薬王秘伝に属する強敵。弱点は氷・風・虚数。雷属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term yakuo-hiden-tanrensha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.dynamic-outlining.name",
     "ja": "躍動感のある線画",
     "context": "glossary hsr term dynamic-outlining: Japanese official term name",
@@ -15379,10 +16681,7 @@ const block14: SourceText[] = [
     "protectedTokens": [
       "[[astral-express|"
     ]
-  }
-];
-
-const block15: SourceText[] = [
+  },
   {
     "id": "term.hsr.courage-torn-chest.name",
     "ja": "勇気は胸を切り裂く",
@@ -15950,7 +17249,10 @@ const block15: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block17: SourceText[] = [
   {
     "id": "term.hsr.before-dawn.body",
     "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-dmg]]と[[skill]]・[[ultimate]]の与ダメージを上げる。[[skill]]か[[ultimate]]の後は[[follow-up-attack]]も強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -16029,6 +17331,33 @@ const block15: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
+  },
+  {
+    "id": "term.hsr.lesser-sting.name",
+    "ja": "幼蟄虫",
+    "context": "glossary hsr term lesser-sting: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lesser-sting.summary",
+    "ja": "量子・虚数が弱点の通常エネミー。",
+    "context": "glossary hsr term lesser-sting: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lesser-sting.body",
+    "ja": "スウォーム（蟄虫の群れ）に属する通常エネミー。弱点は量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term lesser-sting: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.hsr.hey-over-here.name",
@@ -16416,10 +17745,7 @@ const block15: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block16: SourceText[] = [
+  },
   {
     "id": "term.hsr.rivet-town.summary",
     "ja": "かつて交易や機械製造で栄えた町。",
@@ -16682,6 +18008,33 @@ const block16: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.frigid-prowler.name",
+    "ja": "冷寒徘徊者",
+    "context": "glossary hsr term frigid-prowler: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.frigid-prowler.summary",
+    "ja": "炎・雷・量子が弱点の強敵。",
+    "context": "glossary hsr term frigid-prowler: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.frigid-prowler.body",
+    "ja": "裂界造物の一種で、強敵。弱点は炎・雷・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term frigid-prowler: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.hsr.echo-of-war.name",
     "ja": "歴戦余韻",
     "context": "glossary hsr term echo-of-war: Japanese official term name",
@@ -16924,7 +18277,10 @@ const block16: SourceText[] = [
       "[[light-cone]]",
       "[[path|"
     ]
-  },
+  }
+];
+
+const block18: SourceText[] = [
   {
     "id": "term.hsr.i-venture-forth-to-hunt.name",
     "ja": "我が征く巡狩の道",
@@ -17090,4 +18446,4 @@ const block16: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14, ...block15, ...block16];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14, ...block15, ...block16, ...block17, ...block18];
