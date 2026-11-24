@@ -257,6 +257,64 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.vivid-notions.name",
+    "ja": "ヴィヴィッド・ハート",
+    "context": "glossary genshin term vivid-notions: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vivid-notions.summary",
+    "ja": "★5の法器。",
+    "context": "glossary genshin term vivid-notions: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vivid-notions.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同イベントの軌定対象に選べる。",
+    "context": "glossary genshin term vivid-notions: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.rainslasher.name",
+    "ja": "雨裁",
+    "context": "glossary genshin term rainslasher: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainslasher.summary",
+    "ja": "★4の両手剣。",
+    "context": "glossary genshin term rainslasher: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainslasher.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term rainslasher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.golden-troupe.name",
     "ja": "黄金の劇団",
     "context": "glossary genshin term golden-troupe: Japanese official term name",
@@ -655,6 +713,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.peak-patrol-song.name",
+    "ja": "岩峰を巡る歌",
+    "context": "glossary genshin term peak-patrol-song: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.peak-patrol-song.summary",
+    "ja": "★5の片手剣。",
+    "context": "glossary genshin term peak-patrol-song: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.peak-patrol-song.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同イベントの軌定対象に選べる。",
+    "context": "glossary genshin term peak-patrol-song: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.wish.name",
     "ja": "祈願",
     "context": "glossary genshin term wish: Japanese official term name",
@@ -965,6 +1052,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]",
       "[[quicken|"
+    ]
+  },
+  {
+    "id": "term.genshin.portable-power-saw.name",
+    "ja": "携帯型チェーンソー",
+    "context": "glossary genshin term portable-power-saw: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.portable-power-saw.summary",
+    "ja": "★4の両手剣。",
+    "context": "glossary genshin term portable-power-saw: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.portable-power-saw.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term portable-power-saw: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -1439,6 +1555,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.surfs-up.name",
+    "ja": "サーフィンタイム",
+    "context": "glossary genshin term surfs-up: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.surfs-up.summary",
+    "ja": "★5の法器。",
+    "context": "glossary genshin term surfs-up: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.surfs-up.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同イベントの軌定対象に選べる。",
+    "context": "glossary genshin term surfs-up: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.saikouchi-kensaku.name",
     "ja": "採鉱地検索",
     "context": "glossary genshin term saikouchi-kensaku: Japanese official term name",
@@ -1464,6 +1609,93 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-sword.name",
+    "ja": "祭礼の剣",
+    "context": "glossary genshin term sacrificial-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-sword.summary",
+    "ja": "★4の片手剣。",
+    "context": "glossary genshin term sacrificial-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-sword.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "context": "glossary genshin term sacrificial-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.sacrificial-fragments.name",
+    "ja": "祭礼の断片",
+    "context": "glossary genshin term sacrificial-fragments: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-fragments.summary",
+    "ja": "★4の法器。",
+    "context": "glossary genshin term sacrificial-fragments: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-fragments.body",
+    "ja": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term sacrificial-fragments: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.sacrificial-bow.name",
+    "ja": "祭礼の弓",
+    "context": "glossary genshin term sacrificial-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-bow.summary",
+    "ja": "★4の弓。",
+    "context": "glossary genshin term sacrificial-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-bow.body",
+    "ja": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term sacrificial-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
   },
   {
     "id": "term.genshin.desert-pavilion-chronicle.name",
@@ -1658,6 +1890,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eye-of-perception.name",
+    "ja": "昭心",
+    "context": "glossary genshin term eye-of-perception: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eye-of-perception.summary",
+    "ja": "★4の法器。",
+    "context": "glossary genshin term eye-of-perception: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eye-of-perception.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "context": "glossary genshin term eye-of-perception: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
   },
   {
     "id": "term.genshin.vaporize.name",
@@ -1856,6 +2117,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.sturdy-bone.name",
+    "ja": "ストロング・ボーン",
+    "context": "glossary genshin term sturdy-bone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sturdy-bone.summary",
+    "ja": "★4の片手剣。",
+    "context": "glossary genshin term sturdy-bone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sturdy-bone.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "context": "glossary genshin term sturdy-bone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -2059,6 +2349,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.splendor-of-tranquil-waters.name",
+    "ja": "静水流転の輝き",
+    "context": "glossary genshin term splendor-of-tranquil-waters: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.splendor-of-tranquil-waters.summary",
+    "ja": "★5の片手剣。",
+    "context": "glossary genshin term splendor-of-tranquil-waters: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.splendor-of-tranquil-waters.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term splendor-of-tranquil-waters: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.world-quest.name",
     "ja": "世界任務",
     "context": "glossary genshin term world-quest: Japanese official term name",
@@ -2144,6 +2463,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.the-stringless.name",
+    "ja": "絶弦",
+    "context": "glossary genshin term the-stringless: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-stringless.summary",
+    "ja": "★4の弓。",
+    "context": "glossary genshin term the-stringless: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-stringless.body",
+    "ja": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term the-stringless: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.transient-resin.name",
     "ja": "刹那樹脂",
     "context": "glossary genshin term transient-resin: Japanese official term name",
@@ -2169,6 +2517,93 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-sword.name",
+    "ja": "西風剣",
+    "context": "glossary genshin term favonius-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-sword.summary",
+    "ja": "★4の片手剣。",
+    "context": "glossary genshin term favonius-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-sword.body",
+    "ja": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term favonius-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.favonius-greatsword.name",
+    "ja": "西風大剣",
+    "context": "glossary genshin term favonius-greatsword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-greatsword.summary",
+    "ja": "★4の両手剣。",
+    "context": "glossary genshin term favonius-greatsword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-greatsword.body",
+    "ja": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term favonius-greatsword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.favonius-lance.name",
+    "ja": "西風長槍",
+    "context": "glossary genshin term favonius-lance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-lance.summary",
+    "ja": "★4の長柄武器。",
+    "context": "glossary genshin term favonius-lance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.favonius-lance.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "context": "glossary genshin term favonius-lance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
   },
   {
     "id": "term.genshin.tenacity-of-the-millelith.name",
@@ -2197,6 +2632,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.the-dockhands-assistant.name",
+    "ja": "船渠剣",
+    "context": "glossary genshin term the-dockhands-assistant: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-dockhands-assistant.summary",
+    "ja": "★4の片手剣。",
+    "context": "glossary genshin term the-dockhands-assistant: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-dockhands-assistant.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term the-dockhands-assistant: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -2254,6 +2718,64 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sokei-no-kinshi.name",
+    "ja": "霜契の金枝",
+    "context": "glossary genshin term sokei-no-kinshi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sokei-no-kinshi.summary",
+    "ja": "★5の弓。",
+    "context": "glossary genshin term sokei-no-kinshi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sokei-no-kinshi.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term sokei-no-kinshi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.dawning-frost.name",
+    "ja": "霜辰",
+    "context": "glossary genshin term dawning-frost: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dawning-frost.summary",
+    "ja": "★4の法器。",
+    "context": "glossary genshin term dawning-frost: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dawning-frost.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term dawning-frost: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
   },
   {
     "id": "term.genshin.pale-flame.name",
@@ -2602,6 +3124,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mountain-bracing-bolt.name",
+    "ja": "鎮山の釘",
+    "context": "glossary genshin term mountain-bracing-bolt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mountain-bracing-bolt.summary",
+    "ja": "★4の長柄武器。",
+    "context": "glossary genshin term mountain-bracing-bolt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mountain-bracing-bolt.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "context": "glossary genshin term mountain-bracing-bolt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
   },
   {
     "id": "term.genshin.heart-of-depth.name",
@@ -3207,6 +3758,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.waveriding-whirl.name",
+    "ja": "波乗りの旋回",
+    "context": "glossary genshin term waveriding-whirl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.waveriding-whirl.summary",
+    "ja": "★4の法器。",
+    "context": "glossary genshin term waveriding-whirl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.waveriding-whirl.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "context": "glossary genshin term waveriding-whirl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.condensed-resin.name",
     "ja": "濃縮樹脂",
     "context": "glossary genshin term condensed-resin: Japanese official term name",
@@ -3238,6 +3818,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.flower-wreathed-feathers.name",
+    "ja": "花飾りの羽",
+    "context": "glossary genshin term flower-wreathed-feathers: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flower-wreathed-feathers.summary",
+    "ja": "★4の弓。",
+    "context": "glossary genshin term flower-wreathed-feathers: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flower-wreathed-feathers.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "context": "glossary genshin term flower-wreathed-feathers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.domain.name",
     "ja": "秘境",
     "context": "glossary genshin term domain: Japanese official term name",
@@ -3265,6 +3874,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]",
       "[[original-resin]]"
+    ]
+  },
+  {
+    "id": "term.genshin.starsealed-edict.name",
+    "ja": "秘星の聖典",
+    "context": "glossary genshin term starsealed-edict: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.starsealed-edict.summary",
+    "ja": "★5の法器。",
+    "context": "glossary genshin term starsealed-edict: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.starsealed-edict.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term starsealed-edict: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -3353,6 +3991,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.the-flute.name",
+    "ja": "笛の剣",
+    "context": "glossary genshin term the-flute: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-flute.summary",
+    "ja": "★4の片手剣。",
+    "context": "glossary genshin term the-flute: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-flute.body",
+    "ja": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term the-flute: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.fontaine.name",
     "ja": "フォンテーヌ",
     "context": "glossary genshin term fontaine: Japanese official term name",
@@ -3379,6 +4046,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.prospectors-drill.name",
+    "ja": "プロスペクタードリル",
+    "context": "glossary genshin term prospectors-drill: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prospectors-drill.summary",
+    "ja": "★4の長柄武器。",
+    "context": "glossary genshin term prospectors-drill: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prospectors-drill.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term prospectors-drill: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -3468,6 +4164,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.astral-vultures-crimson-plumage.name",
+    "ja": "星鷲の紅き羽",
+    "context": "glossary genshin term astral-vultures-crimson-plumage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.astral-vultures-crimson-plumage.summary",
+    "ja": "★5の弓。",
+    "context": "glossary genshin term astral-vultures-crimson-plumage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.astral-vultures-crimson-plumage.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同イベントの軌定対象に選べる。",
+    "context": "glossary genshin term astral-vultures-crimson-plumage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.god.name",
     "ja": "魔神",
     "context": "glossary genshin term god: Japanese official term name",
@@ -3495,6 +4220,64 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[liyue]]",
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.lightbearing-moonshard.name",
+    "ja": "三日月の含光",
+    "context": "glossary genshin term lightbearing-moonshard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lightbearing-moonshard.summary",
+    "ja": "★5の片手剣。",
+    "context": "glossary genshin term lightbearing-moonshard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lightbearing-moonshard.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term lightbearing-moonshard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.fruitful-hook.name",
+    "ja": "実りの鉤鉈",
+    "context": "glossary genshin term fruitful-hook: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fruitful-hook.summary",
+    "ja": "★4の両手剣。",
+    "context": "glossary genshin term fruitful-hook: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fruitful-hook.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "context": "glossary genshin term fruitful-hook: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -3702,6 +4485,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.fang-of-the-mountain-king.name",
+    "ja": "山の王の長牙",
+    "context": "glossary genshin term fang-of-the-mountain-king: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fang-of-the-mountain-king.summary",
+    "ja": "★5の両手剣。",
+    "context": "glossary genshin term fang-of-the-mountain-king: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fang-of-the-mountain-king.body",
+    "ja": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同イベントの軌定対象に選べる。",
+    "context": "glossary genshin term fang-of-the-mountain-king: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
+    ]
+  },
+  {
     "id": "term.genshin.archaic-petra.name",
     "ja": "悠久の磐岩",
     "context": "glossary genshin term archaic-petra: Japanese official term name",
@@ -3728,6 +4540,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.rust.name",
+    "ja": "弓蔵",
+    "context": "glossary genshin term rust: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rust.summary",
+    "ja": "★4の弓。",
+    "context": "glossary genshin term rust: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rust.body",
+    "ja": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "context": "glossary genshin term rust: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   },
   {
@@ -3873,6 +4714,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bloom]]"
+    ]
+  },
+  {
+    "id": "term.genshin.range-gauge.name",
+    "ja": "レンジゲージ",
+    "context": "glossary genshin term range-gauge: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.range-gauge.summary",
+    "ja": "★4の弓。",
+    "context": "glossary genshin term range-gauge: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.range-gauge.body",
+    "ja": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。恒常枠「奔走世間」の対象外。",
+    "context": "glossary genshin term range-gauge: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[wish|"
     ]
   }
 ];

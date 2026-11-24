@@ -849,6 +849,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.good-night-and-sleep-well.name",
+    "ja": "おやすみなさいと寝顔",
+    "context": "glossary hsr term good-night-and-sleep-well: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.good-night-and-sleep-well.summary",
+    "ja": "「虚無」の★4光円錐。",
+    "context": "glossary hsr term good-night-and-sleep-well: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.good-night-and-sleep-well.body",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。攻撃対象に付いている[[debuff]]の数に応じて与ダメージが上がる。[[damage-over-time]]にも適用される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term good-night-and-sleep-well: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[damage-over-time]]",
+      "[[debuff]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.amphoreus.name",
     "ja": "オンパロス",
     "context": "glossary hsr term amphoreus: Japanese official term name",
@@ -1268,6 +1300,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.something-irreplaceable.name",
+    "ja": "かけがえのないもの",
+    "context": "glossary hsr term something-irreplaceable: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.something-irreplaceable.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term something-irreplaceable: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.something-irreplaceable.body",
+    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。[[attack]]を上げる。敵を倒した後や攻撃を受けた後に[[hp]]を回復し、与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term something-irreplaceable: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.messenger-traversing-hackerspace.name",
     "ja": "仮想空間を漫遊するメッセンジャー",
     "context": "glossary hsr term messenger-traversing-hackerspace: Japanese official term name",
@@ -1530,6 +1594,70 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.texture-of-memories.name",
+    "ja": "記憶の素材",
+    "context": "glossary hsr term texture-of-memories: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.texture-of-memories.summary",
+    "ja": "「存護」の★5光円錐。",
+    "context": "glossary hsr term texture-of-memories: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.texture-of-memories.body",
+    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。[[effect-res]]を上げる。[[shield]]の有無によって、被弾時に[[shield]]を得るか受けるダメージを軽減する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term texture-of-memories: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[effect-res]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[shield]]"
+    ]
+  },
+  {
+    "id": "term.hsr.memories-of-the-past.name",
+    "ja": "記憶の中の姿",
+    "context": "glossary hsr term memories-of-the-past: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memories-of-the-past.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term memories-of-the-past: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memories-of-the-past.body",
+    "ja": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。[[break-effect]]を上げ、装備者の攻撃時に[[energy]]を回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term memories-of-the-past: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[break-effect]]",
+      "[[energy]]",
+      "[[light-cone]]",
       "[[path|"
     ]
   },
@@ -2005,6 +2133,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.night-on-the-milky-way.name",
+    "ja": "銀河鉄道の夜",
+    "context": "glossary hsr term night-on-the-milky-way: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.night-on-the-milky-way.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term night-on-the-milky-way: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.night-on-the-milky-way.body",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。敵の数に応じて装備者の[[attack]]が上がり、敵が[[weakness-break]]されると与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term night-on-the-milky-way: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[weakness-break]]"
+    ]
+  },
+  {
     "id": "term.hsr.imprisonment.name",
     "ja": "禁錮",
     "context": "glossary hsr term imprisonment: Japanese official term name",
@@ -2213,6 +2373,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.resolution-shines-as-pearls-of-sweat.name",
+    "ja": "決意は汗のように輝く",
+    "context": "glossary hsr term resolution-shines-as-pearls-of-sweat: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.resolution-shines-as-pearls-of-sweat.summary",
+    "ja": "「虚無」の★4光円錐。",
+    "context": "glossary hsr term resolution-shines-as-pearls-of-sweat: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.resolution-shines-as-pearls-of-sweat.body",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。攻撃を当てた敵に一定確率で[[debuff]]を付与し、[[defense]]を下げる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term resolution-shines-as-pearls-of-sweat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[debuff]]",
+      "[[defense]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.field.name",
     "ja": "結界",
     "context": "glossary hsr term field: Japanese official term name",
@@ -2295,6 +2487,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[xianzhou-luofu]]"
+    ]
+  },
+  {
+    "id": "term.hsr.time-woven-into-gold.name",
+    "ja": "光陰を織り黄金と成す",
+    "context": "glossary hsr term time-woven-into-gold: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.time-woven-into-gold.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term time-woven-into-gold: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.time-woven-into-gold.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント[[warp]]「光陰を定めし影」で登場した。",
+    "context": "glossary hsr term time-woven-into-gold: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|",
+      "[[warp]]"
     ]
   },
   {
@@ -2625,6 +2848,39 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.solitary-healing.name",
+    "ja": "孤独の癒し",
+    "context": "glossary hsr term solitary-healing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.solitary-healing.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term solitary-healing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.solitary-healing.body",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。[[break-effect]]を上げ、[[ultimate]]を発動した後に[[damage-over-time]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term solitary-healing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[break-effect]]",
+      "[[damage-over-time]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[ultimate]]"
+    ]
+  },
+  {
     "id": "term.hsr.memory-of-chaos.name",
     "ja": "混沌の記憶",
     "context": "glossary hsr term memory-of-chaos: Japanese official term name",
@@ -2887,6 +3143,39 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.time-waits-for-no-one.name",
+    "ja": "時節は居らず",
+    "context": "glossary hsr term time-waits-for-no-one: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.time-waits-for-no-one.summary",
+    "ja": "「豊穣」の★5光円錐。",
+    "context": "glossary hsr term time-waits-for-no-one: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.time-waits-for-no-one.body",
+    "ja": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。最大[[hp]]と[[outgoing-healing-boost]]を上げ、装備者が味方を治療した量に応じて[[additional-damage]]を発生させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term time-waits-for-no-one: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[additional-damage]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[outgoing-healing-boost]]",
+      "[[path|"
     ]
   },
   {
@@ -3221,6 +3510,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.post-op-conversation.name",
+    "ja": "手術後の会話",
+    "context": "glossary hsr term post-op-conversation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.post-op-conversation.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term post-op-conversation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.post-op-conversation.body",
+    "ja": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。装備者の[[energy-regeneration-rate]]を上げ、[[ultimate]]による治療を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term post-op-conversation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-regeneration-rate]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[ultimate]]"
+    ]
+  },
+  {
     "id": "term.hsr.master-control-zone.name",
     "ja": "主制御部分",
     "context": "glossary hsr term master-control-zone: Japanese official term name",
@@ -3304,6 +3625,39 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[aeon|",
       "[[the-hunt|"
+    ]
+  },
+  {
+    "id": "term.hsr.victory-in-a-blink.name",
+    "ja": "瞬刻の勝機",
+    "context": "glossary hsr term victory-in-a-blink: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.victory-in-a-blink.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term victory-in-a-blink: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.victory-in-a-blink.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0の[[trailblaze-mission]]の報酬。[[lucent-afterglow]]を使って「[[light-cone-manifest]]」でも交換できる。",
+    "context": "glossary hsr term victory-in-a-blink: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone-manifest]]",
+      "[[light-cone]]",
+      "[[lucent-afterglow]]",
+      "[[path|",
+      "[[trailblaze-mission]]"
     ]
   },
   {
@@ -3392,6 +3746,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.moment-of-victory.name",
+    "ja": "勝利の刹那",
+    "context": "glossary hsr term moment-of-victory: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.moment-of-victory.summary",
+    "ja": "「存護」の★5光円錐。",
+    "context": "glossary hsr term moment-of-victory: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.moment-of-victory.body",
+    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。[[defense]]と[[effect-hit-rate]]を上げ、装備者を敵に狙われやすくする。被弾すると[[defense]]がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term moment-of-victory: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[effect-hit-rate]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -3726,6 +4112,39 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.cruising-in-the-stellar-sea.name",
+    "ja": "星海巡航",
+    "context": "glossary hsr term cruising-in-the-stellar-sea: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cruising-in-the-stellar-sea.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term cruising-in-the-stellar-sea: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.cruising-in-the-stellar-sea.body",
+    "ja": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-rate]]を上げ、残り[[hp]]が半分以下の敵に対して[[crit-rate]]がさらに上がる。敵を倒すと[[attack]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term cruising-in-the-stellar-sea: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.stellaron.name",
     "ja": "星核",
     "context": "glossary hsr term stellaron: Japanese official term name",
@@ -4054,6 +4473,40 @@ export const sources: SourceText[] = [
       "[[echo-of-war|",
       "[[interastral-peace-guide|",
       "[[stagnant-shadow|"
+    ]
+  },
+  {
+    "id": "term.hsr.in-the-name-of-the-world.name",
+    "ja": "世界の名を以て",
+    "context": "glossary hsr term in-the-name-of-the-world: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-the-name-of-the-world.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term in-the-name-of-the-world: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-the-name-of-the-world.body",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。[[debuff]]を受けた敵への与ダメージを上げ、[[skill]]を使う攻撃では[[effect-hit-rate]]と[[attack]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term in-the-name-of-the-world: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[debuff]]",
+      "[[effect-hit-rate]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[skill]]"
     ]
   },
   {
@@ -4708,6 +5161,103 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.eternal-calculus.name",
+    "ja": "絶え間ない演算",
+    "context": "glossary hsr term eternal-calculus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.eternal-calculus.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term eternal-calculus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.eternal-calculus.body",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。命中させた敵の数に応じて[[attack]]を伸ばし、一度に複数の敵を攻撃すると[[speed]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term eternal-calculus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[speed]]"
+    ]
+  },
+  {
+    "id": "term.hsr.but-the-battle-isnt-over.name",
+    "ja": "だが戦争は終わらない",
+    "context": "glossary hsr term but-the-battle-isnt-over: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.but-the-battle-isnt-over.summary",
+    "ja": "「調和」の★5光円錐。",
+    "context": "glossary hsr term but-the-battle-isnt-over: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.but-the-battle-isnt-over.body",
+    "ja": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。[[energy-regeneration-rate]]を上げ、味方に[[ultimate]]を使うと条件に応じて[[skill-point]]を回復する。[[skill]]の後は次に動く味方を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term but-the-battle-isnt-over: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-regeneration-rate]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[skill-point]]",
+      "[[skill]]",
+      "[[ultimate]]"
+    ]
+  },
+  {
+    "id": "term.hsr.reminiscence.name",
+    "ja": "辿る記憶",
+    "context": "glossary hsr term reminiscence: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reminiscence.summary",
+    "ja": "「記憶」の★3光円錐。",
+    "context": "glossary hsr term reminiscence: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reminiscence.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発[[warp]]」を除くイベント[[warp]]で入手できると案内された。",
+    "context": "glossary hsr term reminiscence: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|",
+      "[[warp]]"
+    ]
+  },
+  {
     "id": "term.hsr.travel-log.name",
     "ja": "旅記録",
     "context": "glossary hsr term travel-log: Japanese official term name",
@@ -4734,6 +5284,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[stellar-jade|"
+    ]
+  },
+  {
+    "id": "term.hsr.dance-dance-dance.name",
+    "ja": "ダンス！ダンス！ダンス！",
+    "context": "glossary hsr term dance-dance-dance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dance-dance-dance.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term dance-dance-dance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dance-dance-dance.body",
+    "ja": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。装備者が[[ultimate]]を発動すると、味方全体の[[action-order]]を早める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term dance-dance-dance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[action-order]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[ultimate]]"
     ]
   },
   {
@@ -5092,6 +5674,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.the-seriousness-of-breakfast.name",
+    "ja": "朝食の儀式感",
+    "context": "glossary hsr term the-seriousness-of-breakfast: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-seriousness-of-breakfast.summary",
+    "ja": "「知恵」の★4光円錐。",
+    "context": "glossary hsr term the-seriousness-of-breakfast: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-seriousness-of-breakfast.body",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。与ダメージを上げ、敵を倒すたびに上限まで[[attack]]が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-seriousness-of-breakfast: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.taunt.name",
     "ja": "挑発",
     "context": "glossary hsr term taunt: Japanese official term name",
@@ -5208,6 +5821,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.only-silence-remains.name",
+    "ja": "沈黙のみ",
+    "context": "glossary hsr term only-silence-remains: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.only-silence-remains.summary",
+    "ja": "「巡狩」の★4光円錐。",
+    "context": "glossary hsr term only-silence-remains: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.only-silence-remains.body",
+    "ja": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。[[attack]]を上げ、フィールド上の敵が少ないときは[[crit-rate]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term only-silence-remains: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
+      "[[light-cone]]",
       "[[path|"
     ]
   },
@@ -5448,6 +6093,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.greetings-from-geniuses.name",
+    "ja": "天才たちの『挨拶』",
+    "context": "glossary hsr term greetings-from-geniuses: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.greetings-from-geniuses.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term greetings-from-geniuses: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.greetings-from-geniuses.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント[[warp]]「光陰を定めし影」や「真心の集」第二弾に登場した。",
+    "context": "glossary hsr term greetings-from-geniuses: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|",
+      "[[warp]]"
+    ]
+  },
+  {
     "id": "term.hsr.savior-of-creation.name",
     "ja": "天地再創の救世主",
     "context": "glossary hsr term savior-of-creation: Japanese official term name",
@@ -5563,6 +6239,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.on-the-fall-of-an-aeon.name",
+    "ja": "とある星神の殞落を記す",
+    "context": "glossary hsr term on-the-fall-of-an-aeon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.on-the-fall-of-an-aeon.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term on-the-fall-of-an-aeon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.on-the-fall-of-an-aeon.body",
+    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。装備者が攻撃するたびに[[attack]]が上がり、自分で[[weakness-break]]すると与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term on-the-fall-of-an-aeon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[weakness-break]]"
     ]
   },
   {
@@ -5739,6 +6447,71 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[penacony|"
+    ]
+  },
+  {
+    "id": "term.hsr.sleep-like-the-dead.name",
+    "ja": "泥の如き眠り",
+    "context": "glossary hsr term sleep-like-the-dead: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sleep-like-the-dead.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term sleep-like-the-dead: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sleep-like-the-dead.body",
+    "ja": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-dmg]]を上げる。[[basic-attack]]や[[skill]]で会心が出なかったときに[[crit-rate]]を補う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sleep-like-the-dead: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[basic-attack]]",
+      "[[crit-dmg]]",
+      "[[crit-rate]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[skill]]"
+    ]
+  },
+  {
+    "id": "term.hsr.sweat-now-cry-less.name",
+    "ja": "流すなら涙より汗",
+    "context": "glossary hsr term sweat-now-cry-less: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sweat-now-cry-less.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term sweat-now-cry-less: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sweat-now-cry-less.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0以降の「[[nameless-glory]]」で解放される報酬「星海の宝物」の交換候補。",
+    "context": "glossary hsr term sweat-now-cry-less: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[nameless-glory]]",
+      "[[path|"
     ]
   },
   {
@@ -6622,6 +7395,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.into-the-unreachable-veil.name",
+    "ja": "触れてはならぬ領域へ",
+    "context": "glossary hsr term into-the-unreachable-veil: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.into-the-unreachable-veil.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term into-the-unreachable-veil: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.into-the-unreachable-veil.body",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント[[warp]]「光陰を定めし影」で登場した。",
+    "context": "glossary hsr term into-the-unreachable-veil: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|",
+      "[[warp]]"
+    ]
+  },
+  {
     "id": "term.hsr.strife-ruins-kremnos.name",
     "ja": "「紛争の爪痕」クレムノス",
     "context": "glossary hsr term strife-ruins-kremnos: Japanese official term name",
@@ -7450,6 +8254,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.shadowburn.name",
+    "ja": "燃ゆる影",
+    "context": "glossary hsr term shadowburn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadowburn.summary",
+    "ja": "「記憶」の★3光円錐。",
+    "context": "glossary hsr term shadowburn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadowburn.body",
+    "ja": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発[[warp]]」を除くイベント[[warp]]で入手できると案内された。",
+    "context": "glossary hsr term shadowburn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|",
+      "[[warp]]"
+    ]
+  },
+  {
     "id": "term.hsr.jarilo-vi.name",
     "ja": "ヤリーロ-VI",
     "context": "glossary hsr term jarilo-vi: Japanese official term name",
@@ -7716,6 +8551,40 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.before-dawn.name",
+    "ja": "夜明け前",
+    "context": "glossary hsr term before-dawn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.before-dawn.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term before-dawn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.before-dawn.body",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-dmg]]と[[skill]]・[[ultimate]]の与ダメージを上げる。[[skill]]か[[ultimate]]の後は[[follow-up-attack]]も強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term before-dawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-dmg]]",
+      "[[follow-up-attack]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[skill]]",
+      "[[ultimate]]"
+    ]
+  },
+  {
     "id": "term.hsr.firesmith-of-lava-forging.name",
     "ja": "溶岩で鍛造する火匠",
     "context": "glossary hsr term firesmith-of-lava-forging: Japanese official term name",
@@ -7800,6 +8669,41 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.in-the-night.name",
+    "ja": "夜の帳の中で",
+    "context": "glossary hsr term in-the-night: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-the-night.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term in-the-night: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-the-night.body",
+    "ja": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-rate]]を上げ、一定値を超えた[[speed]]に応じて[[basic-attack]]・[[skill]]と[[ultimate]]の火力を伸ばす。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term in-the-night: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[basic-attack]]",
+      "[[crit-rate]]",
+      "[[light-cone]]",
+      "[[path|",
+      "[[skill]]",
+      "[[speed]]",
+      "[[ultimate]]"
     ]
   },
   {
@@ -8155,6 +9059,67 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.swordplay.name",
+    "ja": "論剣",
+    "context": "glossary hsr term swordplay: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.swordplay.summary",
+    "ja": "「巡狩」の★4光円錐。",
+    "context": "glossary hsr term swordplay: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.swordplay.body",
+    "ja": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。同じ敵への攻撃を続けると与ダメージが上がり、攻撃対象を変えると蓄積がリセットされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term swordplay: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.planetary-rendezvous.name",
+    "ja": "惑星との出会い",
+    "context": "glossary hsr term planetary-rendezvous: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.planetary-rendezvous.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term planetary-rendezvous: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.planetary-rendezvous.body",
+    "ja": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。装備者と同じ[[element]]のダメージを味方が与えるときに、その与ダメージを上げる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term planetary-rendezvous: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   }
 ];

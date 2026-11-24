@@ -19,6 +19,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hailstorm-shrine.name": {
+    "text": "あられ落つ星殿",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hailstorm-shrine.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hailstorm-shrine.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.4の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.encrypted-master-tape.name": {
     "text": "暗号化マスターテープ",
     "sourceHash": null,
@@ -271,6 +289,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.ace-no-otomo.name": {
+    "text": "エースのオトモ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ace-no-otomo.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ace-no-otomo.body": {
+    "text": "「撃破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ethereal.name": {
     "text": "エーテリアス",
     "sourceHash": null,
@@ -447,6 +483,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.obol-squad.body": {
     "text": "公式キャラクター一覧で、11号やオルペウス＆「鬼火」などが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.omoi-ga-orinasu-uta.name": {
+    "text": "想いが織りなす歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.omoi-ga-orinasu-uta.summary": {
+    "text": "支援向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.omoi-ga-orinasu-uta.body": {
+    "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.6の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -685,6 +739,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kara-no-naka-no-tamashii.name": {
+    "text": "殻の中の魂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kara-no-naka-no-tamashii.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kara-no-naka-no-tamashii.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.sons-of-calydon.name": {
     "text": "カリュドーンの子",
     "sourceHash": null,
@@ -757,6 +829,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.candle-trick.name": {
+    "text": "キャンドル・トリック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.candle-trick.summary": {
+    "text": "鋭御向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.candle-trick.body": {
+    "text": "「鋭御」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3のアップデートで追加された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kyuuto-kanraku.name": {
     "text": "旧都陥落",
     "sourceHash": null,
@@ -771,6 +861,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.kyuuto-kanraku.body": {
     "text": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marcato-desire.name": {
+    "text": "強音デザイア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marcato-desire.summary": {
+    "text": "強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marcato-desire.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.4のアップデートで追加された。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -883,6 +991,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kinran-no-kokoro.name": {
+    "text": "金襴の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kinran-no-kokoro.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kinran-no-kokoro.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.routine-cleanup.name": {
     "text": "区域防衛",
     "sourceHash": null,
@@ -955,6 +1081,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.roaring-ride.name": {
+    "text": "グロウル・マイ・カー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roaring-ride.summary": {
+    "text": "異常向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roaring-ride.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.0の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.chaos-jazz.name": {
     "text": "ケイオス・ジャズ",
     "sourceHash": null,
@@ -1005,6 +1149,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.moonlight-lullaby.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bashful-demon.name": {
+    "text": "喧嘩腰のボンバルダム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bashful-demon.summary": {
+    "text": "支援向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bashful-demon.body": {
+    "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.2の[[w-engine-channel]]で受信確率アップの対象になった。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1153,6 +1315,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.timeweaver.name": {
+    "text": "刻流の賢者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.timeweaver.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.timeweaver.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koko-saiun.name": {
+    "text": "孤光彩雲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koko-saiun.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.koko-saiun.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.0の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.disorder.name": {
     "text": "混沌",
     "sourceHash": null,
@@ -1207,6 +1405,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.the-vault.name": {
+    "text": "ザ・ボールト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-vault.summary": {
+    "text": "支援向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-vault.body": {
+    "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.sunken-corridor.name": {
     "text": "サンクン・コリドー",
     "sourceHash": null,
@@ -1221,6 +1437,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.sunken-corridor.body": {
     "text": "[[roskhalifa]]で探索できるエリアの一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.zanshin-herb-case.name": {
+    "text": "残心の青籠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.zanshin-herb-case.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.zanshin-herb-case.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.4の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1567,6 +1801,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shinku-no-katsubo.name": {
+    "text": "深紅の渇望",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shinku-no-katsubo.summary": {
+    "text": "鋭御向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shinku-no-katsubo.body": {
+    "text": "「鋭御」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.mindscape-cinema.name": {
     "text": "心象映画",
     "sourceHash": null,
@@ -1675,6 +1927,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.starlight-visor.name": {
+    "text": "スターライトバイザー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-visor.summary": {
+    "text": "命破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-visor.body": {
+    "text": "「命破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.astral-voice.name": {
     "text": "静寂のアストラ",
     "sourceHash": null,
@@ -1689,6 +1959,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.astral-voice.body": {
     "text": "Ver.1.4で追加された「モンスター・デュエット」に挑戦すると獲得できる[[drive-disc]]の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.seimei-no-torikago.name": {
+    "text": "青溟の鳥籠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.seimei-no-torikago.summary": {
+    "text": "命破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.seimei-no-torikago.body": {
+    "text": "「命破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.6の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1873,6 +2161,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.taiyo-no-nukegara.name": {
+    "text": "太陽の抜け殻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.taiyo-no-nukegara.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.taiyo-no-nukegara.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。メインストーリーを進めて開放する[[interboo]]のレベルアップ報酬。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lumina-security-branch.name": {
     "text": "治安局ルミナ分署",
     "sourceHash": null,
@@ -1963,6 +2269,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.tsumi-toraeru-rogoku.name": {
+    "text": "罪捕らえる牢獄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsumi-toraeru-rogoku.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsumi-toraeru-rogoku.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.denny.name": {
     "text": "ディニー",
     "sourceHash": null,
@@ -2013,6 +2337,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.decibels.body": {
     "text": "戦闘中の行動などで蓄積し、必要量に達すると[[ultimate]]を発動できる。値はエージェントごとに管理される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.demara-battery-mark-ii.name": {
+    "text": "デマラ式電池Ⅱ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.demara-battery-mark-ii.summary": {
+    "text": "撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.demara-battery-mark-ii.body": {
+    "text": "「撃破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.3の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tensei-no-enyoku.name": {
+    "text": "転生の炎翼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tensei-no-enyoku.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tensei-no-enyoku.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2143,6 +2503,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.drill-rig-red-axis.name": {
+    "text": "ドリルリグ-レッドシャフト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.drill-rig-red-axis.summary": {
+    "text": "強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.drill-rig-red-axis.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine-replica.name": {
+    "text": "なんちゃってスターライトエンジン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine-replica.summary": {
+    "text": "強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine-replica.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.inspector-mewmew.name": {
     "text": "にゃんきち長官",
     "sourceHash": null,
@@ -2175,6 +2571,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.burn.body": {
     "text": "炎属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的に炎属性ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flamemaker-shaker.name": {
+    "text": "バーニング・シェイカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flamemaker-shaker.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flamemaker-shaker.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.2の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.housekeeper.name": {
+    "text": "ハウスキーパー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.housekeeper.summary": {
+    "text": "強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.housekeeper.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2265,6 +2697,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.defensive-assist.body": {
     "text": "敵の攻撃に合わせて味方へ切り替え、攻撃を受け止める支援行動。支援ポイントや攻撃の種類など、発動条件に注意する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hizuki-no-ginkan.name": {
+    "text": "緋月の銀棺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hizuki-no-ginkan.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hizuki-no-ginkan.body": {
+    "text": "「撃破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2485,6 +2935,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.frost-crescent.name": {
+    "text": "フロスト・クレセント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.frost-crescent.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.frost-crescent.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.proto-punk.name": {
     "text": "プロト・パンク",
     "sourceHash": null,
@@ -2499,6 +2967,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.proto-punk.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果はシールド生成量を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-tussle.name": {
+    "text": "憤怒の銃騒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-tussle.summary": {
+    "text": "強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-tussle.body": {
+    "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2773,6 +3259,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mezameshi-tsubasa-no-seika.name": {
+    "text": "目覚めし翼の聖歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mezameshi-tsubasa-no-seika.summary": {
+    "text": "異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mezameshi-tsubasa-no-seika.body": {
+    "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.angels-of-delusion.name": {
     "text": "妄想エンジェル",
     "sourceHash": null,
@@ -2787,6 +3291,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.angels-of-delusion.body": {
     "text": "公式キャラクター一覧で、アリアや千夏が所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moso-discotheque.name": {
+    "text": "妄想ディスコテック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moso-discotheque.summary": {
+    "text": "撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.moso-discotheque.body": {
+    "text": "「撃破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3057,6 +3579,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.sixth-street.body": {
     "text": "[[new-eridu]]の街区。主人公たちの拠点となるビデオ屋「Random Play」がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ro-de-utaiagerareru-yume.name": {
+    "text": "炉で歌い上げられる夢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ro-de-utaiagerareru-yume.summary": {
+    "text": "支援向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ro-de-utaiagerareru-yume.body": {
+    "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
