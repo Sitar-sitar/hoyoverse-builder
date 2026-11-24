@@ -163,6 +163,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.vivid-notions.name": {
+    "text": "ヴィヴィッド・ハート",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vivid-notions.summary": {
+    "text": "★5の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vivid-notions.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainslasher.name": {
+    "text": "雨裁",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainslasher.summary": {
+    "text": "★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainslasher.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.golden-troupe.name": {
     "text": "黄金の劇団",
     "sourceHash": null,
@@ -415,6 +451,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.peak-patrol-song.name": {
+    "text": "岩峰を巡る歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.peak-patrol-song.summary": {
+    "text": "★5の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.peak-patrol-song.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.wish.name": {
     "text": "祈願",
     "sourceHash": null,
@@ -609,6 +663,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.spread.body": {
     "text": "[[quicken|激化状態]]に草が作用すると発生し、反応を起こした草元素攻撃の基礎ダメージを増加させる。[[elemental-mastery]]も増加量に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.portable-power-saw.name": {
+    "text": "携帯型チェーンソー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.portable-power-saw.summary": {
+    "text": "★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.portable-power-saw.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -901,6 +973,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.surfs-up.name": {
+    "text": "サーフィンタイム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.surfs-up.summary": {
+    "text": "★5の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.surfs-up.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.saikouchi-kensaku.name": {
     "text": "採鉱地検索",
     "sourceHash": null,
@@ -915,6 +1005,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.saikouchi-kensaku.body": {
     "text": "モンドや璃月の鍛冶屋に尋ねると、採鉱地の情報がマップに表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-sword.name": {
+    "text": "祭礼の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-sword.summary": {
+    "text": "★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-sword.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-fragments.name": {
+    "text": "祭礼の断片",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-fragments.summary": {
+    "text": "★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-fragments.body": {
+    "text": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-bow.name": {
+    "text": "祭礼の弓",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-bow.summary": {
+    "text": "★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-bow.body": {
+    "text": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1045,6 +1189,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.eye-of-perception.name": {
+    "text": "昭心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eye-of-perception.summary": {
+    "text": "★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eye-of-perception.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vaporize.name": {
     "text": "蒸発",
     "sourceHash": null,
@@ -1167,6 +1329,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.viridescent-venerer.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sturdy-bone.name": {
+    "text": "ストロング・ボーン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sturdy-bone.summary": {
+    "text": "★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sturdy-bone.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1297,6 +1477,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.splendor-of-tranquil-waters.name": {
+    "text": "静水流転の輝き",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.splendor-of-tranquil-waters.summary": {
+    "text": "★5の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.splendor-of-tranquil-waters.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.world-quest.name": {
     "text": "世界任務",
     "sourceHash": null,
@@ -1351,6 +1549,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.the-stringless.name": {
+    "text": "絶弦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-stringless.summary": {
+    "text": "★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-stringless.body": {
+    "text": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.transient-resin.name": {
     "text": "刹那樹脂",
     "sourceHash": null,
@@ -1369,6 +1585,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.favonius-sword.name": {
+    "text": "西風剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-sword.summary": {
+    "text": "★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-sword.body": {
+    "text": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-greatsword.name": {
+    "text": "西風大剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-greatsword.summary": {
+    "text": "★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-greatsword.body": {
+    "text": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-lance.name": {
+    "text": "西風長槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-lance.summary": {
+    "text": "★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.favonius-lance.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.tenacity-of-the-millelith.name": {
     "text": "千岩牢固",
     "sourceHash": null,
@@ -1383,6 +1653,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.tenacity-of-the-millelith.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果はHPを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-dockhands-assistant.name": {
+    "text": "船渠剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-dockhands-assistant.summary": {
+    "text": "★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-dockhands-assistant.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1419,6 +1707,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.adepti-seekers-stove.body": {
     "text": "使用するとキャラクターの前に料理用の鍋が現れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sokei-no-kinshi.name": {
+    "text": "霜契の金枝",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sokei-no-kinshi.summary": {
+    "text": "★5の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sokei-no-kinshi.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dawning-frost.name": {
+    "text": "霜辰",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dawning-frost.summary": {
+    "text": "★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dawning-frost.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1635,6 +1959,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.archive-geography.body": {
     "text": "パイモンメニューから開く図鑑で確認できる項目の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mountain-bracing-bolt.name": {
+    "text": "鎮山の釘",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mountain-bracing-bolt.summary": {
+    "text": "★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mountain-bracing-bolt.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2017,6 +2359,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.waveriding-whirl.name": {
+    "text": "波乗りの旋回",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.waveriding-whirl.summary": {
+    "text": "★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.waveriding-whirl.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.condensed-resin.name": {
     "text": "濃縮樹脂",
     "sourceHash": null,
@@ -2035,6 +2395,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.flower-wreathed-feathers.name": {
+    "text": "花飾りの羽",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flower-wreathed-feathers.summary": {
+    "text": "★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flower-wreathed-feathers.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.domain.name": {
     "text": "秘境",
     "sourceHash": null,
@@ -2049,6 +2427,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.domain.body": {
     "text": "挑戦できる場所の一つ。種類によって獲得できる報酬が異なり、[[artifact]]を入手できる秘境もある。報酬の受け取りには[[original-resin]]を使う場合がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starsealed-edict.name": {
+    "text": "秘星の聖典",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starsealed-edict.summary": {
+    "text": "★5の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starsealed-edict.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2107,6 +2503,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.the-flute.name": {
+    "text": "笛の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-flute.summary": {
+    "text": "★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-flute.body": {
+    "text": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fontaine.name": {
     "text": "フォンテーヌ",
     "sourceHash": null,
@@ -2121,6 +2535,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.fontaine.body": {
     "text": "[[teyvat]]の地域の一つ。水に関わる景観を持つ地域として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-drill.name": {
+    "text": "プロスペクタードリル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-drill.summary": {
+    "text": "★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-drill.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2179,6 +2611,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.astral-vultures-crimson-plumage.name": {
+    "text": "星鷲の紅き羽",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.astral-vultures-crimson-plumage.summary": {
+    "text": "★5の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.astral-vultures-crimson-plumage.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.god.name": {
     "text": "魔神",
     "sourceHash": null,
@@ -2193,6 +2643,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.god.body": {
     "text": "[[teyvat]]の歴史に登場する存在。公式の璃月紹介では岩の魔神に言及している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lightbearing-moonshard.name": {
+    "text": "三日月の含光",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lightbearing-moonshard.summary": {
+    "text": "★5の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lightbearing-moonshard.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruitful-hook.name": {
+    "text": "実りの鉤鉈",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruitful-hook.summary": {
+    "text": "★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruitful-hook.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2323,6 +2809,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.fang-of-the-mountain-king.name": {
+    "text": "山の王の長牙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fang-of-the-mountain-king.summary": {
+    "text": "★5の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fang-of-the-mountain-king.body": {
+    "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.archaic-petra.name": {
     "text": "悠久の磐岩",
     "sourceHash": null,
@@ -2337,6 +2841,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.archaic-petra.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は岩元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rust.name": {
+    "text": "弓蔵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rust.summary": {
+    "text": "★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rust.body": {
+    "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2427,6 +2949,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.burgeon.body": {
     "text": "[[bloom]]で生成された草原核に炎が作用すると発生する。草原核が爆発し、範囲内に草元素ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.range-gauge.name": {
+    "text": "レンジゲージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.range-gauge.summary": {
+    "text": "★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.range-gauge.body": {
+    "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

@@ -31,6 +31,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hailstorm-shrine.name",
+    "ja": "あられ落つ星殿",
+    "context": "glossary zzz term hailstorm-shrine: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hailstorm-shrine.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term hailstorm-shrine: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hailstorm-shrine.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.1.4の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term hailstorm-shrine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.encrypted-master-tape.name",
     "ja": "暗号化マスターテープ",
     "context": "glossary zzz term encrypted-master-tape: Japanese official term name",
@@ -443,6 +474,37 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.ace-no-otomo.name",
+    "ja": "エースのオトモ",
+    "context": "glossary zzz term ace-no-otomo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ace-no-otomo.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term ace-no-otomo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ace-no-otomo.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term ace-no-otomo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.ethereal.name",
     "ja": "エーテリアス",
     "context": "glossary zzz term ethereal: Japanese official term name",
@@ -721,6 +783,37 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.omoi-ga-orinasu-uta.name",
+    "ja": "想いが織りなす歌",
+    "context": "glossary zzz term omoi-ga-orinasu-uta: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.omoi-ga-orinasu-uta.summary",
+    "ja": "支援向けのS級音動機。",
+    "context": "glossary zzz term omoi-ga-orinasu-uta: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.omoi-ga-orinasu-uta.body",
+    "ja": "「[[support]]」向けの[[w-engine]]。Ver.2.6の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term omoi-ga-orinasu-uta: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
   },
   {
     "id": "term.zzz.snack-box.name",
@@ -1096,6 +1189,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kara-no-naka-no-tamashii.name",
+    "ja": "殻の中の魂",
+    "context": "glossary zzz term kara-no-naka-no-tamashii: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kara-no-naka-no-tamashii.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term kara-no-naka-no-tamashii: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kara-no-naka-no-tamashii.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term kara-no-naka-no-tamashii: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.sons-of-calydon.name",
     "ja": "カリュドーンの子",
     "context": "glossary zzz term sons-of-calydon: Japanese official term name",
@@ -1212,6 +1336,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.candle-trick.name",
+    "ja": "キャンドル・トリック",
+    "context": "glossary zzz term candle-trick: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.candle-trick.summary",
+    "ja": "鋭御向けのA級音動機。",
+    "context": "glossary zzz term candle-trick: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.candle-trick.body",
+    "ja": "「鋭御」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3のアップデートで追加された。",
+    "context": "glossary zzz term candle-trick: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[specialty|",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.kyuuto-kanraku.name",
     "ja": "旧都陥落",
     "context": "glossary zzz term kyuuto-kanraku: Japanese official term name",
@@ -1237,6 +1391,36 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.marcato-desire.name",
+    "ja": "強音デザイア",
+    "context": "glossary zzz term marcato-desire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.marcato-desire.summary",
+    "ja": "強攻向けのA級音動機。",
+    "context": "glossary zzz term marcato-desire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.marcato-desire.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.1.4のアップデートで追加された。",
+    "context": "glossary zzz term marcato-desire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
+    ]
   },
   {
     "id": "term.zzz.ex-special-attack.name",
@@ -1411,6 +1595,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kinran-no-kokoro.name",
+    "ja": "金襴の心",
+    "context": "glossary zzz term kinran-no-kokoro: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kinran-no-kokoro.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term kinran-no-kokoro: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kinran-no-kokoro.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term kinran-no-kokoro: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.routine-cleanup.name",
     "ja": "区域防衛",
     "context": "glossary zzz term routine-cleanup: Japanese official term name",
@@ -1523,6 +1738,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.roaring-ride.name",
+    "ja": "グロウル・マイ・カー",
+    "context": "glossary zzz term roaring-ride: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roaring-ride.summary",
+    "ja": "異常向けのA級音動機。",
+    "context": "glossary zzz term roaring-ride: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roaring-ride.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.0の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term roaring-ride: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.chaos-jazz.name",
     "ja": "ケイオス・ジャズ",
     "context": "glossary zzz term chaos-jazz: Japanese official term name",
@@ -1609,6 +1855,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.bashful-demon.name",
+    "ja": "喧嘩腰のボンバルダム",
+    "context": "glossary zzz term bashful-demon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bashful-demon.summary",
+    "ja": "支援向けのA級音動機。",
+    "context": "glossary zzz term bashful-demon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bashful-demon.body",
+    "ja": "「[[support]]」向けの[[w-engine]]。Ver.1.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term bashful-demon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -1839,6 +2116,68 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.timeweaver.name",
+    "ja": "刻流の賢者",
+    "context": "glossary zzz term timeweaver: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.timeweaver.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term timeweaver: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.timeweaver.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.1.3の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term timeweaver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.koko-saiun.name",
+    "ja": "孤光彩雲",
+    "context": "glossary zzz term koko-saiun: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koko-saiun.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term koko-saiun: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.koko-saiun.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.3.0の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term koko-saiun: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.disorder.name",
     "ja": "混沌",
     "context": "glossary zzz term disorder: Japanese official term name",
@@ -1927,6 +2266,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.the-vault.name",
+    "ja": "ザ・ボールト",
+    "context": "glossary zzz term the-vault: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-vault.summary",
+    "ja": "支援向けのA級音動機。",
+    "context": "glossary zzz term the-vault: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-vault.body",
+    "ja": "「[[support]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term the-vault: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.sunken-corridor.name",
     "ja": "サンクン・コリドー",
     "context": "glossary zzz term sunken-corridor: Japanese official term name",
@@ -1953,6 +2323,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[roscaelifer]]"
+    ]
+  },
+  {
+    "id": "term.zzz.zanshin-herb-case.name",
+    "ja": "残心の青籠",
+    "context": "glossary zzz term zanshin-herb-case: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.zanshin-herb-case.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term zanshin-herb-case: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.zanshin-herb-case.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.1.4の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term zanshin-herb-case: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -2510,6 +2911,37 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.shinku-no-katsubo.name",
+    "ja": "深紅の渇望",
+    "context": "glossary zzz term shinku-no-katsubo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shinku-no-katsubo.summary",
+    "ja": "鋭御向けのS級音動機。",
+    "context": "glossary zzz term shinku-no-katsubo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shinku-no-katsubo.body",
+    "ja": "「鋭御」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term shinku-no-katsubo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[specialty|",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.mindscape-cinema.name",
     "ja": "心象映画",
     "context": "glossary zzz term mindscape-cinema: Japanese official term name",
@@ -2680,6 +3112,37 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.starlight-visor.name",
+    "ja": "スターライトバイザー",
+    "context": "glossary zzz term starlight-visor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-visor.summary",
+    "ja": "命破向けのS級音動機。",
+    "context": "glossary zzz term starlight-visor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-visor.body",
+    "ja": "「[[rupture]]」向けの[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term starlight-visor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.astral-voice.name",
     "ja": "静寂のアストラ",
     "context": "glossary zzz term astral-voice: Japanese official term name",
@@ -2706,6 +3169,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.seimei-no-torikago.name",
+    "ja": "青溟の鳥籠",
+    "context": "glossary zzz term seimei-no-torikago: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.seimei-no-torikago.summary",
+    "ja": "命破向けのS級音動機。",
+    "context": "glossary zzz term seimei-no-torikago: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.seimei-no-torikago.body",
+    "ja": "「[[rupture]]」向けの[[w-engine]]。Ver.2.6の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term seimei-no-torikago: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -2993,6 +3487,37 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.taiyo-no-nukegara.name",
+    "ja": "太陽の抜け殻",
+    "context": "glossary zzz term taiyo-no-nukegara: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.taiyo-no-nukegara.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term taiyo-no-nukegara: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.taiyo-no-nukegara.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。メインストーリーを進めて開放する[[interboo]]のレベルアップ報酬。",
+    "context": "glossary zzz term taiyo-no-nukegara: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[interboo]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.lumina-security-branch.name",
     "ja": "治安局ルミナ分署",
     "context": "glossary zzz term lumina-security-branch: Japanese official term name",
@@ -3139,6 +3664,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.tsumi-toraeru-rogoku.name",
+    "ja": "罪捕らえる牢獄",
+    "context": "glossary zzz term tsumi-toraeru-rogoku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tsumi-toraeru-rogoku.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term tsumi-toraeru-rogoku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tsumi-toraeru-rogoku.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term tsumi-toraeru-rogoku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.denny.name",
     "ja": "ディニー",
     "context": "glossary zzz term denny: Japanese official term name",
@@ -3222,6 +3778,68 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[ultimate]]"
+    ]
+  },
+  {
+    "id": "term.zzz.demara-battery-mark-ii.name",
+    "ja": "デマラ式電池Ⅱ型",
+    "context": "glossary zzz term demara-battery-mark-ii: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.demara-battery-mark-ii.summary",
+    "ja": "撃破向けのA級音動機。",
+    "context": "glossary zzz term demara-battery-mark-ii: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.demara-battery-mark-ii.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.1.3の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term demara-battery-mark-ii: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.tensei-no-enyoku.name",
+    "ja": "転生の炎翼",
+    "context": "glossary zzz term tensei-no-enyoku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tensei-no-enyoku.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term tensei-no-enyoku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tensei-no-enyoku.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term tensei-no-enyoku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3436,6 +4054,68 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.drill-rig-red-axis.name",
+    "ja": "ドリルリグ-レッドシャフト",
+    "context": "glossary zzz term drill-rig-red-axis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.drill-rig-red-axis.summary",
+    "ja": "強攻向けのA級音動機。",
+    "context": "glossary zzz term drill-rig-red-axis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.drill-rig-red-axis.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term drill-rig-red-axis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.starlight-engine-replica.name",
+    "ja": "なんちゃってスターライトエンジン",
+    "context": "glossary zzz term starlight-engine-replica: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-engine-replica.summary",
+    "ja": "強攻向けのA級音動機。",
+    "context": "glossary zzz term starlight-engine-replica: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-engine-replica.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term starlight-engine-replica: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.inspector-mewmew.name",
     "ja": "にゃんきち長官",
     "context": "glossary zzz term inspector-mewmew: Japanese official term name",
@@ -3489,6 +4169,68 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[attribute-anomaly|"
+    ]
+  },
+  {
+    "id": "term.zzz.flamemaker-shaker.name",
+    "ja": "バーニング・シェイカー",
+    "context": "glossary zzz term flamemaker-shaker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.flamemaker-shaker.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term flamemaker-shaker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.flamemaker-shaker.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.1.2の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term flamemaker-shaker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.housekeeper.name",
+    "ja": "ハウスキーパー",
+    "context": "glossary zzz term housekeeper: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.housekeeper.summary",
+    "ja": "強攻向けのA級音動機。",
+    "context": "glossary zzz term housekeeper: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.housekeeper.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "context": "glossary zzz term housekeeper: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3638,6 +4380,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent|"
+    ]
+  },
+  {
+    "id": "term.zzz.hizuki-no-ginkan.name",
+    "ja": "緋月の銀棺",
+    "context": "glossary zzz term hizuki-no-ginkan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hizuki-no-ginkan.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term hizuki-no-ginkan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hizuki-no-ginkan.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term hizuki-no-ginkan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3988,6 +4761,37 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.frost-crescent.name",
+    "ja": "フロスト・クレセント",
+    "context": "glossary zzz term frost-crescent: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.frost-crescent.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term frost-crescent: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.frost-crescent.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term frost-crescent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.proto-punk.name",
     "ja": "プロト・パンク",
     "context": "glossary zzz term proto-punk: Japanese official term name",
@@ -4014,6 +4818,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.wrathful-tussle.name",
+    "ja": "憤怒の銃騒",
+    "context": "glossary zzz term wrathful-tussle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wrathful-tussle.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term wrathful-tussle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wrathful-tussle.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term wrathful-tussle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4451,6 +5286,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.mezameshi-tsubasa-no-seika.name",
+    "ja": "目覚めし翼の聖歌",
+    "context": "glossary zzz term mezameshi-tsubasa-no-seika: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mezameshi-tsubasa-no-seika.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term mezameshi-tsubasa-no-seika: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mezameshi-tsubasa-no-seika.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。Ver.3.1の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term mezameshi-tsubasa-no-seika: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.angels-of-delusion.name",
     "ja": "妄想エンジェル",
     "context": "glossary zzz term angels-of-delusion: Japanese official term name",
@@ -4477,6 +5343,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent|"
+    ]
+  },
+  {
+    "id": "term.zzz.moso-discotheque.name",
+    "ja": "妄想ディスコテック",
+    "context": "glossary zzz term moso-discotheque: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.moso-discotheque.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term moso-discotheque: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.moso-discotheque.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term moso-discotheque: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4911,6 +5808,37 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[new-eridu]]"
+    ]
+  },
+  {
+    "id": "term.zzz.ro-de-utaiagerareru-yume.name",
+    "ja": "炉で歌い上げられる夢",
+    "context": "glossary zzz term ro-de-utaiagerareru-yume: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ro-de-utaiagerareru-yume.summary",
+    "ja": "支援向けのS級音動機。",
+    "context": "glossary zzz term ro-de-utaiagerareru-yume: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ro-de-utaiagerareru-yume.body",
+    "ja": "「[[support]]」向けの[[w-engine]]。Ver.2.8の[[w-engine-channel]]で期間限定で登場した。",
+    "context": "glossary zzz term ro-de-utaiagerareru-yume: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine-channel]]",
+      "[[w-engine]]"
     ]
   }
 ];

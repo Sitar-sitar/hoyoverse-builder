@@ -505,6 +505,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.good-night-and-sleep-well.name": {
+    "text": "おやすみなさいと寝顔",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.good-night-and-sleep-well.summary": {
+    "text": "「虚無」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.good-night-and-sleep-well.body": {
+    "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。攻撃対象に付いているデバフの数に応じて与ダメージが上がる。持続ダメージにも適用される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.amphoreus.name": {
     "text": "オンパロス",
     "sourceHash": null,
@@ -775,6 +793,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.something-irreplaceable.name": {
+    "text": "かけがえのないもの",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.something-irreplaceable.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.something-irreplaceable.body": {
+    "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。攻撃力を上げる。敵を倒した後や攻撃を受けた後にHPを回復し、与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.messenger-traversing-hackerspace.name": {
     "text": "仮想空間を漫遊するメッセンジャー",
     "sourceHash": null,
@@ -933,6 +969,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.memosprite.body": {
     "text": "[[path|記憶の運命]]を歩むキャラクターが扱う召喚物。精霊によって得意なことや戦闘中の役割が異なる。\n\n公式発表では、アグライアが精霊ラフトラを召喚し、連携攻撃を行う例が紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.texture-of-memories.name": {
+    "text": "記憶の素材",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.texture-of-memories.summary": {
+    "text": "「存護」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.texture-of-memories.body": {
+    "text": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。効果抵抗を上げる。バリアの有無によって、被弾時にバリアを得るか受けるダメージを軽減する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memories-of-the-past.name": {
+    "text": "記憶の中の姿",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memories-of-the-past.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memories-of-the-past.body": {
+    "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。撃破特効を上げ、装備者の攻撃時にEPを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1225,6 +1297,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.night-on-the-milky-way.name": {
+    "text": "銀河鉄道の夜",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.night-on-the-milky-way.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.night-on-the-milky-way.body": {
+    "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。敵の数に応じて装備者の攻撃力が上がり、敵が弱点撃破されると与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.imprisonment.name": {
     "text": "禁錮",
     "sourceHash": null,
@@ -1351,6 +1441,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.resolution-shines-as-pearls-of-sweat.name": {
+    "text": "決意は汗のように輝く",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.resolution-shines-as-pearls-of-sweat.summary": {
+    "text": "「虚無」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.resolution-shines-as-pearls-of-sweat.body": {
+    "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。攻撃を当てた敵に一定確率でデバフを付与し、防御力を下げる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.field.name": {
     "text": "結界",
     "sourceHash": null,
@@ -1401,6 +1509,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.ambrosial-arbor.body": {
     "text": "[[xianzhou-luofu]]の歴史に登場する樹木。公式資料では長命や仙舟の発展との関わりが語られている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-woven-into-gold.name": {
+    "text": "光陰を織り黄金と成す",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-woven-into-gold.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-woven-into-gold.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント跳躍「光陰を定めし影」で登場した。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1603,6 +1729,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.solitary-healing.name": {
+    "text": "孤独の癒し",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.solitary-healing.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.solitary-healing.body": {
+    "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。撃破特効を上げ、必殺技を発動した後に持続ダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.memory-of-chaos.name": {
     "text": "混沌の記憶",
     "sourceHash": null,
@@ -1761,6 +1905,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.pioneer-diver-of-dead-waters.body": {
     "text": "[[relics]]のセットの一つ。2セット効果はデバフを受けた敵への与ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-waits-for-no-one.name": {
+    "text": "時節は居らず",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-waits-for-no-one.summary": {
+    "text": "「豊穣」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.time-waits-for-no-one.body": {
+    "text": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。最大HPと治癒量を上げ、装備者が味方を治療した量に応じて付加ダメージを発生させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1963,6 +2125,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.post-op-conversation.name": {
+    "text": "手術後の会話",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.post-op-conversation.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.post-op-conversation.body": {
+    "text": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。装備者のEP回復効率を上げ、必殺技による治療を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.master-control-zone.name": {
     "text": "主制御部分",
     "sourceHash": null,
@@ -2017,6 +2197,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.victory-in-a-blink.name": {
+    "text": "瞬刻の勝機",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.victory-in-a-blink.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.victory-in-a-blink.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0の開拓クエストの報酬。流光の残照を使って「光円錐プレゼンス」でも交換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.the-hunt.name": {
     "text": "巡狩",
     "sourceHash": null,
@@ -2067,6 +2265,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.overworld.body": {
     "text": "[[belobog|ベロブルグ]]の地上部分。建創者たちが都市を治め、行政区などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.moment-of-victory.name": {
+    "text": "勝利の刹那",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.moment-of-victory.summary": {
+    "text": "「存護」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.moment-of-victory.body": {
+    "text": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。防御力と効果命中を上げ、装備者を敵に狙われやすくする。被弾すると防御力がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2269,6 +2485,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.cruising-in-the-stellar-sea.name": {
+    "text": "星海巡航",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cruising-in-the-stellar-sea.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cruising-in-the-stellar-sea.body": {
+    "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。会心率を上げ、残りHPが半分以下の敵に対して会心率がさらに上がる。敵を倒すと攻撃力も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.stellaron.name": {
     "text": "星核",
     "sourceHash": null,
@@ -2463,6 +2697,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.survival-index.body": {
     "text": "[[interastral-peace-guide|スターピースガイド]]内の案内。[[calyx|疑似花萼]]、[[stagnant-shadow|凝結虚影]]、[[cavern-of-corrosion|侵蝕トンネル]]、[[echo-of-war|歴戦余韻]]などの挑戦先を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-name-of-the-world.name": {
+    "text": "世界の名を以て",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-name-of-the-world.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-name-of-the-world.body": {
+    "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。デバフを受けた敵への与ダメージを上げ、戦闘スキルを使う攻撃では効果命中と攻撃力も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2863,6 +3115,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.eternal-calculus.name": {
+    "text": "絶え間ない演算",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.eternal-calculus.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.eternal-calculus.body": {
+    "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。命中させた敵の数に応じて攻撃力を伸ばし、一度に複数の敵を攻撃すると速度も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.but-the-battle-isnt-over.name": {
+    "text": "だが戦争は終わらない",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.but-the-battle-isnt-over.summary": {
+    "text": "「調和」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.but-the-battle-isnt-over.body": {
+    "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。EP回復効率を上げ、味方に必殺技を使うと条件に応じてSPを回復する。戦闘スキルの後は次に動く味方を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reminiscence.name": {
+    "text": "辿る記憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reminiscence.summary": {
+    "text": "「記憶」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reminiscence.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発跳躍」を除くイベント跳躍で入手できると案内された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.travel-log.name": {
     "text": "旅記録",
     "sourceHash": null,
@@ -2877,6 +3183,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.travel-log.body": {
     "text": "ゲーム内イベントなどの案内や進行状況を確認する画面。対象イベントの参加条件や報酬、開催期間を確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dance-dance-dance.name": {
+    "text": "ダンス！ダンス！ダンス！",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dance-dance-dance.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dance-dance-dance.body": {
+    "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。装備者が必殺技を発動すると、味方全体の行動順を早める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3097,6 +3421,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.the-seriousness-of-breakfast.name": {
+    "text": "朝食の儀式感",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-seriousness-of-breakfast.summary": {
+    "text": "「知恵」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-seriousness-of-breakfast.body": {
+    "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。与ダメージを上げ、敵を倒すたびに上限まで攻撃力が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.taunt.name": {
     "text": "挑発",
     "sourceHash": null,
@@ -3165,6 +3507,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.harmony.body": {
     "text": "[[path|運命]]の一つ。調和の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方を支援する能力を持つキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.only-silence-remains.name": {
+    "text": "沈黙のみ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.only-silence-remains.summary": {
+    "text": "「巡狩」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.only-silence-remains.body": {
+    "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。攻撃力を上げ、フィールド上の敵が少ないときは会心率も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3313,6 +3673,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.greetings-from-geniuses.name": {
+    "text": "天才たちの『挨拶』",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.greetings-from-geniuses.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.greetings-from-geniuses.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント跳躍「光陰を定めし影」や「真心の集」第二弾に登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.savior-of-creation.name": {
     "text": "天地再創の救世主",
     "sourceHash": null,
@@ -3381,6 +3759,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.tenmei-ni-shitagau-tabi-no-bokusha.body": {
     "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.on-the-fall-of-an-aeon.name": {
+    "text": "とある星神の殞落を記す",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.on-the-fall-of-an-aeon.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.on-the-fall-of-an-aeon.body": {
+    "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。装備者が攻撃するたびに攻撃力が上がり、自分で弱点撃破すると与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3489,6 +3885,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.dreamflux-reef.body": {
     "text": "[[penacony|ピノコニー]]で訪れる夢境の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sleep-like-the-dead.name": {
+    "text": "泥の如き眠り",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sleep-like-the-dead.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sleep-like-the-dead.body": {
+    "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。会心ダメージを上げる。通常攻撃や戦闘スキルで会心が出なかったときに会心率を補う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sweat-now-cry-less.name": {
+    "text": "流すなら涙より汗",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sweat-now-cry-less.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sweat-now-cry-less.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0以降の「ナナシビトの褒章」で解放される報酬「星海の宝物」の交換候補。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4033,6 +4465,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.into-the-unreachable-veil.name": {
+    "text": "触れてはならぬ領域へ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.into-the-unreachable-veil.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.into-the-unreachable-veil.body": {
+    "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0のイベント跳躍「光陰を定めし影」で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.strife-ruins-kremnos.name": {
     "text": "「紛争の爪痕」クレムノス",
     "sourceHash": null,
@@ -4537,6 +4987,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.shadowburn.name": {
+    "text": "燃ゆる影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadowburn.summary": {
+    "text": "「記憶」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadowburn.body": {
+    "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発跳躍」を除くイベント跳躍で入手できると案内された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.jarilo-vi.name": {
     "text": "ヤリーロ-VI",
     "sourceHash": null,
@@ -4699,6 +5167,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.before-dawn.name": {
+    "text": "夜明け前",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.before-dawn.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.before-dawn.body": {
+    "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。会心ダメージと戦闘スキル・必殺技の与ダメージを上げる。戦闘スキルか必殺技の後は追加攻撃も強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.firesmith-of-lava-forging.name": {
     "text": "溶岩で鍛造する火匠",
     "sourceHash": null,
@@ -4749,6 +5235,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.reserved-trailblaze-power.body": {
     "text": "通常の[[trailblaze-power|開拓力]]が上限に達した後に蓄積され、必要なときに開拓力として取り出せる。蓄積や使用の条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-night.name": {
+    "text": "夜の帳の中で",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-night.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-the-night.body": {
+    "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。会心率を上げ、一定値を超えた速度に応じて通常攻撃・戦闘スキルと必殺技の火力を伸ばす。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4947,6 +5451,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.warrior-goddess-of-sun-and-thunder.body": {
     "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swordplay.name": {
+    "text": "論剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swordplay.summary": {
+    "text": "「巡狩」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swordplay.body": {
+    "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。同じ敵への攻撃を続けると与ダメージが上がり、攻撃対象を変えると蓄積がリセットされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planetary-rendezvous.name": {
+    "text": "惑星との出会い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planetary-rendezvous.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.planetary-rendezvous.body": {
+    "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。装備者と同じ属性のダメージを味方が与えるときに、その与ダメージを上げる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
