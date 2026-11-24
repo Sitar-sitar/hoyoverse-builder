@@ -1,6 +1,6 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { SourceText } from "../../../shared/content/types";
-export const sources: SourceText[] = [
+const block0: SourceText[] = [
   {
     "id": "term.zzz.dawns-bloom.name",
     "ja": "暁に咲く花",
@@ -977,7 +977,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.zzz.sumoboo.summary",
     "ja": "戦闘に同行するA級ボンプ。",
@@ -1943,7 +1946,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.zzz.assault.body",
     "ja": "物理属性の[[attribute-anomaly|状態異常]]が発生すると敵に物理ダメージを与え、[[flinch]]を付与する。",
@@ -2922,7 +2928,10 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[freeze]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.zzz.overtimeboo.name",
     "ja": "サビザンボンプ",
@@ -3899,7 +3908,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.zzz.starlight-visor.summary",
     "ja": "命破向けのS級音動機。",
@@ -4881,7 +4893,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.zzz.exclusive-channel.body",
     "ja": "[[signal-search|変調]]のチャンネルの一つ。開催中の対象エージェントを獲得できる。",
@@ -5878,7 +5893,10 @@ export const sources: SourceText[] = [
       "[[impact]]",
       "[[stun]]"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.zzz.blazewood.name",
     "ja": "ブレイズウッド",
@@ -6847,7 +6865,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.zzz.bunny-in-wonderland.summary",
     "ja": "HPに関わるドライバディスク。",
@@ -7339,3 +7360,5 @@ export const sources: SourceText[] = [
     ]
   }
 ];
+
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7];

@@ -1,6 +1,6 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { SourceText } from "../../../shared/content/types";
-export const sources: SourceText[] = [
+const block0: SourceText[] = [
   {
     "id": "term.genshin.aubade-of-morningstar-and-moon.name",
     "ja": "暁の星と月の歌",
@@ -952,7 +952,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.genshin.skysplit-gembloom.summary",
     "ja": "ナタの特産品。",
@@ -1918,7 +1921,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.genshin.obsidian-codex.body",
     "ja": "2セット効果はフィールド上の装備者が[[nightsouls-blessing]]状態にある時の与ダメージを強化する。4セット効果はフィールド上で[[nightsoul-points]]を消費すると会心率が上がる。",
@@ -2870,7 +2876,10 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.genshin.scarab.name",
     "ja": "聖金虫",
@@ -3828,7 +3837,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.genshin.bloodstained-chivalry.summary",
     "ja": "物理ダメージに関わる聖遺物セット。",
@@ -4790,7 +4802,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.genshin.sprayfeather-gill.body",
     "ja": "[[natlan]]で採れる育成素材。流泉の衆周辺などの水辺で採集できる。ムアラニの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -5761,7 +5776,10 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.genshin.fluorescent-fungus.name",
     "ja": "ユウトウタケ",
@@ -6199,3 +6217,5 @@ export const sources: SourceText[] = [
     ]
   }
 ];
+
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6];

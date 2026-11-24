@@ -1,6 +1,6 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { SourceText } from "../../../shared/content/types";
-export const sources: SourceText[] = [
+const block0: SourceText[] = [
   {
     "id": "term.hsr.under-the-blue-sky.name",
     "ja": "青空の下で",
@@ -1017,7 +1017,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.hsr.amphoreus.summary",
     "ja": "星穹列車が旅する謎に包まれた世界。",
@@ -2019,7 +2022,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.hsr.radiant-feldspar.body",
     "ja": "[[penacony|ピノコニー]]の空を飛ぶ船。星穹列車の一行が招待を受けて訪れる。",
@@ -3014,7 +3020,10 @@ export const sources: SourceText[] = [
       "[[starskiff]]",
       "[[xianzhou-luofu]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.hsr.action-order.name",
     "ja": "行動順",
@@ -4021,7 +4030,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.hsr.galaxy-rangers.summary",
     "ja": "「巡狩」を信仰し、宇宙を放浪して悪を討つ者たちの集団。",
@@ -5040,7 +5052,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.hsr.aeon.body",
     "ja": "[[path]]と関わる強大な存在。たとえば[[genius-society]]は「知恵」の星神ヌースに見いだされた天才たちの集まりとして紹介されている。",
@@ -6051,7 +6066,10 @@ export const sources: SourceText[] = [
       "[[light-cone|",
       "[[path|"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.hsr.realm-keeping-commission.name",
     "ja": "地衡司",
@@ -7054,7 +7072,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.hsr.on-the-fall-of-an-aeon.summary",
     "ja": "「壊滅」の★5光円錐。",
@@ -8063,7 +8084,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.hsr.ultimate.body",
     "ja": "必要な[[energy|EP]]などがたまると使用できる能力。通常の[[action-order|行動順]]とは異なるタイミングで使える。必要な資源や効果はキャラクターごとに確認しよう。",
@@ -9055,7 +9079,10 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[relics]]"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.hsr.immersifier.name",
     "ja": "没入器",
@@ -10067,7 +10094,10 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.hsr.reserved-trailblaze-power.summary",
     "ja": "通常の開拓力とは別に蓄積される資源。",
@@ -10732,3 +10762,5 @@ export const sources: SourceText[] = [
     ]
   }
 ];
+
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10];

@@ -283,7 +283,21 @@ export function syncGlossaryTranslations(existing: Readonly<Record<string, Trans
 export const GLOSSARY_GENERATED_NOTE = "// 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。\n";
 
 export function glossarySourceFileText(sources: readonly SourceText[]) {
-  return `${GLOSSARY_GENERATED_NOTE}import type { SourceText } from "../../../shared/content/types";\nexport const sources: SourceText[] = ${JSON.stringify(sources, null, 2)};\n`;
+  const header = `${GLOSSARY_GENERATED_NOTE}import type { SourceText } from "../../../shared/content/types";\n`;
+  const blockSize = 100;
+  if (sources.length <= blockSize) {
+    return `${header}export const sources: SourceText[] = ${JSON.stringify(sources, null, 2)};\n`;
+  }
+
+  // TypeScript cannot always contextually type a single array literal this large.
+  const blocks = Array.from({ length: Math.ceil(sources.length / blockSize) }, (_, index) =>
+    sources.slice(index * blockSize, (index + 1) * blockSize),
+  );
+  const declarations = blocks.map((block, index) =>
+    `const block${index}: SourceText[] = ${JSON.stringify(block, null, 2)};\n`,
+  ).join("\n");
+  const spreads = blocks.map((_, index) => `...block${index}`).join(", ");
+  return `${header}${declarations}\nexport const sources: SourceText[] = [${spreads}];\n`;
 }
 
 export function glossaryTranslationFileText(records: Readonly<Record<string, TranslationRecord>>) {
