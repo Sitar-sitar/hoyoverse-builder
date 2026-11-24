@@ -271,6 +271,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.ankoku-no-ushio-no-majuu.name": {
+    "text": "暗黒の潮の魔獣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ankoku-no-ushio-no-majuu.summary": {
+    "text": "物理・風・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ankoku-no-ushio-no-majuu.body": {
+    "text": "暗黒の潮の造物の一種で、強敵。弱点は物理・風・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ankoku-no-ushio-no-yaiba.name": {
+    "text": "暗黒の潮の刃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ankoku-no-ushio-no-yaiba.summary": {
+    "text": "雷・量子・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ankoku-no-ushio-no-yaiba.body": {
+    "text": "暗黒の潮の造物の一種で、通常エネミー。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.obsidian-of-dread.name": {
     "text": "黯淡な黒曜",
     "sourceHash": null,
@@ -559,6 +595,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.voidranger-distorter.name": {
+    "text": "ヴォイドレンジャー・改ざん",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-distorter.summary": {
+    "text": "風・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-distorter.body": {
+    "text": "反物質レギオンに属する通常エネミー。弱点は風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-tramper.name": {
+    "text": "ヴォイドレンジャー・蹂躙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-tramper.summary": {
+    "text": "物理・風・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-tramper.body": {
+    "text": "反物質レギオンに属する強敵。弱点は物理・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-reaver.name": {
+    "text": "ヴォイドレンジャー・略奪",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-reaver.summary": {
+    "text": "物理・雷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.voidranger-reaver.body": {
+    "text": "反物質レギオンに属する通常エネミー。弱点は物理・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.the-great-cosmic-enterprise.name": {
     "text": "宇宙一の大商い！",
     "sourceHash": null,
@@ -573,6 +663,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-great-cosmic-enterprise.body": {
     "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]339。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ice-out-of-space.name": {
+    "text": "宇宙からの氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ice-out-of-space.summary": {
+    "text": "炎・風・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ice-out-of-space.body": {
+    "text": "裂界造物の一種で、強敵。弱点は炎・風・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fire-out-of-space.name": {
+    "text": "宇宙からの炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fire-out-of-space.summary": {
+    "text": "物理・氷・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fire-out-of-space.body": {
+    "text": "裂界造物の一種で、強敵。弱点は物理・氷・量子。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1027,6 +1153,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.everwinter-shadewalker.name": {
+    "text": "永冬の災影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.everwinter-shadewalker.summary": {
+    "text": "物理・炎・量子が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.everwinter-shadewalker.body": {
+    "text": "ヤリーロ-Ⅵに関連する裂界造物で、通常エネミー。弱点は物理・炎・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.skill-point.name": {
     "text": "SP",
     "sourceHash": null,
@@ -1113,6 +1257,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.epoch-etched-in-golden-blood.body": {
     "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.name": {
+    "text": "黄金の血の記憶の精霊・オフィス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.summary": {
+    "text": "物理・炎・氷が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ougon-no-chi-no-kioku-no-seirei-ofisu.body": {
+    "text": "黄金の血の記憶の精霊の一種で、強敵。弱点は物理・炎・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1513,6 +1675,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.cocolia-mother-of-deception.name": {
+    "text": "カカリア・虚妄の母",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cocolia-mother-of-deception.summary": {
+    "text": "炎・雷・量子が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.cocolia-mother-of-deception.body": {
+    "text": "ヤリーロ-Ⅵに登場する週ボス。弱点は炎・雷・量子。物理・氷・風属性への耐性と、凍結・行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.true-damage.name": {
     "text": "確定ダメージ",
     "sourceHash": null,
@@ -1869,6 +2049,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.remembrance.body": {
     "text": "[[path|運命]]の一つ。記憶の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[memosprite|記憶の精霊]]と共に戦うキャラクターがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-shell-of-fury.name": {
+    "text": "記憶域ミーム「怒りの抜け殻」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-shell-of-fury.summary": {
+    "text": "雷・量子・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-shell-of-fury.body": {
+    "text": "記憶域ミームの一種で、強敵。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-heartbreaker.name": {
+    "text": "記憶域ミーム「砕け散った心」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-heartbreaker.summary": {
+    "text": "炎・氷・雷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-heartbreaker.body": {
+    "text": "記憶域ミームの一種で、通常エネミー。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-something-unto-death.name": {
+    "text": "記憶域ミーム「死へ向かうのは何物」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-something-unto-death.summary": {
+    "text": "炎・風・虚数が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memory-zone-meme-something-unto-death.body": {
+    "text": "記憶域ミームの一種で、ボス。弱点は炎・風・虚数。凍結と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2341,6 +2575,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.imaginary-weaver.name": {
+    "text": "虚数の葉を織る者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.imaginary-weaver.summary": {
+    "text": "物理・雷・量子が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.imaginary-weaver.body": {
+    "text": "裂界造物の一種で、通常エネミー。弱点は物理・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.nihility.name": {
     "text": "虚無",
     "sourceHash": null,
@@ -2463,6 +2715,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.equilibrium-level.body": {
     "text": "敵や一部ステージの難易度に関わるレベル。[[trailblaze-level|開拓レベル]]とは異なり、試練に関係する。対象となるコンテンツや条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-spectral-envoy.name": {
+    "text": "金人・勾魂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-spectral-envoy.summary": {
+    "text": "物理・雷・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-spectral-envoy.body": {
+    "text": "仙舟「羅浮」の機巧で、強敵。弱点は物理・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-gatekeeper.name": {
+    "text": "金人・門番",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-gatekeeper.summary": {
+    "text": "雷・風・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aurumaton-gatekeeper.body": {
+    "text": "仙舟「羅浮」の機巧で、強敵。弱点は雷・風・量子。虚数属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3295,6 +3583,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.skarakabaz.name": {
+    "text": "砕星王虫・スキャラカバズ（模造）",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skarakabaz.summary": {
+    "text": "物理・氷・虚数が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.skarakabaz.body": {
+    "text": "スウォームに属する週ボス（模造個体）。弱点は物理・氷・虚数。量子属性への耐性と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.heliobus.name": {
     "text": "歳陽",
     "sourceHash": null,
@@ -3439,6 +3745,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.sunlight-gryphon.name": {
+    "text": "サンライトグリフォン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sunlight-gryphon.summary": {
+    "text": "物理・量子・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sunlight-gryphon.body": {
+    "text": "晨昏の奇獣に属する強敵。弱点は物理・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.lingering-tear.name": {
     "text": "残涙",
     "sourceHash": null,
@@ -3489,6 +3813,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.planar-ornaments.body": {
     "text": "キャラクターに装備する[[relics|遺物]]の一種。次元界オーブと連結縄の2部位があり、組み合わせによりセット効果を得られる。\n\nゲーム内ではオーナメントを獲得できるコンテンツやイベントが用意されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp-trotter.name": {
+    "text": "次元プーマン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp-trotter.summary": {
+    "text": "物理・量子・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warp-trotter.body": {
+    "text": "銀河各地に現れる通常エネミー。弱点は物理・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.name": {
+    "text": "至高、極陽、天空の化身",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.summary": {
+    "text": "物理・氷・量子が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shikou-kyokuyou-tenkuu-no-keshin.body": {
+    "text": "タイタンの眷属に属する週ボス。弱点は物理・氷・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3637,6 +3997,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.automaton-direwolf.name": {
+    "text": "自動機兵・ヴォルク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.automaton-direwolf.summary": {
+    "text": "氷・雷・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.automaton-direwolf.body": {
+    "text": "ヤリーロ-Ⅵの自動機兵で、強敵。弱点は氷・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.automaton-grizzly.name": {
+    "text": "自動機兵・グリズリー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.automaton-grizzly.summary": {
+    "text": "炎・氷・雷が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.automaton-grizzly.body": {
+    "text": "ヤリーロ-Ⅵの自動機兵で、強敵。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.vidyadhara.name": {
     "text": "持明族",
     "sourceHash": null,
@@ -3651,6 +4047,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.vidyadhara.body": {
     "text": "[[xianzhou-alliance]]に暮らす種族。公式資料では、長い寿命の後に生まれ変わる仕組みが紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.searing-prowler.name": {
+    "text": "灼焔徘徊者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.searing-prowler.summary": {
+    "text": "氷・雷・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.searing-prowler.body": {
+    "text": "裂界造物の一種で、強敵。弱点は氷・雷・虚数。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3817,6 +4231,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.aventurine-of-stratagems.name": {
+    "text": "「十の石心」博戯の砂金石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aventurine-of-stratagems.summary": {
+    "text": "物理・氷・雷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.aventurine-of-stratagems.body": {
+    "text": "スターピースカンパニーに属するボス。弱点は物理・氷・雷。虚数属性への耐性と行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.doomsday-beast.name": {
+    "text": "終末獣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.doomsday-beast.summary": {
+    "text": "物理・炎・氷・風が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.doomsday-beast.body": {
+    "text": "反物質レギオンに属する週ボス。弱点は物理・炎・氷・風。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.storage-zone.name": {
     "text": "収容部分",
     "sourceHash": null,
@@ -3849,6 +4299,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.blessing.body": {
     "text": "[[simulated-universe]]や[[divergent-universe]]の挑戦中に獲得する効果。選んだ祝福によって戦闘を有利に進められる。階差宇宙では組み合わせが[[equation|方程式]]にも関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guardian-shadow.name": {
+    "text": "守護者の影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guardian-shadow.summary": {
+    "text": "物理・風・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.guardian-shadow.body": {
+    "text": "裂界造物の一種で、強敵。弱点は物理・風・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4123,6 +4591,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.shouro-tennin.name": {
+    "text": "承露天人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shouro-tennin.summary": {
+    "text": "物理・氷・雷が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shouro-tennin.body": {
+    "text": "仙舟「羅浮」に現れる強敵。弱点は物理・氷・雷。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.its-showtime.name": {
     "text": "ショーの始まり",
     "sourceHash": null,
@@ -4137,6 +4623,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.its-showtime.body": {
     "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。敵への[[debuff]]付与に応じて与ダメージが上がり、一定の[[effect-hit-rate]]があると[[attack]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shirubaamein-ikan.name": {
+    "text": "シルバーメイン・尉官",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shirubaamein-ikan.summary": {
+    "text": "物理・氷・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shirubaamein-ikan.body": {
+    "text": "ヤリーロ-Ⅵのシルバーメインに属する強敵。弱点は物理・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4429,6 +4933,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.svarog.name": {
+    "text": "スヴァローグ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.svarog.summary": {
+    "text": "炎・雷・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.svarog.body": {
+    "text": "ヤリーロ-Ⅵに登場するボス。弱点は炎・雷・風。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swarm-true-sting.name": {
+    "text": "スウォーム・真蟄虫",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swarm-true-sting.summary": {
+    "text": "氷・量子・虚数が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.swarm-true-sting.body": {
+    "text": "スウォーム（蟄虫の群れ）に属するボス。弱点は氷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.interastral-peace-guide.name": {
     "text": "スターピースガイド",
     "sourceHash": null,
@@ -4497,6 +5037,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.punklorde-stage-zero.body": {
     "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の愉悦度が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.storm.name": {
+    "text": "ストーム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.storm.summary": {
+    "text": "炎・氷・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.storm.body": {
+    "text": "裂界造物の一種で、強敵。弱点は炎・氷・虚数。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4587,6 +5145,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.stellaron-hunters.body": {
     "text": "カフカや銀狼などが所属する、謎の多い組織。公式紹介では銀狼がその一員として紹介されている。\n\n名称に[[stellaron]]を含む。組織の詳しい目的は物語を進めながら確かめられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunter-sam.name": {
+    "text": "「星核ハンター」サム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunter-sam.summary": {
+    "text": "雷・量子・虚数が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.stellaron-hunter-sam.body": {
+    "text": "星核ハンターの一員で、ボスとして登場する。弱点は雷・量子・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6535,6 +7111,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.tenbatsu-no-senpei.name": {
+    "text": "天罰の先兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenbatsu-no-senpei.summary": {
+    "text": "氷・雷・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenbatsu-no-senpei.body": {
+    "text": "タイタンの眷属に属する強敵。弱点は氷・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenbatsu-no-toushi.name": {
+    "text": "天罰の闘士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenbatsu-no-toushi.summary": {
+    "text": "雷・量子・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tenbatsu-no-toushi.body": {
+    "text": "タイタンの眷属に属する通常エネミー。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.talent.name": {
     "text": "天賦",
     "sourceHash": null,
@@ -6909,6 +7521,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.sleep-like-the-dead.body": {
     "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。会心ダメージを上げる。通常攻撃や戦闘スキルで会心が出なかったときに会心率を補う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-ekusesu-uerudan.name": {
+    "text": "ナイトメア劇団・エクセスウェルダン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-ekusesu-uerudan.summary": {
+    "text": "炎・雷・風が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-ekusesu-uerudan.body": {
+    "text": "ナイトメア劇団に属する強敵。弱点は炎・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-sweet-gorilla.name": {
+    "text": "ナイトメア劇団・スウィート・ゴリラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-sweet-gorilla.summary": {
+    "text": "物理・炎・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-sweet-gorilla.body": {
+    "text": "ナイトメア劇団に属する強敵。弱点は物理・炎・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-soda-dog.name": {
+    "text": "ナイトメア劇団・ソーダドッグ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-soda-dog.summary": {
+    "text": "物理・雷・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.naitomea-gekidan-soda-dog.body": {
+    "text": "ナイトメア劇団に属する通常エネミー。弱点は物理・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7363,6 +8029,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hatou-no-fujin.name": {
+    "text": "波濤の夫人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hatou-no-fujin.summary": {
+    "text": "物理・炎・雷が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hatou-no-fujin.body": {
+    "text": "淵底のセイレーンに属する強敵。弱点は物理・炎・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.the-flower-remembers.name": {
     "text": "花は忘れない",
     "sourceHash": null,
@@ -7399,6 +8083,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.baryon.name": {
+    "text": "バリオン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.baryon.summary": {
+    "text": "氷・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.baryon.body": {
+    "text": "反物質レギオンに属する通常エネミー。弱点は氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.multiplication.name": {
     "text": "蕃殖",
     "sourceHash": null,
@@ -7413,6 +8115,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.multiplication.body": {
     "text": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。[[basic-attack]]の後、装備者の次の[[action-order]]を早める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nikador.name": {
+    "text": "蛮神、狂王、紛争の化身",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nikador.summary": {
+    "text": "氷・雷・量子が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.nikador.body": {
+    "text": "タイタンの眷属に属するボス。弱点は氷・雷・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7539,6 +8259,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.technique.body": {
     "text": "フィールド上で戦闘前に使用できる能力。戦闘開始時に効果を発揮するものなどがあり、効果や条件はキャラクターごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadow-of-feixiao.name": {
+    "text": "「飛霄」の影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadow-of-feixiao.summary": {
+    "text": "物理・炎・量子が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadow-of-feixiao.body": {
+    "text": "仙舟「羅浮」に登場する週ボス。弱点は物理・炎・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7881,6 +8619,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.unknowable-domain.body": {
     "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。セプターを集め、対応するコンポーネントを装着して能力を強化しながら挑戦する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.phantylia-the-undying.name": {
+    "text": "不死の神実・幻朧",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.phantylia-the-undying.summary": {
+    "text": "雷・風・虚数が弱点の週ボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.phantylia-the-undying.body": {
+    "text": "反物質レギオンに属する週ボス。弱点は雷・風・虚数。凍結と量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -8245,6 +9001,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.howling-coffin.name": {
+    "text": "咆哮の棺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.howling-coffin.summary": {
+    "text": "雷・風・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.howling-coffin.body": {
+    "text": "仙舟「羅浮」に現れる強敵。弱点は雷・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.poet-of-mourning-collapse.name": {
     "text": "亡国の悲哀を詠う詩人",
     "sourceHash": null,
@@ -8277,6 +9051,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.abundance.body": {
     "text": "[[path|運命]]の一つ。豊穣の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。味方の[[hp|HP]]を回復する能力を持つキャラクターもいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.abundant-ebon-deer.name": {
+    "text": "豊穣の玄鹿",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.abundant-ebon-deer.summary": {
+    "text": "炎・氷・量子が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.abundant-ebon-deer.body": {
+    "text": "仙舟「羅浮」に登場するボス。弱点は炎・氷・量子。雷・風属性への耐性と、凍結・禁錮への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -8479,6 +9271,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hoolay.name": {
+    "text": "歩離人の戦首・呼雷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hoolay.summary": {
+    "text": "物理・炎・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hoolay.body": {
+    "text": "仙舟「羅浮」の歩離人を率いるボス。弱点は物理・炎・風。凍結・禁錮・量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.borisin-teeth.name": {
     "text": "歩離の犬牙",
     "sourceHash": null,
@@ -8511,6 +9321,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.boulder-town.body": {
     "text": "[[belobog|ベロブルグ]]の地下にある鉱業の町。診療所やファイトクラブがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck-soldier.name": {
+    "text": "魔陰の身・兵卒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck-soldier.summary": {
+    "text": "炎・氷・量子が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mara-struck-soldier.body": {
+    "text": "仙舟「羅浮」に現れる通常エネミー。弱点は炎・氷・量子。風属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -8821,6 +9649,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.meteor-eagle.name": {
+    "text": "メテオイーグル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.meteor-eagle.summary": {
+    "text": "風・量子・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.meteor-eagle.body": {
+    "text": "晨昏の奇獣に属する通常エネミー。弱点は風・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.thus-burns-the-dawn.name": {
     "text": "燃え盛る黎明のように",
     "sourceHash": null,
@@ -8943,6 +9789,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.shadowburn.body": {
     "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発跳躍」を除くイベント跳躍で入手できると案内された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yakuo-hiden-tanrensha.name": {
+    "text": "薬王秘伝・鍛錬者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yakuo-hiden-tanrensha.summary": {
+    "text": "氷・風・虚数が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.yakuo-hiden-tanrensha.body": {
+    "text": "仙舟「羅浮」の薬王秘伝に属する強敵。弱点は氷・風・虚数。雷属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -9379,6 +10243,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.lesser-sting.name": {
+    "text": "幼蟄虫",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lesser-sting.summary": {
+    "text": "量子・虚数が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lesser-sting.body": {
+    "text": "スウォーム（蟄虫の群れ）に属する通常エネミー。弱点は量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.hey-over-here.name": {
     "text": "よぉ、ここにいるぜ",
     "sourceHash": null,
@@ -9753,6 +10635,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.meshing-cogs.body": {
     "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。装備者が攻撃するか攻撃を受けると、条件に応じて[[energy]]を回復できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.frigid-prowler.name": {
+    "text": "冷寒徘徊者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.frigid-prowler.summary": {
+    "text": "炎・雷・量子が弱点の強敵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.frigid-prowler.body": {
+    "text": "裂界造物の一種で、強敵。弱点は炎・雷・量子。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
