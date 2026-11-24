@@ -31,6 +31,95 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.devilboo.name",
+    "ja": "アクマデボンプ",
+    "context": "glossary zzz term devilboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.devilboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term devilboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.devilboo.body",
+    "ja": "編成に加えられる[[bangboo]]。空中から追尾弾を撃ち、エーテルダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term devilboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.avocaboo.name",
+    "ja": "アボカドボンプ",
+    "context": "glossary zzz term avocaboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.avocaboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term avocaboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.avocaboo.body",
+    "ja": "編成に加えられる[[bangboo]]。ジュース弾に触れたメンバーのHPを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term avocaboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.amillion.name",
+    "ja": "アミリオン",
+    "context": "glossary zzz term amillion: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.amillion.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term amillion: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.amillion.body",
+    "ja": "編成に加えられる[[bangboo]]。機関銃で物理ダメージを与える。[[cunning-hares]]と組むと敵の数に応じて連携攻撃を強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term amillion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[cunning-hares]]"
+    ]
+  },
+  {
     "id": "term.zzz.hailstorm-shrine.name",
     "ja": "あられ落つ星殿",
     "context": "glossary zzz term hailstorm-shrine: Japanese official term name",
@@ -294,6 +383,66 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.urutora-neivu.name",
+    "ja": "ウルトラネイヴ",
+    "context": "glossary zzz term urutora-neivu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.urutora-neivu.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term urutora-neivu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.urutora-neivu.body",
+    "ja": "編成に加えられる[[bangboo]]。飛行しながら炎の射撃を行う。[[roscaelifer]]陣営の編成でエネルギー回復を支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term urutora-neivu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[roscaelifer]]"
+    ]
+  },
+  {
+    "id": "term.zzz.cryboo.name",
+    "ja": "ウルリンボンプ",
+    "context": "glossary zzz term cryboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cryboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term cryboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cryboo.body",
+    "ja": "編成に加えられる[[bangboo]]。爆弾を投げて炎ダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term cryboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
     ]
   },
   {
@@ -731,6 +880,39 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.blazing-laurel.name",
+    "ja": "炎心の桂冠",
+    "context": "glossary zzz term blazing-laurel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blazing-laurel.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term blazing-laurel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blazing-laurel.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。[[ex-special-attack]]や[[chain-attack]]などに応じて[[stun]]蓄積を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term blazing-laurel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[chain-attack]]",
+      "[[ex-special-attack]]",
+      "[[stun-specialty]]",
+      "[[stun]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.orbit-rail.name",
     "ja": "オービットレール",
     "context": "glossary zzz term orbit-rail: Japanese official term name",
@@ -758,6 +940,65 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.oshi-shi.name",
+    "ja": "オシシ",
+    "context": "glossary zzz term oshi-shi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.oshi-shi.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term oshi-shi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.oshi-shi.body",
+    "ja": "編成に加えられる[[bangboo]]。跳ね返る石の球で複数の敵を攻撃できる。[[yunkui-summit]]との編成で与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term oshi-shi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[yunkui-summit]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sumoboo.name",
+    "ja": "オスモウボンプ",
+    "context": "glossary zzz term sumoboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sumoboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term sumoboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sumoboo.body",
+    "ja": "編成に加えられる[[bangboo]]。跳び上がって落下打撃を放ち、敵の動作を中断しやすい。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sumoboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.obol-squad.name",
     "ja": "オボルス小隊",
     "context": "glossary zzz term obol-squad: Japanese official term name",
@@ -783,6 +1024,35 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.luckyboo.name",
+    "ja": "オマネキボンプ",
+    "context": "glossary zzz term luckyboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.luckyboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term luckyboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.luckyboo.body",
+    "ja": "編成に加えられる[[bangboo]]。コインを投げつける連続攻撃で物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term luckyboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
   },
   {
     "id": "term.zzz.omoi-ga-orinasu-uta.name",
@@ -1159,6 +1429,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.brawlerboo.name",
+    "ja": "カクトウボンプ",
+    "context": "glossary zzz term brawlerboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.brawlerboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term brawlerboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.brawlerboo.body",
+    "ja": "編成に加えられる[[bangboo]]。浮遊中に味方が重撃を当てると、急降下して炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term brawlerboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.wind-salon.name",
     "ja": "風鳴りのサロン",
     "context": "glossary zzz term wind-salon: Japanese official term name",
@@ -1186,6 +1485,94 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]",
       "[[routine-cleanup]]"
+    ]
+  },
+  {
+    "id": "term.zzz.baddieboo.name",
+    "ja": "カチコミボンプ",
+    "context": "glossary zzz term baddieboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.baddieboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term baddieboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.baddieboo.body",
+    "ja": "編成に加えられる[[bangboo]]。ロケットランチャーや火炎瓶で炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term baddieboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.snap.name",
+    "ja": "カチャコ",
+    "context": "glossary zzz term snap: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.snap.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term snap: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.snap.body",
+    "ja": "編成に加えられる[[bangboo]]。味方の回避反撃や支援行動を撮影し、撮影したメンバーの与ダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term snap: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sharkboo.name",
+    "ja": "ガブットボンプ",
+    "context": "glossary zzz term sharkboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sharkboo.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term sharkboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sharkboo.body",
+    "ja": "編成に加えられる[[bangboo]]。追尾トラップを設置し、敵に氷ダメージを与えて[[attribute-anomaly]]蓄積を増やす。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sharkboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
     ]
   },
   {
@@ -1217,6 +1604,36 @@ export const sources: SourceText[] = [
       "[[anomaly]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.agent-gulliver.name",
+    "ja": "ガリバー隊員",
+    "context": "glossary zzz term agent-gulliver: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.agent-gulliver.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term agent-gulliver: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.agent-gulliver.body",
+    "ja": "編成に加えられる[[bangboo]]。前方への射撃で電気ダメージを与え、[[attribute-anomaly]]を蓄積させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term agent-gulliver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
     ]
   },
   {
@@ -1278,6 +1695,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.booressure.name",
+    "ja": "キアツデボンプ",
+    "context": "glossary zzz term booressure: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.booressure.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term booressure: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.booressure.body",
+    "ja": "編成に加えられる[[bangboo]]。泡を作り、泡に触れたメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term booressure: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.deadly-assault.name",
     "ja": "危局強襲戦",
     "context": "glossary zzz term deadly-assault: Japanese official term name",
@@ -1304,6 +1750,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent]]"
+    ]
+  },
+  {
+    "id": "term.zzz.knightboo.name",
+    "ja": "キシドウボンプ",
+    "context": "glossary zzz term knightboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.knightboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term knightboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.knightboo.body",
+    "ja": "編成に加えられる[[bangboo]]。ナイトスターを出し、触れたメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term knightboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -1595,6 +2070,37 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.ice-jade-teapot.name",
+    "ja": "玉壺青氷",
+    "context": "glossary zzz term ice-jade-teapot: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ice-jade-teapot.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term ice-jade-teapot: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ice-jade-teapot.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。通常攻撃の命中で蓄積を得て[[impact]]を強化し、一定の蓄積から味方の与ダメージも伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ice-jade-teapot: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.kinran-no-kokoro.name",
     "ja": "金襴の心",
     "context": "glossary zzz term kinran-no-kokoro: Japanese official term name",
@@ -1709,6 +2215,35 @@ export const sources: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.magnetiboo.name",
+    "ja": "クッツキボンプ",
+    "context": "glossary zzz term magnetiboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetiboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term magnetiboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetiboo.body",
+    "ja": "編成に加えられる[[bangboo]]。敵を引き寄せて物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term magnetiboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.krampus-compliance-authority.name",
     "ja": "クランプスの黒枝",
     "context": "glossary zzz term krampus-compliance-authority: Japanese official term name",
@@ -1795,6 +2330,38 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.unfettered-game-ball.name",
+    "ja": "ゲームボール",
+    "context": "glossary zzz term unfettered-game-ball: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.unfettered-game-ball.summary",
+    "ja": "支援向けのA級音動機。",
+    "context": "glossary zzz term unfettered-game-ball: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.unfettered-game-ball.body",
+    "ja": "「[[support]]」向けの[[w-engine]]。装備者が[[attribute]]相性で有利な攻撃を当てると、味方の[[crit-rate]]を支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term unfettered-game-ball: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute]]",
+      "[[crit-rate]]",
+      "[[support]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -1977,6 +2544,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.safety.name",
+    "ja": "ゴアンゼン",
+    "context": "glossary zzz term safety: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.safety.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term safety: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.safety.body",
+    "ja": "編成に加えられる[[bangboo]]。ドリルを使った物理攻撃を行う。[[belobog-heavy-industries]]との編成で連携攻撃が強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term safety: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[belobog-heavy-industries]]"
+    ]
+  },
+  {
     "id": "term.zzz.interboo-coin.name",
     "ja": "コインナ",
     "context": "glossary zzz term interboo-coin: Japanese official term name",
@@ -2031,6 +2628,37 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-restrained.name",
+    "ja": "拘縛されし者",
+    "context": "glossary zzz term the-restrained: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-restrained.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term the-restrained: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-restrained.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。攻撃を当てることで通常攻撃のダメージと[[stun]]蓄積を段階的に強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term the-restrained: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[stun]]",
+      "[[w-engine]]"
+    ]
   },
   {
     "id": "term.zzz.koureiseki.name",
@@ -2178,6 +2806,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kosan.name",
+    "ja": "コサン",
+    "context": "glossary zzz term kosan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kosan.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term kosan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kosan.body",
+    "ja": "編成に加えられる[[bangboo]]。応援で出場中のメンバーを回復し、[[angels-of-delusion]]との編成では攻撃力も支援できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kosan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[angels-of-delusion]]",
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.disorder.name",
     "ja": "混沌",
     "context": "glossary zzz term disorder: Japanese official term name",
@@ -2263,6 +2921,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[freeze]]"
+    ]
+  },
+  {
+    "id": "term.zzz.overtimeboo.name",
+    "ja": "サビザンボンプ",
+    "context": "glossary zzz term overtimeboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.overtimeboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term overtimeboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.overtimeboo.body",
+    "ja": "編成に加えられる[[bangboo]]。パソコンデスクをぶつけて物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term overtimeboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -2622,6 +3309,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.severed-innocence.name",
+    "ja": "純然たる犠牲",
+    "context": "glossary zzz term severed-innocence: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.severed-innocence.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term severed-innocence: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.severed-innocence.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。Ver.1.6の限定[[w-engine]]として告知された。",
+    "context": "glossary zzz term severed-innocence: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.white-water-ballad.name",
     "ja": "純白の行歌",
     "context": "glossary zzz term white-water-ballad: Japanese official term name",
@@ -2942,6 +3659,69 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.red-moccus.name",
+    "ja": "真紅のモックス",
+    "context": "glossary zzz term red-moccus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.red-moccus.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term red-moccus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.red-moccus.body",
+    "ja": "編成に加えられる[[bangboo]]。バイクで遠くの敵を手前に押し寄せる。[[sons-of-calydon]]と組むと攻撃を強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term red-moccus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[sons-of-calydon]]"
+    ]
+  },
+  {
+    "id": "term.zzz.heartstring-nocturne.name",
+    "ja": "心弦のノクターン",
+    "context": "glossary zzz term heartstring-nocturne: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.heartstring-nocturne.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term heartstring-nocturne: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.heartstring-nocturne.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。[[crit-dmg]]を上げ、条件を満たすと[[chain-attack]]や[[ultimate]]で炎耐性を一部無視できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term heartstring-nocturne: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[chain-attack]]",
+      "[[crit-dmg]]",
+      "[[ultimate]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.mindscape-cinema.name",
     "ja": "心象映画",
     "context": "glossary zzz term mindscape-cinema: Japanese official term name",
@@ -3140,6 +3920,64 @@ export const sources: SourceText[] = [
       "[[rupture]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.boollseye.name",
+    "ja": "ズバットボンプ",
+    "context": "glossary zzz term boollseye: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boollseye.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term boollseye: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boollseye.body",
+    "ja": "編成に加えられる[[bangboo]]。ダーツを投げて物理ダメージを与える。刺突タイプの味方と組むと連携攻撃が強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term boollseye: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.excaliboo.name",
+    "ja": "セイケンボンプ",
+    "context": "glossary zzz term excaliboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.excaliboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term excaliboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.excaliboo.body",
+    "ja": "編成に加えられる[[bangboo]]。剣を使った物理攻撃を行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term excaliboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -3518,6 +4356,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.spectral-gaze.name",
+    "ja": "奪魂の瞑目",
+    "context": "glossary zzz term spectral-gaze: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.spectral-gaze.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term spectral-gaze: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.spectral-gaze.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。Ver.1.6の限定[[w-engine]]として告知された。",
+    "context": "glossary zzz term spectral-gaze: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.exploreboo.name",
+    "ja": "タンケンボンプ",
+    "context": "glossary zzz term exploreboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exploreboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term exploreboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exploreboo.body",
+    "ja": "編成に加えられる[[bangboo]]。採掘結果に応じて、HP回復、シールド、エネルギー回復支援のいずれかを行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term exploreboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.lumina-security-branch.name",
     "ja": "治安局ルミナ分署",
     "context": "glossary zzz term lumina-security-branch: Japanese official term name",
@@ -3664,6 +4561,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.officer-cui.name",
+    "ja": "ツェイ巡査",
+    "context": "glossary zzz term officer-cui: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.officer-cui.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term officer-cui: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.officer-cui.body",
+    "ja": "編成に加えられる[[bangboo]]。噛みつきによる物理攻撃を行う。[[special-response-team]]との編成で追加攻撃が出ることがある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term officer-cui: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[special-response-team]]"
+    ]
+  },
+  {
     "id": "term.zzz.tsumi-toraeru-rogoku.name",
     "ja": "罪捕らえる牢獄",
     "context": "glossary zzz term tsumi-toraeru-rogoku: Japanese official term name",
@@ -3691,6 +4618,37 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[attack]]",
       "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.deep-sea-visitor.name",
+    "ja": "ディープシー・ビジター",
+    "context": "glossary zzz term deep-sea-visitor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.deep-sea-visitor.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term deep-sea-visitor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.deep-sea-visitor.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。氷ダメージを強化し、通常攻撃や氷のダッシュ攻撃を当てると[[crit-rate]]を上げられる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term deep-sea-visitor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
       "[[w-engine]]"
     ]
   },
@@ -4172,6 +5130,38 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hellfire-gears.name",
+    "ja": "燃獄ギア",
+    "context": "glossary zzz term hellfire-gears: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hellfire-gears.summary",
+    "ja": "撃破向けのS級音動機。",
+    "context": "glossary zzz term hellfire-gears: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hellfire-gears.body",
+    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。控えにいる間のエネルギー回復を助け、[[ex-special-attack]]を使うと[[impact]]が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hellfire-gears: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[ex-special-attack]]",
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.flamemaker-shaker.name",
     "ja": "バーニング・シェイカー",
     "context": "glossary zzz term flamemaker-shaker: Japanese official term name",
@@ -4295,6 +5285,65 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.steel-cushion.name",
+    "ja": "鋼の肉球",
+    "context": "glossary zzz term steel-cushion: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.steel-cushion.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term steel-cushion: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.steel-cushion.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。物理ダメージを強化し、背後から攻撃を当てると与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term steel-cushion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.paperboo.name",
+    "ja": "ハコイリボンプ",
+    "context": "glossary zzz term paperboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.paperboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term paperboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.paperboo.body",
+    "ja": "編成に加えられる[[bangboo]]。段ボール箱で偽装し、敵の攻撃を受けるなどの条件で爆発して物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term paperboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.battery-charge.name",
     "ja": "バッテリー",
     "context": "glossary zzz term battery-charge: Japanese official term name",
@@ -4325,6 +5374,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.butler.name",
+    "ja": "バトラー",
+    "context": "glossary zzz term butler: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.butler.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term butler: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.butler.body",
+    "ja": "編成に加えられる[[bangboo]]。作ったお茶菓子でメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term butler: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.puffer-electro.name",
     "ja": "パファー・エレクトロ",
     "context": "glossary zzz term puffer-electro: Japanese official term name",
@@ -4351,6 +5429,35 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.rocketboo.name",
+    "ja": "ハヤスギボンプ",
+    "context": "glossary zzz term rocketboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rocketboo.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term rocketboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rocketboo.body",
+    "ja": "編成に加えられる[[bangboo]]。ロケットで突進し、爆発で周囲に炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term rocketboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -4414,6 +5521,66 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.byaku-burikku.name",
+    "ja": "ビャークブリック",
+    "context": "glossary zzz term byaku-burikku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.byaku-burikku.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term byaku-burikku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.byaku-burikku.body",
+    "ja": "編成に加えられる[[bangboo]]。浮遊ビットのレーザーで物理ダメージと[[stun]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term byaku-burikku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]",
+      "[[stun]]"
+    ]
+  },
+  {
+    "id": "term.zzz.electroboo.name",
+    "ja": "ビリビリボンプ",
+    "context": "glossary zzz term electroboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.electroboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term electroboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.electroboo.body",
+    "ja": "編成に加えられる[[bangboo]]。突進後に電撃を繰り出し、電気系の[[attribute-anomaly]]を蓄積させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term electroboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.booastrum.name",
     "ja": "ブーアストラム",
     "context": "glossary zzz term booastrum: Japanese official term name",
@@ -4474,6 +5641,97 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.fusion-compiler.name",
+    "ja": "複合コンパイラ",
+    "context": "glossary zzz term fusion-compiler: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fusion-compiler.summary",
+    "ja": "異常向けのS級音動機。",
+    "context": "glossary zzz term fusion-compiler: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fusion-compiler.body",
+    "ja": "「[[anomaly]]」向けの[[w-engine]]。攻撃力を上げ、特殊スキルや[[ex-special-attack]]の使用で[[anomaly-proficiency]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term fusion-compiler: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[ex-special-attack]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.bagboo.name",
+    "ja": "フクロノボンプ",
+    "context": "glossary zzz term bagboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bagboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term bagboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bagboo.body",
+    "ja": "編成に加えられる[[bangboo]]。二丁の包丁による連続斬撃で物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bagboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.plugboo.name",
+    "ja": "プラグノボンプ",
+    "context": "glossary zzz term plugboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.plugboo.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term plugboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.plugboo.body",
+    "ja": "編成に加えられる[[bangboo]]。電磁砲で電気ダメージを与える。電気系の編成では連携時の[[attribute-anomaly]]蓄積を伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term plugboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.freedom-blues.name",
     "ja": "フリーダム・ブルース",
     "context": "glossary zzz term freedom-blues: Japanese official term name",
@@ -4500,6 +5758,36 @@ export const sources: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.the-brimstone.name",
+    "ja": "ブリムストーン",
+    "context": "glossary zzz term the-brimstone: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-brimstone.summary",
+    "ja": "強攻向けのS級音動機。",
+    "context": "glossary zzz term the-brimstone: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-brimstone.body",
+    "ja": "「[[attack]]」向けの[[w-engine]]。通常攻撃やダッシュ攻撃、回避反撃を当てるたびに攻撃力を積み上げられる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term the-brimstone: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4881,6 +6169,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.penguinboo.name",
+    "ja": "ペンギンボンプ",
+    "context": "glossary zzz term penguinboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.penguinboo.summary",
+    "ja": "戦闘に同行するA級ボンプ。",
+    "context": "glossary zzz term penguinboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.penguinboo.body",
+    "ja": "編成に加えられる[[bangboo]]。氷の刃で敵を斬り、氷ダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term penguinboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.signal-search.name",
     "ja": "変調",
     "context": "glossary zzz term signal-search: Japanese official term name",
@@ -5199,6 +6517,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.mercury.name",
+    "ja": "マーキュリー",
+    "context": "glossary zzz term mercury: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mercury.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term mercury: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mercury.body",
+    "ja": "編成に加えられる[[bangboo]]。乗り物を呼び、火炎放射で炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mercury: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.lost-void.name",
     "ja": "迷いの地",
     "context": "glossary zzz term lost-void: Japanese official term name",
@@ -5253,6 +6600,35 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[encrypted-master-tape]]",
       "[[signal-search]]"
+    ]
+  },
+  {
+    "id": "term.zzz.miss-esme.name",
+    "ja": "ミス・エスメ",
+    "context": "glossary zzz term miss-esme: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miss-esme.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term miss-esme: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miss-esme.body",
+    "ja": "編成に加えられる[[bangboo]]。メンバーが触れるとHPまたはエネルギーが回復するアイテムを生成する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miss-esme: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -5314,6 +6690,35 @@ export const sources: SourceText[] = [
       "[[anomaly]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.meme.name",
+    "ja": "メメ",
+    "context": "glossary zzz term meme: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.meme.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term meme: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.meme.body",
+    "ja": "編成に加えられる[[bangboo]]。飛剣で物理攻撃を行う。葉瞬光と組むと「剣」に関わる追加効果を得られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term meme: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -5640,6 +7045,35 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.bangvolver.name",
+    "ja": "リボルバボンプ",
+    "context": "glossary zzz term bangvolver: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangvolver.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term bangvolver: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bangvolver.body",
+    "ja": "編成に加えられる[[bangboo]]。装填された弾の種類により、射撃の威力や挙動が変わる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bangvolver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
+    ]
+  },
+  {
     "id": "term.zzz.shining-aria.name",
     "ja": "流光のアリア",
     "context": "glossary zzz term shining-aria: Japanese official term name",
@@ -5695,6 +7129,36 @@ export const sources: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonaboo.name",
+    "ja": "レゾナンボンプ",
+    "context": "glossary zzz term resonaboo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonaboo.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term resonaboo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.resonaboo.body",
+    "ja": "編成に加えられる[[bangboo]]。ブラックホールで敵を引き寄せつつ、エーテルダメージと[[attribute-anomaly]]蓄積を与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term resonaboo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]"
+    ]
   },
   {
     "id": "term.zzz.resonium.name",
@@ -5839,6 +7303,39 @@ export const sources: SourceText[] = [
       "[[support]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.robin.name",
+    "ja": "ロビン",
+    "context": "glossary zzz term robin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.robin.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term robin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.robin.body",
+    "ja": "編成に加えられる[[bangboo]]。カードの種類によりダメージや[[stun]]蓄積、[[attribute-anomaly]]蓄積が変わる。[[mockingbird]]との編成では出場メンバーの[[specialty]]によってカードを固定できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term robin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly]]",
+      "[[bangboo]]",
+      "[[mockingbird]]",
+      "[[specialty]]",
+      "[[stun]]"
     ]
   }
 ];

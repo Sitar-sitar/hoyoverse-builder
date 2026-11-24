@@ -37,6 +37,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.amakumo-fruit.name": {
+    "text": "天雲草の実",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.amakumo-fruit.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.amakumo-fruit.body": {
+    "text": "[[inazuma]]で採れる育成素材。セイライ島の天雲峠周辺に多い。雷電将軍や綺良々の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.small-lamp-grass.name": {
+    "text": "イグサ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.small-lamp-grass.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.small-lamp-grass.body": {
+    "text": "[[mondstadt]]で採れる育成素材。夜間に淡く光る植物で、囁きの森などに生える。アンバーやフィッシュルの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.inazuma.name": {
     "text": "稲妻",
     "sourceHash": null,
@@ -163,6 +199,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.valberry.name": {
+    "text": "ヴァルベリー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.valberry.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.valberry.body": {
+    "text": "[[mondstadt]]で採れる育成素材。望風山地周辺に生える実。リサやノエルの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vivid-notions.name": {
     "text": "ヴィヴィッド・ハート",
     "sourceHash": null,
@@ -199,6 +253,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sea-ganoderma.name": {
+    "text": "ウミレイシ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sea-ganoderma.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sea-ganoderma.body": {
+    "text": "[[inazuma]]で採れる育成素材。島々の浅瀬などに生える。楓原万葉や八重神子の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.golden-troupe.name": {
     "text": "黄金の劇団",
     "sourceHash": null,
@@ -213,6 +285,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.golden-troupe.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は元素スキルダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.onikabuto.name": {
+    "text": "オニカブトムシ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.onikabuto.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.onikabuto.body": {
+    "text": "[[inazuma]]で採れる育成素材。木の幹や岩壁にとまっている昆虫。荒瀧一斗や鹿野院平蔵の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -415,6 +505,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.kalpalata-lotus.name": {
+    "text": "カルパラタ蓮",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kalpalata-lotus.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kalpalata-lotus.body": {
+    "text": "[[sumeru]]で採れる育成素材。森林地帯の崖に生える。ナヒーダやドリーの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.withering-purpurbloom.name": {
+    "text": "枯れ紫菖",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.withering-purpurbloom.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.withering-purpurbloom.body": {
+    "text": "[[natlan]]で採れる育成素材。花翼の集の集落周辺などで採集できる。チャスカの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.ornamental-fish.name": {
     "text": "観賞魚",
     "sourceHash": null,
@@ -465,6 +591,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.peak-patrol-song.body": {
     "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skysplit-gembloom.name": {
+    "text": "岩裂の花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skysplit-gembloom.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skysplit-gembloom.body": {
+    "text": "[[natlan]]で採れる育成素材。豊穣の邦の周辺などで採集できる。ヴァレサの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -649,6 +793,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.wolfhook.name": {
+    "text": "ググプラム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wolfhook.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wolfhook.body": {
+    "text": "[[mondstadt]]で採れる育成素材。奔狼領の茂みや樹木の根元で集められる。レザーやミカの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.spread.name": {
     "text": "草激化",
     "sourceHash": null,
@@ -663,6 +825,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.spread.body": {
     "text": "[[quicken|激化状態]]に草が作用すると発生し、反応を起こした草元素攻撃の基礎ダメージを増加させる。[[elemental-mastery]]も増加量に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glowing-hornshroom.name": {
+    "text": "蛍光ツノキノコ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glowing-hornshroom.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glowing-hornshroom.body": {
+    "text": "[[natlan]]で採れる育成素材。謎煙の主の集落周辺などに生える。オロルンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silk-flower.name": {
+    "text": "霓裳花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silk-flower.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silk-flower.body": {
+    "text": "[[liyue]]で採れる育成素材。璃月港や望舒旅館の周辺に咲く。行秋や胡桃の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -753,6 +951,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.crystallize.body": {
     "text": "岩が炎・水・雷・氷と反応すると元素の欠片が生成される。欠片を拾うと対応する元素のシールドを獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendrobium.name": {
+    "text": "血石華",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendrobium.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendrobium.body": {
+    "text": "[[inazuma]]で採れる育成素材。名椎の浜などの戦場跡に咲く赤い花。九条裟羅や千織の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.quenepa-berry.name": {
+    "text": "ケネパベリー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.quenepa-berry.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.quenepa-berry.body": {
+    "text": "[[natlan]]で採れる育成素材。テケメカンの谷周辺などで採集でき、カチーナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -973,6 +1207,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.lakelight-lily.name": {
+    "text": "湖光の鈴蘭",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lakelight-lily.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lakelight-lily.body": {
+    "text": "[[fontaine]]で採れる育成素材。エリニュス山林の水辺などに生える。フリーナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.surfs-up.name": {
     "text": "サーフィンタイム",
     "sourceHash": null,
@@ -1063,6 +1315,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.nilotpala-lotus.name": {
+    "text": "サウマラタ蓮",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nilotpala-lotus.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nilotpala-lotus.body": {
+    "text": "[[sumeru]]で採れる育成素材。森林地帯の水辺に生える。ティナリやレイラの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.saurian-claw-succulent.name": {
+    "text": "サウリアンサキュレント",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.saurian-claw-succulent.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.saurian-claw-succulent.body": {
+    "text": "[[natlan]]で採れる育成素材。懸木の民の集落周辺などで見つかる。キィニチの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sand-grease-pupa.name": {
+    "text": "砂脂蛹",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sand-grease-pupa.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sand-grease-pupa.body": {
+    "text": "[[sumeru]]で採れる育成素材。千尋の砂漠の地下通路などで採集できる。アルハイゼンやディシアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.desert-pavilion-chronicle.name": {
     "text": "砂上の楼閣の史話",
     "sourceHash": null,
@@ -1077,6 +1383,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.desert-pavilion-chronicle.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.trishiraite.name": {
+    "text": "サングイト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.trishiraite.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.trishiraite.body": {
+    "text": "[[sumeru]]で採れる育成素材。蒼漠の囿土で鉱床を割って集める。セトスの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sango-pearl.name": {
+    "text": "珊瑚真珠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sango-pearl.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sango-pearl.body": {
+    "text": "[[inazuma]]で採れる育成素材。海祇島では珊瑚の上などに見つかる。珊瑚宮心海やゴローの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1135,6 +1477,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.brilliant-chrysanthemum.name": {
+    "text": "シャクギク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.brilliant-chrysanthemum.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.brilliant-chrysanthemum.body": {
+    "text": "[[natlan]]で採れる育成素材。聖火競技場の周辺などに咲く。シロネンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.charged-attack.name": {
     "text": "重撃",
     "sourceHash": null,
@@ -1185,6 +1545,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.shuuren-point.body": {
     "text": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.crystal-marrow.name": {
+    "text": "晶化骨髄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.crystal-marrow.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.crystal-marrow.body": {
+    "text": "[[inazuma]]で採れる育成素材。ヤシオリ島の大蛇の骨の周辺などで採集できる。早柚やアーロイの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1423,6 +1801,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.scarab.name": {
+    "text": "聖金虫",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scarab.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scarab.body": {
+    "text": "[[sumeru]]で採れる育成素材。砂漠の地上や遺跡内で捕まえられる昆虫。セノの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sanctifying-dust.name": {
     "text": "聖啓の塵",
     "sourceHash": null,
@@ -1477,6 +1873,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.qingxin.name": {
+    "text": "清心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.qingxin.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.qingxin.body": {
+    "text": "[[liyue]]で採れる育成素材。高い岩山の頂上などに生える。甘雨や魈の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.clearwater-jade.name": {
+    "text": "清水玉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.clearwater-jade.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.clearwater-jade.body": {
+    "text": "[[liyue]]で採れる育成素材。沈玉の谷で採れる鉱物。閑雲の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.splendor-of-tranquil-waters.name": {
     "text": "静水流転の輝き",
     "sourceHash": null,
@@ -1491,6 +1923,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.splendor-of-tranquil-waters.body": {
     "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starconch.name": {
+    "text": "星螺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starconch.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.starconch.body": {
+    "text": "[[liyue]]で採れる育成素材。海岸の砂浜で拾える貝殻。タルタリヤや夜蘭の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1527,6 +1977,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.world-level.body": {
     "text": "上昇すると魔物やボスのレベル、挑戦の難易度、報酬に影響する。上げるために[[adventure-rank]]や突破任務の条件がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.henna-berry.name": {
+    "text": "赤念の実",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.henna-berry.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.henna-berry.body": {
+    "text": "[[sumeru]]で採れる育成素材。砂漠のサボテンに実る。キャンディスやファルザンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cor-lapis.name": {
+    "text": "石珀",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cor-lapis.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cor-lapis.body": {
+    "text": "[[liyue]]で採れる育成素材。琥牢山などで鉱床を叩き割って集める。鍾離や重雲の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cecilia.name": {
+    "text": "セシリアの花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cecilia.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cecilia.body": {
+    "text": "[[mondstadt]]で採れる育成素材。星拾いの崖で採集できる。ウェンティやアルベドの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.jueyun-chili.name": {
+    "text": "絶雲の唐辛子",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.jueyun-chili.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.jueyun-chili.body": {
+    "text": "[[liyue]]で採れる育成素材。軽策荘などに実る。香菱やヨォーヨの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1729,6 +2251,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.beryl-conch.name": {
+    "text": "蒼晶螺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.beryl-conch.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.beryl-conch.body": {
+    "text": "[[fontaine]]で採れる育成素材。水中などで拾える貝で、シャルロットやエスコフィエの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.dawning-frost.name": {
     "text": "霜辰",
     "sourceHash": null,
@@ -1815,6 +2355,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.tansakudo.body": {
     "text": "宝箱の発見、神の瞳の収集、ワープポイントの開放などで上がり、マップで確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.subdetection-unit.name": {
+    "text": "探測ユニット・子機",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.subdetection-unit.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.subdetection-unit.body": {
+    "text": "[[fontaine]]で採れる育成素材。フォンテーヌ科学院周辺などにいる機械の子機。リオセスリの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dandelion-seed.name": {
+    "text": "蒲公英の種",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dandelion-seed.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dandelion-seed.body": {
+    "text": "[[mondstadt]]で採れる育成素材。風[[element]]を当てて種を飛ばすと採集できる。ジンやエウルアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2269,6 +2845,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.mourning-flower.name": {
+    "text": "悼霊花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mourning-flower.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mourning-flower.body": {
+    "text": "[[sumeru]]で採れる育成素材。蒼漠の囿土の水辺などに咲く。カーヴェの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.unfinished-reverie.name": {
     "text": "遂げられなかった想い",
     "sourceHash": null,
@@ -2305,6 +2899,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.calla-lily.name": {
+    "text": "ドドリアン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.calla-lily.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.calla-lily.body": {
+    "text": "[[mondstadt]]で採れる育成素材。池や湖の岸辺に生える。ディオナやガイアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.long-nights-oath.name": {
     "text": "長き夜の誓い",
     "sourceHash": null,
@@ -2319,6 +2931,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.long-nights-oath.body": {
     "text": "2セット効果で落下攻撃ダメージが上昇する。4セット効果は落下攻撃、重撃または元素スキルが命中すると、落下攻撃を強化する効果を獲得する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.naku-weed.name": {
+    "text": "鳴草",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.naku-weed.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.naku-weed.body": {
+    "text": "[[inazuma]]で採れる育成素材。たたら砂などで採集できる。宵宮や久岐忍の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2359,6 +2989,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sprayfeather-gill.name": {
+    "text": "波しぶきのエラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sprayfeather-gill.summary": {
+    "text": "ナタの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sprayfeather-gill.body": {
+    "text": "[[natlan]]で採れる育成素材。流泉の衆周辺などの水辺で採集できる。ムアラニの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.waveriding-whirl.name": {
     "text": "波乗りの旋回",
     "sourceHash": null,
@@ -2395,6 +3043,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.spring-of-the-first-dewdrop.name": {
+    "text": "初露の源",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.spring-of-the-first-dewdrop.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.spring-of-the-first-dewdrop.body": {
+    "text": "[[fontaine]]で採れる育成素材。モルテ地区の水中で集められる。ナヴィアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.padisarah.name": {
+    "text": "パティサラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.padisarah.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.padisarah.body": {
+    "text": "[[sumeru]]で採れる育成素材。スメールシティなどで採集できる花。ニィロウの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.flower-wreathed-feathers.name": {
     "text": "花飾りの羽",
     "sourceHash": null,
@@ -2409,6 +3093,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.flower-wreathed-feathers.body": {
     "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sakura-bloom.name": {
+    "text": "緋櫻毬",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sakura-bloom.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sakura-bloom.body": {
+    "text": "[[inazuma]]で採れる育成素材。鳴神島で舞う花びらに雷[[element]]を当てて採集する。神里綾華や神里綾人の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2481,6 +3183,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.marechaussee-hunter.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は通常攻撃と重撃のダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.windwheel-aster.name": {
+    "text": "風車アスター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.windwheel-aster.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.windwheel-aster.body": {
+    "text": "[[mondstadt]]で採れる育成素材。風立ちの地などで採集できる花。ベネットやスクロースの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2625,6 +3345,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.astral-vultures-crimson-plumage.body": {
     "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.philanemo-mushroom.name": {
+    "text": "慕風のマッシュルーム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.philanemo-mushroom.summary": {
+    "text": "モンドの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.philanemo-mushroom.body": {
+    "text": "[[mondstadt]]で採れる育成素材。建物の壁や屋根の縁に生えるキノコ。バーバラやモナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2809,6 +3547,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.noctilucous-jade.name": {
+    "text": "夜泊石",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.noctilucous-jade.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.noctilucous-jade.body": {
+    "text": "[[liyue]]で採れる育成素材。明蘊町などで鉱石を割って集める。北斗や煙緋の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fang-of-the-mountain-king.name": {
     "text": "山の王の長牙",
     "sourceHash": null,
@@ -2841,6 +3597,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.archaic-petra.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は岩元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fluorescent-fungus.name": {
+    "text": "ユウトウタケ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fluorescent-fungus.summary": {
+    "text": "稲妻の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fluorescent-fungus.body": {
+    "text": "[[inazuma]]で採れる育成素材。鶴観に生える光るキノコ。トーマの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2917,6 +3691,96 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.lumitoile.name": {
+    "text": "ルエトワール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lumitoile.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lumitoile.body": {
+    "text": "[[fontaine]]で採れる育成素材。水中の構造物や岸辺で見つかる。ヌヴィレットの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rukkhashava-mushrooms.name": {
+    "text": "ルッカデヴァータダケ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rukkhashava-mushrooms.summary": {
+    "text": "スメールの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rukkhashava-mushrooms.body": {
+    "text": "[[sumeru]]で採れる育成素材。樹木の上や周囲でも見つかるキノコ。コレイや放浪者の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lumidouce-bell.name": {
+    "text": "ルミドゥースベル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lumidouce-bell.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lumidouce-bell.body": {
+    "text": "[[fontaine]]で採れる育成素材。地上の草地などに咲く花。リネットやシュヴルーズの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.violetgrass.name": {
+    "text": "琉璃袋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.violetgrass.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.violetgrass.body": {
+    "text": "[[liyue]]で採れる育成素材。主に崖の斜面に生える。七七や白朮の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glaze-lily.name": {
+    "text": "琉璃百合",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glaze-lily.summary": {
+    "text": "璃月の特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.glaze-lily.body": {
+    "text": "[[liyue]]で採れる育成素材。軽策荘や璃月港で採集できる。凝光や雲菫の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.pool-of-sapphire-grace.name": {
     "text": "霊沼雲池",
     "sourceHash": null,
@@ -2931,6 +3795,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.pool-of-sapphire-grace.body": {
     "text": "[[ornamental-fish]]を飼うことができる。璃月の釣り協会で交換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-rose.name": {
+    "text": "レインボーローズ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-rose.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-rose.body": {
+    "text": "[[fontaine]]で採れる育成素材。フォンテーヌ廷の周辺などで採集できる。リネやアルレッキーノの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2967,6 +3849,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.range-gauge.body": {
     "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.romaritime-flower.name": {
+    "text": "ロマリタイムフラワー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.romaritime-flower.summary": {
+    "text": "フォンテーヌの特産品。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.romaritime-flower.body": {
+    "text": "[[fontaine]]で採れる育成素材。地上で閉じている花には水[[element]]を当てると採集できる。フレミネやシグウィンの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
