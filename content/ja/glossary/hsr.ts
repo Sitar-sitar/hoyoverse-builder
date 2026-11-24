@@ -878,6 +878,36 @@ export const sources: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.garden-of-recollection.name",
+    "ja": "ガーデン・オブ・リコレクション",
+    "context": "glossary hsr term garden-of-recollection: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.garden-of-recollection.summary",
+    "ja": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
+    "context": "glossary hsr term garden-of-recollection: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.garden-of-recollection.body",
+    "ja": "「[[remembrance|記憶]]」の[[aeon|星神]]・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。中国語名は「流光憶庭」。",
+    "context": "glossary hsr term garden-of-recollection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[aeon|",
+      "[[remembrance|"
+    ]
+  },
+  {
     "id": "term.hsr.backwater-pass.name",
     "ja": "外縁通路",
     "context": "glossary hsr term backwater-pass: Japanese official term name",
@@ -1228,7 +1258,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.counter.body",
-    "ja": "攻撃を受けたときに反撃する仕組み。[[follow-up-attack|追加攻撃]]の一種として扱われ、自身のターン外にもダメージを与えられる。クラーラや雲璃が得意とし、敵に狙われるほど発動の機会が増えるため、[[taunt|挑発]]と組み合わせる運用もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "攻撃を受けたときに反撃する仕組み。[[follow-up-attack|追加攻撃]]の一種として扱われ、自身のターン外にもダメージを与えられる。クラーラや雲璃が得意とし、敵に狙われるほど発動の機会が増えるため、[[taunt|挑発]]と組み合わせる運用もある。",
     "context": "glossary hsr term counter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3296,7 +3326,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.galaxy-rangers.body",
-    "ja": "「[[the-hunt|巡狩]]」の[[aeon|星神]]・嵐を信仰し、悪を討ち弱きを助けることを信条とする放浪者たちの集団。組織としての統制は緩く、メンバーは宇宙各地を単独で放浪しながら活動する。ブートヒルや乱破が所属している。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "「[[the-hunt|巡狩]]」の[[aeon|星神]]・嵐を信仰し、悪を討ち弱きを助けることを信条とする放浪者たちの集団。組織としての統制は緩く、メンバーは宇宙各地を単独で放浪しながら活動する。ブートヒルや乱破が所属している。",
     "context": "glossary hsr term galaxy-rangers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3443,7 +3473,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.emanator.body",
-    "ja": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。[[aeon|星神]]に認められた者だけが就くことができ、力は並の「[[path|運命]]」の行人を遥かに上回る。「[[destruction|壊滅]]」の絶滅大君や、仙舟の将軍である景元などが知られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。[[aeon|星神]]に認められた者だけが就くことができ、力は並の「[[path|運命]]」の行人を遥かに上回る。「[[destruction|壊滅]]」の絶滅大君が代表例として知られる。なお、仙舟の[[seven-arbiter-generals|帝弓七天将]]は使令とは明言されていないが、絶滅大君と同等の力を持つとされる。",
     "context": "glossary hsr term emanator: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3451,7 +3481,8 @@ export const sources: SourceText[] = [
     "protectedTokens": [
       "[[aeon|",
       "[[destruction|",
-      "[[path|"
+      "[[path|",
+      "[[seven-arbiter-generals|"
     ]
   },
   {
@@ -5111,7 +5142,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.taunt.body",
-    "ja": "敵の攻撃対象を特定のキャラクターに引きつける効果。挑発を受けた敵は、挑発したキャラクターを狙って攻撃するようになる。耐久力の高いキャラクターが攻撃を引き受けることで味方を守れるほか、攻撃を受けることで発動する[[counter|カウンター]]とも相性がいい。ブートヒルの「九死の決闘」では、対象の敵が挑発状態と見なされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "敵の攻撃対象を特定のキャラクターに引きつける効果。挑発を受けた敵は、挑発したキャラクターを狙って攻撃するようになる。耐久力の高いキャラクターが攻撃を引き受けることで味方を守れるほか、攻撃を受けることで発動する[[counter|カウンター]]とも相性がいい。ブートヒルの「九死の決闘」では、対象の敵が挑発状態と見なされる。",
     "context": "glossary hsr term taunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6086,7 +6117,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.antimatter-legion.body",
-    "ja": "「[[destruction|壊滅]]」の[[aeon|星神]]ナヌークに仕える軍団。文明と生命の破壊を目的として宇宙各地を襲い、物語の序盤では[[herta-space-station|宇宙ステーション「ヘルタ」]]への襲撃が描かれた。指揮官格として、ナヌークから力を分け与えられた「絶滅大君」と呼ばれる[[emanator|使令]]がいる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "「[[destruction|壊滅]]」の[[aeon|星神]]ナヌークに仕える軍団。文明と生命の破壊を目的として宇宙各地を襲い、物語の序盤では[[herta-space-station|宇宙ステーション「ヘルタ」]]への襲撃が描かれた。指揮官格として、ナヌークから力を分け与えられた「絶滅大君」と呼ばれる[[emanator|使令]]がいる。",
     "context": "glossary hsr term antimatter-legion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7920,36 +7951,6 @@ export const sources: SourceText[] = [
     ]
   },
   {
-    "id": "term.hsr.garden-of-recollection.name",
-    "ja": "流光憶庭",
-    "context": "glossary hsr term garden-of-recollection: Japanese official term name",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.garden-of-recollection.summary",
-    "ja": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
-    "context": "glossary hsr term garden-of-recollection: one-sentence summary shown in the list and link hints",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": []
-  },
-  {
-    "id": "term.hsr.garden-of-recollection.body",
-    "ja": "「[[remembrance|記憶]]」の[[aeon|星神]]・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。英語名に基づく「ガーデン・オブ・リコレクション」の名でも呼ばれる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
-    "context": "glossary hsr term garden-of-recollection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
-    "audience": "public",
-    "placeholders": {},
-    "dependencies": [],
-    "protectedTokens": [
-      "[[aeon|",
-      "[[remembrance|"
-    ]
-  },
-  {
     "id": "term.hsr.lucent-afterglow.name",
     "ja": "流光の残照",
     "context": "glossary hsr term lucent-afterglow: Japanese official term name",
@@ -8088,7 +8089,7 @@ export const sources: SourceText[] = [
   },
   {
     "id": "term.hsr.fragmentum.body",
-    "ja": "[[stellaron|星核]]がもたらす侵蝕現象によって生じる領域。内部では地形や生態が変質し、裂界の生物が徘徊する。[[jarilo-vi|ヤリーロ-VI]]では、その活性化に伴って裂界が広がり、人々の生活圏を脅かしてきた。探索では、育成素材を得る挑戦が裂界の中に現れることもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[stellaron|星核]]がもたらす侵蝕現象によって生じる領域。内部では地形や生態が変質し、裂界の生物が徘徊する。[[jarilo-vi|ヤリーロ-VI]]では、その活性化に伴って裂界が広がり、人々の生活圏を脅かしてきた。探索では、育成素材を得る挑戦が裂界の中に現れることもある。",
     "context": "glossary hsr term fragmentum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
