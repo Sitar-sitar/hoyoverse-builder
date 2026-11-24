@@ -19,6 +19,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.aamaahateichikuenekata.name": {
+    "text": "アーマーハティ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.aamaahateichikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.aamaahateichikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avarusu.name": {
+    "text": "アヴァルス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avarusu.summary": {
+    "text": "エーテル・炎が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.avarusu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・炎。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.cauldron-of-clarity.name": {
     "text": "蒼き波の霊器",
     "sourceHash": null,
@@ -73,6 +109,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.akuratsuutte.name": {
+    "text": "悪辣討手",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.akuratsuutte.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.akuratsuutte.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ahriman.name": {
     "text": "アフリマン",
     "sourceHash": null,
@@ -87,6 +141,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.ahriman.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.afurimanchikuenekata.name": {
+    "text": "アフリマン・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.afurimanchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.afurimanchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -181,6 +253,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.arupekachikuenekata.name": {
+    "text": "アルぺカ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.arupekachikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.arupekachikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.alraune.name": {
     "text": "アルラウネ",
     "sourceHash": null,
@@ -195,6 +285,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.alraune.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.aruraunechikuenekata.name": {
+    "text": "アルラウネ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.aruraunechikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.aruraunechikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -339,6 +447,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.victoria-housekeeping.body": {
     "text": "公式キャラクター一覧で、ライカンやエレンが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaavarusu.name": {
+    "text": "羽化・アヴァルス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaavarusu.summary": {
+    "text": "物理・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaavarusu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は物理・風。耐性は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaenjinbihorudaa.name": {
+    "text": "羽化・エンジンビホルダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaenjinbihorudaa.summary": {
+    "text": "物理・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukaenjinbihorudaa.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は物理・風。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukatarasukumikisaa.name": {
+    "text": "羽化・タラスクミキサー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukatarasukumikisaa.summary": {
+    "text": "氷・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukatarasukumikisaa.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukamukurosasori.name": {
+    "text": "羽化・ムクロサソリ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukamukurosasori.summary": {
+    "text": "電気・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukamukurosasori.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1009,6 +1189,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.gaadian.name": {
+    "text": "「ガーディアン」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-iii-kata.name": {
+    "text": "「ガーディアンⅢ型」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-iii-kata.summary": {
+    "text": "電気が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-iii-kata.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-ii-kata.name": {
+    "text": "「ガーディアンⅡ型」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-ii-kata.summary": {
+    "text": "電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gaadian-mark-ii-kata.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cinder-cobalt.name": {
+    "text": "「灰燼」-蒼藍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cinder-cobalt.summary": {
+    "text": "HPが上がる命破向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cinder-cobalt.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、HPが20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.crit-dmg.name": {
     "text": "会心ダメージ",
     "sourceHash": null,
@@ -1513,6 +1765,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kyouranbouto.name": {
+    "text": "狂乱暴徒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyouranbouto.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyouranbouto.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.partner-archive.name": {
     "text": "協力者ファイル",
     "sourceHash": null,
@@ -1765,6 +2035,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.keisouryouhei.name": {
+    "text": "軽装猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.keisouryouhei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.keisouryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.unfettered-game-ball.name": {
     "text": "ゲームボール",
     "sourceHash": null,
@@ -1819,6 +2107,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.vortex-revolver.name": {
+    "text": "「激流」-銃型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-revolver.summary": {
+    "text": "攻撃力が上がる撃破向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-revolver.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、攻撃力が20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.vortex-arrow.name": {
     "text": "「激流」-矢型",
     "sourceHash": null,
@@ -1855,6 +2161,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.lunar-decrescent.name": {
+    "text": "「月相」-晦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-decrescent.summary": {
+    "text": "攻撃力が上がる強攻向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-decrescent.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、攻撃力が20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-noviluna.name": {
+    "text": "「月相」-朔",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-noviluna.summary": {
+    "text": "会心率が上がる強攻向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-noviluna.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、[[crit-rate]]が16%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-pleniluna.name": {
+    "text": "「月相」-望",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-pleniluna.summary": {
+    "text": "攻撃力が上がる強攻向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lunar-pleniluna.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、攻撃力が20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.bashful-demon.name": {
     "text": "喧嘩腰のボンバルダム",
     "sourceHash": null,
@@ -1873,6 +2233,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.genkyoufudatsukikinaguriya.name": {
+    "text": "元凶・札付き殴り屋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.genkyoufudatsukikinaguriya.summary": {
+    "text": "炎・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.genkyoufudatsukikinaguriya.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は氷。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hollow-zero-bounty.name": {
     "text": "懸賞依頼",
     "sourceHash": null,
@@ -1887,6 +2265,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hollow-zero-bounty.body": {
     "text": "[[lost-void]]の懸賞依頼ではシャドウ結晶のデータが進行に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kenseiryouhei.name": {
+    "text": "牽制猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kenseiryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kenseiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2197,6 +2593,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.goburinchikuenekata.name": {
+    "text": "ゴブリン・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goburinchikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goburinchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.wrathful-vajra.name": {
     "text": "金剛不壊怒髪衝冠",
     "sourceHash": null,
@@ -2323,6 +2737,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.sateyurosuchikuenekata.name": {
+    "text": "サテュロス・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sateyurosuchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sateyurosuchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.overtimeboo.name": {
     "text": "サビザンボンプ",
     "sourceHash": null,
@@ -2373,6 +2805,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.the-vault.body": {
     "text": "「支援」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-i.name": {
+    "text": "「残響」-Ⅰ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-i.summary": {
+    "text": "攻撃力が上がる支援向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-i.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、攻撃力が20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-iii.name": {
+    "text": "「残響」-Ⅲ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-iii.summary": {
+    "text": "HPが上がる支援向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-iii.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、HPが20%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-ii.name": {
+    "text": "「残響」-Ⅱ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-ii.summary": {
+    "text": "エネルギー自動回復が上がる支援向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reverb-mark-ii.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、エネルギー自動回復が40%上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2647,6 +3133,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.juusousutoraikaa.name": {
+    "text": "「重装ストライカー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusousutoraikaa.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusousutoraikaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusousutoraikaa-mark-ii-kata.name": {
+    "text": "「重装ストライカーⅡ型」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusousutoraikaa-mark-ii-kata.summary": {
+    "text": "電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusousutoraikaa-mark-ii-kata.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusouhouhei.name": {
+    "text": "重装砲兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusouhouhei.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.juusouhouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.practiced-perfection.name": {
     "text": "十面百錬の星",
     "sourceHash": null,
@@ -2661,6 +3201,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.practiced-perfection.body": {
     "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shubiryouhei.name": {
+    "text": "守備猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shubiryouhei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shubiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2683,6 +3241,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.junkairyouhei.name": {
+    "text": "巡回猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.junkairyouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.junkairyouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.severed-innocence.name": {
     "text": "純然たる犠牲",
     "sourceHash": null,
@@ -2697,6 +3273,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.severed-innocence.body": {
     "text": "「[[attack]]」向けの[[w-engine]]。Ver.1.6の限定[[w-engine]]として告知された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa.name": {
+    "text": "「駿足ローバー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa-mark-ii-kata.name": {
+    "text": "「駿足ローバーⅡ型」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa-mark-ii-kata.summary": {
+    "text": "電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shunsokuroobaa-mark-ii-kata.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2823,6 +3435,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.bounty-board.body": {
     "text": "[[proxy-network]]に参加した後、同じチャンネルのプロキシと代行依頼をやり取りできる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shoseinodeyurahan.name": {
+    "text": "初生のデュラハン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shoseinodeyurahan.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shoseinodeyurahan.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3007,6 +3637,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shinmairyouhei.name": {
+    "text": "新米猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shinmairyouhei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shinmairyouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hangout.name": {
     "text": "親友とのお出かけ",
     "sourceHash": null,
@@ -3187,6 +3835,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.supekutaachikuenekata.name": {
+    "text": "スペクター・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.supekutaachikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.supekutaachikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.original-transmorpher.name": {
     "text": "正規版変身装置",
     "sourceHash": null,
@@ -3349,6 +4015,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.senpouryouhei.name": {
+    "text": "先鋒猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.senpouryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.senpouryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.myriad-eclipse.name": {
     "text": "千面の落日",
     "sourceHash": null,
@@ -3457,6 +4141,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.sorudedousuchikuenekata.name": {
+    "text": "ソルデドゥス・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sorudedousuchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sorudedousuchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.king-of-the-summit.name": {
     "text": "大山を統べる者",
     "sourceHash": null,
@@ -3561,6 +4263,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.thanatos.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tanatosuchikuenekata.name": {
+    "text": "タナトス・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tanatosuchikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tanatosuchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性はエーテル。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3745,6 +4465,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.tsuepeshu.name": {
+    "text": "ツェペシュ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsuepeshu.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsuepeshu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.tsumi-toraeru-rogoku.name": {
     "text": "罪捕らえる牢獄",
     "sourceHash": null,
@@ -3817,6 +4555,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.teiruvinguchikuenekata.name": {
+    "text": "ティルヴィング・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teiruvinguchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teiruvinguchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.enemies.name": {
     "text": "敵対ターゲット",
     "sourceHash": null,
@@ -3831,6 +4587,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.enemies.body": {
     "text": "敵対ターゲットに関する項目。公式更新情報では関連するアチーブメントが案内されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tekidanryouhei.name": {
+    "text": "擲弾猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tekidanryouhei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tekidanryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3871,6 +4645,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.teyuupoonsuraggaa.name": {
+    "text": "「テューポーン・スラッガー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teyuupoonsuraggaa.summary": {
+    "text": "電気が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teyuupoonsuraggaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teyuupooncharenjaa.name": {
+    "text": "「テューポーン・チャレンジャー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teyuupooncharenjaa.summary": {
+    "text": "炎・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teyuupooncharenjaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.dullahan.name": {
     "text": "デュラハン",
     "sourceHash": null,
@@ -3885,6 +4695,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.dullahan.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deyurahanchikuenekata.name": {
+    "text": "デュラハン・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deyurahanchikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.deyurahanchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teraaraputoru.name": {
+    "text": "「テラー・ラプトル」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teraaraputoru.summary": {
+    "text": "電気が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teraaraputoru.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は氷。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3921,6 +4767,114 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.tensei-no-enyoku.body": {
     "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.3の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradasetoria.name": {
+    "text": "電離体・セトリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradasetoria.summary": {
+    "text": "エーテルが弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradasetoria.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradatanatosu.name": {
+    "text": "電離体・タナトス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradatanatosu.summary": {
+    "text": "エーテルが弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradatanatosu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradadeyurahan.name": {
+    "text": "電離体・デュラハン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradadeyurahan.summary": {
+    "text": "エーテルが弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradadeyurahan.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradanaseria.name": {
+    "text": "電離体・ナセリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradanaseria.summary": {
+    "text": "エーテルが弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradanaseria.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradafaarubautei.name": {
+    "text": "電離体・ファールバウティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradafaarubautei.summary": {
+    "text": "エーテルが弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradafaarubautei.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradapugunusu.name": {
+    "text": "電離体・プグヌス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradapugunusu.summary": {
+    "text": "氷・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.denrikaradapugunusu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3979,6 +4933,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.tokusenkeisouryouhei.name": {
+    "text": "特戦・軽装猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenkeisouryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenkeisouryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenjuusousutoraikaa.name": {
+    "text": "特戦・重装ストライカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenjuusousutoraikaa.summary": {
+    "text": "電気・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenjuusousutoraikaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・物理。耐性は氷。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshubiryouhei.name": {
+    "text": "特戦・守備猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshubiryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshubiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshunsokuroobaa.name": {
+    "text": "特戦・駿足ローバー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshunsokuroobaa.summary": {
+    "text": "電気・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusenshunsokuroobaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・物理。耐性は氷。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.exclusive-channel.name": {
     "text": "独占チャンネル",
     "sourceHash": null,
@@ -3997,6 +5023,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.tokusentekidanryouhei.name": {
+    "text": "特戦・擲弾猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusentekidanryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusentekidanryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusentotsugekiryouhei.name": {
+    "text": "特戦・突撃猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusentotsugekiryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokusentotsugekiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.special-invitation.name": {
     "text": "特別招待状",
     "sourceHash": null,
@@ -4011,6 +5073,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.special-invitation.body": {
     "text": "[[agent]]のうち対象のS級エージェントとの交換に使用できる。入手方法はゲーム内で確認できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokumugoei.name": {
+    "text": "特務護衛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokumugoei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tokumugoei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4047,6 +5127,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.thorned-rose.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekihouhei.name": {
+    "text": "突撃砲兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekihouhei.summary": {
+    "text": "電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekihouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekiryouhei.name": {
+    "text": "突撃猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekiryouhei.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.totsugekiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4119,6 +5235,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.drive-disc.body": {
     "text": "[[agent]]に装備するディスク。[[main-stat]]や[[sub-stat]]を持ち、同じセットを組み合わせるとセット効果が発動する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.torakian.name": {
+    "text": "トラキアン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.torakian.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.torakian.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4303,6 +5437,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.haiyoto.name": {
+    "text": "ハイヨト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.haiyoto.summary": {
+    "text": "氷・炎が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.haiyoto.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は氷・炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.housekeeper.name": {
     "text": "ハウスキーパー",
     "sourceHash": null,
@@ -4375,6 +5527,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.bakugekiryouhei.name": {
+    "text": "爆撃猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bakugekiryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bakugekiryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.paperboo.name": {
     "text": "ハコイリボンプ",
     "sourceHash": null,
@@ -4429,6 +5599,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.bassaiki.name": {
+    "text": "伐採機",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bassaiki.summary": {
+    "text": "電気が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bassaiki.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は氷。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.battery-charge.name": {
     "text": "バッテリー",
     "sourceHash": null,
@@ -4465,6 +5653,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hateiarufachikuenekata.name": {
+    "text": "ハティアルファ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hateiarufachikuenekata.summary": {
+    "text": "炎が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hateiarufachikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hateichikuenekata.name": {
+    "text": "ハティ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hateichikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hateichikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.butler.name": {
     "text": "バトラー",
     "sourceHash": null,
@@ -4479,6 +5703,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.butler.body": {
     "text": "編成に加えられる[[bangboo]]。作ったお茶菓子でメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraamidoru.name": {
+    "text": "「パトローラー・ミドル」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraamidoru.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraamidoru.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraaraito.name": {
+    "text": "「パトローラー・ライト」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraaraito.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.patorooraaraito.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4551,6 +5811,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.defensive-assist.body": {
     "text": "敵の攻撃に合わせて味方へ切り替え、攻撃を受け止める支援行動。支援ポイントや攻撃の種類など、発動条件に注意する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.parikusu.name": {
+    "text": "パリクス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.parikusu.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.parikusu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4717,6 +5995,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.faarubauteichikuenekata.name": {
+    "text": "ファールバウティ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.faarubauteichikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.faarubauteichikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.booastrum.name": {
     "text": "ブーアストラム",
     "sourceHash": null,
@@ -4767,6 +6063,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.fossoru.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoruchikuenekata.name": {
+    "text": "フォッソル・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoruchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoruchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4875,6 +6189,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.blast-spider.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.burasutosupaidaachikuenekata.name": {
+    "text": "ブラストスパイダー・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.burasutosupaidaachikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.burasutosupaidaachikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5131,6 +6463,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.fundoakki.name": {
+    "text": "憤怒悪鬼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fundoakki.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fundoakki.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.wrathful-tussle.name": {
     "text": "憤怒の銃騒",
     "sourceHash": null,
@@ -5199,6 +6549,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.bellum.body": {
     "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hen-imukuroari.name": {
+    "text": "変異ムクロアリ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hen-imukuroari.summary": {
+    "text": "エーテルが弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hen-imukuroari.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5347,6 +6715,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hopuritaichikuenekata.name": {
+    "text": "ホプリタイ・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hopuritaichikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hopuritaichikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.polychrome.name": {
     "text": "ポリクローム",
     "sourceHash": null,
@@ -5397,6 +6783,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hollow.body": {
     "text": "新エリー都の人々の生活に影響を及ぼす災害。内部の調査や活動には[[proxy]]の案内が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horouarashigourikiouboumono.name": {
+    "text": "ホロウ荒らし・剛力横暴者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horouarashigourikiouboumono.summary": {
+    "text": "炎・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horouarashigourikiouboumono.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は氷。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5545,6 +6949,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.marionettogureibeeru.name": {
+    "text": "マリオネット・グレイベール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marionettogureibeeru.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marionettogureibeeru.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marionettoburakkubeeru.name": {
+    "text": "マリオネット・ブラックベール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marionettoburakkubeeru.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.marionettoburakkubeeru.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.mandrake.name": {
     "text": "マンドレイク",
     "sourceHash": null,
@@ -5563,6 +7003,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mandoreikuchikuenekata.name": {
+    "text": "マンドレイク・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mandoreikuchikuenekata.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mandoreikuchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.miazuma-hosha-akavoru.name": {
     "text": "ミアズマの歩者・アカヴォル",
     "sourceHash": null,
@@ -5577,6 +7035,240 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.miazuma-hosha-akavoru.body": {
     "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumanohomonomukurosasori.name": {
+    "text": "ミアズマの歩者・ムクロサソリ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumanohomonomukurosasori.summary": {
+    "text": "エーテル・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumanohomonomukurosasori.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantokyanonia.name": {
+    "text": "ミアズマ・レムナント・キャノニア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantokyanonia.summary": {
+    "text": "炎・電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantokyanonia.body": {
+    "text": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantodifendaa.name": {
+    "text": "ミアズマ・レムナント・ディフェンダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantodifendaa.summary": {
+    "text": "炎・電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumaremunantodifendaa.body": {
+    "text": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkukyouranbouto.name": {
+    "text": "ミアズミック・狂乱暴徒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkukyouranbouto.summary": {
+    "text": "エーテルが弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkukyouranbouto.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は物理。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkugourikiouboumono.name": {
+    "text": "ミアズミック・剛力横暴者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkugourikiouboumono.summary": {
+    "text": "エーテル・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkugourikiouboumono.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・風。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkujuusousutoraikaa.name": {
+    "text": "ミアズミック・「重装ストライカー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkujuusousutoraikaa.summary": {
+    "text": "物理・電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkujuusousutoraikaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は物理・電気。耐性は氷。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkushunsokuroobaa.name": {
+    "text": "ミアズミック・「駿足ローバー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkushunsokuroobaa.summary": {
+    "text": "物理・電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkushunsokuroobaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は物理・電気。耐性は氷。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuteraaraputoru.name": {
+    "text": "ミアズミック・「テラー・ラプトル」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuteraaraputoru.summary": {
+    "text": "炎・電気が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuteraaraputoru.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorakian.name": {
+    "text": "ミアズミック・トラキアン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorakian.summary": {
+    "text": "エーテル・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorakian.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・風。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorinokkusu.name": {
+    "text": "ミアズミック・トリノックス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorinokkusu.summary": {
+    "text": "エーテルが弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkutorinokkusu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は物理。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuhasukuron.name": {
+    "text": "ミアズミック・ハスクロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuhasukuron.summary": {
+    "text": "氷・炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuhasukuron.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は氷・炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuburasutosupaidaa.name": {
+    "text": "ミアズミック・ブラストスパイダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuburasutosupaidaa.summary": {
+    "text": "物理・電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkuburasutosupaidaa.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は物理・電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkufundoakki.name": {
+    "text": "ミアズミック・憤怒悪鬼",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkufundoakki.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazumikkufundoakki.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5761,6 +7453,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.metorogoburinchikuenekata.name": {
+    "text": "メトロゴブリン・蓄エネ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metorogoburinchikuenekata.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metorogoburinchikuenekata.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.meme.name": {
     "text": "メメ",
     "sourceHash": null,
@@ -5941,6 +7651,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.youkeikaiaamaahatei.name": {
+    "text": "要警戒・アーマーハティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaiaamaahatei.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaiaamaahatei.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.notorious-hunt.name": {
     "text": "要警戒狩り",
     "sourceHash": null,
@@ -5955,6 +7683,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.notorious-hunt.body": {
     "text": "強敵との戦闘に挑む。チーム編成時には人数や育成状況に応じたヒントが表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaitanatosu.name": {
+    "text": "要警戒・タナトス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaitanatosu.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaitanatosu.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaideyurahan.name": {
+    "text": "要警戒・デュラハン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaideyurahan.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaideyurahan.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaihatei.name": {
+    "text": "要警戒・ハティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaihatei.summary": {
+    "text": "エーテル・氷が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.youkeikaihatei.body": {
+    "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6225,6 +8007,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.chain-attack.body": {
     "text": "行動可能な味方がいる状態で[[stun|ブレイク]]中の敵に重撃を当てると発動できる。スキルによって別の発動方法を持つ場合もある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rentatsuryouhei.name": {
+    "text": "練達猟兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rentatsuryouhei.summary": {
+    "text": "電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rentatsuryouhei.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

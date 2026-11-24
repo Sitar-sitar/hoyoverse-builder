@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.genshin.earth-shaker.name": {
+    "text": "アースシェイカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.earth-shaker.summary": {
+    "text": "攻撃力が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.earth-shaker.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.staff-of-the-scarlet-sands.name": {
     "text": "赤砂の杖",
     "sourceHash": null,
@@ -55,6 +73,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.akuoumaru.name": {
+    "text": "惡王丸",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.akuoumaru.summary": {
+    "text": "攻撃力が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.akuoumaru.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.action-card.name": {
     "text": "アクションカード",
     "sourceHash": null,
@@ -91,6 +127,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.amenoma-kageuchi.name": {
+    "text": "天目影打",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.amenoma-kageuchi.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.amenoma-kageuchi.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.amos-bow.name": {
     "text": "アモスの弓",
     "sourceHash": null,
@@ -105,6 +159,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.amos-bow.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで攻撃力を49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dark-iron-sword.name": {
+    "text": "暗鉄剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dark-iron-sword.summary": {
+    "text": "元素熟知が上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dark-iron-sword.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで[[elemental-mastery]]を141伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -141,6 +213,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.small-lamp-grass.body": {
     "text": "[[mondstadt]]で採れる育成素材。夜間に淡く光る植物で、囁きの森などに生える。アンバーやフィッシュルの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.otherworldly-story.name": {
+    "text": "異世界旅行記",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.otherworldly-story.summary": {
+    "text": "元素チャージ効率が上がる★3の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.otherworldly-story.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで[[energy-recharge]]を39.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heretics-molten-blade.name": {
+    "text": "異端を狩る熔刃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heretics-molten-blade.summary": {
+    "text": "会心率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heretics-molten-blade.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -343,6 +451,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.blackmarrow-lantern.name": {
+    "text": "烏髄の孤灯",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blackmarrow-lantern.summary": {
+    "text": "元素熟知が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blackmarrow-lantern.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで[[elemental-mastery]]を221伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sea-ganoderma.name": {
     "text": "ウミレイシ",
     "sourceHash": null,
@@ -379,6 +505,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.flute-of-ezpitzal.name": {
+    "text": "エズピツァルの笛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flute-of-ezpitzal.summary": {
+    "text": "防御力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flute-of-ezpitzal.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで防御力を69.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-the-vigil.name": {
+    "text": "遠望の歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-the-vigil.summary": {
+    "text": "元素熟知が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-the-vigil.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.golden-troupe.name": {
     "text": "黄金の劇団",
     "sourceHash": null,
@@ -393,6 +555,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.golden-troupe.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は元素スキルダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kings-squire.name": {
+    "text": "王の近侍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kings-squire.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kings-squire.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -447,6 +627,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.onikabuto.body": {
     "text": "[[inazuma]]で採れる育成素材。木の幹や岩壁にとまっている昆虫。荒瀧一斗や鹿野院平蔵の突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep.name": {
+    "text": "海淵のフィナーレ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.finale-of-the-deep.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -591,6 +789,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.kaguras-verity.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kagotsurube-isshin.name": {
+    "text": "籠釣瓶一心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kagotsurube-isshin.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kagotsurube-isshin.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -753,6 +969,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.vision.body": {
     "text": "[[teyvat]]において、人間の[[element|元素]]を操る力は神の目となって現れると公式の開発者説明で語られている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.raven-bow.name": {
+    "text": "鴉羽の弓",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.raven-bow.summary": {
+    "text": "元素熟知が上がる★3の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.raven-bow.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで[[elemental-mastery]]を94伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -973,6 +1207,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.kitain-cross-spear.name": {
+    "text": "喜多院十文字槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kitain-cross-spear.summary": {
+    "text": "元素熟知が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kitain-cross-spear.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.gift-set.name": {
     "text": "ギフトセット",
     "sourceHash": null,
@@ -1081,6 +1333,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.royal-grimoire.name": {
+    "text": "旧貴族秘法録",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.royal-grimoire.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.royal-grimoire.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.royal-spear.name": {
     "text": "旧貴族猟槍",
     "sourceHash": null,
@@ -1095,6 +1365,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.royal-spear.body": {
     "text": "Lv.90時の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blade-of-atonement.name": {
+    "text": "救済の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blade-of-atonement.summary": {
+    "text": "攻撃力が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blade-of-atonement.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-the-heart.name": {
+    "text": "胸中の谺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-the-heart.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-the-heart.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1117,6 +1423,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.the-catch.name": {
+    "text": "漁獲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-catch.summary": {
+    "text": "元素チャージ効率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-catch.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.mistsplitter-reforged.name": {
     "text": "霧切の廻光",
     "sourceHash": null,
@@ -1131,6 +1455,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.mistsplitter-reforged.body": {
     "text": "Lv.90時の基礎攻撃力は674。同レベルで会心ダメージを44.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-light.name": {
+    "text": "銀灯",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-light.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-light.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-shovel.name": {
+    "text": "金掘りのシャベル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-shovel.summary": {
+    "text": "攻撃力が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prospectors-shovel.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1405,6 +1765,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.end-of-the-line.name": {
+    "text": "竭沢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.end-of-the-line.summary": {
+    "text": "元素チャージ効率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.end-of-the-line.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.quenepa-berry.name": {
     "text": "ケネパベリー",
     "sourceHash": null,
@@ -1621,6 +1999,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sapwood-blade.name": {
+    "text": "原木刀",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sapwood-blade.summary": {
+    "text": "元素チャージ効率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sapwood-blade.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-serpents-rain-bow.name": {
+    "text": "虹蛇の雨弦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-serpents-rain-bow.summary": {
+    "text": "元素チャージ効率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rainbow-serpents-rain-bow.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.solar-pearl.name": {
+    "text": "匣中日月",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.solar-pearl.summary": {
+    "text": "会心率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.solar-pearl.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.dragons-bane.name": {
     "text": "匣中滅龍",
     "sourceHash": null,
@@ -1653,6 +2085,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.lions-roar.body": {
     "text": "Lv.90時の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sword-of-descension.name": {
+    "text": "降臨の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sword-of-descension.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sword-of-descension.body": {
+    "text": "Lv.90の基礎攻撃力は440。同レベルで攻撃力を35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbreath.name": {
+    "text": "氷の吐息",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbreath.summary": {
+    "text": "元素チャージ効率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbreath.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.black-tassel.name": {
+    "text": "黒纓槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.black-tassel.summary": {
+    "text": "HPが上がる★3の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.black-tassel.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルでHPを46.9%伸ばせる。装備者がスライムに与えるダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1729,6 +2215,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.blackcliff-agate.name": {
+    "text": "黒岩の緋玉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blackcliff-agate.summary": {
+    "text": "会心ダメージが上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.blackcliff-agate.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-black-sword.name": {
+    "text": "黒剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-black-sword.summary": {
+    "text": "会心率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-black-sword.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.athame-artis.name": {
     "text": "黒蝕",
     "sourceHash": null,
@@ -1783,6 +2305,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sacrificial-jade.name": {
+    "text": "古祠の瓏",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-jade.summary": {
+    "text": "会心率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificial-jade.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで[[crit-rate]]を36.8%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.staff-of-homa.name": {
     "text": "護摩の杖",
     "sourceHash": null,
@@ -1815,6 +2355,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.surfs-up.body": {
     "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。同祈願の軌定対象に選べる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fleuve-cendre-ferryman.name": {
+    "text": "サーンドルの渡し守",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fleuve-cendre-ferryman.summary": {
+    "text": "元素チャージ効率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fleuve-cendre-ferryman.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1887,6 +2445,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.verdict.body": {
     "text": "Lv.90時の基礎攻撃力は674。同レベルで[[crit-rate]]を22.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.xiphos-moonlight.name": {
+    "text": "サイフォスの月明かり",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.xiphos-moonlight.summary": {
+    "text": "元素熟知が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.xiphos-moonlight.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2035,6 +2611,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.dialogues-of-the-desert-sages.name": {
+    "text": "砂中の賢者達の問答",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dialogues-of-the-desert-sages.summary": {
+    "text": "HPが上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dialogues-of-the-desert-sages.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wandering-evenstar.name": {
+    "text": "彷徨える星",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wandering-evenstar.summary": {
+    "text": "元素熟知が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wandering-evenstar.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.trishiraite.name": {
     "text": "サングイト",
     "sourceHash": null,
@@ -2107,6 +2719,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.wavebreakers-fin.name": {
+    "text": "斬波のひれ長",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wavebreakers-fin.summary": {
+    "text": "攻撃力が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wavebreakers-fin.body": {
+    "text": "Lv.90の基礎攻撃力は620。同レベルで攻撃力を13.8%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.parametric-transformer.name": {
     "text": "参量物質変化器",
     "sourceHash": null,
@@ -2161,6 +2791,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.cinnabar-spindle.name": {
+    "text": "シナバースピンドル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cinnabar-spindle.summary": {
+    "text": "防御力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cinnabar-spindle.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで防御力を69.0%伸ばせる。装備者の防御力に応じて[[elemental-skill]]のダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.lost-prayer-to-the-sacred-winds.name": {
     "text": "四風原典",
     "sourceHash": null,
@@ -2175,6 +2823,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.lost-prayer-to-the-sacred-winds.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで[[crit-rate]]を33.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.covenant-of-frost-and-snow.name": {
+    "text": "霜雪の契",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.covenant-of-frost-and-snow.summary": {
+    "text": "防御力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.covenant-of-frost-and-snow.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで防御力を51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sharpshooters-oath.name": {
+    "text": "シャープシューターの誓い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sharpshooters-oath.summary": {
+    "text": "会心ダメージが上がる★3の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sharpshooters-oath.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで会心ダメージを46.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2305,6 +2989,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.flowing-purity.name": {
+    "text": "純水流華",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flowing-purity.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flowing-purity.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.song-of-broken-pines.name": {
     "text": "松韻の響く頃",
     "sourceHash": null,
@@ -2377,6 +3079,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.clash-of-kings.name": {
+    "text": "諸王の対局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.clash-of-kings.summary": {
+    "text": "会心率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.clash-of-kings.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.serenitea-pot.name": {
     "text": "塵歌壺",
     "sourceHash": null,
@@ -2431,6 +3151,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.forged-by-the-golden-melody.name": {
+    "text": "シンフォニーの鋳影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.forged-by-the-golden-melody.summary": {
+    "text": "会心率が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.forged-by-the-golden-melody.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.trust-rank.name": {
     "text": "信頼ランク",
     "sourceHash": null,
@@ -2463,6 +3201,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.deepwood-memories.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は草元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.forest-regalia.name": {
+    "text": "森林のレガリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.forest-regalia.summary": {
+    "text": "元素チャージ効率が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.forest-regalia.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2503,6 +3259,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sword-of-narzissenkreuz.name": {
+    "text": "水仙十字の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sword-of-narzissenkreuz.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sword-of-narzissenkreuz.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.viridescent-venerer.name": {
     "text": "翠緑の影",
     "sourceHash": null,
@@ -2517,6 +3291,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.viridescent-venerer.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は風元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ultimate-overlords-mega-magic-sword.name": {
+    "text": "スーパーアルティメット覇王魔剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ultimate-overlords-mega-magic-sword.summary": {
+    "text": "元素チャージ効率が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ultimate-overlords-mega-magic-sword.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2611,6 +3403,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.rightful-reward.name": {
+    "text": "正義の報酬",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rightful-reward.summary": {
+    "text": "HPが上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.rightful-reward.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルでHPを27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.scarab.name": {
     "text": "聖金虫",
     "sourceHash": null,
@@ -2683,6 +3493,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sacrificers-staff.name": {
+    "text": "聖祭者の輝杖",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificers-staff.summary": {
+    "text": "会心率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sacrificers-staff.body": {
+    "text": "Lv.90の基礎攻撃力は620。同レベルで[[crit-rate]]を9.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fragile-resin.name": {
     "text": "脆弱樹脂",
     "sourceHash": null,
@@ -2697,6 +3525,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.fragile-resin.body": {
     "text": "一部の報酬受取画面では、濃縮樹脂がない場合に使用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-stillness.name": {
+    "text": "静寂の唄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-stillness.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-stillness.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2751,6 +3597,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.splendor-of-tranquil-waters.body": {
     "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitys-call.name": {
+    "text": "静謐の笛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitys-call.summary": {
+    "text": "元素チャージ効率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.serenitys-call.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3151,6 +4015,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.jade-vista.name": {
+    "text": "千鈞懸黎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.jade-vista.summary": {
+    "text": "会心率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.jade-vista.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vial-of-adeptal-speed.name": {
     "text": "仙速瓶",
     "sourceHash": null,
@@ -3349,6 +4231,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.ash-graven-drinking-horn.name": {
+    "text": "蒼紋の角杯",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ash-graven-drinking-horn.summary": {
+    "text": "HPが上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ash-graven-drinking-horn.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.azurelight.name": {
     "text": "蒼耀",
     "sourceHash": null,
@@ -3403,6 +4303,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.wine-and-song.name": {
+    "text": "ダークアレイの酒と詩",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wine-and-song.summary": {
+    "text": "元素チャージ効率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wine-and-song.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-alley-flash.name": {
+    "text": "ダークアレイの閃光",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-alley-flash.summary": {
+    "text": "元素熟知が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-alley-flash.body": {
+    "text": "Lv.90の基礎攻撃力は620。同レベルで[[elemental-mastery]]を55伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.wanderers-troupe.name": {
     "text": "大地を流浪する楽団",
     "sourceHash": null,
@@ -3417,6 +4353,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.wanderers-troupe.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.travelers-handy-sword.name": {
+    "text": "旅道の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.travelers-handy-sword.summary": {
+    "text": "防御力が上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.travelers-handy-sword.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで防御力を29.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tamayuratei-no-ohanashi.name": {
+    "text": "玉響停の御噺",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tamayuratei-no-ohanashi.summary": {
+    "text": "元素チャージ効率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tamayuratei-no-ohanashi.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.slingshot.name": {
+    "text": "弾弓",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.slingshot.summary": {
+    "text": "会心率が上がる★3の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.slingshot.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルで[[crit-rate]]を31.2%伸ばせる。発射後すぐに[[normal-attack]]や[[charged-attack]]の矢が命中するとダメージが上がる。命中まで時間がかかった場合はダメージが下がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3471,6 +4461,96 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.dandelion-seed.body": {
     "text": "[[mondstadt]]で採れる育成素材。風[[element]]を当てて種を飛ばすと採集できる。ジンやエウルアの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.chain-breaker.name": {
+    "text": "チェーンブレイカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.chain-breaker.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.chain-breaker.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flame-forged-insight.name": {
+    "text": "知恵の溶炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flame-forged-insight.summary": {
+    "text": "元素熟知が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.flame-forged-insight.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fillet-blade.name": {
+    "text": "チ虎魚の刀",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fillet-blade.summary": {
+    "text": "攻撃力が上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fillet-blade.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.oathsworn-eye.name": {
+    "text": "誓いの明瞳",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.oathsworn-eye.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.oathsworn-eye.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cloudforged.name": {
+    "text": "築雲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cloudforged.summary": {
+    "text": "元素熟知が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cloudforged.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3799,6 +4879,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.moonweavers-dawn.name": {
+    "text": "月紡ぎの曙光",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.moonweavers-dawn.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.moonweavers-dawn.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fishing.name": {
     "text": "釣り",
     "sourceHash": null,
@@ -3903,6 +5001,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.teyvat.body": {
     "text": "[[element|七つの元素]]が絡み合う世界。モンドや璃月など、それぞれ異なる文化を持つ地域がある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ferrous-shadow.name": {
+    "text": "鉄影段平",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ferrous-shadow.summary": {
+    "text": "HPが上がる★3の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ferrous-shadow.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルでHPを35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mailed-flower.name": {
+    "text": "鉄彩の花",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mailed-flower.summary": {
+    "text": "元素熟知が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mailed-flower.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4015,6 +5149,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.etherlight-spindlelute.name": {
+    "text": "天光のリュート",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.etherlight-spindlelute.summary": {
+    "text": "元素チャージ効率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.etherlight-spindlelute.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.story-quest.name": {
     "text": "伝説任務",
     "sourceHash": null,
@@ -4065,6 +5217,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.talent.body": {
     "text": "通常攻撃、[[elemental-skill]]、[[elemental-burst]]などの能力や固有の効果を指す。一部の天賦は素材を使ってレベルを上げられる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emberwell.name": {
+    "text": "導炎の源",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emberwell.summary": {
+    "text": "元素熟知が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emberwell.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toukabou-shigure.name": {
+    "text": "東花坊時雨",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toukabou-shigure.summary": {
+    "text": "元素熟知が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.toukabou-shigure.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4195,6 +5383,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.ibis-piercer.name": {
+    "text": "トキの嘴",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ibis-piercer.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ibis-piercer.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.unfinished-reverie.name": {
     "text": "遂げられなかった想い",
     "sourceHash": null,
@@ -4227,6 +5433,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.toshi-hyouban.body": {
     "text": "地域の任務や探索などで評判を高めると、レシピや道具の設計図などを受け取れる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.twin-nephrite.name": {
+    "text": "特級の宝玉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.twin-nephrite.summary": {
+    "text": "会心率が上がる★3の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.twin-nephrite.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで[[crit-rate]]を15.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dodoco-tales.name": {
+    "text": "ドドコの物語",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dodoco-tales.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dodoco-tales.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4393,6 +5635,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.footprint-of-the-rainbow.name": {
+    "text": "虹の行方",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.footprint-of-the-rainbow.summary": {
+    "text": "防御力が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.footprint-of-the-rainbow.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで防御力を51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sunny-morning-sleep-in.name": {
     "text": "寝正月の初晴",
     "sourceHash": null,
@@ -4483,6 +5743,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.hakushin-ring.name": {
+    "text": "白辰の輪",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hakushin-ring.summary": {
+    "text": "元素チャージ効率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hakushin-ring.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.the-first-great-magic.name": {
     "text": "始まりの大魔術",
     "sourceHash": null,
@@ -4537,6 +5815,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.ballad-of-the-boundless-blue.name": {
+    "text": "果てなき紺碧の唄",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ballad-of-the-boundless-blue.summary": {
+    "text": "元素チャージ効率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ballad-of-the-boundless-blue.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.vortex-vanquisher.name": {
     "text": "破天の槍",
     "sourceHash": null,
@@ -4569,6 +5865,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.flower-wreathed-feathers.body": {
     "text": "Ver.7.2第2期の集録[[wish|祈願]]「炎天に刻む名」の限定ラインナップに含まれる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.talking-stick.name": {
+    "text": "話死合い棒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.talking-stick.summary": {
+    "text": "会心率が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.talking-stick.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[crit-rate]]を18.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4627,6 +5941,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.mappa-mare.name": {
+    "text": "万国諸海の図譜",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mappa-mare.summary": {
+    "text": "元素熟知が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mappa-mare.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.master-key.name": {
+    "text": "万能の鍵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.master-key.summary": {
+    "text": "元素チャージ効率が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.master-key.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.sakura-bloom.name": {
     "text": "緋櫻毬",
     "sourceHash": null,
@@ -4663,6 +6013,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.emerald-orb.name": {
+    "text": "翡玉法珠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emerald-orb.summary": {
+    "text": "元素熟知が上がる★3の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.emerald-orb.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで[[elemental-mastery]]を94伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.starsealed-edict.name": {
     "text": "秘星の聖典",
     "sourceHash": null,
@@ -4677,6 +6045,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.starsealed-edict.body": {
     "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skyrider-sword.name": {
+    "text": "飛天御剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skyrider-sword.summary": {
+    "text": "元素チャージ効率が上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skyrider-sword.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルで[[energy-recharge]]を52.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4735,6 +6121,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.ballad-of-the-fjords.name": {
+    "text": "フィヨルドの歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ballad-of-the-fjords.summary": {
+    "text": "会心率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ballad-of-the-fjords.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.windwheel-aster.name": {
     "text": "風車アスター",
     "sourceHash": null,
@@ -4767,6 +6171,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.kaze-hitomi-kyouseiseki.body": {
     "text": "使用するとモンドで未取得の風神の瞳のおおよその位置を地図に表示する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.missive-windspear.name": {
+    "text": "風信の矛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.missive-windspear.summary": {
+    "text": "攻撃力が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.missive-windspear.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4825,6 +6247,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.festering-desire.name": {
+    "text": "腐植の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.festering-desire.summary": {
+    "text": "元素チャージ効率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.festering-desire.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.messenger.name": {
+    "text": "文使い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.messenger.summary": {
+    "text": "会心ダメージが上がる★3の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.messenger.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで会心ダメージを31.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.everlasting-moonglow.name": {
     "text": "不滅の月華",
     "sourceHash": null,
@@ -4839,6 +6297,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.everlasting-moonglow.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルでHPを49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbearer.name": {
+    "text": "冬忍びの実",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbearer.summary": {
+    "text": "攻撃力が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostbearer.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4951,6 +6427,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.halberd.name": {
+    "text": "鉾槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.halberd.summary": {
+    "text": "攻撃力が上がる★3の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.halberd.body": {
+    "text": "Lv.90の基礎攻撃力は448。同レベルで攻撃力を23.5%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.astral-vultures-crimson-plumage.name": {
     "text": "星鷲の紅き羽",
     "sourceHash": null,
@@ -4987,6 +6481,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.makhaira-aquamarine.name": {
+    "text": "マカイラの水色",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.makhaira-aquamarine.summary": {
+    "text": "元素熟知が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.makhaira-aquamarine.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.god.name": {
     "text": "魔神",
     "sourceHash": null,
@@ -5001,6 +6513,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.god.body": {
     "text": "[[teyvat]]の歴史に登場する存在。公式の璃月紹介では岩の魔神に言及している。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.magic-guide.name": {
+    "text": "魔導緒論",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.magic-guide.summary": {
+    "text": "元素熟知が上がる★3の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.magic-guide.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルで[[elemental-mastery]]を187伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruit-of-fulfillment.name": {
+    "text": "満悦の実",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruit-of-fulfillment.summary": {
+    "text": "元素チャージ効率が上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fruit-of-fulfillment.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5041,6 +6589,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.moonpiercer.name": {
+    "text": "ムーンピアサー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.moonpiercer.summary": {
+    "text": "元素熟知が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.moonpiercer.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.the-unforged.name": {
     "text": "無工の剣",
     "sourceHash": null,
@@ -5073,6 +6639,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.namecard.body": {
     "text": "都市評判の報酬などで獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mouuns-moon.name": {
+    "text": "曚雲の月",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mouuns-moon.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mouuns-moon.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5131,6 +6715,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.calamity-of-eshu.name": {
+    "text": "厄水の災い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.calamity-of-eshu.summary": {
+    "text": "攻撃力が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.calamity-of-eshu.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.nightsoul-points.name": {
     "text": "夜魂値",
     "sourceHash": null,
@@ -5181,6 +6783,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.nightsoul-burst.body": {
     "text": "チーム内のナタのキャラクターに関わる仕組みで、発生時にキャラクターの天賦などが反応する。[[nightsouls-blessing|夜魂の加護]]とは別の仕組み。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ring-of-yaxche.name": {
+    "text": "ヤシュチェの環",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ring-of-yaxche.summary": {
+    "text": "HPが上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ring-of-yaxche.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5347,6 +6967,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.fading-twilight.name": {
+    "text": "落霞",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fading-twilight.summary": {
+    "text": "元素チャージ効率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fading-twilight.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.snare-hook.name": {
+    "text": "羅網の針",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.snare-hook.summary": {
+    "text": "元素チャージ効率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.snare-hook.body": {
+    "text": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.liyue.name": {
     "text": "璃月",
     "sourceHash": null,
@@ -5365,6 +7021,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.debate-club.name": {
+    "text": "理屈責め",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.debate-club.summary": {
+    "text": "攻撃力が上がる★3の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.debate-club.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。[[elemental-skill]]使用後、[[normal-attack]]や[[charged-attack]]の命中をきっかけに追加の範囲ダメージが発生する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.crescent-pike.name": {
     "text": "流月の針",
     "sourceHash": null,
@@ -5379,6 +7053,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.crescent-pike.body": {
     "text": "Lv.90時の基礎攻撃力は565。同レベルで物理ダメージを34.5%伸ばせる。元素粒子やオーブを獲得した後、[[normal-attack]]と[[charged-attack]]で追加ダメージが発生する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodtainted-greatsword.name": {
+    "text": "龍血を浴びた剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodtainted-greatsword.summary": {
+    "text": "元素熟知が上がる★3の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.bloodtainted-greatsword.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルで[[elemental-mastery]]を187伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thrilling-tales-of-dragon-slayers.name": {
+    "text": "龍殺しの英傑譚",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thrilling-tales-of-dragon-slayers.summary": {
+    "text": "HPが上がる★3の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thrilling-tales-of-dragon-slayers.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルでHPを35.2%伸ばせる。装備者から別のキャラクターに切り替えると、出場したキャラクターの攻撃力が一定時間上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5545,6 +7255,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.sequence-of-solitude.name": {
+    "text": "冷寂の音",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sequence-of-solitude.summary": {
+    "text": "HPが上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.sequence-of-solitude.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.pool-of-sapphire-grace.name": {
     "text": "霊沼雲池",
     "sourceHash": null,
@@ -5559,6 +7287,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.pool-of-sapphire-grace.body": {
     "text": "[[ornamental-fish]]を飼うことができる。璃月の釣り協会で交換できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cool-steel.name": {
+    "text": "冷刃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cool-steel.summary": {
+    "text": "攻撃力が上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cool-steel.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。水または氷の影響を受けている敵へのダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.harbinger-of-dawn.name": {
+    "text": "黎明の神剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.harbinger-of-dawn.summary": {
+    "text": "会心ダメージが上がる★3の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.harbinger-of-dawn.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで会心ダメージを46.9%伸ばせる。装備者のHPが一定割合を超えている間、会心率が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5599,6 +7363,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.scion-of-the-blazing-sun.name": {
+    "text": "烈日の後嗣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scion-of-the-blazing-sun.summary": {
+    "text": "会心率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scion-of-the-blazing-sun.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで[[crit-rate]]を18.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.range-gauge.name": {
     "text": "レンジゲージ",
     "sourceHash": null,
@@ -5613,6 +7395,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.range-gauge.body": {
     "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wolf-fang.name": {
+    "text": "狼牙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wolf-fang.summary": {
+    "text": "会心率が上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.wolf-fang.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

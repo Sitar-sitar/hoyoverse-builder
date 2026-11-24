@@ -2,6 +2,33 @@
 import type { SourceText } from "../../../shared/content/types";
 const block0: SourceText[] = [
   {
+    "id": "term.genshin.earth-shaker.name",
+    "ja": "アースシェイカー",
+    "context": "glossary genshin term earth-shaker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.earth-shaker.summary",
+    "ja": "攻撃力が上がる★4の両手剣。",
+    "context": "glossary genshin term earth-shaker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.earth-shaker.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term earth-shaker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.staff-of-the-scarlet-sands.name",
     "ja": "赤砂の杖",
     "context": "glossary genshin term staff-of-the-scarlet-sands: Japanese official term name",
@@ -87,6 +114,33 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.akuoumaru.name",
+    "ja": "惡王丸",
+    "context": "glossary genshin term akuoumaru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.akuoumaru.summary",
+    "ja": "攻撃力が上がる★4の両手剣。",
+    "context": "glossary genshin term akuoumaru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.akuoumaru.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term akuoumaru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.action-card.name",
     "ja": "アクションカード",
     "context": "glossary genshin term action-card: Japanese official term name",
@@ -145,6 +199,33 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.amenoma-kageuchi.name",
+    "ja": "天目影打",
+    "context": "glossary genshin term amenoma-kageuchi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.amenoma-kageuchi.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term amenoma-kageuchi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.amenoma-kageuchi.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term amenoma-kageuchi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.amos-bow.name",
     "ja": "アモスの弓",
     "context": "glossary genshin term amos-bow: Japanese official term name",
@@ -170,6 +251,35 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dark-iron-sword.name",
+    "ja": "暗鉄剣",
+    "context": "glossary genshin term dark-iron-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dark-iron-sword.summary",
+    "ja": "元素熟知が上がる★3の片手剣。",
+    "context": "glossary genshin term dark-iron-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dark-iron-sword.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで[[elemental-mastery]]を141伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dark-iron-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
   },
   {
     "id": "term.genshin.beacon-of-the-reed-sea.name",
@@ -227,6 +337,64 @@ const block0: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[mondstadt]]"
+    ]
+  },
+  {
+    "id": "term.genshin.otherworldly-story.name",
+    "ja": "異世界旅行記",
+    "context": "glossary genshin term otherworldly-story: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.otherworldly-story.summary",
+    "ja": "元素チャージ効率が上がる★3の法器。",
+    "context": "glossary genshin term otherworldly-story: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.otherworldly-story.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで[[energy-recharge]]を39.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term otherworldly-story: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.heretics-molten-blade.name",
+    "ja": "異端を狩る熔刃",
+    "context": "glossary genshin term heretics-molten-blade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heretics-molten-blade.summary",
+    "ja": "会心率が上がる★4の片手剣。",
+    "context": "glossary genshin term heretics-molten-blade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heretics-molten-blade.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term heretics-molten-blade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
     ]
   },
   {
@@ -541,6 +709,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.blackmarrow-lantern.name",
+    "ja": "烏髄の孤灯",
+    "context": "glossary genshin term blackmarrow-lantern: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blackmarrow-lantern.summary",
+    "ja": "元素熟知が上がる★4の法器。",
+    "context": "glossary genshin term blackmarrow-lantern: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blackmarrow-lantern.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで[[elemental-mastery]]を221伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term blackmarrow-lantern: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.sea-ganoderma.name",
     "ja": "ウミレイシ",
     "context": "glossary genshin term sea-ganoderma: Japanese official term name",
@@ -597,6 +794,62 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.flute-of-ezpitzal.name",
+    "ja": "エズピツァルの笛",
+    "context": "glossary genshin term flute-of-ezpitzal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flute-of-ezpitzal.summary",
+    "ja": "防御力が上がる★4の片手剣。",
+    "context": "glossary genshin term flute-of-ezpitzal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flute-of-ezpitzal.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで防御力を69.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term flute-of-ezpitzal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-the-vigil.name",
+    "ja": "遠望の歌",
+    "context": "glossary genshin term song-of-the-vigil: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-the-vigil.summary",
+    "ja": "元素熟知が上がる★4の長柄武器。",
+    "context": "glossary genshin term song-of-the-vigil: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-the-vigil.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term song-of-the-vigil: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.golden-troupe.name",
     "ja": "黄金の劇団",
     "context": "glossary genshin term golden-troupe: Japanese official term name",
@@ -624,6 +877,33 @@ const block0: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
+  },
+  {
+    "id": "term.genshin.kings-squire.name",
+    "ja": "王の近侍",
+    "context": "glossary genshin term kings-squire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kings-squire.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term kings-squire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kings-squire.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kings-squire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.gest-of-the-mighty-wolf.name",
@@ -662,7 +942,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.genshin.wolfs-gravestone.summary",
     "ja": "攻撃力が上がる★5の両手剣。",
@@ -709,6 +992,33 @@ const block0: SourceText[] = [
     "protectedTokens": [
       "[[inazuma]]"
     ]
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep.name",
+    "ja": "海淵のフィナーレ",
+    "context": "glossary genshin term finale-of-the-deep: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term finale-of-the-deep: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.finale-of-the-deep.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term finale-of-the-deep: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.bloom.name",
@@ -938,6 +1248,33 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.kagotsurube-isshin.name",
+    "ja": "籠釣瓶一心",
+    "context": "glossary genshin term kagotsurube-isshin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kagotsurube-isshin.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term kagotsurube-isshin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kagotsurube-isshin.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kagotsurube-isshin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.windblume-ode.name",
     "ja": "風花の頌歌",
     "context": "glossary genshin term windblume-ode: Japanese official term name",
@@ -945,10 +1282,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.genshin.windblume-ode.summary",
     "ja": "元素熟知が上がる★4の弓。",
@@ -1190,6 +1524,35 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[element|",
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.raven-bow.name",
+    "ja": "鴉羽の弓",
+    "context": "glossary genshin term raven-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.raven-bow.summary",
+    "ja": "元素熟知が上がる★3の弓。",
+    "context": "glossary genshin term raven-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.raven-bow.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで[[elemental-mastery]]を94伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term raven-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -1520,7 +1883,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.genshin.sanctifying-elixir.body",
     "ja": "[[artifact-transmuter]]で消費し、指定したセットや部位の[[artifact]]との交換に使える。",
@@ -1531,6 +1897,35 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[artifact-transmuter]]",
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.kitain-cross-spear.name",
+    "ja": "喜多院十文字槍",
+    "context": "glossary genshin term kitain-cross-spear: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kitain-cross-spear.summary",
+    "ja": "元素熟知が上がる★4の長柄武器。",
+    "context": "glossary genshin term kitain-cross-spear: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kitain-cross-spear.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kitain-cross-spear: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -1702,6 +2097,33 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.royal-grimoire.name",
+    "ja": "旧貴族秘法録",
+    "context": "glossary genshin term royal-grimoire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.royal-grimoire.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term royal-grimoire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.royal-grimoire.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term royal-grimoire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.royal-spear.name",
     "ja": "旧貴族猟槍",
     "context": "glossary genshin term royal-spear: Japanese official term name",
@@ -1723,6 +2145,60 @@ const block1: SourceText[] = [
     "id": "term.genshin.royal-spear.body",
     "ja": "Lv.90時の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term royal-spear: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blade-of-atonement.name",
+    "ja": "救済の剣",
+    "context": "glossary genshin term blade-of-atonement: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blade-of-atonement.summary",
+    "ja": "攻撃力が上がる★4の両手剣。",
+    "context": "glossary genshin term blade-of-atonement: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blade-of-atonement.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term blade-of-atonement: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.echoes-of-the-heart.name",
+    "ja": "胸中の谺",
+    "context": "glossary genshin term echoes-of-the-heart: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.echoes-of-the-heart.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term echoes-of-the-heart: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.echoes-of-the-heart.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term echoes-of-the-heart: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1756,6 +2232,35 @@ const block1: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.the-catch.name",
+    "ja": "漁獲",
+    "context": "glossary genshin term the-catch: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-catch.summary",
+    "ja": "元素チャージ効率が上がる★4の長柄武器。",
+    "context": "glossary genshin term the-catch: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-catch.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term the-catch: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.mistsplitter-reforged.name",
     "ja": "霧切の廻光",
     "context": "glossary genshin term mistsplitter-reforged: Japanese official term name",
@@ -1777,6 +2282,60 @@ const block1: SourceText[] = [
     "id": "term.genshin.mistsplitter-reforged.body",
     "ja": "Lv.90時の基礎攻撃力は674。同レベルで会心ダメージを44.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term mistsplitter-reforged: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silver-light.name",
+    "ja": "銀灯",
+    "context": "glossary genshin term silver-light: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silver-light.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term silver-light: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silver-light.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term silver-light: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prospectors-shovel.name",
+    "ja": "金掘りのシャベル",
+    "context": "glossary genshin term prospectors-shovel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prospectors-shovel.summary",
+    "ja": "攻撃力が上がる★4の長柄武器。",
+    "context": "glossary genshin term prospectors-shovel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prospectors-shovel.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prospectors-shovel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1882,10 +2441,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.genshin.wolfhook.body",
     "ja": "[[mondstadt]]で採れる育成素材。奔狼領の茂みや樹木の根元で集められる。レザーやミカの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -2214,6 +2770,35 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.end-of-the-line.name",
+    "ja": "竭沢",
+    "context": "glossary genshin term end-of-the-line: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.end-of-the-line.summary",
+    "ja": "元素チャージ効率が上がる★4の弓。",
+    "context": "glossary genshin term end-of-the-line: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.end-of-the-line.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term end-of-the-line: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.quenepa-berry.name",
     "ja": "ケネパベリー",
     "context": "glossary genshin term quenepa-berry: Japanese official term name",
@@ -2241,7 +2826,10 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[natlan]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.genshin.quicken.name",
     "ja": "原激化",
@@ -2570,6 +3158,93 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sapwood-blade.name",
+    "ja": "原木刀",
+    "context": "glossary genshin term sapwood-blade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sapwood-blade.summary",
+    "ja": "元素チャージ効率が上がる★4の片手剣。",
+    "context": "glossary genshin term sapwood-blade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sapwood-blade.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sapwood-blade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.rainbow-serpents-rain-bow.name",
+    "ja": "虹蛇の雨弦",
+    "context": "glossary genshin term rainbow-serpents-rain-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainbow-serpents-rain-bow.summary",
+    "ja": "元素チャージ効率が上がる★4の弓。",
+    "context": "glossary genshin term rainbow-serpents-rain-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rainbow-serpents-rain-bow.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term rainbow-serpents-rain-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.solar-pearl.name",
+    "ja": "匣中日月",
+    "context": "glossary genshin term solar-pearl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.solar-pearl.summary",
+    "ja": "会心率が上がる★4の法器。",
+    "context": "glossary genshin term solar-pearl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.solar-pearl.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term solar-pearl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.dragons-bane.name",
     "ja": "匣中滅龍",
     "context": "glossary genshin term dragons-bane: Japanese official term name",
@@ -2621,6 +3296,89 @@ const block2: SourceText[] = [
     "id": "term.genshin.lions-roar.body",
     "ja": "Lv.90時の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term lions-roar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sword-of-descension.name",
+    "ja": "降臨の剣",
+    "context": "glossary genshin term sword-of-descension: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sword-of-descension.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term sword-of-descension: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sword-of-descension.body",
+    "ja": "Lv.90の基礎攻撃力は440。同レベルで攻撃力を35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sword-of-descension: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbreath.name",
+    "ja": "氷の吐息",
+    "context": "glossary genshin term frostbreath: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbreath.summary",
+    "ja": "元素チャージ効率が上がる★4の長柄武器。",
+    "context": "glossary genshin term frostbreath: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbreath.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term frostbreath: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.black-tassel.name",
+    "ja": "黒纓槍",
+    "context": "glossary genshin term black-tassel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.black-tassel.summary",
+    "ja": "HPが上がる★3の長柄武器。",
+    "context": "glossary genshin term black-tassel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.black-tassel.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルでHPを46.9%伸ばせる。装備者がスライムに与えるダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term black-tassel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -2735,6 +3493,62 @@ const block2: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.blackcliff-agate.name",
+    "ja": "黒岩の緋玉",
+    "context": "glossary genshin term blackcliff-agate: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blackcliff-agate.summary",
+    "ja": "会心ダメージが上がる★4の法器。",
+    "context": "glossary genshin term blackcliff-agate: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.blackcliff-agate.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term blackcliff-agate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-black-sword.name",
+    "ja": "黒剣",
+    "context": "glossary genshin term the-black-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-black-sword.summary",
+    "ja": "会心率が上がる★4の片手剣。",
+    "context": "glossary genshin term the-black-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-black-sword.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term the-black-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.athame-artis.name",
     "ja": "黒蝕",
     "context": "glossary genshin term athame-artis: Japanese official term name",
@@ -2823,6 +3637,35 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sacrificial-jade.name",
+    "ja": "古祠の瓏",
+    "context": "glossary genshin term sacrificial-jade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-jade.summary",
+    "ja": "会心率が上がる★4の法器。",
+    "context": "glossary genshin term sacrificial-jade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificial-jade.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで[[crit-rate]]を36.8%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sacrificial-jade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.staff-of-homa.name",
     "ja": "護摩の杖",
     "context": "glossary genshin term staff-of-homa: Japanese official term name",
@@ -2848,10 +3691,7 @@ const block2: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.genshin.surfs-up.name",
     "ja": "サーフィンタイム",
@@ -2879,6 +3719,35 @@ const block3: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.fleuve-cendre-ferryman.name",
+    "ja": "サーンドルの渡し守",
+    "context": "glossary genshin term fleuve-cendre-ferryman: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fleuve-cendre-ferryman.summary",
+    "ja": "元素チャージ効率が上がる★4の片手剣。",
+    "context": "glossary genshin term fleuve-cendre-ferryman: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fleuve-cendre-ferryman.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fleuve-cendre-ferryman: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
     ]
   },
   {
@@ -2918,7 +3787,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.genshin.saikouchi-kensaku.summary",
     "ja": "鍛冶屋から採鉱地の情報を得る機能。",
@@ -2993,6 +3865,35 @@ const block3: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[crit-rate]]"
+    ]
+  },
+  {
+    "id": "term.genshin.xiphos-moonlight.name",
+    "ja": "サイフォスの月明かり",
+    "context": "glossary genshin term xiphos-moonlight: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.xiphos-moonlight.summary",
+    "ja": "元素熟知が上がる★4の片手剣。",
+    "context": "glossary genshin term xiphos-moonlight: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.xiphos-moonlight.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term xiphos-moonlight: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -3229,6 +4130,62 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.dialogues-of-the-desert-sages.name",
+    "ja": "砂中の賢者達の問答",
+    "context": "glossary genshin term dialogues-of-the-desert-sages: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dialogues-of-the-desert-sages.summary",
+    "ja": "HPが上がる★4の長柄武器。",
+    "context": "glossary genshin term dialogues-of-the-desert-sages: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dialogues-of-the-desert-sages.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dialogues-of-the-desert-sages: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wandering-evenstar.name",
+    "ja": "彷徨える星",
+    "context": "glossary genshin term wandering-evenstar: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wandering-evenstar.summary",
+    "ja": "元素熟知が上がる★4の法器。",
+    "context": "glossary genshin term wandering-evenstar: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wandering-evenstar.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wandering-evenstar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.trishiraite.name",
     "ja": "サングイト",
     "context": "glossary genshin term trishiraite: Japanese official term name",
@@ -3341,6 +4298,33 @@ const block3: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.wavebreakers-fin.name",
+    "ja": "斬波のひれ長",
+    "context": "glossary genshin term wavebreakers-fin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wavebreakers-fin.summary",
+    "ja": "攻撃力が上がる★4の長柄武器。",
+    "context": "glossary genshin term wavebreakers-fin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wavebreakers-fin.body",
+    "ja": "Lv.90の基礎攻撃力は620。同レベルで攻撃力を13.8%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wavebreakers-fin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.parametric-transformer.name",
     "ja": "参量物質変化器",
     "context": "glossary genshin term parametric-transformer: Japanese official term name",
@@ -3424,6 +4408,35 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.cinnabar-spindle.name",
+    "ja": "シナバースピンドル",
+    "context": "glossary genshin term cinnabar-spindle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cinnabar-spindle.summary",
+    "ja": "防御力が上がる★4の片手剣。",
+    "context": "glossary genshin term cinnabar-spindle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cinnabar-spindle.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで防御力を69.0%伸ばせる。装備者の防御力に応じて[[elemental-skill]]のダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cinnabar-spindle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-skill]]"
+    ]
+  },
+  {
     "id": "term.genshin.lost-prayer-to-the-sacred-winds.name",
     "ja": "四風原典",
     "context": "glossary genshin term lost-prayer-to-the-sacred-winds: Japanese official term name",
@@ -3451,6 +4464,60 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[crit-rate]]"
     ]
+  },
+  {
+    "id": "term.genshin.covenant-of-frost-and-snow.name",
+    "ja": "霜雪の契",
+    "context": "glossary genshin term covenant-of-frost-and-snow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.covenant-of-frost-and-snow.summary",
+    "ja": "防御力が上がる★4の弓。",
+    "context": "glossary genshin term covenant-of-frost-and-snow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.covenant-of-frost-and-snow.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで防御力を51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term covenant-of-frost-and-snow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sharpshooters-oath.name",
+    "ja": "シャープシューターの誓い",
+    "context": "glossary genshin term sharpshooters-oath: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sharpshooters-oath.summary",
+    "ja": "会心ダメージが上がる★3の弓。",
+    "context": "glossary genshin term sharpshooters-oath: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sharpshooters-oath.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで会心ダメージを46.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sharpshooters-oath: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.brilliant-chrysanthemum.name",
@@ -3651,6 +4718,36 @@ const block3: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.flowing-purity.name",
+    "ja": "純水流華",
+    "context": "glossary genshin term flowing-purity: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flowing-purity.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term flowing-purity: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block5: SourceText[] = [
+  {
+    "id": "term.genshin.flowing-purity.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term flowing-purity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.song-of-broken-pines.name",
     "ja": "松韻の響く頃",
     "context": "glossary genshin term song-of-broken-pines: Japanese official term name",
@@ -3765,6 +4862,35 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.clash-of-kings.name",
+    "ja": "諸王の対局",
+    "context": "glossary genshin term clash-of-kings: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.clash-of-kings.summary",
+    "ja": "会心率が上がる★4の法器。",
+    "context": "glossary genshin term clash-of-kings: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.clash-of-kings.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term clash-of-kings: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.serenitea-pot.name",
     "ja": "塵歌壺",
     "context": "glossary genshin term serenitea-pot: Japanese official term name",
@@ -3799,10 +4925,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.genshin.spiral-abyss.summary",
     "ja": "複数の層に挑む戦闘コンテンツ。",
@@ -3849,6 +4972,35 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.forged-by-the-golden-melody.name",
+    "ja": "シンフォニーの鋳影",
+    "context": "glossary genshin term forged-by-the-golden-melody: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.forged-by-the-golden-melody.summary",
+    "ja": "会心率が上がる★4の両手剣。",
+    "context": "glossary genshin term forged-by-the-golden-melody: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.forged-by-the-golden-melody.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term forged-by-the-golden-melody: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
   },
   {
     "id": "term.genshin.trust-rank.name",
@@ -3909,6 +5061,35 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.forest-regalia.name",
+    "ja": "森林のレガリア",
+    "context": "glossary genshin term forest-regalia: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.forest-regalia.summary",
+    "ja": "元素チャージ効率が上がる★4の両手剣。",
+    "context": "glossary genshin term forest-regalia: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.forest-regalia.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term forest-regalia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.finale-of-the-deep-galleries.name",
     "ja": "深廊の終曲",
     "context": "glossary genshin term finale-of-the-deep-galleries: Japanese official term name",
@@ -3963,6 +5144,33 @@ const block4: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.sword-of-narzissenkreuz.name",
+    "ja": "水仙十字の剣",
+    "context": "glossary genshin term sword-of-narzissenkreuz: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sword-of-narzissenkreuz.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term sword-of-narzissenkreuz: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sword-of-narzissenkreuz.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sword-of-narzissenkreuz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.viridescent-venerer.name",
     "ja": "翠緑の影",
     "context": "glossary genshin term viridescent-venerer: Japanese official term name",
@@ -3989,6 +5197,35 @@ const block4: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.ultimate-overlords-mega-magic-sword.name",
+    "ja": "スーパーアルティメット覇王魔剣",
+    "context": "glossary genshin term ultimate-overlords-mega-magic-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ultimate-overlords-mega-magic-sword.summary",
+    "ja": "元素チャージ効率が上がる★4の両手剣。",
+    "context": "glossary genshin term ultimate-overlords-mega-magic-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ultimate-overlords-mega-magic-sword.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ultimate-overlords-mega-magic-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
     ]
   },
   {
@@ -4135,6 +5372,33 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.rightful-reward.name",
+    "ja": "正義の報酬",
+    "context": "glossary genshin term rightful-reward: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rightful-reward.summary",
+    "ja": "HPが上がる★4の長柄武器。",
+    "context": "glossary genshin term rightful-reward: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.rightful-reward.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルでHPを27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term rightful-reward: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.scarab.name",
     "ja": "聖金虫",
     "context": "glossary genshin term scarab: Japanese official term name",
@@ -4250,6 +5514,35 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sacrificers-staff.name",
+    "ja": "聖祭者の輝杖",
+    "context": "glossary genshin term sacrificers-staff: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificers-staff.summary",
+    "ja": "会心率が上がる★4の長柄武器。",
+    "context": "glossary genshin term sacrificers-staff: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sacrificers-staff.body",
+    "ja": "Lv.90の基礎攻撃力は620。同レベルで[[crit-rate]]を9.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sacrificers-staff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.fragile-resin.name",
     "ja": "脆弱樹脂",
     "context": "glossary genshin term fragile-resin: Japanese official term name",
@@ -4271,6 +5564,33 @@ const block4: SourceText[] = [
     "id": "term.genshin.fragile-resin.body",
     "ja": "一部の報酬受取画面では、濃縮樹脂がない場合に使用できる。",
     "context": "glossary genshin term fragile-resin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-stillness.name",
+    "ja": "静寂の唄",
+    "context": "glossary genshin term song-of-stillness: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-stillness.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term song-of-stillness: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-stillness.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term song-of-stillness: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -4361,6 +5681,38 @@ const block4: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  }
+];
+
+const block6: SourceText[] = [
+  {
+    "id": "term.genshin.serenitys-call.name",
+    "ja": "静謐の笛",
+    "context": "glossary genshin term serenitys-call: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.serenitys-call.summary",
+    "ja": "元素チャージ効率が上がる★4の片手剣。",
+    "context": "glossary genshin term serenitys-call: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.serenitys-call.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term serenitys-call: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
     ]
   },
   {
@@ -4749,10 +6101,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.genshin.favonius-sword.body",
     "ja": "Luna VIII 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
@@ -4990,6 +6339,35 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.jade-vista.name",
+    "ja": "千鈞懸黎",
+    "context": "glossary genshin term jade-vista: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.jade-vista.summary",
+    "ja": "会心率が上がる★4の弓。",
+    "context": "glossary genshin term jade-vista: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.jade-vista.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term jade-vista: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
     ]
   },
   {
@@ -5257,7 +6635,10 @@ const block5: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.genshin.pale-flame.summary",
     "ja": "物理ダメージに関わる聖遺物セット。",
@@ -5306,6 +6687,33 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[genius-invokation-tcg]]"
     ]
+  },
+  {
+    "id": "term.genshin.ash-graven-drinking-horn.name",
+    "ja": "蒼紋の角杯",
+    "context": "glossary genshin term ash-graven-drinking-horn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ash-graven-drinking-horn.summary",
+    "ja": "HPが上がる★4の法器。",
+    "context": "glossary genshin term ash-graven-drinking-horn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ash-graven-drinking-horn.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ash-graven-drinking-horn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.azurelight.name",
@@ -5391,6 +6799,64 @@ const block5: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.wine-and-song.name",
+    "ja": "ダークアレイの酒と詩",
+    "context": "glossary genshin term wine-and-song: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wine-and-song.summary",
+    "ja": "元素チャージ効率が上がる★4の法器。",
+    "context": "glossary genshin term wine-and-song: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wine-and-song.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wine-and-song: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.the-alley-flash.name",
+    "ja": "ダークアレイの閃光",
+    "context": "glossary genshin term the-alley-flash: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-alley-flash.summary",
+    "ja": "元素熟知が上がる★4の片手剣。",
+    "context": "glossary genshin term the-alley-flash: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-alley-flash.body",
+    "ja": "Lv.90の基礎攻撃力は620。同レベルで[[elemental-mastery]]を55伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term the-alley-flash: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.wanderers-troupe.name",
     "ja": "大地を流浪する楽団",
     "context": "glossary genshin term wanderers-troupe: Japanese official term name",
@@ -5417,6 +6883,93 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.travelers-handy-sword.name",
+    "ja": "旅道の剣",
+    "context": "glossary genshin term travelers-handy-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.travelers-handy-sword.summary",
+    "ja": "防御力が上がる★3の片手剣。",
+    "context": "glossary genshin term travelers-handy-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.travelers-handy-sword.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで防御力を29.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term travelers-handy-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tamayuratei-no-ohanashi.name",
+    "ja": "玉響停の御噺",
+    "context": "glossary genshin term tamayuratei-no-ohanashi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tamayuratei-no-ohanashi.summary",
+    "ja": "元素チャージ効率が上がる★4の長柄武器。",
+    "context": "glossary genshin term tamayuratei-no-ohanashi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tamayuratei-no-ohanashi.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tamayuratei-no-ohanashi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.slingshot.name",
+    "ja": "弾弓",
+    "context": "glossary genshin term slingshot: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.slingshot.summary",
+    "ja": "会心率が上がる★3の弓。",
+    "context": "glossary genshin term slingshot: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.slingshot.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルで[[crit-rate]]を31.2%伸ばせる。発射後すぐに[[normal-attack]]や[[charged-attack]]の矢が命中するとダメージが上がる。命中まで時間がかかった場合はダメージが下がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term slingshot: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[charged-attack]]",
+      "[[crit-rate]]",
+      "[[normal-attack]]"
     ]
   },
   {
@@ -5503,6 +7056,145 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[element]]",
       "[[mondstadt]]"
+    ]
+  },
+  {
+    "id": "term.genshin.chain-breaker.name",
+    "ja": "チェーンブレイカー",
+    "context": "glossary genshin term chain-breaker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.chain-breaker.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term chain-breaker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.chain-breaker.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term chain-breaker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flame-forged-insight.name",
+    "ja": "知恵の溶炎",
+    "context": "glossary genshin term flame-forged-insight: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flame-forged-insight.summary",
+    "ja": "元素熟知が上がる★4の両手剣。",
+    "context": "glossary genshin term flame-forged-insight: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.flame-forged-insight.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term flame-forged-insight: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
+    "id": "term.genshin.fillet-blade.name",
+    "ja": "チ虎魚の刀",
+    "context": "glossary genshin term fillet-blade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fillet-blade.summary",
+    "ja": "攻撃力が上がる★3の片手剣。",
+    "context": "glossary genshin term fillet-blade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fillet-blade.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fillet-blade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.oathsworn-eye.name",
+    "ja": "誓いの明瞳",
+    "context": "glossary genshin term oathsworn-eye: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.oathsworn-eye.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term oathsworn-eye: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.oathsworn-eye.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term oathsworn-eye: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cloudforged.name",
+    "ja": "築雲",
+    "context": "glossary genshin term cloudforged: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cloudforged.summary",
+    "ja": "元素熟知が上がる★4の弓。",
+    "context": "glossary genshin term cloudforged: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cloudforged.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cloudforged: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -5708,10 +7400,7 @@ const block5: SourceText[] = [
       "[[elemental-mastery]]",
       "[[quicken|"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.genshin.furnishing.name",
     "ja": "調度品",
@@ -5898,7 +7587,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.genshin.serpent-spine.body",
     "ja": "Lv.90時の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -6027,6 +7719,33 @@ const block6: SourceText[] = [
       "[[charged-attack]]",
       "[[elemental-skill]]"
     ]
+  },
+  {
+    "id": "term.genshin.moonweavers-dawn.name",
+    "ja": "月紡ぎの曙光",
+    "context": "glossary genshin term moonweavers-dawn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.moonweavers-dawn.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term moonweavers-dawn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.moonweavers-dawn.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term moonweavers-dawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.fishing.name",
@@ -6203,6 +7922,62 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.ferrous-shadow.name",
+    "ja": "鉄影段平",
+    "context": "glossary genshin term ferrous-shadow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ferrous-shadow.summary",
+    "ja": "HPが上がる★3の両手剣。",
+    "context": "glossary genshin term ferrous-shadow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ferrous-shadow.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルでHPを35.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ferrous-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mailed-flower.name",
+    "ja": "鉄彩の花",
+    "context": "glossary genshin term mailed-flower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mailed-flower.summary",
+    "ja": "元素熟知が上がる★4の両手剣。",
+    "context": "glossary genshin term mailed-flower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mailed-flower.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mailed-flower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.iron-sting.name",
     "ja": "鉄蜂の刺し",
     "context": "glossary genshin term iron-sting: Japanese official term name",
@@ -6376,6 +8151,35 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.etherlight-spindlelute.name",
+    "ja": "天光のリュート",
+    "context": "glossary genshin term etherlight-spindlelute: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.etherlight-spindlelute.summary",
+    "ja": "元素チャージ効率が上がる★4の法器。",
+    "context": "glossary genshin term etherlight-spindlelute: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.etherlight-spindlelute.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term etherlight-spindlelute: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.story-quest.name",
     "ja": "伝説任務",
     "context": "glossary genshin term story-quest: Japanese official term name",
@@ -6462,6 +8266,64 @@ const block6: SourceText[] = [
       "[[elemental-burst]]",
       "[[elemental-skill]]",
       "[[normal-attack]]"
+    ]
+  },
+  {
+    "id": "term.genshin.emberwell.name",
+    "ja": "導炎の源",
+    "context": "glossary genshin term emberwell: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emberwell.summary",
+    "ja": "元素熟知が上がる★4の片手剣。",
+    "context": "glossary genshin term emberwell: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emberwell.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term emberwell: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
+    "id": "term.genshin.toukabou-shigure.name",
+    "ja": "東花坊時雨",
+    "context": "glossary genshin term toukabou-shigure: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.toukabou-shigure.summary",
+    "ja": "元素熟知が上がる★4の片手剣。",
+    "context": "glossary genshin term toukabou-shigure: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.toukabou-shigure.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term toukabou-shigure: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -6662,9 +8524,27 @@ const block6: SourceText[] = [
     ]
   },
   {
-    "id": "term.genshin.unfinished-reverie.name",
-    "ja": "遂げられなかった想い",
-    "context": "glossary genshin term unfinished-reverie: Japanese official term name",
+    "id": "term.genshin.ibis-piercer.name",
+    "ja": "トキの嘴",
+    "context": "glossary genshin term ibis-piercer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ibis-piercer.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term ibis-piercer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ibis-piercer.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ibis-piercer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -6672,7 +8552,16 @@ const block6: SourceText[] = [
   }
 ];
 
-const block7: SourceText[] = [
+const block9: SourceText[] = [
+  {
+    "id": "term.genshin.unfinished-reverie.name",
+    "ja": "遂げられなかった想い",
+    "context": "glossary genshin term unfinished-reverie: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
   {
     "id": "term.genshin.unfinished-reverie.summary",
     "ja": "燃焼状態の敵の有無に関係する聖遺物セット。",
@@ -6713,6 +8602,62 @@ const block7: SourceText[] = [
     "id": "term.genshin.toshi-hyouban.body",
     "ja": "地域の任務や探索などで評判を高めると、レシピや道具の設計図などを受け取れる。",
     "context": "glossary genshin term toshi-hyouban: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.twin-nephrite.name",
+    "ja": "特級の宝玉",
+    "context": "glossary genshin term twin-nephrite: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.twin-nephrite.summary",
+    "ja": "会心率が上がる★3の法器。",
+    "context": "glossary genshin term twin-nephrite: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.twin-nephrite.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで[[crit-rate]]を15.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term twin-nephrite: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
+    "id": "term.genshin.dodoco-tales.name",
+    "ja": "ドドコの物語",
+    "context": "glossary genshin term dodoco-tales: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dodoco-tales.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term dodoco-tales: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dodoco-tales.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dodoco-tales: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -6974,6 +8919,33 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.footprint-of-the-rainbow.name",
+    "ja": "虹の行方",
+    "context": "glossary genshin term footprint-of-the-rainbow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.footprint-of-the-rainbow.summary",
+    "ja": "防御力が上がる★4の長柄武器。",
+    "context": "glossary genshin term footprint-of-the-rainbow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.footprint-of-the-rainbow.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで防御力を51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term footprint-of-the-rainbow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.sunny-morning-sleep-in.name",
     "ja": "寝正月の初晴",
     "context": "glossary genshin term sunny-morning-sleep-in: Japanese official term name",
@@ -7120,6 +9092,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.hakushin-ring.name",
+    "ja": "白辰の輪",
+    "context": "glossary genshin term hakushin-ring: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hakushin-ring.summary",
+    "ja": "元素チャージ効率が上がる★4の法器。",
+    "context": "glossary genshin term hakushin-ring: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hakushin-ring.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hakushin-ring: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.the-first-great-magic.name",
     "ja": "始まりの大魔術",
     "context": "glossary genshin term the-first-great-magic: Japanese official term name",
@@ -7205,6 +9206,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.ballad-of-the-boundless-blue.name",
+    "ja": "果てなき紺碧の唄",
+    "context": "glossary genshin term ballad-of-the-boundless-blue: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ballad-of-the-boundless-blue.summary",
+    "ja": "元素チャージ効率が上がる★4の法器。",
+    "context": "glossary genshin term ballad-of-the-boundless-blue: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ballad-of-the-boundless-blue.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ballad-of-the-boundless-blue: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.vortex-vanquisher.name",
     "ja": "破天の槍",
     "context": "glossary genshin term vortex-vanquisher: Japanese official term name",
@@ -7258,6 +9288,35 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.talking-stick.name",
+    "ja": "話死合い棒",
+    "context": "glossary genshin term talking-stick: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.talking-stick.summary",
+    "ja": "会心率が上がる★4の両手剣。",
+    "context": "glossary genshin term talking-stick: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.talking-stick.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[crit-rate]]を18.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term talking-stick: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
     ]
   },
   {
@@ -7350,6 +9409,64 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.mappa-mare.name",
+    "ja": "万国諸海の図譜",
+    "context": "glossary genshin term mappa-mare: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mappa-mare.summary",
+    "ja": "元素熟知が上がる★4の法器。",
+    "context": "glossary genshin term mappa-mare: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mappa-mare.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mappa-mare: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
+    "id": "term.genshin.master-key.name",
+    "ja": "万能の鍵",
+    "context": "glossary genshin term master-key: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.master-key.summary",
+    "ja": "元素チャージ効率が上がる★4の両手剣。",
+    "context": "glossary genshin term master-key: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.master-key.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term master-key: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.sakura-bloom.name",
     "ja": "緋櫻毬",
     "context": "glossary genshin term sakura-bloom: Japanese official term name",
@@ -7387,7 +9504,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.genshin.domain.summary",
     "ja": "敵との戦闘などに挑戦し報酬を得られる場所。",
@@ -7407,6 +9527,35 @@ const block7: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]",
       "[[original-resin]]"
+    ]
+  },
+  {
+    "id": "term.genshin.emerald-orb.name",
+    "ja": "翡玉法珠",
+    "context": "glossary genshin term emerald-orb: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emerald-orb.summary",
+    "ja": "元素熟知が上がる★3の法器。",
+    "context": "glossary genshin term emerald-orb: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.emerald-orb.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで[[elemental-mastery]]を94伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term emerald-orb: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
     ]
   },
   {
@@ -7436,6 +9585,35 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.skyrider-sword.name",
+    "ja": "飛天御剣",
+    "context": "glossary genshin term skyrider-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.skyrider-sword.summary",
+    "ja": "元素チャージ効率が上がる★3の片手剣。",
+    "context": "glossary genshin term skyrider-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.skyrider-sword.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルで[[energy-recharge]]を52.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term skyrider-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
     ]
   },
   {
@@ -7524,6 +9702,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.ballad-of-the-fjords.name",
+    "ja": "フィヨルドの歌",
+    "context": "glossary genshin term ballad-of-the-fjords: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ballad-of-the-fjords.summary",
+    "ja": "会心率が上がる★4の長柄武器。",
+    "context": "glossary genshin term ballad-of-the-fjords: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ballad-of-the-fjords.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ballad-of-the-fjords: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.windwheel-aster.name",
     "ja": "風車アスター",
     "context": "glossary genshin term windwheel-aster: Japanese official term name",
@@ -7580,6 +9787,33 @@ const block7: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.missive-windspear.name",
+    "ja": "風信の矛",
+    "context": "glossary genshin term missive-windspear: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.missive-windspear.summary",
+    "ja": "攻撃力が上がる★4の長柄武器。",
+    "context": "glossary genshin term missive-windspear: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.missive-windspear.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term missive-windspear: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.aquila-favonia.name",
     "ja": "風鷹剣",
     "context": "glossary genshin term aquila-favonia: Japanese official term name",
@@ -7623,10 +9857,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.genshin.the-flute.body",
     "ja": "Ver.7.0 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。",
@@ -7668,6 +9899,62 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.festering-desire.name",
+    "ja": "腐植の剣",
+    "context": "glossary genshin term festering-desire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.festering-desire.summary",
+    "ja": "元素チャージ効率が上がる★4の片手剣。",
+    "context": "glossary genshin term festering-desire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.festering-desire.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term festering-desire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.messenger.name",
+    "ja": "文使い",
+    "context": "glossary genshin term messenger: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.messenger.summary",
+    "ja": "会心ダメージが上がる★3の弓。",
+    "context": "glossary genshin term messenger: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.messenger.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで会心ダメージを31.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term messenger: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.everlasting-moonglow.name",
     "ja": "不滅の月華",
     "context": "glossary genshin term everlasting-moonglow: Japanese official term name",
@@ -7689,6 +9976,33 @@ const block8: SourceText[] = [
     "id": "term.genshin.everlasting-moonglow.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルでHPを49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term everlasting-moonglow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbearer.name",
+    "ja": "冬忍びの実",
+    "context": "glossary genshin term frostbearer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbearer.summary",
+    "ja": "攻撃力が上がる★4の法器。",
+    "context": "glossary genshin term frostbearer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostbearer.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term frostbearer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -7864,6 +10178,33 @@ const block8: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.halberd.name",
+    "ja": "鉾槍",
+    "context": "glossary genshin term halberd: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.halberd.summary",
+    "ja": "攻撃力が上がる★3の長柄武器。",
+    "context": "glossary genshin term halberd: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.halberd.body",
+    "ja": "Lv.90の基礎攻撃力は448。同レベルで攻撃力を23.5%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term halberd: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.astral-vultures-crimson-plumage.name",
     "ja": "星鷲の紅き羽",
     "context": "glossary genshin term astral-vultures-crimson-plumage: Japanese official term name",
@@ -7922,6 +10263,35 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.makhaira-aquamarine.name",
+    "ja": "マカイラの水色",
+    "context": "glossary genshin term makhaira-aquamarine: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.makhaira-aquamarine.summary",
+    "ja": "元素熟知が上がる★4の両手剣。",
+    "context": "glossary genshin term makhaira-aquamarine: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.makhaira-aquamarine.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term makhaira-aquamarine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.god.name",
     "ja": "魔神",
     "context": "glossary genshin term god: Japanese official term name",
@@ -7949,6 +10319,64 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[liyue]]",
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.magic-guide.name",
+    "ja": "魔導緒論",
+    "context": "glossary genshin term magic-guide: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.magic-guide.summary",
+    "ja": "元素熟知が上がる★3の法器。",
+    "context": "glossary genshin term magic-guide: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.magic-guide.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルで[[elemental-mastery]]を187伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term magic-guide: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
+    "id": "term.genshin.fruit-of-fulfillment.name",
+    "ja": "満悦の実",
+    "context": "glossary genshin term fruit-of-fulfillment: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fruit-of-fulfillment.summary",
+    "ja": "元素チャージ効率が上がる★4の法器。",
+    "context": "glossary genshin term fruit-of-fulfillment: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fruit-of-fulfillment.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fruit-of-fulfillment: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
     ]
   },
   {
@@ -8010,6 +10438,38 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.moonpiercer.name",
+    "ja": "ムーンピアサー",
+    "context": "glossary genshin term moonpiercer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.moonpiercer.summary",
+    "ja": "元素熟知が上がる★4の長柄武器。",
+    "context": "glossary genshin term moonpiercer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block11: SourceText[] = [
+  {
+    "id": "term.genshin.moonpiercer.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term moonpiercer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
     "id": "term.genshin.the-unforged.name",
     "ja": "無工の剣",
     "context": "glossary genshin term the-unforged: Japanese official term name",
@@ -8058,6 +10518,33 @@ const block8: SourceText[] = [
     "id": "term.genshin.namecard.body",
     "ja": "都市評判の報酬などで獲得できる。",
     "context": "glossary genshin term namecard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mouuns-moon.name",
+    "ja": "曚雲の月",
+    "context": "glossary genshin term mouuns-moon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mouuns-moon.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term mouuns-moon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mouuns-moon.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mouuns-moon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -8151,6 +10638,33 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.calamity-of-eshu.name",
+    "ja": "厄水の災い",
+    "context": "glossary genshin term calamity-of-eshu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.calamity-of-eshu.summary",
+    "ja": "攻撃力が上がる★4の片手剣。",
+    "context": "glossary genshin term calamity-of-eshu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.calamity-of-eshu.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term calamity-of-eshu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.nightsoul-points.name",
     "ja": "夜魂値",
     "context": "glossary genshin term nightsoul-points: Japanese official term name",
@@ -8239,6 +10753,33 @@ const block8: SourceText[] = [
       "[[nightsouls-blessing|",
       "[[talent]]"
     ]
+  },
+  {
+    "id": "term.genshin.ring-of-yaxche.name",
+    "ja": "ヤシュチェの環",
+    "context": "glossary genshin term ring-of-yaxche: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ring-of-yaxche.summary",
+    "ja": "HPが上がる★4の法器。",
+    "context": "glossary genshin term ring-of-yaxche: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ring-of-yaxche.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ring-of-yaxche: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.noctilucous-jade.name",
@@ -8500,6 +11041,64 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.fading-twilight.name",
+    "ja": "落霞",
+    "context": "glossary genshin term fading-twilight: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fading-twilight.summary",
+    "ja": "元素チャージ効率が上がる★4の弓。",
+    "context": "glossary genshin term fading-twilight: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fading-twilight.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fading-twilight: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
+    "id": "term.genshin.snare-hook.name",
+    "ja": "羅網の針",
+    "context": "glossary genshin term snare-hook: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.snare-hook.summary",
+    "ja": "元素チャージ効率が上がる★4の弓。",
+    "context": "glossary genshin term snare-hook: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.snare-hook.body",
+    "ja": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term snare-hook: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[energy-recharge]]"
+    ]
+  },
+  {
     "id": "term.genshin.liyue.name",
     "ja": "璃月",
     "context": "glossary genshin term liyue: Japanese official term name",
@@ -8526,6 +11125,37 @@ const block8: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[teyvat]]"
+    ]
+  },
+  {
+    "id": "term.genshin.debate-club.name",
+    "ja": "理屈責め",
+    "context": "glossary genshin term debate-club: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.debate-club.summary",
+    "ja": "攻撃力が上がる★3の両手剣。",
+    "context": "glossary genshin term debate-club: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.debate-club.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。[[elemental-skill]]使用後、[[normal-attack]]や[[charged-attack]]の命中をきっかけに追加の範囲ダメージが発生する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term debate-club: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[charged-attack]]",
+      "[[elemental-skill]]",
+      "[[normal-attack]]"
     ]
   },
   {
@@ -8560,6 +11190,62 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.bloodtainted-greatsword.name",
+    "ja": "龍血を浴びた剣",
+    "context": "glossary genshin term bloodtainted-greatsword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bloodtainted-greatsword.summary",
+    "ja": "元素熟知が上がる★3の両手剣。",
+    "context": "glossary genshin term bloodtainted-greatsword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.bloodtainted-greatsword.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルで[[elemental-mastery]]を187伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term bloodtainted-greatsword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[elemental-mastery]]"
+    ]
+  },
+  {
+    "id": "term.genshin.thrilling-tales-of-dragon-slayers.name",
+    "ja": "龍殺しの英傑譚",
+    "context": "glossary genshin term thrilling-tales-of-dragon-slayers: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thrilling-tales-of-dragon-slayers.summary",
+    "ja": "HPが上がる★3の法器。",
+    "context": "glossary genshin term thrilling-tales-of-dragon-slayers: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thrilling-tales-of-dragon-slayers.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルでHPを35.2%伸ばせる。装備者から別のキャラクターに切り替えると、出場したキャラクターの攻撃力が一定時間上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term thrilling-tales-of-dragon-slayers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.compound-bow.name",
     "ja": "リングボウ",
     "context": "glossary genshin term compound-bow: Japanese official term name",
@@ -8585,10 +11271,7 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.genshin.cashflow-supervision.name",
     "ja": "凛流の監視者",
@@ -8733,7 +11416,10 @@ const block9: SourceText[] = [
     "protectedTokens": [
       "[[fontaine]]"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.genshin.violetgrass.name",
     "ja": "琉璃袋",
@@ -8823,6 +11509,33 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.sequence-of-solitude.name",
+    "ja": "冷寂の音",
+    "context": "glossary genshin term sequence-of-solitude: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sequence-of-solitude.summary",
+    "ja": "HPが上がる★4の弓。",
+    "context": "glossary genshin term sequence-of-solitude: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.sequence-of-solitude.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term sequence-of-solitude: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.pool-of-sapphire-grace.name",
     "ja": "霊沼雲池",
     "context": "glossary genshin term pool-of-sapphire-grace: Japanese official term name",
@@ -8849,6 +11562,62 @@ const block9: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[ornamental-fish]]"
+    ]
+  },
+  {
+    "id": "term.genshin.cool-steel.name",
+    "ja": "冷刃",
+    "context": "glossary genshin term cool-steel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cool-steel.summary",
+    "ja": "攻撃力が上がる★3の片手剣。",
+    "context": "glossary genshin term cool-steel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cool-steel.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで攻撃力を35.2%伸ばせる。水または氷の影響を受けている敵へのダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cool-steel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.harbinger-of-dawn.name",
+    "ja": "黎明の神剣",
+    "context": "glossary genshin term harbinger-of-dawn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.harbinger-of-dawn.summary",
+    "ja": "会心ダメージが上がる★3の片手剣。",
+    "context": "glossary genshin term harbinger-of-dawn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.harbinger-of-dawn.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで会心ダメージを46.9%伸ばせる。装備者のHPが一定割合を超えている間、[[crit-rate]]が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term harbinger-of-dawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
     ]
   },
   {
@@ -8910,6 +11679,35 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.scion-of-the-blazing-sun.name",
+    "ja": "烈日の後嗣",
+    "context": "glossary genshin term scion-of-the-blazing-sun: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scion-of-the-blazing-sun.summary",
+    "ja": "会心率が上がる★4の弓。",
+    "context": "glossary genshin term scion-of-the-blazing-sun: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scion-of-the-blazing-sun.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで[[crit-rate]]を18.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term scion-of-the-blazing-sun: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
+    ]
+  },
+  {
     "id": "term.genshin.range-gauge.name",
     "ja": "レンジゲージ",
     "context": "glossary genshin term range-gauge: Japanese official term name",
@@ -8936,6 +11734,35 @@ const block9: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[wish|"
+    ]
+  },
+  {
+    "id": "term.genshin.wolf-fang.name",
+    "ja": "狼牙",
+    "context": "glossary genshin term wolf-fang: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wolf-fang.summary",
+    "ja": "会心率が上がる★4の片手剣。",
+    "context": "glossary genshin term wolf-fang: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.wolf-fang.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term wolf-fang: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]"
     ]
   },
   {
@@ -9026,4 +11853,4 @@ const block9: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12];
