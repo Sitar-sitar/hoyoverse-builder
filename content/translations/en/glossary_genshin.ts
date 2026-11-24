@@ -19,6 +19,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.maiden-beloved.name": {
+    "text": "愛される少女",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.maiden-beloved.summary": {
+    "text": "治癒効果を高める聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.maiden-beloved.body": {
+    "text": "2セット効果で与える治癒効果+15%。4セット効果では、元素スキル・元素爆発発動後の10秒間、チーム全員が受ける治癒効果+20%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.staff-of-the-scarlet-sands.name": {
     "text": "赤砂の杖",
     "sourceHash": null,
@@ -159,6 +177,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.amos-bow.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで攻撃力を49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.aratanaru-eda.name": {
+    "text": "新たなる枝",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.aratanaru-eda.summary": {
+    "text": "会心ダメージが上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.aratanaru-eda.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-days-past.name": {
+    "text": "在りし日の歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-days-past.summary": {
+    "text": "与える治癒効果が上がり、回復量をダメージに転化できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.song-of-days-past.body": {
+    "text": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録し、その8%分を味方の攻撃が命中した時のダメージに加算する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -703,6 +757,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.ocean-hued-clam.name": {
+    "text": "海染硨磲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ocean-hued-clam.summary": {
+    "text": "与える治癒効果が上がり、回復量をダメージに転化できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ocean-hued-clam.body": {
+    "text": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録する「海染の泡」が生成され、3秒後に破裂して記録量の90%分のダメージを周囲の敵に与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fragment-of-harmonic-whimsy.name": {
     "text": "諧律奇想の断章",
     "sourceHash": null,
@@ -739,6 +811,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.vourukashas-glow.name": {
+    "text": "花海甘露の光",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vourukashas-glow.summary": {
+    "text": "HPが上がり、元素スキル・爆発のダメージを伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vourukashas-glow.body": {
+    "text": "2セット効果でHP+20%。4セット効果では、元素スキルと元素爆発のダメージ+10%。ダメージを受けた後の5秒間はこの効果量+80%、最大5層まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.husk-of-opulent-dreams.name": {
+    "text": "華館夢醒形骸記",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.husk-of-opulent-dreams.summary": {
+    "text": "防御力が上がり、岩元素ダメージも伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.husk-of-opulent-dreams.body": {
+    "text": "2セット効果で防御力+30%。4セット効果では、「問答」を1層得るごとに防御力+6%と岩元素ダメージ+6%、最大4層まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.swirl.name": {
     "text": "拡散",
     "sourceHash": null,
@@ -753,6 +861,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.swirl.body": {
     "text": "風が炎・水・雷・氷と反応すると発生し、対応する元素のダメージを与え、その元素を周囲に広げる。反応ダメージには発動者のレベルや[[elemental-mastery]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scholar.name": {
+    "text": "学者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scholar.summary": {
+    "text": "元素チャージ効率が上がり、チームのエネルギーを回復できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scholar.body": {
+    "text": "2セット効果で元素チャージ効率+20%。4セット効果では、元素エネルギーを獲得する時、チームの弓・法器キャラの元素エネルギーを3回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -789,6 +915,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.kaguras-verity.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kage-ni-shizumu-maboroshi.name": {
+    "text": "影に沈む幻",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kage-ni-shizumu-maboroshi.summary": {
+    "text": "攻撃力が上がり、超電導・星電導反応を伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kage-ni-shizumu-maboroshi.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、超電導反応ダメージ+80%、星電導反応ダメージ+40%。さらに超電導・星電導の影響を受けた敵への攻撃の会心率+16%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -861,6 +1005,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.wind-catcher.body": {
     "text": "装備中に風の種を集め、使用するとその場に一定時間の風域を発生させる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kaze-ni-asobu-tsuru.name": {
+    "text": "風に遊ぶ弦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kaze-ni-asobu-tsuru.summary": {
+    "text": "会心率が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kaze-ni-asobu-tsuru.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで会心率を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -951,6 +1113,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.thundering-fury.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は雷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundersoother.name": {
+    "text": "雷を鎮める尊者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundersoother.summary": {
+    "text": "雷元素耐性が上がり、雷元素の影響を受けた敵へのダメージが伸びる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thundersoother.body": {
+    "text": "2セット効果で雷元素耐性+40%。4セット効果では、雷元素の影響を受けた敵に対するダメージ+35%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1243,6 +1423,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.retracing-bolide.name": {
+    "text": "逆飛びの流星",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.retracing-bolide.summary": {
+    "text": "シールドが強化され、シールド中の攻撃を伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.retracing-bolide.body": {
+    "text": "2セット効果でシールド強化+35%。4セット効果では、シールド状態の時、通常攻撃と重撃のダメージ+40%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.character-card.name": {
     "text": "キャラカード",
     "sourceHash": null,
@@ -1387,6 +1585,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.instructor.name": {
+    "text": "教官",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.instructor.summary": {
+    "text": "元素熟知が上がる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.instructor.body": {
+    "text": "2セット効果で元素熟知+80。4セット効果では、元素反応を起こした後、チーム全員の元素熟知+120。継続時間8秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.berserker.name": {
+    "text": "狂戦士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.berserker.summary": {
+    "text": "会心率が上がる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.berserker.body": {
+    "text": "2セット効果で会心率+12%。4セット効果では、HPが70%以下になると会心率がさらに+24%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.echoes-of-the-heart.name": {
     "text": "胸中の谺",
     "sourceHash": null,
@@ -1473,6 +1707,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.silver-light.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-sword.name": {
+    "text": "銀の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-sword.summary": {
+    "text": "副ステータスを持たない★2の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.silver-sword.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-amber.name": {
+    "text": "金珀・試作",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-amber.summary": {
+    "text": "HPが上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-amber.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1617,6 +1887,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.fractured-halo.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.waster-greatsword.name": {
+    "text": "訓練用大剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.waster-greatsword.summary": {
+    "text": "副ステータスを持たない★1の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.waster-greatsword.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2017,6 +2305,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.scarlet-proof.name": {
+    "text": "紅血の証",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scarlet-proof.summary": {
+    "text": "攻撃力が上がり、星拡散反応を伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.scarlet-proof.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、星拡散反応を起こした後の10秒間、会心率+16%し、星拡散反応ダメージ+40%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.rainbow-serpents-rain-bow.name": {
     "text": "虹蛇の雨弦",
     "sourceHash": null,
@@ -2121,6 +2427,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.frostbreath.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-archaic.name": {
+    "text": "古華・試作",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-archaic.summary": {
+    "text": "攻撃力が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-archaic.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2647,6 +2971,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.prototype-rancour.name": {
+    "text": "斬岩・試作",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-rancour.summary": {
+    "text": "物理ダメージが上がる★4の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-rancour.body": {
+    "text": "Lv.90の基礎攻撃力は565。同レベルで物理ダメージを34.5%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nighttime-whispers-in-the-echoing-woods.name": {
+    "text": "残響の森で囁かれる夜話",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nighttime-whispers-in-the-echoing-woods.summary": {
+    "text": "攻撃力が上がり、岩元素ダメージを伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nighttime-whispers-in-the-echoing-woods.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、元素スキル発動後の10秒間、岩元素ダメージ+20%。結晶反応で生成されたシールド状態では、この効果量が+150%される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.trishiraite.name": {
     "text": "サングイト",
     "sourceHash": null,
@@ -2989,6 +3349,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.hunters-bow.name": {
+    "text": "狩猟弓",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hunters-bow.summary": {
+    "text": "副ステータスを持たない★1の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hunters-bow.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.flowing-purity.name": {
     "text": "純水流華",
     "sourceHash": null,
@@ -3151,6 +3529,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.vermillion-hereafter.name": {
+    "text": "辰砂往生録",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vermillion-hereafter.summary": {
+    "text": "攻撃力が上がり、HPを失うほど攻撃力が伸びる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.vermillion-hereafter.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、元素爆発を発動すると「潜光」を得て攻撃力+8%。HPを失うたびに攻撃力がさらに+10%、最大4回まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.forged-by-the-golden-melody.name": {
     "text": "シンフォニーの鋳影",
     "sourceHash": null,
@@ -3165,6 +3561,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.forged-by-the-golden-melody.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.beginners-protector.name": {
+    "text": "新米の長槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.beginners-protector.summary": {
+    "text": "副ステータスを持たない★1の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.beginners-protector.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3273,6 +3687,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.sword-of-narzissenkreuz.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nymphs-dream.name": {
+    "text": "水仙の夢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nymphs-dream.summary": {
+    "text": "水元素ダメージが上がる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nymphs-dream.body": {
+    "text": "2セット効果で水元素ダメージ+15%。4セット効果では、攻撃が命中するたびに「鏡中の水仙」を1層得て、1/2/3層で攻撃力+7%/16%/25%、水元素ダメージ+4%/9%/15%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3597,6 +4029,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.splendor-of-tranquil-waters.body": {
     "text": "Ver.7.2 第1期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象になった。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.apprentices-notes.name": {
+    "text": "生徒ノート",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.apprentices-notes.summary": {
+    "text": "副ステータスを持たない★1の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.apprentices-notes.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4339,6 +4789,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.tidal-shadow.name": {
+    "text": "タイダル・シャドー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tidal-shadow.summary": {
+    "text": "攻撃力が上がる★4の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tidal-shadow.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.wanderers-troupe.name": {
     "text": "大地を流浪する楽団",
     "sourceHash": null,
@@ -4353,6 +4821,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.wanderers-troupe.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は元素熟知を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.resolution-of-sojourner.name": {
+    "text": "旅人の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.resolution-of-sojourner.summary": {
+    "text": "攻撃力が上がり、重撃の会心率が伸びる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.resolution-of-sojourner.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、重撃の会心率+30%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4407,6 +4893,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.slingshot.body": {
     "text": "Lv.90の基礎攻撃力は354。同レベルで[[crit-rate]]を31.2%伸ばせる。発射後すぐに[[normal-attack]]や[[charged-attack]]の矢が命中するとダメージが上がる。命中まで時間がかかった場合はダメージが下がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-crescent.name": {
+    "text": "澹月・試作",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-crescent.summary": {
+    "text": "攻撃力が上がる★4の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-crescent.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4897,6 +5401,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.name": {
+    "text": "月を紡ぐ夜の歌",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.summary": {
+    "text": "元素チャージ効率が上がり、チームの元素熟知と月反応を伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.body": {
+    "text": "2セット効果で元素チャージ効率+20%。4セット効果では、元素ダメージを与えた時に「月輝明光・崇拝」を得て、月兆レベルに応じてチーム全員の元素熟知+60/120。さらに月反応ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fishing.name": {
     "text": "釣り",
     "sourceHash": null,
@@ -5041,6 +5563,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.iron-point.name": {
+    "text": "鉄尖槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.iron-point.summary": {
+    "text": "副ステータスを持たない★2の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.iron-point.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.iron-sting.name": {
     "text": "鉄蜂の刺し",
     "sourceHash": null,
@@ -5055,6 +5595,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.iron-sting.body": {
     "text": "Lv.90時の基礎攻撃力は510。同レベルで[[elemental-mastery]]を165伸ばせる。元素ダメージを与えたときに与ダメージを強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.celestial-gift.name": {
+    "text": "天からの贈り物",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.celestial-gift.summary": {
+    "text": "元素チャージ効率が上がり、チームに元素ダメージバフを配れる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.celestial-gift.body": {
+    "text": "2セット効果で元素チャージ効率+20%。4セット効果では、「魔女の課題」をクリアしている場合、元素スキル発動で装備者の元素ダメージ+20%をチーム全員に20秒間付与する。魔導秘儀では最大40%まで強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenkyu-no-kengenseshi-yoru.name": {
+    "text": "天穹の顕現せし夜",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenkyu-no-kengenseshi-yoru.summary": {
+    "text": "元素熟知が上がり、月反応を伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tenkyu-no-kengenseshi-yoru.body": {
+    "text": "2セット効果で元素熟知+80。4セット効果では、月反応時に「月輝明光・蓄念」を得て、月兆レベルに応じて会心率+15%/30%。さらに月反応ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5707,6 +6283,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.white-tassel.name": {
+    "text": "白纓槍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.white-tassel.summary": {
+    "text": "会心率が上がる★3の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.white-tassel.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで会心率を23.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.whiteblind.name": {
     "text": "白影の剣",
     "sourceHash": null,
@@ -5757,6 +6351,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.hakushin-ring.body": {
     "text": "Lv.90の基礎攻撃力は565。同レベルで[[energy-recharge]]を30.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.white-iron-greatsword.name": {
+    "text": "白鉄の大剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.white-iron-greatsword.summary": {
+    "text": "防御力が上がる★3の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.white-iron-greatsword.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで防御力を43.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gambler.name": {
+    "text": "博徒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gambler.summary": {
+    "text": "元素スキルのダメージが上がり、クールタイムをリセットできる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.gambler.body": {
+    "text": "2セット効果で元素スキルダメージ+20%。4セット効果では、敵を倒した時、元素スキルのクールタイムをリセットする。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6049,6 +6679,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.skyrider-greatsword.name": {
+    "text": "飛天大御剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skyrider-greatsword.summary": {
+    "text": "物理ダメージが上がる★3の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.skyrider-greatsword.body": {
+    "text": "Lv.90の基礎攻撃力は401。同レベルで物理ダメージを43.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.skyrider-sword.name": {
     "text": "飛天御剣",
     "sourceHash": null,
@@ -6265,6 +6913,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.martial-artist.name": {
+    "text": "武人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.martial-artist.summary": {
+    "text": "通常攻撃と重撃のダメージが上がる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.martial-artist.body": {
+    "text": "2セット効果で通常攻撃と重撃のダメージ+15%。4セット効果では、元素スキル発動後、通常攻撃と重撃のダメージがさらに+25%。継続時間8秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.messenger.name": {
     "text": "文使い",
     "sourceHash": null,
@@ -6373,6 +7039,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.adventurer.name": {
+    "text": "冒険者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.adventurer.summary": {
+    "text": "HP上限が上がり、宝箱を開けると回復できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.adventurer.body": {
+    "text": "2セット効果でHP上限+1000。4セット効果では、宝箱を開けた後の5秒間、HPの30%を徐々に回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.adventurers-handbook.name": {
     "text": "冒険の証",
     "sourceHash": null,
@@ -6409,6 +7093,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.the-exile.name": {
+    "text": "亡命者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-exile.summary": {
+    "text": "元素チャージ効率が上がり、チームのエネルギーを回復できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.the-exile.body": {
+    "text": "2セット効果で元素チャージ効率+20%。4セット効果では、元素爆発を発動すると、自分以外のチーム全員の元素エネルギーを2秒ごとに2回復する。継続時間6秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pocket-grimoire.name": {
+    "text": "ポケット魔導書",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pocket-grimoire.summary": {
+    "text": "副ステータスを持たない★2の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pocket-grimoire.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.portable-waypoint.name": {
     "text": "ポケットワープポイント",
     "sourceHash": null,
@@ -6441,6 +7161,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.halberd.body": {
     "text": "Lv.90の基礎攻撃力は448。同レベルで攻撃力を23.5%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-starglitter.name": {
+    "text": "星鎌・試作",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-starglitter.summary": {
+    "text": "元素チャージ効率が上がる★4の長柄武器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.prototype-starglitter.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで元素チャージ効率を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6621,6 +7359,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.the-unforged.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで攻撃力を49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dull-blade.name": {
+    "text": "無鋒の剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dull-blade.summary": {
+    "text": "副ステータスを持たない★1の片手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dull-blade.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6859,6 +7615,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.brave-heart.name": {
+    "text": "勇士の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.brave-heart.summary": {
+    "text": "攻撃力が上がり、HPの多い敵へのダメージが伸びる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.brave-heart.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、HPが50%以上の敵に対するダメージ+30%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fluorescent-fungus.name": {
     "text": "ユウトウタケ",
     "sourceHash": null,
@@ -6891,6 +7665,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.mitternachts-waltz.body": {
     "text": "Lv.90時の基礎攻撃力は510。同レベルで物理ダメージを51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.yuki-ni-shizumu-kokoro.name": {
+    "text": "雪に沈む心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.yuki-ni-shizumu-kokoro.summary": {
+    "text": "会心ダメージが上がる★4の法器。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.yuki-ni-shizumu-kokoro.body": {
+    "text": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6931,6 +7723,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.old-mercs-pal.name": {
+    "text": "傭兵の重剣",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.old-mercs-pal.summary": {
+    "text": "副ステータスを持たない★2の両手剣。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.old-mercs-pal.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.nightweavers-looking-glass.name": {
     "text": "夜を紡ぐ天鏡",
     "sourceHash": null,
@@ -6945,6 +7755,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.nightweavers-looking-glass.body": {
     "text": "Lv.90時の基礎攻撃力は542。同レベルで[[elemental-mastery]]を265伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-an-offering.name": {
+    "text": "来歆の余響",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-an-offering.summary": {
+    "text": "攻撃力が上がり、通常攻撃を強化できる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.echoes-of-an-offering.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、通常攻撃が命中すると36%の確率で「幽谷祭祀」が発動し、通常攻撃ダメージが攻撃力の70%分アップする。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7017,6 +7845,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.liyue.body": {
     "text": "[[teyvat]]の地域の一つ。公式の世界紹介では港を擁する商業都市として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.recurve-bow.name": {
+    "text": "リカーブボウ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.recurve-bow.summary": {
+    "text": "HPが上がる★3の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.recurve-bow.body": {
+    "text": "Lv.90の基礎攻撃力は354。同レベルでHPを46.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7345,6 +8191,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.seasoned-hunters-bow.name": {
+    "text": "歴戦の狩猟弓",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.seasoned-hunters-bow.summary": {
+    "text": "副ステータスを持たない★2の弓。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.seasoned-hunters-bow.body": {
+    "text": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.burgeon.name": {
     "text": "烈開花",
     "sourceHash": null,
@@ -7359,6 +8223,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.burgeon.body": {
     "text": "[[bloom]]で生成された草原核に炎が作用すると発生する。草原核が爆発し、範囲内に草元素ダメージを与える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lavawalker.name": {
+    "text": "烈火を渡る賢者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lavawalker.summary": {
+    "text": "炎元素耐性が上がり、炎元素の影響を受けた敵へのダメージが伸びる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lavawalker.body": {
+    "text": "2セット効果で炎元素耐性+40%。4セット効果では、炎元素の影響を受けた敵に対するダメージ+35%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7413,6 +8295,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.wolf-fang.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-the-furnace.name": {
+    "text": "炉炎溶錬の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-the-furnace.summary": {
+    "text": "攻撃力が上がり、星反応のダメージを伸ばせる聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.heart-of-the-furnace.body": {
+    "text": "2セット効果で攻撃力+18%。4セット効果では、星反応を起こすか星反応ダメージを与えた後の12秒間、攻撃力+12%し、近くのチーム全員が与える星反応ダメージ+50%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
