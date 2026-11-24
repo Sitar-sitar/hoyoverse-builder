@@ -199,8 +199,8 @@ Pages公開時に必要なActions変数:
 - [x] 正式PagesのUID/OAuth/管理保存・再起動保持・未認証管理API拒否を確認。旧新並行試験全項目のPASSとはしない。
 - [x] 利用者承認の既存dump採用復旧、全行hash/DB objects照合、正規受付再開、forwardを記録。旧DB最終照合はNOT_TESTED。
 - [x] 2026-11-23: 通常DBユーザーを事故後の新パスワードへ更新し、旧パスワードを破棄。APIの新規接続と管理者再ログインを確認（下記履歴参照）。
-- [ ] Registry用API tokenを再発行し、`hoyoverse-image-pull` へ登録する。
-- [ ] 移行Job `hoyoverse-db-migrate-shared` の新パスワードでのDB接続を `SELECT 1` で確認する。
+- [x] 2026-11-24: Registry用API tokenを再発行し、`hoyoverse-image-pull` へ登録した（下記履歴参照）。
+- [x] 2026-11-24: 移行Job `hoyoverse-db-migrate-shared` の新パスワードでのDB接続を `SELECT 1` で確認した。
 - [ ] 管理者・root・残り2ユーザーのDB資格情報を、Northflankサポートの回答後に更新する。
 - [ ] 旧Job `hoyoverse-db-migrate` に残る接続情報の扱いを確認する。
 
@@ -471,6 +471,8 @@ Northflankの2026-10-30事故（公式報告 https://northflank.com/blog/inciden
 - 2026-11-23 19:56 JST: 更新前のNative dump `pre-db-user-rotation-20261123` を取得（Completed、3.62 KB、59秒）。Restoreは未実施。
 - 2026-11-23: 通常DBユーザーをSQLで更新。`RETAIN CURRENT PASSWORD` で新旧併用し、APIのDATABASE_URLを更新後、`DISCARD OLD PASSWORD` を実行。`password_last_changed=2026-11-23`、secondary passwordなしを確認。
 - 破棄後、API podから新規TLS接続（64文字hex、`SELECT 1`、connection_ok）と管理者ポータルの再ログインを確認。
+- 2026-11-24: 旧Registry token `hoyoverse-image-pull-2026-10-21` は画面でRevokedかつExpiredを確認。新token `hoyoverse-image-pull-2026-11-24`（専用role `hoyoverse-image-pull`、30日）を発行し、利用者がregistry認証 `hoyoverse-image-pull` のユーザー名とtokenを置き換えた。フォームは片方だけの置き換えを受け付けない。値は記録しない。
+- 2026-11-24 18:03 JST: 移行Jobを保存設定を変えない一時上書き（custom command）で実行。image取得に成功し、Run `b515d17f-7fe4-4cab-8efa-fd8a41df9f0d` はSuccess（12秒）。ログで64文字hex・host/DB設定あり・TLS接続の `SELECT 1` connection_okを確認。保存済みCMDは準備確認用のまま。
 
 ### Rotate secrets失敗の調査
 
@@ -487,7 +489,7 @@ Northflankの2026-10-30事故（公式報告 https://northflank.com/blog/inciden
 
 ### 未完了
 
-- 移行Jobは `The credentials cannot access this external image` で起動せず、新パスワードでのDB接続は未確認。実装ログ上、Registry token `hoyoverse-image-pull-2026-10-21` の期限は2026-11-20 18:05で、期限切れが有力（事故によるtoken失効の影響も否定しない）。
+- 新Registry tokenの期限は発行から30日（2026-12-24頃）。期限前に再発行する。
 - 管理者・root・残り2ユーザーは事故前のパスワードのまま。Northflankの内部利用の有無が不明なため、サポート回答まで変更しない。
 - Northflankサポートの回答は未確認（確認時にGmail接続が無効）。追加調査結果の送付も利用者側で未確認。
 - 長時間の安定性、本アプリの秘密値流出の有無は未確認。
