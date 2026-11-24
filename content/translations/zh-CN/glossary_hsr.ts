@@ -523,6 +523,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.garden-of-recollection.name": {
+    "text": "流光憶庭",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.garden-of-recollection.summary": {
+    "text": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.garden-of-recollection.body": {
+    "text": "「記憶」の星神・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。英語名に基づく「ガーデン・オブ・リコレクション」の名でも呼ばれる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.backwater-pass.name": {
     "text": "外縁通路",
     "sourceHash": null,
@@ -4803,24 +4821,6 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.passerby-of-wandering-cloud.body": {
     "text": "[[relics]]のセットの一つ。2セット効果は治癒量に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
-    "sourceHash": null,
-    "origin": "legacy",
-    "review": "pending"
-  },
-  "term.hsr.garden-of-recollection.name": {
-    "text": "流光憶庭",
-    "sourceHash": null,
-    "origin": "legacy",
-    "review": "pending"
-  },
-  "term.hsr.garden-of-recollection.summary": {
-    "text": "「記憶」の星神を信仰し、宇宙の記憶を集めるメモキーパーたちの組織。",
-    "sourceHash": null,
-    "origin": "legacy",
-    "review": "pending"
-  },
-  "term.hsr.garden-of-recollection.body": {
-    "text": "「記憶」の星神・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。英語名に基づく「ガーデン・オブ・リコレクション」の名でも呼ばれる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
