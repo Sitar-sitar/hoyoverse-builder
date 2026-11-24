@@ -1,6 +1,42 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.zzz.armored-hati.name": {
+    "text": "アーマーハティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.armored-hati.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.armored-hati.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cauldron-of-clarity.name": {
+    "text": "蒼き波の霊器",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cauldron-of-clarity.summary": {
+    "text": "HPが上がる命破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cauldron-of-clarity.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.dawns-bloom.name": {
     "text": "暁に咲く花",
     "sourceHash": null,
@@ -37,6 +73,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.ahriman.name": {
+    "text": "アフリマン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ahriman.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ahriman.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.avocaboo.name": {
     "text": "アボカドボンプ",
     "sourceHash": null,
@@ -51,6 +105,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.avocaboo.body": {
     "text": "編成に加えられる[[bangboo]]。ジュース弾に触れたメンバーのHPを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.halfsugar-bunny.name": {
+    "text": "甘さ控えめ雪うさぎ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.halfsugar-bunny.summary": {
+    "text": "HPが上がる防護向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.halfsugar-bunny.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -91,6 +163,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.arupeka.name": {
+    "text": "アルぺカ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.arupeka.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.arupeka.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.alraune.name": {
+    "text": "アルラウネ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.alraune.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.alraune.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.encrypted-master-tape.name": {
     "text": "暗号化マスターテープ",
     "sourceHash": null,
@@ -105,6 +213,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.encrypted-master-tape.body": {
     "text": "期間限定のチャンネルで[[signal-search]]を行うためのアイテム。イベント報酬などでも獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ikareruotoko.name": {
+    "text": "「怒れる男」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ikareruotoko.summary": {
+    "text": "電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ikareruotoko.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性を持つ[[attribute|属性]]は物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -523,6 +649,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.radiowave-journey.name": {
+    "text": "エレクトロウォーク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.radiowave-journey.summary": {
+    "text": "HPが上がる命破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.radiowave-journey.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-simmering-pot.name": {
+    "text": "炎々沸々鍋一丁",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-simmering-pot.summary": {
+    "text": "衝撃力が上がる撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.the-simmering-pot.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.inferno-metal.name": {
     "text": "炎獄のヘヴィメタル",
     "sourceHash": null,
@@ -555,6 +717,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.blazing-laurel.body": {
     "text": "「[[stun-specialty]]」向けの[[w-engine]]。[[ex-special-attack]]や[[chain-attack]]などに応じて[[stun]]蓄積を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.engine-beholder.name": {
+    "text": "エンジンビホルダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.engine-beholder.summary": {
+    "text": "エーテル・電気が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.engine-beholder.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.oda-bogyakusha.name": {
+    "text": "殴打暴虐者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.oda-bogyakusha.summary": {
+    "text": "氷・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.oda-bogyakusha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1099,6 +1297,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.kishusha.name": {
+    "text": "奇襲者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kishusha.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kishusha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.main-stat.name": {
     "text": "メインステータス",
     "sourceHash": null,
@@ -1113,6 +1329,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.main-stat.body": {
     "text": "[[drive-disc]]が持つ主なステータス。装備する部位により付く種類が異なり、ディスクを強化すると数値が上がる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.precious-fossilized-core.name": {
+    "text": "貴重な石化コア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.precious-fossilized-core.summary": {
+    "text": "衝撃力が上がる撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.precious-fossilized-core.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cannon-rotor.name": {
+    "text": "キャノンローラー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cannon-rotor.summary": {
+    "text": "会心率が上がる強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cannon-rotor.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[crit-rate]]を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1149,6 +1401,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.kyuuto-kanraku.body": {
     "text": "零号ホロウが急激に拡大し、旧都を放棄する事態となった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyouakukyoujin.name": {
+    "text": "凶悪狂人",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyouakukyoujin.summary": {
+    "text": "炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kyouakukyoujin.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性を持つ[[attribute|属性]]は電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1297,6 +1567,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.gilded-blossom.name": {
+    "text": "金メッキの花信",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gilded-blossom.summary": {
+    "text": "攻撃力が上がる強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.gilded-blossom.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が596で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kinran-no-kokoro.name": {
     "text": "金襴の心",
     "sourceHash": null,
@@ -1387,6 +1675,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.cordis-germina.name": {
+    "text": "駆動する種",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cordis-germina.summary": {
+    "text": "会心率が上がる強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.cordis-germina.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.krampus-compliance-authority.name": {
     "text": "クランプスの黒枝",
     "sourceHash": null,
@@ -1401,6 +1707,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.krampus-compliance-authority.body": {
     "text": "公式キャラクター一覧で、盤岳や照などが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kururru.name": {
+    "text": "クルッル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kururru.summary": {
+    "text": "氷・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kururru.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1473,6 +1797,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.stun-specialty.body": {
     "text": "[[specialty|特性]]のひとつ。[[daze]]を蓄積し、敵を[[stun]]させる役割を得意とする。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-hatchet.name": {
+    "text": "「激流」-斧型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-hatchet.summary": {
+    "text": "エネルギー自動回復が上がる撃破向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-hatchet.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加でエネルギー自動回復を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-arrow.name": {
+    "text": "「激流」-矢型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-arrow.summary": {
+    "text": "衝撃力が上がる撃破向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vortex-arrow.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で[[impact]]を12%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1621,6 +1981,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.godatsusha.name": {
+    "text": "強奪者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.godatsusha.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.godatsusha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-inflection.name": {
+    "text": "「恒等式」-変格",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-inflection.summary": {
+    "text": "防御力が上がる防護向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-inflection.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で防御力を32%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-base.name": {
+    "text": "「恒等式」-本格",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-base.summary": {
+    "text": "防御力が上がる防護向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.identity-base.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で防御力を32%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.the-restrained.name": {
     "text": "拘縛されし者",
     "sourceHash": null,
@@ -1635,6 +2049,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.the-restrained.body": {
     "text": "「[[stun-specialty]]」向けの[[w-engine]]。攻撃を当てることで通常攻撃のダメージと[[stun]]蓄積を段階的に強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goyoku-shashu.name": {
+    "text": "強欲射手",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goyoku-shashu.summary": {
+    "text": "炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goyoku-shashu.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1747,6 +2179,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.goblin.name": {
+    "text": "ゴブリン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goblin.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.goblin.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-vajra.name": {
+    "text": "金剛不壊怒髪衝冠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-vajra.summary": {
+    "text": "HPが上がる命破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wrathful-vajra.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.disorder.name": {
     "text": "混沌",
     "sourceHash": null,
@@ -1783,6 +2251,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.slice-of-time.name": {
+    "text": "歳月の薄片",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.slice-of-time.summary": {
+    "text": "貫通率が上がる支援向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.slice-of-time.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で貫通率を20%伸ばせる。味方の特定の攻撃に合わせて[[decibels]]の獲得を増やし、装備者のエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.shatter.name": {
     "text": "砕氷",
     "sourceHash": null,
@@ -1801,6 +2287,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.yesterday-calls.name": {
+    "text": "昨夜からの着信",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.yesterday-calls.summary": {
+    "text": "会心率が上がる撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.yesterday-calls.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sateyurosu.name": {
+    "text": "サテュロス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sateyurosu.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sateyurosu.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.overtimeboo.name": {
     "text": "サビザンボンプ",
     "sourceHash": null,
@@ -1815,6 +2337,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.overtimeboo.body": {
     "text": "編成に加えられる[[bangboo]]。パソコンデスクをぶつけて物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.riot-suppressor-mark-vi.name": {
+    "text": "サプレッサーⅥ型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.riot-suppressor-mark-vi.summary": {
+    "text": "会心ダメージが上がる強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.riot-suppressor-mark-vi.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-dmg]]を48.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1927,6 +2467,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.magnetic-storm-alpha.name": {
+    "text": "「磁気嵐」-壱式",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-alpha.summary": {
+    "text": "攻撃力が上がる異常向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-alpha.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で攻撃力を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-charlie.name": {
+    "text": "「磁気嵐」-参式",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-charlie.summary": {
+    "text": "貫通率が上がる異常向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-charlie.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で貫通率を16%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-bravo.name": {
+    "text": "「磁気嵐」-弐式",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-bravo.summary": {
+    "text": "異常マスタリーが上がる異常向けのB級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.magnetic-storm-bravo.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で[[anomaly-proficiency]]を60伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.six-shooter.name": {
+    "text": "シックスシューター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.six-shooter.summary": {
+    "text": "衝撃力が上がる撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.six-shooter.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.shadow-crystal-data.name": {
     "text": "シャドウ結晶のデータ",
     "sourceHash": null,
@@ -1999,6 +2611,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shugekisha.name": {
+    "text": "襲撃者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shugekisha.summary": {
+    "text": "氷・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shugekisha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ultimate.name": {
     "text": "終結スキル",
     "sourceHash": null,
@@ -2013,6 +2643,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.ultimate.body": {
     "text": "[[decibels|デシベル値]]が必要量に達すると使用できる、[[agent]]固有のスキル。効果はエージェントごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.practiced-perfection.name": {
+    "text": "十面百錬の星",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.practiced-perfection.summary": {
+    "text": "攻撃力が上がる異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.practiced-perfection.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2071,6 +2719,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shoukyakukyou.name": {
+    "text": "焼却狂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shoukyakukyou.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shoukyakukyou.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.impact.name": {
     "text": "衝撃力",
     "sourceHash": null,
@@ -2121,6 +2787,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.anomaly-buildup.body": {
     "text": "属性のある攻撃などで敵に蓄積する値。一定量に達すると対応する[[attribute-anomaly|状態異常]]が発生する。[[anomaly-mastery]]は蓄積効率に関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roaring-furnace.name": {
+    "text": "招福の虎炉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roaring-furnace.summary": {
+    "text": "攻撃力が上がる撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.roaring-furnace.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2377,6 +3061,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.weeping-cradle.name": {
+    "text": "啜り泣くゆりかご",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weeping-cradle.summary": {
+    "text": "貫通率が上がる支援向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weeping-cradle.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が684で、追加で貫通率を24.0%伸ばせる。控え中のエネルギー回復を助け、装備者が攻撃を当てた敵への味方の与ダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.stars-of-lyra.name": {
     "text": "スターズ・オブ・リラ",
     "sourceHash": null,
@@ -2391,6 +3093,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.stars-of-lyra.body": {
     "text": "公式キャラクター一覧で、アストラ・ヤオやイヴリンが所属する陣営として紹介される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine.name": {
+    "text": "スターライトエンジン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine.summary": {
+    "text": "攻撃力が上がる強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.starlight-engine.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。回避反撃や[[quick-assist]]の使用後に装備者の攻撃力が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2413,6 +3133,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.street-superstar.name": {
+    "text": "ストリートスター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.street-superstar.summary": {
+    "text": "攻撃力が上がる強攻向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.street-superstar.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.boollseye.name": {
     "text": "ズバットボンプ",
     "sourceHash": null,
@@ -2427,6 +3165,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.boollseye.body": {
     "text": "編成に加えられる[[bangboo]]。ダーツを投げて物理ダメージを与える。刺突タイプの味方と組むと連携攻撃が強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.specter.name": {
+    "text": "スペクター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.specter.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.specter.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.original-transmorpher.name": {
+    "text": "正規版変身装置",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.original-transmorpher.summary": {
+    "text": "HPが上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.original-transmorpher.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。装備者の最大HPを上げ、攻撃を受けた後に一定時間[[impact]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2481,6 +3255,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.seimei-no-torikago.body": {
     "text": "「命破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.2.6の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.krakens-cradle.name": {
+    "text": "セイレーンクレードル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.krakens-cradle.summary": {
+    "text": "HPが上がる命破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.krakens-cradle.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2557,6 +3349,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.myriad-eclipse.name": {
+    "text": "千面の落日",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.myriad-eclipse.summary": {
+    "text": "会心率が上がる強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.myriad-eclipse.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.frostbite.name": {
     "text": "霜寒",
     "sourceHash": null,
@@ -2571,6 +3381,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.frostbite.body": {
     "text": "氷属性の[[attribute-anomaly|状態異常]]に伴って付与される効果。効果中、対象が受ける会心ダメージに影響する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weeping-gemini.name": {
+    "text": "双生の涙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weeping-gemini.summary": {
+    "text": "攻撃力が上がる異常向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.weeping-gemini.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2607,6 +3435,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.attribute.body": {
     "text": "[[agent]]や攻撃には属性があり、敵の属性耐性や[[attribute-anomaly]]と関係する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sorudedousu.name": {
+    "text": "ソルデドゥス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sorudedousu.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sorudedousu.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2701,6 +3547,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.thanatos.name": {
+    "text": "タナトス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thanatos.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.thanatos.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metanukimorphosis.name": {
+    "text": "狸の七変化",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metanukimorphosis.summary": {
+    "text": "エネルギー自動回復が上がる支援向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metanukimorphosis.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でエネルギー自動回復を60%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tarasque-mixer.name": {
+    "text": "タラスクミキサー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tarasque-mixer.summary": {
+    "text": "エーテル・電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tarasque-mixer.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.exploreboo.name": {
     "text": "タンケンボンプ",
     "sourceHash": null,
@@ -2751,6 +3651,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.feathered-fate.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は異常マスタリーを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.peacekeeper-specialized.name": {
+    "text": "秩序の守り手・特化型",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.peacekeeper-specialized.summary": {
+    "text": "攻撃力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.peacekeeper-specialized.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2881,6 +3799,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.tyrfing.name": {
+    "text": "ティルヴィング",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tyrfing.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tyrfing.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.enemies.name": {
     "text": "敵対ターゲット",
     "sourceHash": null,
@@ -2935,6 +3871,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.dullahan.name": {
+    "text": "デュラハン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dullahan.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.dullahan.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electrolip-gloss.name": {
+    "text": "電撃リップグロス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electrolip-gloss.summary": {
+    "text": "異常マスタリーが上がる異常向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.electrolip-gloss.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.tensei-no-enyoku.name": {
     "text": "転生の炎翼",
     "sourceHash": null,
@@ -2967,6 +3939,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.freeze.body": {
     "text": "氷属性の[[attribute-anomaly|状態異常]]によって発生する。凍結が終了すると[[shatter]]によるダメージが発生する。敵の種類によって凍結の扱いは異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.touryouhan.name": {
+    "text": "盗猟犯",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.touryouhan.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.touryouhan.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3061,6 +4051,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.doppelganger-pulchra.name": {
+    "text": "ドッペルゲンガー・プルクラ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-pulchra.summary": {
+    "text": "物理・炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-pulchra.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-bellum.name": {
+    "text": "ドッペルゲンガー・ベルラム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-bellum.summary": {
+    "text": "物理・炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-bellum.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-mors.name": {
+    "text": "ドッペルゲンガー・モルス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-mors.summary": {
+    "text": "物理・炎が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.doppelganger-mors.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.drive-disc.name": {
     "text": "ドライバディスク",
     "sourceHash": null,
@@ -3075,6 +4119,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.drive-disc.body": {
     "text": "[[agent]]に装備するディスク。[[main-stat]]や[[sub-stat]]を持ち、同じセットを組み合わせるとセット効果が発動する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flight-of-fancy.name": {
+    "text": "鳥は夢へと羽ばたいて",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flight-of-fancy.summary": {
+    "text": "異常マスタリーが上がる異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.flight-of-fancy.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[anomaly-proficiency]]を90伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3097,6 +4159,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.boisterous-echoes.name": {
+    "text": "ドンカツエコー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.boisterous-echoes.summary": {
+    "text": "異常マスタリーが上がる異常向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.boisterous-echoes.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.naguriya.name": {
+    "text": "殴り屋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.naguriya.summary": {
+    "text": "氷・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.naguriya.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.starlight-engine-replica.name": {
     "text": "なんちゃってスターライトエンジン",
     "sourceHash": null,
@@ -3111,6 +4209,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.starlight-engine-replica.body": {
     "text": "「強攻」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で受信確率アップの対象になった。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.catty-luck.name": {
+    "text": "ニャン運到来",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.catty-luck.summary": {
+    "text": "防御力が上がる鋭御向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.catty-luck.body": {
+    "text": "「鋭御」の[[specialty|特性]]向けの[[w-engine]]。Lv.60では基礎防御力が356で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3277,6 +4393,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hajirau-akumen.name": {
+    "text": "恥じらう悪面",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hajirau-akumen.summary": {
+    "text": "攻撃力が上がる支援向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hajirau-akumen.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.huskron.name": {
+    "text": "ハスクロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.huskron.summary": {
+    "text": "エーテル・炎が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.huskron.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.battery-charge.name": {
     "text": "バッテリー",
     "sourceHash": null,
@@ -3295,6 +4447,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hati.name": {
+    "text": "ハティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hati.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hati.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.butler.name": {
     "text": "バトラー",
     "sourceHash": null,
@@ -3309,6 +4479,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.butler.body": {
     "text": "編成に加えられる[[bangboo]]。作ったお茶菓子でメンバーのエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.baniirekku.name": {
+    "text": "バニーレック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.baniirekku.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.baniirekku.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3367,6 +4555,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.grill-owisp.name": {
+    "text": "燔火の朧夜",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.grill-owisp.summary": {
+    "text": "HPが上がる命破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.grill-owisp.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.big-cylinder.name": {
+    "text": "ビガー・シリンダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.big-cylinder.summary": {
+    "text": "防御力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.big-cylinder.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reel-projector.name": {
+    "text": "光と影のカット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reel-projector.summary": {
+    "text": "衝撃力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.reel-projector.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hizuki-no-ginkan.name": {
     "text": "緋月の銀棺",
     "sourceHash": null,
@@ -3381,6 +4623,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hizuki-no-ginkan.body": {
     "text": "「撃破」の[[specialty|特性]]に対応する[[w-engine]]。Ver.3.2の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hitch-spiker.name": {
+    "text": "ヒッチスパイカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hitch-spiker.summary": {
+    "text": "エーテルが弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hitch-spiker.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3421,6 +4681,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.hi-wo-obishi-sendosha.name": {
+    "text": "火を帯びし先導者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hi-wo-obishi-sendosha.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hi-wo-obishi-sendosha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.farbauti.name": {
+    "text": "ファールバウティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.farbauti.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.farbauti.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.booastrum.name": {
     "text": "ブーアストラム",
     "sourceHash": null,
@@ -3453,6 +4749,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.weathering.body": {
     "text": "風属性の[[attribute-anomaly|状態異常]]により発生する。別の状態異常との組み合わせでは[[disorder|混沌]]の代わりに[[turbulence]]が関わる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoru.name": {
+    "text": "フォッソル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoru.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fossoru.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3493,6 +4807,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.fudatsuki-gyakutaikyo.name": {
+    "text": "札付き虐待狂",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fudatsuki-gyakutaikyo.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fudatsuki-gyakutaikyo.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fudatsuki-naguriya.name": {
+    "text": "札付き殴り屋",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fudatsuki-naguriya.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.fudatsuki-naguriya.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.plugboo.name": {
     "text": "プラグノボンプ",
     "sourceHash": null,
@@ -3507,6 +4857,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.plugboo.body": {
     "text": "編成に加えられる[[bangboo]]。電磁砲で電気ダメージを与える。電気系の編成では連携時の[[attribute-anomaly]]蓄積を伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blast-spider.name": {
+    "text": "ブラストスパイダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blast-spider.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.blast-spider.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bloodmarrow-coffer.name": {
+    "text": "ブラッドボックス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bloodmarrow-coffer.summary": {
+    "text": "会心率が上がる鋭御向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bloodmarrow-coffer.body": {
+    "text": "「鋭御」の[[specialty|特性]]向けの[[w-engine]]。Lv.60では基礎防御力が356で、追加で[[crit-rate]]を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3763,6 +5149,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.box-cutter.name": {
+    "text": "ペーパーカッター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.box-cutter.summary": {
+    "text": "衝撃力が上がる撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.box-cutter.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.thunder-metal.name": {
     "text": "霹靂のヘヴィメタル",
     "sourceHash": null,
@@ -3777,6 +5181,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.thunder-metal.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果は電気属性ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bellum.name": {
+    "text": "ベルラム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bellum.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bellum.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3835,6 +5257,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.houkama.name": {
+    "text": "放火魔",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.houkama.summary": {
+    "text": "氷・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.houkama.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.defense.name": {
     "text": "防護",
     "sourceHash": null,
@@ -3853,6 +5293,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.spring-embrace.name": {
+    "text": "ホットスプリング",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.spring-embrace.summary": {
+    "text": "攻撃力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.spring-embrace.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hobby-shop.name": {
     "text": "ホビーショップ",
     "sourceHash": null,
@@ -3867,6 +5325,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hobby-shop.body": {
     "text": "[[sixth-street]]にあり、音動機のリサイクルを利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hopuritai.name": {
+    "text": "ホプリタイ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hopuritai.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hopuritai.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4015,6 +5491,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.steam-oven.name": {
+    "text": "まな板の鯉",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.steam-oven.summary": {
+    "text": "エネルギー自動回復が上がる撃破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.steam-oven.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でエネルギー自動回復を50%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puzzle-sphere.name": {
+    "text": "魔法の立体パズル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puzzle-sphere.summary": {
+    "text": "攻撃力が上がる命破向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.puzzle-sphere.body": {
+    "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lost-void.name": {
     "text": "迷いの地",
     "sourceHash": null,
@@ -4029,6 +5541,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.lost-void.body": {
     "text": "異なる武装やレゾブレムを使い、戦闘を進める。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mandrake.name": {
+    "text": "マンドレイク",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mandrake.summary": {
+    "text": "エーテル・氷が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mandrake.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazuma-hosha-akavoru.name": {
+    "text": "ミアズマの歩者・アカヴォル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazuma-hosha-akavoru.summary": {
+    "text": "エーテル・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miazuma-hosha-akavoru.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharpened-stinger.name": {
+    "text": "磨き抜かれた切っ先",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharpened-stinger.summary": {
+    "text": "異常マスタリーが上がる異常向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sharpened-stinger.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[anomaly-proficiency]]を90伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4069,6 +5635,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mitsuryousha.name": {
+    "text": "密猟者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mitsuryousha.summary": {
+    "text": "氷・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mitsuryousha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rainforest-gourmet.name": {
+    "text": "密林の食いしん坊",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rainforest-gourmet.summary": {
+    "text": "異常マスタリーが上がる異常向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.rainforest-gourmet.body": {
+    "text": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mimic-crab.name": {
+    "text": "ミミック蟹",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mimic-crab.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mimic-crab.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mushussu.name": {
+    "text": "ムシュフシュ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mushussu.summary": {
+    "text": "炎・風が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mushussu.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.rupture.name": {
     "text": "命破",
     "sourceHash": null,
@@ -4105,6 +5743,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.metro-goblin.name": {
+    "text": "メトロゴブリン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metro-goblin.summary": {
+    "text": "エーテル・氷が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.metro-goblin.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.meme.name": {
     "text": "メメ",
     "sourceHash": null,
@@ -4119,6 +5775,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.meme.body": {
     "text": "編成に加えられる[[bangboo]]。飛剣で物理攻撃を行う。葉瞬光と組むと「剣」に関わる追加効果を得られる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tusks-of-fury.name": {
+    "text": "猛進するキバ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tusks-of-fury.summary": {
+    "text": "衝撃力が上がる防護向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tusks-of-fury.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[impact]]を18%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4195,6 +5869,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mors.name": {
+    "text": "モルス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mors.summary": {
+    "text": "炎・物理が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mors.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.elegant-vanity.name": {
+    "text": "優美のヴァニティ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.elegant-vanity.summary": {
+    "text": "攻撃力が上がる支援向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.elegant-vanity.body": {
+    "text": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.bunny-in-wonderland.name": {
     "text": "雪うさぎワンダーランド",
     "sourceHash": null,
@@ -4267,6 +5977,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.raisansha.name": {
+    "text": "礼賛者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.raisansha.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.raisansha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lost-void-license.name": {
     "text": "ライセンスレベル",
     "sourceHash": null,
@@ -4281,6 +6009,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.lost-void-license.body": {
     "text": "[[lost-void]]で上げることで、ボンプなどを獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tremor-trigram-vessel.name": {
+    "text": "雷鳴が如き八卦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tremor-trigram-vessel.summary": {
+    "text": "攻撃力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tremor-trigram-vessel.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bunny-band.name": {
+    "text": "ラビットチャージャー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bunny-band.summary": {
+    "text": "防御力が上がる防護向けのA級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.bunny-band.body": {
+    "text": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lahmu.name": {
+    "text": "ラフム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lahmu.summary": {
+    "text": "氷・電気が弱点の精鋭エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lahmu.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・電気。耐性を持つ[[attribute|属性]]は物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4335,6 +6117,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.bangvolver.body": {
     "text": "編成に加えられる[[bangboo]]。装填された弾の種類により、射撃の威力や挙動が変わる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ryakudatsusha.name": {
+    "text": "略奪者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ryakudatsusha.summary": {
+    "text": "氷・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ryakudatsusha.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

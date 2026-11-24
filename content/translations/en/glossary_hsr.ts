@@ -1,6 +1,24 @@
 // 生成物（pnpm glossary:sync）。手で編集しない。入力は content/glossary/ にある。
 import type { TranslationRecord } from "../../../shared/content/types";
 export const records: Record<string, TranslationRecord> = {
+  "term.hsr.this-love-forever.name": {
+    "text": "愛はいま永遠に",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.this-love-forever.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.this-love-forever.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]476、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.under-the-blue-sky.name": {
     "text": "青空の下で",
     "sourceHash": null,
@@ -15,6 +33,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.under-the-blue-sky.body": {
     "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。[[attack]]が上がり、敵を倒すと一定ターンの間、[[crit-rate]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.subspace-asc-center.name": {
+    "text": "亜空異容所",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.subspace-asc-center.summary": {
+    "text": "速度を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.subspace-asc-center.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -37,6 +73,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.colors-for-tomorrow.name": {
+    "text": "明日に捧げる色",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.colors-for-tomorrow.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.colors-for-tomorrow.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]595。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unto-tomorrows-morrow.name": {
+    "text": "明日の明日まで",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unto-tomorrows-morrow.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.unto-tomorrows-morrow.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.for-tomorrows-journey.name": {
     "text": "明日のための旅",
     "sourceHash": null,
@@ -51,6 +123,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.for-tomorrows-journey.body": {
     "text": "[[path|調和]]のキャラクターが効果を発動できる[[light-cone]]。[[attack]]を上げ、装備者が[[ultimate]]を使用した後は与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warmth-shortens-cold-nights.name": {
+    "text": "暖かい夜は長くない",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warmth-shortens-cold-nights.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.warmth-shortens-cold-nights.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -87,6 +177,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.captain-of-tempestuous-waves.body": {
     "text": "[[relics]]のセットの一つ。2セット効果は会心ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-finale-of-a-lie.name": {
+    "text": "或る嘘の終幕",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-finale-of-a-lie.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-finale-of-a-lie.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.i-am-as-you-behold.name": {
+    "text": "在るがままの我",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.i-am-as-you-behold.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.i-am-as-you-behold.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -163,6 +289,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.those-many-springs.name": {
+    "text": "幾度目かの春",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.those-many-springs.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.those-many-springs.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.anomaly-arbitration.name": {
     "text": "異相の仲裁",
     "sourceHash": null,
@@ -177,6 +321,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.anomaly-arbitration.body": {
     "text": "Ver.3.6で追加された、定期的に更新される高難度の試練コンテンツ。「均衡」の仲裁官とのチェスの対局をモチーフに、3つの試練ステージと1つの最終ステージで構成される。試練ステージでは3つの編成を組んで挑み、すべてをクリアすると最終ステージに挑戦できる。解放には[[forgotten-hall|忘却の庭]]・[[memory-of-chaos|混沌の記憶]]など既存の高難度コンテンツのクリアが条件になる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-trail-of-bygone-blood.name": {
+    "text": "古より受け継がれる血",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-trail-of-bygone-blood.summary": {
+    "text": "「壊滅」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-trail-of-bygone-blood.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -271,6 +433,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.perfect-timing.name": {
+    "text": "今が丁度",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.perfect-timing.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.perfect-timing.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-great-cosmic-enterprise.name": {
+    "text": "宇宙一の大商い！",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-great-cosmic-enterprise.summary": {
+    "text": "「知恵」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-great-cosmic-enterprise.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]339。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.herta-space-station.name": {
     "text": "宇宙ステーション「ヘルタ」",
     "sourceHash": null,
@@ -321,6 +519,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.swarm-disaster.body": {
     "text": "[[simulated-universe|模擬宇宙]]の拡張コンテンツのひとつ。専用の仕組みを使いながらエリアを進み、試練に挑む。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.poised-to-bloom.name": {
+    "text": "美しき華よ今咲かん",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.poised-to-bloom.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.poised-to-bloom.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lushaka-the-sunken-seas.name": {
+    "text": "海に沈んだルサカ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lushaka-the-sunken-seas.summary": {
+    "text": "EP回復効率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lushaka-the-sunken-seas.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[energy-regeneration-rate]]が5%上がる。装備者が編成の先頭にいない場合、先頭の味方の[[attack]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.why-does-the-ocean-sing.name": {
+    "text": "海の歌は何がため",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.why-does-the-ocean-sing.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.why-does-the-ocean-sing.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -415,6 +667,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.inherently-unjust-destiny.name": {
+    "text": "運命は常に不公平",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.inherently-unjust-destiny.summary": {
+    "text": "「存護」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.inherently-unjust-destiny.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]423、[[defense]]661。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.destinys-threads-forewoven.name": {
+    "text": "運命を紡ぐ糸",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.destinys-threads-forewoven.summary": {
+    "text": "「存護」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.destinys-threads-forewoven.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]370、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.okhema.name": {
     "text": "「永遠の聖都」オクヘイマ",
     "sourceHash": null,
@@ -429,6 +717,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.okhema.body": {
     "text": "[[amphoreus|オンパロス]]で「世を背負う」タイタンを信仰する都市国家。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus-the-eternal-land.name": {
+    "text": "永遠の地オンパロス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus-the-eternal-land.summary": {
+    "text": "会心率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.amphoreus-the-eternal-land.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-forever-victual.name": {
+    "text": "永遠の迷境ごはん",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-forever-victual.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-forever-victual.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.make-farewells-more-beautiful.name": {
+    "text": "永訣よ美しくあれ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.make-farewells-more-beautiful.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.make-farewells-more-beautiful.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -523,6 +865,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.epoch-etched-in-golden-blood.name": {
+    "text": "黄金の血で刻む時代",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.epoch-etched-in-golden-blood.summary": {
+    "text": "「調和」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.epoch-etched-in-golden-blood.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.golden-hour.name": {
     "text": "黄金の刻",
     "sourceHash": null,
@@ -559,6 +919,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.shared-feeling.name": {
+    "text": "同じ気持ち",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shared-feeling.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shared-feeling.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.good-night-and-sleep-well.name": {
     "text": "おやすみなさいと寝顔",
     "sourceHash": null,
@@ -573,6 +951,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.good-night-and-sleep-well.body": {
     "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。攻撃対象に付いているデバフの数に応じて与ダメージが上がる。持続ダメージにも適用される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.broken-keel.name": {
+    "text": "折れた竜骨",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.broken-keel.summary": {
+    "text": "効果抵抗を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.broken-keel.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[effect-res]]が10%上がる。装備者の[[effect-res]]が30%以上なら、味方全体の[[crit-dmg]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -919,6 +1315,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.lies-dance-on-the-breeze.name": {
+    "text": "風に揺蕩う虚言",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lies-dance-on-the-breeze.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lies-dance-on-the-breeze.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-pursuit-of-the-wind.name": {
+    "text": "風を追う時",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-pursuit-of-the-wind.summary": {
+    "text": "「調和」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.in-pursuit-of-the-wind.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.messenger-traversing-hackerspace.name": {
     "text": "仮想空間を漫遊するメッセンジャー",
     "sourceHash": null,
@@ -951,6 +1383,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.underworld.body": {
     "text": "[[belobog|ベロブルグ]]の地下部分。ボルダータウンや大鉱区などがある。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.when-she-decided-to-see.name": {
+    "text": "彼女が視ると決めた時",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.when-she-decided-to-see.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.when-she-decided-to-see.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.never-forget-her-flame.name": {
+    "text": "彼女の炎を忘れずに",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.never-forget-her-flame.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.never-forget-her-flame.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gods-moment-of-joy.name": {
+    "text": "神の刹那の愉悦",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gods-moment-of-joy.summary": {
+    "text": "速度を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.gods-moment-of-joy.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1171,6 +1657,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.the-wondrous-bananamusement-park.name": {
+    "text": "奇想天外のバナダイス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-wondrous-bananamusement-park.summary": {
+    "text": "会心ダメージを伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-wondrous-bananamusement-park.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-dmg]]が16%上がる。召喚したユニットが場にいる間、装備者の[[crit-dmg]]がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.base-speed.name": {
     "text": "基礎速度",
     "sourceHash": null,
@@ -1239,6 +1743,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.character-ascension.body": {
     "text": "育成素材などを使ってキャラクターを昇格させ、レベル上限を引き上げる。昇格素材の一部は[[stagnant-shadow|凝結虚影]]で獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.holiday-thermae-escapade.name": {
+    "text": "休日のバルネア大冒険",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.holiday-thermae-escapade.summary": {
+    "text": "「虚無」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.holiday-thermae-escapade.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1315,6 +1837,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.night-of-fright.name": {
+    "text": "驚魂の夜",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.night-of-fright.summary": {
+    "text": "「豊穣」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.night-of-fright.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.administrative-district.name": {
     "text": "行政区",
     "sourceHash": null,
@@ -1329,6 +1869,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.administrative-district.body": {
     "text": "[[belobog|ベロブルグ]]の地上にある区域。都市の政治や文化の中心となっている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.todays-good-luck.name": {
+    "text": "今日は好運",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.todays-good-luck.summary": {
+    "text": "「愉悦」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.todays-good-luck.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1423,6 +1981,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.dazzled-by-a-flowery-world.name": {
+    "text": "きらびやかな世界",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dazzled-by-a-flowery-world.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dazzled-by-a-flowery-world.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.the-day-the-cosmos-fell.name": {
     "text": "銀河が陥落した日",
     "sourceHash": null,
@@ -1437,6 +2013,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-day-the-cosmos-fell.body": {
     "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。[[attack]]を上げ、装備者と同じ[[element]]を弱点とする敵を一度に複数攻撃すると[[crit-dmg]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.welcome-to-the-cosmic-city.name": {
+    "text": "銀河シティへようこそ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.welcome-to-the-cosmic-city.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.welcome-to-the-cosmic-city.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1621,6 +2215,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.sagacity.name": {
+    "text": "見識",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sagacity.summary": {
+    "text": "「知恵」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sagacity.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]370、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.izumo-gensei-and-takama-divine-realm.name": {
+    "text": "顕世の出雲と高天の神国",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.izumo-gensei-and-takama-divine-realm.summary": {
+    "text": "攻撃力を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.izumo-gensei-and-takama-divine-realm.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.architects.name": {
     "text": "建創者",
     "sourceHash": null,
@@ -1635,6 +2265,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.architects.body": {
     "text": "[[belobog|ベロブルグ]]を築き、地上の都市の統治に関わる人々。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-of-the-architects.name": {
+    "text": "建創者のベロブルグ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-of-the-architects.summary": {
+    "text": "防御力を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.belobog-of-the-architects.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[defense]]が15%上がる。装備者の[[effect-hit-rate]]が50%以上なら、[[defense]]がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1725,6 +2373,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.effect-res.body": {
     "text": "デバフなどを受ける際の抵抗に関係する。付与側の[[effect-hit-rate|効果命中]]とは異なる。\n\n抵抗できるかは効果ごとに異なり、固定確率など個別の条件にも注意が必要。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.forge-of-the-kalpagni-lantern.name": {
+    "text": "劫火と蓮灯の鋳煉宮",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.forge-of-the-kalpagni-lantern.summary": {
+    "text": "速度を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.forge-of-the-kalpagni-lantern.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1855,6 +2521,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.sigonia-the-unclaimed-desolation.name": {
+    "text": "荒涼の惑星ツガンニヤ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sigonia-the-unclaimed-desolation.summary": {
+    "text": "会心率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sigonia-the-unclaimed-desolation.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が4%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.indelible-promise.name": {
+    "text": "心に刻まれた約束",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.indelible-promise.summary": {
+    "text": "「壊滅」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.indelible-promise.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.foxian.name": {
     "text": "狐族",
     "sourceHash": null,
@@ -1923,6 +2625,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.i-shall-be-my-own-sword.body": {
     "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-dmg]]を上げ、味方の被弾や[[hp]]消費に応じて次の攻撃を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.this-is-me.name": {
+    "text": "これがウチだよ！",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.this-is-me.summary": {
+    "text": "「存護」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.this-is-me.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]370、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2089,6 +2809,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.lingering-tear.name": {
+    "text": "残涙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lingering-tear.summary": {
+    "text": "「愉悦」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.lingering-tear.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]317、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reforged-remembrance.name": {
+    "text": "時間の記憶を再構築して",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reforged-remembrance.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reforged-remembrance.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.planar-ornaments.name": {
     "text": "次元界オーナメント",
     "sourceHash": null,
@@ -2107,6 +2863,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.sneering.name": {
+    "text": "嗤笑",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sneering.summary": {
+    "text": "「愉悦」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sneering.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]370、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.pioneer-diver-of-dead-waters.name": {
     "text": "死水に潜る先駆者",
     "sourceHash": null,
@@ -2121,6 +2895,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.pioneer-diver-of-dead-waters.body": {
     "text": "[[relics]]のセットの一つ。2セット効果はデバフを受けた敵への与ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.flickering-stars.name": {
+    "text": "静かに瞬く小さな火",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.flickering-stars.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.flickering-stars.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2175,6 +2967,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.self-modeling-resin.body": {
     "text": "[[relic-synthesis|遺物合成]]で使うアイテム。作成する遺物の[[relic-main-stat|メインステータス]]や[[relic-sub-stat|サブステータス]]を指定できる。指定できる候補や必要数は合成画面で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.inert-salsotto.name": {
+    "text": "自転が止まったサルソット",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.inert-salsotto.summary": {
+    "text": "会心率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.inert-salsotto.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。装備者の[[crit-rate]]が50%以上なら、[[ultimate]]と[[follow-up-attack]]のダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2301,6 +3111,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.ten-lords-commission.body": {
     "text": "[[xianzhou-luofu]]の組織。雪衣や寒鴉、見習い判官のフォフォが公式紹介に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-end.name": {
+    "text": "終点でまた会おう",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-end.summary": {
+    "text": "「巡狩」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-end.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2665,6 +3493,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.giant-tree-of-rapt-brooding.name": {
+    "text": "深慮に浸る巨樹",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.giant-tree-of-rapt-brooding.summary": {
+    "text": "速度を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.giant-tree-of-rapt-brooding.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.fyxestroll-garden.name": {
     "text": "綏園",
     "sourceHash": null,
@@ -2733,6 +3579,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.interastral-peace-corporation.body": {
     "text": "通称「カンパニー」。公式発表ではジェイドがその高級幹部として紹介されている。\n\n[[astral-express]]や[[xianzhou-alliance]]など、さまざまな勢力とともに物語に登場する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.punklorde-stage-zero.name": {
+    "text": "ステージゼロ：パンクロード",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.punklorde-stage-zero.summary": {
+    "text": "愉悦度を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.punklorde-stage-zero.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の愉悦度が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3025,6 +3889,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.bone-collections-serene-demesne.name": {
+    "text": "静謐な拾骨地",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bone-collections-serene-demesne.summary": {
+    "text": "最大HPを伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.bone-collections-serene-demesne.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[hp|最大HP]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.life-should-be-cast-to-flames.name": {
+    "text": "生命、焼滅すべし",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.life-should-be-cast-to-flames.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.life-should-be-cast-to-flames.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.in-the-name-of-the-world.name": {
     "text": "世界の名を以て",
     "sourceHash": null,
@@ -3039,6 +3939,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.in-the-name-of-the-world.body": {
     "text": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。デバフを受けた敵への与ダメージを上げ、戦闘スキルを使う攻撃では効果命中と攻撃力も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-worlds-end.name": {
+    "text": "世界の果てで会おう！",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-worlds-end.summary": {
+    "text": "「愉悦」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.see-you-at-the-worlds-end.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.scent-alone-stays-true.name": {
+    "text": "昔日の香りは今も猶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.scent-alone-stays-true.summary": {
+    "text": "「豊穣」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.scent-alone-stays-true.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3223,6 +4159,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.flame-of-blood-blaze-my-path.name": {
+    "text": "前途燃やす血の如き炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.flame-of-blood-blaze-my-path.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.flame-of-blood-blaze-my-path.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1375、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.treasure.name": {
     "text": "戦利品",
     "sourceHash": null,
@@ -3237,6 +4191,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.treasure.body": {
     "text": "フィールドの探索中に見つけられる宝箱など。開けると報酬を獲得できる。場所や獲得条件はエリアごとに異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firmament-frontline-glamoth.name": {
+    "text": "蒼穹戦線グラモス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firmament-frontline-glamoth.summary": {
+    "text": "攻撃力を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.firmament-frontline-glamoth.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。装備者の[[speed]]が条件を満たすと、与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3403,6 +4375,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.long-may-rainbows-adorn-the-sky.name": {
+    "text": "空の虹が消えぬように",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.long-may-rainbows-adorn-the-sky.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.long-may-rainbows-adorn-the-sky.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.preservation.name": {
     "text": "存護",
     "sourceHash": null,
@@ -3453,6 +4443,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.titan.body": {
     "text": "[[amphoreus|オンパロス]]の都市国家で信仰される存在。世を背負うものや、紛争、門と道を司るものなどがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-grounded-ascent.name": {
+    "text": "大地より天を目指して",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-grounded-ascent.summary": {
+    "text": "「調和」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-grounded-ascent.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3511,6 +4519,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.mushy-shroomys-adventures.name": {
+    "text": "タケタケ冒険記",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mushy-shroomys-adventures.summary": {
+    "text": "「愉悦」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.mushy-shroomys-adventures.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rise-and-sing.name": {
+    "text": "立ち上がり高らかな歌を",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rise-and-sing.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rise-and-sing.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]582、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.reminiscence.name": {
     "text": "辿る記憶",
     "sourceHash": null,
@@ -3525,6 +4569,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.reminiscence.body": {
     "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0で追加され、「始発跳躍」を除くイベント跳躍で入手できると案内された。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.journey-forever-peaceful.name": {
+    "text": "旅が平穏であるように",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.journey-forever-peaceful.summary": {
+    "text": "「存護」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.journey-forever-peaceful.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3673,6 +4735,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.race-to-the-horizon.name": {
+    "text": "地平線のゴールへ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.race-to-the-horizon.summary": {
+    "text": "「巡狩」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.race-to-the-horizon.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.charge.name": {
     "text": "チャージ",
     "sourceHash": null,
@@ -3813,6 +4893,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-seriousness-of-breakfast.body": {
     "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。与ダメージを上げ、敵を倒すたびに上限まで攻撃力が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.long-road-leads-home.name": {
+    "text": "長途はやがて帰途へと続く",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.long-road-leads-home.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.long-road-leads-home.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]475、[[defense]]661。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3961,6 +5059,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.fallen-star-anchorage.name": {
+    "text": "墜星の出航地",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fallen-star-anchorage.summary": {
+    "text": "会心率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fallen-star-anchorage.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.basic-attack.name": {
     "text": "通常攻撃",
     "sourceHash": null,
@@ -3993,6 +5109,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-unreachable-side.body": {
     "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-rate]]と最大[[hp]]を上げ、被弾や自分の[[hp]]消費をきっかけに次の攻撃を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memorys-curtain-never-falls.name": {
+    "text": "尽きぬ追憶",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memorys-curtain-never-falls.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.memorys-curtain-never-falls.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4065,6 +5199,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.debuff.body": {
     "text": "能力の低下など、対象に不利に働く効果。付与には[[effect-hit-rate|効果命中]]や[[effect-res|効果抵抗]]が関係するものがあるが、能力によって条件は異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tengoku-livestream.name": {
+    "text": "天国＠配信ルーム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tengoku-livestream.summary": {
+    "text": "会心ダメージを伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tengoku-livestream.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-dmg]]が16%上がる。同一ターンで[[skill-point]]を一定量消費すると、[[crit-dmg]]をさらに強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4303,6 +5455,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.hidden-shadow.name": {
+    "text": "匿影",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hidden-shadow.summary": {
+    "text": "「虚無」の★3光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hidden-shadow.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]317、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.everwinter-hill.name": {
     "text": "常冬峰",
     "sourceHash": null,
@@ -4317,6 +5487,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.everwinter-hill.body": {
     "text": "[[belobog|ベロブルグ]]の北にあり、厳しい氷雪に覆われた地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.she-already-shut-her-eyes.name": {
+    "text": "閉ざした瞳",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.she-already-shut-her-eyes.summary": {
+    "text": "「存護」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.she-already-shut-her-eyes.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]423、[[defense]]529。[[hp|最大HP]]と[[energy-regeneration-rate]]を上げ、装備者の[[hp]]が減った際には味方全体の与ダメージ強化が発生する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4393,6 +5581,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.to-evernights-stars.name": {
+    "text": "長き夜に輝く星へ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.to-evernights-stars.summary": {
+    "text": "「記憶」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.to-evernights-stars.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.sweat-now-cry-less.name": {
     "text": "流すなら涙より汗",
     "sourceHash": null,
@@ -4407,6 +5613,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.sweat-now-cry-less.body": {
     "text": "[[path|記憶]]のキャラクターが効果を発動できる[[light-cone]]。Ver.3.0以降の「ナナシビトの褒章」で解放される報酬「星海の宝物」の交換候補。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.along-the-passing-shore.name": {
+    "text": "流れ逝く岸を歩いて",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.along-the-passing-shore.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.along-the-passing-shore.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]635、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4461,6 +5685,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.nameless-glory.body": {
     "text": "ナナシの勲功の有料報酬枠。解放すると勲功レベルに応じて追加の報酬を受け取れる。内容や購入条件はゲーム内の案内を確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.what-is-real.name": {
+    "text": "何が真か",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.what-is-real.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.what-is-real.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]423、[[defense]]330。[[break-effect]]を上げ、[[basic-attack]]後に自分の[[hp]]を回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4537,6 +5779,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.sailing-towards-a-second-life.name": {
+    "text": "二度目の生に向かって",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sailing-towards-a-second-life.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.sailing-towards-a-second-life.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninja-record-sound-hunt.name": {
+    "text": "忍事録・音律狩猟",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninja-record-sound-hunt.summary": {
+    "text": "「壊滅」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninja-record-sound-hunt.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninjutsu-inscription-dazzling-evilbreak.name": {
+    "text": "忍法帖・繚乱破魔",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninjutsu-inscription-dazzling-evilbreak.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.ninjutsu-inscription-dazzling-evilbreak.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.burn.name": {
     "text": "燃焼",
     "sourceHash": null,
@@ -4569,6 +5865,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.fuel.body": {
     "text": "[[trailblaze-power|開拓力]]を回復するために使用できるアイテム。獲得できる場面や使用条件はゲーム内で確認しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-little-getaway.name": {
+    "text": "バカンスのひと時",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-little-getaway.summary": {
+    "text": "「愉悦」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-little-getaway.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4627,6 +5941,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.before-the-tutorial-mission-starts.name": {
+    "text": "初めてのクエストの前に",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.before-the-tutorial-mission-starts.summary": {
+    "text": "「虚無」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.before-the-tutorial-mission-starts.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。[[effect-hit-rate]]を強化し、[[defense]]が下がっている敵を攻撃すると[[energy]]を回復できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.upon-the-first-echo-of-aha.name": {
+    "text": "はじめの「アッハ」が響く時",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.upon-the-first-echo-of-aha.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.upon-the-first-echo-of-aha.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-flower-remembers.name": {
+    "text": "花は忘れない",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-flower-remembers.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-flower-remembers.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.shield.name": {
     "text": "バリア",
     "sourceHash": null,
@@ -4677,6 +6045,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.antimatter-legion.body": {
     "text": "「壊滅」の星神ナヌークに仕える軍団。文明と生命の破壊を目的として宇宙各地を襲い、物語の序盤では宇宙ステーション「ヘルタ」への襲撃が描かれた。指揮官格として、ナヌークから力を分け与えられた「絶滅大君」と呼ばれる[[emanator|使令]]がいる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.though-worlds-apart.name": {
+    "text": "万里の山河を越えて",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.though-worlds-apart.summary": {
+    "text": "「存護」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.though-worlds-apart.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4789,6 +6175,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.echoes-of-the-coffin.name": {
+    "text": "棺のこだま",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.echoes-of-the-coffin.summary": {
+    "text": "「豊穣」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.echoes-of-the-coffin.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]582、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.ultimate.name": {
     "text": "必殺技",
     "sourceHash": null,
@@ -4879,6 +6283,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.fly-into-a-pink-tomorrow.name": {
+    "text": "ピンク色の明日へ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fly-into-a-pink-tomorrow.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fly-into-a-pink-tomorrow.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.fight-club.name": {
     "text": "ファイトクラブ",
     "sourceHash": null,
@@ -4947,6 +6369,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.seclusion-zone.body": {
     "text": "宇宙ステーション「ヘルタ」で探索できる区域の一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fermata.name": {
+    "text": "フェルマータ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fermata.summary": {
+    "text": "「虚無」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.fermata.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5037,6 +6477,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.sacerdos-relived-ordeal.body": {
     "text": "[[relics]]のセットの一つ。2セット効果は速度に関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.until-the-flowers-bloom-again.name": {
+    "text": "再び花が咲く季節に",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.until-the-flowers-bloom-again.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.until-the-flowers-bloom-again.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.concert-for-two.name": {
+    "text": "二人だけのコンサート",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.concert-for-two.summary": {
+    "text": "「存護」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.concert-for-two.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]370、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5383,6 +6859,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.rutilant-arena.name": {
+    "text": "星々の競技場",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rutilant-arena.summary": {
+    "text": "会心率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.rutilant-arena.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。装備者の[[crit-rate]]が70%以上なら、[[basic-attack]]と[[skill]]のダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.hoshimeguru-navigator-shiken.name": {
     "text": "星巡るナビゲーター「シケン」",
     "sourceHash": null,
@@ -5581,6 +7075,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.tomorrow-together.name": {
+    "text": "みんなで一緒に未来へ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tomorrow-together.summary": {
+    "text": "「愉悦」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.tomorrow-together.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-dream-scented-in-wheat.name": {
+    "text": "麦の香り漂う夢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-dream-scented-in-wheat.summary": {
+    "text": "「知恵」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-dream-scented-in-wheat.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-thankless-coronation.name": {
+    "text": "報われぬ戴冠",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-thankless-coronation.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-thankless-coronation.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.nameless-memory.name": {
     "text": "無名の追憶",
     "sourceHash": null,
@@ -5599,6 +7147,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.revelry-by-the-sea.name": {
+    "text": "酩酊の海域",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.revelry-by-the-sea.summary": {
+    "text": "攻撃力を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.revelry-by-the-sea.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.relic-main-stat.name": {
     "text": "メインステータス",
     "sourceHash": null,
@@ -5613,6 +7179,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.relic-main-stat.body": {
     "text": "[[relics|遺物]]に付く主なステータス。候補は装備する部位によって異なり、遺物の強化で数値が上がる。[[relic-sub-stat|サブステータス]]とは別に表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thus-burns-the-dawn.name": {
+    "text": "燃え盛る黎明のように",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thus-burns-the-dawn.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.thus-burns-the-dawn.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]687、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5653,6 +7237,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.if-time-were-a-flower.name": {
+    "text": "もしも時が花だったら",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.if-time-were-a-flower.summary": {
+    "text": "「調和」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.if-time-were-a-flower.body": {
+    "text": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.entanglement.name": {
     "text": "もつれ",
     "sourceHash": null,
@@ -5667,6 +7269,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.entanglement.body": {
     "text": "量子属性の[[weakness-break|弱点撃破]]などで付与される状態。[[action-advance-and-delay|行動順の遅延]]や付加ダメージに関わる。[[damage-over-time|持続ダメージ]]とは区別しよう。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-storys-next-page.name": {
+    "text": "物語をめくって",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-storys-next-page.summary": {
+    "text": "「記憶」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-storys-next-page.body": {
+    "text": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5761,6 +7381,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.dance-at-sunset.name": {
+    "text": "夕日に舞う",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dance-at-sunset.summary": {
+    "text": "「壊滅」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dance-at-sunset.body": {
+    "text": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.returning-to-darkness.name": {
     "text": "幽冥に帰す",
     "sourceHash": null,
@@ -5793,6 +7431,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.elation.body": {
     "text": "[[path|運命]]の一つ。愉悦の[[light-cone|光円錐]]のスキルは、装備者の運命が一致すると有効になる。[[elation-damage|愉悦ダメージ]]を扱うキャラクターがいる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-brimming-with-blessings.name": {
+    "text": "愉悦溢れる祝福",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-brimming-with-blessings.summary": {
+    "text": "「愉悦」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.elation-brimming-with-blessings.body": {
+    "text": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5887,6 +7543,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.penacony-land-of-the-dreams.name": {
+    "text": "夢の地ピノコニー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony-land-of-the-dreams.summary": {
+    "text": "EP回復効率を伸ばす次元界オーナメント。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.penacony-land-of-the-dreams.body": {
+    "text": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[energy-regeneration-rate]]が5%上がる。装備者と同属性の他の味方の与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-montage.name": {
+    "text": "夢のモンタージュ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-montage.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.dreams-montage.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.watchmaker-master-of-dream-machinations.name": {
     "text": "夢を弄ぶ時計屋",
     "sourceHash": null,
@@ -5955,6 +7647,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.brighter-than-the-sun.body": {
     "text": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。[[crit-rate]]を上げ、[[basic-attack]]によって[[attack]]と[[energy-regeneration-rate]]を強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hey-over-here.name": {
+    "text": "よぉ、ここにいるぜ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hey-over-here.summary": {
+    "text": "「豊穣」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.hey-over-here.body": {
+    "text": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6031,6 +7741,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.shadowed-by-night.name": {
+    "text": "夜は影のように付き纏う",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadowed-by-night.summary": {
+    "text": "「巡狩」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.shadowed-by-night.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-star-that-lights-the-night.name": {
+    "text": "夜を照らす導きの星",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-star-that-lights-the-night.summary": {
+    "text": "「知恵」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.a-star-that-lights-the-night.body": {
+    "text": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.band-of-sizzling-thunder.name": {
     "text": "雷鳴轟くバンド",
     "sourceHash": null,
@@ -6081,6 +7827,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.darting-arrow.body": {
     "text": "[[path|巡狩]]のキャラクターが効果を発動できる[[light-cone]]。敵を倒した後、装備者の[[attack]]が一定ターン上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hell-where-ideals-burn.name": {
+    "text": "理想を焼く奈落で",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hell-where-ideals-burn.summary": {
+    "text": "「巡狩」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.the-hell-where-ideals-burn.body": {
+    "text": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6301,6 +8065,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.hsr.reforged-in-hellfire.name": {
+    "text": "煉獄に焼かれし新身",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reforged-in-hellfire.summary": {
+    "text": "「虚無」の★5光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.reforged-in-hellfire.body": {
+    "text": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1375、[[attack]]423、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.hsr.swordplay.name": {
     "text": "論剣",
     "sourceHash": null,
@@ -6369,6 +8151,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.hsr.the-birth-of-the-self.body": {
     "text": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。[[follow-up-attack]]を強化し、残り[[hp]]が半分以下の敵に対して効果が大きくなる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.we-are-wildfire.name": {
+    "text": "我ら地炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.we-are-wildfire.summary": {
+    "text": "「存護」の★4光円錐。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.hsr.we-are-wildfire.body": {
+    "text": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]476、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

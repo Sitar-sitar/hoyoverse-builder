@@ -2,6 +2,39 @@
 import type { SourceText } from "../../../shared/content/types";
 const block0: SourceText[] = [
   {
+    "id": "term.hsr.this-love-forever.name",
+    "ja": "愛はいま永遠に",
+    "context": "glossary hsr term this-love-forever: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.this-love-forever.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term this-love-forever: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.this-love-forever.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]476、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term this-love-forever: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.under-the-blue-sky.name",
     "ja": "青空の下で",
     "context": "glossary hsr term under-the-blue-sky: Japanese official term name",
@@ -34,6 +67,36 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.subspace-asc-center.name",
+    "ja": "亜空異容所",
+    "context": "glossary hsr term subspace-asc-center: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.subspace-asc-center.summary",
+    "ja": "速度を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term subspace-asc-center: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.subspace-asc-center.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term subspace-asc-center: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[speed]]"
+    ]
+  },
+  {
     "id": "term.hsr.dewlight-pavilion.name",
     "ja": "朝露の館",
     "context": "glossary hsr term dewlight-pavilion: Japanese official term name",
@@ -59,6 +122,72 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.colors-for-tomorrow.name",
+    "ja": "明日に捧げる色",
+    "context": "glossary hsr term colors-for-tomorrow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.colors-for-tomorrow.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term colors-for-tomorrow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.colors-for-tomorrow.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]595。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term colors-for-tomorrow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.unto-tomorrows-morrow.name",
+    "ja": "明日の明日まで",
+    "context": "glossary hsr term unto-tomorrows-morrow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.unto-tomorrows-morrow.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term unto-tomorrows-morrow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.unto-tomorrows-morrow.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term unto-tomorrows-morrow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
   },
   {
     "id": "term.hsr.for-tomorrows-journey.name",
@@ -90,6 +219,39 @@ const block0: SourceText[] = [
       "[[light-cone]]",
       "[[path|",
       "[[ultimate]]"
+    ]
+  },
+  {
+    "id": "term.hsr.warmth-shortens-cold-nights.name",
+    "ja": "暖かい夜は長くない",
+    "context": "glossary hsr term warmth-shortens-cold-nights: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warmth-shortens-cold-nights.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term warmth-shortens-cold-nights: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.warmth-shortens-cold-nights.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term warmth-shortens-cold-nights: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -150,6 +312,72 @@ const block0: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.the-finale-of-a-lie.name",
+    "ja": "或る嘘の終幕",
+    "context": "glossary hsr term the-finale-of-a-lie: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-finale-of-a-lie.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term the-finale-of-a-lie: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-finale-of-a-lie.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-finale-of-a-lie: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.i-am-as-you-behold.name",
+    "ja": "在るがままの我",
+    "context": "glossary hsr term i-am-as-you-behold: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.i-am-as-you-behold.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term i-am-as-you-behold: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.i-am-as-you-behold.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term i-am-as-you-behold: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -275,6 +503,39 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.those-many-springs.name",
+    "ja": "幾度目かの春",
+    "context": "glossary hsr term those-many-springs: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.those-many-springs.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term those-many-springs: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.those-many-springs.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term those-many-springs: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.anomaly-arbitration.name",
     "ja": "異相の仲裁",
     "context": "glossary hsr term anomaly-arbitration: Japanese official term name",
@@ -302,6 +563,39 @@ const block0: SourceText[] = [
     "protectedTokens": [
       "[[forgotten-hall|",
       "[[memory-of-chaos|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-trail-of-bygone-blood.name",
+    "ja": "古より受け継がれる血",
+    "context": "glossary hsr term a-trail-of-bygone-blood: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-trail-of-bygone-blood.summary",
+    "ja": "「壊滅」の★4光円錐。",
+    "context": "glossary hsr term a-trail-of-bygone-blood: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-trail-of-bygone-blood.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-trail-of-bygone-blood: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -462,6 +756,72 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.perfect-timing.name",
+    "ja": "今が丁度",
+    "context": "glossary hsr term perfect-timing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.perfect-timing.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term perfect-timing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.perfect-timing.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term perfect-timing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-great-cosmic-enterprise.name",
+    "ja": "宇宙一の大商い！",
+    "context": "glossary hsr term the-great-cosmic-enterprise: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-great-cosmic-enterprise.summary",
+    "ja": "「知恵」の★4光円錐。",
+    "context": "glossary hsr term the-great-cosmic-enterprise: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-great-cosmic-enterprise.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]339。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-great-cosmic-enterprise: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.herta-space-station.name",
     "ja": "宇宙ステーション「ヘルタ」",
     "context": "glossary hsr term herta-space-station: Japanese official term name",
@@ -552,6 +912,103 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.poised-to-bloom.name",
+    "ja": "美しき華よ今咲かん",
+    "context": "glossary hsr term poised-to-bloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.poised-to-bloom.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term poised-to-bloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.poised-to-bloom.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term poised-to-bloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.lushaka-the-sunken-seas.name",
+    "ja": "海に沈んだルサカ",
+    "context": "glossary hsr term lushaka-the-sunken-seas: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lushaka-the-sunken-seas.summary",
+    "ja": "EP回復効率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term lushaka-the-sunken-seas: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lushaka-the-sunken-seas.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[energy-regeneration-rate]]が5%上がる。装備者が編成の先頭にいない場合、先頭の味方の[[attack]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term lushaka-the-sunken-seas: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[energy-regeneration-rate]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
+    "id": "term.hsr.why-does-the-ocean-sing.name",
+    "ja": "海の歌は何がため",
+    "context": "glossary hsr term why-does-the-ocean-sing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.why-does-the-ocean-sing.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term why-does-the-ocean-sing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.why-does-the-ocean-sing.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term why-does-the-ocean-sing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.cloud-knights.name",
     "ja": "雲騎軍",
     "context": "glossary hsr term cloud-knights: Japanese official term name",
@@ -588,7 +1045,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.hsr.high-cloud-quintet.summary",
     "ja": "仙舟の歴史に名を残す五人の騎士。",
@@ -707,6 +1167,72 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.inherently-unjust-destiny.name",
+    "ja": "運命は常に不公平",
+    "context": "glossary hsr term inherently-unjust-destiny: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.inherently-unjust-destiny.summary",
+    "ja": "「存護」の★5光円錐。",
+    "context": "glossary hsr term inherently-unjust-destiny: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.inherently-unjust-destiny.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]423、[[defense]]661。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term inherently-unjust-destiny: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.destinys-threads-forewoven.name",
+    "ja": "運命を紡ぐ糸",
+    "context": "glossary hsr term destinys-threads-forewoven: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.destinys-threads-forewoven.summary",
+    "ja": "「存護」の★4光円錐。",
+    "context": "glossary hsr term destinys-threads-forewoven: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.destinys-threads-forewoven.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]370、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term destinys-threads-forewoven: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.okhema.name",
     "ja": "「永遠の聖都」オクヘイマ",
     "context": "glossary hsr term okhema: Japanese official term name",
@@ -733,6 +1259,102 @@ const block0: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[amphoreus|"
+    ]
+  },
+  {
+    "id": "term.hsr.amphoreus-the-eternal-land.name",
+    "ja": "永遠の地オンパロス",
+    "context": "glossary hsr term amphoreus-the-eternal-land: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.amphoreus-the-eternal-land.summary",
+    "ja": "会心率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term amphoreus-the-eternal-land: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.amphoreus-the-eternal-land.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term amphoreus-the-eternal-land: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-forever-victual.name",
+    "ja": "永遠の迷境ごはん",
+    "context": "glossary hsr term the-forever-victual: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-forever-victual.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term the-forever-victual: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-forever-victual.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-forever-victual: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.make-farewells-more-beautiful.name",
+    "ja": "永訣よ美しくあれ",
+    "context": "glossary hsr term make-farewells-more-beautiful: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.make-farewells-more-beautiful.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term make-farewells-more-beautiful: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.make-farewells-more-beautiful.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term make-farewells-more-beautiful: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -887,6 +1509,39 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.epoch-etched-in-golden-blood.name",
+    "ja": "黄金の血で刻む時代",
+    "context": "glossary hsr term epoch-etched-in-golden-blood: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.epoch-etched-in-golden-blood.summary",
+    "ja": "「調和」の★5光円錐。",
+    "context": "glossary hsr term epoch-etched-in-golden-blood: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.epoch-etched-in-golden-blood.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term epoch-etched-in-golden-blood: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.golden-hour.name",
     "ja": "黄金の刻",
     "context": "glossary hsr term golden-hour: Japanese official term name",
@@ -945,6 +1600,39 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.shared-feeling.name",
+    "ja": "同じ気持ち",
+    "context": "glossary hsr term shared-feeling: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shared-feeling.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term shared-feeling: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shared-feeling.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shared-feeling: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.good-night-and-sleep-well.name",
     "ja": "おやすみなさいと寝顔",
     "context": "glossary hsr term good-night-and-sleep-well: Japanese official term name",
@@ -974,6 +1662,37 @@ const block0: SourceText[] = [
       "[[debuff]]",
       "[[light-cone]]",
       "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.broken-keel.name",
+    "ja": "折れた竜骨",
+    "context": "glossary hsr term broken-keel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.broken-keel.summary",
+    "ja": "効果抵抗を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term broken-keel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.broken-keel.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[effect-res]]が10%上がる。装備者の[[effect-res]]が30%以上なら、味方全体の[[crit-dmg]]も上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term broken-keel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-dmg]]",
+      "[[effect-res]]",
+      "[[planar-ornaments|"
     ]
   },
   {
@@ -1017,10 +1736,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.hsr.amphoreus.summary",
     "ja": "星穹列車が旅する謎に包まれた世界。",
@@ -1360,7 +2076,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.hsr.trailblaze-level.body",
     "ja": "開拓者の進行に関わるレベル。クエストや各種コンテンツの参加条件になる場合がある。[[equilibrium-level|均衡レベル]]とは別の指標。",
@@ -1558,6 +2277,72 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.lies-dance-on-the-breeze.name",
+    "ja": "風に揺蕩う虚言",
+    "context": "glossary hsr term lies-dance-on-the-breeze: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lies-dance-on-the-breeze.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term lies-dance-on-the-breeze: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lies-dance-on-the-breeze.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term lies-dance-on-the-breeze: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.in-pursuit-of-the-wind.name",
+    "ja": "風を追う時",
+    "context": "glossary hsr term in-pursuit-of-the-wind: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-pursuit-of-the-wind.summary",
+    "ja": "「調和」の★4光円錐。",
+    "context": "glossary hsr term in-pursuit-of-the-wind: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.in-pursuit-of-the-wind.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term in-pursuit-of-the-wind: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.messenger-traversing-hackerspace.name",
     "ja": "仮想空間を漫遊するメッセンジャー",
     "context": "glossary hsr term messenger-traversing-hackerspace: Japanese official term name",
@@ -1613,6 +2398,102 @@ const block1: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.when-she-decided-to-see.name",
+    "ja": "彼女が視ると決めた時",
+    "context": "glossary hsr term when-she-decided-to-see: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.when-she-decided-to-see.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term when-she-decided-to-see: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.when-she-decided-to-see.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term when-she-decided-to-see: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.never-forget-her-flame.name",
+    "ja": "彼女の炎を忘れずに",
+    "context": "glossary hsr term never-forget-her-flame: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.never-forget-her-flame.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term never-forget-her-flame: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.never-forget-her-flame.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term never-forget-her-flame: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.gods-moment-of-joy.name",
+    "ja": "神の刹那の愉悦",
+    "context": "glossary hsr term gods-moment-of-joy: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.gods-moment-of-joy.summary",
+    "ja": "速度を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term gods-moment-of-joy: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.gods-moment-of-joy.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term gods-moment-of-joy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[speed]]"
     ]
   },
   {
@@ -1976,6 +2857,36 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.the-wondrous-bananamusement-park.name",
+    "ja": "奇想天外のバナダイス",
+    "context": "glossary hsr term the-wondrous-bananamusement-park: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-wondrous-bananamusement-park.summary",
+    "ja": "会心ダメージを伸ばす次元界オーナメント。",
+    "context": "glossary hsr term the-wondrous-bananamusement-park: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-wondrous-bananamusement-park.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-dmg]]が16%上がる。召喚したユニットが場にいる間、装備者の[[crit-dmg]]がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-wondrous-bananamusement-park: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-dmg]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
     "id": "term.hsr.base-speed.name",
     "ja": "基礎速度",
     "context": "glossary hsr term base-speed: Japanese official term name",
@@ -2022,10 +2933,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.hsr.radiant-feldspar.body",
     "ja": "[[penacony|ピノコニー]]の空を飛ぶ船。星穹列車の一行が招待を受けて訪れる。",
@@ -2097,6 +3005,39 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.holiday-thermae-escapade.name",
+    "ja": "休日のバルネア大冒険",
+    "context": "glossary hsr term holiday-thermae-escapade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.holiday-thermae-escapade.summary",
+    "ja": "「虚無」の★4光円錐。",
+    "context": "glossary hsr term holiday-thermae-escapade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.holiday-thermae-escapade.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term holiday-thermae-escapade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.old-weapon-testing-ground.name",
     "ja": "旧武器実験場",
     "context": "glossary hsr term old-weapon-testing-ground: Japanese official term name",
@@ -2152,7 +3093,10 @@ const block2: SourceText[] = [
       "[[attack|",
       "[[debuff|"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.hsr.kyoukankaku-biikon.name",
     "ja": "共感覚ビーコン",
@@ -2213,6 +3157,39 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.night-of-fright.name",
+    "ja": "驚魂の夜",
+    "context": "glossary hsr term night-of-fright: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.night-of-fright.summary",
+    "ja": "「豊穣」の★5光円錐。",
+    "context": "glossary hsr term night-of-fright: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.night-of-fright.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term night-of-fright: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.administrative-district.name",
     "ja": "行政区",
     "context": "glossary hsr term administrative-district: Japanese official term name",
@@ -2239,6 +3216,39 @@ const block2: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.todays-good-luck.name",
+    "ja": "今日は好運",
+    "context": "glossary hsr term todays-good-luck: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.todays-good-luck.summary",
+    "ja": "「愉悦」の★4光円錐。",
+    "context": "glossary hsr term todays-good-luck: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.todays-good-luck.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term todays-good-luck: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -2393,6 +3403,39 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.dazzled-by-a-flowery-world.name",
+    "ja": "きらびやかな世界",
+    "context": "glossary hsr term dazzled-by-a-flowery-world: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dazzled-by-a-flowery-world.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term dazzled-by-a-flowery-world: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dazzled-by-a-flowery-world.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term dazzled-by-a-flowery-world: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.the-day-the-cosmos-fell.name",
     "ja": "銀河が陥落した日",
     "context": "glossary hsr term the-day-the-cosmos-fell: Japanese official term name",
@@ -2421,6 +3464,39 @@ const block2: SourceText[] = [
       "[[attack]]",
       "[[crit-dmg]]",
       "[[element]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.welcome-to-the-cosmic-city.name",
+    "ja": "銀河シティへようこそ",
+    "context": "glossary hsr term welcome-to-the-cosmic-city: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.welcome-to-the-cosmic-city.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term welcome-to-the-cosmic-city: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.welcome-to-the-cosmic-city.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term welcome-to-the-cosmic-city: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
       "[[light-cone]]",
       "[[path|"
     ]
@@ -2725,6 +3801,69 @@ const block2: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.hsr.sagacity.name",
+    "ja": "見識",
+    "context": "glossary hsr term sagacity: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sagacity.summary",
+    "ja": "「知恵」の★3光円錐。",
+    "context": "glossary hsr term sagacity: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sagacity.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]370、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sagacity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.izumo-gensei-and-takama-divine-realm.name",
+    "ja": "顕世の出雲と高天の神国",
+    "context": "glossary hsr term izumo-gensei-and-takama-divine-realm: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.izumo-gensei-and-takama-divine-realm.summary",
+    "ja": "攻撃力を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term izumo-gensei-and-takama-divine-realm: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.izumo-gensei-and-takama-divine-realm.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term izumo-gensei-and-takama-divine-realm: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
     "id": "term.hsr.architects.name",
     "ja": "建創者",
     "context": "glossary hsr term architects: Japanese official term name",
@@ -2751,6 +3890,37 @@ const block2: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.belobog-of-the-architects.name",
+    "ja": "建創者のベロブルグ",
+    "context": "glossary hsr term belobog-of-the-architects: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.belobog-of-the-architects.summary",
+    "ja": "防御力を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term belobog-of-the-architects: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.belobog-of-the-architects.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[defense]]が15%上がる。装備者の[[effect-hit-rate]]が50%以上なら、[[defense]]がさらに上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term belobog-of-the-architects: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[effect-hit-rate]]",
+      "[[planar-ornaments|"
     ]
   },
   {
@@ -2902,6 +4072,36 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.forge-of-the-kalpagni-lantern.name",
+    "ja": "劫火と蓮灯の鋳煉宮",
+    "context": "glossary hsr term forge-of-the-kalpagni-lantern: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.forge-of-the-kalpagni-lantern.summary",
+    "ja": "速度を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term forge-of-the-kalpagni-lantern: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.forge-of-the-kalpagni-lantern.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term forge-of-the-kalpagni-lantern: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[speed]]"
+    ]
+  },
+  {
     "id": "term.hsr.effect-hit-rate.name",
     "ja": "効果命中",
     "context": "glossary hsr term effect-hit-rate: Japanese official term name",
@@ -2909,7 +4109,10 @@ const block2: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.hsr.effect-hit-rate.summary",
     "ja": "敵への効果付与の成功率に関わるステータス。",
@@ -3020,10 +4223,7 @@ const block2: SourceText[] = [
       "[[starskiff]]",
       "[[xianzhou-luofu]]"
     ]
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.hsr.action-order.name",
     "ja": "行動順",
@@ -3112,6 +4312,69 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[debuff|",
       "[[frozen|"
+    ]
+  },
+  {
+    "id": "term.hsr.sigonia-the-unclaimed-desolation.name",
+    "ja": "荒涼の惑星ツガンニヤ",
+    "context": "glossary hsr term sigonia-the-unclaimed-desolation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sigonia-the-unclaimed-desolation.summary",
+    "ja": "会心率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term sigonia-the-unclaimed-desolation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sigonia-the-unclaimed-desolation.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が4%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sigonia-the-unclaimed-desolation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
+    "id": "term.hsr.indelible-promise.name",
+    "ja": "心に刻まれた約束",
+    "context": "glossary hsr term indelible-promise: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.indelible-promise.summary",
+    "ja": "「壊滅」の★4光円錐。",
+    "context": "glossary hsr term indelible-promise: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.indelible-promise.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term indelible-promise: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -3235,6 +4498,39 @@ const block3: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[crit-dmg]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.this-is-me.name",
+    "ja": "これがウチだよ！",
+    "context": "glossary hsr term this-is-me: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.this-is-me.summary",
+    "ja": "「存護」の★4光円錐。",
+    "context": "glossary hsr term this-is-me: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.this-is-me.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]370、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term this-is-me: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
       "[[hp]]",
       "[[light-cone]]",
       "[[path|"
@@ -3512,6 +4808,72 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.lingering-tear.name",
+    "ja": "残涙",
+    "context": "glossary hsr term lingering-tear: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lingering-tear.summary",
+    "ja": "「愉悦」の★3光円錐。",
+    "context": "glossary hsr term lingering-tear: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.lingering-tear.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]317、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term lingering-tear: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.reforged-remembrance.name",
+    "ja": "時間の記憶を再構築して",
+    "context": "glossary hsr term reforged-remembrance: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reforged-remembrance.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term reforged-remembrance: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reforged-remembrance.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term reforged-remembrance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.planar-ornaments.name",
     "ja": "次元界オーナメント",
     "context": "glossary hsr term planar-ornaments: Japanese official term name",
@@ -3542,6 +4904,39 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.sneering.name",
+    "ja": "嗤笑",
+    "context": "glossary hsr term sneering: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sneering.summary",
+    "ja": "「愉悦」の★3光円錐。",
+    "context": "glossary hsr term sneering: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sneering.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]370、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sneering: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.pioneer-diver-of-dead-waters.name",
     "ja": "死水に潜る先駆者",
     "context": "glossary hsr term pioneer-diver-of-dead-waters: Japanese official term name",
@@ -3568,6 +4963,39 @@ const block3: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[relics]]"
+    ]
+  },
+  {
+    "id": "term.hsr.flickering-stars.name",
+    "ja": "静かに瞬く小さな火",
+    "context": "glossary hsr term flickering-stars: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.flickering-stars.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term flickering-stars: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.flickering-stars.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term flickering-stars: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -3668,6 +5096,38 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.inert-salsotto.name",
+    "ja": "自転が止まったサルソット",
+    "context": "glossary hsr term inert-salsotto: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.inert-salsotto.summary",
+    "ja": "会心率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term inert-salsotto: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.inert-salsotto.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。装備者の[[crit-rate]]が50%以上なら、[[ultimate]]と[[follow-up-attack]]のダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term inert-salsotto: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[follow-up-attack]]",
+      "[[planar-ornaments|",
+      "[[ultimate]]"
+    ]
+  },
+  {
     "id": "term.hsr.vidyadhara.name",
     "ja": "持明族",
     "context": "glossary hsr term vidyadhara: Japanese official term name",
@@ -3684,7 +5144,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.hsr.vidyadhara.body",
     "ja": "[[xianzhou-alliance]]に暮らす種族。公式資料では、長い寿命の後に生まれ変わる仕組みが紹介される。",
@@ -3877,6 +5340,39 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.see-you-at-the-end.name",
+    "ja": "終点でまた会おう",
+    "context": "glossary hsr term see-you-at-the-end: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.see-you-at-the-end.summary",
+    "ja": "「巡狩」の★4光円錐。",
+    "context": "glossary hsr term see-you-at-the-end: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.see-you-at-the-end.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term see-you-at-the-end: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.storage-zone.name",
     "ja": "収容部分",
     "context": "glossary hsr term storage-zone: Japanese official term name",
@@ -4030,10 +5526,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.hsr.galaxy-rangers.summary",
     "ja": "「巡狩」を信仰し、宇宙を放浪して悪を討つ者たちの集団。",
@@ -4492,6 +5985,36 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.giant-tree-of-rapt-brooding.name",
+    "ja": "深慮に浸る巨樹",
+    "context": "glossary hsr term giant-tree-of-rapt-brooding: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.giant-tree-of-rapt-brooding.summary",
+    "ja": "速度を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term giant-tree-of-rapt-brooding: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.giant-tree-of-rapt-brooding.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[speed]]が6%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term giant-tree-of-rapt-brooding: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[speed]]"
+    ]
+  },
+  {
     "id": "term.hsr.fyxestroll-garden.name",
     "ja": "綏園",
     "context": "glossary hsr term fyxestroll-garden: Japanese official term name",
@@ -4612,6 +6135,39 @@ const block4: SourceText[] = [
       "[[xianzhou-alliance]]"
     ]
   },
+  {
+    "id": "term.hsr.punklorde-stage-zero.name",
+    "ja": "ステージゼロ：パンクロード",
+    "context": "glossary hsr term punklorde-stage-zero: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.punklorde-stage-zero.summary",
+    "ja": "愉悦度を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term punklorde-stage-zero: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.punklorde-stage-zero.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[yuetsudo]]が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term punklorde-stage-zero: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[planar-ornaments|",
+      "[[yuetsudo]]"
+    ]
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.hsr.relic-smart-equip.name",
     "ja": "スマート装備",
@@ -5052,10 +6608,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.hsr.aeon.body",
     "ja": "[[path]]と関わる強大な存在。たとえば[[genius-society]]は「知恵」の星神ヌースに見いだされた天才たちの集まりとして紹介されている。",
@@ -5102,6 +6655,69 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.bone-collections-serene-demesne.name",
+    "ja": "静謐な拾骨地",
+    "context": "glossary hsr term bone-collections-serene-demesne: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.bone-collections-serene-demesne.summary",
+    "ja": "最大HPを伸ばす次元界オーナメント。",
+    "context": "glossary hsr term bone-collections-serene-demesne: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.bone-collections-serene-demesne.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[hp|最大HP]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term bone-collections-serene-demesne: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hp|",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
+    "id": "term.hsr.life-should-be-cast-to-flames.name",
+    "ja": "生命、焼滅すべし",
+    "context": "glossary hsr term life-should-be-cast-to-flames: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.life-should-be-cast-to-flames.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term life-should-be-cast-to-flames: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.life-should-be-cast-to-flames.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term life-should-be-cast-to-flames: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.in-the-name-of-the-world.name",
     "ja": "世界の名を以て",
     "context": "glossary hsr term in-the-name-of-the-world: Japanese official term name",
@@ -5133,6 +6749,72 @@ const block5: SourceText[] = [
       "[[light-cone]]",
       "[[path|",
       "[[skill]]"
+    ]
+  },
+  {
+    "id": "term.hsr.see-you-at-the-worlds-end.name",
+    "ja": "世界の果てで会おう！",
+    "context": "glossary hsr term see-you-at-the-worlds-end: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.see-you-at-the-worlds-end.summary",
+    "ja": "「愉悦」の★4光円錐。",
+    "context": "glossary hsr term see-you-at-the-worlds-end: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.see-you-at-the-worlds-end.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term see-you-at-the-worlds-end: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.scent-alone-stays-true.name",
+    "ja": "昔日の香りは今も猶",
+    "context": "glossary hsr term scent-alone-stays-true: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.scent-alone-stays-true.summary",
+    "ja": "「豊穣」の★5光円錐。",
+    "context": "glossary hsr term scent-alone-stays-true: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.scent-alone-stays-true.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term scent-alone-stays-true: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -5431,6 +7113,39 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.flame-of-blood-blaze-my-path.name",
+    "ja": "前途燃やす血の如き炎",
+    "context": "glossary hsr term flame-of-blood-blaze-my-path: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.flame-of-blood-blaze-my-path.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term flame-of-blood-blaze-my-path: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.flame-of-blood-blaze-my-path.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1375、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term flame-of-blood-blaze-my-path: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.treasure.name",
     "ja": "戦利品",
     "context": "glossary hsr term treasure: Japanese official term name",
@@ -5457,6 +7172,40 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[stellar-jade|"
+    ]
+  },
+  {
+    "id": "term.hsr.firmament-frontline-glamoth.name",
+    "ja": "蒼穹戦線グラモス",
+    "context": "glossary hsr term firmament-frontline-glamoth: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block7: SourceText[] = [
+  {
+    "id": "term.hsr.firmament-frontline-glamoth.summary",
+    "ja": "攻撃力を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term firmament-frontline-glamoth: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.firmament-frontline-glamoth.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。装備者の[[speed]]が条件を満たすと、与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term firmament-frontline-glamoth: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[planar-ornaments|",
+      "[[speed]]"
     ]
   },
   {
@@ -5733,6 +7482,39 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.long-may-rainbows-adorn-the-sky.name",
+    "ja": "空の虹が消えぬように",
+    "context": "glossary hsr term long-may-rainbows-adorn-the-sky: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.long-may-rainbows-adorn-the-sky.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term long-may-rainbows-adorn-the-sky: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.long-may-rainbows-adorn-the-sky.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term long-may-rainbows-adorn-the-sky: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.preservation.name",
     "ja": "存護",
     "context": "glossary hsr term preservation: Japanese official term name",
@@ -5819,6 +7601,39 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[amphoreus|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-grounded-ascent.name",
+    "ja": "大地より天を目指して",
+    "context": "glossary hsr term a-grounded-ascent: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-grounded-ascent.summary",
+    "ja": "「調和」の★5光円錐。",
+    "context": "glossary hsr term a-grounded-ascent: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-grounded-ascent.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]476、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-grounded-ascent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -5917,6 +7732,72 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.mushy-shroomys-adventures.name",
+    "ja": "タケタケ冒険記",
+    "context": "glossary hsr term mushy-shroomys-adventures: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mushy-shroomys-adventures.summary",
+    "ja": "「愉悦」の★4光円錐。",
+    "context": "glossary hsr term mushy-shroomys-adventures: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.mushy-shroomys-adventures.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term mushy-shroomys-adventures: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.rise-and-sing.name",
+    "ja": "立ち上がり高らかな歌を",
+    "context": "glossary hsr term rise-and-sing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rise-and-sing.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term rise-and-sing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rise-and-sing.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]582、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term rise-and-sing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.reminiscence.name",
     "ja": "辿る記憶",
     "context": "glossary hsr term reminiscence: Japanese official term name",
@@ -5945,6 +7826,39 @@ const block5: SourceText[] = [
       "[[light-cone]]",
       "[[path|",
       "[[warp]]"
+    ]
+  },
+  {
+    "id": "term.hsr.journey-forever-peaceful.name",
+    "ja": "旅が平穏であるように",
+    "context": "glossary hsr term journey-forever-peaceful: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.journey-forever-peaceful.summary",
+    "ja": "「存護」の★4光円錐。",
+    "context": "glossary hsr term journey-forever-peaceful: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.journey-forever-peaceful.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term journey-forever-peaceful: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -6066,10 +7980,7 @@ const block5: SourceText[] = [
       "[[light-cone|",
       "[[path|"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.hsr.realm-keeping-commission.name",
     "ja": "地衡司",
@@ -6188,6 +8099,39 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.race-to-the-horizon.name",
+    "ja": "地平線のゴールへ",
+    "context": "glossary hsr term race-to-the-horizon: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.race-to-the-horizon.summary",
+    "ja": "「巡狩」の★4光円錐。",
+    "context": "glossary hsr term race-to-the-horizon: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.race-to-the-horizon.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term race-to-the-horizon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.charge.name",
     "ja": "チャージ",
     "context": "glossary hsr term charge: Japanese official term name",
@@ -6263,7 +8207,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.hsr.eagle-of-twilight-line.body",
     "ja": "[[relics]]のセットの一つ。2セット効果は風属性ダメージに関わる。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -6426,6 +8373,39 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[attack]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.long-road-leads-home.name",
+    "ja": "長途はやがて帰途へと続く",
+    "context": "glossary hsr term long-road-leads-home: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.long-road-leads-home.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term long-road-leads-home: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.long-road-leads-home.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]475、[[defense]]661。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term long-road-leads-home: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
       "[[light-cone]]",
       "[[path|"
     ]
@@ -6674,6 +8654,36 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.fallen-star-anchorage.name",
+    "ja": "墜星の出航地",
+    "context": "glossary hsr term fallen-star-anchorage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fallen-star-anchorage.summary",
+    "ja": "会心率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term fallen-star-anchorage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fallen-star-anchorage.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term fallen-star-anchorage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
     "id": "term.hsr.basic-attack.name",
     "ja": "通常攻撃",
     "context": "glossary hsr term basic-attack: Japanese official term name",
@@ -6729,6 +8739,39 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[crit-rate]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.memorys-curtain-never-falls.name",
+    "ja": "尽きぬ追憶",
+    "context": "glossary hsr term memorys-curtain-never-falls: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memorys-curtain-never-falls.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term memorys-curtain-never-falls: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.memorys-curtain-never-falls.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term memorys-curtain-never-falls: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
       "[[hp]]",
       "[[light-cone]]",
       "[[path|"
@@ -6851,6 +8894,37 @@ const block6: SourceText[] = [
     "protectedTokens": [
       "[[effect-hit-rate|",
       "[[effect-res|"
+    ]
+  },
+  {
+    "id": "term.hsr.tengoku-livestream.name",
+    "ja": "天国＠配信ルーム",
+    "context": "glossary hsr term tengoku-livestream: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tengoku-livestream.summary",
+    "ja": "会心ダメージを伸ばす次元界オーナメント。",
+    "context": "glossary hsr term tengoku-livestream: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tengoku-livestream.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-dmg]]が16%上がる。同一ターンで[[skill-point]]を一定量消費すると、[[crit-dmg]]をさらに強化できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term tengoku-livestream: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-dmg]]",
+      "[[planar-ornaments|",
+      "[[skill-point]]"
     ]
   },
   {
@@ -7072,10 +9146,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.hsr.on-the-fall-of-an-aeon.summary",
     "ja": "「壊滅」の★5光円錐。",
@@ -7159,7 +9230,10 @@ const block7: SourceText[] = [
       "[[crowd-control|",
       "[[weakness-break|"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.hsr.companion-mission.name",
     "ja": "同行クエスト",
@@ -7251,6 +9325,39 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hidden-shadow.name",
+    "ja": "匿影",
+    "context": "glossary hsr term hidden-shadow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hidden-shadow.summary",
+    "ja": "「虚無」の★3光円錐。",
+    "context": "glossary hsr term hidden-shadow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hidden-shadow.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]317、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hidden-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.everwinter-hill.name",
     "ja": "常冬峰",
     "context": "glossary hsr term everwinter-hill: Japanese official term name",
@@ -7277,6 +9384,41 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[belobog|"
+    ]
+  },
+  {
+    "id": "term.hsr.she-already-shut-her-eyes.name",
+    "ja": "閉ざした瞳",
+    "context": "glossary hsr term she-already-shut-her-eyes: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.she-already-shut-her-eyes.summary",
+    "ja": "「存護」の★5光円錐。",
+    "context": "glossary hsr term she-already-shut-her-eyes: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.she-already-shut-her-eyes.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]423、[[defense]]529。[[hp|最大HP]]と[[energy-regeneration-rate]]を上げ、装備者の[[hp]]が減った際には味方全体の与ダメージ強化が発生する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term she-already-shut-her-eyes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[energy-regeneration-rate]]",
+      "[[hp]]",
+      "[[hp|",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -7405,6 +9547,39 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.to-evernights-stars.name",
+    "ja": "長き夜に輝く星へ",
+    "context": "glossary hsr term to-evernights-stars: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.to-evernights-stars.summary",
+    "ja": "「記憶」の★5光円錐。",
+    "context": "glossary hsr term to-evernights-stars: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.to-evernights-stars.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term to-evernights-stars: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.sweat-now-cry-less.name",
     "ja": "流すなら涙より汗",
     "context": "glossary hsr term sweat-now-cry-less: Japanese official term name",
@@ -7432,6 +9607,39 @@ const block7: SourceText[] = [
     "protectedTokens": [
       "[[light-cone]]",
       "[[nameless-glory]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.along-the-passing-shore.name",
+    "ja": "流れ逝く岸を歩いて",
+    "context": "glossary hsr term along-the-passing-shore: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.along-the-passing-shore.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term along-the-passing-shore: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.along-the-passing-shore.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]635、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term along-the-passing-shore: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
       "[[path|"
     ]
   },
@@ -7520,6 +9728,41 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[light-cone|"
+    ]
+  },
+  {
+    "id": "term.hsr.what-is-real.name",
+    "ja": "何が真か",
+    "context": "glossary hsr term what-is-real: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.what-is-real.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term what-is-real: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.what-is-real.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]423、[[defense]]330。[[break-effect]]を上げ、[[basic-attack]]後に自分の[[hp]]を回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term what-is-real: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[basic-attack]]",
+      "[[break-effect]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -7646,6 +9889,105 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.sailing-towards-a-second-life.name",
+    "ja": "二度目の生に向かって",
+    "context": "glossary hsr term sailing-towards-a-second-life: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sailing-towards-a-second-life.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term sailing-towards-a-second-life: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.sailing-towards-a-second-life.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term sailing-towards-a-second-life: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.ninja-record-sound-hunt.name",
+    "ja": "忍事録・音律狩猟",
+    "context": "glossary hsr term ninja-record-sound-hunt: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ninja-record-sound-hunt.summary",
+    "ja": "「壊滅」の★4光円錐。",
+    "context": "glossary hsr term ninja-record-sound-hunt: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ninja-record-sound-hunt.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]476、[[defense]]264。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ninja-record-sound-hunt: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.ninjutsu-inscription-dazzling-evilbreak.name",
+    "ja": "忍法帖・繚乱破魔",
+    "context": "glossary hsr term ninjutsu-inscription-dazzling-evilbreak: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ninjutsu-inscription-dazzling-evilbreak.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term ninjutsu-inscription-dazzling-evilbreak: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.ninjutsu-inscription-dazzling-evilbreak.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term ninjutsu-inscription-dazzling-evilbreak: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.burn.name",
     "ja": "燃焼",
     "context": "glossary hsr term burn: Japanese official term name",
@@ -7702,6 +10044,39 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[trailblaze-power|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-little-getaway.name",
+    "ja": "バカンスのひと時",
+    "context": "glossary hsr term a-little-getaway: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-little-getaway.summary",
+    "ja": "「愉悦」の★4光円錐。",
+    "context": "glossary hsr term a-little-getaway: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-little-getaway.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-little-getaway: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -7796,6 +10171,107 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.before-the-tutorial-mission-starts.name",
+    "ja": "初めてのクエストの前に",
+    "context": "glossary hsr term before-the-tutorial-mission-starts: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.before-the-tutorial-mission-starts.summary",
+    "ja": "「虚無」の★4光円錐。",
+    "context": "glossary hsr term before-the-tutorial-mission-starts: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.before-the-tutorial-mission-starts.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。[[effect-hit-rate]]を強化し、[[defense]]が下がっている敵を攻撃すると[[energy]]を回復できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term before-the-tutorial-mission-starts: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[effect-hit-rate]]",
+      "[[energy]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.upon-the-first-echo-of-aha.name",
+    "ja": "はじめの「アッハ」が響く時",
+    "context": "glossary hsr term upon-the-first-echo-of-aha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.upon-the-first-echo-of-aha.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term upon-the-first-echo-of-aha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.upon-the-first-echo-of-aha.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term upon-the-first-echo-of-aha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-flower-remembers.name",
+    "ja": "花は忘れない",
+    "context": "glossary hsr term the-flower-remembers: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-flower-remembers.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term the-flower-remembers: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-flower-remembers.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]529、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-flower-remembers: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.shield.name",
     "ja": "バリア",
     "context": "glossary hsr term shield: Japanese official term name",
@@ -7803,7 +10279,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.hsr.shield.summary",
     "ja": "受けるダメージを防ぐ効果。",
@@ -7887,6 +10366,39 @@ const block7: SourceText[] = [
       "[[destruction|",
       "[[emanator|",
       "[[herta-space-station|"
+    ]
+  },
+  {
+    "id": "term.hsr.though-worlds-apart.name",
+    "ja": "万里の山河を越えて",
+    "context": "glossary hsr term though-worlds-apart: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.though-worlds-apart.summary",
+    "ja": "「存護」の★5光円錐。",
+    "context": "glossary hsr term though-worlds-apart: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.though-worlds-apart.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term though-worlds-apart: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -8068,6 +10580,39 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.echoes-of-the-coffin.name",
+    "ja": "棺のこだま",
+    "context": "glossary hsr term echoes-of-the-coffin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.echoes-of-the-coffin.summary",
+    "ja": "「豊穣」の★5光円錐。",
+    "context": "glossary hsr term echoes-of-the-coffin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.echoes-of-the-coffin.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1164、[[attack]]582、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term echoes-of-the-coffin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.ultimate.name",
     "ja": "必殺技",
     "context": "glossary hsr term ultimate: Japanese official term name",
@@ -8084,10 +10629,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.hsr.ultimate.body",
     "ja": "必要な[[energy|EP]]などがたまると使用できる能力。通常の[[action-order|行動順]]とは異なるタイミングで使える。必要な資源や効果はキャラクターごとに確認しよう。",
@@ -8219,6 +10761,39 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.fly-into-a-pink-tomorrow.name",
+    "ja": "ピンク色の明日へ",
+    "context": "glossary hsr term fly-into-a-pink-tomorrow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fly-into-a-pink-tomorrow.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term fly-into-a-pink-tomorrow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fly-into-a-pink-tomorrow.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term fly-into-a-pink-tomorrow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.fight-club.name",
     "ja": "ファイトクラブ",
     "context": "glossary hsr term fight-club: Japanese official term name",
@@ -8332,6 +10907,39 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fermata.name",
+    "ja": "フェルマータ",
+    "context": "glossary hsr term fermata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fermata.summary",
+    "ja": "「虚無」の★4光円錐。",
+    "context": "glossary hsr term fermata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.fermata.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term fermata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
   },
   {
     "id": "term.hsr.subscribe-for-more.name",
@@ -8483,6 +11091,72 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.until-the-flowers-bloom-again.name",
+    "ja": "再び花が咲く季節に",
+    "context": "glossary hsr term until-the-flowers-bloom-again: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.until-the-flowers-bloom-again.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term until-the-flowers-bloom-again: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.until-the-flowers-bloom-again.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]635、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term until-the-flowers-bloom-again: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.concert-for-two.name",
+    "ja": "二人だけのコンサート",
+    "context": "glossary hsr term concert-for-two: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.concert-for-two.summary",
+    "ja": "「存護」の★4光円錐。",
+    "context": "glossary hsr term concert-for-two: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.concert-for-two.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]370、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term concert-for-two: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.cornucopia.name",
     "ja": "物穣",
     "context": "glossary hsr term cornucopia: Japanese official term name",
@@ -8625,7 +11299,10 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.hsr.strife-ruins-kremnos.body",
     "ja": "[[amphoreus|オンパロス]]にある、紛争のタイタンを崇める都市国家の廃墟。",
@@ -9052,6 +11729,38 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.rutilant-arena.name",
+    "ja": "星々の競技場",
+    "context": "glossary hsr term rutilant-arena: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rutilant-arena.summary",
+    "ja": "会心率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term rutilant-arena: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.rutilant-arena.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[crit-rate]]が8%上がる。装備者の[[crit-rate]]が70%以上なら、[[basic-attack]]と[[skill]]のダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term rutilant-arena: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[basic-attack]]",
+      "[[crit-rate]]",
+      "[[planar-ornaments|",
+      "[[skill]]"
+    ]
+  },
+  {
     "id": "term.hsr.hoshimeguru-navigator-shiken.name",
     "ja": "星巡るナビゲーター「シケン」",
     "context": "glossary hsr term hoshimeguru-navigator-shiken: Japanese official term name",
@@ -9079,10 +11788,7 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[relics]]"
     ]
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.hsr.immersifier.name",
     "ja": "没入器",
@@ -9383,6 +12089,105 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.tomorrow-together.name",
+    "ja": "みんなで一緒に未来へ",
+    "context": "glossary hsr term tomorrow-together: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tomorrow-together.summary",
+    "ja": "「愉悦」の★4光円錐。",
+    "context": "glossary hsr term tomorrow-together: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.tomorrow-together.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]476、[[defense]]330。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term tomorrow-together: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-dream-scented-in-wheat.name",
+    "ja": "麦の香り漂う夢",
+    "context": "glossary hsr term a-dream-scented-in-wheat: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-dream-scented-in-wheat.summary",
+    "ja": "「知恵」の★4光円錐。",
+    "context": "glossary hsr term a-dream-scented-in-wheat: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-dream-scented-in-wheat.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-dream-scented-in-wheat: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-thankless-coronation.name",
+    "ja": "報われぬ戴冠",
+    "context": "glossary hsr term a-thankless-coronation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-thankless-coronation.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term a-thankless-coronation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-thankless-coronation.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-thankless-coronation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.nameless-memory.name",
     "ja": "無名の追憶",
     "context": "glossary hsr term nameless-memory: Japanese official term name",
@@ -9409,6 +12214,36 @@ const block9: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[as-ive-written]]"
+    ]
+  },
+  {
+    "id": "term.hsr.revelry-by-the-sea.name",
+    "ja": "酩酊の海域",
+    "context": "glossary hsr term revelry-by-the-sea: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.revelry-by-the-sea.summary",
+    "ja": "攻撃力を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term revelry-by-the-sea: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.revelry-by-the-sea.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[attack]]が12%上がる。条件を満たしたときに追加で得られる効果もある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term revelry-by-the-sea: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[planar-ornaments|"
     ]
   },
   {
@@ -9441,6 +12276,42 @@ const block9: SourceText[] = [
       "[[relics|"
     ]
   },
+  {
+    "id": "term.hsr.thus-burns-the-dawn.name",
+    "ja": "燃え盛る黎明のように",
+    "context": "glossary hsr term thus-burns-the-dawn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.thus-burns-the-dawn.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term thus-burns-the-dawn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.thus-burns-the-dawn.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]687、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term thus-burns-the-dawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.hsr.simulated-universe.name",
     "ja": "模擬宇宙",
@@ -9506,6 +12377,39 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.if-time-were-a-flower.name",
+    "ja": "もしも時が花だったら",
+    "context": "glossary hsr term if-time-were-a-flower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.if-time-were-a-flower.summary",
+    "ja": "「調和」の★5光円錐。",
+    "context": "glossary hsr term if-time-were-a-flower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.if-time-were-a-flower.body",
+    "ja": "[[light-cone]]の一つで、[[path|調和]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1270、[[attack]]529、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term if-time-were-a-flower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.entanglement.name",
     "ja": "もつれ",
     "context": "glossary hsr term entanglement: Japanese official term name",
@@ -9535,6 +12439,39 @@ const block9: SourceText[] = [
       "[[additional-damage|",
       "[[damage-over-time|",
       "[[weakness-break|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-storys-next-page.name",
+    "ja": "物語をめくって",
+    "context": "glossary hsr term the-storys-next-page: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-storys-next-page.summary",
+    "ja": "「記憶」の★4光円錐。",
+    "context": "glossary hsr term the-storys-next-page: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-storys-next-page.body",
+    "ja": "[[light-cone]]の一つで、[[path|記憶]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]370、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-storys-next-page: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
     ]
   },
   {
@@ -9688,6 +12625,39 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.dance-at-sunset.name",
+    "ja": "夕日に舞う",
+    "context": "glossary hsr term dance-at-sunset: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dance-at-sunset.summary",
+    "ja": "「壊滅」の★5光円錐。",
+    "context": "glossary hsr term dance-at-sunset: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dance-at-sunset.body",
+    "ja": "[[light-cone]]の一つで、[[path|壊滅]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1058、[[attack]]582、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term dance-at-sunset: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.returning-to-darkness.name",
     "ja": "幽冥に帰す",
     "context": "glossary hsr term returning-to-darkness: Japanese official term name",
@@ -9746,6 +12716,39 @@ const block9: SourceText[] = [
     "protectedTokens": [
       "[[elation-damage|",
       "[[light-cone|",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.elation-brimming-with-blessings.name",
+    "ja": "愉悦溢れる祝福",
+    "context": "glossary hsr term elation-brimming-with-blessings: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation-brimming-with-blessings.summary",
+    "ja": "「愉悦」の★5光円錐。",
+    "context": "glossary hsr term elation-brimming-with-blessings: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.elation-brimming-with-blessings.body",
+    "ja": "[[light-cone]]の一つで、[[path|愉悦]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]529、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term elation-brimming-with-blessings: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
       "[[path|"
     ]
   },
@@ -9901,6 +12904,70 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.penacony-land-of-the-dreams.name",
+    "ja": "夢の地ピノコニー",
+    "context": "glossary hsr term penacony-land-of-the-dreams: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony-land-of-the-dreams.summary",
+    "ja": "EP回復効率を伸ばす次元界オーナメント。",
+    "context": "glossary hsr term penacony-land-of-the-dreams: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.penacony-land-of-the-dreams.body",
+    "ja": "同じ[[planar-ornaments|次元界オーナメント]]を2部位揃えると、装備者の[[energy-regeneration-rate]]が5%上がる。装備者と同じ[[element]]を持つ他の味方の与ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term penacony-land-of-the-dreams: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element]]",
+      "[[energy-regeneration-rate]]",
+      "[[planar-ornaments|"
+    ]
+  },
+  {
+    "id": "term.hsr.dreams-montage.name",
+    "ja": "夢のモンタージュ",
+    "context": "glossary hsr term dreams-montage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreams-montage.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term dreams-montage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.dreams-montage.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term dreams-montage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.watchmaker-master-of-dream-machinations.name",
     "ja": "夢を弄ぶ時計屋",
     "context": "glossary hsr term watchmaker-master-of-dream-machinations: Japanese official term name",
@@ -10027,6 +13094,39 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.hey-over-here.name",
+    "ja": "よぉ、ここにいるぜ",
+    "context": "glossary hsr term hey-over-here: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hey-over-here.summary",
+    "ja": "「豊穣」の★4光円錐。",
+    "context": "glossary hsr term hey-over-here: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.hey-over-here.body",
+    "ja": "[[light-cone]]の一つで、[[path|豊穣]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]423、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term hey-over-here: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.day-one-of-my-new-life.name",
     "ja": "余生の初日",
     "context": "glossary hsr term day-one-of-my-new-life: Japanese official term name",
@@ -10094,10 +13194,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.hsr.reserved-trailblaze-power.summary",
     "ja": "通常の開拓力とは別に蓄積される資源。",
@@ -10154,6 +13251,72 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.shadowed-by-night.name",
+    "ja": "夜は影のように付き纏う",
+    "context": "glossary hsr term shadowed-by-night: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadowed-by-night.summary",
+    "ja": "「巡狩」の★4光円錐。",
+    "context": "glossary hsr term shadowed-by-night: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.shadowed-by-night.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]476、[[defense]]396。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term shadowed-by-night: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.a-star-that-lights-the-night.name",
+    "ja": "夜を照らす導きの星",
+    "context": "glossary hsr term a-star-that-lights-the-night: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-star-that-lights-the-night.summary",
+    "ja": "「知恵」の★5光円錐。",
+    "context": "glossary hsr term a-star-that-lights-the-night: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.a-star-that-lights-the-night.body",
+    "ja": "[[light-cone]]の一つで、[[path|知恵]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]846、[[attack]]635、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term a-star-that-lights-the-night: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.band-of-sizzling-thunder.name",
     "ja": "雷鳴轟くバンド",
     "context": "glossary hsr term band-of-sizzling-thunder: Japanese official term name",
@@ -10190,7 +13353,10 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block13: SourceText[] = [
   {
     "id": "term.hsr.landaus-choice.summary",
     "ja": "「存護」の★4光円錐。",
@@ -10239,6 +13405,39 @@ const block10: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[attack]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
+    "id": "term.hsr.the-hell-where-ideals-burn.name",
+    "ja": "理想を焼く奈落で",
+    "context": "glossary hsr term the-hell-where-ideals-burn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-hell-where-ideals-burn.summary",
+    "ja": "「巡狩」の★5光円錐。",
+    "context": "glossary hsr term the-hell-where-ideals-burn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.the-hell-where-ideals-burn.body",
+    "ja": "[[light-cone]]の一つで、[[path|巡狩]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]952、[[attack]]582、[[defense]]529。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term the-hell-where-ideals-burn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
       "[[light-cone]]",
       "[[path|"
     ]
@@ -10602,6 +13801,39 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.reforged-in-hellfire.name",
+    "ja": "煉獄に焼かれし新身",
+    "context": "glossary hsr term reforged-in-hellfire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reforged-in-hellfire.summary",
+    "ja": "「虚無」の★5光円錐。",
+    "context": "glossary hsr term reforged-in-hellfire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.reforged-in-hellfire.body",
+    "ja": "[[light-cone]]の一つで、[[path|虚無]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]1375、[[attack]]423、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term reforged-in-hellfire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.swordplay.name",
     "ja": "論剣",
     "context": "glossary hsr term swordplay: Japanese official term name",
@@ -10729,6 +13961,39 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.hsr.we-are-wildfire.name",
+    "ja": "我ら地炎",
+    "context": "glossary hsr term we-are-wildfire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.we-are-wildfire.summary",
+    "ja": "「存護」の★4光円錐。",
+    "context": "glossary hsr term we-are-wildfire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.hsr.we-are-wildfire.body",
+    "ja": "[[light-cone]]の一つで、[[path|存護]]の装備者が固有効果を発動できる。最大レベルの基礎値は[[hp]]740、[[attack]]476、[[defense]]463。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary hsr term we-are-wildfire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[defense]]",
+      "[[hp]]",
+      "[[light-cone]]",
+      "[[path|"
+    ]
+  },
+  {
     "id": "term.hsr.woof-walk-time.name",
     "ja": "ワン！散歩の時間！",
     "context": "glossary hsr term woof-walk-time: Japanese official term name",
@@ -10763,4 +14028,4 @@ const block10: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13];

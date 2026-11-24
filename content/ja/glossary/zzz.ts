@@ -2,6 +2,66 @@
 import type { SourceText } from "../../../shared/content/types";
 const block0: SourceText[] = [
   {
+    "id": "term.zzz.armored-hati.name",
+    "ja": "アーマーハティ",
+    "context": "glossary zzz term armored-hati: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.armored-hati.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term armored-hati: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.armored-hati.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term armored-hati: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.cauldron-of-clarity.name",
+    "ja": "蒼き波の霊器",
+    "context": "glossary zzz term cauldron-of-clarity: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cauldron-of-clarity.summary",
+    "ja": "HPが上がる命破向けのA級音動機。",
+    "context": "glossary zzz term cauldron-of-clarity: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cauldron-of-clarity.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term cauldron-of-clarity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.dawns-bloom.name",
     "ja": "暁に咲く花",
     "context": "glossary zzz term dawns-bloom: Japanese official term name",
@@ -61,6 +121,36 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.ahriman.name",
+    "ja": "アフリマン",
+    "context": "glossary zzz term ahriman: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ahriman.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term ahriman: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ahriman.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ahriman: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.avocaboo.name",
     "ja": "アボカドボンプ",
     "context": "glossary zzz term avocaboo: Japanese official term name",
@@ -87,6 +177,36 @@ const block0: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.halfsugar-bunny.name",
+    "ja": "甘さ控えめ雪うさぎ",
+    "context": "glossary zzz term halfsugar-bunny: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.halfsugar-bunny.summary",
+    "ja": "HPが上がる防護向けのS級音動機。",
+    "context": "glossary zzz term halfsugar-bunny: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.halfsugar-bunny.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term halfsugar-bunny: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -151,6 +271,66 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.arupeka.name",
+    "ja": "アルぺカ",
+    "context": "glossary zzz term arupeka: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.arupeka.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term arupeka: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.arupeka.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term arupeka: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.alraune.name",
+    "ja": "アルラウネ",
+    "context": "glossary zzz term alraune: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.alraune.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term alraune: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.alraune.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term alraune: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.encrypted-master-tape.name",
     "ja": "暗号化マスターテープ",
     "context": "glossary zzz term encrypted-master-tape: Japanese official term name",
@@ -177,6 +357,36 @@ const block0: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[signal-search]]"
+    ]
+  },
+  {
+    "id": "term.zzz.ikareruotoko.name",
+    "ja": "「怒れる男」",
+    "context": "glossary zzz term ikareruotoko: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ikareruotoko.summary",
+    "ja": "電気が弱点の精鋭エネミー。",
+    "context": "glossary zzz term ikareruotoko: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ikareruotoko.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性を持つ[[attribute|属性]]は物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ikareruotoko: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
     ]
   },
   {
@@ -777,7 +987,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.zzz.eridu-chronicles.summary",
     "ja": "過去のイベントを体験できる機能。",
@@ -851,6 +1064,67 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.radiowave-journey.name",
+    "ja": "エレクトロウォーク",
+    "context": "glossary zzz term radiowave-journey: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.radiowave-journey.summary",
+    "ja": "HPが上がる命破向けのA級音動機。",
+    "context": "glossary zzz term radiowave-journey: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.radiowave-journey.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term radiowave-journey: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.the-simmering-pot.name",
+    "ja": "炎々沸々鍋一丁",
+    "context": "glossary zzz term the-simmering-pot: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-simmering-pot.summary",
+    "ja": "衝撃力が上がる撃破向けのA級音動機。",
+    "context": "glossary zzz term the-simmering-pot: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.the-simmering-pot.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term the-simmering-pot: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.inferno-metal.name",
     "ja": "炎獄のヘヴィメタル",
     "context": "glossary zzz term inferno-metal: Japanese official term name",
@@ -910,6 +1184,65 @@ const block0: SourceText[] = [
       "[[stun-specialty]]",
       "[[stun]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.engine-beholder.name",
+    "ja": "エンジンビホルダー",
+    "context": "glossary zzz term engine-beholder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.engine-beholder.summary",
+    "ja": "エーテル・電気が弱点の通常エネミー。",
+    "context": "glossary zzz term engine-beholder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.engine-beholder.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term engine-beholder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.oda-bogyakusha.name",
+    "ja": "殴打暴虐者",
+    "context": "glossary zzz term oda-bogyakusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.oda-bogyakusha.summary",
+    "ja": "氷・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term oda-bogyakusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.oda-bogyakusha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term oda-bogyakusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -977,10 +1310,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.zzz.sumoboo.summary",
     "ja": "戦闘に同行するA級ボンプ。",
@@ -1626,7 +1956,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.zzz.agent-gulliver.body",
     "ja": "編成に加えられる[[bangboo]]。前方への射撃で電気ダメージを与え、[[attribute-anomaly]]を蓄積させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -1785,6 +2118,35 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.kishusha.name",
+    "ja": "奇襲者",
+    "context": "glossary zzz term kishusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kishusha.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term kishusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kishusha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kishusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.main-stat.name",
     "ja": "基礎ステータス",
     "context": "glossary zzz term main-stat: Japanese official term name",
@@ -1811,6 +2173,68 @@ const block1: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.precious-fossilized-core.name",
+    "ja": "貴重な石化コア",
+    "context": "glossary zzz term precious-fossilized-core: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.precious-fossilized-core.summary",
+    "ja": "衝撃力が上がる撃破向けのA級音動機。",
+    "context": "glossary zzz term precious-fossilized-core: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.precious-fossilized-core.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term precious-fossilized-core: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.cannon-rotor.name",
+    "ja": "キャノンローラー",
+    "context": "glossary zzz term cannon-rotor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cannon-rotor.summary",
+    "ja": "会心率が上がる強攻向けのA級音動機。",
+    "context": "glossary zzz term cannon-rotor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cannon-rotor.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[crit-rate]]を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term cannon-rotor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -1869,6 +2293,37 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyouakukyoujin.name",
+    "ja": "凶悪狂人",
+    "context": "glossary zzz term kyouakukyoujin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyouakukyoujin.summary",
+    "ja": "炎が弱点の精鋭エネミー。",
+    "context": "glossary zzz term kyouakukyoujin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kyouakukyoujin.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性を持つ[[attribute|属性]]は電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kyouakukyoujin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
   },
   {
     "id": "term.zzz.marcato-desire.name",
@@ -1946,10 +2401,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.zzz.assault.body",
     "ja": "物理属性の[[attribute-anomaly|状態異常]]が発生すると敵に物理ダメージを与え、[[flinch]]を付与する。",
@@ -2107,6 +2559,36 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.gilded-blossom.name",
+    "ja": "金メッキの花信",
+    "context": "glossary zzz term gilded-blossom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gilded-blossom.summary",
+    "ja": "攻撃力が上がる強攻向けのA級音動機。",
+    "context": "glossary zzz term gilded-blossom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gilded-blossom.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が596で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term gilded-blossom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.kinran-no-kokoro.name",
     "ja": "金襴の心",
     "context": "glossary zzz term kinran-no-kokoro: Japanese official term name",
@@ -2250,6 +2732,37 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.cordis-germina.name",
+    "ja": "駆動する種",
+    "context": "glossary zzz term cordis-germina: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cordis-germina.summary",
+    "ja": "会心率が上がる強攻向けのS級音動機。",
+    "context": "glossary zzz term cordis-germina: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.cordis-germina.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term cordis-germina: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.krampus-compliance-authority.name",
     "ja": "クランプスの黒枝",
     "context": "glossary zzz term krampus-compliance-authority: Japanese official term name",
@@ -2276,6 +2789,36 @@ const block2: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[agent|"
+    ]
+  },
+  {
+    "id": "term.zzz.kururru.name",
+    "ja": "クルッル",
+    "context": "glossary zzz term kururru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kururru.summary",
+    "ja": "氷・風が弱点の通常エネミー。",
+    "context": "glossary zzz term kururru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kururru.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kururru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -2399,6 +2942,70 @@ const block2: SourceText[] = [
       "[[daze]]",
       "[[specialty|",
       "[[stun]]"
+    ]
+  }
+];
+
+const block3: SourceText[] = [
+  {
+    "id": "term.zzz.vortex-hatchet.name",
+    "ja": "「激流」-斧型",
+    "context": "glossary zzz term vortex-hatchet: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vortex-hatchet.summary",
+    "ja": "エネルギー自動回復が上がる撃破向けのB級音動機。",
+    "context": "glossary zzz term vortex-hatchet: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vortex-hatchet.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加でエネルギー自動回復を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term vortex-hatchet: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.vortex-arrow.name",
+    "ja": "「激流」-矢型",
+    "context": "glossary zzz term vortex-arrow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vortex-arrow.summary",
+    "ja": "衝撃力が上がる撃破向けのB級音動機。",
+    "context": "glossary zzz term vortex-arrow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vortex-arrow.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で[[impact]]を12%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term vortex-arrow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -2636,6 +3243,95 @@ const block2: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.godatsusha.name",
+    "ja": "強奪者",
+    "context": "glossary zzz term godatsusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.godatsusha.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term godatsusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.godatsusha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term godatsusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.identity-inflection.name",
+    "ja": "「恒等式」-変格",
+    "context": "glossary zzz term identity-inflection: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.identity-inflection.summary",
+    "ja": "防御力が上がる防護向けのB級音動機。",
+    "context": "glossary zzz term identity-inflection: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.identity-inflection.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で防御力を32%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term identity-inflection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.identity-base.name",
+    "ja": "「恒等式」-本格",
+    "context": "glossary zzz term identity-base: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.identity-base.summary",
+    "ja": "防御力が上がる防護向けのB級音動機。",
+    "context": "glossary zzz term identity-base: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.identity-base.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で防御力を32%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term identity-base: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.the-restrained.name",
     "ja": "拘縛されし者",
     "context": "glossary zzz term the-restrained: Japanese official term name",
@@ -2664,6 +3360,36 @@ const block2: SourceText[] = [
       "[[stun-specialty]]",
       "[[stun]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.goyoku-shashu.name",
+    "ja": "強欲射手",
+    "context": "glossary zzz term goyoku-shashu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.goyoku-shashu.summary",
+    "ja": "炎が弱点の通常エネミー。",
+    "context": "glossary zzz term goyoku-shashu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.goyoku-shashu.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term goyoku-shashu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -2842,6 +3568,66 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.goblin.name",
+    "ja": "ゴブリン",
+    "context": "glossary zzz term goblin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.goblin.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term goblin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.goblin.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term goblin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.wrathful-vajra.name",
+    "ja": "金剛不壊怒髪衝冠",
+    "context": "glossary zzz term wrathful-vajra: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wrathful-vajra.summary",
+    "ja": "HPが上がる命破向けのS級音動機。",
+    "context": "glossary zzz term wrathful-vajra: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wrathful-vajra.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term wrathful-vajra: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.disorder.name",
     "ja": "混沌",
     "context": "glossary zzz term disorder: Japanese official term name",
@@ -2901,6 +3687,37 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.slice-of-time.name",
+    "ja": "歳月の薄片",
+    "context": "glossary zzz term slice-of-time: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.slice-of-time.summary",
+    "ja": "貫通率が上がる支援向けのA級音動機。",
+    "context": "glossary zzz term slice-of-time: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.slice-of-time.body",
+    "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で貫通率を20%伸ばせる。味方の特定の攻撃に合わせて[[decibels]]の獲得を増やし、装備者のエネルギーを回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term slice-of-time: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[decibels]]",
+      "[[support]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.shatter.name",
     "ja": "砕氷",
     "context": "glossary zzz term shatter: Japanese official term name",
@@ -2928,10 +3745,68 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[freeze]]"
     ]
-  }
-];
-
-const block3: SourceText[] = [
+  },
+  {
+    "id": "term.zzz.yesterday-calls.name",
+    "ja": "昨夜からの着信",
+    "context": "glossary zzz term yesterday-calls: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yesterday-calls.summary",
+    "ja": "会心率が上がる撃破向けのS級音動機。",
+    "context": "glossary zzz term yesterday-calls: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yesterday-calls.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term yesterday-calls: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sateyurosu.name",
+    "ja": "サテュロス",
+    "context": "glossary zzz term sateyurosu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sateyurosu.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term sateyurosu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sateyurosu.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sateyurosu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
   {
     "id": "term.zzz.overtimeboo.name",
     "ja": "サビザンボンプ",
@@ -2959,6 +3834,37 @@ const block3: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.riot-suppressor-mark-vi.name",
+    "ja": "サプレッサーⅥ型",
+    "context": "glossary zzz term riot-suppressor-mark-vi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.riot-suppressor-mark-vi.summary",
+    "ja": "会心ダメージが上がる強攻向けのS級音動機。",
+    "context": "glossary zzz term riot-suppressor-mark-vi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.riot-suppressor-mark-vi.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-dmg]]を48.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term riot-suppressor-mark-vi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-dmg]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3029,7 +3935,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.zzz.zanshin-herb-case.summary",
     "ja": "強攻向けのS級音動機。",
@@ -3140,6 +4049,128 @@ const block3: SourceText[] = [
       "[[agent]]",
       "[[defensive-assist]]",
       "[[evasive-assist]]"
+    ]
+  },
+  {
+    "id": "term.zzz.magnetic-storm-alpha.name",
+    "ja": "「磁気嵐」-壱式",
+    "context": "glossary zzz term magnetic-storm-alpha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-alpha.summary",
+    "ja": "攻撃力が上がる異常向けのB級音動機。",
+    "context": "glossary zzz term magnetic-storm-alpha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-alpha.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で攻撃力を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term magnetic-storm-alpha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.magnetic-storm-charlie.name",
+    "ja": "「磁気嵐」-参式",
+    "context": "glossary zzz term magnetic-storm-charlie: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-charlie.summary",
+    "ja": "貫通率が上がる異常向けのB級音動機。",
+    "context": "glossary zzz term magnetic-storm-charlie: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-charlie.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で貫通率を16%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term magnetic-storm-charlie: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.magnetic-storm-bravo.name",
+    "ja": "「磁気嵐」-弐式",
+    "context": "glossary zzz term magnetic-storm-bravo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-bravo.summary",
+    "ja": "異常マスタリーが上がる異常向けのB級音動機。",
+    "context": "glossary zzz term magnetic-storm-bravo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.magnetic-storm-bravo.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で[[anomaly-proficiency]]を60伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term magnetic-storm-bravo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.six-shooter.name",
+    "ja": "シックスシューター",
+    "context": "glossary zzz term six-shooter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.six-shooter.summary",
+    "ja": "衝撃力が上がる撃破向けのA級音動機。",
+    "context": "glossary zzz term six-shooter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.six-shooter.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term six-shooter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3259,6 +4290,35 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.shugekisha.name",
+    "ja": "襲撃者",
+    "context": "glossary zzz term shugekisha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shugekisha.summary",
+    "ja": "氷・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term shugekisha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shugekisha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shugekisha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.ultimate.name",
     "ja": "終結スキル",
     "context": "glossary zzz term ultimate: Japanese official term name",
@@ -3286,6 +4346,36 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[agent]]",
       "[[decibels|"
+    ]
+  },
+  {
+    "id": "term.zzz.practiced-perfection.name",
+    "ja": "十面百錬の星",
+    "context": "glossary zzz term practiced-perfection: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.practiced-perfection.summary",
+    "ja": "攻撃力が上がる異常向けのS級音動機。",
+    "context": "glossary zzz term practiced-perfection: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.practiced-perfection.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term practiced-perfection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3378,6 +4468,35 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.shoukyakukyou.name",
+    "ja": "焼却狂",
+    "context": "glossary zzz term shoukyakukyou: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoukyakukyou.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term shoukyakukyou: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoukyakukyou.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shoukyakukyou: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.impact.name",
     "ja": "衝撃力",
     "context": "glossary zzz term impact: Japanese official term name",
@@ -3466,6 +4585,36 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[anomaly-mastery]]",
       "[[attribute-anomaly|"
+    ]
+  },
+  {
+    "id": "term.zzz.roaring-furnace.name",
+    "ja": "招福の虎炉",
+    "context": "glossary zzz term roaring-furnace: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roaring-furnace.summary",
+    "ja": "攻撃力が上がる撃破向けのS級音動機。",
+    "context": "glossary zzz term roaring-furnace: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.roaring-furnace.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term roaring-furnace: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -3776,7 +4925,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.zzz.corruption.body",
     "ja": "エーテル属性の[[attribute-anomaly|状態異常]]によって発生し、一定時間、断続的にエーテル属性ダメージを与える。",
@@ -3874,6 +5026,36 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.weeping-cradle.name",
+    "ja": "啜り泣くゆりかご",
+    "context": "glossary zzz term weeping-cradle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.weeping-cradle.summary",
+    "ja": "貫通率が上がる支援向けのS級音動機。",
+    "context": "glossary zzz term weeping-cradle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.weeping-cradle.body",
+    "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が684で、追加で貫通率を24.0%伸ばせる。控え中のエネルギー回復を助け、装備者が攻撃を当てた敵への味方の与ダメージを強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term weeping-cradle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.stars-of-lyra.name",
     "ja": "スターズ・オブ・リラ",
     "context": "glossary zzz term stars-of-lyra: Japanese official term name",
@@ -3901,6 +5083,37 @@ const block3: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.starlight-engine.name",
+    "ja": "スターライトエンジン",
+    "context": "glossary zzz term starlight-engine: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-engine.summary",
+    "ja": "攻撃力が上がる強攻向けのA級音動機。",
+    "context": "glossary zzz term starlight-engine: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.starlight-engine.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。回避反撃や[[quick-assist]]の使用後に装備者の攻撃力が上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term starlight-engine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[quick-assist]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.starlight-visor.name",
     "ja": "スターライトバイザー",
     "context": "glossary zzz term starlight-visor: Japanese official term name",
@@ -3908,10 +5121,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.zzz.starlight-visor.summary",
     "ja": "命破向けのS級音動機。",
@@ -3931,6 +5141,36 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[rupture]]",
       "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.street-superstar.name",
+    "ja": "ストリートスター",
+    "context": "glossary zzz term street-superstar: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.street-superstar.summary",
+    "ja": "攻撃力が上がる強攻向けのA級音動機。",
+    "context": "glossary zzz term street-superstar: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.street-superstar.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term street-superstar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
       "[[w-engine]]"
     ]
   },
@@ -3961,6 +5201,67 @@ const block4: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.specter.name",
+    "ja": "スペクター",
+    "context": "glossary zzz term specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.specter.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.specter.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.original-transmorpher.name",
+    "ja": "正規版変身装置",
+    "context": "glossary zzz term original-transmorpher: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.original-transmorpher.summary",
+    "ja": "HPが上がる防護向けのA級音動機。",
+    "context": "glossary zzz term original-transmorpher: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.original-transmorpher.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でHPを25%伸ばせる。装備者の最大HPを上げ、攻撃を受けた後に一定時間[[impact]]を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term original-transmorpher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[impact]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4049,6 +5350,36 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[rupture]]",
       "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.krakens-cradle.name",
+    "ja": "セイレーンクレードル",
+    "context": "glossary zzz term krakens-cradle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.krakens-cradle.summary",
+    "ja": "HPが上がる命破向けのS級音動機。",
+    "context": "glossary zzz term krakens-cradle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.krakens-cradle.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term krakens-cradle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
       "[[w-engine]]"
     ]
   },
@@ -4163,6 +5494,37 @@ const block4: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.myriad-eclipse.name",
+    "ja": "千面の落日",
+    "context": "glossary zzz term myriad-eclipse: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.myriad-eclipse.summary",
+    "ja": "会心率が上がる強攻向けのS級音動機。",
+    "context": "glossary zzz term myriad-eclipse: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.myriad-eclipse.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[crit-rate]]を24%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term myriad-eclipse: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[crit-rate]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.frostbite.name",
     "ja": "霜寒",
     "context": "glossary zzz term frostbite: Japanese official term name",
@@ -4190,6 +5552,36 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[attribute-anomaly|",
       "[[crit-dmg]]"
+    ]
+  },
+  {
+    "id": "term.zzz.weeping-gemini.name",
+    "ja": "双生の涙",
+    "context": "glossary zzz term weeping-gemini: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.weeping-gemini.summary",
+    "ja": "攻撃力が上がる異常向けのA級音動機。",
+    "context": "glossary zzz term weeping-gemini: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.weeping-gemini.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term weeping-gemini: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4249,6 +5641,36 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[agent]]",
       "[[attribute-anomaly]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sorudedousu.name",
+    "ja": "ソルデドゥス",
+    "context": "glossary zzz term sorudedousu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sorudedousu.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term sorudedousu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sorudedousu.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sorudedousu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -4398,6 +5820,99 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.thanatos.name",
+    "ja": "タナトス",
+    "context": "glossary zzz term thanatos: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thanatos.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term thanatos: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.thanatos.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term thanatos: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.metanukimorphosis.name",
+    "ja": "狸の七変化",
+    "context": "glossary zzz term metanukimorphosis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.metanukimorphosis.summary",
+    "ja": "エネルギー自動回復が上がる支援向けのS級音動機。",
+    "context": "glossary zzz term metanukimorphosis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.metanukimorphosis.body",
+    "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でエネルギー自動回復を60%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term metanukimorphosis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.tarasque-mixer.name",
+    "ja": "タラスクミキサー",
+    "context": "glossary zzz term tarasque-mixer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tarasque-mixer.summary",
+    "ja": "エーテル・電気が弱点の精鋭エネミー。",
+    "context": "glossary zzz term tarasque-mixer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tarasque-mixer.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tarasque-mixer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  }
+];
+
+const block6: SourceText[] = [
+  {
     "id": "term.zzz.exploreboo.name",
     "ja": "タンケンボンプ",
     "context": "glossary zzz term exploreboo: Japanese official term name",
@@ -4483,6 +5998,36 @@ const block4: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.peacekeeper-specialized.name",
+    "ja": "秩序の守り手・特化型",
+    "context": "glossary zzz term peacekeeper-specialized: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.peacekeeper-specialized.summary",
+    "ja": "攻撃力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term peacekeeper-specialized: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.peacekeeper-specialized.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term peacekeeper-specialized: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -4695,6 +6240,36 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.tyrfing.name",
+    "ja": "ティルヴィング",
+    "context": "glossary zzz term tyrfing: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tyrfing.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term tyrfing: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tyrfing.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tyrfing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.enemies.name",
     "ja": "敵対ターゲット",
     "context": "glossary zzz term enemies: Japanese official term name",
@@ -4782,6 +6357,67 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.dullahan.name",
+    "ja": "デュラハン",
+    "context": "glossary zzz term dullahan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dullahan.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term dullahan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dullahan.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term dullahan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.electrolip-gloss.name",
+    "ja": "電撃リップグロス",
+    "context": "glossary zzz term electrolip-gloss: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.electrolip-gloss.summary",
+    "ja": "異常マスタリーが上がる異常向けのA級音動機。",
+    "context": "glossary zzz term electrolip-gloss: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.electrolip-gloss.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term electrolip-gloss: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.tensei-no-enyoku.name",
     "ja": "転生の炎翼",
     "context": "glossary zzz term tensei-no-enyoku: Japanese official term name",
@@ -4843,6 +6479,35 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.touryouhan.name",
+    "ja": "盗猟犯",
+    "context": "glossary zzz term touryouhan: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.touryouhan.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term touryouhan: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.touryouhan.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term touryouhan: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.specialty.name",
     "ja": "特性",
     "context": "glossary zzz term specialty: Japanese official term name",
@@ -4893,10 +6558,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.zzz.exclusive-channel.body",
     "ja": "[[signal-search|変調]]のチャンネルの一つ。開催中の対象エージェントを獲得できる。",
@@ -4996,6 +6658,99 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.doppelganger-pulchra.name",
+    "ja": "ドッペルゲンガー・プルクラ",
+    "context": "glossary zzz term doppelganger-pulchra: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-pulchra.summary",
+    "ja": "物理・炎が弱点の精鋭エネミー。",
+    "context": "glossary zzz term doppelganger-pulchra: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-pulchra.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term doppelganger-pulchra: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.doppelganger-bellum.name",
+    "ja": "ドッペルゲンガー・ベルラム",
+    "context": "glossary zzz term doppelganger-bellum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-bellum.summary",
+    "ja": "物理・炎が弱点の精鋭エネミー。",
+    "context": "glossary zzz term doppelganger-bellum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-bellum.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term doppelganger-bellum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.doppelganger-mors.name",
+    "ja": "ドッペルゲンガー・モルス",
+    "context": "glossary zzz term doppelganger-mors: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-mors.summary",
+    "ja": "物理・炎が弱点の精鋭エネミー。",
+    "context": "glossary zzz term doppelganger-mors: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.doppelganger-mors.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term doppelganger-mors: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.drive-disc.name",
     "ja": "ドライバディスク",
     "context": "glossary zzz term drive-disc: Japanese official term name",
@@ -5024,6 +6779,37 @@ const block5: SourceText[] = [
       "[[agent]]",
       "[[main-stat]]",
       "[[sub-stat]]"
+    ]
+  },
+  {
+    "id": "term.zzz.flight-of-fancy.name",
+    "ja": "鳥は夢へと羽ばたいて",
+    "context": "glossary zzz term flight-of-fancy: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.flight-of-fancy.summary",
+    "ja": "異常マスタリーが上がる異常向けのS級音動機。",
+    "context": "glossary zzz term flight-of-fancy: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.flight-of-fancy.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[anomaly-proficiency]]を90伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term flight-of-fancy: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -5058,6 +6844,66 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.boisterous-echoes.name",
+    "ja": "ドンカツエコー",
+    "context": "glossary zzz term boisterous-echoes: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boisterous-echoes.summary",
+    "ja": "異常マスタリーが上がる異常向けのA級音動機。",
+    "context": "glossary zzz term boisterous-echoes: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boisterous-echoes.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term boisterous-echoes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.naguriya.name",
+    "ja": "殴り屋",
+    "context": "glossary zzz term naguriya: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.naguriya.summary",
+    "ja": "氷・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term naguriya: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.naguriya.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term naguriya: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.starlight-engine-replica.name",
     "ja": "なんちゃってスターライトエンジン",
     "context": "glossary zzz term starlight-engine-replica: Japanese official term name",
@@ -5065,7 +6911,10 @@ const block5: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.zzz.starlight-engine-replica.summary",
     "ja": "強攻向けのA級音動機。",
@@ -5085,6 +6934,36 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[attack]]",
       "[[w-engine-channel]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.catty-luck.name",
+    "ja": "ニャン運到来",
+    "context": "glossary zzz term catty-luck: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.catty-luck.summary",
+    "ja": "防御力が上がる鋭御向けのA級音動機。",
+    "context": "glossary zzz term catty-luck: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.catty-luck.body",
+    "ja": "「鋭御」の[[specialty|特性]]向けの[[w-engine]]。Lv.60では基礎防御力が356で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term catty-luck: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[specialty|",
       "[[w-engine]]"
     ]
   },
@@ -5359,6 +7238,66 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hajirau-akumen.name",
+    "ja": "恥じらう悪面",
+    "context": "glossary zzz term hajirau-akumen: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hajirau-akumen.summary",
+    "ja": "攻撃力が上がる支援向けのA級音動機。",
+    "context": "glossary zzz term hajirau-akumen: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hajirau-akumen.body",
+    "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hajirau-akumen: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.huskron.name",
+    "ja": "ハスクロン",
+    "context": "glossary zzz term huskron: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.huskron.summary",
+    "ja": "エーテル・炎が弱点の通常エネミー。",
+    "context": "glossary zzz term huskron: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.huskron.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term huskron: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.battery-charge.name",
     "ja": "バッテリー",
     "context": "glossary zzz term battery-charge: Japanese official term name",
@@ -5389,6 +7328,36 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hati.name",
+    "ja": "ハティ",
+    "context": "glossary zzz term hati: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hati.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term hati: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hati.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hati: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.butler.name",
     "ja": "バトラー",
     "context": "glossary zzz term butler: Japanese official term name",
@@ -5415,6 +7384,36 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.baniirekku.name",
+    "ja": "バニーレック",
+    "context": "glossary zzz term baniirekku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.baniirekku.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term baniirekku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.baniirekku.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term baniirekku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -5505,6 +7504,97 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.grill-owisp.name",
+    "ja": "燔火の朧夜",
+    "context": "glossary zzz term grill-owisp: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.grill-owisp.summary",
+    "ja": "HPが上がる命破向けのA級音動機。",
+    "context": "glossary zzz term grill-owisp: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.grill-owisp.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加でHPを25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term grill-owisp: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.big-cylinder.name",
+    "ja": "ビガー・シリンダー",
+    "context": "glossary zzz term big-cylinder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.big-cylinder.summary",
+    "ja": "防御力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term big-cylinder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.big-cylinder.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term big-cylinder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.reel-projector.name",
+    "ja": "光と影のカット",
+    "context": "glossary zzz term reel-projector: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.reel-projector.summary",
+    "ja": "衝撃力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term reel-projector: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.reel-projector.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term reel-projector: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[impact]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.hizuki-no-ginkan.name",
     "ja": "緋月の銀棺",
     "context": "glossary zzz term hizuki-no-ginkan: Japanese official term name",
@@ -5533,6 +7623,36 @@ const block5: SourceText[] = [
       "[[stun-specialty]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hitch-spiker.name",
+    "ja": "ヒッチスパイカー",
+    "context": "glossary zzz term hitch-spiker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hitch-spiker.summary",
+    "ja": "エーテルが弱点の通常エネミー。",
+    "context": "glossary zzz term hitch-spiker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hitch-spiker.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hitch-spiker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -5596,6 +7716,66 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hi-wo-obishi-sendosha.name",
+    "ja": "火を帯びし先導者",
+    "context": "glossary zzz term hi-wo-obishi-sendosha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hi-wo-obishi-sendosha.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term hi-wo-obishi-sendosha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hi-wo-obishi-sendosha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は電気。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hi-wo-obishi-sendosha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.farbauti.name",
+    "ja": "ファールバウティ",
+    "context": "glossary zzz term farbauti: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.farbauti.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term farbauti: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.farbauti.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term farbauti: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.booastrum.name",
     "ja": "ブーアストラム",
     "context": "glossary zzz term booastrum: Japanese official term name",
@@ -5656,6 +7836,36 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.fossoru.name",
+    "ja": "フォッソル",
+    "context": "glossary zzz term fossoru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fossoru.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term fossoru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fossoru.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term fossoru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.fusion-compiler.name",
     "ja": "複合コンパイラ",
     "context": "glossary zzz term fusion-compiler: Japanese official term name",
@@ -5704,7 +7914,10 @@ const block5: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.zzz.bagboo.body",
     "ja": "編成に加えられる[[bangboo]]。二丁の包丁による連続斬撃で物理ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -5714,6 +7927,66 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.fudatsuki-gyakutaikyo.name",
+    "ja": "札付き虐待狂",
+    "context": "glossary zzz term fudatsuki-gyakutaikyo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fudatsuki-gyakutaikyo.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term fudatsuki-gyakutaikyo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fudatsuki-gyakutaikyo.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term fudatsuki-gyakutaikyo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.fudatsuki-naguriya.name",
+    "ja": "札付き殴り屋",
+    "context": "glossary zzz term fudatsuki-naguriya: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fudatsuki-naguriya.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term fudatsuki-naguriya: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.fudatsuki-naguriya.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term fudatsuki-naguriya: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
     ]
   },
   {
@@ -5744,6 +8017,67 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[attribute-anomaly]]",
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.blast-spider.name",
+    "ja": "ブラストスパイダー",
+    "context": "glossary zzz term blast-spider: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blast-spider.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term blast-spider: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.blast-spider.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term blast-spider: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.bloodmarrow-coffer.name",
+    "ja": "ブラッドボックス",
+    "context": "glossary zzz term bloodmarrow-coffer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bloodmarrow-coffer.summary",
+    "ja": "会心率が上がる鋭御向けのA級音動機。",
+    "context": "glossary zzz term bloodmarrow-coffer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bloodmarrow-coffer.body",
+    "ja": "「鋭御」の[[specialty|特性]]向けの[[w-engine]]。Lv.60では基礎防御力が356で、追加で[[crit-rate]]を20%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bloodmarrow-coffer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[crit-rate]]",
+      "[[specialty|",
+      "[[w-engine]]"
     ]
   },
   {
@@ -5893,10 +8227,7 @@ const block5: SourceText[] = [
       "[[impact]]",
       "[[stun]]"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.zzz.blazewood.name",
     "ja": "ブレイズウッド",
@@ -6158,6 +8489,37 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.box-cutter.name",
+    "ja": "ペーパーカッター",
+    "context": "glossary zzz term box-cutter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.box-cutter.summary",
+    "ja": "衝撃力が上がる撃破向けのA級音動機。",
+    "context": "glossary zzz term box-cutter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.box-cutter.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で[[impact]]を15%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term box-cutter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[impact]]",
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.thunder-metal.name",
     "ja": "霹靂のヘヴィメタル",
     "context": "glossary zzz term thunder-metal: Japanese official term name",
@@ -6184,6 +8546,36 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.bellum.name",
+    "ja": "ベルラム",
+    "context": "glossary zzz term bellum: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bellum.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term bellum: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bellum.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bellum: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
     ]
   },
   {
@@ -6276,6 +8668,35 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.houkama.name",
+    "ja": "放火魔",
+    "context": "glossary zzz term houkama: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.houkama.summary",
+    "ja": "氷・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term houkama: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.houkama.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term houkama: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.defense.name",
     "ja": "防護",
     "context": "glossary zzz term defense: Japanese official term name",
@@ -6306,6 +8727,36 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.spring-embrace.name",
+    "ja": "ホットスプリング",
+    "context": "glossary zzz term spring-embrace: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.spring-embrace.summary",
+    "ja": "攻撃力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term spring-embrace: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.spring-embrace.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term spring-embrace: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.hobby-shop.name",
     "ja": "ホビーショップ",
     "context": "glossary zzz term hobby-shop: Japanese official term name",
@@ -6332,6 +8783,36 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[sixth-street]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hopuritai.name",
+    "ja": "ホプリタイ",
+    "context": "glossary zzz term hopuritai: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hopuritai.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term hopuritai: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hopuritai.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hopuritai: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -6421,7 +8902,10 @@ const block6: SourceText[] = [
       "[[new-eridu]]",
       "[[proxy]]"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.zzz.bangboo.name",
     "ja": "ボンプ",
@@ -6564,6 +9048,66 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.steam-oven.name",
+    "ja": "まな板の鯉",
+    "context": "glossary zzz term steam-oven: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.steam-oven.summary",
+    "ja": "エネルギー自動回復が上がる撃破向けのA級音動機。",
+    "context": "glossary zzz term steam-oven: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.steam-oven.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加でエネルギー自動回復を50%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term steam-oven: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.puzzle-sphere.name",
+    "ja": "魔法の立体パズル",
+    "context": "glossary zzz term puzzle-sphere: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.puzzle-sphere.summary",
+    "ja": "攻撃力が上がる命破向けのA級音動機。",
+    "context": "glossary zzz term puzzle-sphere: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.puzzle-sphere.body",
+    "ja": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term puzzle-sphere: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.lost-void.name",
     "ja": "迷いの地",
     "context": "glossary zzz term lost-void: Japanese official term name",
@@ -6589,6 +9133,97 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mandrake.name",
+    "ja": "マンドレイク",
+    "context": "glossary zzz term mandrake: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mandrake.summary",
+    "ja": "エーテル・氷が弱点の通常エネミー。",
+    "context": "glossary zzz term mandrake: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mandrake.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mandrake: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.miazuma-hosha-akavoru.name",
+    "ja": "ミアズマの歩者・アカヴォル",
+    "context": "glossary zzz term miazuma-hosha-akavoru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazuma-hosha-akavoru.summary",
+    "ja": "エーテル・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term miazuma-hosha-akavoru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazuma-hosha-akavoru.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miazuma-hosha-akavoru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sharpened-stinger.name",
+    "ja": "磨き抜かれた切っ先",
+    "context": "glossary zzz term sharpened-stinger: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sharpened-stinger.summary",
+    "ja": "異常マスタリーが上がる異常向けのS級音動機。",
+    "context": "glossary zzz term sharpened-stinger: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sharpened-stinger.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[anomaly-proficiency]]を90伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sharpened-stinger: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
   },
   {
     "id": "term.zzz.master-tape.name",
@@ -6647,6 +9282,126 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.mitsuryousha.name",
+    "ja": "密猟者",
+    "context": "glossary zzz term mitsuryousha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mitsuryousha.summary",
+    "ja": "氷・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term mitsuryousha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mitsuryousha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mitsuryousha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.rainforest-gourmet.name",
+    "ja": "密林の食いしん坊",
+    "context": "glossary zzz term rainforest-gourmet: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rainforest-gourmet.summary",
+    "ja": "異常マスタリーが上がる異常向けのA級音動機。",
+    "context": "glossary zzz term rainforest-gourmet: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rainforest-gourmet.body",
+    "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で[[anomaly-proficiency]]を75伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term rainforest-gourmet: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[anomaly-proficiency]]",
+      "[[anomaly]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.mimic-crab.name",
+    "ja": "ミミック蟹",
+    "context": "glossary zzz term mimic-crab: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mimic-crab.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term mimic-crab: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mimic-crab.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mimic-crab: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.mushussu.name",
+    "ja": "ムシュフシュ",
+    "context": "glossary zzz term mushussu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mushussu.summary",
+    "ja": "炎・風が弱点の精鋭エネミー。",
+    "context": "glossary zzz term mushussu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mushussu.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mushussu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -6711,6 +9466,36 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.metro-goblin.name",
+    "ja": "メトロゴブリン",
+    "context": "glossary zzz term metro-goblin: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.metro-goblin.summary",
+    "ja": "エーテル・氷が弱点の精鋭エネミー。",
+    "context": "glossary zzz term metro-goblin: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.metro-goblin.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term metro-goblin: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|",
+      "[[ethereal]]"
+    ]
+  },
+  {
     "id": "term.zzz.meme.name",
     "ja": "メメ",
     "context": "glossary zzz term meme: Japanese official term name",
@@ -6737,6 +9522,37 @@ const block6: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.tusks-of-fury.name",
+    "ja": "猛進するキバ",
+    "context": "glossary zzz term tusks-of-fury: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tusks-of-fury.summary",
+    "ja": "衝撃力が上がる防護向けのS級音動機。",
+    "context": "glossary zzz term tusks-of-fury: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tusks-of-fury.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で[[impact]]を18%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tusks-of-fury: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[impact]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -6858,6 +9674,66 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.mors.name",
+    "ja": "モルス",
+    "context": "glossary zzz term mors: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mors.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term mors: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mors.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性を持つ[[attribute|属性]]は氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mors: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.elegant-vanity.name",
+    "ja": "優美のヴァニティ",
+    "context": "glossary zzz term elegant-vanity: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.elegant-vanity.summary",
+    "ja": "攻撃力が上がる支援向けのS級音動機。",
+    "context": "glossary zzz term elegant-vanity: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.elegant-vanity.body",
+    "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term elegant-vanity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[support]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.bunny-in-wonderland.name",
     "ja": "雪うさぎワンダーランド",
     "context": "glossary zzz term bunny-in-wonderland: Japanese official term name",
@@ -6865,10 +9741,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.zzz.bunny-in-wonderland.summary",
     "ja": "HPに関わるドライバディスク。",
@@ -6976,6 +9849,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.raisansha.name",
+    "ja": "礼賛者",
+    "context": "glossary zzz term raisansha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.raisansha.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term raisansha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.raisansha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term raisansha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.lost-void-license.name",
     "ja": "ライセンスレベル",
     "context": "glossary zzz term lost-void-license: Japanese official term name",
@@ -6983,7 +9885,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.zzz.lost-void-license.summary",
     "ja": "迷いの地の進行に関わるレベル。",
@@ -7002,6 +9907,97 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[lost-void]]"
+    ]
+  },
+  {
+    "id": "term.zzz.tremor-trigram-vessel.name",
+    "ja": "雷鳴が如き八卦",
+    "context": "glossary zzz term tremor-trigram-vessel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tremor-trigram-vessel.summary",
+    "ja": "攻撃力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term tremor-trigram-vessel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tremor-trigram-vessel.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が624で、追加で攻撃力を25%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tremor-trigram-vessel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.bunny-band.name",
+    "ja": "ラビットチャージャー",
+    "context": "glossary zzz term bunny-band: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bunny-band.summary",
+    "ja": "防御力が上がる防護向けのA級音動機。",
+    "context": "glossary zzz term bunny-band: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.bunny-band.body",
+    "ja": "[[defense]]向けの[[w-engine]]。Lv.60では基礎攻撃力が594で、追加で防御力を40%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term bunny-band: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[defense]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.lahmu.name",
+    "ja": "ラフム",
+    "context": "glossary zzz term lahmu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lahmu.summary",
+    "ja": "氷・電気が弱点の精鋭エネミー。",
+    "context": "glossary zzz term lahmu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lahmu.body",
+    "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点は氷・電気。耐性を持つ[[attribute|属性]]は物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term lahmu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|",
+      "[[enemies|",
+      "[[ethereal]]"
     ]
   },
   {
@@ -7092,6 +10088,35 @@ const block7: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.ryakudatsusha.name",
+    "ja": "略奪者",
+    "context": "glossary zzz term ryakudatsusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ryakudatsusha.summary",
+    "ja": "氷・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term ryakudatsusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ryakudatsusha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ryakudatsusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -7361,4 +10386,4 @@ const block7: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10];
