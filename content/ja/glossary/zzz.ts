@@ -181,6 +181,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.akumunishibarareshimonoyoushakuen.name",
+    "ja": "悪夢に縛られし者・葉釈淵",
+    "context": "glossary zzz term akumunishibarareshimonoyoushakuen: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.akumunishibarareshimonoyoushakuen.summary",
+    "ja": "氷・物理・風が弱点のボス。",
+    "context": "glossary zzz term akumunishibarareshimonoyoushakuen: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.akumunishibarareshimonoyoushakuen.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理・風。耐性は電気。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term akumunishibarareshimonoyoushakuen: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.akuratsuutte.name",
     "ja": "悪辣討手",
     "context": "glossary zzz term akuratsuutte: Japanese official term name",
@@ -508,6 +537,35 @@ const block0: SourceText[] = [
     "protectedTokens": [
       "[[enemies|",
       "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.aresu.name",
+    "ja": "アレス",
+    "context": "glossary zzz term aresu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.aresu.summary",
+    "ja": "エーテルが弱点のボス。",
+    "context": "glossary zzz term aresu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.aresu.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term aresu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -896,6 +954,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.uridinmu.name",
+    "ja": "ウリディンム",
+    "context": "glossary zzz term uridinmu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.uridinmu.summary",
+    "ja": "氷・風が弱点のボス。",
+    "context": "glossary zzz term uridinmu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.uridinmu.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。耐性は物理。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term uridinmu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.urutora-neivu.name",
     "ja": "ウルトラネイヴ",
     "context": "glossary zzz term urutora-neivu: Japanese official term name",
@@ -903,7 +990,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.zzz.urutora-neivu.summary",
     "ja": "戦闘に同行するS級ボンプ。",
@@ -992,10 +1082,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.zzz.yunkui-tales.summary",
     "ja": "HPに関わるドライバディスク。",
@@ -1454,6 +1541,35 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.engokuwoyukumono.name",
+    "ja": "炎獄を往く者",
+    "context": "glossary zzz term engokuwoyukumono: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.engokuwoyukumono.summary",
+    "ja": "氷・風が弱点のボス。",
+    "context": "glossary zzz term engokuwoyukumono: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.engokuwoyukumono.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。耐性は物理。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term engokuwoyukumono: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.blazing-laurel.name",
     "ja": "炎心の桂冠",
     "context": "glossary zzz term blazing-laurel: Japanese official term name",
@@ -1514,6 +1630,35 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[enemies|",
       "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.ougonmajingiagorudo.name",
+    "ja": "黄金魔神ギアゴルド",
+    "context": "glossary zzz term ougonmajingiagorudo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ougonmajingiagorudo.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term ougonmajingiagorudo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ougonmajingiagorudo.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ougonmajingiagorudo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -1821,7 +1966,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.zzz.w-engine-warehouse.body",
     "ja": "倉庫から開ける画面。音動機のリサイクルを利用できる。",
@@ -1961,10 +2109,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.zzz.gaadian.body",
     "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -2179,6 +2324,35 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[assist-follow-up]]",
       "[[defensive-assist]]"
+    ]
+  },
+  {
+    "id": "term.zzz.kagayakeruchikaibirii.name",
+    "ja": "輝ける誓い・ビリー",
+    "context": "glossary zzz term kagayakeruchikaibirii: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kagayakeruchikaibirii.summary",
+    "ja": "炎・電気が弱点のボス。",
+    "context": "glossary zzz term kagayakeruchikaibirii: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kagayakeruchikaibirii.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kagayakeruchikaibirii: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -2771,7 +2945,10 @@ const block2: SourceText[] = [
       "[[attack]]",
       "[[w-engine]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.zzz.ex-special-attack.name",
     "ja": "強化特殊スキル",
@@ -2944,10 +3121,7 @@ const block2: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.zzz.polar-metal.name",
     "ja": "極地のヘヴィメタル",
@@ -3006,6 +3180,35 @@ const block3: SourceText[] = [
       "[[impact]]",
       "[[stun-specialty]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.girutabururu.name",
+    "ja": "ギルタブルル",
+    "context": "glossary zzz term girutabururu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.girutabururu.summary",
+    "ja": "風が弱点のボス。",
+    "context": "glossary zzz term girutabururu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.girutabururu.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は風。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term girutabururu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -3153,6 +3356,35 @@ const block3: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.kusarikku.name",
+    "ja": "クサリク",
+    "context": "glossary zzz term kusarikku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kusarikku.summary",
+    "ja": "炎・電気が弱点のボス。",
+    "context": "glossary zzz term kusarikku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kusarikku.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kusarikku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.magnetiboo.name",
     "ja": "クッツキボンプ",
     "context": "glossary zzz term magnetiboo: Japanese official term name",
@@ -3269,6 +3501,93 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[enemies|",
       "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.gureeteru.name",
+    "ja": "グレーテル",
+    "context": "glossary zzz term gureeteru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeteru.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term gureeteru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeteru.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term gureeteru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.gureeterukoushuuhasuukata.name",
+    "ja": "グレーテル・高周波数型",
+    "context": "glossary zzz term gureeterukoushuuhasuukata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeterukoushuuhasuukata.summary",
+    "ja": "エーテルが弱点のボス。",
+    "context": "glossary zzz term gureeterukoushuuhasuukata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeterukoushuuhasuukata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term gureeterukoushuuhasuukata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.gureeteruchikuenekata.name",
+    "ja": "グレーテル・蓄エネ型",
+    "context": "glossary zzz term gureeteruchikuenekata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeteruchikuenekata.summary",
+    "ja": "炎が弱点のボス。",
+    "context": "glossary zzz term gureeteruchikuenekata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.gureeteruchikuenekata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term gureeteruchikuenekata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -3612,7 +3931,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.zzz.lunar-pleniluna.summary",
     "ja": "攻撃力が上がる強攻向けのB級音動機。",
@@ -3934,10 +4256,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.zzz.identity-inflection.summary",
     "ja": "防御力が上がる防護向けのB級音動機。",
@@ -4286,6 +4605,35 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.konkisutadooru.name",
+    "ja": "「コンキスタドール」",
+    "context": "glossary zzz term konkisutadooru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.konkisutadooru.summary",
+    "ja": "電気・風が弱点のボス。",
+    "context": "glossary zzz term konkisutadooru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.konkisutadooru.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term konkisutadooru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.wrathful-vajra.name",
     "ja": "金剛不壊怒髪衝冠",
     "context": "glossary zzz term wrathful-vajra: Japanese official term name",
@@ -4466,6 +4814,93 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.sakurifaisukovenantogaadian.name",
+    "ja": "サクリファイス・コヴェナント・ガーディアン",
+    "context": "glossary zzz term sakurifaisukovenantogaadian: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisukovenantogaadian.summary",
+    "ja": "炎・物理が弱点のボス。",
+    "context": "glossary zzz term sakurifaisukovenantogaadian: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisukovenantogaadian.body",
+    "ja": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は氷・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sakurifaisukovenantogaadian: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.sakurifaisuburingaa.name",
+    "ja": "サクリファイス・ブリンガー",
+    "context": "glossary zzz term sakurifaisuburingaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisuburingaa.summary",
+    "ja": "氷が弱点のボス。",
+    "context": "glossary zzz term sakurifaisuburingaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisuburingaa.body",
+    "ja": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は氷。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sakurifaisuburingaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.sakurifaisuheretikkujesutaa.name",
+    "ja": "サクリファイス・ヘレティック・ジェスター",
+    "context": "glossary zzz term sakurifaisuheretikkujesutaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisuheretikkujesutaa.summary",
+    "ja": "電気・物理が弱点のボス。",
+    "context": "glossary zzz term sakurifaisuheretikkujesutaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sakurifaisuheretikkujesutaa.body",
+    "ja": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は電気・物理。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sakurifaisuheretikkujesutaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.sateyurosu.name",
     "ja": "サテュロス",
     "context": "glossary zzz term sateyurosu: Japanese official term name",
@@ -4482,7 +4917,10 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.zzz.sateyurosu.body",
     "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -4796,6 +5234,64 @@ const block4: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.shiirudodifendaa.name",
+    "ja": "「シールドディフェンダー」",
+    "context": "glossary zzz term shiirudodifendaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shiirudodifendaa.summary",
+    "ja": "炎・物理が弱点のボス。",
+    "context": "glossary zzz term shiirudodifendaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shiirudodifendaa.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shiirudodifendaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.shiirudodifendaaomega.name",
+    "ja": "「シールドディフェンダー・Ω」",
+    "context": "glossary zzz term shiirudodifendaaomega: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shiirudodifendaaomega.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term shiirudodifendaaomega: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shiirudodifendaaomega.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shiirudodifendaaomega: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.support.name",
     "ja": "支援",
     "context": "glossary zzz term support: Japanese official term name",
@@ -4933,10 +5429,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.zzz.magnetic-storm-bravo.body",
     "ja": "[[anomaly]]向けの[[w-engine]]。Lv.60では基礎攻撃力が475で、追加で[[anomaly-proficiency]]を60伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -4979,6 +5472,35 @@ const block5: SourceText[] = [
       "[[impact]]",
       "[[stun-specialty]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shitiigaadianna.name",
+    "ja": "シティー・ガーディアンナ",
+    "context": "glossary zzz term shitiigaadianna: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shitiigaadianna.summary",
+    "ja": "電気・風が弱点の精鋭エネミー。",
+    "context": "glossary zzz term shitiigaadianna: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shitiigaadianna.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shitiigaadianna: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -5389,7 +5911,10 @@ const block5: SourceText[] = [
       "[[attack]]",
       "[[w-engine]]"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.zzz.shunsokuroobaa.name",
     "ja": "「駿足ローバー」",
@@ -5599,6 +6124,35 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.shoutenzanka.name",
+    "ja": "焦天残火",
+    "context": "glossary zzz term shoutenzanka: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoutenzanka.summary",
+    "ja": "氷・風が弱点のボス。",
+    "context": "glossary zzz term shoutenzanka: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoutenzanka.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shoutenzanka: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.roaring-furnace.name",
     "ja": "招福の虎炉",
     "context": "glossary zzz term roaring-furnace: Japanese official term name",
@@ -5655,6 +6209,35 @@ const block5: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[proxy-network]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shoseinodeddoendobucchaa.name",
+    "ja": "初生のデッドエンドブッチャー",
+    "context": "glossary zzz term shoseinodeddoendobucchaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoseinodeddoendobucchaa.summary",
+    "ja": "エーテル・氷が弱点のボス。",
+    "context": "glossary zzz term shoseinodeddoendobucchaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shoseinodeddoendobucchaa.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shoseinodeddoendobucchaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -5919,10 +6502,7 @@ const block5: SourceText[] = [
       "[[ultimate]]",
       "[[w-engine]]"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.zzz.mindscape-cinema.name",
     "ja": "心象映画",
@@ -6311,7 +6891,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.zzz.supekutaachikuenekata.summary",
     "ja": "炎が弱点の通常エネミー。",
@@ -6898,10 +7481,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.zzz.hollow-special-operations-section-6.summary",
     "ja": "星見雅や月城柳が所属する組織。",
@@ -7161,6 +7741,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.chigarinosoujiya.name",
+    "ja": "血狩りの掃除屋",
+    "context": "glossary zzz term chigarinosoujiya: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chigarinosoujiya.summary",
+    "ja": "エーテル・電気が弱点のボス。",
+    "context": "glossary zzz term chigarinosoujiya: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.chigarinosoujiya.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。耐性は炎・風。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term chigarinosoujiya: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.feathered-fate.name",
     "ja": "契る翼の運命",
     "context": "glossary zzz term feathered-fate: Japanese official term name",
@@ -7263,7 +7872,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.zzz.investigation-points.body",
     "ja": "零号ホロウの調査で獲得するポイント。[[withered-domain]]に週間の獲得上限が設けられている。",
@@ -7604,6 +8216,35 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.deddoendobucchaa.name",
+    "ja": "デッドエンドブッチャー",
+    "context": "glossary zzz term deddoendobucchaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.deddoendobucchaa.summary",
+    "ja": "エーテル・氷が弱点のボス。",
+    "context": "glossary zzz term deddoendobucchaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.deddoendobucchaa.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term deddoendobucchaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.demara-battery-mark-ii.name",
     "ja": "デマラ式電池Ⅱ型",
     "context": "glossary zzz term demara-battery-mark-ii: Japanese official term name",
@@ -7685,6 +8326,35 @@ const block7: SourceText[] = [
     "id": "term.zzz.teyuupooncharenjaa.body",
     "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term teyuupooncharenjaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.teyuupoondesutoroiyaa.name",
+    "ja": "「テューポーン・デストロイヤー」",
+    "context": "glossary zzz term teyuupoondesutoroiyaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.teyuupoondesutoroiyaa.summary",
+    "ja": "電気・風が弱点のボス。",
+    "context": "glossary zzz term teyuupoondesutoroiyaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.teyuupoondesutoroiyaa.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term teyuupoondesutoroiyaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -7890,10 +8560,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.zzz.denrikaradatanatosu.body",
     "ja": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -8027,6 +8694,35 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.denritaidopperugengaakomanomanato.name",
+    "ja": "電離体・ドッペルゲンガー・狛野真斗",
+    "context": "glossary zzz term denritaidopperugengaakomanomanato: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.denritaidopperugengaakomanomanato.summary",
+    "ja": "氷が弱点のボス。",
+    "context": "glossary zzz term denritaidopperugengaakomanomanato: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.denritaidopperugengaakomanomanato.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term denritaidopperugengaakomanomanato: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.freeze.name",
     "ja": "凍結",
     "context": "glossary zzz term freeze: Japanese official term name",
@@ -8120,6 +8816,35 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.tokusenkyoushuubakugekishu.name",
+    "ja": "特戦強襲爆撃手",
+    "context": "glossary zzz term tokusenkyoushuubakugekishu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tokusenkyoushuubakugekishu.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term tokusenkyoushuubakugekishu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tokusenkyoushuubakugekishu.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は炎。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tokusenkyoushuubakugekishu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.tokusenkeisouryouhei.name",
     "ja": "特戦・軽装猟兵",
     "context": "glossary zzz term tokusenkeisouryouhei: Japanese official term name",
@@ -8147,7 +8872,10 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[enemies|"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.zzz.tokusenjuusousutoraikaa.name",
     "ja": "特戦・重装ストライカー",
@@ -8489,6 +9217,64 @@ const block8: SourceText[] = [
     "id": "term.zzz.totsugekiryouhei.body",
     "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term totsugekiryouhei: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.dopperugengaasutaaraitobirii.name",
+    "ja": "ドッペルゲンガー・スターライト・ビリー",
+    "context": "glossary zzz term dopperugengaasutaaraitobirii: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dopperugengaasutaaraitobirii.summary",
+    "ja": "炎・電気が弱点のボス。",
+    "context": "glossary zzz term dopperugengaasutaaraitobirii: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dopperugengaasutaaraitobirii.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎・電気。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term dopperugengaasutaaraitobirii: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.dopperugengaahaishinsha.name",
+    "ja": "ドッペルゲンガー・「背信者」",
+    "context": "glossary zzz term dopperugengaahaishinsha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dopperugengaahaishinsha.summary",
+    "ja": "物理・炎が弱点のボス。",
+    "context": "glossary zzz term dopperugengaahaishinsha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.dopperugengaahaishinsha.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term dopperugengaahaishinsha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -8888,10 +9674,7 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[attribute-anomaly|"
     ]
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.zzz.hellfire-gears.name",
     "ja": "燃獄ギア",
@@ -8953,6 +9736,35 @@ const block9: SourceText[] = [
       "[[anomaly]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.haishinsha.name",
+    "ja": "「背信者」",
+    "context": "glossary zzz term haishinsha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.haishinsha.summary",
+    "ja": "炎・物理が弱点のボス。",
+    "context": "glossary zzz term haishinsha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.haishinsha.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term haishinsha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -9056,7 +9868,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.zzz.phaethons-melody.summary",
     "ja": "Ver.1.6で追加されたドライバディスク。",
@@ -9163,6 +9978,35 @@ const block9: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hashashinshokutaiponpei.name",
+    "ja": "「覇者侵蝕体・ポンペイ」",
+    "context": "glossary zzz term hashashinshokutaiponpei: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hashashinshokutaiponpei.summary",
+    "ja": "炎が弱点のボス。",
+    "context": "glossary zzz term hashashinshokutaiponpei: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hashashinshokutaiponpei.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hashashinshokutaiponpei: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -9609,6 +10453,93 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hansu.name",
+    "ja": "ハンス",
+    "context": "glossary zzz term hansu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansu.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term hansu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansu.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hansu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.hansukoushuuhasuukata.name",
+    "ja": "ハンス・高周波数型",
+    "context": "glossary zzz term hansukoushuuhasuukata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansukoushuuhasuukata.summary",
+    "ja": "エーテルが弱点のボス。",
+    "context": "glossary zzz term hansukoushuuhasuukata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansukoushuuhasuukata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hansukoushuuhasuukata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.hansuchikuenekata.name",
+    "ja": "ハンス・蓄エネ型",
+    "context": "glossary zzz term hansuchikuenekata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansuchikuenekata.summary",
+    "ja": "炎が弱点のボス。",
+    "context": "glossary zzz term hansuchikuenekata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hansuchikuenekata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hansuchikuenekata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.grill-owisp.name",
     "ja": "燔火の朧夜",
     "context": "glossary zzz term grill-owisp: Japanese official term name",
@@ -9888,10 +10819,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.zzz.faarubauteichikuenekata.summary",
     "ja": "炎が弱点の精鋭エネミー。",
@@ -9930,7 +10858,10 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.zzz.booastrum.body",
     "ja": "[[roscaelifer]]のエリア。探索を進めるとボンプラネットのコンテンツを開放できる。",
@@ -10155,6 +11086,93 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.furaidee.name",
+    "ja": "フライデー",
+    "context": "glossary zzz term furaidee: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaidee.summary",
+    "ja": "電気が弱点のボス。",
+    "context": "glossary zzz term furaidee: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaidee.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term furaidee: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.furaideekoushuuhasuukata.name",
+    "ja": "フライデー・高周波数型",
+    "context": "glossary zzz term furaideekoushuuhasuukata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaideekoushuuhasuukata.summary",
+    "ja": "エーテルが弱点のボス。",
+    "context": "glossary zzz term furaideekoushuuhasuukata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaideekoushuuhasuukata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term furaideekoushuuhasuukata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.furaideechikuenekata.name",
+    "ja": "フライデー・蓄エネ型",
+    "context": "glossary zzz term furaideechikuenekata: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaideechikuenekata.summary",
+    "ja": "炎が弱点のボス。",
+    "context": "glossary zzz term furaideechikuenekata: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furaideechikuenekata.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term furaideechikuenekata: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.plugboo.name",
     "ja": "プラグノボンプ",
     "context": "glossary zzz term plugboo: Japanese official term name",
@@ -10305,6 +11323,35 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.purimaikonokurasutovesupo.name",
+    "ja": "プリマ・イコノクラスト・ヴェスポ",
+    "context": "glossary zzz term purimaikonokurasutovesupo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.purimaikonokurasutovesupo.summary",
+    "ja": "エーテル・風が弱点のボス。",
+    "context": "glossary zzz term purimaikonokurasutovesupo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.purimaikonokurasutovesupo.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・風。耐性は氷・炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term purimaikonokurasutovesupo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.the-brimstone.name",
     "ja": "ブリムストーン",
     "context": "glossary zzz term the-brimstone: Japanese official term name",
@@ -10332,6 +11379,35 @@ const block10: SourceText[] = [
     "protectedTokens": [
       "[[attack]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.purukura.name",
+    "ja": "プルクラ",
+    "context": "glossary zzz term purukura: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.purukura.summary",
+    "ja": "炎・物理が弱点の精鋭エネミー。",
+    "context": "glossary zzz term purukura: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.purukura.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は氷。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term purukura: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -10772,7 +11848,10 @@ const block10: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.zzz.bellum.name",
     "ja": "ベルラム",
@@ -10880,10 +11959,7 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block11: SourceText[] = [
+  },
   {
     "id": "term.zzz.signal-search.body",
     "ja": "チャンネルを選んで[[agent]]や[[w-engine]]などを獲得する仕組み。提供内容や受信確率はチャンネルごとに異なる。",
@@ -10982,6 +12058,35 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[agent]]",
       "[[specialty|"
+    ]
+  },
+  {
+    "id": "term.zzz.boutokusha.name",
+    "ja": "「冒涜者」",
+    "context": "glossary zzz term boutokusha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boutokusha.summary",
+    "ja": "電気・物理が弱点のボス。",
+    "context": "glossary zzz term boutokusha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.boutokusha.body",
+    "ja": "「サクリファイス」に分類される[[enemies|敵対ターゲット]]。弱点は電気・物理。耐性は氷。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term boutokusha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -11479,6 +12584,35 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.marionettotsuinzu.name",
+    "ja": "マリオネット・ツインズ",
+    "context": "glossary zzz term marionettotsuinzu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.marionettotsuinzu.summary",
+    "ja": "エーテル・氷が弱点のボス。",
+    "context": "glossary zzz term marionettotsuinzu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.marionettotsuinzu.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term marionettotsuinzu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.marionettoburakkubeeru.name",
     "ja": "マリオネット・ブラックベール",
     "context": "glossary zzz term marionettoburakkubeeru: Japanese official term name",
@@ -11569,6 +12703,35 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.miazumanoshisai.name",
+    "ja": "ミアズマの司祭",
+    "context": "glossary zzz term miazumanoshisai: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumanoshisai.summary",
+    "ja": "エーテルが弱点のボス。",
+    "context": "glossary zzz term miazumanoshisai: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumanoshisai.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miazumanoshisai: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.miazuma-hosha-akavoru.name",
     "ja": "ミアズマの歩者・アカヴォル",
     "context": "glossary zzz term miazuma-hosha-akavoru: Japanese official term name",
@@ -11629,6 +12792,35 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.miazumafiindonahananaredo.name",
+    "ja": "ミアズマ・フィーンド・名は名なれど",
+    "context": "glossary zzz term miazumafiindonahananaredo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumafiindonahananaredo.summary",
+    "ja": "エーテル・物理が弱点のボス。",
+    "context": "glossary zzz term miazumafiindonahananaredo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumafiindonahananaredo.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miazumafiindonahananaredo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.miazumaremunantokyanonia.name",
     "ja": "ミアズマ・レムナント・キャノニア",
     "context": "glossary zzz term miazumaremunantokyanonia: Japanese official term name",
@@ -11636,7 +12828,10 @@ const block11: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block13: SourceText[] = [
   {
     "id": "term.zzz.miazumaremunantokyanonia.summary",
     "ja": "炎・電気が弱点の通常エネミー。",
@@ -11746,6 +12941,35 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.miazumikkukomanomanato.name",
+    "ja": "ミアズミック・狛野真斗",
+    "context": "glossary zzz term miazumikkukomanomanato: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumikkukomanomanato.summary",
+    "ja": "氷が弱点のボス。",
+    "context": "glossary zzz term miazumikkukomanomanato: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumikkukomanomanato.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miazumikkukomanomanato: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.miazumikkujuusousutoraikaa.name",
     "ja": "ミアズミック・「重装ストライカー」",
     "context": "glossary zzz term miazumikkujuusousutoraikaa: Japanese official term name",
@@ -11833,6 +13057,35 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.miazumikkudopperugengaahaishinsha.name",
+    "ja": "ミアズミック・ドッペルゲンガー・「背信者」",
+    "context": "glossary zzz term miazumikkudopperugengaahaishinsha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumikkudopperugengaahaishinsha.summary",
+    "ja": "物理・炎が弱点のボス。",
+    "context": "glossary zzz term miazumikkudopperugengaahaishinsha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miazumikkudopperugengaahaishinsha.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・炎。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miazumikkudopperugengaahaishinsha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.miazumikkutorakian.name",
     "ja": "ミアズミック・トラキアン",
     "context": "glossary zzz term miazumikkutorakian: Japanese official term name",
@@ -11861,10 +13114,7 @@ const block11: SourceText[] = [
       "[[enemies|",
       "[[ethereal]]"
     ]
-  }
-];
-
-const block12: SourceText[] = [
+  },
   {
     "id": "term.zzz.miazumikkutorinokkusu.name",
     "ja": "ミアズミック・トリノックス",
@@ -12014,6 +13264,35 @@ const block12: SourceText[] = [
       "[[anomaly-proficiency]]",
       "[[anomaly]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.mikakuninfukugoushinshokutai.name",
+    "ja": "未確認複合侵蝕体",
+    "context": "glossary zzz term mikakuninfukugoushinshokutai: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mikakuninfukugoushinshokutai.summary",
+    "ja": "エーテル・電気が弱点のボス。",
+    "context": "glossary zzz term mikakuninfukugoushinshokutai: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mikakuninfukugoushinshokutai.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mikakuninfukugoushinshokutai: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -12541,7 +13820,10 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block14: SourceText[] = [
   {
     "id": "term.zzz.elegant-vanity.body",
     "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -12581,6 +13863,35 @@ const block12: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.yumesugarikomanomanato.name",
+    "ja": "夢縋り・狛野真斗",
+    "context": "glossary zzz term yumesugarikomanomanato: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yumesugarikomanomanato.summary",
+    "ja": "氷が弱点のボス。",
+    "context": "glossary zzz term yumesugarikomanomanato: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.yumesugarikomanomanato.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷。耐性は物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term yumesugarikomanomanato: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -12701,6 +14012,35 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.youkeikaideddoendobucchaa.name",
+    "ja": "要警戒・デッドエンドブッチャー",
+    "context": "glossary zzz term youkeikaideddoendobucchaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaideddoendobucchaa.summary",
+    "ja": "エーテル・氷が弱点のボス。",
+    "context": "glossary zzz term youkeikaideddoendobucchaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaideddoendobucchaa.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term youkeikaideddoendobucchaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.youkeikaideyurahan.name",
     "ja": "要警戒・デュラハン",
     "context": "glossary zzz term youkeikaideyurahan: Japanese official term name",
@@ -12758,6 +14098,64 @@ const block12: SourceText[] = [
     "protectedTokens": [
       "[[enemies|",
       "[[ethereal]]"
+    ]
+  },
+  {
+    "id": "term.zzz.youkeikaiponpei.name",
+    "ja": "要警戒・ポンペイ",
+    "context": "glossary zzz term youkeikaiponpei: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaiponpei.summary",
+    "ja": "炎が弱点のボス。",
+    "context": "glossary zzz term youkeikaiponpei: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaiponpei.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term youkeikaiponpei: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.youkeikaimarionetto.name",
+    "ja": "要警戒・マリオネット",
+    "context": "glossary zzz term youkeikaimarionetto: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaimarionetto.summary",
+    "ja": "エーテル・氷が弱点のボス。",
+    "context": "glossary zzz term youkeikaimarionetto: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.youkeikaimarionetto.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term youkeikaimarionetto: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -12855,10 +14253,7 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block13: SourceText[] = [
+  },
   {
     "id": "term.zzz.tremor-trigram-vessel.summary",
     "ja": "攻撃力が上がる防護向けのA級音動機。",
@@ -13262,6 +14657,35 @@ const block13: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.rokkusupuringu.name",
+    "ja": "ロックスプリング",
+    "context": "glossary zzz term rokkusupuringu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rokkusupuringu.summary",
+    "ja": "電気・物理が弱点のボス。",
+    "context": "glossary zzz term rokkusupuringu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.rokkusupuringu.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・物理。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term rokkusupuringu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.sixth-street.name",
     "ja": "六分街",
     "context": "glossary zzz term sixth-street: Japanese official term name",
@@ -13353,7 +14777,36 @@ const block13: SourceText[] = [
       "[[specialty]]",
       "[[stun]]"
     ]
+  },
+  {
+    "id": "term.zzz.wandaringuhantaa.name",
+    "ja": "ワンダリングハンター",
+    "context": "glossary zzz term wandaringuhantaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wandaringuhantaa.summary",
+    "ja": "氷・炎が弱点のボス。",
+    "context": "glossary zzz term wandaringuhantaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wandaringuhantaa.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・炎。耐性は物理。資料上の陣営は「侵蝕体」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term wandaringuhantaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14];

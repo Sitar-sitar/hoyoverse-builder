@@ -29,6 +29,33 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.maiden-beloved.name",
+    "ja": "愛される少女",
+    "context": "glossary genshin term maiden-beloved: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.maiden-beloved.summary",
+    "ja": "治癒効果を高める聖遺物セット。",
+    "context": "glossary genshin term maiden-beloved: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.maiden-beloved.body",
+    "ja": "2セット効果で与える治癒効果+15%。4セット効果では、元素スキル・元素爆発発動後の10秒間、チーム全員が受ける治癒効果+20%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term maiden-beloved: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.staff-of-the-scarlet-sands.name",
     "ja": "赤砂の杖",
     "context": "glossary genshin term staff-of-the-scarlet-sands: Japanese official term name",
@@ -247,6 +274,60 @@ const block0: SourceText[] = [
     "id": "term.genshin.amos-bow.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで攻撃力を49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term amos-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.aratanaru-eda.name",
+    "ja": "新たなる枝",
+    "context": "glossary genshin term aratanaru-eda: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.aratanaru-eda.summary",
+    "ja": "会心ダメージが上がる★4の片手剣。",
+    "context": "glossary genshin term aratanaru-eda: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.aratanaru-eda.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term aratanaru-eda: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-days-past.name",
+    "ja": "在りし日の歌",
+    "context": "glossary genshin term song-of-days-past: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-days-past.summary",
+    "ja": "与える治癒効果が上がり、回復量をダメージに転化できる聖遺物セット。",
+    "context": "glossary genshin term song-of-days-past: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.song-of-days-past.body",
+    "ja": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録し、その8%分を味方の攻撃が命中した時のダメージに加算する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term song-of-days-past: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -857,7 +938,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.genshin.golden-troupe.summary",
     "ja": "元素スキルダメージに関わる聖遺物セット。",
@@ -942,10 +1026,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.genshin.wolfs-gravestone.summary",
     "ja": "攻撃力が上がる★5の両手剣。",
@@ -1111,6 +1192,33 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.ocean-hued-clam.name",
+    "ja": "海染硨磲",
+    "context": "glossary genshin term ocean-hued-clam: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ocean-hued-clam.summary",
+    "ja": "与える治癒効果が上がり、回復量をダメージに転化できる聖遺物セット。",
+    "context": "glossary genshin term ocean-hued-clam: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ocean-hued-clam.body",
+    "ja": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録する「海染の泡」が生成され、3秒後に破裂して記録量の90%分のダメージを周囲の敵に与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ocean-hued-clam: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.fragment-of-harmonic-whimsy.name",
     "ja": "諧律奇想の断章",
     "context": "glossary genshin term fragment-of-harmonic-whimsy: Japanese official term name",
@@ -1165,6 +1273,60 @@ const block1: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.vourukashas-glow.name",
+    "ja": "花海甘露の光",
+    "context": "glossary genshin term vourukashas-glow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vourukashas-glow.summary",
+    "ja": "HPが上がり、元素スキル・爆発のダメージを伸ばせる聖遺物セット。",
+    "context": "glossary genshin term vourukashas-glow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vourukashas-glow.body",
+    "ja": "2セット効果でHP+20%。4セット効果では、元素スキルと元素爆発のダメージ+10%。ダメージを受けた後の5秒間はこの効果量+80%、最大5層まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term vourukashas-glow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.husk-of-opulent-dreams.name",
+    "ja": "華館夢醒形骸記",
+    "context": "glossary genshin term husk-of-opulent-dreams: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.husk-of-opulent-dreams.summary",
+    "ja": "防御力が上がり、岩元素ダメージも伸ばせる聖遺物セット。",
+    "context": "glossary genshin term husk-of-opulent-dreams: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.husk-of-opulent-dreams.body",
+    "ja": "2セット効果で防御力+30%。4セット効果では、「問答」を1層得るごとに防御力+6%と岩元素ダメージ+6%、最大4層まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term husk-of-opulent-dreams: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.swirl.name",
     "ja": "拡散",
     "context": "glossary genshin term swirl: Japanese official term name",
@@ -1192,6 +1354,33 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]"
     ]
+  },
+  {
+    "id": "term.genshin.scholar.name",
+    "ja": "学者",
+    "context": "glossary genshin term scholar: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scholar.summary",
+    "ja": "元素チャージ効率が上がり、チームのエネルギーを回復できる聖遺物セット。",
+    "context": "glossary genshin term scholar: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scholar.body",
+    "ja": "2セット効果で元素チャージ効率+20%。4セット効果では、元素エネルギーを獲得する時、チームの弓・法器キャラの元素エネルギーを3回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term scholar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.cranes-echoing-call.name",
@@ -1242,6 +1431,33 @@ const block1: SourceText[] = [
     "id": "term.genshin.kaguras-verity.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term kaguras-verity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kage-ni-shizumu-maboroshi.name",
+    "ja": "影に沈む幻",
+    "context": "glossary genshin term kage-ni-shizumu-maboroshi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kage-ni-shizumu-maboroshi.summary",
+    "ja": "攻撃力が上がり、超電導・星電導反応を伸ばせる聖遺物セット。",
+    "context": "glossary genshin term kage-ni-shizumu-maboroshi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kage-ni-shizumu-maboroshi.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、超電導反応ダメージ+80%、星電導反応ダメージ+40%。さらに超電導・星電導の影響を受けた敵への攻撃の会心率+16%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kage-ni-shizumu-maboroshi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1352,6 +1568,33 @@ const block1: SourceText[] = [
     "id": "term.genshin.wind-catcher.body",
     "ja": "装備中に風の種を集め、使用するとその場に一定時間の風域を発生させる。",
     "context": "glossary genshin term wind-catcher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kaze-ni-asobu-tsuru.name",
+    "ja": "風に遊ぶ弦",
+    "context": "glossary genshin term kaze-ni-asobu-tsuru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kaze-ni-asobu-tsuru.summary",
+    "ja": "会心率が上がる★4の弓。",
+    "context": "glossary genshin term kaze-ni-asobu-tsuru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kaze-ni-asobu-tsuru.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで会心率を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kaze-ni-asobu-tsuru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1497,6 +1740,33 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.thundersoother.name",
+    "ja": "雷を鎮める尊者",
+    "context": "glossary genshin term thundersoother: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thundersoother.summary",
+    "ja": "雷元素耐性が上がり、雷元素の影響を受けた敵へのダメージが伸びる聖遺物セット。",
+    "context": "glossary genshin term thundersoother: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thundersoother.body",
+    "ja": "2セット効果で雷元素耐性+40%。4セット効果では、雷元素の影響を受けた敵に対するダメージ+35%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term thundersoother: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.vision.name",
     "ja": "神の目",
     "context": "glossary genshin term vision: Japanese official term name",
@@ -1601,7 +1871,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.genshin.kalpalata-lotus.body",
     "ja": "[[sumeru]]で採れる育成素材。森林地帯の崖に生える。ナヒーダやドリーの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -1883,10 +2156,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.genshin.sanctifying-elixir.body",
     "ja": "[[artifact-transmuter]]で消費し、指定したセットや部位の[[artifact]]との交換に使える。",
@@ -1956,6 +2226,33 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[serenitea-pot]]"
     ]
+  },
+  {
+    "id": "term.genshin.retracing-bolide.name",
+    "ja": "逆飛びの流星",
+    "context": "glossary genshin term retracing-bolide: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.retracing-bolide.summary",
+    "ja": "シールドが強化され、シールド中の攻撃を伸ばせる聖遺物セット。",
+    "context": "glossary genshin term retracing-bolide: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.retracing-bolide.body",
+    "ja": "2セット効果でシールド強化+35%。4セット効果では、シールド状態の時、通常攻撃と重撃のダメージ+40%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term retracing-bolide: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.character-card.name",
@@ -2178,6 +2475,60 @@ const block2: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.instructor.name",
+    "ja": "教官",
+    "context": "glossary genshin term instructor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.instructor.summary",
+    "ja": "元素熟知が上がる聖遺物セット。",
+    "context": "glossary genshin term instructor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.instructor.body",
+    "ja": "2セット効果で元素熟知+80。4セット効果では、元素反応を起こした後、チーム全員の元素熟知+120。継続時間8秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term instructor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.berserker.name",
+    "ja": "狂戦士",
+    "context": "glossary genshin term berserker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.berserker.summary",
+    "ja": "会心率が上がる聖遺物セット。",
+    "context": "glossary genshin term berserker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.berserker.body",
+    "ja": "2セット効果で会心率+12%。4セット効果では、HPが70%以下になると会心率がさらに+24%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term berserker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.echoes-of-the-heart.name",
     "ja": "胸中の谺",
     "context": "glossary genshin term echoes-of-the-heart: Japanese official term name",
@@ -2315,6 +2666,60 @@ const block2: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.silver-sword.name",
+    "ja": "銀の剣",
+    "context": "glossary genshin term silver-sword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silver-sword.summary",
+    "ja": "副ステータスを持たない★2の片手剣。",
+    "context": "glossary genshin term silver-sword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.silver-sword.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term silver-sword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-amber.name",
+    "ja": "金珀・試作",
+    "context": "glossary genshin term prototype-amber: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-amber.summary",
+    "ja": "HPが上がる★4の法器。",
+    "context": "glossary genshin term prototype-amber: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-amber.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルでHPを41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prototype-amber: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.prospectors-shovel.name",
     "ja": "金掘りのシャベル",
     "context": "glossary genshin term prospectors-shovel: Japanese official term name",
@@ -2396,7 +2801,10 @@ const block2: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.genshin.tome-of-the-eternal-flow.name",
     "ja": "久遠流転の大典",
@@ -2534,6 +2942,33 @@ const block2: SourceText[] = [
     "id": "term.genshin.fractured-halo.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term fractured-halo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.waster-greatsword.name",
+    "ja": "訓練用大剣",
+    "context": "glossary genshin term waster-greatsword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.waster-greatsword.summary",
+    "ja": "副ステータスを持たない★1の両手剣。",
+    "context": "glossary genshin term waster-greatsword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.waster-greatsword.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term waster-greatsword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -2826,10 +3261,7 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[natlan]]"
     ]
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.genshin.quicken.name",
     "ja": "原激化",
@@ -3187,6 +3619,33 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.scarlet-proof.name",
+    "ja": "紅血の証",
+    "context": "glossary genshin term scarlet-proof: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scarlet-proof.summary",
+    "ja": "攻撃力が上がり、星拡散反応を伸ばせる聖遺物セット。",
+    "context": "glossary genshin term scarlet-proof: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.scarlet-proof.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、星拡散反応を起こした後の10秒間、会心率+16%し、星拡散反応ダメージ+40%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term scarlet-proof: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.rainbow-serpents-rain-bow.name",
     "ja": "虹蛇の雨弦",
     "context": "glossary genshin term rainbow-serpents-rain-bow: Japanese official term name",
@@ -3309,7 +3768,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.genshin.sword-of-descension.summary",
     "ja": "攻撃力が上がる★4の片手剣。",
@@ -3356,6 +3818,33 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[energy-recharge]]"
     ]
+  },
+  {
+    "id": "term.genshin.prototype-archaic.name",
+    "ja": "古華・試作",
+    "context": "glossary genshin term prototype-archaic: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-archaic.summary",
+    "ja": "攻撃力が上がる★4の両手剣。",
+    "context": "glossary genshin term prototype-archaic: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-archaic.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prototype-archaic: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.black-tassel.name",
@@ -3787,10 +4276,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.genshin.saikouchi-kensaku.summary",
     "ja": "鍛冶屋から採鉱地の情報を得る機能。",
@@ -4184,6 +4670,63 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]"
     ]
+  },
+  {
+    "id": "term.genshin.prototype-rancour.name",
+    "ja": "斬岩・試作",
+    "context": "glossary genshin term prototype-rancour: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-rancour.summary",
+    "ja": "物理ダメージが上がる★4の片手剣。",
+    "context": "glossary genshin term prototype-rancour: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-rancour.body",
+    "ja": "Lv.90の基礎攻撃力は565。同レベルで物理ダメージを34.5%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prototype-rancour: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nighttime-whispers-in-the-echoing-woods.name",
+    "ja": "残響の森で囁かれる夜話",
+    "context": "glossary genshin term nighttime-whispers-in-the-echoing-woods: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nighttime-whispers-in-the-echoing-woods.summary",
+    "ja": "攻撃力が上がり、岩元素ダメージを伸ばせる聖遺物セット。",
+    "context": "glossary genshin term nighttime-whispers-in-the-echoing-woods: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block5: SourceText[] = [
+  {
+    "id": "term.genshin.nighttime-whispers-in-the-echoing-woods.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、元素スキル発動後の10秒間、岩元素ダメージ+20%。結晶反応で生成されたシールド状態では、この効果量が+150%される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nighttime-whispers-in-the-echoing-woods: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.trishiraite.name",
@@ -4718,6 +5261,33 @@ const block4: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.hunters-bow.name",
+    "ja": "狩猟弓",
+    "context": "glossary genshin term hunters-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hunters-bow.summary",
+    "ja": "副ステータスを持たない★1の弓。",
+    "context": "glossary genshin term hunters-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hunters-bow.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hunters-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.flowing-purity.name",
     "ja": "純水流華",
     "context": "glossary genshin term flowing-purity: Japanese official term name",
@@ -4734,10 +5304,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.genshin.flowing-purity.body",
     "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -4974,6 +5541,33 @@ const block5: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.vermillion-hereafter.name",
+    "ja": "辰砂往生録",
+    "context": "glossary genshin term vermillion-hereafter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vermillion-hereafter.summary",
+    "ja": "攻撃力が上がり、HPを失うほど攻撃力が伸びる聖遺物セット。",
+    "context": "glossary genshin term vermillion-hereafter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.vermillion-hereafter.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、元素爆発を発動すると「潜光」を得て攻撃力+8%。HPを失うたびに攻撃力がさらに+10%、最大4回まで重なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term vermillion-hereafter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.forged-by-the-golden-melody.name",
     "ja": "シンフォニーの鋳影",
     "context": "glossary genshin term forged-by-the-golden-melody: Japanese official term name",
@@ -5003,6 +5597,33 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.beginners-protector.name",
+    "ja": "新米の長槍",
+    "context": "glossary genshin term beginners-protector: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.beginners-protector.summary",
+    "ja": "副ステータスを持たない★1の長柄武器。",
+    "context": "glossary genshin term beginners-protector: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.beginners-protector.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term beginners-protector: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.trust-rank.name",
     "ja": "信頼ランク",
     "context": "glossary genshin term trust-rank: Japanese official term name",
@@ -5030,7 +5651,10 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[serenitea-pot]]"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.genshin.deepwood-memories.name",
     "ja": "深林の記憶",
@@ -5165,6 +5789,33 @@ const block5: SourceText[] = [
     "id": "term.genshin.sword-of-narzissenkreuz.body",
     "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term sword-of-narzissenkreuz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nymphs-dream.name",
+    "ja": "水仙の夢",
+    "context": "glossary genshin term nymphs-dream: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nymphs-dream.summary",
+    "ja": "水元素ダメージが上がる聖遺物セット。",
+    "context": "glossary genshin term nymphs-dream: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nymphs-dream.body",
+    "ja": "2セット効果で水元素ダメージ+15%。4セット効果では、攻撃が命中するたびに「鏡中の水仙」を1層得て、1/2/3層で攻撃力+7%/16%/25%、水元素ダメージ+4%/9%/15%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nymphs-dream: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -5682,10 +6333,34 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
+  {
+    "id": "term.genshin.apprentices-notes.name",
+    "ja": "生徒ノート",
+    "context": "glossary genshin term apprentices-notes: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.apprentices-notes.summary",
+    "ja": "副ステータスを持たない★1の法器。",
+    "context": "glossary genshin term apprentices-notes: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.apprentices-notes.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term apprentices-notes: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
   {
     "id": "term.genshin.serenitys-call.name",
     "ja": "静謐の笛",
@@ -5922,7 +6597,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.genshin.cecilia.summary",
     "ja": "モンドの特産品。",
@@ -6635,10 +7313,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.genshin.pale-flame.summary",
     "ja": "物理ダメージに関わる聖遺物セット。",
@@ -6857,6 +7532,36 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.tidal-shadow.name",
+    "ja": "タイダル・シャドー",
+    "context": "glossary genshin term tidal-shadow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tidal-shadow.summary",
+    "ja": "攻撃力が上がる★4の両手剣。",
+    "context": "glossary genshin term tidal-shadow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block8: SourceText[] = [
+  {
+    "id": "term.genshin.tidal-shadow.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tidal-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.wanderers-troupe.name",
     "ja": "大地を流浪する楽団",
     "context": "glossary genshin term wanderers-troupe: Japanese official term name",
@@ -6884,6 +7589,33 @@ const block7: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
+  },
+  {
+    "id": "term.genshin.resolution-of-sojourner.name",
+    "ja": "旅人の心",
+    "context": "glossary genshin term resolution-of-sojourner: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.resolution-of-sojourner.summary",
+    "ja": "攻撃力が上がり、重撃の会心率が伸びる聖遺物セット。",
+    "context": "glossary genshin term resolution-of-sojourner: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.resolution-of-sojourner.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、重撃の会心率+30%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term resolution-of-sojourner: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.travelers-handy-sword.name",
@@ -6971,6 +7703,33 @@ const block7: SourceText[] = [
       "[[crit-rate]]",
       "[[normal-attack]]"
     ]
+  },
+  {
+    "id": "term.genshin.prototype-crescent.name",
+    "ja": "澹月・試作",
+    "context": "glossary genshin term prototype-crescent: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-crescent.summary",
+    "ja": "攻撃力が上がる★4の弓。",
+    "context": "glossary genshin term prototype-crescent: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-crescent.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prototype-crescent: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.tansakudo.name",
@@ -7587,10 +8346,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.genshin.serpent-spine.body",
     "ja": "Lv.90時の基礎攻撃力は510。同レベルで[[crit-rate]]を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -7742,6 +8498,36 @@ const block8: SourceText[] = [
     "id": "term.genshin.moonweavers-dawn.body",
     "ja": "Lv.90の基礎攻撃力は565。同レベルで攻撃力を27.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term moonweavers-dawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block9: SourceText[] = [
+  {
+    "id": "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.name",
+    "ja": "月を紡ぐ夜の歌",
+    "context": "glossary genshin term tsuki-wo-tsumugu-yoru-no-uta: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.summary",
+    "ja": "元素チャージ効率が上がり、チームの元素熟知と月反応を伸ばせる聖遺物セット。",
+    "context": "glossary genshin term tsuki-wo-tsumugu-yoru-no-uta: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.body",
+    "ja": "2セット効果で元素チャージ効率+20%。4セット効果では、元素ダメージを与えた時に「月輝明光・崇拝」を得て、月兆レベルに応じてチーム全員の元素熟知+60/120。さらに月反応ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tsuki-wo-tsumugu-yoru-no-uta: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -7978,6 +8764,33 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.iron-point.name",
+    "ja": "鉄尖槍",
+    "context": "glossary genshin term iron-point: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.iron-point.summary",
+    "ja": "副ステータスを持たない★2の長柄武器。",
+    "context": "glossary genshin term iron-point: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.iron-point.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term iron-point: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.iron-sting.name",
     "ja": "鉄蜂の刺し",
     "context": "glossary genshin term iron-sting: Japanese official term name",
@@ -8006,6 +8819,60 @@ const block8: SourceText[] = [
       "[[element]]",
       "[[elemental-mastery]]"
     ]
+  },
+  {
+    "id": "term.genshin.celestial-gift.name",
+    "ja": "天からの贈り物",
+    "context": "glossary genshin term celestial-gift: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.celestial-gift.summary",
+    "ja": "元素チャージ効率が上がり、チームに元素ダメージバフを配れる聖遺物セット。",
+    "context": "glossary genshin term celestial-gift: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.celestial-gift.body",
+    "ja": "2セット効果で元素チャージ効率+20%。4セット効果では、「魔女の課題」をクリアしている場合、元素スキル発動で装備者の元素ダメージ+20%をチーム全員に20秒間付与する。魔導秘儀では最大40%まで強化される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term celestial-gift: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenkyu-no-kengenseshi-yoru.name",
+    "ja": "天穹の顕現せし夜",
+    "context": "glossary genshin term tenkyu-no-kengenseshi-yoru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenkyu-no-kengenseshi-yoru.summary",
+    "ja": "元素熟知が上がり、月反応を伸ばせる聖遺物セット。",
+    "context": "glossary genshin term tenkyu-no-kengenseshi-yoru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tenkyu-no-kengenseshi-yoru.body",
+    "ja": "2セット効果で元素熟知+80。4セット効果では、月反応時に「月輝明光・蓄念」を得て、月兆レベルに応じて会心率+15%/30%。さらに月反応ダメージも上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tenkyu-no-kengenseshi-yoru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.skyward-pride.name",
@@ -8549,10 +9416,7 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.genshin.unfinished-reverie.name",
     "ja": "遂げられなかった想い",
@@ -8588,7 +9452,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.genshin.toshi-hyouban.summary",
     "ja": "各地域の活動に応じて報酬を得られる仕組み。",
@@ -9033,6 +9900,33 @@ const block9: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.white-tassel.name",
+    "ja": "白纓槍",
+    "context": "glossary genshin term white-tassel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.white-tassel.summary",
+    "ja": "会心率が上がる★3の長柄武器。",
+    "context": "glossary genshin term white-tassel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.white-tassel.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで会心率を23.4%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term white-tassel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.whiteblind.name",
     "ja": "白影の剣",
     "context": "glossary genshin term whiteblind: Japanese official term name",
@@ -9119,6 +10013,60 @@ const block9: SourceText[] = [
     "protectedTokens": [
       "[[energy-recharge]]"
     ]
+  },
+  {
+    "id": "term.genshin.white-iron-greatsword.name",
+    "ja": "白鉄の大剣",
+    "context": "glossary genshin term white-iron-greatsword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.white-iron-greatsword.summary",
+    "ja": "防御力が上がる★3の両手剣。",
+    "context": "glossary genshin term white-iron-greatsword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.white-iron-greatsword.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで防御力を43.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term white-iron-greatsword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gambler.name",
+    "ja": "博徒",
+    "context": "glossary genshin term gambler: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gambler.summary",
+    "ja": "元素スキルのダメージが上がり、クールタイムをリセットできる聖遺物セット。",
+    "context": "glossary genshin term gambler: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.gambler.body",
+    "ja": "2セット効果で元素スキルダメージ+20%。4セット効果では、敵を倒した時、元素スキルのクールタイムをリセットする。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term gambler: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.the-first-great-magic.name",
@@ -9454,7 +10402,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.genshin.master-key.body",
     "ja": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -9504,10 +10455,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.genshin.domain.summary",
     "ja": "敵との戦闘などに挑戦し報酬を得られる場所。",
@@ -9586,6 +10534,33 @@ const block10: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
+  },
+  {
+    "id": "term.genshin.skyrider-greatsword.name",
+    "ja": "飛天大御剣",
+    "context": "glossary genshin term skyrider-greatsword: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.skyrider-greatsword.summary",
+    "ja": "物理ダメージが上がる★3の両手剣。",
+    "context": "glossary genshin term skyrider-greatsword: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.skyrider-greatsword.body",
+    "ja": "Lv.90の基礎攻撃力は401。同レベルで物理ダメージを43.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term skyrider-greatsword: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.skyrider-sword.name",
@@ -9928,6 +10903,33 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.martial-artist.name",
+    "ja": "武人",
+    "context": "glossary genshin term martial-artist: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.martial-artist.summary",
+    "ja": "通常攻撃と重撃のダメージが上がる聖遺物セット。",
+    "context": "glossary genshin term martial-artist: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.martial-artist.body",
+    "ja": "2セット効果で通常攻撃と重撃のダメージ+15%。4セット効果では、元素スキル発動後、通常攻撃と重撃のダメージがさらに+25%。継続時間8秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term martial-artist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.messenger.name",
     "ja": "文使い",
     "context": "glossary genshin term messenger: Japanese official term name",
@@ -10092,6 +11094,33 @@ const block10: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.adventurer.name",
+    "ja": "冒険者",
+    "context": "glossary genshin term adventurer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.adventurer.summary",
+    "ja": "HP上限が上がり、宝箱を開けると回復できる聖遺物セット。",
+    "context": "glossary genshin term adventurer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.adventurer.body",
+    "ja": "2セット効果でHP上限+1000。4セット効果では、宝箱を開けた後の5秒間、HPの30%を徐々に回復する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term adventurer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.adventurers-handbook.name",
     "ja": "冒険の証",
     "context": "glossary genshin term adventurers-handbook: Japanese official term name",
@@ -10151,6 +11180,60 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.the-exile.name",
+    "ja": "亡命者",
+    "context": "glossary genshin term the-exile: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-exile.summary",
+    "ja": "元素チャージ効率が上がり、チームのエネルギーを回復できる聖遺物セット。",
+    "context": "glossary genshin term the-exile: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.the-exile.body",
+    "ja": "2セット効果で元素チャージ効率+20%。4セット効果では、元素爆発を発動すると、自分以外のチーム全員の元素エネルギーを2秒ごとに2回復する。継続時間6秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term the-exile: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pocket-grimoire.name",
+    "ja": "ポケット魔導書",
+    "context": "glossary genshin term pocket-grimoire: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pocket-grimoire.summary",
+    "ja": "副ステータスを持たない★2の法器。",
+    "context": "glossary genshin term pocket-grimoire: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pocket-grimoire.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pocket-grimoire: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.portable-waypoint.name",
     "ja": "ポケットワープポイント",
     "context": "glossary genshin term portable-waypoint: Japanese official term name",
@@ -10205,6 +11288,33 @@ const block10: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.prototype-starglitter.name",
+    "ja": "星鎌・試作",
+    "context": "glossary genshin term prototype-starglitter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-starglitter.summary",
+    "ja": "元素チャージ効率が上がる★4の長柄武器。",
+    "context": "glossary genshin term prototype-starglitter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.prototype-starglitter.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで元素チャージ効率を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term prototype-starglitter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.astral-vultures-crimson-plumage.name",
     "ja": "星鷲の紅き羽",
     "context": "glossary genshin term astral-vultures-crimson-plumage: Japanese official term name",
@@ -10232,7 +11342,10 @@ const block10: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.genshin.philanemo-mushroom.name",
     "ja": "慕風のマッシュルーム",
@@ -10454,10 +11567,7 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block11: SourceText[] = [
+  },
   {
     "id": "term.genshin.moonpiercer.body",
     "ja": "Lv.90の基礎攻撃力は565。同レベルで[[elemental-mastery]]を110伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -10491,6 +11601,33 @@ const block11: SourceText[] = [
     "id": "term.genshin.the-unforged.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで攻撃力を49.6%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term the-unforged: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dull-blade.name",
+    "ja": "無鋒の剣",
+    "context": "glossary genshin term dull-blade: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dull-blade.summary",
+    "ja": "副ステータスを持たない★1の片手剣。",
+    "context": "glossary genshin term dull-blade: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dull-blade.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は185。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dull-blade: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -10869,6 +12006,33 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.brave-heart.name",
+    "ja": "勇士の心",
+    "context": "glossary genshin term brave-heart: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.brave-heart.summary",
+    "ja": "攻撃力が上がり、HPの多い敵へのダメージが伸びる聖遺物セット。",
+    "context": "glossary genshin term brave-heart: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.brave-heart.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、HPが50%以上の敵に対するダメージ+30%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term brave-heart: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.fluorescent-fungus.name",
     "ja": "ユウトウタケ",
     "context": "glossary genshin term fluorescent-fungus: Japanese official term name",
@@ -10919,6 +12083,33 @@ const block11: SourceText[] = [
     "id": "term.genshin.mitternachts-waltz.body",
     "ja": "Lv.90時の基礎攻撃力は510。同レベルで物理ダメージを51.7%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term mitternachts-waltz: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.yuki-ni-shizumu-kokoro.name",
+    "ja": "雪に沈む心",
+    "context": "glossary genshin term yuki-ni-shizumu-kokoro: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.yuki-ni-shizumu-kokoro.summary",
+    "ja": "会心ダメージが上がる★4の法器。",
+    "context": "glossary genshin term yuki-ni-shizumu-kokoro: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.yuki-ni-shizumu-kokoro.body",
+    "ja": "Lv.90の基礎攻撃力は510。同レベルで会心ダメージを55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term yuki-ni-shizumu-kokoro: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -10983,6 +12174,33 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.old-mercs-pal.name",
+    "ja": "傭兵の重剣",
+    "context": "glossary genshin term old-mercs-pal: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.old-mercs-pal.summary",
+    "ja": "副ステータスを持たない★2の両手剣。",
+    "context": "glossary genshin term old-mercs-pal: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.old-mercs-pal.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term old-mercs-pal: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.nightweavers-looking-glass.name",
     "ja": "夜を紡ぐ天鏡",
     "context": "glossary genshin term nightweavers-looking-glass: Japanese official term name",
@@ -11010,6 +12228,33 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]"
     ]
+  },
+  {
+    "id": "term.genshin.echoes-of-an-offering.name",
+    "ja": "来歆の余響",
+    "context": "glossary genshin term echoes-of-an-offering: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.echoes-of-an-offering.summary",
+    "ja": "攻撃力が上がり、通常攻撃を強化できる聖遺物セット。",
+    "context": "glossary genshin term echoes-of-an-offering: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.echoes-of-an-offering.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、通常攻撃が命中すると36%の確率で「幽谷祭祀」が発動し、通常攻撃ダメージが攻撃力の70%分アップする。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term echoes-of-an-offering: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.flower-of-paradise-lost.name",
@@ -11048,7 +12293,10 @@ const block11: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block13: SourceText[] = [
   {
     "id": "term.genshin.fading-twilight.summary",
     "ja": "元素チャージ効率が上がる★4の弓。",
@@ -11126,6 +12374,33 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[teyvat]]"
     ]
+  },
+  {
+    "id": "term.genshin.recurve-bow.name",
+    "ja": "リカーブボウ",
+    "context": "glossary genshin term recurve-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.recurve-bow.summary",
+    "ja": "HPが上がる★3の弓。",
+    "context": "glossary genshin term recurve-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.recurve-bow.body",
+    "ja": "Lv.90の基礎攻撃力は354。同レベルでHPを46.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term recurve-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.debate-club.name",
@@ -11416,10 +12691,7 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[fontaine]]"
     ]
-  }
-];
-
-const block12: SourceText[] = [
+  },
   {
     "id": "term.genshin.violetgrass.name",
     "ja": "琉璃袋",
@@ -11650,6 +12922,33 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.seasoned-hunters-bow.name",
+    "ja": "歴戦の狩猟弓",
+    "context": "glossary genshin term seasoned-hunters-bow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.seasoned-hunters-bow.summary",
+    "ja": "副ステータスを持たない★2の弓。",
+    "context": "glossary genshin term seasoned-hunters-bow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.seasoned-hunters-bow.body",
+    "ja": "最大レベル（Lv.70）の基礎攻撃力は243。副ステータスや武器スキルは持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term seasoned-hunters-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.burgeon.name",
     "ja": "烈開花",
     "context": "glossary genshin term burgeon: Japanese official term name",
@@ -11677,6 +12976,33 @@ const block12: SourceText[] = [
     "protectedTokens": [
       "[[bloom]]"
     ]
+  },
+  {
+    "id": "term.genshin.lavawalker.name",
+    "ja": "烈火を渡る賢者",
+    "context": "glossary genshin term lavawalker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lavawalker.summary",
+    "ja": "炎元素耐性が上がり、炎元素の影響を受けた敵へのダメージが伸びる聖遺物セット。",
+    "context": "glossary genshin term lavawalker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lavawalker.body",
+    "ja": "2セット効果で炎元素耐性+40%。4セット効果では、炎元素の影響を受けた敵に対するダメージ+35%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term lavawalker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.scion-of-the-blazing-sun.name",
@@ -11766,6 +13092,33 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.heart-of-the-furnace.name",
+    "ja": "炉炎溶錬の心",
+    "context": "glossary genshin term heart-of-the-furnace: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heart-of-the-furnace.summary",
+    "ja": "攻撃力が上がり、星反応のダメージを伸ばせる聖遺物セット。",
+    "context": "glossary genshin term heart-of-the-furnace: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.heart-of-the-furnace.body",
+    "ja": "2セット効果で攻撃力+18%。4セット効果では、星反応を起こすか星反応ダメージを与えた後の12秒間、攻撃力+12%し、近くのチーム全員が与える星反応ダメージ+50%。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term heart-of-the-furnace: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.romaritime-flower.name",
     "ja": "ロマリタイムフラワー",
     "context": "glossary genshin term romaritime-flower: Japanese official term name",
@@ -11853,4 +13206,4 @@ const block12: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13];
