@@ -73,6 +73,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.akaki-tsubasa-no-yasoukyoku.name": {
+    "text": "赤き翼の夜想曲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.akaki-tsubasa-no-yasoukyoku.summary": {
+    "text": "エネルギー自動回復に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.akaki-tsubasa-no-yasoukyoku.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を高める。4セット効果は会心ダメージと、攻撃の与えるブレイク値を高める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.dawns-bloom.name": {
     "text": "暁に咲く花",
     "sourceHash": null,
@@ -249,6 +267,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.hailstorm-shrine.body": {
     "text": "「異常」の[[specialty|特性]]に対応する[[w-engine]]。Ver.1.4の[[w-engine-channel]]で期間限定で登場した。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ariel.name": {
+    "text": "アリエル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ariel.summary": {
+    "text": "戦闘に同行するS級ボンプ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ariel.body": {
+    "text": "編成に加えられる[[bangboo]]。周囲の敵を引き寄せてエーテル属性ダメージを与え、引き寄せた敵の数に応じてHP回復やエネルギー回復などのバフをランダムに得る。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -487,6 +523,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.vision-corporation.name": {
+    "text": "ヴィジョン・コーポレーション",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vision-corporation.summary": {
+    "text": "旧都地下鉄改修工事を請け負った建設会社。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.vision-corporation.body": {
+    "text": "比較的大手の建設会社。旧都地下鉄改修工事で住民を巻き込む爆破計画が明るみに出て頓挫した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.ukaavarusu.name": {
     "text": "羽化・アヴァルス",
     "sourceHash": null,
@@ -519,6 +573,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.ukaenjinbihorudaa.body": {
     "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は物理・風。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukasapusshonsukuwatta.name": {
+    "text": "羽化・サプレッション・スクワッタ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukasapusshonsukuwatta.summary": {
+    "text": "電気・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ukasapusshonsukuwatta.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -667,6 +739,96 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.easupeesusenchineru.name": {
+    "text": "エアスペース・センティネル",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.easupeesusenchineru.summary": {
+    "text": "氷・風が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.easupeesusenchineru.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.easupeesupatoroorinna.name": {
+    "text": "エアスペース・パトローリンナ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.easupeesupatoroorinna.summary": {
+    "text": "炎・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.easupeesupatoroorinna.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigyo.name": {
+    "text": "鋭御",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigyo.summary": {
+    "text": "防御力を攻撃の基準にする特性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigyo.body": {
+    "text": "[[specialty|特性]]のひとつ。防御力を基準にダメージを計算するエージェントが属する。詳しい能力や使用するリソースは[[agent]]ごとに確認する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigeki.name": {
+    "text": "鋭撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigeki.summary": {
+    "text": "鋭御特性のエージェントが与えるダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eigeki.body": {
+    "text": "鋭御特性のエージェントのスキルで与えるダメージの種別。防御力を基準に計算され、会心が発生した時は通常の会心ダメージの代わりに暴傷ダメージのボーナスが適用される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eikou-no-kishidou.name": {
+    "text": "栄光の騎士道",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eikou-no-kishidou.summary": {
+    "text": "会心ダメージが上がる強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.eikou-no-kishidou.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で会心ダメージを48%伸ばせる。通常攻撃や強化特殊スキルの重撃が命中すると「戦刃」を得て、会心ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hdd.name": {
     "text": "H.D.D",
     "sourceHash": null,
@@ -789,6 +951,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.ether-battery.body": {
     "text": "[[combat-simulation]]や区域防衛で使うと、戦闘を飛ばして対応する報酬を獲得できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ether-veil.name": {
+    "text": "エーテルベール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ether-veil.summary": {
+    "text": "特定のエージェントが展開する支援効果。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ether-veil.body": {
+    "text": "一部のエージェントが展開するベール状の支援効果。展開や延長を条件として、メンバー全員の与ダメージや会心ダメージ、HP上限などを高める効果と結びつくことが多い。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1333,6 +1513,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.outer-ring.name": {
+    "text": "外環",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.outer-ring.summary": {
+    "text": "新エリー都の郊外に広がる荒野地帯。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.outer-ring.body": {
+    "text": "[[new-eridu]]の郊外に広がる地域。無法地帯とみなされ、走り屋集団などが活動する。ブレイズウッドなどの集落がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.cinder-cobalt.name": {
     "text": "「灰燼」-蒼藍",
     "sourceHash": null,
@@ -1423,6 +1621,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.external-strategy-department.name": {
+    "text": "外務計策局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.external-strategy-department.summary": {
+    "text": "ヴェリナやノルムーが所属するロスカリファの機関。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.external-strategy-department.body": {
+    "text": "ロスカリファの中枢五局の一つで、通称は外計局。対外的な窓口として、他地域との連絡や調整を担う。マルセルグループの上位組織でもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kagayakeruchikaibirii.name": {
     "text": "輝ける誓い・ビリー",
     "sourceHash": null,
@@ -1455,6 +1671,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.brawlerboo.body": {
     "text": "編成に加えられる[[bangboo]]。浮遊中に味方が重撃を当てると、急降下して炎ダメージを与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kage-o-ou-shiroki-kiba.name": {
+    "text": "影を追う白き牙",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kage-o-ou-shiroki-kiba.summary": {
+    "text": "エネルギー自動回復が上がる強攻向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.kage-o-ou-shiroki-kiba.body": {
+    "text": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でエネルギー自動回復を60%伸ばせる。会心率が上がり、エネルギーをまとめて消費すると電気属性ダメージが敵の防御力を一部無視する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1855,6 +2089,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.abloom.name": {
+    "text": "狂咲",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.abloom.summary": {
+    "text": "状態異常の敵への攻撃で発動する追加ダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.abloom.body": {
+    "text": "特定のエージェントの攻撃が[[attribute-anomaly|状態異常]]の敵に命中した時に発動する、追加の状態異常ダメージ。元の状態異常の属性に応じたダメージを与え、ブレイク状態の敵に対してはダメージ量が増える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.kyousei-hollow.name": {
     "text": "共生ホロウ",
     "sourceHash": null,
@@ -2049,6 +2301,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.quick-handbook.body": {
     "text": "作戦の情報を確認でき、バッテリーなどの所持数も表示される。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-bureau.name": {
+    "text": "空域巡警局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-bureau.summary": {
+    "text": "シグリッドが所属するロスカリファの機関。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-bureau.body": {
+    "text": "ロスカリファの中枢五局の一つで、通称は空巡局。ロスカリファとその周辺地域の安全保障を担う。総務次官はシグリッド。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-shieldguard.name": {
+    "text": "空巡近衛兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-shieldguard.summary": {
+    "text": "炎・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-shieldguard.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-vanguard.name": {
+    "text": "空巡先遣隊",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-vanguard.summary": {
+    "text": "炎・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-vanguard.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-spearguard.name": {
+    "text": "空巡槍兵",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-spearguard.summary": {
+    "text": "炎・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.airspace-patrol-spearguard.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2701,6 +3025,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.void-hunter.name": {
+    "text": "虚狩り",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.void-hunter.summary": {
+    "text": "災害鎮圧の功労者に与えられる最高位の称号。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.void-hunter.body": {
+    "text": "ホロウ災害の鎮圧に大きな功績のあった傑物に与えられる称号。現在の称号保持者には星見雅や葉瞬光がおり、初代の虚狩りは七人とされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.notes-from-the-chained.name": {
     "text": "獄中の手記",
     "sourceHash": null,
@@ -3061,6 +3403,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.sapusshonsukuwatta.name": {
+    "text": "サプレッション・スクワッタ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sapusshonsukuwatta.summary": {
+    "text": "炎・風が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sapusshonsukuwatta.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.the-vault.name": {
     "text": "ザ・ボールト",
     "sourceHash": null,
@@ -3147,6 +3507,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.sunken-corridor.body": {
     "text": "[[roskhalifa]]で探索できるエリアの一つ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exaltists.name": {
+    "text": "讃頌会",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exaltists.summary": {
+    "text": "「始まりの主」を崇拝するカルト集団。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.exaltists.body": {
+    "text": "「始まりの主」と呼ばれる存在を原初の神として崇拝する集団。その計画のために人体実験やテロ行為を繰り返してきたとされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3655,6 +4033,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.shouka.name": {
+    "text": "昇華",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shouka.summary": {
+    "text": "流明属性専用の状態異常反応。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.shouka.body": {
+    "text": "流明スタックが付与された敵が[[attribute-anomaly|状態異常]]に陥ると発動する、流明属性専用の反応。スタックを消費し、状態異常の総ダメージを増加させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.shoukyakukyou.name": {
     "text": "焼却狂",
     "sourceHash": null,
@@ -3889,6 +4285,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.new-eridu-defense-force.name": {
+    "text": "新エリー都防衛軍",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.new-eridu-defense-force.summary": {
+    "text": "オボルス小隊やシルバー小隊が所属する軍組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.new-eridu-defense-force.body": {
+    "text": "[[new-eridu]]の防衛軍。超大型[[hollow|ホロウ]]内での対エーテリアス戦闘などを担い、傘下にオボルス小隊やシルバー小隊がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.singular-leak.name": {
     "text": "シンギュラ・リーク",
     "sourceHash": null,
@@ -4065,6 +4479,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.swing-jazz.body": {
     "text": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.scott-outpost.name": {
+    "text": "スコット前哨基地",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.scott-outpost.summary": {
+    "text": "零号ホロウ近郊にある前哨基地。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.scott-outpost.body": {
+    "text": "巨大な[[hollow|ホロウ]]の近郊に置かれた軍の拠点。零号ホロウや式輿防衛戦、危局強襲戦などの戦闘コンテンツへの参加拠点となる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4267,6 +4699,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.seimu-tourikyoku.name": {
+    "text": "政務統理局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.seimu-tourikyoku.summary": {
+    "text": "ロスカリファの最高意思決定機関。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.seimu-tourikyoku.body": {
+    "text": "ロスカリファの中枢五局の一つで、通称は政統局。規則の制定など、ロスカリファ全体の運営方針を定める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.seimei-no-torikago.name": {
     "text": "青溟の鳥籠",
     "sourceHash": null,
@@ -4299,6 +4749,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.krakens-cradle.body": {
     "text": "[[rupture]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でHPを30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sekigagumi.name": {
+    "text": "赤牙組",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sekigagumi.summary": {
+    "text": "十四分街を根城にしていたギャング。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sekigagumi.body": {
+    "text": "十四分街を根城にする悪名高いギャング。元はカンバス通りの互助組織だったが、組長の死亡により組織としてはほぼ瓦解している。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4515,6 +4983,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.sorudedousuchikuenekata.body": {
     "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.daato-kessha.name": {
+    "text": "ダアト結社",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.daato-kessha.summary": {
+    "text": "レミエールが所属する、詳細不明の陣営。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.daato-kessha.body": {
+    "text": "Ver.3.3時点で詳細がほとんど明かされていない陣営。作中に登場しているメンバーはレミエールのみで、彼女自身も結社をあまり信用していない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -4771,6 +5257,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.failume-heights.name": {
+    "text": "澄輝坪",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.failume-heights.summary": {
+    "text": "ワイフェイ半島にある街区。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.failume-heights.body": {
+    "text": "ワイフェイ半島にある街区。雲嶽山の拠点である随変寺や、工芸品店「奇々解々」がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.training-course.name": {
     "text": "調査員講座",
     "sourceHash": null,
@@ -4803,6 +5307,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.investigation-points.body": {
     "text": "零号ホロウの調査で獲得するポイント。[[withered-domain]]に週間の獲得上限が設けられている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsuika-kougeki.name": {
+    "text": "追加攻撃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsuika-kougeki.summary": {
+    "text": "条件を満たすと自動で発動する追加の攻撃。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tsuika-kougeki.body": {
+    "text": "一部のエージェントのスキルや装備効果を条件に、通常の行動とは別に発動する攻撃。発動条件や攻撃内容はエージェントや効果ごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5149,6 +5671,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.teraaraputorueguzekyuutaa.name": {
+    "text": "テラー・ラプトル・エグゼキューター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teraaraputorueguzekyuutaa.summary": {
+    "text": "氷・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.teraaraputorueguzekyuutaa.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。耐性は電気。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.electrolip-gloss.name": {
     "text": "電撃リップグロス",
     "sourceHash": null,
@@ -5311,6 +5851,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.ionized-doppelganger-jane.name": {
+    "text": "電離体・ドッペルゲンガー・ジェーン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ionized-doppelganger-jane.summary": {
+    "text": "物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ionized-doppelganger-jane.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理。耐性は氷。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.freeze.name": {
     "text": "凍結",
     "sourceHash": null,
@@ -5325,6 +5883,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.freeze.body": {
     "text": "氷属性の[[attribute-anomaly|状態異常]]によって発生する。凍結が終了すると[[shatter]]によるダメージが発生する。敵の種類によって凍結の扱いは異なる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sheer-damage.name": {
+    "text": "透徹ダメージ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sheer-damage.summary": {
+    "text": "敵の防御力を無視して与えるダメージ。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.sheer-damage.body": {
+    "text": "[[rupture|命破]]特性のエージェントが扱うダメージ。敵の防御力を無視して計算され、透徹力を高めるほどダメージが増える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5581,6 +6157,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.toshi-chitsujo-bu.name": {
+    "text": "都市秩序部",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.toshi-chitsujo-bu.summary": {
+    "text": "シーシィアが所属する治安局の部門。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.toshi-chitsujo-bu.body": {
+    "text": "新エリー都治安局の部門の一つ。監察官のシーシィアが所属する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.totsugekihouhei.name": {
     "text": "突撃砲兵",
     "sourceHash": null,
@@ -5613,6 +6207,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.totsugekiryouhei.body": {
     "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「反乱軍」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tops-financial-union.name": {
+    "text": "TOPS財政ユニオン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tops-financial-union.summary": {
+    "text": "新エリー都を実質的に運営する複合企業体。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.tops-financial-union.body": {
+    "text": "実質的にエリー市を運営している複合企業体の連合。徹底した実力主義で知られ、傘下にポーセルメックスなどの企業を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6355,6 +6967,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.ballet-twins.name": {
+    "text": "バレエツインズ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ballet-twins.summary": {
+    "text": "ホロウに呑まれた双子のタワー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ballet-twins.body": {
+    "text": "バレエツインズ・ロードに面した双子のタワー。現在はバレエツインズホロウに呑まれている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.hansu.name": {
     "text": "ハンス",
     "sourceHash": null,
@@ -6585,6 +7215,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.faarubauteichikuenekata.body": {
     "text": "[[ethereal]]に分類される[[enemies|敵対ターゲット]]。弱点は炎。耐性は電気。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wishful-finale-aria.name": {
+    "text": "フィナーレの願い・アリア",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wishful-finale-aria.summary": {
+    "text": "エーテル・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.wishful-finale-aria.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6909,6 +7557,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.the-brimstone.body": {
     "text": "「[[attack]]」向けの[[w-engine]]。通常攻撃やダッシュ攻撃、回避反撃を当てるたびに攻撃力を積み上げられる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.furintsu-koubou.name": {
+    "text": "フリンツ工房",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.furintsu-koubou.summary": {
+    "text": "クラレッタが率いるロスカリファの工房。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.furintsu-koubou.body": {
+    "text": "世界で唯一の合金「フリンツ合金」の製造技術を持ち、ロスカリファ全体の装備やハードウェア面の支援を担う。拠点は海上に浮かぶ離島ヴィルリウム。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7345,6 +8011,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.port-elpis.name": {
+    "text": "ポート・エルピス",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.port-elpis.summary": {
+    "text": "ヤヌス区にある港湾エリア。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.port-elpis.body": {
+    "text": "[[new-eridu]]のヤヌス区にある港。釣りスポットが点在し、エルピス最強釣り師決定戦の舞台にもなった。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hoshi-no-hi.name": {
+    "text": "星の碑",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hoshi-no-hi.summary": {
+    "text": "防御力に関わるドライバディスク。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hoshi-no-hi.body": {
+    "text": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果は会心率を高め、炎属性の鋭撃ダメージが敵の防御力を一部無視するようになる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.spring-embrace.name": {
     "text": "ホットスプリング",
     "sourceHash": null,
@@ -7485,6 +8187,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.horouarashigourikiouboumono.body": {
     "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。耐性は氷。資料上の陣営は「暴徒」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hand.name": {
+    "text": "ホロウ事務無害化対策局",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hand.summary": {
+    "text": "対ホロウ6課が所属する、ホロウ災害対応の組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hand.body": {
+    "text": "[[new-eridu]]を管理する上層組織の一つで、ホロウ災害への対応を主な業務とする。対ホロウ特別行動部を擁し、対ホロウ6課などが所属する。略称はH.A.N.D.。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hollow-investigation-association.name": {
+    "text": "ホロウ調査協会",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hollow-investigation-association.summary": {
+    "text": "ホロウ内部の探査を行う組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.hollow-investigation-association.body": {
+    "text": "[[hollow|ホロウ]]内部の探査を行い、拡大や縮小の傾向の把握やキャロットの作成を行っている組織。キャリアセンターを開設して人材募集も行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horogurafikkuaaroo.name": {
+    "text": "ホログラフィックアロー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horogurafikkuaaroo.summary": {
+    "text": "エーテル・物理が弱点のボス。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.horogurafikkuaaroo.body": {
+    "text": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-star-institute.name": {
+    "text": "ホワイトスター学会",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-star-institute.summary": {
+    "text": "エーテルやホロウを研究する組織。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.white-star-institute.body": {
+    "text": "エーテル物質や[[hollow|ホロウ]]、エーテリアスの研究を行っている組織。スコット前哨基地での零号ホロウ対応の統括なども担う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7737,6 +8511,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.miazumanoshisai.body": {
     "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル。耐性は氷。資料上の陣営は「エーテルの異形」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miasma-spawn.name": {
+    "text": "ミアズマのひな",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miasma-spawn.summary": {
+    "text": "物理・エーテルが弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.miasma-spawn.body": {
+    "text": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・エーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -8317,6 +9109,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.mousou-disukotikku.name": {
+    "text": "妄想ディスコティック",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mousou-disukotikku.summary": {
+    "text": "異常掌握が上がる撃破向けのS級音動機。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.mousou-disukotikku.body": {
+    "text": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で異常掌握を30%伸ばせる。異常マスタリーが上がり、強化特殊スキルや通常攻撃でエーテル属性ダメージを与えるとメンバー全員の与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.moso-discotheque.name": {
     "text": "妄想ディスコテック",
     "sourceHash": null,
@@ -8803,6 +9613,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.zzz.lumen.name": {
+    "text": "流明",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumen.summary": {
+    "text": "編成に応じてダメージ属性が変化する属性。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.lumen.body": {
+    "text": "Ver.3.1で追加された[[attribute|属性]]の一つ。編成した次のメンバーの属性に応じて、自身のダメージ属性が変化する。流明属性専用の反応として昇華がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ruurukiipaa.name": {
+    "text": "「ルールキーパー」",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ruurukiipaa.summary": {
+    "text": "炎・物理が弱点の通常エネミー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.ruurukiipaa.body": {
+    "text": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.zzz.lumina-square.name": {
     "text": "ルミナスクエア",
     "sourceHash": null,
@@ -8979,6 +9825,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.zzz.robin.body": {
     "text": "編成に加えられる[[bangboo]]。カードの種類によりダメージや[[stun]]蓄積、[[attribute-anomaly]]蓄積が変わる。[[mockingbird]]との編成では出場メンバーの[[specialty]]によってカードを固定できる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.waifei-peninsula.name": {
+    "text": "ワイフェイ半島",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.waifei-peninsula.summary": {
+    "text": "シーズン2の舞台となった半島地域。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.zzz.waifei-peninsula.body": {
+    "text": "[[new-eridu]]の西にある半島。澄輝坪や随変寺があり、近海にはレムニアンホロウが存在する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
