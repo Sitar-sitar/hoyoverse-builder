@@ -127,6 +127,78 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.electro-abyss-mage.name": {
+    "text": "アビスの魔術師・雷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-abyss-mage.summary": {
+    "text": "雷元素を操るアビスの魔術師。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-abyss-mage.body": {
+    "text": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。雷の弾や落雷で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-abyss-mage.name": {
+    "text": "アビスの魔術師・氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-abyss-mage.summary": {
+    "text": "氷元素を操るアビスの魔術師。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-abyss-mage.body": {
+    "text": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。氷の棘を落とし、周囲を凍らせる攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-abyss-mage.name": {
+    "text": "アビスの魔術師・炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-abyss-mage.summary": {
+    "text": "炎元素を操るアビスの魔術師。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-abyss-mage.body": {
+    "text": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。炎の弾を放ち、周囲に炎の噴出を起こす。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-abyss-mage.name": {
+    "text": "アビスの魔術師・水",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-abyss-mage.summary": {
+    "text": "水元素を操るアビスの魔術師。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-abyss-mage.body": {
+    "text": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。水の泡で拘束し、水の弾で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.amakumo-fruit.name": {
     "text": "天雲草の実",
     "sourceHash": null,
@@ -271,6 +343,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.traveling-doctor.name": {
+    "text": "医者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.traveling-doctor.summary": {
+    "text": "受ける治癒効果が上がる最高レア度3の聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.traveling-doctor.body": {
+    "text": "2セット効果で受ける治癒効果が20%上がる[[artifact|聖遺物]]セット。4セット効果では、元素爆発を発動するとHPを20%回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.otherworldly-story.name": {
     "text": "異世界旅行記",
     "sourceHash": null,
@@ -285,6 +375,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.otherworldly-story.body": {
     "text": "Lv.90の基礎攻撃力は401。同レベルで[[energy-recharge]]を39.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-guard.name": {
+    "text": "遺跡守衛",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-guard.summary": {
+    "text": "古代の人型戦闘機械。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-guard.body": {
+    "text": "古代文明が残した人型の戦闘機械。腕を振り回す攻撃やミサイルを使う。頭部と背中のコアが弱点で、命中させると一定時間機能停止する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-hunter.name": {
+    "text": "遺跡ハンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-hunter.summary": {
+    "text": "飛行する古代の戦闘機械。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.ruin-hunter.body": {
+    "text": "古代文明が残した飛行型の戦闘機械。空中から爆撃や斬撃を行う。飛行中に目玉のコアを狙うと墜落させられる。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -361,6 +487,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.mutant-electro-slime.name": {
+    "text": "異変雷スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mutant-electro-slime.summary": {
+    "text": "変異した雷元素のスライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mutant-electro-slime.body": {
+    "text": "雷元素の[[element|元素]]生物スライムの変異種。通常の雷スライムとは異なる姿を持ち、雷をまといながら移動する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.event-card.name": {
     "text": "イベントカード",
     "sourceHash": null,
@@ -415,6 +559,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.geo-slime.name": {
+    "text": "岩スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-slime.summary": {
+    "text": "岩元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-slime.body": {
+    "text": "岩元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。岩の殻をまとっており、殻がある間は攻撃を弾きやすい。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.geo-treasure-compass.name": {
     "text": "岩のトレジャーコンパス",
     "sourceHash": null,
@@ -429,6 +591,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.geo-treasure-compass.body": {
     "text": "使用すると璃月で近くの宝箱の位置へ案内する。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-specter.name": {
+    "text": "岩フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-specter.summary": {
+    "text": "岩元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -577,6 +757,132 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.eremite-crossbow.name": {
+    "text": "エルマイト旅団・クロスボウ",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-crossbow.summary": {
+    "text": "クロスボウを使うエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-crossbow.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。遠距離からクロスボウで狙ってくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-galehunter.name": {
+    "text": "エルマイト旅団・ゲイルハンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-galehunter.summary": {
+    "text": "風元素の弓を使うエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-galehunter.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。風元素の矢を放ち、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sunfrost.name": {
+    "text": "エルマイト旅団・サンフロスト",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sunfrost.summary": {
+    "text": "氷元素を操るエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sunfrost.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。氷元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-stone-enchanter.name": {
+    "text": "エルマイト旅団・ストーンエンチャンター",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-stone-enchanter.summary": {
+    "text": "岩元素を操るエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-stone-enchanter.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。岩元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sword-dancer.name": {
+    "text": "エルマイト旅団・ソードダンサー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sword-dancer.summary": {
+    "text": "双剣を舞うように操るエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-sword-dancer.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。二刀の剣舞のような連続攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-days-thunder.name": {
+    "text": "エルマイト旅団・デイサンダー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-days-thunder.summary": {
+    "text": "雷元素を操るエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-days-thunder.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。雷元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-linebreaker.name": {
+    "text": "エルマイト旅団・ラインブレイカー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-linebreaker.summary": {
+    "text": "大剣を振るうエルマイト旅団の傭兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.eremite-linebreaker.body": {
+    "text": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。大きな剣を振り回し、前線を突破しようとする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.song-of-the-vigil.name": {
     "text": "遠望の歌",
     "sourceHash": null,
@@ -627,6 +933,132 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.kings-squire.body": {
     "text": "Lv.90の基礎攻撃力は454。同レベルで攻撃力を55.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-geo-slime.name": {
+    "text": "大型岩スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-geo-slime.summary": {
+    "text": "岩元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-geo-slime.body": {
+    "text": "岩元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。厚い岩の殻をまとい、殻を破壊すると弱体化する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-anemo-slime.name": {
+    "text": "大型風スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-anemo-slime.summary": {
+    "text": "風元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-anemo-slime.body": {
+    "text": "風元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。空中に浮かび上がって移動する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-electro-slime.name": {
+    "text": "大型雷スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-electro-slime.summary": {
+    "text": "雷元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-electro-slime.body": {
+    "text": "雷元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。周囲に放電しながら攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-dendro-slime.name": {
+    "text": "大型草スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-dendro-slime.summary": {
+    "text": "草元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-dendro-slime.body": {
+    "text": "草元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。小型の草スライムを生み出すことがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-cryo-slime.name": {
+    "text": "大型氷スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-cryo-slime.summary": {
+    "text": "氷元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-cryo-slime.body": {
+    "text": "氷元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。氷の棘を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-pyro-slime.name": {
+    "text": "大型炎スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-pyro-slime.summary": {
+    "text": "炎元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-pyro-slime.body": {
+    "text": "炎元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。常時発火しており、倒されると自爆する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-hydro-slime.name": {
+    "text": "大型水スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-hydro-slime.summary": {
+    "text": "水元素の大型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.large-hydro-slime.body": {
+    "text": "水元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。泡を吐いて拘束してくることがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -771,6 +1203,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.ocean-hued-clam.body": {
     "text": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録する「海染の泡」が生成され、3秒後に破裂して記録量の90%分のダメージを周囲の敵に与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-fiery-might.name": {
+    "text": "海乱鬼・炎威",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-fiery-might.summary": {
+    "text": "炎をまとう海乱鬼。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-fiery-might.body": {
+    "text": "野伏衆の中でも特に手強い剣士。炎元素を刀にまとわせて斬りかかり、倒されると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-dancing-thunder.name": {
+    "text": "海乱鬼・雷騰",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-dancing-thunder.summary": {
+    "text": "雷をまとう海乱鬼。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.kairagi-dancing-thunder.body": {
+    "text": "野伏衆の中でも特に手強い剣士。雷元素を刀にまとわせて斬りかかり、倒されると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -973,6 +1441,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.anemo-slime.name": {
+    "text": "風スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-slime.summary": {
+    "text": "風元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-slime.body": {
+    "text": "風元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。空中に浮かんで移動する個体もいる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.a-day-carved-from-rising-winds.name": {
     "text": "風立ちの日",
     "sourceHash": null,
@@ -1063,6 +1549,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.anemo-specter.name": {
+    "text": "風フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-specter.summary": {
+    "text": "風元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.katsuragikiri-nagamasa.name": {
     "text": "桂木斬長正",
     "sourceHash": null,
@@ -1099,6 +1603,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.electro-slime.name": {
+    "text": "雷スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-slime.summary": {
+    "text": "雷元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-slime.body": {
+    "text": "雷元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。電気水晶など元素を持つ採取物の近くに現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.thundering-fury.name": {
     "text": "雷のような怒り",
     "sourceHash": null,
@@ -1113,6 +1635,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.thundering-fury.body": {
     "text": "[[artifact]]のセットの一つ。2セット効果は雷元素ダメージを強化する。4セット効果はセットごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-specter.name": {
+    "text": "雷フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-specter.summary": {
+    "text": "雷元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1383,6 +1923,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.sanctifying-elixir.body": {
     "text": "[[artifact-transmuter]]で消費し、指定したセットや部位の[[artifact]]との交換に使える。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tiny-miracle.name": {
+    "text": "奇跡",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tiny-miracle.summary": {
+    "text": "全元素耐性が上がる最高レア度4の聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.tiny-miracle.body": {
+    "text": "2セット効果で全ての元素耐性が20%上がる[[artifact|聖遺物]]セット。4セット効果では、元素ダメージを受けるとその元素の耐性が30%上がり、10秒間継続する（10秒に1回のみ発動可能）。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -1855,6 +2413,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.dendro-slime.name": {
+    "text": "草スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-slime.summary": {
+    "text": "草元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-slime.body": {
+    "text": "草元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。草むらに潜んで隠れていることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.engulfing-lightning.name": {
     "text": "草薙の稲光",
     "sourceHash": null,
@@ -1873,6 +2449,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.dendro-specter.name": {
+    "text": "草フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-specter.summary": {
+    "text": "草元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.fractured-halo.name": {
     "text": "砕け散る光輪",
     "sourceHash": null,
@@ -1887,6 +2481,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.fractured-halo.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-electro-fungus.name": {
+    "text": "グルグル雷キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-electro-fungus.summary": {
+    "text": "雷元素の回転キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-electro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-cryo-fungus.name": {
+    "text": "グルグル氷キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-cryo-fungus.summary": {
+    "text": "氷元素の回転キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-cryo-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-pyro-fungus.name": {
+    "text": "グルグル炎キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-pyro-fungus.summary": {
+    "text": "炎元素の回転キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.whirling-pyro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -2305,6 +2953,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.lucky-dog.name": {
+    "text": "幸運",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lucky-dog.summary": {
+    "text": "防御力とHP回復に寄与する最高レア度3の聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.lucky-dog.body": {
+    "text": "2セット効果で防御力が100上がる[[artifact|聖遺物]]セット。4セット効果では、モラを拾得するとHPを300回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.scarlet-proof.name": {
     "text": "紅血の証",
     "sourceHash": null,
@@ -2413,6 +3079,24 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.cryo-slime.name": {
+    "text": "氷スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-slime.summary": {
+    "text": "氷元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-slime.body": {
+    "text": "氷元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。寒冷な地域に現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.frostbreath.name": {
     "text": "氷の吐息",
     "sourceHash": null,
@@ -2427,6 +3111,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.frostbreath.body": {
     "text": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-specter.name": {
+    "text": "氷フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-specter.summary": {
+    "text": "氷元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -3345,6 +4047,24 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.shuuren-point.body": {
     "text": "任務や探索、イベントなどで獲得し、一定量を集めると依頼任務の報酬枠を利用できる。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.defenders-will.name": {
+    "text": "守護の心",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.defenders-will.summary": {
+    "text": "防御力と元素耐性が上がる最高レア度4の聖遺物セット。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.defenders-will.body": {
+    "text": "2セット効果で防御力が30%上がる[[artifact|聖遺物]]セット。4セット効果では、チーム内の自身のキャラクターの元素タイプが1種類ある毎に、自身にその元素の耐性が30%付く。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -5995,6 +6715,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.grounded-geoshroom.name": {
+    "text": "トコトコ岩マッシュロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.grounded-geoshroom.summary": {
+    "text": "岩元素の陸生キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.grounded-geoshroom.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。地上を歩き回る大型のキノコン。岩の塊を転がして攻撃することがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.grounded-hydroshroom.name": {
+    "text": "トコトコ水マッシュロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.grounded-hydroshroom.summary": {
+    "text": "水元素の陸生キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.grounded-hydroshroom.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。地上を歩き回り、水の泡を吐いて攻撃する大型のキノコン。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.toshi-hyouban.name": {
     "text": "都市評判",
     "sourceHash": null,
@@ -6099,6 +6855,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.dragonspine-spear.body": {
     "text": "Lv.90時の基礎攻撃力は454。同レベルで物理ダメージを69.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-whopperflower.name": {
+    "text": "トリックフラワー・雷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-whopperflower.summary": {
+    "text": "雷元素のトリックフラワー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-whopperflower.body": {
+    "text": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。雷の弾を吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-whopperflower.name": {
+    "text": "トリックフラワー・氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-whopperflower.summary": {
+    "text": "氷元素のトリックフラワー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-whopperflower.body": {
+    "text": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。氷の棘を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-whopperflower.name": {
+    "text": "トリックフラワー・炎",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-whopperflower.summary": {
+    "text": "炎元素のトリックフラワー。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-whopperflower.body": {
+    "text": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。炎の弾を連続で吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6265,6 +7075,60 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.nobushi-kikouban.name": {
+    "text": "野伏・機巧番",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-kikouban.summary": {
+    "text": "からくりを使う野伏衆の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-kikouban.body": {
+    "text": "稲妻を根城にする浪人集団「野伏衆」の一員。手裏剣や煙幕などの忍びの道具を使って戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-jintouban.name": {
+    "text": "野伏・陣刀番",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-jintouban.summary": {
+    "text": "刀で戦う野伏衆の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-jintouban.body": {
+    "text": "稲妻を根城にする浪人集団「野伏衆」の一員。居合のような刀の斬撃で戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-hitsukeban.name": {
+    "text": "野伏・火付番",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-hitsukeban.summary": {
+    "text": "火薬を使う野伏衆の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.nobushi-hitsukeban.body": {
+    "text": "稲妻を根城にする浪人集団「野伏衆」の一員。火の粉や爆薬を使った攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.silvershower-heartstrings.name": {
     "text": "白雨心弦",
     "sourceHash": null,
@@ -6405,6 +7269,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.the-first-great-magic.body": {
     "text": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-dendroshroom.name": {
+    "text": "パタパタ草マッシュロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-dendroshroom.summary": {
+    "text": "草元素の有翼キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-dendroshroom.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。翼を持ち飛行する大型のキノコン。胞子をまき散らして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-cryoshroom.name": {
+    "text": "パタパタ氷マッシュロン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-cryoshroom.summary": {
+    "text": "氷元素の有翼キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.winged-cryoshroom.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。翼を持ち飛行する大型のキノコン。氷の塊を落として攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -6751,6 +7651,528 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.hilichurl.name": {
+    "text": "ヒルチャール",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl.summary": {
+    "text": "テイワット全域に生息する、素手のヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。何も持たず、近距離では引っ掻き、離れると投石で攻撃する。倒すと不祥な仮面などを落とす。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-hilichurl-shooter.name": {
+    "text": "ヒルチャール・炎矢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-hilichurl-shooter.summary": {
+    "text": "炎元素の矢を放つヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-hilichurl-shooter.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。炎元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stonehide-lawachurl.name": {
+    "text": "ヒルチャール・岩兜の王",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stonehide-lawachurl.summary": {
+    "text": "岩元素をまとうヒルチャールの王。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stonehide-lawachurl.body": {
+    "text": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。岩シールドを展開し、岩スライムの投擲や衝撃波で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-samachurl.name": {
+    "text": "ヒルチャールシャーマン・岩",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-samachurl.summary": {
+    "text": "岩元素を扱うヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.geo-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。岩柱を立てて周囲の敵を上に乗せ、地面の突き上げによる岩元素攻撃を行う。主に璃月に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-samachurl.name": {
+    "text": "ヒルチャールシャーマン・風",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-samachurl.summary": {
+    "text": "風元素を扱うヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.anemo-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。吸い込みで行動を阻害し、竜巻による風元素攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-samachurl.name": {
+    "text": "ヒルチャールシャーマン・雷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-samachurl.summary": {
+    "text": "雷元素を扱うヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。雷撃発生装置を複数設置し、術者と装置から広範囲に雷撃を放つ。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-samachurl.name": {
+    "text": "ヒルチャールシャーマン・草",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-samachurl.summary": {
+    "text": "草元素を扱うヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.dendro-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。触れるとダメージを受ける毒ツタを召喚し、範囲内の対象に草元素を付着させる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-samachurl.name": {
+    "text": "ヒルチャールシャーマン・氷",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-samachurl.summary": {
+    "text": "氷元素を扱うヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。氷柱を立てて周囲の敵を上に乗せ、地面の突き上げによる氷元素攻撃を行う。主にドラゴンスパインに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-samachurl.name": {
+    "text": "ヒルチャールシャーマン・水",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-samachurl.summary": {
+    "text": "水元素を扱い、仲間を回復するヒルチャールシャーマン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-samachurl.body": {
+    "text": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。水撃で攻撃するほか、雨降らしで周囲の敵を回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-shooter.name": {
+    "text": "ヒルチャール・射手",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-shooter.summary": {
+    "text": "ボウガンで矢を放つヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-shooter.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。遠距離からボウガンで狙ってくる。近づかれると距離を取ろうとする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-fighter.name": {
+    "text": "ヒルチャール・戦士",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-fighter.summary": {
+    "text": "棍棒を持ったヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-fighter.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。棍棒で殴りつけてくる。棍棒は木製で、炎元素が付着すると燃焼して破壊される。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostarm-lawachurl.name": {
+    "text": "ヒルチャール・霜鎧の王",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostarm-lawachurl.summary": {
+    "text": "氷元素をまとうヒルチャールの王。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.frostarm-lawachurl.body": {
+    "text": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。氷シールドを展開し、近距離で苛烈な連続攻撃を行う。ドラゴンスパインなどに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-berserker.name": {
+    "text": "ヒルチャール・突進",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-berserker.summary": {
+    "text": "松明を持って突進してくるヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-berserker.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。燃えた松明を振り回しながら突進する。水元素で松明を鎮火させると突進しなくなる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-grenadier.name": {
+    "text": "ヒルチャール・爆弾",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-grenadier.summary": {
+    "text": "スライム爆弾を投げてくるヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hilichurl-grenadier.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。地面からスライムを掘り起こして投げつけ、着弾すると各元素の爆発ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-hilichurl-shooter.name": {
+    "text": "ヒルチャール・氷矢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-hilichurl-shooter.summary": {
+    "text": "氷元素の矢を放つヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.cryo-hilichurl-shooter.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。氷元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl.name": {
+    "text": "ヒルチャール暴徒",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl.summary": {
+    "text": "大型のヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。斧や盾を手に戦い、スライムを掘り出して投げたり武器にまとわせたりする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-blazing-axe.name": {
+    "text": "ヒルチャール暴徒・炎斧",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-blazing-axe.summary": {
+    "text": "炎斧を持つヒルチャール暴徒。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-blazing-axe.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。炎スライムで斧に炎をエンチャントし、炎元素の攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-rock-shield.name": {
+    "text": "ヒルチャール暴徒・岩盾",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-rock-shield.summary": {
+    "text": "岩盾を持つヒルチャール暴徒。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-rock-shield.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな岩の盾で攻撃を防ぐ。岩盾は岩元素・両手剣・爆発攻撃に弱い。主に璃月に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-ice-shield.name": {
+    "text": "ヒルチャール暴徒・氷盾",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-ice-shield.summary": {
+    "text": "氷盾を持つヒルチャール暴徒。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-ice-shield.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな氷の盾で攻撃を防ぐ。寒冷地では盾の耐久が回復する。ドラゴンスパインなどに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-wooden-shield.name": {
+    "text": "ヒルチャール暴徒・木盾",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-wooden-shield.summary": {
+    "text": "木盾を持つヒルチャール暴徒。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-wooden-shield.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな木盾で攻撃を防ぐ。木盾は草元素シールドの性質を持ち、炎元素に弱い。草スライムで盾を作り直す。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-thunder-axe.name": {
+    "text": "ヒルチャール暴徒・雷斧",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-thunder-axe.summary": {
+    "text": "雷斧を持つヒルチャール暴徒。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.mitachurl-thunder-axe.body": {
+    "text": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。雷スライムで斧に雷をエンチャントし、素早く攻め立ててくる。稲妻以降の地域に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-hilichurl-shooter.name": {
+    "text": "ヒルチャール・雷矢",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-hilichurl-shooter.summary": {
+    "text": "雷元素の矢を放つヒルチャール。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.electro-hilichurl-shooter.body": {
+    "text": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。雷元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thunderhelm-lawachurl.name": {
+    "text": "ヒルチャール・雷兜の王",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thunderhelm-lawachurl.summary": {
+    "text": "雷元素をまとうヒルチャールの王。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.thunderhelm-lawachurl.body": {
+    "text": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。雷シールドを展開し、全ての攻撃が雷元素になる。稲妻以降の地域に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-cryogunner.name": {
+    "text": "ファデュイ先遣隊・重衛士・氷銃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-cryogunner.summary": {
+    "text": "氷元素の銃を使うファデュイ先遣隊の重衛士。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-cryogunner.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。氷元素の銃で持続的に攻撃し、周囲の味方に氷元素シールドを付与する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-hydrogunner.name": {
+    "text": "ファデュイ先遣隊・重衛士・水銃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-hydrogunner.summary": {
+    "text": "水元素の銃を使うファデュイ先遣隊の重衛士。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-hydrogunner.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。水元素の銃撃に加え、周囲の味方を回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-anemoboxer-vanguard.name": {
+    "text": "ファデュイ先遣隊・前鋒軍・風拳",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-anemoboxer-vanguard.summary": {
+    "text": "風元素の拳で戦うファデュイ先遣隊の前鋒軍。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-anemoboxer-vanguard.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。風元素の拳打で戦い、元素攻撃を吸収して反撃することがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-electrohammer-vanguard.name": {
+    "text": "ファデュイ先遣隊・前鋒軍・雷ハンマー",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-electrohammer-vanguard.summary": {
+    "text": "雷元素のハンマーを振るうファデュイ先遣隊の前鋒軍。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-electrohammer-vanguard.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。雷元素をまとった大槌で近接攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-geochanter-bracer.name": {
+    "text": "ファデュイ先遣隊・遊撃兵・岩使い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-geochanter-bracer.summary": {
+    "text": "岩元素を操るファデュイ先遣隊の遊撃兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-geochanter-bracer.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。岩元素の力で味方にシールドを付与しながら戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-pyroslinger-bracer.name": {
+    "text": "ファデュイ先遣隊・遊撃兵・炎銃",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-pyroslinger-bracer.summary": {
+    "text": "炎元素の銃を使うファデュイ先遣隊の遊撃兵。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.fatui-pyroslinger-bracer.body": {
+    "text": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。炎元素の銃で遠距離から狙撃してくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.marechaussee-hunter.name": {
     "text": "ファントムハンター",
     "sourceHash": null,
@@ -6891,6 +8313,60 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.fontaine.body": {
     "text": "[[teyvat]]の地域の一つ。水に関わる景観を持つ地域として紹介されている。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-anemo-fungus.name": {
+    "text": "プカプカ風キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-anemo-fungus.summary": {
+    "text": "風元素の浮遊キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-anemo-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。風の塊を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-dendro-fungus.name": {
+    "text": "プカプカ草キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-dendro-fungus.summary": {
+    "text": "草元素の浮遊キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-dendro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。胞子をまき散らして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-hydro-fungus.name": {
+    "text": "プカプカ水キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-hydro-fungus.summary": {
+    "text": "水元素の浮遊キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.floating-hydro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。水の泡を吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7093,6 +8569,186 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.treasure-hoarders-electro-potioneer.name": {
+    "text": "宝盗団・雷の薬剤師",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-electro-potioneer.summary": {
+    "text": "雷元素の薬瓶を投げる宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-electro-potioneer.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。雷元素の薬瓶を投げつけ、着弾した場所に雷元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pugilist.name": {
+    "text": "宝盗団・拳術家",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pugilist.summary": {
+    "text": "拳で戦う宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pugilist.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。素手の拳打で近接戦闘を行う構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-cryo-potioneer.name": {
+    "text": "宝盗団・氷の薬剤師",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-cryo-potioneer.summary": {
+    "text": "氷元素の薬瓶を投げる宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-cryo-potioneer.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。氷元素の薬瓶を投げつけ、着弾した場所に氷元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-handyman.name": {
+    "text": "宝盗団・雑夫",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-handyman.summary": {
+    "text": "宝盗団の雑夫。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-handyman.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。シャベルを武器に戦う下っ端の構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-scout.name": {
+    "text": "宝盗団・斥候",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-scout.summary": {
+    "text": "宝盗団の斥候。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-scout.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。短刀を武器に素早く戦う構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-gravedigger.name": {
+    "text": "宝盗団・盗掘者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-gravedigger.summary": {
+    "text": "盗掘を担う宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-gravedigger.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。シャベルを持ち、地面に潜って移動しながら戦うことがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-crusher.name": {
+    "text": "宝盗団・粉砕者",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-crusher.summary": {
+    "text": "大槌を振るう宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-crusher.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。大きなハンマーを振り回して戦う体格の良い構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pyro-potioneer.name": {
+    "text": "宝盗団・炎の薬剤師",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pyro-potioneer.summary": {
+    "text": "炎元素の薬瓶を投げる宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-pyro-potioneer.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。炎元素の薬瓶を投げつけ、着弾した場所に炎元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-hydro-potioneer.name": {
+    "text": "宝盗団・水の薬剤師",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-hydro-potioneer.summary": {
+    "text": "水元素の薬瓶を投げる宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-hydro-potioneer.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。水元素の薬瓶を投げつけ、着弾した場所に水元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-archer.name": {
+    "text": "宝盗団・弓使い",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-archer.summary": {
+    "text": "弓で攻撃する宝盗団の一員。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.treasure-hoarders-archer.body": {
+    "text": "財宝を狙う盗賊集団「宝盗団」の一員。遠距離から弓で狙ってくる構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.the-exile.name": {
     "text": "亡命者",
     "sourceHash": null,
@@ -7201,6 +8857,42 @@ export const records: Record<string, TranslationRecord> = {
     "origin": "legacy",
     "review": "pending"
   },
+  "term.genshin.pyro-slime.name": {
+    "text": "炎スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-slime.summary": {
+    "text": "炎元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-slime.body": {
+    "text": "炎元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。常時発火しており、倒されると自爆する。元素反応で鎮火させると弱体化する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-specter.name": {
+    "text": "炎フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-specter.summary": {
+    "text": "炎元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.pyro-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
   "term.genshin.philanemo-mushroom.name": {
     "text": "慕風のマッシュルーム",
     "sourceHash": null,
@@ -7215,6 +8907,78 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.philanemo-mushroom.body": {
     "text": "[[mondstadt]]で採れる育成素材。建物の壁や屋根の縁に生えるキノコ。バーバラやモナの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-geo-fungus.name": {
+    "text": "ボヨヨン岩キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-geo-fungus.summary": {
+    "text": "岩元素の伸縮キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-geo-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-anemo-fungus.name": {
+    "text": "ボヨヨン風キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-anemo-fungus.summary": {
+    "text": "風元素の伸縮キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-anemo-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-electro-fungus.name": {
+    "text": "ボヨヨン雷キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-electro-fungus.summary": {
+    "text": "雷元素の伸縮キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-electro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-pyro-fungus.name": {
+    "text": "ボヨヨン炎キノコン",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-pyro-fungus.summary": {
+    "text": "炎元素の伸縮キノコン。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.stretchy-pyro-fungus.body": {
+    "text": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"
@@ -7305,6 +9069,42 @@ export const records: Record<string, TranslationRecord> = {
   },
   "term.genshin.lightbearing-moonshard.body": {
     "text": "Ver.7.2 第2期の武器イベント[[wish|祈願]]「神鋳賦形」で出現確率アップの対象として告知された。通常祈願「奔走世間」の対象外。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-slime.name": {
+    "text": "水スライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-slime.summary": {
+    "text": "水元素の小型スライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-slime.body": {
+    "text": "水元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。水辺の近くに現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-specter.name": {
+    "text": "水フライム",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-specter.summary": {
+    "text": "水元素のフライム。",
+    "sourceHash": null,
+    "origin": "legacy",
+    "review": "pending"
+  },
+  "term.genshin.hydro-specter.body": {
+    "text": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
     "sourceHash": null,
     "origin": "legacy",
     "review": "pending"

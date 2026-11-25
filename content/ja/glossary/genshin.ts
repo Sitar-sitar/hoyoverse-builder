@@ -197,6 +197,114 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.electro-abyss-mage.name",
+    "ja": "アビスの魔術師・雷",
+    "context": "glossary genshin term electro-abyss-mage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-abyss-mage.summary",
+    "ja": "雷元素を操るアビスの魔術師。",
+    "context": "glossary genshin term electro-abyss-mage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-abyss-mage.body",
+    "ja": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。雷の弾や落雷で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-abyss-mage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-abyss-mage.name",
+    "ja": "アビスの魔術師・氷",
+    "context": "glossary genshin term cryo-abyss-mage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-abyss-mage.summary",
+    "ja": "氷元素を操るアビスの魔術師。",
+    "context": "glossary genshin term cryo-abyss-mage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-abyss-mage.body",
+    "ja": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。氷の棘を落とし、周囲を凍らせる攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-abyss-mage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-abyss-mage.name",
+    "ja": "アビスの魔術師・炎",
+    "context": "glossary genshin term pyro-abyss-mage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-abyss-mage.summary",
+    "ja": "炎元素を操るアビスの魔術師。",
+    "context": "glossary genshin term pyro-abyss-mage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-abyss-mage.body",
+    "ja": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。炎の弾を放ち、周囲に炎の噴出を起こす。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pyro-abyss-mage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-abyss-mage.name",
+    "ja": "アビスの魔術師・水",
+    "context": "glossary genshin term hydro-abyss-mage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-abyss-mage.summary",
+    "ja": "水元素を操るアビスの魔術師。",
+    "context": "glossary genshin term hydro-abyss-mage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-abyss-mage.body",
+    "ja": "アビス教団に属する魔術師。元素シールドを展開し、破壊されるまで元素攻撃を防ぐ。水の泡で拘束し、水の弾で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hydro-abyss-mage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.amakumo-fruit.name",
     "ja": "天雲草の実",
     "context": "glossary genshin term amakumo-fruit: Japanese official term name",
@@ -421,6 +529,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.traveling-doctor.name",
+    "ja": "医者",
+    "context": "glossary genshin term traveling-doctor: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.traveling-doctor.summary",
+    "ja": "受ける治癒効果が上がる最高レア度3の聖遺物セット。",
+    "context": "glossary genshin term traveling-doctor: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.traveling-doctor.body",
+    "ja": "2セット効果で受ける治癒効果が20%上がる[[artifact|聖遺物]]セット。4セット効果では、元素爆発を発動するとHPを20%回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term traveling-doctor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact|"
+    ]
+  },
+  {
     "id": "term.genshin.otherworldly-story.name",
     "ja": "異世界旅行記",
     "context": "glossary genshin term otherworldly-story: Japanese official term name",
@@ -448,6 +585,60 @@ const block0: SourceText[] = [
     "protectedTokens": [
       "[[energy-recharge]]"
     ]
+  },
+  {
+    "id": "term.genshin.ruin-guard.name",
+    "ja": "遺跡守衛",
+    "context": "glossary genshin term ruin-guard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ruin-guard.summary",
+    "ja": "古代の人型戦闘機械。",
+    "context": "glossary genshin term ruin-guard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ruin-guard.body",
+    "ja": "古代文明が残した人型の戦闘機械。腕を振り回す攻撃やミサイルを使う。頭部と背中のコアが弱点で、命中させると一定時間機能停止する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ruin-guard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ruin-hunter.name",
+    "ja": "遺跡ハンター",
+    "context": "glossary genshin term ruin-hunter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ruin-hunter.summary",
+    "ja": "飛行する古代の戦闘機械。",
+    "context": "glossary genshin term ruin-hunter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.ruin-hunter.body",
+    "ja": "古代文明が残した飛行型の戦闘機械。空中から爆撃や斬撃を行う。飛行中に目玉のコアを狙うと墜落させられる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term ruin-hunter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.heretics-molten-blade.name",
@@ -566,6 +757,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.mutant-electro-slime.name",
+    "ja": "異変雷スライム",
+    "context": "glossary genshin term mutant-electro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mutant-electro-slime.summary",
+    "ja": "変異した雷元素のスライム。",
+    "context": "glossary genshin term mutant-electro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mutant-electro-slime.body",
+    "ja": "雷元素の[[element|元素]]生物スライムの変異種。通常の雷スライムとは異なる姿を持ち、雷をまといながら移動する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mutant-electro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
     "id": "term.genshin.event-card.name",
     "ja": "イベントカード",
     "context": "glossary genshin term event-card: Japanese official term name",
@@ -649,6 +869,35 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.geo-slime.name",
+    "ja": "岩スライム",
+    "context": "glossary genshin term geo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-slime.summary",
+    "ja": "岩元素の小型スライム。",
+    "context": "glossary genshin term geo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-slime.body",
+    "ja": "岩元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。岩の殻をまとっており、殻がある間は攻撃を弾きやすい。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term geo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
     "id": "term.genshin.geo-treasure-compass.name",
     "ja": "岩のトレジャーコンパス",
     "context": "glossary genshin term geo-treasure-compass: Japanese official term name",
@@ -670,6 +919,36 @@ const block0: SourceText[] = [
     "id": "term.genshin.geo-treasure-compass.body",
     "ja": "使用すると璃月で近くの宝箱の位置へ案内する。",
     "context": "glossary genshin term geo-treasure-compass: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-specter.name",
+    "ja": "岩フライム",
+    "context": "glossary genshin term geo-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block1: SourceText[] = [
+  {
+    "id": "term.genshin.geo-specter.summary",
+    "ja": "岩元素のフライム。",
+    "context": "glossary genshin term geo-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term geo-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -902,6 +1181,195 @@ const block0: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.eremite-crossbow.name",
+    "ja": "エルマイト旅団・クロスボウ",
+    "context": "glossary genshin term eremite-crossbow: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-crossbow.summary",
+    "ja": "クロスボウを使うエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-crossbow: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-crossbow.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。遠距離からクロスボウで狙ってくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-crossbow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-galehunter.name",
+    "ja": "エルマイト旅団・ゲイルハンター",
+    "context": "glossary genshin term eremite-galehunter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-galehunter.summary",
+    "ja": "風元素の弓を使うエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-galehunter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-galehunter.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。風元素の矢を放ち、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-galehunter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sunfrost.name",
+    "ja": "エルマイト旅団・サンフロスト",
+    "context": "glossary genshin term eremite-sunfrost: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sunfrost.summary",
+    "ja": "氷元素を操るエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-sunfrost: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sunfrost.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。氷元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-sunfrost: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-stone-enchanter.name",
+    "ja": "エルマイト旅団・ストーンエンチャンター",
+    "context": "glossary genshin term eremite-stone-enchanter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-stone-enchanter.summary",
+    "ja": "岩元素を操るエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-stone-enchanter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-stone-enchanter.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。岩元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-stone-enchanter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sword-dancer.name",
+    "ja": "エルマイト旅団・ソードダンサー",
+    "context": "glossary genshin term eremite-sword-dancer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sword-dancer.summary",
+    "ja": "双剣を舞うように操るエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-sword-dancer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-sword-dancer.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。二刀の剣舞のような連続攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-sword-dancer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-days-thunder.name",
+    "ja": "エルマイト旅団・デイサンダー",
+    "context": "glossary genshin term eremite-days-thunder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-days-thunder.summary",
+    "ja": "雷元素を操るエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-days-thunder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-days-thunder.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。雷元素の術を使い、霊獣を呼び出すことがある上位の傭兵。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-days-thunder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-linebreaker.name",
+    "ja": "エルマイト旅団・ラインブレイカー",
+    "context": "glossary genshin term eremite-linebreaker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-linebreaker.summary",
+    "ja": "大剣を振るうエルマイト旅団の傭兵。",
+    "context": "glossary genshin term eremite-linebreaker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.eremite-linebreaker.body",
+    "ja": "スメールの砂漠地帯を拠点とする傭兵集団「エルマイト旅団」の一員。大きな剣を振り回し、前線を突破しようとする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term eremite-linebreaker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.song-of-the-vigil.name",
     "ja": "遠望の歌",
     "context": "glossary genshin term song-of-the-vigil: Japanese official term name",
@@ -938,10 +1406,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.genshin.golden-troupe.summary",
     "ja": "元素スキルダメージに関わる聖遺物セット。",
@@ -988,6 +1453,209 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-geo-slime.name",
+    "ja": "大型岩スライム",
+    "context": "glossary genshin term large-geo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-geo-slime.summary",
+    "ja": "岩元素の大型スライム。",
+    "context": "glossary genshin term large-geo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-geo-slime.body",
+    "ja": "岩元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。厚い岩の殻をまとい、殻を破壊すると弱体化する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-geo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-anemo-slime.name",
+    "ja": "大型風スライム",
+    "context": "glossary genshin term large-anemo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-anemo-slime.summary",
+    "ja": "風元素の大型スライム。",
+    "context": "glossary genshin term large-anemo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-anemo-slime.body",
+    "ja": "風元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。空中に浮かび上がって移動する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-anemo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-electro-slime.name",
+    "ja": "大型雷スライム",
+    "context": "glossary genshin term large-electro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-electro-slime.summary",
+    "ja": "雷元素の大型スライム。",
+    "context": "glossary genshin term large-electro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-electro-slime.body",
+    "ja": "雷元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。周囲に放電しながら攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-electro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-dendro-slime.name",
+    "ja": "大型草スライム",
+    "context": "glossary genshin term large-dendro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-dendro-slime.summary",
+    "ja": "草元素の大型スライム。",
+    "context": "glossary genshin term large-dendro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-dendro-slime.body",
+    "ja": "草元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。小型の草スライムを生み出すことがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-dendro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-cryo-slime.name",
+    "ja": "大型氷スライム",
+    "context": "glossary genshin term large-cryo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-cryo-slime.summary",
+    "ja": "氷元素の大型スライム。",
+    "context": "glossary genshin term large-cryo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-cryo-slime.body",
+    "ja": "氷元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。氷の棘を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-cryo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-pyro-slime.name",
+    "ja": "大型炎スライム",
+    "context": "glossary genshin term large-pyro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-pyro-slime.summary",
+    "ja": "炎元素の大型スライム。",
+    "context": "glossary genshin term large-pyro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-pyro-slime.body",
+    "ja": "炎元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。常時発火しており、倒されると自爆する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-pyro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.large-hydro-slime.name",
+    "ja": "大型水スライム",
+    "context": "glossary genshin term large-hydro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-hydro-slime.summary",
+    "ja": "水元素の大型スライム。",
+    "context": "glossary genshin term large-hydro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.large-hydro-slime.body",
+    "ja": "水元素の[[element|元素]]生物スライムの大型種。小型種より大きく体力も高い。泡を吐いて拘束してくることがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term large-hydro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
   },
   {
     "id": "term.genshin.gest-of-the-mighty-wolf.name",
@@ -1208,11 +1876,68 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.genshin.ocean-hued-clam.body",
     "ja": "2セット効果で与える治癒効果+15%。4セット効果では、回復量を記録する「海染の泡」が生成され、3秒後に破裂して記録量の90%分のダメージを周囲の敵に与える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term ocean-hued-clam: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-fiery-might.name",
+    "ja": "海乱鬼・炎威",
+    "context": "glossary genshin term kairagi-fiery-might: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-fiery-might.summary",
+    "ja": "炎をまとう海乱鬼。",
+    "context": "glossary genshin term kairagi-fiery-might: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-fiery-might.body",
+    "ja": "野伏衆の中でも特に手強い剣士。炎元素を刀にまとわせて斬りかかり、倒されると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kairagi-fiery-might: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-dancing-thunder.name",
+    "ja": "海乱鬼・雷騰",
+    "context": "glossary genshin term kairagi-dancing-thunder: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-dancing-thunder.summary",
+    "ja": "雷をまとう海乱鬼。",
+    "context": "glossary genshin term kairagi-dancing-thunder: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.kairagi-dancing-thunder.body",
+    "ja": "野伏衆の中でも特に手強い剣士。雷元素を刀にまとわせて斬りかかり、倒されると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term kairagi-dancing-thunder: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -1520,6 +2245,35 @@ const block1: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.anemo-slime.name",
+    "ja": "風スライム",
+    "context": "glossary genshin term anemo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-slime.summary",
+    "ja": "風元素の小型スライム。",
+    "context": "glossary genshin term anemo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-slime.body",
+    "ja": "風元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。空中に浮かんで移動する個体もいる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term anemo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
     "id": "term.genshin.a-day-carved-from-rising-winds.name",
     "ja": "風立ちの日",
     "context": "glossary genshin term a-day-carved-from-rising-winds: Japanese official term name",
@@ -1655,6 +2409,33 @@ const block1: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.anemo-specter.name",
+    "ja": "風フライム",
+    "context": "glossary genshin term anemo-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-specter.summary",
+    "ja": "風元素のフライム。",
+    "context": "glossary genshin term anemo-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term anemo-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.katsuragikiri-nagamasa.name",
     "ja": "桂木斬長正",
     "context": "glossary genshin term katsuragikiri-nagamasa: Japanese official term name",
@@ -1711,6 +2492,35 @@ const block1: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.electro-slime.name",
+    "ja": "雷スライム",
+    "context": "glossary genshin term electro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-slime.summary",
+    "ja": "雷元素の小型スライム。",
+    "context": "glossary genshin term electro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-slime.body",
+    "ja": "雷元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。電気水晶など元素を持つ採取物の近くに現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
     "id": "term.genshin.thundering-fury.name",
     "ja": "雷のような怒り",
     "context": "glossary genshin term thundering-fury: Japanese official term name",
@@ -1738,6 +2548,33 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[artifact]]"
     ]
+  },
+  {
+    "id": "term.genshin.electro-specter.name",
+    "ja": "雷フライム",
+    "context": "glossary genshin term electro-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-specter.summary",
+    "ja": "雷元素のフライム。",
+    "context": "glossary genshin term electro-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.thundersoother.name",
@@ -1871,10 +2708,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.genshin.kalpalata-lotus.body",
     "ja": "[[sumeru]]で採れる育成素材。森林地帯の崖に生える。ナヒーダやドリーの突破に使う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -1970,7 +2804,10 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[fishing]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.genshin.iwa-hitomi-kyouseiseki.name",
     "ja": "岩神の瞳の共鳴石",
@@ -2167,6 +3004,35 @@ const block2: SourceText[] = [
     "protectedTokens": [
       "[[artifact-transmuter]]",
       "[[artifact]]"
+    ]
+  },
+  {
+    "id": "term.genshin.tiny-miracle.name",
+    "ja": "奇跡",
+    "context": "glossary genshin term tiny-miracle: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tiny-miracle.summary",
+    "ja": "全元素耐性が上がる最高レア度4の聖遺物セット。",
+    "context": "glossary genshin term tiny-miracle: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.tiny-miracle.body",
+    "ja": "2セット効果で全ての元素耐性が20%上がる[[artifact|聖遺物]]セット。4セット効果では、元素ダメージを受けるとその元素の耐性が30%上がり、10秒間継続する（10秒に1回のみ発動可能）。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term tiny-miracle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact|"
     ]
   },
   {
@@ -2801,10 +3667,7 @@ const block2: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.genshin.tome-of-the-eternal-flow.name",
     "ja": "久遠流転の大典",
@@ -2869,7 +3732,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.genshin.spread.summary",
     "ja": "激化状態に草元素が作用して起こる元素反応。",
@@ -2889,6 +3755,35 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]",
       "[[quicken|"
+    ]
+  },
+  {
+    "id": "term.genshin.dendro-slime.name",
+    "ja": "草スライム",
+    "context": "glossary genshin term dendro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-slime.summary",
+    "ja": "草元素の小型スライム。",
+    "context": "glossary genshin term dendro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-slime.body",
+    "ja": "草元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。草むらに潜んで隠れていることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dendro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
     ]
   },
   {
@@ -2921,6 +3816,33 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.dendro-specter.name",
+    "ja": "草フライム",
+    "context": "glossary genshin term dendro-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-specter.summary",
+    "ja": "草元素のフライム。",
+    "context": "glossary genshin term dendro-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dendro-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.fractured-halo.name",
     "ja": "砕け散る光輪",
     "context": "glossary genshin term fractured-halo: Japanese official term name",
@@ -2942,6 +3864,87 @@ const block3: SourceText[] = [
     "id": "term.genshin.fractured-halo.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term fractured-halo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-electro-fungus.name",
+    "ja": "グルグル雷キノコン",
+    "context": "glossary genshin term whirling-electro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-electro-fungus.summary",
+    "ja": "雷元素の回転キノコン。",
+    "context": "glossary genshin term whirling-electro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-electro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term whirling-electro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-cryo-fungus.name",
+    "ja": "グルグル氷キノコン",
+    "context": "glossary genshin term whirling-cryo-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-cryo-fungus.summary",
+    "ja": "氷元素の回転キノコン。",
+    "context": "glossary genshin term whirling-cryo-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-cryo-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term whirling-cryo-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-pyro-fungus.name",
+    "ja": "グルグル炎キノコン",
+    "context": "glossary genshin term whirling-pyro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-pyro-fungus.summary",
+    "ja": "炎元素の回転キノコン。",
+    "context": "glossary genshin term whirling-pyro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.whirling-pyro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。回転しながら体当たりしてくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term whirling-pyro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -3619,6 +4622,35 @@ const block3: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.lucky-dog.name",
+    "ja": "幸運",
+    "context": "glossary genshin term lucky-dog: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lucky-dog.summary",
+    "ja": "防御力とHP回復に寄与する最高レア度3の聖遺物セット。",
+    "context": "glossary genshin term lucky-dog: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.lucky-dog.body",
+    "ja": "2セット効果で防御力が100上がる[[artifact|聖遺物]]セット。4セット効果では、モラを拾得するとHPを300回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term lucky-dog: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact|"
+    ]
+  },
+  {
     "id": "term.genshin.scarlet-proof.name",
     "ja": "紅血の証",
     "context": "glossary genshin term scarlet-proof: Japanese official term name",
@@ -3662,7 +4694,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.genshin.rainbow-serpents-rain-bow.body",
     "ja": "Lv.90の基礎攻撃力は510。同レベルで[[energy-recharge]]を45.9%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -3768,10 +4803,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.genshin.sword-of-descension.summary",
     "ja": "攻撃力が上がる★4の片手剣。",
@@ -3789,6 +4821,35 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-slime.name",
+    "ja": "氷スライム",
+    "context": "glossary genshin term cryo-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-slime.summary",
+    "ja": "氷元素の小型スライム。",
+    "context": "glossary genshin term cryo-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-slime.body",
+    "ja": "氷元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。寒冷な地域に現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
   },
   {
     "id": "term.genshin.frostbreath.name",
@@ -3818,6 +4879,33 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[energy-recharge]]"
     ]
+  },
+  {
+    "id": "term.genshin.cryo-specter.name",
+    "ja": "氷フライム",
+    "context": "glossary genshin term cryo-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-specter.summary",
+    "ja": "氷元素のフライム。",
+    "context": "glossary genshin term cryo-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.prototype-archaic.name",
@@ -4556,7 +5644,10 @@ const block4: SourceText[] = [
     "protectedTokens": [
       "[[natlan]]"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.genshin.sand-grease-pupa.name",
     "ja": "砂脂蛹",
@@ -4715,10 +5806,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.genshin.nighttime-whispers-in-the-echoing-woods.body",
     "ja": "2セット効果で攻撃力+18%。4セット効果では、元素スキル発動後の10秒間、岩元素ダメージ+20%。結晶反応で生成されたシールド状態では、この効果量が+150%される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -5261,6 +6349,35 @@ const block5: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.defenders-will.name",
+    "ja": "守護の心",
+    "context": "glossary genshin term defenders-will: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.defenders-will.summary",
+    "ja": "防御力と元素耐性が上がる最高レア度4の聖遺物セット。",
+    "context": "glossary genshin term defenders-will: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.defenders-will.body",
+    "ja": "2セット効果で防御力が30%上がる[[artifact|聖遺物]]セット。4セット効果では、チーム内の自身のキャラクターの元素タイプが1種類ある毎に、自身にその元素の耐性が30%付く。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term defenders-will: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[artifact|"
+    ]
+  },
+  {
     "id": "term.genshin.hunters-bow.name",
     "ja": "狩猟弓",
     "context": "glossary genshin term hunters-bow: Japanese official term name",
@@ -5465,7 +6582,10 @@ const block5: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.genshin.serenitea-pot.summary",
     "ja": "洞天に調度品を配置して楽しむシステム。",
@@ -5651,10 +6771,7 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[serenitea-pot]]"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.genshin.deepwood-memories.name",
     "ja": "深林の記憶",
@@ -6407,7 +7524,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.genshin.exaiphanes-blade.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで[[crit-rate]]を33.1%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -6597,10 +7717,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.genshin.cecilia.summary",
     "ja": "モンドの特産品。",
@@ -7362,7 +8479,10 @@ const block7: SourceText[] = [
     "protectedTokens": [
       "[[genius-invokation-tcg]]"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.genshin.ash-graven-drinking-horn.name",
     "ja": "蒼紋の角杯",
@@ -7548,10 +8668,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.genshin.tidal-shadow.body",
     "ja": "Lv.90の基礎攻撃力は510。同レベルで攻撃力を41.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -8310,7 +9427,10 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.genshin.angelos-heptades.summary",
     "ja": "攻撃力が上がる★5の法器。",
@@ -8502,10 +9622,7 @@ const block8: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.genshin.tsuki-wo-tsumugu-yoru-no-uta.name",
     "ja": "月を紡ぐ夜の歌",
@@ -9266,7 +10383,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.genshin.realm-layout.body",
     "ja": "[[serenitea-pot]]には複数の洞天形態があり、対応する道具を使って開放できるものもある。",
@@ -9445,6 +10565,60 @@ const block9: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.grounded-geoshroom.name",
+    "ja": "トコトコ岩マッシュロン",
+    "context": "glossary genshin term grounded-geoshroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.grounded-geoshroom.summary",
+    "ja": "岩元素の陸生キノコン。",
+    "context": "glossary genshin term grounded-geoshroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.grounded-geoshroom.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。地上を歩き回る大型のキノコン。岩の塊を転がして攻撃することがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term grounded-geoshroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.grounded-hydroshroom.name",
+    "ja": "トコトコ水マッシュロン",
+    "context": "glossary genshin term grounded-hydroshroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.grounded-hydroshroom.summary",
+    "ja": "水元素の陸生キノコン。",
+    "context": "glossary genshin term grounded-hydroshroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.grounded-hydroshroom.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。地上を歩き回り、水の泡を吐いて攻撃する大型のキノコン。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term grounded-hydroshroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.toshi-hyouban.name",
     "ja": "都市評判",
     "context": "glossary genshin term toshi-hyouban: Japanese official term name",
@@ -9452,10 +10626,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.genshin.toshi-hyouban.summary",
     "ja": "各地域の活動に応じて報酬を得られる仕組み。",
@@ -9608,6 +10779,87 @@ const block10: SourceText[] = [
     "id": "term.genshin.dragonspine-spear.body",
     "ja": "Lv.90時の基礎攻撃力は454。同レベルで物理ダメージを69.0%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term dragonspine-spear: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-whopperflower.name",
+    "ja": "トリックフラワー・雷",
+    "context": "glossary genshin term electro-whopperflower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-whopperflower.summary",
+    "ja": "雷元素のトリックフラワー。",
+    "context": "glossary genshin term electro-whopperflower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-whopperflower.body",
+    "ja": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。雷の弾を吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-whopperflower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-whopperflower.name",
+    "ja": "トリックフラワー・氷",
+    "context": "glossary genshin term cryo-whopperflower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-whopperflower.summary",
+    "ja": "氷元素のトリックフラワー。",
+    "context": "glossary genshin term cryo-whopperflower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-whopperflower.body",
+    "ja": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。氷の棘を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-whopperflower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-whopperflower.name",
+    "ja": "トリックフラワー・炎",
+    "context": "glossary genshin term pyro-whopperflower: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-whopperflower.summary",
+    "ja": "炎元素のトリックフラワー。",
+    "context": "glossary genshin term pyro-whopperflower: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-whopperflower.body",
+    "ja": "花に擬態する魔物トリックフラワーの一種。地面に潜って身を隠し、近づく者を襲う。炎の弾を連続で吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pyro-whopperflower: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -9873,6 +11125,87 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.nobushi-kikouban.name",
+    "ja": "野伏・機巧番",
+    "context": "glossary genshin term nobushi-kikouban: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-kikouban.summary",
+    "ja": "からくりを使う野伏衆の一員。",
+    "context": "glossary genshin term nobushi-kikouban: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-kikouban.body",
+    "ja": "稲妻を根城にする浪人集団「野伏衆」の一員。手裏剣や煙幕などの忍びの道具を使って戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nobushi-kikouban: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-jintouban.name",
+    "ja": "野伏・陣刀番",
+    "context": "glossary genshin term nobushi-jintouban: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-jintouban.summary",
+    "ja": "刀で戦う野伏衆の一員。",
+    "context": "glossary genshin term nobushi-jintouban: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-jintouban.body",
+    "ja": "稲妻を根城にする浪人集団「野伏衆」の一員。居合のような刀の斬撃で戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nobushi-jintouban: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-hitsukeban.name",
+    "ja": "野伏・火付番",
+    "context": "glossary genshin term nobushi-hitsukeban: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-hitsukeban.summary",
+    "ja": "火薬を使う野伏衆の一員。",
+    "context": "glossary genshin term nobushi-hitsukeban: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.nobushi-hitsukeban.body",
+    "ja": "稲妻を根城にする浪人集団「野伏衆」の一員。火の粉や爆薬を使った攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term nobushi-hitsukeban: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.silvershower-heartstrings.name",
     "ja": "白雨心弦",
     "context": "glossary genshin term silvershower-heartstrings: Japanese official term name",
@@ -9984,7 +11317,10 @@ const block10: SourceText[] = [
     "protectedTokens": [
       "[[crit-rate]]"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.genshin.hakushin-ring.name",
     "ja": "白辰の輪",
@@ -10090,6 +11426,60 @@ const block10: SourceText[] = [
     "id": "term.genshin.the-first-great-magic.body",
     "ja": "Lv.90時の基礎攻撃力は608。同レベルで会心ダメージを66.2%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary genshin term the-first-great-magic: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-dendroshroom.name",
+    "ja": "パタパタ草マッシュロン",
+    "context": "glossary genshin term winged-dendroshroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-dendroshroom.summary",
+    "ja": "草元素の有翼キノコン。",
+    "context": "glossary genshin term winged-dendroshroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-dendroshroom.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。翼を持ち飛行する大型のキノコン。胞子をまき散らして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term winged-dendroshroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-cryoshroom.name",
+    "ja": "パタパタ氷マッシュロン",
+    "context": "glossary genshin term winged-cryoshroom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-cryoshroom.summary",
+    "ja": "氷元素の有翼キノコン。",
+    "context": "glossary genshin term winged-cryoshroom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.winged-cryoshroom.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。翼を持ち飛行する大型のキノコン。氷の塊を落として攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term winged-cryoshroom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -10402,10 +11792,7 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block11: SourceText[] = [
+  },
   {
     "id": "term.genshin.master-key.body",
     "ja": "Lv.90の基礎攻撃力は454。同レベルで[[energy-recharge]]を61.3%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -10648,6 +12035,792 @@ const block11: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.genshin.hilichurl.name",
+    "ja": "ヒルチャール",
+    "context": "glossary genshin term hilichurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl.summary",
+    "ja": "テイワット全域に生息する、素手のヒルチャール。",
+    "context": "glossary genshin term hilichurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。何も持たず、近距離では引っ掻き、離れると投石で攻撃する。倒すと不祥な仮面などを落とす。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hilichurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-hilichurl-shooter.name",
+    "ja": "ヒルチャール・炎矢",
+    "context": "glossary genshin term pyro-hilichurl-shooter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-hilichurl-shooter.summary",
+    "ja": "炎元素の矢を放つヒルチャール。",
+    "context": "glossary genshin term pyro-hilichurl-shooter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-hilichurl-shooter.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。炎元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pyro-hilichurl-shooter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stonehide-lawachurl.name",
+    "ja": "ヒルチャール・岩兜の王",
+    "context": "glossary genshin term stonehide-lawachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stonehide-lawachurl.summary",
+    "ja": "岩元素をまとうヒルチャールの王。",
+    "context": "glossary genshin term stonehide-lawachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stonehide-lawachurl.body",
+    "ja": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。岩シールドを展開し、岩スライムの投擲や衝撃波で攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term stonehide-lawachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-samachurl.name",
+    "ja": "ヒルチャールシャーマン・岩",
+    "context": "glossary genshin term geo-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-samachurl.summary",
+    "ja": "岩元素を扱うヒルチャールシャーマン。",
+    "context": "glossary genshin term geo-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.geo-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。岩柱を立てて周囲の敵を上に乗せ、地面の突き上げによる岩元素攻撃を行う。主に璃月に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term geo-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-samachurl.name",
+    "ja": "ヒルチャールシャーマン・風",
+    "context": "glossary genshin term anemo-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-samachurl.summary",
+    "ja": "風元素を扱うヒルチャールシャーマン。",
+    "context": "glossary genshin term anemo-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.anemo-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。吸い込みで行動を阻害し、竜巻による風元素攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term anemo-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-samachurl.name",
+    "ja": "ヒルチャールシャーマン・雷",
+    "context": "glossary genshin term electro-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-samachurl.summary",
+    "ja": "雷元素を扱うヒルチャールシャーマン。",
+    "context": "glossary genshin term electro-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。雷撃発生装置を複数設置し、術者と装置から広範囲に雷撃を放つ。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-samachurl.name",
+    "ja": "ヒルチャールシャーマン・草",
+    "context": "glossary genshin term dendro-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-samachurl.summary",
+    "ja": "草元素を扱うヒルチャールシャーマン。",
+    "context": "glossary genshin term dendro-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.dendro-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。触れるとダメージを受ける毒ツタを召喚し、範囲内の対象に草元素を付着させる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term dendro-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-samachurl.name",
+    "ja": "ヒルチャールシャーマン・氷",
+    "context": "glossary genshin term cryo-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-samachurl.summary",
+    "ja": "氷元素を扱うヒルチャールシャーマン。",
+    "context": "glossary genshin term cryo-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。氷柱を立てて周囲の敵を上に乗せ、地面の突き上げによる氷元素攻撃を行う。主にドラゴンスパインに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-samachurl.name",
+    "ja": "ヒルチャールシャーマン・水",
+    "context": "glossary genshin term hydro-samachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  }
+];
+
+const block13: SourceText[] = [
+  {
+    "id": "term.genshin.hydro-samachurl.summary",
+    "ja": "水元素を扱い、仲間を回復するヒルチャールシャーマン。",
+    "context": "glossary genshin term hydro-samachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-samachurl.body",
+    "ja": "杖を持ち、元素力を扱う老齢のヒルチャール。後方からの支援や妨害を得意とする。水撃で攻撃するほか、雨降らしで周囲の敵を回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hydro-samachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-shooter.name",
+    "ja": "ヒルチャール・射手",
+    "context": "glossary genshin term hilichurl-shooter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-shooter.summary",
+    "ja": "ボウガンで矢を放つヒルチャール。",
+    "context": "glossary genshin term hilichurl-shooter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-shooter.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。遠距離からボウガンで狙ってくる。近づかれると距離を取ろうとする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hilichurl-shooter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-fighter.name",
+    "ja": "ヒルチャール・戦士",
+    "context": "glossary genshin term hilichurl-fighter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-fighter.summary",
+    "ja": "棍棒を持ったヒルチャール。",
+    "context": "glossary genshin term hilichurl-fighter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-fighter.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。棍棒で殴りつけてくる。棍棒は木製で、炎元素が付着すると燃焼して破壊される。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hilichurl-fighter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostarm-lawachurl.name",
+    "ja": "ヒルチャール・霜鎧の王",
+    "context": "glossary genshin term frostarm-lawachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostarm-lawachurl.summary",
+    "ja": "氷元素をまとうヒルチャールの王。",
+    "context": "glossary genshin term frostarm-lawachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.frostarm-lawachurl.body",
+    "ja": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。氷シールドを展開し、近距離で苛烈な連続攻撃を行う。ドラゴンスパインなどに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term frostarm-lawachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-berserker.name",
+    "ja": "ヒルチャール・突進",
+    "context": "glossary genshin term hilichurl-berserker: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-berserker.summary",
+    "ja": "松明を持って突進してくるヒルチャール。",
+    "context": "glossary genshin term hilichurl-berserker: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-berserker.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。燃えた松明を振り回しながら突進する。水元素で松明を鎮火させると突進しなくなる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hilichurl-berserker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-grenadier.name",
+    "ja": "ヒルチャール・爆弾",
+    "context": "glossary genshin term hilichurl-grenadier: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-grenadier.summary",
+    "ja": "スライム爆弾を投げてくるヒルチャール。",
+    "context": "glossary genshin term hilichurl-grenadier: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hilichurl-grenadier.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。地面からスライムを掘り起こして投げつけ、着弾すると各元素の爆発ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hilichurl-grenadier: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-hilichurl-shooter.name",
+    "ja": "ヒルチャール・氷矢",
+    "context": "glossary genshin term cryo-hilichurl-shooter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-hilichurl-shooter.summary",
+    "ja": "氷元素の矢を放つヒルチャール。",
+    "context": "glossary genshin term cryo-hilichurl-shooter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.cryo-hilichurl-shooter.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。氷元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term cryo-hilichurl-shooter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl.name",
+    "ja": "ヒルチャール暴徒",
+    "context": "glossary genshin term mitachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl.summary",
+    "ja": "大型のヒルチャール。",
+    "context": "glossary genshin term mitachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。斧や盾を手に戦い、スライムを掘り出して投げたり武器にまとわせたりする。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-blazing-axe.name",
+    "ja": "ヒルチャール暴徒・炎斧",
+    "context": "glossary genshin term mitachurl-blazing-axe: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-blazing-axe.summary",
+    "ja": "炎斧を持つヒルチャール暴徒。",
+    "context": "glossary genshin term mitachurl-blazing-axe: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-blazing-axe.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。炎スライムで斧に炎をエンチャントし、炎元素の攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl-blazing-axe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-rock-shield.name",
+    "ja": "ヒルチャール暴徒・岩盾",
+    "context": "glossary genshin term mitachurl-rock-shield: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-rock-shield.summary",
+    "ja": "岩盾を持つヒルチャール暴徒。",
+    "context": "glossary genshin term mitachurl-rock-shield: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-rock-shield.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな岩の盾で攻撃を防ぐ。岩盾は岩元素・両手剣・爆発攻撃に弱い。主に璃月に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl-rock-shield: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-ice-shield.name",
+    "ja": "ヒルチャール暴徒・氷盾",
+    "context": "glossary genshin term mitachurl-ice-shield: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-ice-shield.summary",
+    "ja": "氷盾を持つヒルチャール暴徒。",
+    "context": "glossary genshin term mitachurl-ice-shield: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-ice-shield.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな氷の盾で攻撃を防ぐ。寒冷地では盾の耐久が回復する。ドラゴンスパインなどに出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl-ice-shield: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-wooden-shield.name",
+    "ja": "ヒルチャール暴徒・木盾",
+    "context": "glossary genshin term mitachurl-wooden-shield: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-wooden-shield.summary",
+    "ja": "木盾を持つヒルチャール暴徒。",
+    "context": "glossary genshin term mitachurl-wooden-shield: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-wooden-shield.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。大きな木盾で攻撃を防ぐ。木盾は草元素シールドの性質を持ち、炎元素に弱い。草スライムで盾を作り直す。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl-wooden-shield: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-thunder-axe.name",
+    "ja": "ヒルチャール暴徒・雷斧",
+    "context": "glossary genshin term mitachurl-thunder-axe: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-thunder-axe.summary",
+    "ja": "雷斧を持つヒルチャール暴徒。",
+    "context": "glossary genshin term mitachurl-thunder-axe: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.mitachurl-thunder-axe.body",
+    "ja": "大きな斧や盾を持った大型のヒルチャール。小型種より物理耐性がやや高い精鋭エネミー。雷スライムで斧に雷をエンチャントし、素早く攻め立ててくる。稲妻以降の地域に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term mitachurl-thunder-axe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-hilichurl-shooter.name",
+    "ja": "ヒルチャール・雷矢",
+    "context": "glossary genshin term electro-hilichurl-shooter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-hilichurl-shooter.summary",
+    "ja": "雷元素の矢を放つヒルチャール。",
+    "context": "glossary genshin term electro-hilichurl-shooter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.electro-hilichurl-shooter.body",
+    "ja": "テイワット全域に生息する仮面を被った魔物ヒルチャールの一種。雷元素を溜めて矢に込めて放つ。基本の射手より攻撃間隔が長め。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term electro-hilichurl-shooter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thunderhelm-lawachurl.name",
+    "ja": "ヒルチャール・雷兜の王",
+    "context": "glossary genshin term thunderhelm-lawachurl: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thunderhelm-lawachurl.summary",
+    "ja": "雷元素をまとうヒルチャールの王。",
+    "context": "glossary genshin term thunderhelm-lawachurl: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.thunderhelm-lawachurl.body",
+    "ja": "山のような巨躯を持つヒルチャールたちの王。使用する元素への耐性が高く、戦闘開始直後に元素エンチャント状態となって攻め立ててくる。雷シールドを展開し、全ての攻撃が雷元素になる。稲妻以降の地域に出現する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term thunderhelm-lawachurl: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-cryogunner.name",
+    "ja": "ファデュイ先遣隊・重衛士・氷銃",
+    "context": "glossary genshin term fatui-cryogunner: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-cryogunner.summary",
+    "ja": "氷元素の銃を使うファデュイ先遣隊の重衛士。",
+    "context": "glossary genshin term fatui-cryogunner: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-cryogunner.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。氷元素の銃で持続的に攻撃し、周囲の味方に氷元素シールドを付与する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-cryogunner: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-hydrogunner.name",
+    "ja": "ファデュイ先遣隊・重衛士・水銃",
+    "context": "glossary genshin term fatui-hydrogunner: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-hydrogunner.summary",
+    "ja": "水元素の銃を使うファデュイ先遣隊の重衛士。",
+    "context": "glossary genshin term fatui-hydrogunner: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-hydrogunner.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。水元素の銃撃に加え、周囲の味方を回復する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-hydrogunner: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-anemoboxer-vanguard.name",
+    "ja": "ファデュイ先遣隊・前鋒軍・風拳",
+    "context": "glossary genshin term fatui-anemoboxer-vanguard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-anemoboxer-vanguard.summary",
+    "ja": "風元素の拳で戦うファデュイ先遣隊の前鋒軍。",
+    "context": "glossary genshin term fatui-anemoboxer-vanguard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-anemoboxer-vanguard.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。風元素の拳打で戦い、元素攻撃を吸収して反撃することがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-anemoboxer-vanguard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-electrohammer-vanguard.name",
+    "ja": "ファデュイ先遣隊・前鋒軍・雷ハンマー",
+    "context": "glossary genshin term fatui-electrohammer-vanguard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-electrohammer-vanguard.summary",
+    "ja": "雷元素のハンマーを振るうファデュイ先遣隊の前鋒軍。",
+    "context": "glossary genshin term fatui-electrohammer-vanguard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-electrohammer-vanguard.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。雷元素をまとった大槌で近接攻撃を行う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-electrohammer-vanguard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-geochanter-bracer.name",
+    "ja": "ファデュイ先遣隊・遊撃兵・岩使い",
+    "context": "glossary genshin term fatui-geochanter-bracer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-geochanter-bracer.summary",
+    "ja": "岩元素を操るファデュイ先遣隊の遊撃兵。",
+    "context": "glossary genshin term fatui-geochanter-bracer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-geochanter-bracer.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。岩元素の力で味方にシールドを付与しながら戦う。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-geochanter-bracer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-pyroslinger-bracer.name",
+    "ja": "ファデュイ先遣隊・遊撃兵・炎銃",
+    "context": "glossary genshin term fatui-pyroslinger-bracer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-pyroslinger-bracer.summary",
+    "ja": "炎元素の銃を使うファデュイ先遣隊の遊撃兵。",
+    "context": "glossary genshin term fatui-pyroslinger-bracer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.fatui-pyroslinger-bracer.body",
+    "ja": "スネージナヤの組織ファデュイの先遣隊員。元素の力を引き出すと反動で自身もダメージを受ける。炎元素の銃で遠距離から狙撃してくる。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term fatui-pyroslinger-bracer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.marechaussee-hunter.name",
     "ja": "ファントムハンター",
     "context": "glossary genshin term marechaussee-hunter: Japanese official term name",
@@ -10874,6 +13047,87 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.floating-anemo-fungus.name",
+    "ja": "プカプカ風キノコン",
+    "context": "glossary genshin term floating-anemo-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-anemo-fungus.summary",
+    "ja": "風元素の浮遊キノコン。",
+    "context": "glossary genshin term floating-anemo-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-anemo-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。風の塊を飛ばして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term floating-anemo-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-dendro-fungus.name",
+    "ja": "プカプカ草キノコン",
+    "context": "glossary genshin term floating-dendro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-dendro-fungus.summary",
+    "ja": "草元素の浮遊キノコン。",
+    "context": "glossary genshin term floating-dendro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-dendro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。胞子をまき散らして攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term floating-dendro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-hydro-fungus.name",
+    "ja": "プカプカ水キノコン",
+    "context": "glossary genshin term floating-hydro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-hydro-fungus.summary",
+    "ja": "水元素の浮遊キノコン。",
+    "context": "glossary genshin term floating-hydro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.floating-hydro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。水の泡を吐いて攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term floating-hydro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.festering-desire.name",
     "ja": "腐植の剣",
     "context": "glossary genshin term festering-desire: Japanese official term name",
@@ -10919,7 +13173,10 @@ const block11: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block14: SourceText[] = [
   {
     "id": "term.genshin.martial-artist.body",
     "ja": "2セット効果で通常攻撃と重撃のダメージ+15%。4セット効果では、元素スキル発動後、通常攻撃と重撃のダメージがさらに+25%。継続時間8秒。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -11180,6 +13437,276 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.treasure-hoarders-electro-potioneer.name",
+    "ja": "宝盗団・雷の薬剤師",
+    "context": "glossary genshin term treasure-hoarders-electro-potioneer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-electro-potioneer.summary",
+    "ja": "雷元素の薬瓶を投げる宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-electro-potioneer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-electro-potioneer.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。雷元素の薬瓶を投げつけ、着弾した場所に雷元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-electro-potioneer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pugilist.name",
+    "ja": "宝盗団・拳術家",
+    "context": "glossary genshin term treasure-hoarders-pugilist: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pugilist.summary",
+    "ja": "拳で戦う宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-pugilist: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pugilist.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。素手の拳打で近接戦闘を行う構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-pugilist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-cryo-potioneer.name",
+    "ja": "宝盗団・氷の薬剤師",
+    "context": "glossary genshin term treasure-hoarders-cryo-potioneer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-cryo-potioneer.summary",
+    "ja": "氷元素の薬瓶を投げる宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-cryo-potioneer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-cryo-potioneer.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。氷元素の薬瓶を投げつけ、着弾した場所に氷元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-cryo-potioneer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-handyman.name",
+    "ja": "宝盗団・雑夫",
+    "context": "glossary genshin term treasure-hoarders-handyman: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-handyman.summary",
+    "ja": "宝盗団の雑夫。",
+    "context": "glossary genshin term treasure-hoarders-handyman: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-handyman.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。シャベルを武器に戦う下っ端の構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-handyman: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-scout.name",
+    "ja": "宝盗団・斥候",
+    "context": "glossary genshin term treasure-hoarders-scout: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-scout.summary",
+    "ja": "宝盗団の斥候。",
+    "context": "glossary genshin term treasure-hoarders-scout: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-scout.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。短刀を武器に素早く戦う構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-scout: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-gravedigger.name",
+    "ja": "宝盗団・盗掘者",
+    "context": "glossary genshin term treasure-hoarders-gravedigger: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-gravedigger.summary",
+    "ja": "盗掘を担う宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-gravedigger: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-gravedigger.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。シャベルを持ち、地面に潜って移動しながら戦うことがある。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-gravedigger: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-crusher.name",
+    "ja": "宝盗団・粉砕者",
+    "context": "glossary genshin term treasure-hoarders-crusher: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-crusher.summary",
+    "ja": "大槌を振るう宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-crusher: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-crusher.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。大きなハンマーを振り回して戦う体格の良い構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-crusher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pyro-potioneer.name",
+    "ja": "宝盗団・炎の薬剤師",
+    "context": "glossary genshin term treasure-hoarders-pyro-potioneer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pyro-potioneer.summary",
+    "ja": "炎元素の薬瓶を投げる宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-pyro-potioneer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-pyro-potioneer.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。炎元素の薬瓶を投げつけ、着弾した場所に炎元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-pyro-potioneer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-hydro-potioneer.name",
+    "ja": "宝盗団・水の薬剤師",
+    "context": "glossary genshin term treasure-hoarders-hydro-potioneer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-hydro-potioneer.summary",
+    "ja": "水元素の薬瓶を投げる宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-hydro-potioneer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-hydro-potioneer.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。水元素の薬瓶を投げつけ、着弾した場所に水元素ダメージを与える。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-hydro-potioneer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-archer.name",
+    "ja": "宝盗団・弓使い",
+    "context": "glossary genshin term treasure-hoarders-archer: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-archer.summary",
+    "ja": "弓で攻撃する宝盗団の一員。",
+    "context": "glossary genshin term treasure-hoarders-archer: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.treasure-hoarders-archer.body",
+    "ja": "財宝を狙う盗賊集団「宝盗団」の一員。遠距離から弓で狙ってくる構成員。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term treasure-hoarders-archer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.the-exile.name",
     "ja": "亡命者",
     "context": "glossary genshin term the-exile: Japanese official term name",
@@ -11342,10 +13869,63 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
-  }
-];
-
-const block12: SourceText[] = [
+  },
+  {
+    "id": "term.genshin.pyro-slime.name",
+    "ja": "炎スライム",
+    "context": "glossary genshin term pyro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-slime.summary",
+    "ja": "炎元素の小型スライム。",
+    "context": "glossary genshin term pyro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-slime.body",
+    "ja": "炎元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。常時発火しており、倒されると自爆する。元素反応で鎮火させると弱体化する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pyro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.pyro-specter.name",
+    "ja": "炎フライム",
+    "context": "glossary genshin term pyro-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-specter.summary",
+    "ja": "炎元素のフライム。",
+    "context": "glossary genshin term pyro-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.pyro-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term pyro-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
   {
     "id": "term.genshin.philanemo-mushroom.name",
     "ja": "慕風のマッシュルーム",
@@ -11376,6 +13956,114 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.genshin.stretchy-geo-fungus.name",
+    "ja": "ボヨヨン岩キノコン",
+    "context": "glossary genshin term stretchy-geo-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-geo-fungus.summary",
+    "ja": "岩元素の伸縮キノコン。",
+    "context": "glossary genshin term stretchy-geo-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-geo-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term stretchy-geo-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-anemo-fungus.name",
+    "ja": "ボヨヨン風キノコン",
+    "context": "glossary genshin term stretchy-anemo-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-anemo-fungus.summary",
+    "ja": "風元素の伸縮キノコン。",
+    "context": "glossary genshin term stretchy-anemo-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-anemo-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term stretchy-anemo-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-electro-fungus.name",
+    "ja": "ボヨヨン雷キノコン",
+    "context": "glossary genshin term stretchy-electro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-electro-fungus.summary",
+    "ja": "雷元素の伸縮キノコン。",
+    "context": "glossary genshin term stretchy-electro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-electro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term stretchy-electro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-pyro-fungus.name",
+    "ja": "ボヨヨン炎キノコン",
+    "context": "glossary genshin term stretchy-pyro-fungus: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-pyro-fungus.summary",
+    "ja": "炎元素の伸縮キノコン。",
+    "context": "glossary genshin term stretchy-pyro-fungus: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.stretchy-pyro-fungus.body",
+    "ja": "スメールに生息するキノコ状の魔物キノコンの一種。元素の影響で活性化・枯化することがある。体を伸縮させ、頭突きで攻撃する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term stretchy-pyro-fungus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.genshin.makhaira-aquamarine.name",
     "ja": "マカイラの水色",
     "context": "glossary genshin term makhaira-aquamarine: Japanese official term name",
@@ -11403,7 +14091,10 @@ const block12: SourceText[] = [
     "protectedTokens": [
       "[[elemental-mastery]]"
     ]
-  },
+  }
+];
+
+const block15: SourceText[] = [
   {
     "id": "term.genshin.god.name",
     "ja": "魔神",
@@ -11520,6 +14211,62 @@ const block12: SourceText[] = [
     "protectedTokens": [
       "[[wish|"
     ]
+  },
+  {
+    "id": "term.genshin.hydro-slime.name",
+    "ja": "水スライム",
+    "context": "glossary genshin term hydro-slime: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-slime.summary",
+    "ja": "水元素の小型スライム。",
+    "context": "glossary genshin term hydro-slime: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-slime.body",
+    "ja": "水元素の[[element|元素]]生物スライムの一種。テイワット全域に生息する元素生物で、同じ元素の攻撃は無効になる。水辺の近くに現れることが多い。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hydro-slime: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[element|"
+    ]
+  },
+  {
+    "id": "term.genshin.hydro-specter.name",
+    "ja": "水フライム",
+    "context": "glossary genshin term hydro-specter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-specter.summary",
+    "ja": "水元素のフライム。",
+    "context": "glossary genshin term hydro-specter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.genshin.hydro-specter.body",
+    "ja": "高濃度の元素から生まれ、空を浮遊する元素生物フライムの一種。ダメージを受けると怒りが蓄積し、満タンになると爆発する。注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary genshin term hydro-specter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.genshin.fruitful-hook.name",
@@ -12296,7 +15043,7 @@ const block12: SourceText[] = [
   }
 ];
 
-const block13: SourceText[] = [
+const block16: SourceText[] = [
   {
     "id": "term.genshin.fading-twilight.summary",
     "ja": "元素チャージ効率が上がる★4の弓。",
@@ -13206,4 +15953,4 @@ const block13: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14, ...block15, ...block16];
