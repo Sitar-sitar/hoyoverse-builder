@@ -21,7 +21,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.data-bank.body",
-    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「人類はもうすぐ滅びる。しかし図書館は永遠に存在し続ける」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「人類はもうすぐ滅びる。しかし図書館は永遠に存在し続ける」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term data-bank: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -461,7 +461,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.argenti.body",
-    "ja": "純美の騎士で、ボスとして登場する。弱点は物理・炎・氷。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "純美の騎士で、ボスとして登場する。弱点は物理・炎・氷。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term argenti: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -546,7 +546,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.black-tides-corroded-axe.body",
-    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は物理・雷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は物理・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term black-tides-corroded-axe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -573,7 +573,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.black-tide-council.body",
-    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は炎・雷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は炎・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term black-tide-council: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -600,7 +600,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.black-tides-champion.body",
-    "ja": "暗黒の潮の造物の一種で、強敵。弱点は物理・雷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、強敵。弱点は物理・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term black-tides-champion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -681,7 +681,7 @@ const block0: SourceText[] = [
   },
   {
     "id": "term.hsr.black-tides-decrepit-bow.body",
-    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は物理・氷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、通常エネミー。弱点は物理・氷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term black-tides-decrepit-bow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1214,7 +1214,7 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.hsr.fortune-bananadvisor.body",
-    "ja": "バナ研に属する通常エネミー。弱点は炎・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "バナ研に属する通常エネミー。弱点は炎・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term fortune-bananadvisor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1295,7 +1295,7 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.hsr.voidranger-eliminator.body",
-    "ja": "反物質レギオンに属する通常エネミー。弱点は炎・氷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は炎・氷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term voidranger-eliminator: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1349,7 +1349,7 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.hsr.present-inebriated-in-revelry.body",
-    "ja": "ピノコニーの夢境に現れる強敵。弱点は物理・炎・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ピノコニーの夢境に現れる強敵。弱点は物理・炎・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term present-inebriated-in-revelry: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1650,7 +1650,7 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.hsr.cloud-knight-lieutenant-yanqing.body",
-    "ja": "雲騎軍の驍衛で、ボスとして登場する。弱点は雷・風・虚数。氷属性への耐性と、凍結・禁錮・量子もつれへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "雲騎軍の驍衛で、ボスとして登場する。弱点は雷・風・虚数。氷属性への耐性と、凍結・禁錮・量子もつれへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term cloud-knight-lieutenant-yanqing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -1706,7 +1706,7 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.hsr.cloud-knights-patroller.body",
-    "ja": "雲騎軍の兵士で、通常エネミー。弱点は炎・風・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "雲騎軍の兵士で、通常エネミー。弱点は炎・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term cloud-knights-patroller: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2322,7 +2322,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.dark-sun-gryphon.body",
-    "ja": "暗黒の潮の造物の一種で、強敵。弱点は物理・炎・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、強敵。弱点は物理・炎・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dark-sun-gryphon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2349,7 +2349,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.sd-civilian-mechatron.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term sd-civilian-mechatron: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2439,7 +2439,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.loop.body",
-    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、過去の幻影から逃れようとする逃亡者の苦しさが描かれている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、過去の幻影から逃れようとする逃亡者の苦しさが描かれている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term loop: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2587,7 +2587,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.ichor-memosprite-canine.body",
-    "ja": "黄金の血の記憶の精霊の一種で、通常エネミー。弱点は氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "黄金の血の記憶の精霊の一種で、通常エネミー。弱点は氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term ichor-memosprite-canine: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2614,7 +2614,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.ichor-memosprite-pheasant.body",
-    "ja": "黄金の血の記憶の精霊の一種で、通常エネミー。弱点は物理・炎。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "黄金の血の記憶の精霊の一種で、通常エネミー。弱点は物理・炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term ichor-memosprite-pheasant: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2641,7 +2641,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.ichor-memosprite-judge-of-oblivion.body",
-    "ja": "黄金の血の記憶の精霊の一種で、ボス。弱点は物理・氷・虚数。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "黄金の血の記憶の精霊の一種で、ボス。弱点は物理・氷・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term ichor-memosprite-judge-of-oblivion: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -2697,7 +2697,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.autonomous-wand.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は物理・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は物理・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term autonomous-wand: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3335,7 +3335,7 @@ const block3: SourceText[] = [
   },
   {
     "id": "term.hsr.fine-fruit.body",
-    "ja": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「喉が渇く時は、全てが甘くなる」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|豊穣]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「喉が渇く時は、全てが甘くなる」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term fine-fruit: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3398,7 +3398,7 @@ const block3: SourceText[] = [
   },
   {
     "id": "term.hsr.cocolia.body",
-    "ja": "ヤリーロ-Ⅵの大守護者で、ボスとして登場する。弱点は炎・雷・量子。物理・氷・風属性への耐性と、凍結・行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ヤリーロ-Ⅵの大守護者で、ボスとして登場する。弱点は炎・雷・量子。物理・氷・風属性への耐性と、凍結・行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term cocolia: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3513,7 +3513,7 @@ const block3: SourceText[] = [
   },
   {
     "id": "term.hsr.the-past-present-and-eternal-show.body",
-    "ja": "ピノコニーの夢境に現れるボス。弱点は持たない。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ピノコニーの夢境に現れるボス。弱点は持たない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term the-past-present-and-eternal-show: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3694,7 +3694,7 @@ const block3: SourceText[] = [
   },
   {
     "id": "term.hsr.windspawn.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・雷。風属性への耐性と風化への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・雷。風属性への耐性と風化への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term windspawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -3878,7 +3878,7 @@ const block3: SourceText[] = [
   },
   {
     "id": "term.hsr.thunderspawn.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は物理・風。雷属性への耐性と感電への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は物理・風。雷属性への耐性と感電への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term thunderspawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4176,7 +4176,7 @@ const block4: SourceText[] = [
   },
   {
     "id": "term.hsr.something-in-the-mirror.body",
-    "ja": "記憶域ミームの一種で、通常エネミー。弱点は物理・風・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "記憶域ミームの一種で、通常エネミー。弱点は物理・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term something-in-the-mirror: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4257,7 +4257,7 @@ const block4: SourceText[] = [
   },
   {
     "id": "term.hsr.memory-zone-meme-allseer.body",
-    "ja": "記憶域ミームの一種で、通常エネミー。弱点は氷・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "記憶域ミームの一種で、通常エネミー。弱点は氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term memory-zone-meme-allseer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4284,7 +4284,7 @@ const block4: SourceText[] = [
   },
   {
     "id": "term.hsr.memory-zone-meme-insatiable-vanity.body",
-    "ja": "記憶域ミームの一種で、通常エネミー。弱点は物理・炎。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "記憶域ミームの一種で、通常エネミー。弱点は物理・炎。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term memory-zone-meme-insatiable-vanity: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4433,7 +4433,7 @@ const block4: SourceText[] = [
   },
   {
     "id": "term.hsr.comediologist.body",
-    "ja": "反物質レギオンに属する通常エネミー。弱点は物理・炎・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は物理・炎・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term comediologist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -4519,7 +4519,7 @@ const block4: SourceText[] = [
   },
   {
     "id": "term.hsr.banacademic-office-staff.body",
-    "ja": "バナ研の集団で、ボスとして登場する。弱点は炎・氷・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "バナ研の集団で、ボスとして登場する。弱点は炎・氷・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term banacademic-office-staff: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5574,7 +5574,7 @@ const block5: SourceText[] = [
   },
   {
     "id": "term.hsr.cyclonic-swarm-mother.body",
-    "ja": "淵底のセイレーンに属する強敵。弱点は炎・氷・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "淵底のセイレーンに属する強敵。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term cyclonic-swarm-mother: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -5601,7 +5601,7 @@ const block5: SourceText[] = [
   },
   {
     "id": "term.hsr.mutual-demise.body",
-    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、星の過去をより完璧にするために今すぐその星を砕くよう促す言葉が記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、星の過去をより完璧にするために今すぐその星を砕くよう促す言葉が記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term mutual-demise: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6238,7 +6238,7 @@ const block6: SourceText[] = [
   },
   {
     "id": "term.hsr.alloy-mechatron-king-pom-pom.body",
-    "ja": "幻造種の一種で、ボスとして登場する。弱点は炎・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、ボスとして登場する。弱点は炎・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term alloy-mechatron-king-pom-pom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6265,7 +6265,7 @@ const block6: SourceText[] = [
   },
   {
     "id": "term.hsr.aggressive-reading-material.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term aggressive-reading-material: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6589,7 +6589,7 @@ const block6: SourceText[] = [
   },
   {
     "id": "term.hsr.illwish-archlotus.body",
-    "ja": "幻造種の一種で、ボスとして登場する。弱点は物理・雷・虚数。炎・氷・風・量子属性への耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、ボスとして登場する。弱点は物理・雷・虚数。炎・氷・風・量子属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term illwish-archlotus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -6862,7 +6862,7 @@ const block6: SourceText[] = [
   },
   {
     "id": "term.hsr.amber.body",
-    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「時間に縛られないものだけが、時間を超えて存在し続けられる」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「時間に縛られないものだけが、時間を超えて存在し続けられる」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term amber: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7290,7 +7290,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.decaying-shadow.body",
-    "ja": "裂界造物の一種で、強敵。弱点は炎・雷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、強敵。弱点は炎・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term decaying-shadow: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7377,7 +7377,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.gepard.body",
-    "ja": "シルバーメインの尉官で、ボスとして登場する。弱点は物理・雷・虚数。氷属性への耐性と行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "シルバーメインの尉官で、ボスとして登場する。弱点は物理・雷・虚数。氷属性への耐性と行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term gepard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7742,7 +7742,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.jitchuu.body",
-    "ja": "スウォームの一種で、通常エネミー。弱点は物理・炎・虚数。凍結への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "スウォームの一種で、通常エネミー。弱点は物理・炎・虚数。凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term jitchuu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7855,7 +7855,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.automaton-hound.body",
-    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は物理・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は物理・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term automaton-hound: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7882,7 +7882,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.automaton-beetle.body",
-    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は雷・風・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は雷・風・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term automaton-beetle: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7909,7 +7909,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.automaton-spider.body",
-    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は雷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ヤリーロ-Ⅵの自動機兵の一種で、通常エネミー。弱点は雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term automaton-spider: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -7965,7 +7965,7 @@ const block7: SourceText[] = [
   },
   {
     "id": "term.hsr.frostspawn.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・風。氷属性への耐性と凍結への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・風。氷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term frostspawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -8957,7 +8957,7 @@ const block8: SourceText[] = [
   },
   {
     "id": "term.hsr.gnaw-sting.body",
-    "ja": "スウォームの一種で、通常エネミー。弱点は物理・氷。量子属性への耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "スウォームの一種で、通常エネミー。弱点は物理・氷。量子属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term gnaw-sting: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9043,7 +9043,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.silvermane-soldier.body",
-    "ja": "シルバーメインに属する通常エネミー。弱点は風・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "シルバーメインに属する通常エネミー。弱点は風・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term silvermane-soldier: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9070,7 +9070,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.silvermane-gunner.body",
-    "ja": "シルバーメインに属する通常エネミー。弱点は物理・氷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "シルバーメインに属する通常エネミー。弱点は物理・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term silvermane-gunner: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9184,7 +9184,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.silvermane-cannoneer.body",
-    "ja": "シルバーメインに属する通常エネミー。弱点は物理・氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "シルバーメインに属する通常エネミー。弱点は物理・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term silvermane-cannoneer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9395,7 +9395,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.shintenchi.body",
-    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、助けが得られない日々は終わり、これからはカンパニーが皆と助け合っていくと記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、助けが得られない日々は終わり、これからはカンパニーが皆と助け合っていくと記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term shintenchi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9958,7 +9958,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.stellaron-hunter-kafka.body",
-    "ja": "星核ハンターの一員で、ボスとして登場する。弱点は物理・風・虚数。雷属性への耐性と凍結への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "星核ハンターの一員で、ボスとして登場する。弱点は物理・風・虚数。雷属性への耐性と凍結への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term stellaron-hunter-kafka: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -11122,7 +11122,7 @@ const block11: SourceText[] = [
   },
   {
     "id": "term.hsr.murata-graphia-founding-artist.body",
-    "ja": "幻造種の一種で、ボスとして登場する。弱点は炎・雷・量子。物理・氷・風・虚数属性への耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、ボスとして登場する。弱点は炎・雷・量子。物理・氷・風・虚数属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term murata-graphia-founding-artist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -11641,7 +11641,7 @@ const block11: SourceText[] = [
   },
   {
     "id": "term.hsr.incineration-shadewalker.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は氷・風・虚数。炎属性への耐性と燃焼への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は氷・風・虚数。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term incineration-shadewalker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -11765,7 +11765,7 @@ const block11: SourceText[] = [
   },
   {
     "id": "term.hsr.furbo-journalist.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は雷・量子・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は雷・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term furbo-journalist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -11975,7 +11975,7 @@ const block11: SourceText[] = [
   },
   {
     "id": "term.hsr.security-doggo.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term security-doggo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -12615,7 +12615,7 @@ const block12: SourceText[] = [
   },
   {
     "id": "term.hsr.tomorrow-in-harmonious-chords.body",
-    "ja": "ピノコニーの夢境に現れる強敵。弱点は物理・炎・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ピノコニーの夢境に現れる強敵。弱点は物理・炎・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term tomorrow-in-harmonious-chords: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -13262,7 +13262,7 @@ const block13: SourceText[] = [
   },
   {
     "id": "term.hsr.collapsing-sky.body",
-    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「万物の消失はその誕生と同じように自然。時間の流れのもと、一切の形あるものが塵となる」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「万物の消失はその誕生と同じように自然。時間の流れのもと、一切の形あるものが塵となる」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term collapsing-sky: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -13504,7 +13504,7 @@ const block13: SourceText[] = [
   },
   {
     "id": "term.hsr.furiae-troupe.body",
-    "ja": "タイタンの眷属に属する通常エネミー。弱点は物理・氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "タイタンの眷属に属する通常エネミー。弱点は物理・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term furiae-troupe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -13531,7 +13531,7 @@ const block13: SourceText[] = [
   },
   {
     "id": "term.hsr.furiae-archer.body",
-    "ja": "タイタンの眷属に属する通常エネミー。弱点は氷・雷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "タイタンの眷属に属する通常エネミー。弱点は氷・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term furiae-archer: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -13585,7 +13585,7 @@ const block13: SourceText[] = [
   },
   {
     "id": "term.hsr.furiae-philosopher.body",
-    "ja": "タイタンの眷属に属する通常エネミー。弱点は炎・氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "タイタンの眷属に属する通常エネミー。弱点は炎・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term furiae-philosopher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14075,7 +14075,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.past-confined-and-caged.body",
-    "ja": "ピノコニーの夢境に現れる強敵。弱点は炎・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ピノコニーの夢境に現れる強敵。弱点は炎・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term past-confined-and-caged: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14251,7 +14251,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamweaver-bananadvisor.body",
-    "ja": "バナ研に属する通常エネミー。弱点は炎・氷・雷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "バナ研に属する通常エネミー。弱点は炎・氷・雷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamweaver-bananadvisor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14341,7 +14341,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.god-devourer-offspring.body",
-    "ja": "幻造種の一種で、強敵。弱点は炎・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は炎・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term god-devourer-offspring: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14395,7 +14395,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamjolt-troupes-birdskull.body",
-    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamjolt-troupes-birdskull: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14449,7 +14449,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamjolt-troupes-spring-loader.body",
-    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は物理・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は物理・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamjolt-troupes-spring-loader: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14476,7 +14476,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamjolt-troupes-winder-goon.body",
-    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は雷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamjolt-troupes-winder-goon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14530,7 +14530,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamjolt-troupes-mr-domescreen.body",
-    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は氷・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は氷・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamjolt-troupes-mr-domescreen: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14557,7 +14557,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.dreamjolt-troupes-fortune-seller.body",
-    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は炎・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ナイトメア劇団の一員で、通常エネミー。弱点は炎・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term dreamjolt-troupes-fortune-seller: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14803,7 +14803,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.namishibuki-ga-odoru-natsu-e.body",
-    "ja": "[[path|愉悦]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「荒波はリスクの象徴だ。大きなリスクほど大きなリターンがある」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|愉悦]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「荒波はリスクの象徴だ。大きなリスクほど大きなリターンがある」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term namishibuki-ga-odoru-natsu-e: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -14833,7 +14833,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.servant-of-tides.body",
-    "ja": "淵底のセイレーンに属する通常エネミー。弱点は物理・雷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "淵底のセイレーンに属する通常エネミー。弱点は物理・雷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term servant-of-tides: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15016,7 +15016,7 @@ const block14: SourceText[] = [
   },
   {
     "id": "term.hsr.illumination-dragonfish.body",
-    "ja": "仙舟「羅浮」の機巧の一種で、通常エネミー。弱点は物理・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "仙舟「羅浮」の機巧の一種で、通常エネミー。弱点は物理・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term illumination-dragonfish: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15171,7 +15171,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.charmony-bananadvisor.body",
-    "ja": "バナ研に属する強敵。弱点は炎・氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "バナ研に属する強敵。弱点は炎・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term charmony-bananadvisor: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15454,7 +15454,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.daybreak-squadron-dawnlance.body",
-    "ja": "幻造種の一種で、強敵。弱点は物理・炎・量子。虚数属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は物理・炎・量子。虚数属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term daybreak-squadron-dawnlance: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15481,7 +15481,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.daybreak-squadron-cinderborne.body",
-    "ja": "幻造種の一種で、強敵。弱点は炎・量子・虚数。物理属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は炎・量子・虚数。物理属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term daybreak-squadron-cinderborne: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15508,7 +15508,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.daybreak-squadron-azurewing.body",
-    "ja": "幻造種の一種で、強敵。弱点は物理・炎・虚数。量子属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は物理・炎・虚数。量子属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term daybreak-squadron-azurewing: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15535,7 +15535,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.daybreak-squadron-blazeweaver.body",
-    "ja": "幻造種の一種で、強敵。弱点は物理・量子・虚数。炎属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は物理・量子・虚数。炎属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term daybreak-squadron-blazeweaver: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15618,7 +15618,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.banacademic-offices-assistanana.body",
-    "ja": "バナ研に属する通常エネミー。弱点は氷・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "バナ研に属する通常エネミー。弱点は氷・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term banacademic-offices-assistanana: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15735,7 +15735,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.harmonious-choir-the-great-septimus.body",
-    "ja": "週ボスとして登場する。弱点は炎・雷・虚数。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "週ボスとして登場する。弱点は炎・雷・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term harmonious-choir-the-great-septimus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15821,7 +15821,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.anti-creator-hatred-inundate.body",
-    "ja": "暗黒の潮の造物の一種で、週ボス。弱点は氷・雷・量子。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "暗黒の潮の造物の一種で、週ボス。弱点は氷・雷・量子。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term anti-creator-hatred-inundate: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -15848,7 +15848,7 @@ const block15: SourceText[] = [
   },
   {
     "id": "term.hsr.antibaryon.body",
-    "ja": "反物質レギオンに属する通常エネミー。弱点は物理・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "反物質レギオンに属する通常エネミー。弱点は物理・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term antibaryon: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -16211,7 +16211,7 @@ const block16: SourceText[] = [
   },
   {
     "id": "term.hsr.first-genius-entelechy-zandar.body",
-    "ja": "ボスとして登場する。弱点は物理・氷・風。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "ボスとして登場する。弱点は物理・氷・風。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term first-genius-entelechy-zandar: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -16599,7 +16599,7 @@ const block16: SourceText[] = [
   },
   {
     "id": "term.hsr.cirrus.body",
-    "ja": "十王司に封印されていた歳陽で、ボスとして登場する。弱点は持たない。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "十王司に封印されていた歳陽で、ボスとして登場する。弱点は持たない。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term cirrus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -17057,7 +17057,7 @@ const block17: SourceText[] = [
   },
   {
     "id": "term.hsr.bronya.body",
-    "ja": "シルバーメインの指揮官で、ボスとして登場する。弱点は物理・炎・虚数。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "シルバーメインの指揮官で、ボスとして登場する。弱点は物理・炎・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term bronya: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -17170,7 +17170,7 @@ const block17: SourceText[] = [
   },
   {
     "id": "term.hsr.senior-staff-team-leader.body",
-    "ja": "スターピースカンパニーの社員で、強敵。弱点は炎・氷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "スターピースカンパニーの社員で、強敵。弱点は炎・氷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term senior-staff-team-leader: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -17286,7 +17286,7 @@ const block17: SourceText[] = [
   },
   {
     "id": "term.hsr.bouei.body",
-    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、城壁の後ろにいる頑強な民たちが、防御も勝利に至る術の一つであることを証明したと記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|存護]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、城壁の後ろにいる頑強な民たちが、防御も勝利に至る術の一つであることを証明したと記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term bouei: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -17611,7 +17611,7 @@ const block17: SourceText[] = [
   },
   {
     "id": "term.hsr.abundance-sprite-malefic-ape.body",
-    "ja": "豊穣の霊獣の一種で、強敵。弱点は炎・氷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "豊穣の霊獣の一種で、強敵。弱点は炎・氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term abundance-sprite-malefic-ape: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -17907,7 +17907,7 @@ const block17: SourceText[] = [
   },
   {
     "id": "term.hsr.flamespawn.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は物理・氷。炎属性への耐性と燃焼への抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は物理・氷。炎属性への耐性と燃焼への抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term flamespawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18080,7 +18080,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.mara-struck-warden.body",
-    "ja": "魔陰の身に堕ちた武弁で、通常エネミー。弱点は氷・雷・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "魔陰の身に堕ちた武弁で、通常エネミー。弱点は氷・雷・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term mara-struck-warden: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18290,7 +18290,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.magical-girl-troupe.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・氷。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は物理・炎・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term magical-girl-troupe: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18412,7 +18412,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.moonlit-pegasus.body",
-    "ja": "晨昏の奇獣の一種で、強敵。弱点は炎・量子・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "晨昏の奇獣の一種で、強敵。弱点は炎・量子・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term moonlit-pegasus: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18537,7 +18537,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.mask-of-no-thought.body",
-    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・量子。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "裂界造物の一種で、通常エネミー。弱点は炎・量子。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term mask-of-no-thought: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18622,7 +18622,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.pollux-netherwing-husk.body",
-    "ja": "タイタンの眷属に属するボス。弱点は風・量子・虚数。行動制限系デバフへの抵抗を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "タイタンの眷属に属するボス。弱点は風・量子・虚数。行動制限系デバフへの抵抗を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term pollux-netherwing-husk: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -18992,7 +18992,7 @@ const block18: SourceText[] = [
   },
   {
     "id": "term.hsr.ballistarius.body",
-    "ja": "薬王秘伝の信徒で、通常エネミー。弱点は物理・氷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "薬王秘伝の信徒で、通常エネミー。弱点は物理・氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term ballistarius: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -19049,7 +19049,7 @@ const block19: SourceText[] = [
   },
   {
     "id": "term.hsr.internal-alchemist.body",
-    "ja": "薬王秘伝の信徒で、通常エネミー。弱点は物理・虚数。雷属性への耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "薬王秘伝の信徒で、通常エネミー。弱点は物理・虚数。雷属性への耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term internal-alchemist: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -19256,7 +19256,7 @@ const block19: SourceText[] = [
   },
   {
     "id": "term.hsr.void.body",
-    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、すべての終焉に高く昇る漆黒の太陽のような空洞を見つめる者の姿が描かれている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|虚無]]のキャラクターが効果を発動できる[[light-cone]]。テキストでは、すべての終焉に高く昇る漆黒の太陽のような空洞を見つめる者の姿が描かれている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term void: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -19349,7 +19349,7 @@ const block19: SourceText[] = [
   },
   {
     "id": "term.hsr.wraith-warden.body",
-    "ja": "十王司の武弁で、通常エネミー。弱点は物理・氷・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "十王司の武弁で、通常エネミー。弱点は物理・氷・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term wraith-warden: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20154,7 +20154,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.shattered-home.body",
-    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「あるものを壊す力を持った存在こそ、そのものを真に掌握した支配者」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|壊滅]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「あるものを壊す力を持った存在こそ、そのものを真に掌握した支配者」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term shattered-home: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20184,7 +20184,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.assistant-graffiti-demander.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は氷・風。雷属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は氷・風。雷属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term assistant-graffiti-demander: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20211,7 +20211,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.assistant-graffiti-slacker.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は雷・風。氷属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は雷・風。氷属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term assistant-graffiti-slacker: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20238,7 +20238,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.assistant-graffiti-rusher.body",
-    "ja": "幻造種の一種で、通常エネミー。弱点は氷・雷。風属性への高い耐性を持つ。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、通常エネミー。弱点は氷・雷。風属性への高い耐性を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term assistant-graffiti-rusher: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20265,7 +20265,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.joy-ascendant.body",
-    "ja": "幻造種の一種で、強敵。弱点は炎・雷・虚数。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は炎・雷・虚数。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term joy-ascendant: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20715,7 +20715,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.passkey.body",
-    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「知識は永遠にあの扉の後ろにある」と記されている。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "[[path|知恵]]のキャラクターが効果を発動できる[[light-cone]]。テキストには「知識は永遠にあの扉の後ろにある」と記されている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term passkey: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20959,7 +20959,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.eclipse-wolftrooper.body",
-    "ja": "歩離人の狼兵で、通常エネミー。弱点は物理・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "歩離人の狼兵で、通常エネミー。弱点は物理・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term eclipse-wolftrooper: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -20986,7 +20986,7 @@ const block20: SourceText[] = [
   },
   {
     "id": "term.hsr.rocking-rebel.body",
-    "ja": "幻造種の一種で、強敵。弱点は物理・炎・風。\\n\\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "幻造種の一種で、強敵。弱点は物理・炎・風。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term rocking-rebel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
