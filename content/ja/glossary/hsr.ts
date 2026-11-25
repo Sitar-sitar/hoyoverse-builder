@@ -2911,7 +2911,7 @@ const block2: SourceText[] = [
   },
   {
     "id": "term.hsr.garden-of-recollection.body",
-    "ja": "「[[remembrance|記憶]]」の[[aeon|星神]]・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨てた精神体として各地を巡り、人々の記憶を集める。ブラックスワンはその一人。中国語名は「流光憶庭」。",
+    "ja": "「[[remembrance|記憶]]」の[[aeon|星神]]・浮黎を信仰し、宇宙の記憶を収集・保存する組織。所属するメモキーパーは肉体を捨て、ミームとして宇宙を行き来しながら、人々の記憶を集める。ブラックスワンはその一人。",
     "context": "glossary hsr term garden-of-recollection: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
@@ -9211,7 +9211,7 @@ const block9: SourceText[] = [
   },
   {
     "id": "term.hsr.emanator.body",
-    "ja": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。[[aeon|星神]]に認められた者だけが就くことができ、力は並の「[[path|運命]]」の行人を遥かに上回る。「[[destruction|壊滅]]」の絶滅大君が代表例として知られる。なお、仙舟の[[seven-arbiter-generals|帝弓七天将]]は使令とは明言されていないが、絶滅大君と同等の力を持つとされる。",
+    "ja": "[[aeon|星神]]から直接力を分け与えられ、その意思を代行する存在。[[aeon|星神]]に認められた者だけが就くことができ、力は並の「[[path|運命]]」の行人を遥かに上回る。「[[destruction|壊滅]]」の絶滅大君が代表例として知られる。なお、仙舟の[[seven-arbiter-generals|帝弓七天将]]は使令とは明言されていないが、絶滅大君と同等の力を持つとされる。 注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary hsr term emanator: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
