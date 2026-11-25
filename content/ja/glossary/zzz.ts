@@ -1875,16 +1875,13 @@ const block1: SourceText[] = [
   },
   {
     "id": "term.zzz.blazing-laurel.body",
-    "ja": "「[[stun-specialty]]」向けの[[w-engine]]。[[ex-special-attack]]や[[chain-attack]]などに応じて[[stun]]蓄積を強化する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "ja": "「[[stun-specialty]]」向けのS級[[w-engine]]で、ライトのモチーフ音動機。効果「流るる炎」により、『クイック支援』または『極限支援』を発動すると装備者の衝撃力が25%上がる（8秒）。装備者の『通常攻撃』が命中するとターゲットに「衰耗」を1重付与し（最大20重、30秒）、任意のメンバーの攻撃が命中したとき、「衰耗」1重につきその攻撃の氷属性・炎属性ダメージの会心ダメージが1.5%上がる（同効果はチーム内で1つのみ有効）。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
     "context": "glossary zzz term blazing-laurel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": [
-      "[[chain-attack]]",
-      "[[ex-special-attack]]",
       "[[stun-specialty]]",
-      "[[stun]]",
       "[[w-engine]]"
     ]
   },
