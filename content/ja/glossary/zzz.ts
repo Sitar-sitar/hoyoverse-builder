@@ -122,6 +122,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.akaki-tsubasa-no-yasoukyoku.name",
+    "ja": "赤き翼の夜想曲",
+    "context": "glossary zzz term akaki-tsubasa-no-yasoukyoku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.akaki-tsubasa-no-yasoukyoku.summary",
+    "ja": "エネルギー自動回復に関わるドライバディスク。",
+    "context": "glossary zzz term akaki-tsubasa-no-yasoukyoku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.akaki-tsubasa-no-yasoukyoku.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果はエネルギー自動回復を高める。4セット効果は会心ダメージと、攻撃の与えるブレイク値を高める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term akaki-tsubasa-no-yasoukyoku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
+    ]
+  },
+  {
     "id": "term.zzz.dawns-bloom.name",
     "ja": "暁に咲く花",
     "context": "glossary zzz term dawns-bloom: Japanese official term name",
@@ -417,6 +446,35 @@ const block0: SourceText[] = [
       "[[anomaly]]",
       "[[w-engine-channel]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.ariel.name",
+    "ja": "アリエル",
+    "context": "glossary zzz term ariel: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ariel.summary",
+    "ja": "戦闘に同行するS級ボンプ。",
+    "context": "glossary zzz term ariel: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ariel.body",
+    "ja": "編成に加えられる[[bangboo]]。周囲の敵を引き寄せてエーテル属性ダメージを与え、引き寄せた敵の数に応じてHP回復やエネルギー回復などのバフをランダムに得る。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ariel: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[bangboo]]"
     ]
   },
   {
@@ -805,6 +863,33 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.vision-corporation.name",
+    "ja": "ヴィジョン・コーポレーション",
+    "context": "glossary zzz term vision-corporation: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vision-corporation.summary",
+    "ja": "旧都地下鉄改修工事を請け負った建設会社。",
+    "context": "glossary zzz term vision-corporation: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.vision-corporation.body",
+    "ja": "比較的大手の建設会社。旧都地下鉄改修工事で住民を巻き込む爆破計画が明るみに出て頓挫した。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term vision-corporation: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.ukaavarusu.name",
     "ja": "羽化・アヴァルス",
     "context": "glossary zzz term ukaavarusu: Japanese official term name",
@@ -865,6 +950,35 @@ const block0: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.ukasapusshonsukuwatta.name",
+    "ja": "羽化・サプレッション・スクワッタ",
+    "context": "glossary zzz term ukasapusshonsukuwatta: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ukasapusshonsukuwatta.summary",
+    "ja": "電気・風が弱点の通常エネミー。",
+    "context": "glossary zzz term ukasapusshonsukuwatta: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ukasapusshonsukuwatta.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は電気・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ukasapusshonsukuwatta: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.ukatarasukumikisaa.name",
     "ja": "羽化・タラスクミキサー",
     "context": "glossary zzz term ukatarasukumikisaa: Japanese official term name",
@@ -872,7 +986,10 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block1: SourceText[] = [
   {
     "id": "term.zzz.ukatarasukumikisaa.summary",
     "ja": "氷・物理が弱点の精鋭エネミー。",
@@ -990,10 +1107,7 @@ const block0: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block1: SourceText[] = [
+  },
   {
     "id": "term.zzz.urutora-neivu.summary",
     "ja": "戦闘に同行するS級ボンプ。",
@@ -1101,6 +1215,151 @@ const block1: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[drive-disc]]"
+    ]
+  },
+  {
+    "id": "term.zzz.easupeesusenchineru.name",
+    "ja": "エアスペース・センティネル",
+    "context": "glossary zzz term easupeesusenchineru: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.easupeesusenchineru.summary",
+    "ja": "氷・風が弱点のボス。",
+    "context": "glossary zzz term easupeesusenchineru: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.easupeesusenchineru.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は氷・風。耐性はエーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term easupeesusenchineru: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.easupeesupatoroorinna.name",
+    "ja": "エアスペース・パトローリンナ",
+    "context": "glossary zzz term easupeesupatoroorinna: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.easupeesupatoroorinna.summary",
+    "ja": "炎・風が弱点の通常エネミー。",
+    "context": "glossary zzz term easupeesupatoroorinna: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.easupeesupatoroorinna.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term easupeesupatoroorinna: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.eigyo.name",
+    "ja": "鋭御",
+    "context": "glossary zzz term eigyo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eigyo.summary",
+    "ja": "防御力を攻撃の基準にする特性。",
+    "context": "glossary zzz term eigyo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eigyo.body",
+    "ja": "[[specialty|特性]]のひとつ。防御力を基準にダメージを計算するエージェントが属する。詳しい能力や使用するリソースは[[agent]]ごとに確認する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term eigyo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[agent]]",
+      "[[specialty|"
+    ]
+  },
+  {
+    "id": "term.zzz.eigeki.name",
+    "ja": "鋭撃",
+    "context": "glossary zzz term eigeki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eigeki.summary",
+    "ja": "鋭御特性のエージェントが与えるダメージ。",
+    "context": "glossary zzz term eigeki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eigeki.body",
+    "ja": "鋭御特性のエージェントのスキルで与えるダメージの種別。防御力を基準に計算され、会心が発生した時は通常の会心ダメージの代わりに暴傷ダメージのボーナスが適用される。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term eigeki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eikou-no-kishidou.name",
+    "ja": "栄光の騎士道",
+    "context": "glossary zzz term eikou-no-kishidou: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eikou-no-kishidou.summary",
+    "ja": "会心ダメージが上がる強攻向けのS級音動機。",
+    "context": "glossary zzz term eikou-no-kishidou: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.eikou-no-kishidou.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で会心ダメージを48%伸ばせる。通常攻撃や強化特殊スキルの重撃が命中すると「戦刃」を得て、会心ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term eikou-no-kishidou: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -1310,6 +1569,33 @@ const block1: SourceText[] = [
     "protectedTokens": [
       "[[combat-simulation]]"
     ]
+  },
+  {
+    "id": "term.zzz.ether-veil.name",
+    "ja": "エーテルベール",
+    "context": "glossary zzz term ether-veil: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ether-veil.summary",
+    "ja": "特定のエージェントが展開する支援効果。",
+    "context": "glossary zzz term ether-veil: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ether-veil.body",
+    "ja": "一部のエージェントが展開するベール状の支援効果。展開や延長を条件として、メンバー全員の与ダメージや会心ダメージ、HP上限などを高める効果と結びつくことが多い。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ether-veil: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.expert-challenge.name",
@@ -1678,7 +1964,10 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block2: SourceText[] = [
   {
     "id": "term.zzz.oda-bogyakusha.body",
     "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -1966,10 +2255,7 @@ const block1: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block2: SourceText[] = [
+  },
   {
     "id": "term.zzz.w-engine-warehouse.body",
     "ja": "倉庫から開ける画面。音動機のリサイクルを利用できる。",
@@ -2180,6 +2466,35 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.outer-ring.name",
+    "ja": "外環",
+    "context": "glossary zzz term outer-ring: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.outer-ring.summary",
+    "ja": "新エリー都の郊外に広がる荒野地帯。",
+    "context": "glossary zzz term outer-ring: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.outer-ring.body",
+    "ja": "[[new-eridu]]の郊外に広がる地域。無法地帯とみなされ、走り屋集団などが活動する。ブレイズウッドなどの集落がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term outer-ring: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[new-eridu]]"
+    ]
+  },
+  {
     "id": "term.zzz.cinder-cobalt.name",
     "ja": "「灰燼」-蒼藍",
     "context": "glossary zzz term cinder-cobalt: Japanese official term name",
@@ -2327,6 +2642,33 @@ const block2: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.external-strategy-department.name",
+    "ja": "外務計策局",
+    "context": "glossary zzz term external-strategy-department: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.external-strategy-department.summary",
+    "ja": "ヴェリナやノルムーが所属するロスカリファの機関。",
+    "context": "glossary zzz term external-strategy-department: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.external-strategy-department.body",
+    "ja": "ロスカリファの中枢五局の一つで、通称は外計局。対外的な窓口として、他地域との連絡や調整を担う。マルセルグループの上位組織でもある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term external-strategy-department: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.kagayakeruchikaibirii.name",
     "ja": "輝ける誓い・ビリー",
     "context": "glossary zzz term kagayakeruchikaibirii: Japanese official term name",
@@ -2382,6 +2724,36 @@ const block2: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[bangboo]]"
+    ]
+  },
+  {
+    "id": "term.zzz.kage-o-ou-shiroki-kiba.name",
+    "ja": "影を追う白き牙",
+    "context": "glossary zzz term kage-o-ou-shiroki-kiba: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kage-o-ou-shiroki-kiba.summary",
+    "ja": "エネルギー自動回復が上がる強攻向けのS級音動機。",
+    "context": "glossary zzz term kage-o-ou-shiroki-kiba: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.kage-o-ou-shiroki-kiba.body",
+    "ja": "[[attack]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加でエネルギー自動回復を60%伸ばせる。会心率が上がり、エネルギーをまとめて消費すると電気属性ダメージが敵の防御力を一部無視する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term kage-o-ou-shiroki-kiba: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attack]]",
+      "[[w-engine]]"
     ]
   },
   {
@@ -2562,7 +2934,10 @@ const block2: SourceText[] = [
       "[[attribute-anomaly]]",
       "[[bangboo]]"
     ]
-  },
+  }
+];
+
+const block3: SourceText[] = [
   {
     "id": "term.zzz.sons-of-calydon.name",
     "ja": "カリュドーンの子",
@@ -2945,10 +3320,7 @@ const block2: SourceText[] = [
       "[[attack]]",
       "[[w-engine]]"
     ]
-  }
-];
-
-const block3: SourceText[] = [
+  },
   {
     "id": "term.zzz.ex-special-attack.name",
     "ja": "強化特殊スキル",
@@ -3036,6 +3408,35 @@ const block3: SourceText[] = [
     "protectedTokens": [
       "[[agent]]",
       "[[specialty|"
+    ]
+  },
+  {
+    "id": "term.zzz.abloom.name",
+    "ja": "狂咲",
+    "context": "glossary zzz term abloom: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.abloom.summary",
+    "ja": "状態異常の敵への攻撃で発動する追加ダメージ。",
+    "context": "glossary zzz term abloom: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.abloom.body",
+    "ja": "特定のエージェントの攻撃が[[attribute-anomaly|状態異常]]の敵に命中した時に発動する、追加の状態異常ダメージ。元の状態異常の属性に応じたダメージを与え、ブレイク状態の敵に対してはダメージ量が増える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term abloom: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly|"
     ]
   },
   {
@@ -3356,6 +3757,120 @@ const block3: SourceText[] = [
     "protectedTokens": []
   },
   {
+    "id": "term.zzz.airspace-patrol-bureau.name",
+    "ja": "空域巡警局",
+    "context": "glossary zzz term airspace-patrol-bureau: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-bureau.summary",
+    "ja": "シグリッドが所属するロスカリファの機関。",
+    "context": "glossary zzz term airspace-patrol-bureau: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-bureau.body",
+    "ja": "ロスカリファの中枢五局の一つで、通称は空巡局。ロスカリファとその周辺地域の安全保障を担う。総務次官はシグリッド。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term airspace-patrol-bureau: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-shieldguard.name",
+    "ja": "空巡近衛兵",
+    "context": "glossary zzz term airspace-patrol-shieldguard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-shieldguard.summary",
+    "ja": "炎・風が弱点の通常エネミー。",
+    "context": "glossary zzz term airspace-patrol-shieldguard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-shieldguard.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term airspace-patrol-shieldguard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.airspace-patrol-vanguard.name",
+    "ja": "空巡先遣隊",
+    "context": "glossary zzz term airspace-patrol-vanguard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-vanguard.summary",
+    "ja": "炎・風が弱点の通常エネミー。",
+    "context": "glossary zzz term airspace-patrol-vanguard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-vanguard.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term airspace-patrol-vanguard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.airspace-patrol-spearguard.name",
+    "ja": "空巡槍兵",
+    "context": "glossary zzz term airspace-patrol-spearguard: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-spearguard.summary",
+    "ja": "炎・風が弱点の通常エネミー。",
+    "context": "glossary zzz term airspace-patrol-spearguard: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.airspace-patrol-spearguard.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term airspace-patrol-spearguard: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.kusarikku.name",
     "ja": "クサリク",
     "context": "glossary zzz term kusarikku: Japanese official term name",
@@ -3392,7 +3907,10 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block4: SourceText[] = [
   {
     "id": "term.zzz.magnetiboo.summary",
     "ja": "戦闘に同行するA級ボンプ。",
@@ -3931,10 +4449,7 @@ const block3: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block4: SourceText[] = [
+  },
   {
     "id": "term.zzz.lunar-pleniluna.summary",
     "ja": "攻撃力が上がる強攻向けのB級音動機。",
@@ -4386,7 +4901,10 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block5: SourceText[] = [
   {
     "id": "term.zzz.koureiseki.body",
     "ja": "衛非地区は輝嶺石の主要な産地で、輝磁製品の加工も行われている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -4418,6 +4936,33 @@ const block4: SourceText[] = [
     "id": "term.zzz.withered-domain.body",
     "ja": "零号ホロウにおける挑戦の一つ。調査ポイントに関する報酬がある。",
     "context": "glossary zzz term withered-domain: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.void-hunter.name",
+    "ja": "虚狩り",
+    "context": "glossary zzz term void-hunter: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.void-hunter.summary",
+    "ja": "災害鎮圧の功労者に与えられる最高位の称号。",
+    "context": "glossary zzz term void-hunter: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.void-hunter.body",
+    "ja": "ホロウ災害の鎮圧に大きな功績のあった傑物に与えられる称号。現在の称号保持者には星見雅や葉瞬光がおり、初代の虚狩りは七人とされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term void-hunter: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
     "audience": "public",
     "placeholders": {},
     "dependencies": [],
@@ -4917,10 +5462,7 @@ const block4: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block5: SourceText[] = [
+  },
   {
     "id": "term.zzz.sateyurosu.body",
     "ja": "「[[ethereal]]」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・氷。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -5021,6 +5563,35 @@ const block5: SourceText[] = [
       "[[attack]]",
       "[[crit-dmg]]",
       "[[w-engine]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sapusshonsukuwatta.name",
+    "ja": "サプレッション・スクワッタ",
+    "context": "glossary zzz term sapusshonsukuwatta: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sapusshonsukuwatta.summary",
+    "ja": "炎・風が弱点の通常エネミー。",
+    "context": "glossary zzz term sapusshonsukuwatta: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sapusshonsukuwatta.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は炎・風。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sapusshonsukuwatta: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -5174,6 +5745,33 @@ const block5: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.exaltists.name",
+    "ja": "讃頌会",
+    "context": "glossary zzz term exaltists: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exaltists.summary",
+    "ja": "「始まりの主」を崇拝するカルト集団。",
+    "context": "glossary zzz term exaltists: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.exaltists.body",
+    "ja": "「始まりの主」と呼ばれる存在を原初の神として崇拝する集団。その計画のために人体実験やテロ行為を繰り返してきたとされる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term exaltists: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.zanshin-herb-case.name",
     "ja": "残心の青籠",
     "context": "glossary zzz term zanshin-herb-case: Japanese official term name",
@@ -5290,7 +5888,10 @@ const block5: SourceText[] = [
     "protectedTokens": [
       "[[enemies|"
     ]
-  },
+  }
+];
+
+const block6: SourceText[] = [
   {
     "id": "term.zzz.support.name",
     "ja": "支援",
@@ -5911,10 +6512,7 @@ const block5: SourceText[] = [
       "[[attack]]",
       "[[w-engine]]"
     ]
-  }
-];
-
-const block6: SourceText[] = [
+  },
   {
     "id": "term.zzz.shunsokuroobaa.name",
     "ja": "「駿足ローバー」",
@@ -6001,6 +6599,35 @@ const block6: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]",
       "[[routine-cleanup]]"
+    ]
+  },
+  {
+    "id": "term.zzz.shouka.name",
+    "ja": "昇華",
+    "context": "glossary zzz term shouka: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shouka.summary",
+    "ja": "流明属性専用の状態異常反応。",
+    "context": "glossary zzz term shouka: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.shouka.body",
+    "ja": "流明スタックが付与された敵が[[attribute-anomaly|状態異常]]に陥ると発動する、流明属性専用の反応。スタックを消費し、状態異常の総ダメージを増加させる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term shouka: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute-anomaly|"
     ]
   },
   {
@@ -6248,7 +6875,10 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block7: SourceText[] = [
   {
     "id": "term.zzz.shoseinodeyurahan.summary",
     "ja": "エーテル・氷が弱点の精鋭エネミー。",
@@ -6381,6 +7011,36 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.new-eridu-defense-force.name",
+    "ja": "新エリー都防衛軍",
+    "context": "glossary zzz term new-eridu-defense-force: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.new-eridu-defense-force.summary",
+    "ja": "オボルス小隊やシルバー小隊が所属する軍組織。",
+    "context": "glossary zzz term new-eridu-defense-force: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.new-eridu-defense-force.body",
+    "ja": "[[new-eridu]]の防衛軍。超大型[[hollow|ホロウ]]内での対エーテリアス戦闘などを担い、傘下にオボルス小隊やシルバー小隊がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term new-eridu-defense-force: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hollow|",
+      "[[new-eridu]]"
+    ]
   },
   {
     "id": "term.zzz.singular-leak.name",
@@ -6676,6 +7336,35 @@ const block6: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.scott-outpost.name",
+    "ja": "スコット前哨基地",
+    "context": "glossary zzz term scott-outpost: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.scott-outpost.summary",
+    "ja": "零号ホロウ近郊にある前哨基地。",
+    "context": "glossary zzz term scott-outpost: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.scott-outpost.body",
+    "ja": "巨大な[[hollow|ホロウ]]の近郊に置かれた軍の拠点。零号ホロウや式輿防衛戦、危局強襲戦などの戦闘コンテンツへの参加拠点となる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term scott-outpost: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hollow|"
+    ]
+  },
+  {
     "id": "term.zzz.weeping-cradle.name",
     "ja": "啜り泣くゆりかご",
     "context": "glossary zzz term weeping-cradle: Japanese official term name",
@@ -6891,10 +7580,7 @@ const block6: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block7: SourceText[] = [
+  },
   {
     "id": "term.zzz.supekutaachikuenekata.summary",
     "ja": "炎が弱点の通常エネミー。",
@@ -7006,6 +7692,33 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.seimu-tourikyoku.name",
+    "ja": "政務統理局",
+    "context": "glossary zzz term seimu-tourikyoku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.seimu-tourikyoku.summary",
+    "ja": "ロスカリファの最高意思決定機関。",
+    "context": "glossary zzz term seimu-tourikyoku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.seimu-tourikyoku.body",
+    "ja": "ロスカリファの中枢五局の一つで、通称は政統局。規則の制定など、ロスカリファ全体の運営方針を定める。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term seimu-tourikyoku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.seimei-no-torikago.name",
     "ja": "青溟の鳥籠",
     "context": "glossary zzz term seimei-no-torikago: Japanese official term name",
@@ -7067,6 +7780,33 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.sekigagumi.name",
+    "ja": "赤牙組",
+    "context": "glossary zzz term sekigagumi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sekigagumi.summary",
+    "ja": "十四分街を根城にしていたギャング。",
+    "context": "glossary zzz term sekigagumi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sekigagumi.body",
+    "ja": "十四分街を根城にする悪名高いギャング。元はカンバス通りの互助組織だったが、組長の死亡により組織としてはほぼ瓦解している。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sekigagumi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.select-store.name",
     "ja": "セレクトストア",
     "context": "glossary zzz term select-store: Japanese official term name",
@@ -7110,7 +7850,10 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block8: SourceText[] = [
   {
     "id": "term.zzz.hollow-zero.body",
     "ja": "[[hollow]]の調査に挑むコンテンツ。調査を通してさまざまな戦闘や出来事に遭遇する。",
@@ -7414,6 +8157,33 @@ const block7: SourceText[] = [
       "[[enemies|",
       "[[ethereal]]"
     ]
+  },
+  {
+    "id": "term.zzz.daato-kessha.name",
+    "ja": "ダアト結社",
+    "context": "glossary zzz term daato-kessha: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.daato-kessha.summary",
+    "ja": "レミエールが所属する、詳細不明の陣営。",
+    "context": "glossary zzz term daato-kessha: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.daato-kessha.body",
+    "ja": "Ver.3.3時点で詳細がほとんど明かされていない陣営。作中に登場しているメンバーはレミエールのみで、彼女自身も結社をあまり信用していない。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term daato-kessha: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.king-of-the-summit.name",
@@ -7829,6 +8599,33 @@ const block7: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.failume-heights.name",
+    "ja": "澄輝坪",
+    "context": "glossary zzz term failume-heights: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.failume-heights.summary",
+    "ja": "ワイフェイ半島にある街区。",
+    "context": "glossary zzz term failume-heights: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.failume-heights.body",
+    "ja": "ワイフェイ半島にある街区。雲嶽山の拠点である随変寺や、工芸品店「奇々解々」がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term failume-heights: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.training-course.name",
     "ja": "調査員講座",
     "context": "glossary zzz term training-course: Japanese official term name",
@@ -7872,10 +8669,7 @@ const block7: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block8: SourceText[] = [
+  },
   {
     "id": "term.zzz.investigation-points.body",
     "ja": "零号ホロウの調査で獲得するポイント。[[withered-domain]]に週間の獲得上限が設けられている。",
@@ -7886,6 +8680,33 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[withered-domain]]"
     ]
+  },
+  {
+    "id": "term.zzz.tsuika-kougeki.name",
+    "ja": "追加攻撃",
+    "context": "glossary zzz term tsuika-kougeki: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tsuika-kougeki.summary",
+    "ja": "条件を満たすと自動で発動する追加の攻撃。",
+    "context": "glossary zzz term tsuika-kougeki: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tsuika-kougeki.body",
+    "ja": "一部のエージェントのスキルや装備効果を条件に、通常の行動とは別に発動する攻撃。発動条件や攻撃内容はエージェントや効果ごとに異なる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tsuika-kougeki: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.additional-ability.name",
@@ -8008,7 +8829,10 @@ const block8: SourceText[] = [
       "[[w-engine-channel]]",
       "[[w-engine]]"
     ]
-  },
+  }
+];
+
+const block9: SourceText[] = [
   {
     "id": "term.zzz.deep-sea-visitor.name",
     "ja": "ディープシー・ビジター",
@@ -8452,6 +9276,35 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.teraaraputorueguzekyuutaa.name",
+    "ja": "テラー・ラプトル・エグゼキューター",
+    "context": "glossary zzz term teraaraputorueguzekyuutaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.teraaraputorueguzekyuutaa.summary",
+    "ja": "氷・物理が弱点のボス。",
+    "context": "glossary zzz term teraaraputorueguzekyuutaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.teraaraputorueguzekyuutaa.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点は氷・物理。耐性は電気。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term teraaraputorueguzekyuutaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.electrolip-gloss.name",
     "ja": "電撃リップグロス",
     "context": "glossary zzz term electrolip-gloss: Japanese official term name",
@@ -8723,6 +9576,35 @@ const block8: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.ionized-doppelganger-jane.name",
+    "ja": "電離体・ドッペルゲンガー・ジェーン",
+    "context": "glossary zzz term ionized-doppelganger-jane: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ionized-doppelganger-jane.summary",
+    "ja": "物理が弱点のボス。",
+    "context": "glossary zzz term ionized-doppelganger-jane: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ionized-doppelganger-jane.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理。耐性は氷。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ionized-doppelganger-jane: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.freeze.name",
     "ja": "凍結",
     "context": "glossary zzz term freeze: Japanese official term name",
@@ -8750,6 +9632,35 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[attribute-anomaly|",
       "[[shatter]]"
+    ]
+  },
+  {
+    "id": "term.zzz.sheer-damage.name",
+    "ja": "透徹ダメージ",
+    "context": "glossary zzz term sheer-damage: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sheer-damage.summary",
+    "ja": "敵の防御力を無視して与えるダメージ。",
+    "context": "glossary zzz term sheer-damage: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.sheer-damage.body",
+    "ja": "[[rupture|命破]]特性のエージェントが扱うダメージ。敵の防御力を無視して計算され、透徹力を高めるほどダメージが増える。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term sheer-damage: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[rupture|"
     ]
   },
   {
@@ -8872,10 +9783,7 @@ const block8: SourceText[] = [
     "protectedTokens": [
       "[[enemies|"
     ]
-  }
-];
-
-const block9: SourceText[] = [
+  },
   {
     "id": "term.zzz.tokusenjuusousutoraikaa.name",
     "ja": "特戦・重装ストライカー",
@@ -8913,7 +9821,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block10: SourceText[] = [
   {
     "id": "term.zzz.tokusenshubiryouhei.summary",
     "ja": "電気が弱点の通常エネミー。",
@@ -9167,6 +10078,33 @@ const block9: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.toshi-chitsujo-bu.name",
+    "ja": "都市秩序部",
+    "context": "glossary zzz term toshi-chitsujo-bu: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.toshi-chitsujo-bu.summary",
+    "ja": "シーシィアが所属する治安局の部門。",
+    "context": "glossary zzz term toshi-chitsujo-bu: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.toshi-chitsujo-bu.body",
+    "ja": "新エリー都治安局の部門の一つ。監察官のシーシィアが所属する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term toshi-chitsujo-bu: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.totsugekihouhei.name",
     "ja": "突撃砲兵",
     "context": "glossary zzz term totsugekihouhei: Japanese official term name",
@@ -9223,6 +10161,33 @@ const block9: SourceText[] = [
     "protectedTokens": [
       "[[enemies|"
     ]
+  },
+  {
+    "id": "term.zzz.tops-financial-union.name",
+    "ja": "TOPS財政ユニオン",
+    "context": "glossary zzz term tops-financial-union: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tops-financial-union.summary",
+    "ja": "新エリー都を実質的に運営する複合企業体。",
+    "context": "glossary zzz term tops-financial-union: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.tops-financial-union.body",
+    "ja": "実質的にエリー市を運営している複合企業体の連合。徹底した実力主義で知られ、傘下にポーセルメックスなどの企業を持つ。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term tops-financial-union: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
   },
   {
     "id": "term.zzz.dopperugengaasutaaraitobirii.name",
@@ -9845,7 +10810,10 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block11: SourceText[] = [
   {
     "id": "term.zzz.phaethon.body",
     "ja": "[[proxy|プロキシ]]として活動する主人公たちの名前。[[sixth-street]]のビデオ屋を拠点に、[[hdd]]などを使って[[hollow]]内の活動を案内する。",
@@ -9868,10 +10836,7 @@ const block9: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block10: SourceText[] = [
+  },
   {
     "id": "term.zzz.phaethons-melody.summary",
     "ja": "Ver.1.6で追加されたドライバディスク。",
@@ -10453,6 +11418,33 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.ballet-twins.name",
+    "ja": "バレエツインズ",
+    "context": "glossary zzz term ballet-twins: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ballet-twins.summary",
+    "ja": "ホロウに呑まれた双子のタワー。",
+    "context": "glossary zzz term ballet-twins: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ballet-twins.body",
+    "ja": "バレエツインズ・ロードに面した双子のタワー。現在はバレエツインズホロウに呑まれている。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ballet-twins: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.hansu.name",
     "ja": "ハンス",
     "context": "glossary zzz term hansu: Japanese official term name",
@@ -10810,7 +11802,10 @@ const block10: SourceText[] = [
       "[[enemies|",
       "[[ethereal]]"
     ]
-  },
+  }
+];
+
+const block12: SourceText[] = [
   {
     "id": "term.zzz.faarubauteichikuenekata.name",
     "ja": "ファールバウティ・蓄エネ型",
@@ -10842,6 +11837,35 @@ const block10: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.wishful-finale-aria.name",
+    "ja": "フィナーレの願い・アリア",
+    "context": "glossary zzz term wishful-finale-aria: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wishful-finale-aria.summary",
+    "ja": "エーテル・物理が弱点のボス。",
+    "context": "glossary zzz term wishful-finale-aria: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.wishful-finale-aria.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term wishful-finale-aria: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.booastrum.name",
     "ja": "ブーアストラム",
     "context": "glossary zzz term booastrum: Japanese official term name",
@@ -10858,10 +11882,7 @@ const block10: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block11: SourceText[] = [
+  },
   {
     "id": "term.zzz.booastrum.body",
     "ja": "[[roscaelifer]]のエリア。探索を進めるとボンプラネットのコンテンツを開放できる。",
@@ -11382,6 +12403,33 @@ const block11: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.furintsu-koubou.name",
+    "ja": "フリンツ工房",
+    "context": "glossary zzz term furintsu-koubou: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furintsu-koubou.summary",
+    "ja": "クラレッタが率いるロスカリファの工房。",
+    "context": "glossary zzz term furintsu-koubou: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.furintsu-koubou.body",
+    "ja": "世界で唯一の合金「フリンツ合金」の製造技術を持ち、ロスカリファ全体の装備やハードウェア面の支援を担う。拠点は海上に浮かぶ離島ヴィルリウム。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term furintsu-koubou: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
     "id": "term.zzz.purukura.name",
     "ja": "プルクラ",
     "context": "glossary zzz term purukura: Japanese official term name",
@@ -11736,7 +12784,10 @@ const block11: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block13: SourceText[] = [
   {
     "id": "term.zzz.fundoakki.summary",
     "ja": "炎が弱点の精鋭エネミー。",
@@ -11848,10 +12899,7 @@ const block11: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]"
     ]
-  }
-];
-
-const block12: SourceText[] = [
+  },
   {
     "id": "term.zzz.bellum.name",
     "ja": "ベルラム",
@@ -12087,6 +13135,64 @@ const block12: SourceText[] = [
     "dependencies": [],
     "protectedTokens": [
       "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.port-elpis.name",
+    "ja": "ポート・エルピス",
+    "context": "glossary zzz term port-elpis: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.port-elpis.summary",
+    "ja": "ヤヌス区にある港湾エリア。",
+    "context": "glossary zzz term port-elpis: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.port-elpis.body",
+    "ja": "[[new-eridu]]のヤヌス区にある港。釣りスポットが点在し、エルピス最強釣り師決定戦の舞台にもなった。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term port-elpis: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[new-eridu]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hoshi-no-hi.name",
+    "ja": "星の碑",
+    "context": "glossary zzz term hoshi-no-hi: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hoshi-no-hi.summary",
+    "ja": "防御力に関わるドライバディスク。",
+    "context": "glossary zzz term hoshi-no-hi: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hoshi-no-hi.body",
+    "ja": "[[drive-disc]]のセットの一つ。2セット効果は防御力を強化する。4セット効果は会心率を高め、炎属性の鋭撃ダメージが敵の防御力を一部無視するようになる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hoshi-no-hi: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[drive-disc]]"
     ]
   },
   {
@@ -12326,6 +13432,122 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.hand.name",
+    "ja": "ホロウ事務無害化対策局",
+    "context": "glossary zzz term hand: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hand.summary",
+    "ja": "対ホロウ6課が所属する、ホロウ災害対応の組織。",
+    "context": "glossary zzz term hand: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hand.body",
+    "ja": "[[new-eridu]]を管理する上層組織の一つで、ホロウ災害への対応を主な業務とする。対ホロウ特別行動部を擁し、対ホロウ6課などが所属する。略称はH.A.N.D.。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hand: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[new-eridu]]"
+    ]
+  },
+  {
+    "id": "term.zzz.hollow-investigation-association.name",
+    "ja": "ホロウ調査協会",
+    "context": "glossary zzz term hollow-investigation-association: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hollow-investigation-association.summary",
+    "ja": "ホロウ内部の探査を行う組織。",
+    "context": "glossary zzz term hollow-investigation-association: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.hollow-investigation-association.body",
+    "ja": "[[hollow|ホロウ]]内部の探査を行い、拡大や縮小の傾向の把握やキャロットの作成を行っている組織。キャリアセンターを開設して人材募集も行う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term hollow-investigation-association: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hollow|"
+    ]
+  },
+  {
+    "id": "term.zzz.horogurafikkuaaroo.name",
+    "ja": "ホログラフィックアロー",
+    "context": "glossary zzz term horogurafikkuaaroo: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.horogurafikkuaaroo.summary",
+    "ja": "エーテル・物理が弱点のボス。",
+    "context": "glossary zzz term horogurafikkuaaroo: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.horogurafikkuaaroo.body",
+    "ja": "「機械」に分類される[[enemies|敵対ターゲット]]。弱点はエーテル・物理。耐性は炎。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term horogurafikkuaaroo: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
+    "id": "term.zzz.white-star-institute.name",
+    "ja": "ホワイトスター学会",
+    "context": "glossary zzz term white-star-institute: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.white-star-institute.summary",
+    "ja": "エーテルやホロウを研究する組織。",
+    "context": "glossary zzz term white-star-institute: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.white-star-institute.body",
+    "ja": "エーテル物質や[[hollow|ホロウ]]、エーテリアスの研究を行っている組織。スコット前哨基地での零号ホロウ対応の統括なども担う。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term white-star-institute: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[hollow|"
+    ]
+  },
+  {
     "id": "term.zzz.bangboo.name",
     "ja": "ボンプ",
     "context": "glossary zzz term bangboo: Japanese official term name",
@@ -12543,7 +13765,10 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block14: SourceText[] = [
   {
     "id": "term.zzz.lost-void.body",
     "ja": "異なる武装やレゾブレムを使い、戦闘を進める。",
@@ -12732,6 +13957,35 @@ const block12: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.miasma-spawn.name",
+    "ja": "ミアズマのひな",
+    "context": "glossary zzz term miasma-spawn: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miasma-spawn.summary",
+    "ja": "物理・エーテルが弱点の通常エネミー。",
+    "context": "glossary zzz term miasma-spawn: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.miasma-spawn.body",
+    "ja": "「エーテリアス」に分類される[[enemies|敵対ターゲット]]。弱点は物理・エーテル。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term miasma-spawn: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
+    ]
+  },
+  {
     "id": "term.zzz.miazuma-hosha-akavoru.name",
     "ja": "ミアズマの歩者・アカヴォル",
     "context": "glossary zzz term miazuma-hosha-akavoru: Japanese official term name",
@@ -12828,10 +14082,7 @@ const block12: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block13: SourceText[] = [
+  },
   {
     "id": "term.zzz.miazumaremunantokyanonia.summary",
     "ja": "炎・電気が弱点の通常エネミー。",
@@ -13503,7 +14754,10 @@ const block13: SourceText[] = [
       "[[agent]]",
       "[[specialty|"
     ]
-  },
+  }
+];
+
+const block15: SourceText[] = [
   {
     "id": "term.zzz.mezameshi-tsubasa-no-seika.name",
     "ja": "目覚めし翼の聖歌",
@@ -13685,6 +14939,36 @@ const block13: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.mousou-disukotikku.name",
+    "ja": "妄想ディスコティック",
+    "context": "glossary zzz term mousou-disukotikku: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mousou-disukotikku.summary",
+    "ja": "異常掌握が上がる撃破向けのS級音動機。",
+    "context": "glossary zzz term mousou-disukotikku: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.mousou-disukotikku.body",
+    "ja": "[[stun-specialty]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で異常掌握を30%伸ばせる。異常マスタリーが上がり、強化特殊スキルや通常攻撃でエーテル属性ダメージを与えるとメンバー全員の与ダメージが上がる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term mousou-disukotikku: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[stun-specialty]]",
+      "[[w-engine]]"
+    ]
+  },
+  {
     "id": "term.zzz.moso-discotheque.name",
     "ja": "妄想ディスコテック",
     "context": "glossary zzz term moso-discotheque: Japanese official term name",
@@ -13820,10 +15104,7 @@ const block13: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  }
-];
-
-const block14: SourceText[] = [
+  },
   {
     "id": "term.zzz.elegant-vanity.body",
     "ja": "[[support]]向けの[[w-engine]]。Lv.60では基礎攻撃力が713で、追加で攻撃力を30%伸ばせる。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
@@ -14463,7 +15744,10 @@ const block14: SourceText[] = [
     "placeholders": {},
     "dependencies": [],
     "protectedTokens": []
-  },
+  }
+];
+
+const block16: SourceText[] = [
   {
     "id": "term.zzz.shining-aria.summary",
     "ja": "区域防衛で獲得できるドライバディスク。",
@@ -14483,6 +15767,64 @@ const block14: SourceText[] = [
     "protectedTokens": [
       "[[drive-disc]]",
       "[[routine-cleanup]]"
+    ]
+  },
+  {
+    "id": "term.zzz.lumen.name",
+    "ja": "流明",
+    "context": "glossary zzz term lumen: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumen.summary",
+    "ja": "編成に応じてダメージ属性が変化する属性。",
+    "context": "glossary zzz term lumen: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.lumen.body",
+    "ja": "Ver.3.1で追加された[[attribute|属性]]の一つ。編成した次のメンバーの属性に応じて、自身のダメージ属性が変化する。流明属性専用の反応として昇華がある。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term lumen: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[attribute|"
+    ]
+  },
+  {
+    "id": "term.zzz.ruurukiipaa.name",
+    "ja": "「ルールキーパー」",
+    "context": "glossary zzz term ruurukiipaa: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ruurukiipaa.summary",
+    "ja": "炎・物理が弱点の通常エネミー。",
+    "context": "glossary zzz term ruurukiipaa: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.ruurukiipaa.body",
+    "ja": "「生物」に分類される[[enemies|敵対ターゲット]]。弱点は炎・物理。資料上の陣営は「特殊」。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term ruurukiipaa: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[enemies|"
     ]
   },
   {
@@ -14779,6 +16121,35 @@ const block14: SourceText[] = [
     ]
   },
   {
+    "id": "term.zzz.waifei-peninsula.name",
+    "ja": "ワイフェイ半島",
+    "context": "glossary zzz term waifei-peninsula: Japanese official term name",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.waifei-peninsula.summary",
+    "ja": "シーズン2の舞台となった半島地域。",
+    "context": "glossary zzz term waifei-peninsula: one-sentence summary shown in the list and link hints",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": []
+  },
+  {
+    "id": "term.zzz.waifei-peninsula.body",
+    "ja": "[[new-eridu]]の西にある半島。澄輝坪や随変寺があり、近海にはレムニアンホロウが存在する。\n\n注：説明の一部は公式資料との照合が未了です（要確認）。",
+    "context": "glossary zzz term waifei-peninsula: body; blank lines separate paragraphs and [[id]] / [[id|label]] are glossary links to keep intact",
+    "audience": "public",
+    "placeholders": {},
+    "dependencies": [],
+    "protectedTokens": [
+      "[[new-eridu]]"
+    ]
+  },
+  {
     "id": "term.zzz.wandaringuhantaa.name",
     "ja": "ワンダリングハンター",
     "context": "glossary zzz term wandaringuhantaa: Japanese official term name",
@@ -14809,4 +16180,4 @@ const block14: SourceText[] = [
   }
 ];
 
-export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14];
+export const sources: SourceText[] = [...block0, ...block1, ...block2, ...block3, ...block4, ...block5, ...block6, ...block7, ...block8, ...block9, ...block10, ...block11, ...block12, ...block13, ...block14, ...block15, ...block16];
